@@ -317,7 +317,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ax_multiobjective_nas_tutorial.html">Multi-Objective NAS with Ax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch_compile_tutorial.html">torch.compile Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html">(Beta) Implementing High-Performance Transformers with Scaled Dot Product Attention (SDPA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with torch.compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with <code class="docutils literal notranslate"><span class="pre">torch.compile</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Parallel and Distributed Training</span></p>
@@ -426,7 +426,7 @@ Another way to regularize recurrent models is via
 This approach proposes to decouple the learning of the parameters from the
 learning of their norms.  To do so, the parameter is divided by its
 <a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm">Frobenius norm</a>
-and a separate parameter encoding its norm is learnt.
+and a separate parameter encoding its norm is learned.
 A similar regularization was proposed for GANs under the name of
 “<a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.utils.spectral_norm.html">spectral normalization</a>”. This method
 controls the Lipschitz constant of the network by dividing its parameters by
@@ -483,7 +483,7 @@ Transformer…</p></li>
 <li><p>It does not separate the layer and the parametrization.  If the parametrization were
 more difficult, we would have to rewrite its code for each layer that we want to use it
 in.</p></li>
-<li><p>It recomputes the parametrization everytime we use the layer. If we use the layer
+<li><p>It recomputes the parametrization every time we use the layer. If we use the layer
 several times during the forward pass, (imagine the recurrent kernel of an RNN), it
 would compute the same <code class="docutils literal notranslate"><span class="pre">A</span></code> every time that the layer is called.</p></li>
 </ol>
@@ -655,8 +655,8 @@ Using these two facts, we may reuse the parametrizations before to our advantage
 </pre></div>
 </div>
 </div>
-<div class="section" id="intializing-parametrizations">
-<h2>Intializing parametrizations<a class="headerlink" href="#intializing-parametrizations" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="initializing-parametrizations">
+<h2>Initializing parametrizations<a class="headerlink" href="#initializing-parametrizations" title="Permalink to this heading">¶</a></h2>
 <p>Parametrizations come with a mechanism to initialize them. If we implement a method
 <code class="docutils literal notranslate"><span class="pre">right_inverse</span></code> with signature</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">right_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span>
@@ -720,7 +720,7 @@ To see this, let’s upgrade the Cayley parametrization to also support being in
 </div>
 <p>The name of this method comes from the fact that we would often expect
 that <code class="docutils literal notranslate"><span class="pre">forward(right_inverse(X))</span> <span class="pre">==</span> <span class="pre">X</span></code>. This is a direct way of rewriting that
-the forward afer the initalization with value <code class="docutils literal notranslate"><span class="pre">X</span></code> should return the value <code class="docutils literal notranslate"><span class="pre">X</span></code>.
+the forward after the initialization with value <code class="docutils literal notranslate"><span class="pre">X</span></code> should return the value <code class="docutils literal notranslate"><span class="pre">X</span></code>.
 This constraint is not strongly enforced in practice. In fact, at times, it might be of
 interest to relax this relation. For example, consider the following implementation
 of a randomized pruning method:</p>
@@ -847,7 +847,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <li><a class="reference internal" href="#parametrizations-are-first-class-citizens">Parametrizations are first-class citizens</a></li>
 <li><a class="reference internal" href="#caching-the-value-of-a-parametrization">Caching the value of a parametrization</a></li>
 <li><a class="reference internal" href="#concatenating-parametrizations">Concatenating parametrizations</a></li>
-<li><a class="reference internal" href="#intializing-parametrizations">Intializing parametrizations</a></li>
+<li><a class="reference internal" href="#initializing-parametrizations">Initializing parametrizations</a></li>
 <li><a class="reference internal" href="#removing-parametrizations">Removing parametrizations</a></li>
 </ul>
 </li>

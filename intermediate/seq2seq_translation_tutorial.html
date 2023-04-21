@@ -317,7 +317,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ax_multiobjective_nas_tutorial.html">Multi-Objective NAS with Ax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch_compile_tutorial.html">torch.compile Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html">(Beta) Implementing High-Performance Transformers with Scaled Dot Product Attention (SDPA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with torch.compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with <code class="docutils literal notranslate"><span class="pre">torch.compile</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Parallel and Distributed Training</span></p>
@@ -500,7 +500,7 @@ pointed me to the open translation site <a class="reference external" href="http
 downloads available at <a class="reference external" href="https://tatoeba.org/eng/downloads">https://tatoeba.org/eng/downloads</a> - and better
 yet, someone did the extra work of splitting language pairs into
 individual text files here: <a class="reference external" href="https://www.manythings.org/anki/">https://www.manythings.org/anki/</a></p>
-<p>The English to French pairs are too big to include in the repo, so
+<p>The English to French pairs are too big to include in the repository, so
 download to <code class="docutils literal notranslate"><span class="pre">data/eng-fra.txt</span></code> before continuing. The file is a tab
 separated list of translation pairs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">cold</span><span class="o">.</span>    <span class="n">J</span><span class="s1">'ai froid.</span>
@@ -660,7 +660,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['je vais a cet endroit .', 'i am going to that place .']
+['je suis de la cote est .', 'i m from the east coast .']
 </pre></div>
 </div>
 </div>
@@ -681,10 +681,10 @@ that vector to produce an output sequence.</p>
 corresponds to an output, the seq2seq model frees us from sequence
 length and order, which makes it ideal for translation between two
 languages.</p>
-<p>Consider the sentence “Je ne suis pas le chat noir” → “I am not the
-black cat”. Most of the words in the input sentence have a direct
+<p>Consider the sentence <code class="docutils literal notranslate"><span class="pre">Je</span> <span class="pre">ne</span> <span class="pre">suis</span> <span class="pre">pas</span> <span class="pre">le</span> <span class="pre">chat</span> <span class="pre">noir</span></code> → <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">am</span> <span class="pre">not</span> <span class="pre">the</span>
+<span class="pre">black</span> <span class="pre">cat</span></code>. Most of the words in the input sentence have a direct
 translation in the output sentence, but are in slightly different
-orders, e.g. “chat noir” and “black cat”. Because of the “ne/pas”
+orders, e.g. <code class="docutils literal notranslate"><span class="pre">chat</span> <span class="pre">noir</span></code> and <code class="docutils literal notranslate"><span class="pre">black</span> <span class="pre">cat</span></code>. Because of the <code class="docutils literal notranslate"><span class="pre">ne/pas</span></code>
 construction there is also one more word in the input sentence. It would
 be difficult to produce a correct translation directly from the sequence
 of input words.</p>
@@ -1102,65 +1102,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 25s (- 19m 57s) (5000 6%) 2.8878
-2m 45s (- 17m 53s) (10000 13%) 2.2619
-4m 4s (- 16m 17s) (15000 20%) 1.9571
-5m 24s (- 14m 51s) (20000 26%) 1.7221
-6m 44s (- 13m 28s) (25000 33%) 1.5019
-8m 3s (- 12m 5s) (30000 40%) 1.3176
-9m 23s (- 10m 44s) (35000 46%) 1.2029
-10m 43s (- 9m 23s) (40000 53%) 1.0784
-12m 3s (- 8m 2s) (45000 60%) 0.9522
-13m 23s (- 6m 41s) (50000 66%) 0.8809
-14m 42s (- 5m 21s) (55000 73%) 0.7949
-16m 0s (- 4m 0s) (60000 80%) 0.6984
-17m 21s (- 2m 40s) (65000 86%) 0.6328
-18m 40s (- 1m 20s) (70000 93%) 0.5992
-19m 59s (- 0m 0s) (75000 100%) 0.5380
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 25s (- 19m 59s) (5000 6%) 2.8456
+2m 43s (- 17m 41s) (10000 13%) 2.2843
+4m 1s (- 16m 4s) (15000 20%) 1.9565
+5m 18s (- 14m 36s) (20000 26%) 1.7306
+6m 36s (- 13m 13s) (25000 33%) 1.5055
+7m 56s (- 11m 54s) (30000 40%) 1.3294
+9m 14s (- 10m 33s) (35000 46%) 1.2057
+10m 32s (- 9m 13s) (40000 53%) 1.0829
+11m 50s (- 7m 53s) (45000 60%) 0.9644
+13m 8s (- 6m 34s) (50000 66%) 0.8631
+14m 25s (- 5m 14s) (55000 73%) 0.7829
+15m 44s (- 3m 56s) (60000 80%) 0.7200
+17m 2s (- 2m 37s) (65000 86%) 0.6725
+18m 20s (- 1m 18s) (70000 93%) 0.5907
+19m 38s (- 0m 0s) (75000 100%) 0.5319
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; cela me depasse completement .
-= i m in way over my head .
-&lt; i m in way over my head . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; vous etes idiotes .
+= you re silly .
+&lt; you re stupid . &lt;EOS&gt;
 
-&gt; elle est toute cousue d or .
-= she s rolling in money .
-&lt; she s very in . &lt;EOS&gt;
+&gt; elle est gentille .
+= she is gentle .
+&lt; she s nice . &lt;EOS&gt;
 
-&gt; je suis votre debiteur .
-= i am in your debt .
-&lt; i am in your debt . &lt;EOS&gt;
+&gt; vous etes fiable .
+= you re trustworthy .
+&lt; you re reliable . &lt;EOS&gt;
 
-&gt; je suis une actrice pas un mannequin .
-= i m an actress not a model .
-&lt; i m an actress an model . &lt;EOS&gt;
+&gt; je lis une lettre .
+= i am reading a letter .
+&lt; i am reading a letter . &lt;EOS&gt;
 
-&gt; vous etes depourvue d ambition .
-= you re unambitious .
-&lt; you re unambitious . &lt;EOS&gt;
+&gt; je ne suis pas impressionne .
+= i m not impressed .
+&lt; i m not impressed . &lt;EOS&gt;
 
-&gt; nous sommes les nouveaux proprietaires .
-= we are the new owners .
-&lt; we re the new owners . &lt;EOS&gt;
+&gt; vous etes tres occupe .
+= you re very busy .
+&lt; you re very busy . &lt;EOS&gt;
 
-&gt; elle est appreciee de tout le monde .
-= she is appreciated by everyone .
-&lt; she is well by everybody . &lt;EOS&gt;
+&gt; je suis americaine .
+= i am american .
+&lt; i m an american . &lt;EOS&gt;
 
-&gt; je ne fais que regarder .
-= i m just looking around .
-&lt; i m just looking . &lt;EOS&gt;
+&gt; je te donne encore une chance .
+= i m giving you one more chance .
+&lt; i m giving you one more . . &lt;EOS&gt;
 
-&gt; c est un jeune homme adorable .
-= he s a lovely young man .
-&lt; he s an lovely young man . &lt;EOS&gt;
+&gt; vous etes la de bonne heure ce matin !
+= you are very early this morning .
+&lt; you are very early this morning . &lt;EOS&gt;
 
-&gt; c est vraiment une fille adorable .
-= she is indeed a lovely girl .
-&lt; she s indeed a lovely girl . &lt;EOS&gt;
+&gt; je suis un peu en colere contre toi .
+= i m a little angry with you .
+&lt; i m a little angry with you . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1177,7 +1177,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f37bd7f5240&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f1d6397f940&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1225,7 +1225,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1235,11 +1235,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s too . . &lt;EOS&gt;
+output = she s too loud . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m afraid afraid to die . &lt;EOS&gt;
+output = i m not scared of dying . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young . &lt;EOS&gt;
+output = he s a talented young . . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1255,8 +1255,8 @@ output = he s a talented young . &lt;EOS&gt;
 <li><p>Question → Answer</p></li>
 </ul>
 </li>
-<li><p>Replace the embeddings with pre-trained word embeddings such as word2vec or
-GloVe</p></li>
+<li><p>Replace the embeddings with pretrained word embeddings such as <code class="docutils literal notranslate"><span class="pre">word2vec</span></code> or
+<code class="docutils literal notranslate"><span class="pre">GloVe</span></code></p></li>
 <li><p>Try with more layers, more hidden units, and more sentences. Compare
 the training time and results.</p></li>
 <li><p>If you use a translation file where pairs have two of the same phrase
@@ -1269,7 +1269,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  14.590 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  52.573 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

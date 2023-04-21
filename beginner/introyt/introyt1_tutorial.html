@@ -317,7 +317,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/ax_multiobjective_nas_tutorial.html">Multi-Objective NAS with Ax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/torch_compile_tutorial.html">torch.compile Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/scaled_dot_product_attention_tutorial.html">(Beta) Implementing High-Performance Transformers with Scaled Dot Product Attention (SDPA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../intermediate/scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with torch.compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with <code class="docutils literal notranslate"><span class="pre">torch.compile</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/scaled_dot_product_attention_tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Parallel and Distributed Training</span></p>
@@ -754,34 +754,24 @@ automobile, ship, truck):</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
 
   0%|          | 0/170498071 [00:00&lt;?, ?it/s]
-  0%|          | 458752/170498071 [00:00&lt;00:41, 4049834.77it/s]
-  4%|3         | 6684672/170498071 [00:00&lt;00:04, 36466805.15it/s]
-  8%|7         | 13565952/170498071 [00:00&lt;00:03, 50769042.47it/s]
- 12%|#1        | 20086784/170498071 [00:00&lt;00:02, 56228630.27it/s]
- 15%|#5        | 25821184/170498071 [00:00&lt;00:02, 53834264.07it/s]
- 19%|#9        | 32768000/170498071 [00:00&lt;00:02, 58789710.11it/s]
- 23%|##2       | 38731776/170498071 [00:00&lt;00:02, 57902487.08it/s]
- 27%|##6       | 45449216/170498071 [00:00&lt;00:02, 60672808.49it/s]
- 30%|###       | 51576832/170498071 [00:00&lt;00:01, 60137697.95it/s]
- 34%|###3      | 57638912/170498071 [00:01&lt;00:01, 58422076.45it/s]
- 38%|###8      | 65110016/170498071 [00:01&lt;00:01, 63203559.57it/s]
- 42%|####1     | 71499776/170498071 [00:01&lt;00:01, 57740510.48it/s]
- 46%|####6     | 78479360/170498071 [00:01&lt;00:01, 61035368.19it/s]
- 50%|####9     | 84705280/170498071 [00:01&lt;00:01, 60414988.85it/s]
- 53%|#####3    | 90832896/170498071 [00:01&lt;00:01, 59784950.00it/s]
- 57%|#####7    | 97681408/170498071 [00:01&lt;00:01, 62254137.06it/s]
- 61%|######    | 103972864/170498071 [00:01&lt;00:01, 60751922.91it/s]
- 65%|######4   | 110297088/170498071 [00:01&lt;00:00, 61428516.65it/s]
- 68%|######8   | 116490240/170498071 [00:02&lt;00:00, 60934545.47it/s]
- 72%|#######1  | 122617856/170498071 [00:02&lt;00:00, 60425563.20it/s]
- 76%|#######6  | 129826816/170498071 [00:02&lt;00:00, 63785520.64it/s]
- 80%|#######9  | 136249344/170498071 [00:02&lt;00:00, 61165469.28it/s]
- 84%|########3 | 142409728/170498071 [00:02&lt;00:00, 59502942.99it/s]
- 87%|########7 | 149028864/170498071 [00:02&lt;00:00, 61353009.90it/s]
- 91%|#########1| 155222016/170498071 [00:02&lt;00:00, 58895959.71it/s]
- 95%|#########5| 162660352/170498071 [00:02&lt;00:00, 63178647.68it/s]
- 99%|#########9| 169050112/170498071 [00:02&lt;00:00, 57648672.12it/s]
-100%|##########| 170498071/170498071 [00:02&lt;00:00, 58419694.75it/s]
+  0%|          | 458752/170498071 [00:00&lt;00:41, 4113900.57it/s]
+  4%|4         | 7241728/170498071 [00:00&lt;00:04, 39855409.63it/s]
+ 10%|#         | 17661952/170498071 [00:00&lt;00:02, 68396674.60it/s]
+ 16%|#5        | 27164672/170498071 [00:00&lt;00:01, 78655812.82it/s]
+ 22%|##2       | 37519360/170498071 [00:00&lt;00:01, 87474222.58it/s]
+ 28%|##7       | 47513600/170498071 [00:00&lt;00:01, 91549810.03it/s]
+ 34%|###3      | 57376768/170498071 [00:00&lt;00:01, 93841471.74it/s]
+ 40%|###9      | 67862528/170498071 [00:00&lt;00:01, 97154048.40it/s]
+ 46%|####5     | 77627392/170498071 [00:00&lt;00:00, 96302002.44it/s]
+ 52%|#####1    | 88539136/170498071 [00:01&lt;00:00, 99993393.66it/s]
+ 58%|#####7    | 98566144/170498071 [00:01&lt;00:00, 97205563.42it/s]
+ 64%|######4   | 109674496/170498071 [00:01&lt;00:00, 101237431.03it/s]
+ 70%|#######   | 119832576/170498071 [00:01&lt;00:00, 97926035.61it/s]
+ 77%|#######6  | 130908160/170498071 [00:01&lt;00:00, 101595735.12it/s]
+ 83%|########2 | 141131776/170498071 [00:01&lt;00:00, 98001880.33it/s]
+ 89%|########9 | 152338432/170498071 [00:01&lt;00:00, 102040918.45it/s]
+ 95%|#########5| 162627584/170498071 [00:01&lt;00:00, 98794220.53it/s]
+100%|##########| 170498071/170498071 [00:01&lt;00:00, 92943919.59it/s]
 Extracting ./data/cifar-10-python.tar.gz to ./data
 </pre></div>
 </div>
@@ -1065,7 +1055,7 @@ data it hasn’t trained on:</p>
 accurate at this point. That’s not exactly state-of-the-art, but it’s
 far better than the 10% accuracy we’d expect from a random output. This
 demonstrates that some general learning did happen in the model.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  41.371 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  52.594 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-introyt-introyt1-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/0e4c2becda3dfc54e1816634d49f8e73/introyt1_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">introyt1_tutorial.py</span></code></a></p>

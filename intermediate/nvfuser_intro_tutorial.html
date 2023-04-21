@@ -317,7 +317,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ax_multiobjective_nas_tutorial.html">Multi-Objective NAS with Ax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch_compile_tutorial.html">torch.compile Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html">(Beta) Implementing High-Performance Transformers with Scaled Dot Product Attention (SDPA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with torch.compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with <code class="docutils literal notranslate"><span class="pre">torch.compile</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Parallel and Distributed Training</span></p>
@@ -474,7 +474,7 @@ operations. These simple operations are the backbone of large
 networks, so improving the speed of these operations can improve
 overall network training speed. Future releases of nvFuser will
 improve the performance of Linear Layers, but for now we will
-specifically look at the Bias-Dropout-Add-LayerNorm section of this
+specifically look at the <code class="docutils literal notranslate"><span class="pre">Bias-Dropout-Add-LayerNorm</span></code> section of this
 Transformer Block.</p>
 <div class="figure align-default">
 <img alt="../_images/nvfuser_transformer_block.png" src="../_images/nvfuser_transformer_block.png"/>
@@ -550,7 +550,7 @@ define a helper method called <cite>profile_workload</cite> and will use
         <span class="c1"># Run model, forward and backward</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a> <span class="o">=</span> <span class="n">forward_func</span><span class="p">()</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.Tensor.backward.html#torch.Tensor.backward" title="torch.Tensor.backward"><span class="n">output</span><span class="o">.</span><span class="n">backward</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">grad_output</span></a><span class="p">)</span>
-        <span class="c1"># delete gradiens to avoid profiling the gradient accumulation</span>
+        <span class="c1"># delete gradients to avoid profiling the gradient accumulation</span>
         <span class="k">for</span> <a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">p</span></a> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
             <a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">p</span></a><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -561,7 +561,7 @@ define a helper method called <cite>profile_workload</cite> and will use
         <span class="c1"># Run model, forward and backward</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a> <span class="o">=</span> <span class="n">forward_func</span><span class="p">()</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.Tensor.backward.html#torch.Tensor.backward" title="torch.Tensor.backward"><span class="n">output</span><span class="o">.</span><span class="n">backward</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">grad_output</span></a><span class="p">)</span>
-        <span class="c1"># delete gradiens to avoid profiling the gradient accumulation</span>
+        <span class="c1"># delete gradients to avoid profiling the gradient accumulation</span>
         <span class="k">for</span> <a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">p</span></a> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
             <a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">p</span></a><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -594,7 +594,7 @@ define a helper method called <cite>profile_workload</cite> and will use
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Eager Mode - Composite definition
-Average iterations per second: 193.60
+Average iterations per second: 193.09
 </pre></div>
 </div>
 <p>It’s important for PyTorch and nvFuser to work well across diverse
@@ -635,7 +635,7 @@ workload as before.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TorchScript - Composite definition
-Average iterations per second: 249.55
+Average iterations per second: 249.14
 </pre></div>
 </div>
 <p>Before we get to the results, it is important to mention here that
@@ -674,7 +674,7 @@ Graph Neural Networks.</p>
 <p>To use nvFuser on inputs that change shape from iteration, we
 generate new input and output gradient tensors and make a few
 different sizes. Since the last dimension is shared with the
-parameters and cannot be changed dynamically in LayerNorm, we
+parameters and cannot be changed dynamically in <code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code>, we
 perturb the first two dimensions of the input and gradient tensors.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHAPE_COUNT</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">dynamic_sizes</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">input_size</span><span class="p">)</span>
@@ -755,7 +755,7 @@ previously.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TorchScript - Random Sizes
-Average iterations per second: 245.77
+Average iterations per second: 245.18
 </pre></div>
 </div>
 <p>Performance across our GPUs is very similar to the previous
@@ -782,13 +782,13 @@ view this presentation from GTC 2021:
 </div>
 </div>
 <div class="section" id="defining-novel-operations-with-nvfuser-and-functorch">
-<h2>Defining novel operations with nvFuser and FuncTorch<a class="headerlink" href="#defining-novel-operations-with-nvfuser-and-functorch" title="Permalink to this heading">¶</a></h2>
+<h2>Defining novel operations with nvFuser and functorch<a class="headerlink" href="#defining-novel-operations-with-nvfuser-and-functorch" title="Permalink to this heading">¶</a></h2>
 <p>One of the primary benefits of nvFuser is the ability to define
 novel operations composed of PyTorch “primitives” which are then
 just-in-time compiled into efficient kernels.</p>
 <p>PyTorch has strong performance for any individual operation,
-especially composite operations like LayerNorm. However, if
-LayerNorm wasn’t already implemented in PyTorch as a composite
+especially composite operations like <code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code>. However, if
+<code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code> wasn’t already implemented in PyTorch as a composite
 operation, then you’d have to define it as a series of simpler
 (primitive) operations. Let’s make such a definition and run it
 without nvFuser.</p>
@@ -832,7 +832,7 @@ without nvFuser.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Eager Mode - Primitive Definition
-Average iterations per second: 61.57
+Average iterations per second: 61.58
 </pre></div>
 </div>
 <p>While the above is mathematically equivalent to our previous
@@ -872,7 +872,7 @@ operations. Simply by enabling TorchScript on the new function
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TorchScript - Primitive definition
-Average iterations per second: 121.23
+Average iterations per second: 120.98
 </pre></div>
 </div>
 <div class="figure align-default">
@@ -880,7 +880,7 @@ Average iterations per second: 121.23
 </div>
 <p>However, the performance is still slower than the original eager
 mode performance of the composite definition. TorchScript works well
-when predefined composite operations are used, however TorchScript’s
+when predefined composite operations are used, however TorchScript
 application of Autograd saves all of the activations for each
 operator in the fusion for re-use in the backwards pass. However,
 this is not typically the optimal choice. Especially when chaining
@@ -890,7 +890,7 @@ storing and retrieving several saved results from memory.</p>
 <p>It’s possible to optimize away many of these unnecessary memory
 accesses, but it requires building a connected forward and backward
 graph which isn’t possible with TorchScript. The
-<cite>memory_efficient_fusion</cite> pass in FuncTorch, however, is such an
+<code class="docutils literal notranslate"><span class="pre">memory_efficient_fusion</span></code> pass in functorch, however, is such an
 optimization pass. To use this pass, we have to redefine our
 function to pull the constants inside (for now it’s easiest to make
 non-tensor constants literals in the function definition):</p>
@@ -914,8 +914,8 @@ non-tensor constants literals in the function definition):</p>
 </pre></div>
 </div>
 <p>Now, instead of passing our function to TorchScript, we will pass it
-to FuncTorch’s optimization pass.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optimize the model with FuncTorch tracing and the memory efficiency</span>
+to functorch optimization pass.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optimize the model with functorch tracing and the memory efficiency</span>
 <span class="c1"># optimization pass</span>
 <span class="n">memory_efficient_primitive_definition</span> <span class="o">=</span> <span class="n">memory_efficient_fusion</span><span class="p">(</span>
     <span class="n">primitive_definition_for_memory_efficient_fusion</span>
@@ -938,11 +938,11 @@ to FuncTorch’s optimization pass.</p>
 The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
 
 FuncTorch - Primitive definition
-Average iterations per second: 126.20
+Average iterations per second: 125.73
 </pre></div>
 </div>
 <p>This recovers even more speed, but it’s still not as fast as
-TorchScripts original performance with the composite definition.
+TorchScript original performance with the composite definition.
 However, this is still faster than running this new definition
 without nvFuser, and is still faster than the composite definition
 without nvFuser.</p>
@@ -951,17 +951,17 @@ without nvFuser.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FuncTorch’s memory efficient pass is experimental and still
+<p>The functorch memory efficient pass is experimental and still
 actively in development.
 Future versions of the API are expected to achieve performance
 closer to that of TorchScript with the composite definition.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FuncTorch’s memory efficient pass specializes on the shapes of
+<p>The functorch memory efficient pass specializes on the shapes of
 the inputs to the function. If new inputs are provided with
 different shapes, then you need to construct a new function
-using <cite>memory_efficient_fusion</cite> and apply it to the new inputs.</p>
+using <code class="docutils literal notranslate"><span class="pre">memory_efficient_fusion</span></code> and apply it to the new inputs.</p>
 </div>
 </div>
 <div class="section" id="transformer-block-with-a-novel-normalization">
@@ -972,10 +972,10 @@ in PyTorch. Previously, this meant researchers either had to define
 an entirely new operation in PyTorch – which takes a lot of time and
 knowledge of the lower-level PyTorch code as well as parallel
 programming – or writing the operation in simpler PyTorch ops and
-settling for poor performance. For example, let’s replace LayerNorm
-in our example with RMSNorm. Even though RMSNorm is a bit simpler
-than LayerNorm, it doesn’t have an existing compound operation in
-PyTorch. See the <a class="reference external" href="https://doi.org/10.48550/arXiv.1910.07467">Root Mean Square Layer Normalization</a> paper for more information about RMSNorm.
+settling for poor performance. For example, let’s replace <code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code>
+in our example with <code class="docutils literal notranslate"><span class="pre">RMSNorm</span></code>. Even though <code class="docutils literal notranslate"><span class="pre">RMSNorm</span></code> is a bit simpler
+than <code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code>, it doesn’t have an existing compound operation in
+PyTorch. See the <a class="reference external" href="https://doi.org/10.48550/arXiv.1910.07467">Root Mean Square Layer Normalization</a> paper for more information about <code class="docutils literal notranslate"><span class="pre">RMSNorm</span></code>.
 As before, we’ll define our new transformer block with
 primitive PyTorch operations.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">with_rms_norm</span><span class="p">(</span>
@@ -997,7 +997,7 @@ primitive PyTorch operations.</p>
 </pre></div>
 </div>
 <p>As before, we’ll get a baseline by running PyTorch without nvFuser.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Profile rms_norm</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Profile ``rms_norm``</span>
 <span class="n">func</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
     <span class="n">with_rms_norm</span><span class="p">,</span>
     <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">input1</span></a><span class="p">,</span>
@@ -1012,11 +1012,11 @@ primitive PyTorch operations.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Eager Mode - RMS Norm
-Average iterations per second: 83.70
+Average iterations per second: 83.74
 </pre></div>
 </div>
 <p>With nvFuser through TorchScript.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Profile scripted rms_norm</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Profile scripted ``rms_norm``</span>
 <a class="sphx-glr-backref-module-torch-jit sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.jit.ScriptFunction.html#torch.jit.ScriptFunction" title="torch.jit.ScriptFunction"><span class="n">scripted_with_rms_norm</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-jit sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.jit.script.html#torch.jit.script" title="torch.jit.script"><span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">script</span></a><span class="p">(</span><span class="n">with_rms_norm</span><span class="p">)</span>
 <span class="n">func</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
     <a class="sphx-glr-backref-module-torch-jit sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.jit.ScriptFunction.html#torch.jit.ScriptFunction" title="torch.jit.ScriptFunction"><span class="n">scripted_with_rms_norm</span></a><span class="p">,</span>
@@ -1032,7 +1032,7 @@ Average iterations per second: 83.70
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TorchScript - RMS Norm
-Average iterations per second: 172.48
+Average iterations per second: 172.21
 </pre></div>
 </div>
 <p>With nvFuser through Functorch.</p>
@@ -1048,7 +1048,7 @@ Average iterations per second: 172.48
     <span class="k">return</span> <span class="n">norm_output</span>
 
 
-<span class="c1"># Profile memory efficient rms_norm</span>
+<span class="c1"># Profile memory efficient ``rms_norm``</span>
 <span class="n">memory_efficient_rms_norm</span> <span class="o">=</span> <span class="n">memory_efficient_fusion</span><span class="p">(</span>
     <span class="n">with_rms_norm_for_memory_efficient_fusion</span>
 <span class="p">)</span>
@@ -1061,18 +1061,18 @@ Average iterations per second: 172.48
 The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
 
 FuncTorch - RMS Norm
-Average iterations per second: 201.80
+Average iterations per second: 201.89
 </pre></div>
 </div>
 <div class="figure align-default">
 <img alt="../_images/nvfuser_tutorial_6.png" src="../_images/nvfuser_tutorial_6.png"/>
 </div>
-<p>Since RMSNorm is simpler than LayerNorm the performance of our new
+<p>Since <code class="docutils literal notranslate"><span class="pre">RMSNorm</span></code> is simpler than <code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code> the performance of our new
 transformer block is a little higher than the primitive definition
 without nvFuser (354 iterations per second compared with 260
 iterations per second). With TorchScript, the iterations per second
 increases by 2.68x and 3.36x to 952 iterations per second and 1,191
-iterations per second with TorchScript and FuncTorch’s memory
+iterations per second with TorchScript and functorch memory
 efficient optimization pass, respectively. The performance of this
 new operation nearly matches the performance of the composite Layer
 Norm definition with TorchScript.</p>
@@ -1085,7 +1085,7 @@ it’s able to analyze users’ programs to provide performance as fast as a
 highly hand tuned implementation, regardless of how the operations are
 defined. nvFuser still cannot support every operation in PyTorch,
 however its capabilities will continue to grow over time.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  22.940 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  22.355 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-nvfuser-intro-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/34f7e75ee94707fc2de88bf7b609e4d9/nvfuser_intro_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">nvfuser_intro_tutorial.py</span></code></a></p>
@@ -1146,7 +1146,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <li><a class="reference internal" href="#setup-and-performance-metrics">Setup and Performance Metrics</a></li>
 <li><a class="reference internal" href="#torchscript-nvfuser">TorchScript &amp; nvFuser</a></li>
 <li><a class="reference internal" href="#nvfuser-dynamic-shapes">nvFuser &amp; Dynamic Shapes</a></li>
-<li><a class="reference internal" href="#defining-novel-operations-with-nvfuser-and-functorch">Defining novel operations with nvFuser and FuncTorch</a></li>
+<li><a class="reference internal" href="#defining-novel-operations-with-nvfuser-and-functorch">Defining novel operations with nvFuser and functorch</a></li>
 <li><a class="reference internal" href="#transformer-block-with-a-novel-normalization">Transformer Block With a Novel Normalization</a></li>
 </ul>
 </li>

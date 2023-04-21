@@ -136,7 +136,7 @@ downloads available at https://tatoeba.org/eng/downloads - and better
 yet, someone did the extra work of splitting language pairs into
 individual text files here: https://www.manythings.org/anki/
 
-The English to French pairs are too big to include in the repo, so
+The English to French pairs are too big to include in the repository, so
 download to ``data/eng-fra.txt`` before continuing. The file is a tab
 separated list of translation pairs:
 
@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je vais a cet endroit .', 'i am going to that place .']
+    ['je suis de la cote est .', 'i m from the east coast .']
 
 
 
@@ -410,10 +410,10 @@ corresponds to an output, the seq2seq model frees us from sequence
 length and order, which makes it ideal for translation between two
 languages.
 
-Consider the sentence "Je ne suis pas le chat noir" → "I am not the
-black cat". Most of the words in the input sentence have a direct
+Consider the sentence ``Je ne suis pas le chat noir`` → ``I am not the
+black cat``. Most of the words in the input sentence have a direct
 translation in the output sentence, but are in slightly different
-orders, e.g. "chat noir" and "black cat". Because of the "ne/pas"
+orders, e.g. ``chat noir`` and ``black cat``. Because of the ``ne/pas``
 construction there is also one more word in the input sentence. It would
 be difficult to produce a correct translation directly from the sequence
 of input words.
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 25s (- 19m 57s) (5000 6%) 2.8878
-    2m 45s (- 17m 53s) (10000 13%) 2.2619
-    4m 4s (- 16m 17s) (15000 20%) 1.9571
-    5m 24s (- 14m 51s) (20000 26%) 1.7221
-    6m 44s (- 13m 28s) (25000 33%) 1.5019
-    8m 3s (- 12m 5s) (30000 40%) 1.3176
-    9m 23s (- 10m 44s) (35000 46%) 1.2029
-    10m 43s (- 9m 23s) (40000 53%) 1.0784
-    12m 3s (- 8m 2s) (45000 60%) 0.9522
-    13m 23s (- 6m 41s) (50000 66%) 0.8809
-    14m 42s (- 5m 21s) (55000 73%) 0.7949
-    16m 0s (- 4m 0s) (60000 80%) 0.6984
-    17m 21s (- 2m 40s) (65000 86%) 0.6328
-    18m 40s (- 1m 20s) (70000 93%) 0.5992
-    19m 59s (- 0m 0s) (75000 100%) 0.5380
+    1m 25s (- 19m 59s) (5000 6%) 2.8456
+    2m 43s (- 17m 41s) (10000 13%) 2.2843
+    4m 1s (- 16m 4s) (15000 20%) 1.9565
+    5m 18s (- 14m 36s) (20000 26%) 1.7306
+    6m 36s (- 13m 13s) (25000 33%) 1.5055
+    7m 56s (- 11m 54s) (30000 40%) 1.3294
+    9m 14s (- 10m 33s) (35000 46%) 1.2057
+    10m 32s (- 9m 13s) (40000 53%) 1.0829
+    11m 50s (- 7m 53s) (45000 60%) 0.9644
+    13m 8s (- 6m 34s) (50000 66%) 0.8631
+    14m 25s (- 5m 14s) (55000 73%) 0.7829
+    15m 44s (- 3m 56s) (60000 80%) 0.7200
+    17m 2s (- 2m 37s) (65000 86%) 0.6725
+    18m 20s (- 1m 18s) (70000 93%) 0.5907
+    19m 38s (- 0m 0s) (75000 100%) 0.5319
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > cela me depasse completement .
-    = i m in way over my head .
-    < i m in way over my head . <EOS>
+    > vous etes idiotes .
+    = you re silly .
+    < you re stupid . <EOS>
 
-    > elle est toute cousue d or .
-    = she s rolling in money .
-    < she s very in . <EOS>
+    > elle est gentille .
+    = she is gentle .
+    < she s nice . <EOS>
 
-    > je suis votre debiteur .
-    = i am in your debt .
-    < i am in your debt . <EOS>
+    > vous etes fiable .
+    = you re trustworthy .
+    < you re reliable . <EOS>
 
-    > je suis une actrice pas un mannequin .
-    = i m an actress not a model .
-    < i m an actress an model . <EOS>
+    > je lis une lettre .
+    = i am reading a letter .
+    < i am reading a letter . <EOS>
 
-    > vous etes depourvue d ambition .
-    = you re unambitious .
-    < you re unambitious . <EOS>
+    > je ne suis pas impressionne .
+    = i m not impressed .
+    < i m not impressed . <EOS>
 
-    > nous sommes les nouveaux proprietaires .
-    = we are the new owners .
-    < we re the new owners . <EOS>
+    > vous etes tres occupe .
+    = you re very busy .
+    < you re very busy . <EOS>
 
-    > elle est appreciee de tout le monde .
-    = she is appreciated by everyone .
-    < she is well by everybody . <EOS>
+    > je suis americaine .
+    = i am american .
+    < i m an american . <EOS>
 
-    > je ne fais que regarder .
-    = i m just looking around .
-    < i m just looking . <EOS>
+    > je te donne encore une chance .
+    = i m giving you one more chance .
+    < i m giving you one more . . <EOS>
 
-    > c est un jeune homme adorable .
-    = he s a lovely young man .
-    < he s an lovely young man . <EOS>
+    > vous etes la de bonne heure ce matin !
+    = you are very early this morning .
+    < you are very early this morning . <EOS>
 
-    > c est vraiment une fille adorable .
-    = she is indeed a lovely girl .
-    < she s indeed a lovely girl . <EOS>
+    > je suis un peu en colere contre toi .
+    = i m a little angry with you .
+    < i m a little angry with you . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f37bd7f5240>
+    <matplotlib.image.AxesImage object at 0x7f1d6397f940>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than me . <EOS>
+    output = she is five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too . . <EOS>
+    output = she s too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m afraid afraid to die . <EOS>
+    output = i m not scared of dying . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s a talented young . . <EOS>
 
 
 
@@ -1276,8 +1276,8 @@ Exercises
    -  Chat → Response
    -  Question → Answer
 
--  Replace the embeddings with pre-trained word embeddings such as word2vec or
-   GloVe
+-  Replace the embeddings with pretrained word embeddings such as ``word2vec`` or
+   ``GloVe``
 -  Try with more layers, more hidden units, and more sentences. Compare
    the training time and results.
 -  If you use a translation file where pairs have two of the same phrase
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  14.590 seconds)
+   **Total running time of the script:** ( 19 minutes  52.573 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

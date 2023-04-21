@@ -315,7 +315,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ax_multiobjective_nas_tutorial.html">Multi-Objective NAS with Ax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch_compile_tutorial.html">torch.compile Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html">(Beta) Implementing High-Performance Transformers with Scaled Dot Product Attention (SDPA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with torch.compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#using-sdpa-with-torch-compile">Using SDPA with <code class="docutils literal notranslate"><span class="pre">torch.compile</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scaled_dot_product_attention_tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Parallel and Distributed Training</span></p>
@@ -457,7 +457,7 @@ composable function transforms for PyTorch.</p>
 <p><code class="docutils literal notranslate"><span class="pre">torch.func</span></code> transforms operate on functions. In particular, to compute the NTK,
 we will need a function that accepts the parameters of the model and a single
 input (as opposed to a batch of inputs!) and returns a single output.</p>
-<p>We’ll use <code class="docutils literal notranslate"><span class="pre">torch.func.functional_call</span></code>, which allows us to call an nn.Module
+<p>We’ll use <code class="docutils literal notranslate"><span class="pre">torch.func.functional_call</span></code>, which allows us to call an <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>
 using different parameters/buffers, to help accomplish the first step.</p>
 <p>Keep in mind that the model was originally written to accept a batch of input
 data points. In our CNN example, there are no inter-batch operations. That
@@ -590,10 +590,10 @@ Jacobian-vector product) to compute the NTK.</p>
         <span class="n">output</span><span class="p">,</span> <span class="n">vjp_fn</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-func sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.func.vjp.html#torch.func.vjp" title="torch.func.vjp"><span class="n">vjp</span></a><span class="p">(</span><span class="n">func_x1</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">get_ntk_slice</span><span class="p">(</span><span class="n">vec</span><span class="p">):</span>
-            <span class="c1"># This computes vec @ J(x2).T</span>
+            <span class="c1"># This computes ``vec @ J(x2).T``</span>
             <span class="c1"># `vec` is some unit vector (a single slice of the Identity matrix)</span>
             <span class="n">vjps</span> <span class="o">=</span> <span class="n">vjp_fn</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
-            <span class="c1"># This computes J(X1) @ vjps</span>
+            <span class="c1"># This computes ``J(X1) @ vjps``</span>
             <span class="n">_</span><span class="p">,</span> <span class="n">jvps</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-func sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.func.jvp.html#torch.func.jvp" title="torch.func.jvp"><span class="n">jvp</span></a><span class="p">(</span><span class="n">func_x2</span><span class="p">,</span> <span class="p">(</span><span class="n">params</span><span class="p">,),</span> <span class="n">vjps</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">jvps</span>
 
@@ -601,10 +601,10 @@ Jacobian-vector product) to compute the NTK.</p>
         <span class="n">basis</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.eye.html#torch.eye" title="torch.eye"><span class="n">torch</span><span class="o">.</span><span class="n">eye</span></a><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">output</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">output</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.vmap.html#torch.vmap" title="torch.vmap"><span class="n">vmap</span></a><span class="p">(</span><span class="n">get_ntk_slice</span><span class="p">)(</span><span class="n">basis</span><span class="p">)</span>
 
-    <span class="c1"># get_ntk(x1, x2) computes the NTK for a single data point x1, x2</span>
-    <span class="c1"># Since the x1, x2 inputs to empirical_ntk_ntk_vps are batched,</span>
+    <span class="c1"># ``get_ntk(x1, x2)`` computes the NTK for a single data point x1, x2</span>
+    <span class="c1"># Since the x1, x2 inputs to ``empirical_ntk_ntk_vps`` are batched,</span>
     <span class="c1"># we actually wish to compute the NTK between every pair of data points</span>
-    <span class="c1"># between {x1} and {x2}. That's what the vmaps here do.</span>
+    <span class="c1"># between {x1} and {x2}. That's what the ``vmaps`` here do.</span>
     <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">result</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.vmap.html#torch.vmap" title="torch.vmap"><span class="n">vmap</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.vmap.html#torch.vmap" title="torch.vmap"><span class="n">vmap</span></a><span class="p">(</span><span class="n">get_ntk</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">compute</span> <span class="o">==</span> <span class="s1">'full'</span><span class="p">:</span>
@@ -635,7 +635,7 @@ such as fully-connected (not convolutional) models with many outputs <span class
 Memory-wise, both methods should be comparable. See section 3.3 in
 <a class="reference external" href="https://arxiv.org/abs/2206.08720">Fast Finite Width Neural Tangent Kernel</a>
 for details.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.272 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.304 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-neural-tangent-kernels-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/57e71bcf0a6c2280481b4e79ca070e22/neural_tangent_kernels.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_tangent_kernels.py</span></code></a></p>

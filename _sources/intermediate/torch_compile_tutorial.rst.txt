@@ -59,7 +59,7 @@ Note: a modern NVIDIA GPU (Volta or Ampere) is recommended for this tutorial.
 Basic Usage
 ------------
 
-``torch.compile`` is included in the latest PyTorch nightlies.
+``torch.compile`` is included in the latest PyTorch..
 Running TorchInductor on GPU requires Triton, which is included with the PyTorch 2.0 nightly
 binary. If Triton is still missing, try installing ``torchtriton`` via pip 
 (``pip install torchtriton --extra-index-url "https://download.pytorch.org/whl/nightly/cu117"``
@@ -270,7 +270,7 @@ Before we start, we need to define some utility functions.
 First, let's compare inference.
 
 Note that in the call to ``torch.compile``, we have have the additional
-``mode`` kwarg, which we will discuss below.
+``mode`` argument, which we will discuss below.
 
 .. GENERATED FROM PYTHON SOURCE LINES 129-145
 
@@ -300,8 +300,8 @@ Note that in the call to ``torch.compile``, we have have the additional
 
  .. code-block:: none
 
-    eager: 4.727541015625
-    compile: 10.5766171875
+    eager: 4.6005244140625
+    compile: 11.6952646484375
 
 
 
@@ -353,29 +353,29 @@ see a significant improvement compared to eager.
 
  .. code-block:: none
 
-    eager eval time 0: 0.009169695854187011
-    eager eval time 1: 0.008939519882202148
-    eager eval time 2: 0.008942912101745606
-    eager eval time 3: 0.008957695960998536
-    eager eval time 4: 0.008958687782287597
-    eager eval time 5: 0.008940095901489259
-    eager eval time 6: 0.008978272438049316
-    eager eval time 7: 0.008941311836242676
-    eager eval time 8: 0.008947392463684083
-    eager eval time 9: 0.008940640449523926
+    eager eval time 0: 0.009627039909362794
+    eager eval time 1: 0.00894976043701172
+    eager eval time 2: 0.008949824333190918
+    eager eval time 3: 0.008973119735717773
+    eager eval time 4: 0.00892908763885498
+    eager eval time 5: 0.00894553565979004
+    eager eval time 6: 0.009061344146728515
+    eager eval time 7: 0.009016672134399413
+    eager eval time 8: 0.008955488204956055
+    eager eval time 9: 0.00897049617767334
     ~~~~~~~~~~
-    compile eval time 0: 0.009444735527038573
-    compile eval time 1: 0.009375712394714356
-    compile eval time 2: 0.00929702377319336
-    compile eval time 3: 0.009277440071105958
-    compile eval time 4: 0.009266304016113282
-    compile eval time 5: 0.00929958438873291
-    compile eval time 6: 0.007819615840911865
-    compile eval time 7: 0.007187551975250244
-    compile eval time 8: 0.007153664112091064
-    compile eval time 9: 0.007168000221252442
+    compile eval time 0: 0.009459360122680664
+    compile eval time 1: 0.009451583862304687
+    compile eval time 2: 0.009421343803405762
+    compile eval time 3: 0.009402048110961915
+    compile eval time 4: 0.009416671752929687
+    compile eval time 5: 0.00937388801574707
+    compile eval time 6: 0.008646592140197754
+    compile eval time 7: 0.0074711360931396485
+    compile eval time 8: 0.007669760227203369
+    compile eval time 9: 0.007729087829589844
     ~~~~~~~~~~
-    (eval) eager median: 0.008945152282714844, compile median: 0.00927187204360962, speedup: 0.964762265984898x
+    (eval) eager median: 0.008962992191314696, compile median: 0.009387968063354492, speedup: 0.9547318579300808x
     ~~~~~~~~~~
 
 
@@ -391,7 +391,7 @@ and the amount of data is large, then the bottleneck would be
 GPU compute and the observed speedup may be less significant.
 
 You may also see different speedup results depending on the chosen ``mode``
-kwarg. Since our model and data are small, we want to reduce overhead as
+argument. Since our model and data are small, we want to reduce overhead as
 much as possible, and so we chose ``"reduce-overhead"``. For your own models,
 you may need to experiment with different modes to maximize speedup. You can
 read more about modes `here <https://pytorch.org/get-started/pytorch-2.0/#user-experience>`__.
@@ -451,29 +451,29 @@ Now, let's consider comparing training.
 
  .. code-block:: none
 
-    eager train time 0: 0.5020529174804688
-    eager train time 1: 0.025772287368774415
-    eager train time 2: 0.025683935165405274
-    eager train time 3: 0.025667583465576172
-    eager train time 4: 0.025673728942871094
-    eager train time 5: 0.025748447418212892
-    eager train time 6: 0.025647071838378905
-    eager train time 7: 0.025671680450439452
-    eager train time 8: 0.025386816024780275
-    eager train time 9: 0.02106777572631836
+    eager train time 0: 0.49917132568359374
+    eager train time 1: 0.02700454330444336
+    eager train time 2: 0.026951776504516602
+    eager train time 3: 0.02697216033935547
+    eager train time 4: 0.027057119369506836
+    eager train time 5: 0.02694223976135254
+    eager train time 6: 0.02694710350036621
+    eager train time 7: 0.02367897605895996
+    eager train time 8: 0.021377023696899415
+    eager train time 9: 0.021230335235595702
     ~~~~~~~~~~
-    compile train time 0: 23.297396484375
-    compile train time 1: 0.021677215576171874
-    compile train time 2: 0.02075916862487793
-    compile train time 3: 0.020725664138793946
-    compile train time 4: 0.020796255111694337
-    compile train time 5: 0.021060863494873048
-    compile train time 6: 0.020961280822753905
-    compile train time 7: 0.020843328475952147
-    compile train time 8: 0.02110150337219238
-    compile train time 9: 0.020979488372802734
+    compile train time 0: 25.172212890625
+    compile train time 1: 0.02197123146057129
+    compile train time 2: 0.021054624557495117
+    compile train time 3: 0.021004287719726563
+    compile train time 4: 0.021253759384155274
+    compile train time 5: 0.02111692810058594
+    compile train time 6: 0.021064479827880858
+    compile train time 7: 0.021359872817993165
+    compile train time 8: 0.020994112014770507
+    compile train time 9: 0.021107072830200194
     ~~~~~~~~~~
-    (train) eager median: 0.025672704696655273, compile median: 0.02097038459777832, speedup: 1.2242362354849292x
+    (train) eager median: 0.026949440002441406, compile median: 0.021112000465393067, speedup: 1.2764986457165493x
     ~~~~~~~~~~
 
 
@@ -1020,7 +1020,7 @@ outputs the FX graph and simply returns the graph's unoptimized forward method.
     call_function  iadd_7                      <built-in function iadd>                                    (self_layer4_1_bn2, self_layer4_0_relu_1)        {}
     call_module    self_layer4_1_relu_1        self_layer4_1_relu                                          (iadd_7,)                                        {}
     call_module    self_avgpool                self_avgpool                                                (self_layer4_1_relu_1,)                          {}
-    call_function  flatten                     <built-in method flatten of type object at 0x7f27fe22d540>  (self_avgpool, 1)                                {}
+    call_function  flatten                     <built-in method flatten of type object at 0x7f0ba777a540>  (self_avgpool, 1)                                {}
     call_module    self_fc                     self_fc                                                     (flatten,)                                       {}
     output         output                      output                                                      ((self_fc,),)                                    {}
 
@@ -1071,7 +1071,7 @@ data-dependent control flow. Consider the function below, where the line
     -------------  -------  ------------------------------------------------------  ----------------  --------
     placeholder    a        a                                                       ()                {}
     placeholder    b        b                                                       ()                {}
-    call_function  abs_1    <built-in method abs of type object at 0x7f27fe22d540>  (a,)              {}
+    call_function  abs_1    <built-in method abs of type object at 0x7f0ba777a540>  (a,)              {}
     call_function  add      <built-in function add>                                 (abs_1, 1)        {}
     call_function  truediv  <built-in function truediv>                             (a, add)          {}
     call_method    sum_1    sum                                                     (b,)              {}
@@ -1159,8 +1159,8 @@ We can see where TorchDynamo breaks the graph by using ``torch._dynamo.explain``
     TorchDynamo compilation metrics:
     Function                        Runtimes (s)
     ------------------------------  --------------
-    _compile                        0.0125, 0.0054
-    OutputGraph.call_user_compiler  0.0000, 0.0000
+    _compile                        0.0146, 0.0061
+    OutputGraph.call_user_compiler  0.0001, 0.0000
 
 
 
@@ -1363,7 +1363,7 @@ with FX graphs. We hope that you will give ``torch.compile`` a try!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  5.651 seconds)
+   **Total running time of the script:** ( 1 minutes  11.855 seconds)
 
 
 .. _sphx_glr_download_intermediate_torch_compile_tutorial.py:
