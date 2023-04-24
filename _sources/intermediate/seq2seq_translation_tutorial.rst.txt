@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je suis de la cote est .', 'i m from the east coast .']
+    ['elles ont raison bien sur .', 'they re right of course .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 25s (- 19m 59s) (5000 6%) 2.8456
-    2m 43s (- 17m 41s) (10000 13%) 2.2843
-    4m 1s (- 16m 4s) (15000 20%) 1.9565
-    5m 18s (- 14m 36s) (20000 26%) 1.7306
-    6m 36s (- 13m 13s) (25000 33%) 1.5055
-    7m 56s (- 11m 54s) (30000 40%) 1.3294
-    9m 14s (- 10m 33s) (35000 46%) 1.2057
-    10m 32s (- 9m 13s) (40000 53%) 1.0829
-    11m 50s (- 7m 53s) (45000 60%) 0.9644
-    13m 8s (- 6m 34s) (50000 66%) 0.8631
-    14m 25s (- 5m 14s) (55000 73%) 0.7829
-    15m 44s (- 3m 56s) (60000 80%) 0.7200
-    17m 2s (- 2m 37s) (65000 86%) 0.6725
-    18m 20s (- 1m 18s) (70000 93%) 0.5907
-    19m 38s (- 0m 0s) (75000 100%) 0.5319
+    1m 23s (- 19m 32s) (5000 6%) 2.8708
+    2m 43s (- 17m 45s) (10000 13%) 2.2938
+    4m 2s (- 16m 11s) (15000 20%) 1.9613
+    5m 21s (- 14m 43s) (20000 26%) 1.7314
+    6m 39s (- 13m 19s) (25000 33%) 1.5472
+    7m 58s (- 11m 57s) (30000 40%) 1.3881
+    9m 17s (- 10m 36s) (35000 46%) 1.2172
+    10m 35s (- 9m 16s) (40000 53%) 1.1114
+    11m 54s (- 7m 56s) (45000 60%) 0.9858
+    13m 11s (- 6m 35s) (50000 66%) 0.8965
+    14m 29s (- 5m 16s) (55000 73%) 0.8241
+    15m 47s (- 3m 56s) (60000 80%) 0.7378
+    17m 5s (- 2m 37s) (65000 86%) 0.6816
+    18m 22s (- 1m 18s) (70000 93%) 0.6411
+    19m 40s (- 0m 0s) (75000 100%) 0.5818
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > vous etes idiotes .
-    = you re silly .
-    < you re stupid . <EOS>
+    > tu es gentille .
+    = you re kind .
+    < you re nice . <EOS>
 
-    > elle est gentille .
-    = she is gentle .
-    < she s nice . <EOS>
+    > ce sont des etudiants capables .
+    = they re able students .
+    < they re students students . <EOS>
 
-    > vous etes fiable .
-    = you re trustworthy .
-    < you re reliable . <EOS>
+    > c est vous les proprietaires .
+    = you re the owners .
+    < you re the owners . <EOS>
 
-    > je lis une lettre .
-    = i am reading a letter .
-    < i am reading a letter . <EOS>
+    > elle est en colere apres moi .
+    = she is angry with me .
+    < she is angry with me . <EOS>
 
-    > je ne suis pas impressionne .
-    = i m not impressed .
-    < i m not impressed . <EOS>
+    > j en suis quasiment certain .
+    = i m quite sure of that .
+    < i m so sure of that . <EOS>
 
-    > vous etes tres occupe .
-    = you re very busy .
-    < you re very busy . <EOS>
+    > je suis en bas .
+    = i m downstairs .
+    < i m downstairs . <EOS>
 
-    > je suis americaine .
-    = i am american .
-    < i m an american . <EOS>
+    > je suis pret a partir maintenant .
+    = i m ready to leave now .
+    < i m ready to go now . <EOS>
 
-    > je te donne encore une chance .
-    = i m giving you one more chance .
-    < i m giving you one more . . <EOS>
+    > ils sont de notre force .
+    = they are as strong as us .
+    < they are as strong as us . <EOS>
 
-    > vous etes la de bonne heure ce matin !
-    = you are very early this morning .
-    < you are very early this morning . <EOS>
+    > vous etes fascinantes .
+    = you re fascinating .
+    < you re bright . <EOS>
 
-    > je suis un peu en colere contre toi .
-    = i m a little angry with you .
-    < i m a little angry with you . <EOS>
+    > tu as surement d autres talents .
+    = i m sure you have other skills .
+    < i m sure you have a . . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f1d6397f940>
+    <matplotlib.image.AxesImage object at 0x7fe1dd4d7fd0>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she is five years younger than me am . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too loud . <EOS>
+    output = she s too short . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared of dying . <EOS>
+    output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . . <EOS>
+    output = he s very talented young a . . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  52.573 seconds)
+   **Total running time of the script:** ( 19 minutes  54.078 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

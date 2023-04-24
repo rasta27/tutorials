@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 15.0MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 16.8MB/s]
 
 
 
@@ -135,45 +135,52 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.41M/945M [00:00<00:12, 77.6MB/s]
-      2%|2         | 20.7M/945M [00:00<00:08, 114MB/s] 
-      5%|5         | 48.4M/945M [00:00<00:04, 195MB/s]
-      8%|7         | 73.7M/945M [00:00<00:04, 222MB/s]
-     10%|#         | 94.9M/945M [00:00<00:04, 209MB/s]
-     12%|#2        | 115M/945M [00:00<00:04, 205MB/s] 
-     15%|#5        | 143M/945M [00:00<00:03, 232MB/s]
-     18%|#8        | 171M/945M [00:00<00:03, 250MB/s]
-     21%|##1       | 199M/945M [00:00<00:02, 264MB/s]
-     24%|##3       | 226M/945M [00:01<00:02, 271MB/s]
-     27%|##6       | 252M/945M [00:01<00:07, 103MB/s]
-     30%|##9       | 280M/945M [00:01<00:05, 130MB/s]
-     33%|###2      | 308M/945M [00:01<00:04, 157MB/s]
-     35%|###5      | 335M/945M [00:01<00:03, 182MB/s]
-     38%|###8      | 363M/945M [00:02<00:02, 205MB/s]
-     41%|####1     | 390M/945M [00:02<00:02, 225MB/s]
-     44%|####4     | 418M/945M [00:02<00:02, 242MB/s]
-     47%|####7     | 445M/945M [00:02<00:02, 218MB/s]
-     50%|####9     | 469M/945M [00:02<00:02, 226MB/s]
-     52%|#####2    | 493M/945M [00:02<00:02, 220MB/s]
-     55%|#####4    | 515M/945M [00:02<00:02, 222MB/s]
-     57%|#####6    | 538M/945M [00:03<00:03, 123MB/s]
-     59%|#####8    | 555M/945M [00:03<00:03, 108MB/s]
-     61%|######1   | 576M/945M [00:03<00:03, 127MB/s]
-     63%|######3   | 599M/945M [00:03<00:02, 149MB/s]
-     66%|######6   | 626M/945M [00:03<00:01, 177MB/s]
-     69%|######8   | 651M/945M [00:03<00:01, 198MB/s]
-     72%|#######1  | 677M/945M [00:03<00:01, 216MB/s]
-     74%|#######4  | 703M/945M [00:03<00:01, 230MB/s]
-     77%|#######7  | 728M/945M [00:04<00:00, 240MB/s]
-     80%|#######9  | 755M/945M [00:04<00:00, 252MB/s]
-     83%|########2 | 780M/945M [00:04<00:00, 255MB/s]
-     85%|########5 | 807M/945M [00:04<00:00, 263MB/s]
-     88%|########8 | 833M/945M [00:04<00:00, 265MB/s]
-     91%|#########1| 860M/945M [00:04<00:00, 269MB/s]
-     94%|#########3| 887M/945M [00:04<00:00, 274MB/s]
-     97%|#########6| 914M/945M [00:04<00:00, 276MB/s]
-    100%|#########9| 940M/945M [00:04<00:00, 276MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 202MB/s]
+      1%|          | 7.91M/945M [00:00<00:11, 83.0MB/s]
+      2%|2         | 21.2M/945M [00:00<00:08, 116MB/s] 
+      4%|4         | 39.7M/945M [00:00<00:06, 152MB/s]
+      6%|6         | 58.4M/945M [00:00<00:05, 169MB/s]
+      8%|8         | 77.4M/945M [00:00<00:05, 180MB/s]
+     10%|#         | 96.8M/945M [00:00<00:04, 188MB/s]
+     12%|#2        | 116M/945M [00:00<00:04, 191MB/s] 
+     14%|#4        | 135M/945M [00:00<00:04, 196MB/s]
+     16%|#6        | 154M/945M [00:00<00:04, 195MB/s]
+     18%|#8        | 173M/945M [00:01<00:04, 195MB/s]
+     20%|##        | 191M/945M [00:01<00:04, 165MB/s]
+     22%|##2       | 208M/945M [00:01<00:06, 111MB/s]
+     24%|##4       | 227M/945M [00:01<00:05, 129MB/s]
+     26%|##6       | 246M/945M [00:01<00:05, 146MB/s]
+     28%|##8       | 265M/945M [00:01<00:04, 158MB/s]
+     30%|##9       | 283M/945M [00:01<00:04, 167MB/s]
+     32%|###2      | 303M/945M [00:01<00:03, 178MB/s]
+     34%|###4      | 323M/945M [00:02<00:03, 185MB/s]
+     36%|###6      | 342M/945M [00:02<00:03, 190MB/s]
+     38%|###8      | 361M/945M [00:02<00:03, 194MB/s]
+     41%|####      | 383M/945M [00:02<00:02, 203MB/s]
+     43%|####2     | 406M/945M [00:02<00:02, 215MB/s]
+     45%|####5     | 427M/945M [00:02<00:02, 183MB/s]
+     47%|####7     | 445M/945M [00:03<00:05, 90.2MB/s]
+     50%|####9     | 470M/945M [00:03<00:04, 116MB/s] 
+     52%|#####2    | 494M/945M [00:03<00:03, 140MB/s]
+     55%|#####4    | 518M/945M [00:03<00:02, 164MB/s]
+     57%|#####7    | 541M/945M [00:03<00:02, 181MB/s]
+     60%|#####9    | 564M/945M [00:03<00:02, 196MB/s]
+     62%|######2   | 589M/945M [00:03<00:01, 212MB/s]
+     65%|######4   | 613M/945M [00:03<00:01, 224MB/s]
+     67%|######7   | 637M/945M [00:03<00:01, 232MB/s]
+     70%|######9   | 661M/945M [00:04<00:01, 235MB/s]
+     72%|#######2  | 685M/945M [00:04<00:01, 241MB/s]
+     75%|#######4  | 708M/945M [00:04<00:01, 158MB/s]
+     77%|#######7  | 727M/945M [00:04<00:01, 138MB/s]
+     79%|#######8  | 744M/945M [00:04<00:01, 116MB/s]
+     80%|########  | 757M/945M [00:04<00:01, 111MB/s]
+     83%|########2 | 779M/945M [00:05<00:01, 135MB/s]
+     85%|########4 | 802M/945M [00:05<00:00, 158MB/s]
+     87%|########7 | 826M/945M [00:05<00:00, 179MB/s]
+     90%|########9 | 850M/945M [00:05<00:00, 197MB/s]
+     93%|#########2| 874M/945M [00:05<00:00, 213MB/s]
+     95%|#########5| 898M/945M [00:05<00:00, 223MB/s]
+     98%|#########7| 922M/945M [00:05<00:00, 231MB/s]
+    100%|##########| 945M/945M [00:05<00:00, 172MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +476,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: counterfeit drug gang jailed after raking in £10million by selling fake Viagra . gang offered cheap erectile dysfunction pills to online and face-to-face customers around the world . judge described it as a 'highly organised, large-scale criminal enterprise' which risked the health of members of the public .
+    prediction: aston villa host liverpool in the premier league on sunday . the reds are without a win in the competition . aston villa have lost just one of their last six matches .
 
-    target: UK-wide conspiracy offered cheap erectile dysfunction pills to customers . Neil Gilbert headed one group, which made up to £60,000 a week in sales . Family and friends were recruited to help with massive criminal enterprise . Eight-year conspiracy continued even after gang was arrested in 2011 .
+    target: Daniel Sturridge appeared in a promotional video for BT Sport . He was joined by comedian Darren Farley, who impersonated Michael Owen . Farley's impression of the former Reds striker left Sturridge giggling . Liverpool take on Aston Villa in the FA Cup semi-final on Sunday .
 
 
     Example 2:
 
-    prediction: 'i don't have obsessions now,' says 73-year-old . he has spent his retirement devoting himself to any number of causes . he made a £5,000 donation to the remember Mary barbour Fund .
+    prediction: pet aquarium fish are being caught weighing up to 2kg in the waterways of western australia . koi carp weighing up to 8kg and one metre in length are another of the 13 introduced pests . the native fish in the region are only 10cm long like the pygmy perch or the native minnows .
 
-    target: Sir Alex Ferguson has lived and breathed football since making his senior debut at the age of just 16 . Ferguson's haul of 49 assorted cups and prizes making him easily Britain’s most successful ever manager . Football is no longer the dominant factor in Ferguson's life . CLICK HERE for the latest Manchester United news .
+    target: Aquarium fish are being dumped in Western Australia rivers by pet owners . Goldfish are growing from the regular 100g to 2kg and koi carp to 8kg . The exotic species compete with 10cm long native fish for food and habitat . They also introduce devastating parasites and diseases onto local species .
 
 
     Example 3:
 
-    prediction: inverness beat 10-man Celtic 3-2 in extra-time to reach the final of the William Hill Scottish Cup . defender David Raven scored the winner four minutes from the end of extra time . the 30-year-old hailed his win as 'a dream come true' ahead of the final .
+    prediction: creamer has suggested a women's event at Augusta National . the world no 27 won the 2010 women's US open . she first floated the idea on twitter following the win at the masters .
 
-    target: Inverness upset Celtic 3-2 in the Scottish Cup semi-final on Sunday . Caley defender David Raven scored the winning goal in extra time . The 30-year-old has hailed his wining strike as a 'dream come true'
+    target: Paula Creamer won the 2010 women's US Open . Creamer suggested a women's event could be staged the week following the men's showpiece in April . Jordan Spieth stormed to his first Masters title earlier this month .
 
 
     Example 4:
 
-    prediction: police exhumed the boy's body from his grave in weasenham, Norfolk . a DNA sample led police to the boy's mother, who was arrested on suspicion of infanticide . the charge was dropped after she explained how the baby had been stillborn and that she had concealed the pregnancy from her family and friends .
+    prediction: a 2012 small arms survey says gender-based violence is at epidemic levels in Guatemala . the country ranks third in the killings of women worldwide .
 
-    target: Baby boy's remains were exhumed last year after case came up for review . DNA led police to the mother who was arrested on suspicion of infanticide . But the charge was dropped after she explained the baby was stillborn . CPS may now charge her with failing to register the birth and preventing a lawful burial .
+    target: Gender-based  violence is at epidemic levels in Guatemala . According to the United Nations, two women are killed in Guatemala every day . Five abuse survivors known as La Poderosas have been appearing in a play based on their real life stories .
 
 
     Example 5:
 
-    prediction: a spokesman for the nursing home says the video is "fantastic" and "fantastic" a 102-year-old dancer in the 1930s and 1940s was a chorus line in the Cotton Club . she was a member of the chorus that entertained with notables like "Bojangles" Robinson and Frank Sinatra .
+    prediction: 'catamavan' has oven, fridge freezer, shower, toilet, double bed and two tables . it is fitted with a small engine that reaches four knots .
 
-    target: Alice Barker was a dancer in the 1930s and '40s . Thanks to filmmakers, Barker -- now 102 -- finally saw herself dance .
+    target: John Thurston started building the bizarre vessel while getting divorced . He took the hull of a catamaran and placed the caravan on top . The 80-year-old enjoys cruising up and down the River Swale in Kent .
 
 
 
@@ -853,7 +860,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  21.200 seconds)
+   **Total running time of the script:** ( 3 minutes  41.439 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

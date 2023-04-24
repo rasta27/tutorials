@@ -409,7 +409,7 @@ present.
 
  .. code-block:: none
 
-    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7efb5d126230>)])
+    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7f84199ada80>)])
 
 
 
@@ -577,7 +577,7 @@ module attributes, and the module will now have two ``forward_pre_hooks``.
 
  .. code-block:: none
 
-    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7efb5d126230>), (1, <torch.nn.utils.prune.L1Unstructured object at 0x7efb5d126aa0>)])
+    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7f84199ada80>), (1, <torch.nn.utils.prune.L1Unstructured object at 0x7f84199afaf0>)])
 
 
 
@@ -675,7 +675,7 @@ pruning applied to the ``weight`` parameter.
 
  .. code-block:: none
 
-    [<torch.nn.utils.prune.RandomUnstructured object at 0x7efb5d126230>, <torch.nn.utils.prune.LnStructured object at 0x7efb5d1257e0>]
+    [<torch.nn.utils.prune.RandomUnstructured object at 0x7f84199ada80>, <torch.nn.utils.prune.LnStructured object at 0x7f84199ace20>]
 
 
 
@@ -1222,7 +1222,7 @@ Let's try it out!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.157 seconds)
+   **Total running time of the script:** ( 0 minutes  0.148 seconds)
 
 
 .. _sphx_glr_download_intermediate_pruning_tutorial.py:
