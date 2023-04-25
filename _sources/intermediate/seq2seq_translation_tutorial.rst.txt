@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['tu es tellement paranoiaque !', 'you re so paranoid .']
+    ['je me rejouis de vous voir heureux .', 'i m glad to see you re happy .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 22s (- 19m 14s) (5000 6%) 2.8623
-    2m 40s (- 17m 22s) (10000 13%) 2.2794
-    3m 59s (- 15m 56s) (15000 20%) 1.9577
-    5m 17s (- 14m 32s) (20000 26%) 1.7223
-    6m 36s (- 13m 13s) (25000 33%) 1.5296
-    7m 56s (- 11m 54s) (30000 40%) 1.3810
-    9m 15s (- 10m 35s) (35000 46%) 1.2106
-    10m 37s (- 9m 17s) (40000 53%) 1.1029
-    11m 57s (- 7m 58s) (45000 60%) 0.9827
-    13m 17s (- 6m 38s) (50000 66%) 0.8846
-    14m 38s (- 5m 19s) (55000 73%) 0.8383
-    15m 57s (- 3m 59s) (60000 80%) 0.7425
-    17m 17s (- 2m 39s) (65000 86%) 0.6719
-    18m 37s (- 1m 19s) (70000 93%) 0.5977
-    19m 56s (- 0m 0s) (75000 100%) 0.5612
+    1m 20s (- 18m 42s) (5000 6%) 2.8489
+    2m 36s (- 16m 55s) (10000 13%) 2.2804
+    3m 51s (- 15m 26s) (15000 20%) 1.9747
+    5m 7s (- 14m 5s) (20000 26%) 1.7321
+    6m 23s (- 12m 47s) (25000 33%) 1.5553
+    7m 39s (- 11m 29s) (30000 40%) 1.3645
+    8m 55s (- 10m 12s) (35000 46%) 1.2290
+    10m 11s (- 8m 55s) (40000 53%) 1.1110
+    11m 27s (- 7m 38s) (45000 60%) 1.0169
+    12m 44s (- 6m 22s) (50000 66%) 0.8992
+    14m 0s (- 5m 5s) (55000 73%) 0.8197
+    15m 16s (- 3m 49s) (60000 80%) 0.7660
+    16m 32s (- 2m 32s) (65000 86%) 0.6724
+    17m 48s (- 1m 16s) (70000 93%) 0.6106
+    19m 4s (- 0m 0s) (75000 100%) 0.5805
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > tu es seul n est ce pas ?
-    = you re alone aren t you ?
-    < you re alone aren t you ? <EOS>
+    > tu temporises .
+    = you re stalling .
+    < you re winning . <EOS>
 
-    > je ne suis pas sur de comprendre .
-    = i m not sure i understand .
-    < i m not sure i understand . <EOS>
+    > tu fais le chef .
+    = you re bossy .
+    < you re bossy . <EOS>
 
-    > c est un pigiste .
-    = he s a freelance journalist .
-    < he s a freelance . <EOS>
+    > je ne suis pas etroit d esprit .
+    = i m not narrow minded .
+    < i m not narrow minded . <EOS>
 
-    > elles ne sont pas satisfaites .
-    = they re not happy .
-    < they re not happy . <EOS>
+    > ils sont fort joyeux .
+    = they are very cheerful .
+    < they are very cheerful . <EOS>
 
-    > il se preoccupe du resultat .
-    = he s worried about the result .
-    < he is worried about the result . <EOS>
+    > on en a marre .
+    = we re tired of this .
+    < we re just of . <EOS>
 
-    > je suis sure qu il reussira .
-    = i am sure of his success .
-    < i am sure of succeed . <EOS>
+    > vous etes tellement idiotes !
+    = you are so stupid .
+    < you re so stupid . <EOS>
 
-    > vous etes tres observateur .
-    = you re very observant .
-    < you re very observant . <EOS>
+    > je pense cloturer mon compte d epargne .
+    = i am thinking of closing my savings account .
+    < i m drinking in of of of . . <EOS>
 
-    > nous ne sommes pas chez nous .
-    = we re not home .
-    < we re not home . <EOS>
+    > elles parlent en francais .
+    = they re speaking french .
+    < they re studying french . <EOS>
 
-    > vous etes riche .
-    = you re rich .
-    < you re rich . <EOS>
+    > il se trouve a son cote .
+    = he s at her side .
+    < he s at home . <EOS>
 
-    > j essaie d economiser de l argent .
-    = i m trying to save money .
-    < i m trying to save money . <EOS>
+    > il est dans la mouise .
+    = he s in hot water .
+    < he s in trouble . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7fc739fae0b0>
+    <matplotlib.image.AxesImage object at 0x7f9819dd21a0>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than me . <EOS>
+    output = she is five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too drunk . <EOS>
+    output = she is too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared of dying . <EOS>
+    output = i m not scared of die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young teenager . <EOS>
+    output = he s a talented child . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  10.668 seconds)
+   **Total running time of the script:** ( 19 minutes  18.187 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

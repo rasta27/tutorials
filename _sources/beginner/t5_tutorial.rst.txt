@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.0MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.8MB/s]
 
 
 
@@ -135,102 +135,117 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 6.85M/945M [00:00<00:13, 71.8MB/s]
-      2%|1         | 16.8M/945M [00:00<00:10, 90.9MB/s]
-      3%|2         | 26.7M/945M [00:00<00:09, 96.9MB/s]
-      4%|3         | 36.8M/945M [00:00<00:09, 100MB/s] 
-      5%|4         | 46.6M/945M [00:00<00:09, 101MB/s]
-      6%|5         | 56.4M/945M [00:00<00:09, 101MB/s]
-      7%|7         | 66.2M/945M [00:00<00:09, 102MB/s]
-      8%|8         | 76.5M/945M [00:00<00:08, 104MB/s]
-      9%|9         | 86.4M/945M [00:00<00:08, 103MB/s]
-     10%|#         | 96.2M/945M [00:01<00:08, 102MB/s]
-     11%|#1        | 106M/945M [00:01<00:08, 102MB/s] 
-     12%|#2        | 116M/945M [00:01<00:08, 102MB/s]
-     13%|#3        | 126M/945M [00:01<00:08, 102MB/s]
-     14%|#4        | 136M/945M [00:01<00:08, 103MB/s]
-     15%|#5        | 145M/945M [00:01<00:08, 101MB/s]
-     16%|#6        | 156M/945M [00:01<00:08, 103MB/s]
-     18%|#7        | 166M/945M [00:01<00:07, 104MB/s]
-     19%|#8        | 176M/945M [00:01<00:07, 104MB/s]
-     20%|#9        | 186M/945M [00:01<00:08, 98.1MB/s]
-     21%|##        | 196M/945M [00:02<00:07, 99.9MB/s]
-     22%|##1       | 205M/945M [00:02<00:07, 97.6MB/s]
-     23%|##2       | 215M/945M [00:02<00:07, 98.9MB/s]
-     24%|##3       | 225M/945M [00:02<00:07, 99.8MB/s]
-     25%|##4       | 235M/945M [00:02<00:07, 101MB/s] 
-     26%|##5       | 245M/945M [00:02<00:07, 102MB/s]
-     27%|##6       | 255M/945M [00:02<00:07, 103MB/s]
-     28%|##8       | 265M/945M [00:02<00:06, 104MB/s]
-     29%|##9       | 275M/945M [00:02<00:06, 103MB/s]
-     30%|###       | 285M/945M [00:02<00:06, 103MB/s]
-     31%|###1      | 295M/945M [00:03<00:06, 104MB/s]
-     32%|###2      | 305M/945M [00:03<00:06, 103MB/s]
-     33%|###3      | 315M/945M [00:03<00:06, 102MB/s]
-     34%|###4      | 324M/945M [00:03<00:06, 103MB/s]
-     35%|###5      | 335M/945M [00:03<00:06, 104MB/s]
-     36%|###6      | 345M/945M [00:03<00:06, 104MB/s]
-     38%|###7      | 354M/945M [00:03<00:05, 104MB/s]
-     39%|###8      | 364M/945M [00:03<00:05, 103MB/s]
-     40%|###9      | 374M/945M [00:03<00:05, 103MB/s]
-     41%|####      | 384M/945M [00:03<00:05, 103MB/s]
-     42%|####1     | 394M/945M [00:04<00:05, 104MB/s]
-     43%|####2     | 404M/945M [00:04<00:05, 104MB/s]
-     44%|####3     | 414M/945M [00:04<00:05, 103MB/s]
-     45%|####4     | 424M/945M [00:04<00:05, 101MB/s]
-     46%|####5     | 434M/945M [00:04<00:05, 102MB/s]
-     47%|####6     | 444M/945M [00:04<00:05, 102MB/s]
-     48%|####8     | 454M/945M [00:04<00:04, 103MB/s]
-     49%|####9     | 464M/945M [00:04<00:04, 103MB/s]
-     50%|#####     | 473M/945M [00:04<00:04, 103MB/s]
-     51%|#####1    | 483M/945M [00:04<00:04, 104MB/s]
-     52%|#####2    | 493M/945M [00:05<00:04, 103MB/s]
-     53%|#####3    | 503M/945M [00:05<00:04, 100MB/s]
-     54%|#####4    | 513M/945M [00:05<00:04, 102MB/s]
-     55%|#####5    | 523M/945M [00:05<00:04, 102MB/s]
-     56%|#####6    | 533M/945M [00:05<00:04, 103MB/s]
-     57%|#####7    | 543M/945M [00:05<00:04, 103MB/s]
-     59%|#####8    | 553M/945M [00:05<00:03, 104MB/s]
-     60%|#####9    | 563M/945M [00:05<00:03, 102MB/s]
-     61%|######    | 573M/945M [00:05<00:03, 103MB/s]
-     62%|######1   | 583M/945M [00:05<00:03, 104MB/s]
-     63%|######2   | 593M/945M [00:06<00:03, 104MB/s]
-     64%|######3   | 603M/945M [00:06<00:03, 105MB/s]
-     65%|######4   | 613M/945M [00:06<00:03, 105MB/s]
-     66%|######5   | 623M/945M [00:06<00:03, 104MB/s]
-     67%|######7   | 633M/945M [00:06<00:03, 105MB/s]
-     68%|######8   | 643M/945M [00:06<00:03, 105MB/s]
-     69%|######9   | 653M/945M [00:06<00:02, 104MB/s]
-     70%|#######   | 664M/945M [00:06<00:02, 105MB/s]
-     71%|#######1  | 674M/945M [00:06<00:02, 103MB/s]
-     72%|#######2  | 684M/945M [00:06<00:02, 104MB/s]
-     73%|#######3  | 694M/945M [00:07<00:02, 104MB/s]
-     75%|#######4  | 704M/945M [00:07<00:02, 105MB/s]
-     76%|#######5  | 714M/945M [00:07<00:02, 105MB/s]
-     77%|#######6  | 724M/945M [00:07<00:02, 103MB/s]
-     78%|#######7  | 734M/945M [00:07<00:02, 104MB/s]
-     79%|#######8  | 744M/945M [00:07<00:02, 104MB/s]
-     80%|#######9  | 754M/945M [00:07<00:01, 102MB/s]
-     81%|########  | 764M/945M [00:07<00:01, 103MB/s]
-     82%|########1 | 774M/945M [00:07<00:01, 104MB/s]
-     83%|########3 | 784M/945M [00:08<00:01, 105MB/s]
-     84%|########4 | 794M/945M [00:08<00:01, 104MB/s]
-     85%|########5 | 804M/945M [00:08<00:01, 104MB/s]
-     86%|########6 | 814M/945M [00:08<00:01, 104MB/s]
-     87%|########7 | 824M/945M [00:08<00:01, 104MB/s]
-     88%|########8 | 834M/945M [00:08<00:01, 103MB/s]
-     89%|########9 | 844M/945M [00:08<00:01, 104MB/s]
-     90%|######### | 854M/945M [00:08<00:00, 104MB/s]
-     91%|#########1| 864M/945M [00:08<00:00, 104MB/s]
-     93%|#########2| 874M/945M [00:08<00:00, 104MB/s]
-     94%|#########3| 884M/945M [00:09<00:00, 105MB/s]
-     95%|#########4| 894M/945M [00:09<00:00, 103MB/s]
-     96%|#########5| 904M/945M [00:09<00:00, 103MB/s]
-     97%|#########6| 914M/945M [00:09<00:00, 104MB/s]
-     98%|#########7| 924M/945M [00:09<00:00, 104MB/s]
-     99%|#########8| 934M/945M [00:09<00:00, 104MB/s]
-    100%|#########9| 944M/945M [00:09<00:00, 104MB/s]
-    100%|##########| 945M/945M [00:09<00:00, 103MB/s]
+      0%|          | 368k/945M [00:00<04:23, 3.76MB/s]
+      0%|          | 0.98M/945M [00:00<03:05, 5.33MB/s]
+      0%|          | 1.73M/945M [00:00<02:32, 6.47MB/s]
+      0%|          | 2.63M/945M [00:00<02:09, 7.64MB/s]
+      0%|          | 3.74M/945M [00:00<01:49, 9.02MB/s]
+      1%|          | 5.12M/945M [00:00<01:30, 10.8MB/s]
+      1%|          | 6.73M/945M [00:00<01:16, 12.8MB/s]
+      1%|          | 8.73M/945M [00:00<01:04, 15.3MB/s]
+      1%|1         | 11.2M/945M [00:00<00:52, 18.5MB/s]
+      1%|1         | 14.2M/945M [00:01<00:43, 22.3MB/s]
+      2%|1         | 17.8M/945M [00:01<00:36, 26.9MB/s]
+      2%|2         | 22.2M/945M [00:01<00:29, 32.8MB/s]
+      3%|2         | 27.6M/945M [00:01<00:24, 39.8MB/s]
+      4%|3         | 34.2M/945M [00:01<00:19, 48.4MB/s]
+      4%|4         | 42.1M/945M [00:01<00:16, 58.8MB/s]
+      6%|5         | 52.0M/945M [00:01<00:13, 71.9MB/s]
+      7%|6         | 63.7M/945M [00:01<00:10, 87.2MB/s]
+      8%|8         | 75.9M/945M [00:01<00:09, 99.3MB/s]
+      9%|9         | 88.1M/945M [00:01<00:08, 108MB/s] 
+     11%|#         | 99.7M/945M [00:02<00:07, 112MB/s]
+     12%|#1        | 112M/945M [00:02<00:07, 116MB/s] 
+     13%|#3        | 123M/945M [00:02<00:09, 90.8MB/s]
+     14%|#4        | 132M/945M [00:02<00:10, 79.1MB/s]
+     15%|#4        | 141M/945M [00:02<00:13, 64.2MB/s]
+     16%|#5        | 148M/945M [00:02<00:16, 50.3MB/s]
+     17%|#6        | 160M/945M [00:03<00:12, 64.3MB/s]
+     18%|#7        | 167M/945M [00:03<00:13, 58.4MB/s]
+     19%|#8        | 179M/945M [00:03<00:11, 72.2MB/s]
+     20%|#9        | 188M/945M [00:03<00:10, 73.7MB/s]
+     21%|##        | 197M/945M [00:03<00:10, 72.8MB/s]
+     22%|##2       | 209M/945M [00:03<00:08, 85.9MB/s]
+     23%|##3       | 218M/945M [00:03<00:08, 87.4MB/s]
+     24%|##4       | 228M/945M [00:03<00:09, 83.1MB/s]
+     25%|##5       | 237M/945M [00:04<00:10, 72.6MB/s]
+     26%|##5       | 246M/945M [00:04<00:09, 77.4MB/s]
+     27%|##6       | 253M/945M [00:04<00:12, 57.5MB/s]
+     28%|##7       | 260M/945M [00:04<00:12, 55.2MB/s]
+     28%|##8       | 266M/945M [00:04<00:14, 50.1MB/s]
+     29%|##9       | 279M/945M [00:04<00:11, 58.9MB/s]
+     31%|###       | 291M/945M [00:04<00:09, 73.4MB/s]
+     32%|###1      | 299M/945M [00:05<00:10, 62.6MB/s]
+     33%|###2      | 310M/945M [00:05<00:09, 72.9MB/s]
+     34%|###3      | 317M/945M [00:05<00:10, 61.3MB/s]
+     35%|###4      | 326M/945M [00:05<00:10, 63.2MB/s]
+     35%|###5      | 333M/945M [00:05<00:10, 61.4MB/s]
+     36%|###6      | 344M/945M [00:05<00:09, 65.3MB/s]
+     38%|###7      | 356M/945M [00:06<00:07, 79.0MB/s]
+     39%|###8      | 364M/945M [00:06<00:09, 62.6MB/s]
+     39%|###9      | 372M/945M [00:06<00:09, 65.7MB/s]
+     40%|####      | 379M/945M [00:06<00:09, 62.9MB/s]
+     41%|####1     | 391M/945M [00:06<00:07, 78.3MB/s]
+     42%|####2     | 399M/945M [00:06<00:07, 71.7MB/s]
+     43%|####3     | 410M/945M [00:06<00:07, 76.5MB/s]
+     45%|####4     | 421M/945M [00:06<00:06, 86.8MB/s]
+     46%|####5     | 430M/945M [00:07<00:06, 85.1MB/s]
+     46%|####6     | 438M/945M [00:07<00:06, 85.4MB/s]
+     47%|####7     | 447M/945M [00:07<00:06, 80.1MB/s]
+     49%|####8     | 459M/945M [00:07<00:06, 77.0MB/s]
+     49%|####9     | 466M/945M [00:07<00:06, 73.4MB/s]
+     50%|#####     | 475M/945M [00:07<00:07, 70.0MB/s]
+     52%|#####1    | 487M/945M [00:07<00:05, 83.4MB/s]
+     52%|#####2    | 496M/945M [00:07<00:06, 74.2MB/s]
+     54%|#####3    | 508M/945M [00:08<00:05, 86.9MB/s]
+     55%|#####4    | 516M/945M [00:08<00:07, 61.0MB/s]
+     56%|#####5    | 524M/945M [00:08<00:07, 55.5MB/s]
+     57%|#####6    | 536M/945M [00:08<00:06, 69.3MB/s]
+     58%|#####7    | 544M/945M [00:08<00:06, 63.1MB/s]
+     59%|#####8    | 556M/945M [00:08<00:05, 76.7MB/s]
+     60%|#####9    | 565M/945M [00:09<00:07, 56.4MB/s]
+     61%|######1   | 577M/945M [00:09<00:05, 69.9MB/s]
+     62%|######2   | 589M/945M [00:09<00:04, 82.2MB/s]
+     63%|######3   | 600M/945M [00:09<00:04, 88.8MB/s]
+     65%|######4   | 609M/945M [00:09<00:05, 64.4MB/s]
+     66%|######5   | 622M/945M [00:09<00:04, 77.0MB/s]
+     67%|######6   | 631M/945M [00:09<00:04, 74.8MB/s]
+     68%|######7   | 639M/945M [00:10<00:04, 68.4MB/s]
+     69%|######8   | 651M/945M [00:10<00:03, 81.1MB/s]
+     70%|######9   | 660M/945M [00:10<00:04, 64.3MB/s]
+     71%|#######   | 667M/945M [00:10<00:05, 54.3MB/s]
+     71%|#######1  | 674M/945M [00:10<00:06, 46.7MB/s]
+     73%|#######2  | 686M/945M [00:10<00:04, 61.6MB/s]
+     73%|#######3  | 693M/945M [00:11<00:04, 56.2MB/s]
+     75%|#######4  | 705M/945M [00:11<00:03, 63.1MB/s]
+     76%|#######5  | 714M/945M [00:11<00:03, 70.0MB/s]
+     76%|#######6  | 721M/945M [00:11<00:03, 68.4MB/s]
+     78%|#######7  | 733M/945M [00:11<00:02, 82.4MB/s]
+     79%|#######8  | 742M/945M [00:11<00:03, 68.5MB/s]
+     80%|#######9  | 751M/945M [00:11<00:02, 74.7MB/s]
+     80%|########  | 759M/945M [00:12<00:02, 65.1MB/s]
+     82%|########1 | 770M/945M [00:12<00:03, 58.1MB/s]
+     82%|########2 | 776M/945M [00:12<00:03, 54.4MB/s]
+     83%|########2 | 782M/945M [00:12<00:03, 49.8MB/s]
+     83%|########3 | 787M/945M [00:12<00:04, 41.2MB/s]
+     84%|########3 | 791M/945M [00:13<00:04, 37.2MB/s]
+     84%|########4 | 795M/945M [00:13<00:04, 37.4MB/s]
+     85%|########4 | 803M/945M [00:13<00:03, 46.0MB/s]
+     86%|########6 | 815M/945M [00:13<00:02, 65.2MB/s]
+     87%|########7 | 822M/945M [00:13<00:02, 62.3MB/s]
+     88%|########8 | 834M/945M [00:13<00:01, 77.8MB/s]
+     89%|########9 | 842M/945M [00:13<00:01, 79.3MB/s]
+     90%|######### | 850M/945M [00:13<00:01, 71.9MB/s]
+     91%|######### | 858M/945M [00:14<00:01, 56.0MB/s]
+     92%|#########1| 868M/945M [00:14<00:01, 63.1MB/s]
+     93%|#########3| 879M/945M [00:14<00:00, 74.8MB/s]
+     94%|#########3| 887M/945M [00:14<00:00, 73.8MB/s]
+     95%|#########5| 899M/945M [00:14<00:00, 86.9MB/s]
+     96%|#########6| 908M/945M [00:14<00:00, 80.4MB/s]
+     97%|#########7| 918M/945M [00:14<00:00, 72.0MB/s]
+     98%|#########8| 930M/945M [00:14<00:00, 85.0MB/s]
+     99%|#########9| 938M/945M [00:15<00:00, 77.2MB/s]
+    100%|##########| 945M/945M [00:15<00:00, 64.9MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -526,37 +541,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: the white-cheeked macaque was discovered in the remote highland forests of south-east Tibet . it has a distinctive rounded penis rather than the arrow shaped genitalia found on other species in the area . video footage has also revealed that the animal has a distinctive alarm calls compared to other macaques in the area .
+    prediction: a swath of the atoms that make up the atoms are a swath of the atoms . a swath of the atoms are a swath of the atoms . a swath of the atoms make up the swath of the atoms . a swath of the atoms make up the swath of the atoms
 
-    target: Macaca leucogenys long mistaken for Macaca assamensis say scientists . New macaque has a distinctive rounded rather than arrow shaped penis . Researchers say the remote highland forests of Medog, in south east Tibet, could be hiding many other new species that are waiting to be discovered . They warn new macaque is threatened by hunting and habitat destruction .
+    target: Gemma the pit bull was filmed at home in California being fed some treats . But in a bid to trick her, her owner throws a broccoli spear into the mix .
 
 
     Example 2:
 
-    prediction: a 20-kilometer (12-mile) exclusion zone has been established around the crater . the explosion produced an extensive plume but was also described as smaller .
+    prediction: Adam Gemili says Usain Bolt is a joker on the circuit . the young british athlete says he is nowhere near Bolt's standard . but he says he is 'lucky' to be around the youngster .
 
-    target: "There is still smoke on and off," says resident with distant view . The volcano erupts for third time since April 22 . About 1,500 people are evacuated, an official says, according to CNN Chile .
+    target: British sprinter Adam Gemili blogs about his preparations for Rio 2016 . Gemili says Usain Bolt is great at the circuit as he is often joking around . Admits Bolt gives great advice and he will try to take that into this season .
 
 
     Example 3:
 
-    prediction: judge rules 'lurid' details of allegations should not be involved in case . virginia 'sex slave' claims she was forced to sleep with convicted paedophile . prince will not face court action over claims he had sex with under-age girl .
+    prediction: labour leader admits he 'blubbed' during the film that he watched last year . the film centres on the 1984 miners' strike and the evil dictator is Margaret Thatcher . the battle of Britain? the falklands crisis? the war in the middle east?
 
-    target: Allegations a 17-year-old was forced to sleep with Prince Andrew erased . Virginia Roberts had attempted to join lawsuit against the U.S. government . The women were trying to reopen a federal non-prosecution agreement . A judge today struck her and a second woman's claims from court records . He said the details had no bearing on the attempt to reopen  prosecution .
+    target: Ed Miliband has admitted that he cried watching the British film Pride . Movie centres on the 1984 miners' strike and a group of gays and lesbians . Billy Elliott and Brassed Off could also get the Labour leader blubbing .
 
 
     Example 4:
 
-    prediction: nabil Fekir's father says he would progress with arsenal under arsene wenger . the 21-year-old scored in the 3-1 win over Guingamp on sunday . but the frontman's father says he would not want him to sit on the bench at man city .
+    prediction: new powers for the Scottish parliament could have a 'big impact' on jobs . resentment in england and wales at 'apartheid' between north and south . a new principle will be introduced to ensure fairness of policies .
 
-    target: Lyon star Nabil Fekir has attracted interest from Premier League clubs . Frontman's father believes Fekir would progress and develop at Arsenal . However, Fekir Snr thinks his son would be stuck on bench at Man City .
+    target: A Tory government would create a new principle to review SNP policies . Prime Minister to tell English voters SNP's  powers could impact their lives . There has been growing resentment at 'apartheid' between north and south . Cancer drugs are available on NHS in Scotland but not England and Wales .
 
 
     Example 5:
 
-    prediction: president hassan rouhani says he believes there is a third path to a nuclear deal . he says he hopes other countries will implement their own promises .
+    prediction: couple in their 30s convicted of noise pollution and harassment . they were convicted for 'raucous screams' during steamy sex sessions . neighbours described the wails of passion as 'deafening' and kept them awake . man was sentenced to four months in prison in 2011 and fiancée given noise abatement order . but the couple appealed the sentence and have been ordered to pay £7,000 in damages to their neighbours who now live elsewhere .
 
-    target: Iranian President says a nuclear deal would remove a major obstacle for business . "We can cooperate with the world," President Hassan Rouhani insists . He says, "We do not lie," and Iran will abide by its promises on nuclear deal .
+    target: Italian couple fined £9,000 for having noisy sex in San Martino apartment . Neighbours took them to court in 2009 over 'deafening' sex session noise . Pair now ordered to pay damages to nearby residents for noise pollution .
 
 
 
@@ -910,7 +925,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  40.397 seconds)
+   **Total running time of the script:** ( 4 minutes  28.638 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

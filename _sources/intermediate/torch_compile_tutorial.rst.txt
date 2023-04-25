@@ -300,8 +300,8 @@ Note that in the call to ``torch.compile``, we have have the additional
 
  .. code-block:: none
 
-    eager: 4.27451416015625
-    compile: 10.523865234375
+    eager: 4.4428349609375
+    compile: 11.8696513671875
 
 
 
@@ -353,29 +353,29 @@ see a significant improvement compared to eager.
 
  .. code-block:: none
 
-    eager eval time 0: 0.009252863883972168
-    eager eval time 1: 0.008941120147705078
-    eager eval time 2: 0.008918848037719727
-    eager eval time 3: 0.008914976119995118
-    eager eval time 4: 0.008931839942932129
-    eager eval time 5: 0.008971712112426759
-    eager eval time 6: 0.008916735649108887
-    eager eval time 7: 0.008931296348571777
-    eager eval time 8: 0.008932671546936034
-    eager eval time 9: 0.008917407989501953
+    eager eval time 0: 0.009214240074157715
+    eager eval time 1: 0.008937919616699219
+    eager eval time 2: 0.008917407989501953
+    eager eval time 3: 0.008965344429016113
+    eager eval time 4: 0.00894364833831787
+    eager eval time 5: 0.008960576057434081
+    eager eval time 6: 0.008936960220336914
+    eager eval time 7: 0.008935040473937988
+    eager eval time 8: 0.008962400436401367
+    eager eval time 9: 0.008173088073730468
     ~~~~~~~~~~
-    compile eval time 0: 0.009410400390625
-    compile eval time 1: 0.009316384315490723
-    compile eval time 2: 0.009285599708557128
-    compile eval time 3: 0.009320256233215331
-    compile eval time 4: 0.0093121919631958
-    compile eval time 5: 0.0092806396484375
-    compile eval time 6: 0.009198880195617676
-    compile eval time 7: 0.007079936027526855
-    compile eval time 8: 0.007071872234344482
-    compile eval time 9: 0.007108543872833252
+    compile eval time 0: 0.007854207992553711
+    compile eval time 1: 0.00777235221862793
+    compile eval time 2: 0.0077684798240661625
+    compile eval time 3: 0.007784031867980957
+    compile eval time 4: 0.007702527999877929
+    compile eval time 5: 0.007744192123413086
+    compile eval time 6: 0.0077411518096923825
+    compile eval time 7: 0.007727839946746826
+    compile eval time 8: 0.007772160053253174
+    compile eval time 9: 0.007694240093231201
     ~~~~~~~~~~
-    (eval) eager median: 0.008931568145751953, compile median: 0.009283119678497313, speedup: 0.9621300225656181x
+    (eval) eager median: 0.008940783977508544, compile median: 0.007756335973739624, speedup: 1.152707155515061x
     ~~~~~~~~~~
 
 
@@ -451,29 +451,29 @@ Now, let's consider comparing training.
 
  .. code-block:: none
 
-    eager train time 0: 0.44760220336914064
-    eager train time 1: 0.02552422332763672
-    eager train time 2: 0.02549500846862793
-    eager train time 3: 0.0254300479888916
-    eager train time 4: 0.023715776443481447
-    eager train time 5: 0.023374080657958984
-    eager train time 6: 0.023370080947875977
-    eager train time 7: 0.023377887725830077
-    eager train time 8: 0.02290995216369629
-    eager train time 9: 0.02294166374206543
+    eager train time 0: 0.4798771057128906
+    eager train time 1: 0.02710323143005371
+    eager train time 2: 0.026945568084716796
+    eager train time 3: 0.026978271484375
+    eager train time 4: 0.026935039520263673
+    eager train time 5: 0.02696601676940918
+    eager train time 6: 0.021805568695068358
+    eager train time 7: 0.020990272521972657
+    eager train time 8: 0.02071900749206543
+    eager train time 9: 0.020918304443359376
     ~~~~~~~~~~
-    compile train time 0: 23.958880859375
-    compile train time 1: 0.021681119918823242
-    compile train time 2: 0.020643104553222658
-    compile train time 3: 0.02066022491455078
-    compile train time 4: 0.020661504745483398
-    compile train time 5: 0.020744607925415038
-    compile train time 6: 0.020912895202636717
-    compile train time 7: 0.020815616607666017
-    compile train time 8: 0.020801088333129884
-    compile train time 9: 0.020779296875
+    compile train time 0: 24.297755859375
+    compile train time 1: 0.021715520858764648
+    compile train time 2: 0.020857343673706053
+    compile train time 3: 0.02078268814086914
+    compile train time 4: 0.02090550422668457
+    compile train time 5: 0.021071775436401367
+    compile train time 6: 0.020878719329833983
+    compile train time 7: 0.02086591911315918
+    compile train time 8: 0.021010944366455078
+    compile train time 9: 0.020866239547729492
     ~~~~~~~~~~
-    (train) eager median: 0.023546832084655762, compile median: 0.020790192604064943, speedup: 1.1325932632318103x
+    (train) eager median: 0.026940303802490233, compile median: 0.020892111778259274, speedup: 1.2894964419310078x
     ~~~~~~~~~~
 
 
@@ -1020,7 +1020,7 @@ outputs the FX graph and simply returns the graph's unoptimized forward method.
     call_function  iadd_7                      <built-in function iadd>                                    (self_layer4_1_bn2, self_layer4_0_relu_1)        {}
     call_module    self_layer4_1_relu_1        self_layer4_1_relu                                          (iadd_7,)                                        {}
     call_module    self_avgpool                self_avgpool                                                (self_layer4_1_relu_1,)                          {}
-    call_function  flatten                     <built-in method flatten of type object at 0x7ff3b018a540>  (self_avgpool, 1)                                {}
+    call_function  flatten                     <built-in method flatten of type object at 0x7facf5d41540>  (self_avgpool, 1)                                {}
     call_module    self_fc                     self_fc                                                     (flatten,)                                       {}
     output         output                      output                                                      ((self_fc,),)                                    {}
 
@@ -1071,7 +1071,7 @@ data-dependent control flow. Consider the function below, where the line
     -------------  -------  ------------------------------------------------------  ----------------  --------
     placeholder    a        a                                                       ()                {}
     placeholder    b        b                                                       ()                {}
-    call_function  abs_1    <built-in method abs of type object at 0x7ff3b018a540>  (a,)              {}
+    call_function  abs_1    <built-in method abs of type object at 0x7facf5d41540>  (a,)              {}
     call_function  add      <built-in function add>                                 (abs_1, 1)        {}
     call_function  truediv  <built-in function truediv>                             (a, add)          {}
     call_method    sum_1    sum                                                     (b,)              {}
@@ -1159,8 +1159,8 @@ We can see where TorchDynamo breaks the graph by using ``torch._dynamo.explain``
     TorchDynamo compilation metrics:
     Function                        Runtimes (s)
     ------------------------------  --------------
-    _compile                        0.0127, 0.0055
-    OutputGraph.call_user_compiler  0.0001, 0.0000
+    _compile                        0.0128, 0.0053
+    OutputGraph.call_user_compiler  0.0000, 0.0000
 
 
 
@@ -1363,7 +1363,7 @@ with FX graphs. We hope that you will give ``torch.compile`` a try!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  5.775 seconds)
+   **Total running time of the script:** ( 1 minutes  8.610 seconds)
 
 
 .. _sphx_glr_download_intermediate_torch_compile_tutorial.py:
