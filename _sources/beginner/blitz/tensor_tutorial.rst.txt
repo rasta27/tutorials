@@ -124,8 +124,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
             [1, 1]]) 
 
     Random Tensor: 
-     tensor([[0.5747, 0.0640],
-            [0.0551, 0.8628]]) 
+     tensor([[0.1255, 0.4326],
+            [0.5760, 0.4765]]) 
 
 
 
@@ -163,8 +163,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
  .. code-block:: none
 
     Random Tensor: 
-     tensor([[0.1930, 0.4582, 0.3389],
-            [0.9952, 0.7457, 0.2338]]) 
+     tensor([[0.9539, 0.9367, 0.1292],
+            [0.6093, 0.3700, 0.3202]]) 
 
     Ones Tensor: 
      tensor([[1., 1., 1.],
@@ -555,7 +555,7 @@ Changes in the NumPy array reflects in the tensor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.957 seconds)
+   **Total running time of the script:** ( 0 minutes  2.880 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_tensor_tutorial.py:

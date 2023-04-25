@@ -446,16 +446,16 @@ language):
 
  .. code-block:: none
 
-    category = Japanese / line = Miyazawa
-    category = Scottish / line = Wilson
-    category = Russian / line = Babanin
-    category = German / line = Wehunt
-    category = English / line = Lyes
-    category = German / line = Benn
-    category = Irish / line = Sioda
-    category = Greek / line = Close
-    category = Portuguese / line = Ribeiro
-    category = Korean / line = Yoon
+    category = Greek / line = Demakis
+    category = Spanish / line = Ibanez
+    category = Greek / line = Batsakis
+    category = Irish / line = Tracey
+    category = Dutch / line = Krantz
+    category = Polish / line = Zuraw
+    category = Scottish / line = Clark
+    category = Italian / line = Cisternino
+    category = French / line = Martel
+    category = Dutch / line = Ramaaker
 
 
 
@@ -595,26 +595,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 5s) 2.5654 Ventura / Japanese ✗ (Portuguese)
-    10000 10% (0m 11s) 2.2011 Adamou / Greek ✓
-    15000 15% (0m 17s) 2.8102 Gray / Chinese ✗ (Scottish)
-    20000 20% (0m 22s) 2.8291 Mackay / Arabic ✗ (Scottish)
-    25000 25% (0m 28s) 3.8139 Power / German ✗ (Irish)
-    30000 30% (0m 34s) 0.5613 Safar / Arabic ✓
-    35000 35% (0m 40s) 2.6943 Kosko / Polish ✗ (Czech)
-    40000 40% (0m 46s) 2.8111 Rey / Korean ✗ (French)
-    45000 45% (0m 51s) 1.9380 Gordon / English ✗ (Scottish)
-    50000 50% (0m 57s) 0.2134 Galkov / Russian ✓
-    55000 55% (1m 3s) 1.4109 Pei / Vietnamese ✗ (Chinese)
-    60000 60% (1m 8s) 0.1827 Garofalis / Greek ✓
-    65000 65% (1m 14s) 1.3075 Archambault / French ✓
-    70000 70% (1m 20s) 0.6980 Thai / Vietnamese ✓
-    75000 75% (1m 26s) 2.9707 Quirke / Japanese ✗ (Irish)
-    80000 80% (1m 31s) 0.0637 Zdunowski / Polish ✓
-    85000 85% (1m 37s) 0.5054 Quyen / Vietnamese ✓
-    90000 90% (1m 43s) 2.3539 Basurto / Portuguese ✗ (Spanish)
-    95000 95% (1m 48s) 3.3034 Main / Korean ✗ (English)
-    100000 100% (1m 54s) 0.0892 Stawski / Polish ✓
+    5000 5% (0m 5s) 2.8477 Wirth / Arabic ✗ (German)
+    10000 10% (0m 11s) 1.0268 Sniegowski / Polish ✓
+    15000 15% (0m 16s) 1.1309 Kang / Chinese ✓
+    20000 20% (0m 22s) 2.3648 Darcy / Portuguese ✗ (English)
+    25000 25% (0m 27s) 3.4570 Burns / Vietnamese ✗ (Scottish)
+    30000 30% (0m 32s) 1.2372 Zelensky / Russian ✓
+    35000 35% (0m 38s) 1.1261 Van / Chinese ✗ (Vietnamese)
+    40000 40% (0m 43s) 2.6683 Bahlulzade / Greek ✗ (Russian)
+    45000 45% (0m 49s) 1.8019 Mori / Italian ✗ (Japanese)
+    50000 50% (0m 54s) 1.6192 Chu / Vietnamese ✗ (Korean)
+    55000 55% (0m 59s) 0.0799 Antimisiaris / Greek ✓
+    60000 60% (1m 5s) 2.3201 Timms / Arabic ✗ (English)
+    65000 65% (1m 10s) 1.7460 Zavala / Irish ✗ (Spanish)
+    70000 70% (1m 16s) 3.1295 Haine / Vietnamese ✗ (English)
+    75000 75% (1m 21s) 1.2680 Herrero / Spanish ✓
+    80000 80% (1m 27s) 2.8519 Basile / French ✗ (Italian)
+    85000 85% (1m 32s) 3.9586 Farrell / Scottish ✗ (Irish)
+    90000 90% (1m 38s) 1.2579 Prinsen / Dutch ✓
+    95000 95% (1m 43s) 2.6740 Diarmaid / French ✗ (Irish)
+    100000 100% (1m 48s) 1.3745 Hua / Korean ✗ (Chinese)
 
 
 
@@ -654,7 +654,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7fc5c07c45e0>]
+    [<matplotlib.lines.Line2D object at 0x7f077829b670>]
 
 
 
@@ -792,19 +792,19 @@ Running on User Input
 
 
     > Dovesky
-    (-0.62) Czech
-    (-1.28) Russian
-    (-2.32) English
+    (-0.54) Russian
+    (-1.23) Czech
+    (-3.78) Polish
 
     > Jackson
-    (-0.18) Scottish
-    (-2.08) English
-    (-4.39) Korean
+    (-0.04) Scottish
+    (-3.67) English
+    (-4.84) Dutch
 
     > Satoshi
-    (-0.97) Japanese
-    (-0.99) Arabic
-    (-2.35) Italian
+    (-1.28) Arabic
+    (-1.41) Japanese
+    (-1.45) Italian
 
 
 
@@ -858,7 +858,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  1.186 seconds)
+   **Total running time of the script:** ( 1 minutes  55.060 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:

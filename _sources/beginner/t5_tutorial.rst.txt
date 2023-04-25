@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.5MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 15.1MB/s]
 
 
 
@@ -135,108 +135,44 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.52M/945M [00:00<00:12, 78.8MB/s]
-      2%|1         | 16.7M/945M [00:00<00:10, 88.9MB/s]
-      3%|2         | 26.0M/945M [00:00<00:10, 92.8MB/s]
-      4%|3         | 35.2M/945M [00:00<00:10, 94.2MB/s]
-      5%|4         | 44.4M/945M [00:00<00:09, 95.3MB/s]
-      6%|5         | 53.9M/945M [00:00<00:09, 96.3MB/s]
-      7%|6         | 63.1M/945M [00:00<00:09, 96.4MB/s]
-      8%|7         | 72.3M/945M [00:00<00:09, 95.6MB/s]
-      9%|8         | 81.4M/945M [00:00<00:09, 95.1MB/s]
-     10%|9         | 90.9M/945M [00:01<00:09, 96.3MB/s]
-     11%|#         | 100M/945M [00:01<00:09, 96.9MB/s] 
-     12%|#1        | 109M/945M [00:01<00:09, 96.1MB/s]
-     13%|#2        | 119M/945M [00:01<00:09, 95.4MB/s]
-     14%|#3        | 128M/945M [00:01<00:09, 94.9MB/s]
-     15%|#4        | 137M/945M [00:01<00:08, 95.9MB/s]
-     15%|#5        | 146M/945M [00:01<00:08, 94.6MB/s]
-     16%|#6        | 156M/945M [00:01<00:08, 95.4MB/s]
-     17%|#7        | 165M/945M [00:01<00:08, 94.6MB/s]
-     18%|#8        | 174M/945M [00:01<00:08, 95.2MB/s]
-     19%|#9        | 183M/945M [00:02<00:08, 94.4MB/s]
-     20%|##        | 193M/945M [00:02<00:08, 96.1MB/s]
-     21%|##1       | 202M/945M [00:02<00:08, 92.1MB/s]
-     22%|##2       | 211M/945M [00:02<00:08, 93.5MB/s]
-     23%|##3       | 221M/945M [00:02<00:07, 95.2MB/s]
-     24%|##4       | 230M/945M [00:02<00:07, 94.1MB/s]
-     25%|##5       | 239M/945M [00:02<00:07, 93.8MB/s]
-     26%|##6       | 248M/945M [00:02<00:08, 91.0MB/s]
-     27%|##7       | 256M/945M [00:02<00:07, 91.5MB/s]
-     28%|##8       | 266M/945M [00:02<00:07, 92.6MB/s]
-     29%|##9       | 275M/945M [00:03<00:07, 94.1MB/s]
-     30%|###       | 284M/945M [00:03<00:07, 96.0MB/s]
-     31%|###1      | 294M/945M [00:03<00:07, 91.6MB/s]
-     32%|###2      | 302M/945M [00:03<00:07, 92.0MB/s]
-     33%|###3      | 312M/945M [00:03<00:07, 93.5MB/s]
-     34%|###3      | 321M/945M [00:03<00:07, 90.7MB/s]
-     35%|###4      | 330M/945M [00:03<00:06, 92.9MB/s]
-     36%|###5      | 340M/945M [00:03<00:06, 95.2MB/s]
-     37%|###6      | 349M/945M [00:03<00:06, 95.9MB/s]
-     38%|###7      | 358M/945M [00:03<00:06, 95.8MB/s]
-     39%|###8      | 367M/945M [00:04<00:06, 95.9MB/s]
-     40%|###9      | 377M/945M [00:04<00:06, 95.0MB/s]
-     41%|####      | 386M/945M [00:04<00:06, 95.7MB/s]
-     42%|####1     | 395M/945M [00:04<00:06, 94.6MB/s]
-     43%|####2     | 404M/945M [00:04<00:05, 96.0MB/s]
-     44%|####3     | 414M/945M [00:04<00:05, 95.3MB/s]
-     45%|####4     | 423M/945M [00:04<00:05, 93.2MB/s]
-     46%|####5     | 432M/945M [00:04<00:05, 95.6MB/s]
-     47%|####6     | 442M/945M [00:04<00:05, 96.5MB/s]
-     48%|####7     | 451M/945M [00:05<00:05, 97.7MB/s]
-     49%|####8     | 461M/945M [00:05<00:05, 97.2MB/s]
-     50%|####9     | 470M/945M [00:05<00:05, 97.4MB/s]
-     51%|#####     | 480M/945M [00:05<00:04, 98.6MB/s]
-     52%|#####1    | 489M/945M [00:05<00:04, 98.7MB/s]
-     53%|#####2    | 499M/945M [00:05<00:04, 99.4MB/s]
-     54%|#####3    | 508M/945M [00:05<00:04, 99.3MB/s]
-     55%|#####4    | 518M/945M [00:05<00:04, 100MB/s] 
-     56%|#####5    | 528M/945M [00:05<00:04, 99.8MB/s]
-     57%|#####6    | 537M/945M [00:05<00:04, 99.7MB/s]
-     58%|#####7    | 547M/945M [00:06<00:04, 98.3MB/s]
-     59%|#####8    | 556M/945M [00:06<00:04, 98.3MB/s]
-     60%|#####9    | 565M/945M [00:06<00:04, 98.3MB/s]
-     61%|######    | 575M/945M [00:06<00:03, 97.7MB/s]
-     62%|######1   | 584M/945M [00:06<00:03, 97.9MB/s]
-     63%|######2   | 594M/945M [00:06<00:03, 95.6MB/s]
-     64%|######3   | 603M/945M [00:06<00:03, 96.4MB/s]
-     65%|######4   | 612M/945M [00:06<00:03, 97.3MB/s]
-     66%|######5   | 622M/945M [00:06<00:03, 98.7MB/s]
-     67%|######6   | 632M/945M [00:06<00:03, 98.7MB/s]
-     68%|######7   | 641M/945M [00:07<00:03, 97.6MB/s]
-     69%|######8   | 651M/945M [00:07<00:03, 98.5MB/s]
-     70%|######9   | 660M/945M [00:07<00:03, 98.2MB/s]
-     71%|#######   | 669M/945M [00:07<00:02, 97.3MB/s]
-     72%|#######1  | 679M/945M [00:07<00:02, 98.1MB/s]
-     73%|#######2  | 688M/945M [00:07<00:02, 97.8MB/s]
-     74%|#######3  | 698M/945M [00:07<00:02, 97.6MB/s]
-     75%|#######4  | 707M/945M [00:07<00:02, 97.3MB/s]
-     76%|#######5  | 717M/945M [00:07<00:02, 98.4MB/s]
-     77%|#######6  | 726M/945M [00:07<00:02, 99.1MB/s]
-     78%|#######7  | 736M/945M [00:08<00:02, 97.6MB/s]
-     79%|#######8  | 745M/945M [00:08<00:02, 97.4MB/s]
-     80%|#######9  | 755M/945M [00:08<00:02, 98.1MB/s]
-     81%|########  | 764M/945M [00:08<00:01, 98.1MB/s]
-     82%|########1 | 774M/945M [00:08<00:01, 98.7MB/s]
-     83%|########2 | 783M/945M [00:08<00:01, 97.6MB/s]
-     84%|########3 | 792M/945M [00:08<00:01, 96.8MB/s]
-     85%|########4 | 802M/945M [00:08<00:01, 97.4MB/s]
-     86%|########5 | 811M/945M [00:08<00:01, 97.1MB/s]
-     87%|########6 | 820M/945M [00:08<00:01, 96.6MB/s]
-     88%|########7 | 830M/945M [00:09<00:01, 97.7MB/s]
-     89%|########8 | 839M/945M [00:09<00:01, 97.9MB/s]
-     90%|########9 | 849M/945M [00:09<00:01, 97.4MB/s]
-     91%|######### | 858M/945M [00:09<00:00, 98.5MB/s]
-     92%|#########1| 868M/945M [00:09<00:00, 98.8MB/s]
-     93%|#########2| 877M/945M [00:09<00:00, 96.0MB/s]
-     94%|#########3| 886M/945M [00:09<00:00, 95.0MB/s]
-     95%|#########4| 896M/945M [00:09<00:00, 95.9MB/s]
-     96%|#########5| 905M/945M [00:09<00:00, 96.7MB/s]
-     97%|#########6| 914M/945M [00:09<00:00, 97.0MB/s]
-     98%|#########7| 924M/945M [00:10<00:00, 97.6MB/s]
-     99%|#########8| 933M/945M [00:10<00:00, 94.8MB/s]
-    100%|#########9| 943M/945M [00:10<00:00, 96.0MB/s]
-    100%|##########| 945M/945M [00:10<00:00, 96.2MB/s]
+      1%|1         | 11.5M/945M [00:00<00:08, 120MB/s]
+      4%|3         | 37.7M/945M [00:00<00:04, 211MB/s]
+      7%|6         | 64.2M/945M [00:00<00:03, 241MB/s]
+      9%|9         | 87.2M/945M [00:00<00:03, 237MB/s]
+     12%|#1        | 113M/945M [00:00<00:03, 249MB/s] 
+     15%|#4        | 138M/945M [00:00<00:03, 253MB/s]
+     17%|#7        | 165M/945M [00:00<00:03, 263MB/s]
+     20%|##        | 192M/945M [00:00<00:02, 270MB/s]
+     23%|##3       | 219M/945M [00:00<00:02, 274MB/s]
+     26%|##6       | 246M/945M [00:01<00:02, 276MB/s]
+     29%|##8       | 272M/945M [00:01<00:04, 155MB/s]
+     31%|###1      | 293M/945M [00:01<00:06, 105MB/s]
+     34%|###3      | 319M/945M [00:01<00:05, 130MB/s]
+     37%|###6      | 345M/945M [00:01<00:04, 155MB/s]
+     39%|###9      | 372M/945M [00:02<00:03, 180MB/s]
+     42%|####2     | 398M/945M [00:02<00:02, 202MB/s]
+     45%|####5     | 425M/945M [00:02<00:02, 222MB/s]
+     48%|####7     | 451M/945M [00:02<00:02, 233MB/s]
+     50%|#####     | 477M/945M [00:02<00:02, 244MB/s]
+     53%|#####3    | 503M/945M [00:02<00:01, 254MB/s]
+     56%|#####6    | 530M/945M [00:02<00:01, 261MB/s]
+     59%|#####8    | 557M/945M [00:02<00:01, 266MB/s]
+     62%|######1   | 583M/945M [00:03<00:02, 161MB/s]
+     64%|######3   | 603M/945M [00:03<00:03, 115MB/s]
+     67%|######6   | 630M/945M [00:03<00:02, 141MB/s]
+     70%|######9   | 657M/945M [00:03<00:01, 168MB/s]
+     72%|#######2  | 681M/945M [00:03<00:01, 185MB/s]
+     75%|#######4  | 704M/945M [00:03<00:01, 198MB/s]
+     77%|#######6  | 726M/945M [00:03<00:01, 208MB/s]
+     79%|#######9  | 749M/945M [00:04<00:00, 216MB/s]
+     82%|########1 | 772M/945M [00:04<00:00, 221MB/s]
+     84%|########4 | 797M/945M [00:04<00:00, 233MB/s]
+     87%|########7 | 824M/945M [00:04<00:00, 249MB/s]
+     90%|########9 | 849M/945M [00:04<00:00, 249MB/s]
+     92%|#########2| 873M/945M [00:04<00:00, 126MB/s]
+     94%|#########4| 892M/945M [00:05<00:00, 115MB/s]
+     97%|#########7| 920M/945M [00:05<00:00, 146MB/s]
+    100%|##########| 945M/945M [00:05<00:00, 187MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -532,37 +468,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: Dirk Kuyt is returning to the club that was a launching pad for nine years at Liverpool and Fenerbahce . the former holland forward signed a one-year contract with the club . he said his stay will likely be longer as he is fit and has a great drive .
+    prediction: stall-holder Tania Rahman, 27, was asked if she wanted to run a stand . but when she asked to be counted in she was told it was not 'English-themed' . she was sent a letter from council saying it 'only wanted english food' council has since apologised and invited her to run a stand on the day .
 
-    target: Dirk Kuyt agrees one-year-deal to move back to former club Feyenoord . The Dutchman left in 2006 to sign for Liverpool before moving to Turkey . Kuyt made 208 appearances for Liverpool, scoring 51 goals . CLICK HERE for all the latest Liverpool news .
+    target: Stall-owner Tania Rahman, 27, was invited to take part in the celebrations . But then Salisbury Council told her food wasn't English enough for event . She called move 'discriminatory' and said St George was born in Palestine . And locals were also left furious forcing council to do embarasing U-turn .
 
 
     Example 2:
 
-    prediction: Manchester united have made an official approach for Memphis Depay . the 21-year-old has scored 20 goals in 26 league games for the red devils . depay was named in van gaal's 23-man world cup squad last year .
+    prediction: a trainee corrections officer 'waded in and fired off his shotgun four times in a row' the blasts killed Carlos Manuel Perez Jr, 28, and left Andrew Jay Arevalo, 24, with wounds to his face . the two were supposed to be kept apart in the prison's corridors . the lawsuit claims the guards knew a fight would be inevitable if they let the two prisoners encounter one another .
 
-    target: Memphis Depay has scored 20 goals in 26 league games for PSV this term . PSV beat Heerenveen to lift their first Eredivisie title in seven years . Paris-Saint Germain are also interested in the highly-rated 21-year-old .
+    target: Carlos Manuel Perez, 28, allegedly made to fight Andrew Jay Arevalo, 24 . Fight happened at High Desert State Prison in Indian Springs in November . Perez was shot dead by corrections officer; Arevalo survived with wounds . Attorney has claimed officers staged the fight between the two . Filed lawsuit for large amount of damages in Nevada state court .
 
 
     Example 3:
 
-    prediction: the gypsy secretariat foundation are leading the campaign . they hope to use it to raise awareness of discrimination against gypsies . the campaign was delivered on international Roma day .
+    prediction: researchers say antibiotics may be fattening our children . third of 10-11 year olds and a fifth of 4-5 year olds in england are overweight . by two years-old, one in five boys and one in ten girls was overweight . repeat prescriptions before age of two also raised odds of being fat .
 
-    target: Gypsy Secretariat Foundation  complained over the definition of 'gypsy' Spanish dictionary has one of the definitions for the word as a 'swindler' Group has delivered protest letters to Spain's Royal Language Academy .
+    target: Researchers claimed antibiotics could be  contributing to 'obesity epidemic' Their large-scale study was published in the respected Pediatrics journal . It found one third of 10 to 11-year-olds in England are overweight or obese . Children who took antibiotics as babies were more likely to be overweight .
 
 
     Example 4:
 
-    prediction: the 40-year-old fashion police co-host was seen leaving the Trump . international hotel in new york city on her way to a today show appearance . she has revealed that she was cheating on her ex-boyfriend with ginger spice .
+    prediction: employees in the US, UK, Australia, Canada, China, France, Germany, Hong Kong and Japan will be eligible for a 50% discount . this includes the standard model and the sport model . prices for the Sport model start at $349 in the us and £299 in the uk . the stainless steel Watch starts at $549 (£479) and the watch goes on sale on 24 April .
 
-    target: The Fashion Police host dated actor Jerry from 2003 to 2004 . In her new tell-all Going Off Script she confessed he cheated on her . First he hooked up with singer Geri Halliwell then actress Rebecca Romijn . O'Connell went on to marry Rebecca in 2007 and they had two children .
+    target: The plans were revealed in a leaked memo from Apple boss Tim Cook . He thanked staff for their help and offered employees a 50% discount . This discount applies from Friday and will last for 90 days . Apple staff already receive discounts on all products at around 30% .
 
 
     Example 5:
 
-    prediction: unidentified college student was filmed beating three officers at chilifest . video posted on social media site Vine shows her beating them . one officer chose 'scissors' as his option, and she won . police are believed to have busted her for underage drinking .
+    prediction: a professional florist can help you keep your flowers fresh for a week . but there are tricks you can use to prolong the life of your flowers . from cutting them in hairspray to keeping them away from fruit, you can do it all .
 
-    target: A video of the game, filmed at Chilifest in Snook, Texas, was posted onto social media site Vine . The clip shows the unidentified girl, believed to be a student at Texas A&M University in College Station winning the game by showing a 'rock'
+    target: Spring is the perfect time to fill your home with seasonal flowers . We've gathered a list of simple, unlikely tips to help them last . Include spraying them in hairspray and keeping them far away from fruit .
 
 
 
@@ -916,7 +852,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  36.827 seconds)
+   **Total running time of the script:** ( 4 minutes  15.167 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
