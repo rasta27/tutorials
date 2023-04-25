@@ -982,7 +982,7 @@ his world, we suggest running the loop for at least 40,000 episodes!
 
     The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
 
-    Episode 0 - Step 44 - Epsilon 0.9999890000591233 - Mean Reward 222.0 - Mean Length 44.0 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 0.527 - Time 2023-04-25T19:02:33
+    Episode 0 - Step 323 - Epsilon 0.9999192532500891 - Mean Reward 724.0 - Mean Length 323.0 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 3.753 - Time 2023-04-25T20:36:55
     /opt/conda/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning:
 
     The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
@@ -1003,7 +1003,7 @@ to train an AI to play any of the games at the `OpenAI gym <https://gym.openai.c
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  25.224 seconds)
+   **Total running time of the script:** ( 0 minutes  31.517 seconds)
 
 
 .. _sphx_glr_download_intermediate_mario_rl_tutorial.py:

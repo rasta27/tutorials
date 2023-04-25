@@ -436,12 +436,12 @@ the instructions <a class="reference external" href="https://github.com/pytorch/
 <p>Super-resolution is a way of increasing the resolution of images, videos
 and is widely used in image processing or video editing. For this
 tutorial, we will use a small super-resolution model.</p>
-<p>First, let’s create a SuperResolution model in PyTorch.
+<p>First, let’s create a <code class="docutils literal notranslate"><span class="pre">SuperResolution</span></code> model in PyTorch.
 This model uses the efficient sub-pixel convolution layer described in
 <a class="reference external" href="https://arxiv.org/abs/1609.05158">“Real-Time Single Image and Video Super-Resolution Using an Efficient
 Sub-Pixel Convolutional Neural Network” - Shi et al</a>
 for increasing the resolution of an image by an upscale factor.
-The model expects the Y component of the YCbCr of an image as an input, and
+The model expects the Y component of the <code class="docutils literal notranslate"><span class="pre">YCbCr</span></code> of an image as an input, and
 outputs the upscaled Y component in super resolution.</p>
 <p><a class="reference external" href="https://github.com/pytorch/examples/blob/master/super_resolution/model.py">The
 model</a>
@@ -482,7 +482,7 @@ comes directly from PyTorch’s examples without modification:</p>
 </pre></div>
 </div>
 <p>Ordinarily, you would now train this model; however, for this tutorial,
-we will instead download some pre-trained weights. Note that this model
+we will instead download some pretrained weights. Note that this model
 was not trained fully for good accuracy and is used here for
 demonstration purposes only.</p>
 <p>It is important to call <code class="docutils literal notranslate"><span class="pre">torch_model.eval()</span></code> or <code class="docutils literal notranslate"><span class="pre">torch_model.train(False)</span></code>
@@ -541,9 +541,9 @@ where batch_size can be variable.</p>
 which we will use to verify that the model we exported computes
 the same values when run in ONNX Runtime.</p>
 <p>But before verifying the model’s output with ONNX Runtime, we will check
-the ONNX model with ONNX’s API.
+the ONNX model with ONNX API.
 First, <code class="docutils literal notranslate"><span class="pre">onnx.load("super_resolution.onnx")</span></code> will load the saved model and
-will output a onnx.ModelProto structure (a top-level file/container format for bundling a ML model.
+will output a <code class="docutils literal notranslate"><span class="pre">onnx.ModelProto</span></code> structure (a top-level file/container format for bundling a ML model.
 For more information <a class="reference external" href="https://github.com/onnx/onnx/blob/master/onnx/onnx.proto">onnx.proto documentation</a>.).
 Then, <code class="docutils literal notranslate"><span class="pre">onnx.checker.check_model(onnx_model)</span></code> will verify the model’s structure
 and confirm that the model has a valid schema.
@@ -564,7 +564,7 @@ for the network.</p>
 <p>In order to run the model with ONNX Runtime, we need to create an
 inference session for the model with the chosen configuration
 parameters (here we use the default config).
-Once the session is created, we evaluate the model using the run() api.
+Once the session is created, we evaluate the model using the run() API.
 The output of this call is a list containing the outputs of the model
 computed by ONNX Runtime.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">onnxruntime</span>
@@ -585,7 +585,7 @@ computed by ONNX Runtime.</p>
 </pre></div>
 </div>
 <p>We should see that the output of PyTorch and ONNX Runtime runs match
-numerically with the given precision (rtol=1e-03 and atol=1e-05).
+numerically with the given precision (<code class="docutils literal notranslate"><span class="pre">rtol=1e-03</span></code> and <code class="docutils literal notranslate"><span class="pre">atol=1e-05</span></code>).
 As a side-note, if they do not match then there is an issue in the
 ONNX exporter, so please contact us in that case.</p>
 <div class="section" id="running-the-model-on-an-image-using-onnx-runtime">
@@ -597,12 +597,12 @@ looks like below</p>
 <div class="figure align-default">
 <img alt="cat" src="../_images/cat_224x224.jpg"/>
 </div>
-<p>First, let’s load the image, pre-process it using standard PIL
+<p>First, let’s load the image, preprocess it using standard PIL
 python library. Note that this preprocessing is the standard practice of
 processing data for training/testing neural networks.</p>
 <p>We first resize the image to fit the size of the model’s input (224x224).
 Then we split the image into its Y, Cb, and Cr components.
-These components represent a greyscale image (Y), and
+These components represent a grayscale image (Y), and
 the blue-difference (Cb) and red-difference (Cr) chroma components.
 The Y component being more sensitive to the human eye, we are
 interested in this component which we will be transforming.
@@ -625,7 +625,7 @@ will be the input of our model.</p>
 </pre></div>
 </div>
 <p>Now, as a next step, let’s take the tensor representing the
-greyscale resized cat image and run the super-resolution model in
+grayscale resized cat image and run the super-resolution model in
 ONNX Runtime as explained previously.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ort_inputs</span> <span class="o">=</span> <span class="p">{</span><span class="n">ort_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">to_numpy</span><span class="p">(</span><span class="n">img_y</span><span class="p">)}</span>
 <span class="n">ort_outs</span> <span class="o">=</span> <span class="n">ort_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">ort_inputs</span><span class="p">)</span>

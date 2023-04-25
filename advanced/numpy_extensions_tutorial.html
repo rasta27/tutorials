@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Creating Extensions Using numpy and scipy — PyTorch Tutorials 2.0.0+cu117 documentation</title>
+<title>Creating Extensions Using NumPy and SciPy — PyTorch Tutorials 2.0.0+cu117 documentation</title>
 <link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
 <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
@@ -367,7 +367,7 @@
           
         </a> &gt;
       </li>
-<li>Creating Extensions Using numpy and scipy</li>
+<li>Creating Extensions Using NumPy and SciPy</li>
 <li class="pytorch-breadcrumbs-aside">
 <a href="../_sources/advanced/numpy_extensions_tutorial.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"/></a>
 </li>
@@ -407,7 +407,7 @@
 to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="creating-extensions-using-numpy-and-scipy">
-<span id="sphx-glr-advanced-numpy-extensions-tutorial-py"></span><h1>Creating Extensions Using numpy and scipy<a class="headerlink" href="#creating-extensions-using-numpy-and-scipy" title="Permalink to this heading">¶</a></h1>
+<span id="sphx-glr-advanced-numpy-extensions-tutorial-py"></span><h1>Creating Extensions Using NumPy and SciPy<a class="headerlink" href="#creating-extensions-using-numpy-and-scipy" title="Permalink to this heading">¶</a></h1>
 <p><strong>Author</strong>: <a class="reference external" href="https://github.com/apaszke">Adam Paszke</a></p>
 <p><strong>Updated by</strong>: <a class="reference external" href="https://github.com/adam-dziedzic">Adam Dziedzic</a></p>
 <p>In this tutorial, we shall go through two tasks:</p>
@@ -435,7 +435,7 @@ to download the full example code</p>
 <h2>Parameter-less example<a class="headerlink" href="#parameter-less-example" title="Permalink to this heading">¶</a></h2>
 <p>This layer doesn’t particularly do anything useful or mathematically
 correct.</p>
-<p>It is aptly named BadFFTFunction</p>
+<p>It is aptly named <code class="docutils literal notranslate"><span class="pre">BadFFTFunction</span></code></p>
 <p><strong>Layer Implementation</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.fft</span> <span class="kn">import</span> <span class="n">rfft2</span><span class="p">,</span> <span class="n">irfft2</span>
 
@@ -454,7 +454,7 @@ correct.</p>
         <span class="k">return</span> <span class="n">grad_output</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">result</span></a><span class="p">)</span>
 
 <span class="c1"># since this layer does not have any parameters, we can</span>
-<span class="c1"># simply declare this as a function, rather than as an nn.Module class</span>
+<span class="c1"># simply declare this as a function, rather than as an ``nn.Module`` class</span>
 
 
 <span class="k">def</span> <span class="nf">incorrect_fft</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
@@ -498,7 +498,7 @@ to as convolution while the actual operation is cross-correlation
 which is not the case for cross-correlation).</p>
 <p>Implementation of a layer with learnable weights, where cross-correlation
 has a filter (kernel) that represents weights.</p>
-<p>The backward pass computes the gradient wrt the input and the gradient wrt the filter.</p>
+<p>The backward pass computes the gradient <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the input and the gradient <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the filter.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">flip</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">convolve2d</span><span class="p">,</span> <span class="n">correlate2d</span>
@@ -598,7 +598,7 @@ Gradient for the input map:  tensor([[ 0.3324, -1.2420, -2.2127,  1.1402,  1.556
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Are the gradients correct:  True
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.168 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.135 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-numpy-extensions-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/ee55f2537c08fa13e041e479675a6c2c/numpy_extensions_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">numpy_extensions_tutorial.py</span></code></a></p>
@@ -648,7 +648,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <div class="pytorch-right-menu" id="pytorch-right-menu">
 <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
 <ul>
-<li><a class="reference internal" href="#">Creating Extensions Using numpy and scipy</a><ul>
+<li><a class="reference internal" href="#">Creating Extensions Using NumPy and SciPy</a><ul>
 <li><a class="reference internal" href="#parameter-less-example">Parameter-less example</a></li>
 <li><a class="reference internal" href="#parametrized-example">Parametrized example</a></li>
 </ul>

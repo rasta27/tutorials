@@ -451,19 +451,19 @@ implementations:</p>
 <a class="sphx-glr-backref-module-torch-nn-functional sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html#torch.nn.functional.scaled_dot_product_attention" title="torch.nn.functional.scaled_dot_product_attention"><span class="n">F</span><span class="o">.</span><span class="n">scaled_dot_product_attention</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">query</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">key</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">value</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[[-0.0670,  0.8071,  0.3665, -1.1514,  0.2438,  0.8470, -0.5054,
-           0.5019],
-         [ 1.2124,  0.4956,  0.7809, -0.3254,  0.7741,  0.2548,  0.6206,
-           0.2436],
-         [ 1.2572,  0.1971,  0.7054, -0.2084,  0.8448,  0.4615,  0.7690,
-           0.5247]],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[[ 0.8707, -0.4733,  1.0113, -0.7901, -0.2471, -0.6138, -0.6193,
+          -0.2857],
+         [ 1.1391, -0.2583,  0.9909, -0.7202,  0.0132, -1.0595, -0.3562,
+          -0.4560],
+         [ 0.9443, -0.4070,  0.9948, -0.7677, -0.1686, -0.7401, -0.5546,
+          -0.3347]],
 
-        [[ 0.5632, -1.1068, -0.4818,  0.1419,  0.4554,  0.5484,  0.4224,
-           0.4261],
-         [ 0.6031, -1.2106, -0.7336,  0.1671,  0.8054,  0.4455,  0.3995,
-           0.2682],
-         [ 1.0616, -1.3652, -0.9025, -0.1097,  1.0702,  0.3425, -0.0087,
-           0.1412]]], device='cuda:0')
+        [[ 0.5821,  0.2709,  0.1923,  0.0186, -0.7401, -0.1982,  1.4197,
+          -0.5267],
+         [ 0.3716,  0.5055,  0.1132, -0.1453, -0.5093,  0.1443,  0.9982,
+          -0.2217],
+         [ 0.3892,  0.5625,  0.1766, -0.1014, -0.4669,  0.2462,  1.0594,
+          -0.1683]]], device='cuda:0')
 </pre></div>
 </div>
 </div>
@@ -526,10 +526,10 @@ measuring performance.</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"EfficientAttention is not supported. See warnings for reasons."</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The default implementation runs in 13337.300 microseconds
-The math implementation runs in 41538.780 microseconds
-The flash attention implementation runs in 13557.058 microseconds
-The memory efficient implementation runs in 14579.258 microseconds
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The default implementation runs in 14488.348 microseconds
+The math implementation runs in 42546.233 microseconds
+The flash attention implementation runs in 14192.570 microseconds
+The memory efficient implementation runs in 14850.258 microseconds
 </pre></div>
 </div>
 </div>
@@ -712,8 +712,8 @@ To demonstrate this, let’s compile the <code class="docutils literal notransla
     <span class="sa">f</span><span class="s2">"The compiled module runs in  </span><span class="si">{</span><span class="n">benchmark_torch_function_in_microseconds</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-_dynamo sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/_dynamo.html#torch._dynamo.OptimizedModule" title="torch._dynamo.OptimizedModule"><span class="n">compiled_model</span></a><span class="p">,</span><span class="w"> </span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">x</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> microseconds"</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The non compiled module runs in  1159.149 microseconds
-The compiled module runs in  1160.914 microseconds
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The non compiled module runs in  1202.336 microseconds
+The compiled module runs in  1205.745 microseconds
 </pre></div>
 </div>
 <p>The exact execution time is dependent on machine, however the results for mine:
@@ -749,36 +749,36 @@ inspect the performance characteristics of your code.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
                                                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-                         Non-Compilied Causal Attention        15.82%       4.891ms        75.84%      23.440ms      23.440ms       0.000us         0.00%      24.059ms      24.059ms             1
-                                           aten::matmul         1.37%     424.000us        26.89%       8.310ms     166.200us       0.000us         0.00%      13.593ms     271.860us            50
-                                               aten::mm        18.17%       5.615ms        20.46%       6.325ms     126.500us      11.383ms        55.41%      13.593ms     271.860us            50
-                                           aten::linear         1.07%     332.000us        31.21%       9.646ms     192.920us       0.000us         0.00%      13.121ms     262.420us            50
-         turing_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us      11.383ms        55.41%      11.383ms     227.660us            50
-                     aten::scaled_dot_product_attention         3.91%       1.210ms        24.52%       7.579ms     303.160us       0.000us         0.00%      10.466ms     418.640us            25
-              aten::_scaled_dot_product_flash_attention         5.24%       1.621ms        20.61%       6.369ms     254.760us       0.000us         0.00%      10.466ms     418.640us            25
-                         aten::_flash_attention_forward         4.36%       1.346ms         6.52%       2.016ms      80.640us       9.060ms        44.10%       9.889ms     395.560us            25
-void fmha_fwd_loop_kernel&lt;FMHA_kernel_traits&lt;256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       9.060ms        44.10%       9.060ms     362.400us            25
-cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.35%     109.000us         0.35%     109.000us       1.090us       2.226ms        10.84%       2.226ms      22.260us           100
+                         Non-Compilied Causal Attention        13.70%       4.598ms        68.93%      23.128ms      23.128ms       0.000us         0.00%      24.283ms      24.283ms             1
+                                           aten::matmul         1.09%     367.000us        26.32%       8.832ms     176.640us       0.000us         0.00%      13.792ms     275.840us            50
+                                               aten::mm        12.96%       4.349ms        14.73%       4.942ms      98.840us      11.538ms        55.67%      13.792ms     275.840us            50
+                                           aten::linear         0.72%     243.000us        31.31%      10.506ms     210.120us       0.000us         0.00%      13.675ms     273.500us            50
+         turing_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us      11.538ms        55.67%      11.538ms     230.760us            50
+                     aten::scaled_dot_product_attention         3.68%       1.236ms        20.96%       7.031ms     281.240us       0.000us         0.00%      10.491ms     419.640us            25
+              aten::_scaled_dot_product_flash_attention         5.46%       1.831ms        17.27%       5.795ms     231.800us       0.000us         0.00%      10.491ms     419.640us            25
+                         aten::_flash_attention_forward         3.70%       1.241ms         5.33%       1.787ms      71.480us       9.087ms        43.85%       9.911ms     396.440us            25
+void fmha_fwd_loop_kernel&lt;FMHA_kernel_traits&lt;256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       9.087ms        43.85%       9.087ms     363.480us            25
+cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.34%     113.000us         0.34%     113.000us       1.130us       2.246ms        10.84%       2.246ms      22.460us           100
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-Self CPU time total: 30.907ms
-Self CUDA time total: 20.544ms
+Self CPU time total: 33.552ms
+Self CUDA time total: 20.725ms
 
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
                                                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-                              Compiled Causal Attention        16.51%       3.965ms        84.49%      20.297ms      20.297ms       0.000us         0.00%      23.016ms      23.016ms             1
-                                       CompiledFunction        35.89%       8.623ms        67.48%      16.211ms     648.440us       0.000us         0.00%      23.016ms     920.640us            25
-                                               aten::mm         7.51%       1.804ms        10.77%       2.587ms      51.740us      11.408ms        55.49%      12.685ms     253.700us            50
-         turing_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us      11.408ms        55.49%      11.408ms     228.160us            50
-              aten::_scaled_dot_product_flash_attention         2.15%     517.000us        15.23%       3.659ms     146.360us       0.000us         0.00%      10.331ms     413.240us            25
-                         aten::_flash_attention_forward         1.96%     470.000us         4.97%       1.194ms      47.760us       9.051ms        44.02%       9.869ms     394.760us            25
-void fmha_fwd_loop_kernel&lt;FMHA_kernel_traits&lt;256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       9.051ms        44.02%       9.051ms     362.040us            25
-                                       cudaLaunchKernel         5.38%       1.293ms         5.38%       1.293ms      10.344us       1.179ms         5.73%       1.179ms       9.432us           125
-                                           aten::arange         2.50%     601.000us        10.64%       2.557ms      25.570us     100.000us         0.49%     920.000us       9.200us           100
-cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.52%     126.000us         0.52%     126.000us       1.260us     825.000us         4.01%     825.000us       8.250us           100
+                              Compiled Causal Attention        15.26%       3.642ms        77.33%      18.453ms      18.453ms       0.000us         0.00%      23.297ms      23.297ms             1
+                                       CompiledFunction        33.23%       7.931ms        61.62%      14.704ms     588.160us       0.000us         0.00%      23.297ms     931.880us            25
+                                               aten::mm         7.19%       1.715ms        10.11%       2.412ms      48.240us      11.561ms        55.61%      12.865ms     257.300us            50
+         turing_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us      11.561ms        55.61%      11.561ms     231.220us            50
+              aten::_scaled_dot_product_flash_attention         2.20%     526.000us        13.67%       3.263ms     130.520us       0.000us         0.00%      10.432ms     417.280us            25
+                         aten::_flash_attention_forward         1.77%     423.000us         4.37%       1.042ms      41.680us       9.127ms        43.90%       9.962ms     398.480us            25
+void fmha_fwd_loop_kernel&lt;FMHA_kernel_traits&lt;256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       9.127ms        43.90%       9.127ms     365.080us            25
+                                       cudaLaunchKernel         4.97%       1.187ms         4.97%       1.187ms       9.496us       1.205ms         5.80%       1.205ms       9.640us           125
+                                           aten::arange         2.34%     558.000us         9.57%       2.284ms      22.840us     101.000us         0.49%     934.000us       9.340us           100
+cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.49%     116.000us         0.49%     116.000us       1.160us     842.000us         4.05%     842.000us       8.420us           100
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-Self CPU time total: 24.023ms
-Self CUDA time total: 20.559ms
+Self CPU time total: 23.864ms
+Self CUDA time total: 20.789ms
 </pre></div>
 </div>
 <p>The previous code snippet generates a report of the top 10 PyTorch functions
@@ -805,7 +805,7 @@ implementation is used on GPU. As well, we built a simple
 compilable. In the process we have shown how to the profiling tools can
 be used to explore the performance characteristics of a user defined
 module.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.865 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  11.477 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-scaled-dot-product-attention-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e40ced94a143a49f0f8745e10c981139/scaled_dot_product_attention_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">scaled_dot_product_attention_tutorial.py</span></code></a></p>

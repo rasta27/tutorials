@@ -478,43 +478,108 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 9.23M/945M [00:00&lt;00:10, 96.8MB/s]
-  3%|2         | 26.5M/945M [00:00&lt;00:06, 146MB/s]
-  6%|5         | 54.4M/945M [00:00&lt;00:04, 213MB/s]
-  9%|8         | 81.5M/945M [00:00&lt;00:03, 241MB/s]
- 12%|#1        | 110M/945M [00:00&lt;00:03, 261MB/s]
- 15%|#4        | 138M/945M [00:00&lt;00:03, 271MB/s]
- 18%|#7        | 165M/945M [00:00&lt;00:02, 278MB/s]
- 20%|##        | 194M/945M [00:00&lt;00:02, 284MB/s]
- 23%|##3       | 222M/945M [00:00&lt;00:02, 287MB/s]
- 26%|##6       | 250M/945M [00:01&lt;00:02, 291MB/s]
- 29%|##9       | 278M/945M [00:01&lt;00:04, 167MB/s]
- 32%|###1      | 300M/945M [00:01&lt;00:05, 126MB/s]
- 35%|###4      | 327M/945M [00:01&lt;00:04, 154MB/s]
- 38%|###7      | 356M/945M [00:01&lt;00:03, 182MB/s]
- 41%|####      | 384M/945M [00:01&lt;00:02, 207MB/s]
- 44%|####3     | 412M/945M [00:02&lt;00:02, 228MB/s]
- 47%|####6     | 441M/945M [00:02&lt;00:02, 245MB/s]
- 50%|####9     | 469M/945M [00:02&lt;00:01, 258MB/s]
- 53%|#####2    | 497M/945M [00:02&lt;00:01, 268MB/s]
- 56%|#####5    | 525M/945M [00:02&lt;00:01, 276MB/s]
- 59%|#####8    | 553M/945M [00:02&lt;00:01, 281MB/s]
- 62%|######1   | 581M/945M [00:02&lt;00:01, 286MB/s]
- 65%|######4   | 609M/945M [00:03&lt;00:02, 122MB/s]
- 67%|######6   | 630M/945M [00:03&lt;00:02, 133MB/s]
- 70%|######9   | 659M/945M [00:03&lt;00:01, 161MB/s]
- 73%|#######2  | 687M/945M [00:03&lt;00:01, 188MB/s]
- 76%|#######5  | 715M/945M [00:03&lt;00:01, 212MB/s]
- 79%|#######8  | 743M/945M [00:03&lt;00:00, 232MB/s]
- 82%|########1 | 772M/945M [00:03&lt;00:00, 249MB/s]
- 85%|########4 | 799M/945M [00:03&lt;00:00, 254MB/s]
- 87%|########7 | 825M/945M [00:04&lt;00:00, 253MB/s]
- 90%|######### | 851M/945M [00:04&lt;00:00, 252MB/s]
- 93%|#########2| 876M/945M [00:04&lt;00:00, 252MB/s]
- 95%|#########5| 901M/945M [00:04&lt;00:00, 252MB/s]
- 98%|#########7| 925M/945M [00:04&lt;00:00, 124MB/s]
-100%|#########9| 944M/945M [00:04&lt;00:00, 127MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 199MB/s]
+  1%|          | 7.52M/945M [00:00&lt;00:12, 78.8MB/s]
+  2%|1         | 16.7M/945M [00:00&lt;00:10, 88.9MB/s]
+  3%|2         | 26.0M/945M [00:00&lt;00:10, 92.8MB/s]
+  4%|3         | 35.2M/945M [00:00&lt;00:10, 94.2MB/s]
+  5%|4         | 44.4M/945M [00:00&lt;00:09, 95.3MB/s]
+  6%|5         | 53.9M/945M [00:00&lt;00:09, 96.3MB/s]
+  7%|6         | 63.1M/945M [00:00&lt;00:09, 96.4MB/s]
+  8%|7         | 72.3M/945M [00:00&lt;00:09, 95.6MB/s]
+  9%|8         | 81.4M/945M [00:00&lt;00:09, 95.1MB/s]
+ 10%|9         | 90.9M/945M [00:01&lt;00:09, 96.3MB/s]
+ 11%|#         | 100M/945M [00:01&lt;00:09, 96.9MB/s]
+ 12%|#1        | 109M/945M [00:01&lt;00:09, 96.1MB/s]
+ 13%|#2        | 119M/945M [00:01&lt;00:09, 95.4MB/s]
+ 14%|#3        | 128M/945M [00:01&lt;00:09, 94.9MB/s]
+ 15%|#4        | 137M/945M [00:01&lt;00:08, 95.9MB/s]
+ 15%|#5        | 146M/945M [00:01&lt;00:08, 94.6MB/s]
+ 16%|#6        | 156M/945M [00:01&lt;00:08, 95.4MB/s]
+ 17%|#7        | 165M/945M [00:01&lt;00:08, 94.6MB/s]
+ 18%|#8        | 174M/945M [00:01&lt;00:08, 95.2MB/s]
+ 19%|#9        | 183M/945M [00:02&lt;00:08, 94.4MB/s]
+ 20%|##        | 193M/945M [00:02&lt;00:08, 96.1MB/s]
+ 21%|##1       | 202M/945M [00:02&lt;00:08, 92.1MB/s]
+ 22%|##2       | 211M/945M [00:02&lt;00:08, 93.5MB/s]
+ 23%|##3       | 221M/945M [00:02&lt;00:07, 95.2MB/s]
+ 24%|##4       | 230M/945M [00:02&lt;00:07, 94.1MB/s]
+ 25%|##5       | 239M/945M [00:02&lt;00:07, 93.8MB/s]
+ 26%|##6       | 248M/945M [00:02&lt;00:08, 91.0MB/s]
+ 27%|##7       | 256M/945M [00:02&lt;00:07, 91.5MB/s]
+ 28%|##8       | 266M/945M [00:02&lt;00:07, 92.6MB/s]
+ 29%|##9       | 275M/945M [00:03&lt;00:07, 94.1MB/s]
+ 30%|###       | 284M/945M [00:03&lt;00:07, 96.0MB/s]
+ 31%|###1      | 294M/945M [00:03&lt;00:07, 91.6MB/s]
+ 32%|###2      | 302M/945M [00:03&lt;00:07, 92.0MB/s]
+ 33%|###3      | 312M/945M [00:03&lt;00:07, 93.5MB/s]
+ 34%|###3      | 321M/945M [00:03&lt;00:07, 90.7MB/s]
+ 35%|###4      | 330M/945M [00:03&lt;00:06, 92.9MB/s]
+ 36%|###5      | 340M/945M [00:03&lt;00:06, 95.2MB/s]
+ 37%|###6      | 349M/945M [00:03&lt;00:06, 95.9MB/s]
+ 38%|###7      | 358M/945M [00:03&lt;00:06, 95.8MB/s]
+ 39%|###8      | 367M/945M [00:04&lt;00:06, 95.9MB/s]
+ 40%|###9      | 377M/945M [00:04&lt;00:06, 95.0MB/s]
+ 41%|####      | 386M/945M [00:04&lt;00:06, 95.7MB/s]
+ 42%|####1     | 395M/945M [00:04&lt;00:06, 94.6MB/s]
+ 43%|####2     | 404M/945M [00:04&lt;00:05, 96.0MB/s]
+ 44%|####3     | 414M/945M [00:04&lt;00:05, 95.3MB/s]
+ 45%|####4     | 423M/945M [00:04&lt;00:05, 93.2MB/s]
+ 46%|####5     | 432M/945M [00:04&lt;00:05, 95.6MB/s]
+ 47%|####6     | 442M/945M [00:04&lt;00:05, 96.5MB/s]
+ 48%|####7     | 451M/945M [00:05&lt;00:05, 97.7MB/s]
+ 49%|####8     | 461M/945M [00:05&lt;00:05, 97.2MB/s]
+ 50%|####9     | 470M/945M [00:05&lt;00:05, 97.4MB/s]
+ 51%|#####     | 480M/945M [00:05&lt;00:04, 98.6MB/s]
+ 52%|#####1    | 489M/945M [00:05&lt;00:04, 98.7MB/s]
+ 53%|#####2    | 499M/945M [00:05&lt;00:04, 99.4MB/s]
+ 54%|#####3    | 508M/945M [00:05&lt;00:04, 99.3MB/s]
+ 55%|#####4    | 518M/945M [00:05&lt;00:04, 100MB/s]
+ 56%|#####5    | 528M/945M [00:05&lt;00:04, 99.8MB/s]
+ 57%|#####6    | 537M/945M [00:05&lt;00:04, 99.7MB/s]
+ 58%|#####7    | 547M/945M [00:06&lt;00:04, 98.3MB/s]
+ 59%|#####8    | 556M/945M [00:06&lt;00:04, 98.3MB/s]
+ 60%|#####9    | 565M/945M [00:06&lt;00:04, 98.3MB/s]
+ 61%|######    | 575M/945M [00:06&lt;00:03, 97.7MB/s]
+ 62%|######1   | 584M/945M [00:06&lt;00:03, 97.9MB/s]
+ 63%|######2   | 594M/945M [00:06&lt;00:03, 95.6MB/s]
+ 64%|######3   | 603M/945M [00:06&lt;00:03, 96.4MB/s]
+ 65%|######4   | 612M/945M [00:06&lt;00:03, 97.3MB/s]
+ 66%|######5   | 622M/945M [00:06&lt;00:03, 98.7MB/s]
+ 67%|######6   | 632M/945M [00:06&lt;00:03, 98.7MB/s]
+ 68%|######7   | 641M/945M [00:07&lt;00:03, 97.6MB/s]
+ 69%|######8   | 651M/945M [00:07&lt;00:03, 98.5MB/s]
+ 70%|######9   | 660M/945M [00:07&lt;00:03, 98.2MB/s]
+ 71%|#######   | 669M/945M [00:07&lt;00:02, 97.3MB/s]
+ 72%|#######1  | 679M/945M [00:07&lt;00:02, 98.1MB/s]
+ 73%|#######2  | 688M/945M [00:07&lt;00:02, 97.8MB/s]
+ 74%|#######3  | 698M/945M [00:07&lt;00:02, 97.6MB/s]
+ 75%|#######4  | 707M/945M [00:07&lt;00:02, 97.3MB/s]
+ 76%|#######5  | 717M/945M [00:07&lt;00:02, 98.4MB/s]
+ 77%|#######6  | 726M/945M [00:07&lt;00:02, 99.1MB/s]
+ 78%|#######7  | 736M/945M [00:08&lt;00:02, 97.6MB/s]
+ 79%|#######8  | 745M/945M [00:08&lt;00:02, 97.4MB/s]
+ 80%|#######9  | 755M/945M [00:08&lt;00:02, 98.1MB/s]
+ 81%|########  | 764M/945M [00:08&lt;00:01, 98.1MB/s]
+ 82%|########1 | 774M/945M [00:08&lt;00:01, 98.7MB/s]
+ 83%|########2 | 783M/945M [00:08&lt;00:01, 97.6MB/s]
+ 84%|########3 | 792M/945M [00:08&lt;00:01, 96.8MB/s]
+ 85%|########4 | 802M/945M [00:08&lt;00:01, 97.4MB/s]
+ 86%|########5 | 811M/945M [00:08&lt;00:01, 97.1MB/s]
+ 87%|########6 | 820M/945M [00:08&lt;00:01, 96.6MB/s]
+ 88%|########7 | 830M/945M [00:09&lt;00:01, 97.7MB/s]
+ 89%|########8 | 839M/945M [00:09&lt;00:01, 97.9MB/s]
+ 90%|########9 | 849M/945M [00:09&lt;00:01, 97.4MB/s]
+ 91%|######### | 858M/945M [00:09&lt;00:00, 98.5MB/s]
+ 92%|#########1| 868M/945M [00:09&lt;00:00, 98.8MB/s]
+ 93%|#########2| 877M/945M [00:09&lt;00:00, 96.0MB/s]
+ 94%|#########3| 886M/945M [00:09&lt;00:00, 95.0MB/s]
+ 95%|#########4| 896M/945M [00:09&lt;00:00, 95.9MB/s]
+ 96%|#########5| 905M/945M [00:09&lt;00:00, 96.7MB/s]
+ 97%|#########6| 914M/945M [00:09&lt;00:00, 97.0MB/s]
+ 98%|#########7| 924M/945M [00:10&lt;00:00, 97.6MB/s]
+ 99%|#########8| 933M/945M [00:10&lt;00:00, 94.8MB/s]
+100%|#########9| 943M/945M [00:10&lt;00:00, 96.0MB/s]
+100%|##########| 945M/945M [00:10&lt;00:00, 96.2MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -726,37 +791,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: staff at the red hot world buffet served girl a drink with alcohol in it . restaurant bosses admitted to making the mistake but blamed mother for it .
+prediction: Dirk Kuyt is returning to the club that was a launching pad for nine years at Liverpool and Fenerbahce . the former holland forward signed a one-year contract with the club . he said his stay will likely be longer as he is fit and has a great drive .
 
-target: Ashley Dodds, 29, left speechless when daughter told her what happened . The mother, from Salford, had ordered 'mocktails' for the girl and her friend . Went outside for a cigarette and was told 'mum, I've had alcohol' on return . Manchester restaurant blamed Ms Dodds for leaving children on their own .
+target: Dirk Kuyt agrees one-year-deal to move back to former club Feyenoord . The Dutchman left in 2006 to sign for Liverpool before moving to Turkey . Kuyt made 208 appearances for Liverpool, scoring 51 goals . CLICK HERE for all the latest Liverpool news .
 
 
 Example 2:
 
-prediction: lz granderson: a candidate who has questioned voting rights is trying to sell himself as a different type of republican . he says he's tried to brand himself as the republican's minority outreach candidate . granderson: he's trying to sell himself as a different type of republican .
+prediction: Manchester united have made an official approach for Memphis Depay . the 21-year-old has scored 20 goals in 26 league games for the red devils . depay was named in van gaal's 23-man world cup squad last year .
 
-target: Georgia Powers: Rand Paul, running for president, would like minorities to think he's an advocate. His record on rights shows otherwise . On civil rights, women's choice, voting rights, immigrant DREAMers, education, he has shown he'd take country backwards, she says .
+target: Memphis Depay has scored 20 goals in 26 league games for PSV this term . PSV beat Heerenveen to lift their first Eredivisie title in seven years . Paris-Saint Germain are also interested in the highly-rated 21-year-old .
 
 
 Example 3:
 
-prediction: the rosehall estate near inverness was built in the 1820 but its most colourful period of its history was during the 1920s . it was bought by the Duke of Westminster and used as a secret love nest of the fashion designer . the 22-room main house has been on the market for £3million but requires millions more to be spent on a full restoration .
+prediction: the gypsy secretariat foundation are leading the campaign . they hope to use it to raise awareness of discrimination against gypsies . the campaign was delivered on international Roma day .
 
-target: The Rosehall Estate near Inverness boasts a 22-room main house, five separate buildings and 700 acres of land . The Duke of Westminster would spend his summers at the property with French fashion designer Coco Chanel . She redesigned the whole of the property's interior and painstakingly decorated each of the estate's rooms .
+target: Gypsy Secretariat Foundation  complained over the definition of 'gypsy' Spanish dictionary has one of the definitions for the word as a 'swindler' Group has delivered protest letters to Spain's Royal Language Academy .
 
 
 Example 4:
 
-prediction: officer Michael Slager, 33, has been fired from the north Charleston police department . he was fired after resorted to deadly force following a routine traffic stop . his wife is eight months pregnant and the city will continue paying for her medical insurance .
+prediction: the 40-year-old fashion police co-host was seen leaving the Trump . international hotel in new york city on her way to a today show appearance . she has revealed that she was cheating on her ex-boyfriend with ginger spice .
 
-target: Officer Michael Slager's mother says she couldn't watch the video of the incident . Slager was fired earlier this week . Slager is charged with murder in the death of Walter Scott .
+target: The Fashion Police host dated actor Jerry from 2003 to 2004 . In her new tell-all Going Off Script she confessed he cheated on her . First he hooked up with singer Geri Halliwell then actress Rebecca Romijn . O'Connell went on to marry Rebecca in 2007 and they had two children .
 
 
 Example 5:
 
-prediction: 5ft 11in supermodel was bullied at school and was home-schooled . she was scouted at the sunglasses counter of Primark in Hammersmith, aged 15 . the model has become a household name and a celebrated regular on the runway .
+prediction: unidentified college student was filmed beating three officers at chilifest . video posted on social media site Vine shows her beating them . one officer chose 'scissors' as his option, and she won . police are believed to have busted her for underage drinking .
 
-target: Stunning beauty, 24, was bullied throughout school for her striking looks . New face of Maybelline New York and first black model to walk for Prada . She talks about caring for her son, Riley, five, who has sickle cell anaemia .
+target: A video of the game, filmed at Chilifest in Snook, Texas, was posted onto social media site Vine . The clip shows the unidentified girl, believed to be a student at Texas A&amp;M University in College Station winning the game by showing a 'rock'
 </pre></div>
 </div>
 </div>
@@ -1049,7 +1114,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  21.472 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  36.827 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
