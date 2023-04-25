@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je me rejouis de vous voir heureux .', 'i m glad to see you re happy .']
+    ['je suis humain .', 'i am human .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 20s (- 18m 42s) (5000 6%) 2.8489
-    2m 36s (- 16m 55s) (10000 13%) 2.2804
-    3m 51s (- 15m 26s) (15000 20%) 1.9747
-    5m 7s (- 14m 5s) (20000 26%) 1.7321
-    6m 23s (- 12m 47s) (25000 33%) 1.5553
-    7m 39s (- 11m 29s) (30000 40%) 1.3645
-    8m 55s (- 10m 12s) (35000 46%) 1.2290
-    10m 11s (- 8m 55s) (40000 53%) 1.1110
-    11m 27s (- 7m 38s) (45000 60%) 1.0169
-    12m 44s (- 6m 22s) (50000 66%) 0.8992
-    14m 0s (- 5m 5s) (55000 73%) 0.8197
-    15m 16s (- 3m 49s) (60000 80%) 0.7660
-    16m 32s (- 2m 32s) (65000 86%) 0.6724
-    17m 48s (- 1m 16s) (70000 93%) 0.6106
-    19m 4s (- 0m 0s) (75000 100%) 0.5805
+    1m 21s (- 19m 3s) (5000 6%) 2.8113
+    2m 38s (- 17m 13s) (10000 13%) 2.2773
+    3m 56s (- 15m 44s) (15000 20%) 1.9945
+    5m 13s (- 14m 22s) (20000 26%) 1.7402
+    6m 31s (- 13m 3s) (25000 33%) 1.5326
+    7m 49s (- 11m 44s) (30000 40%) 1.3619
+    9m 7s (- 10m 25s) (35000 46%) 1.2387
+    10m 25s (- 9m 7s) (40000 53%) 1.1301
+    11m 43s (- 7m 49s) (45000 60%) 1.0021
+    13m 2s (- 6m 31s) (50000 66%) 0.9028
+    14m 21s (- 5m 13s) (55000 73%) 0.8108
+    15m 39s (- 3m 54s) (60000 80%) 0.7502
+    16m 57s (- 2m 36s) (65000 86%) 0.7000
+    18m 15s (- 1m 18s) (70000 93%) 0.6435
+    19m 34s (- 0m 0s) (75000 100%) 0.5959
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > tu temporises .
-    = you re stalling .
-    < you re winning . <EOS>
+    > j ai trop sommeil pour faire mes devoirs .
+    = i m too sleepy to do my homework .
+    < i am too sleepy to do my homework . <EOS>
 
-    > tu fais le chef .
-    = you re bossy .
-    < you re bossy . <EOS>
+    > je ne suis pas du coin .
+    = i m not from around here .
+    < i m not from around here . <EOS>
 
-    > je ne suis pas etroit d esprit .
-    = i m not narrow minded .
-    < i m not narrow minded . <EOS>
+    > tu es tres drole .
+    = you re very funny .
+    < you re very funny . <EOS>
 
-    > ils sont fort joyeux .
-    = they are very cheerful .
-    < they are very cheerful . <EOS>
+    > c est un coureur rapide .
+    = he is a fast runner .
+    < he is a fast runner . <EOS>
 
-    > on en a marre .
-    = we re tired of this .
-    < we re just of . <EOS>
+    > je suis intrepide .
+    = i m fearless .
+    < i m fearless . <EOS>
 
-    > vous etes tellement idiotes !
-    = you are so stupid .
-    < you re so stupid . <EOS>
+    > je vais me marier en octobre .
+    = i m getting married in october .
+    < i m getting married in october . <EOS>
 
-    > je pense cloturer mon compte d epargne .
-    = i am thinking of closing my savings account .
-    < i m drinking in of of of . . <EOS>
+    > il est en train de manger .
+    = he is eating .
+    < he is eating . <EOS>
 
-    > elles parlent en francais .
-    = they re speaking french .
-    < they re studying french . <EOS>
+    > je suis habituee a travailler dur .
+    = i am accustomed to working hard .
+    < i am accustomed to working hard . <EOS>
 
-    > il se trouve a son cote .
-    = he s at her side .
-    < he s at home . <EOS>
+    > je suis pret quand tu l es .
+    = i m ready when you are .
+    < i m ready when you are . <EOS>
 
-    > il est dans la mouise .
-    = he s in hot water .
-    < he s in trouble . <EOS>
+    > je suis plus petit que vous .
+    = i am shorter than you .
+    < i am shorter than you . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f9819dd21a0>
+    <matplotlib.image.AxesImage object at 0x7fad8a79ffd0>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too loud . <EOS>
+    output = she is too short . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared of die . <EOS>
+    output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented child . <EOS>
+    output = he is a big nice man . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  18.187 seconds)
+   **Total running time of the script:** ( 19 minutes  48.552 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
