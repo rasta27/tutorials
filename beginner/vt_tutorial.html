@@ -489,35 +489,27 @@ Downloading: "https://github.com/facebookresearch/deit/zipball/main" to /var/lib
 Downloading: "https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/deit_base_patch16_224-b5f2ef4d.pth
 
   0%|          | 0.00/330M [00:00&lt;?, ?B/s]
-  2%|1         | 5.51M/330M [00:00&lt;00:05, 57.7MB/s]
-  5%|5         | 16.9M/330M [00:00&lt;00:03, 94.0MB/s]
-  9%|8         | 28.4M/330M [00:00&lt;00:02, 106MB/s]
- 12%|#2        | 40.0M/330M [00:00&lt;00:02, 112MB/s]
- 15%|#5        | 51.0M/330M [00:00&lt;00:02, 113MB/s]
- 19%|#9        | 63.0M/330M [00:00&lt;00:02, 118MB/s]
- 23%|##2       | 75.6M/330M [00:00&lt;00:02, 122MB/s]
- 26%|##6       | 87.3M/330M [00:00&lt;00:02, 122MB/s]
- 30%|##9       | 99.0M/330M [00:00&lt;00:01, 122MB/s]
- 33%|###3      | 111M/330M [00:01&lt;00:01, 120MB/s]
- 37%|###6      | 122M/330M [00:01&lt;00:01, 118MB/s]
- 40%|####      | 133M/330M [00:01&lt;00:01, 116MB/s]
- 44%|####3     | 144M/330M [00:01&lt;00:01, 116MB/s]
- 47%|####7     | 156M/330M [00:01&lt;00:01, 117MB/s]
- 51%|#####     | 167M/330M [00:01&lt;00:01, 116MB/s]
- 54%|#####4    | 179M/330M [00:01&lt;00:01, 120MB/s]
- 58%|#####7    | 192M/330M [00:01&lt;00:01, 123MB/s]
- 62%|######1   | 204M/330M [00:01&lt;00:01, 125MB/s]
- 66%|######5   | 217M/330M [00:01&lt;00:00, 128MB/s]
- 69%|######9   | 229M/330M [00:02&lt;00:00, 128MB/s]
- 73%|#######3  | 241M/330M [00:02&lt;00:00, 127MB/s]
- 77%|#######6  | 253M/330M [00:02&lt;00:00, 125MB/s]
- 80%|########  | 265M/330M [00:02&lt;00:00, 125MB/s]
- 84%|########3 | 277M/330M [00:02&lt;00:00, 125MB/s]
- 88%|########7 | 289M/330M [00:02&lt;00:00, 125MB/s]
- 91%|#########1| 301M/330M [00:02&lt;00:00, 125MB/s]
- 95%|#########5| 314M/330M [00:02&lt;00:00, 129MB/s]
- 99%|#########8| 327M/330M [00:02&lt;00:00, 130MB/s]
-100%|##########| 330M/330M [00:02&lt;00:00, 121MB/s]
+  1%|1         | 4.81M/330M [00:00&lt;00:07, 48.1MB/s]
+  4%|3         | 12.4M/330M [00:00&lt;00:05, 65.7MB/s]
+  7%|7         | 24.0M/330M [00:00&lt;00:03, 90.9MB/s]
+ 12%|#2        | 40.5M/330M [00:00&lt;00:02, 123MB/s]
+ 18%|#7        | 58.6M/330M [00:00&lt;00:01, 147MB/s]
+ 23%|##3       | 76.7M/330M [00:00&lt;00:01, 161MB/s]
+ 29%|##8       | 94.3M/330M [00:00&lt;00:01, 169MB/s]
+ 34%|###3      | 112M/330M [00:00&lt;00:01, 173MB/s]
+ 39%|###8      | 128M/330M [00:00&lt;00:01, 174MB/s]
+ 44%|####4     | 146M/330M [00:01&lt;00:01, 177MB/s]
+ 49%|####9     | 163M/330M [00:01&lt;00:00, 177MB/s]
+ 55%|#####4    | 180M/330M [00:01&lt;00:00, 179MB/s]
+ 60%|#####9    | 198M/330M [00:01&lt;00:00, 181MB/s]
+ 65%|######5   | 215M/330M [00:01&lt;00:00, 179MB/s]
+ 71%|#######   | 233M/330M [00:01&lt;00:00, 182MB/s]
+ 76%|#######6  | 251M/330M [00:01&lt;00:00, 184MB/s]
+ 81%|########1 | 269M/330M [00:01&lt;00:00, 183MB/s]
+ 87%|########6 | 287M/330M [00:01&lt;00:00, 183MB/s]
+ 92%|#########2| 304M/330M [00:01&lt;00:00, 184MB/s]
+ 97%|#########7| 322M/330M [00:02&lt;00:00, 173MB/s]
+100%|##########| 330M/330M [00:02&lt;00:00, 165MB/s]
 269
 </pre></div>
 </div>
@@ -641,11 +633,11 @@ the optimized-quantized-and-scripted model - run the code below:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"lite model: </span><span class="si">{:.2f}</span><span class="s2">ms"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-autograd-profiler sphx-glr-backref-type-py-property" href="https://pytorch.org/docs/stable/generated/torch.autograd.profiler.profile.self_cpu_time_total.html#torch.autograd.profiler.profile.self_cpu_time_total" title="torch.autograd.profiler.profile.self_cpu_time_total"><span class="n">prof5</span><span class="o">.</span><span class="n">self_cpu_time_total</span></a><span class="o">/</span><span class="mi">1000</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>original model: 381.89ms
-scripted model: 374.52ms
-scripted &amp; quantized model: 259.63ms
-scripted &amp; quantized &amp; optimized model: 254.84ms
-lite model: 241.83ms
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>original model: 320.83ms
+scripted model: 395.53ms
+scripted &amp; quantized model: 252.98ms
+scripted &amp; quantized &amp; optimized model: 241.10ms
+lite model: 230.57ms
 </pre></div>
 </div>
 <p>The results running on a Google Colab are:</p>
@@ -688,11 +680,11 @@ model.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>                                    Model Inference Time Reduction
-0                          original model       381.89ms        0%
-1                          scripted model       374.52ms     1.93%
-2              scripted &amp; quantized model       259.63ms    32.01%
-3  scripted &amp; quantized &amp; optimized model       254.84ms    33.27%
-4                              lite model       241.83ms    36.67%
+0                          original model       320.83ms        0%
+1                          scripted model       395.53ms   -23.28%
+2              scripted &amp; quantized model       252.98ms    21.15%
+3  scripted &amp; quantized &amp; optimized model       241.10ms    24.85%
+4                              lite model       230.57ms    28.13%
 
 '\n        Model                             Inference Time    Reduction\n0\toriginal model                             1236.69ms           0%\n1\tscripted model                             1226.72ms        0.81%\n2\tscripted &amp; quantized model                  593.19ms       52.03%\n3\tscripted &amp; quantized &amp; optimized model      598.01ms       51.64%\n4\tlite model                                  600.72ms       51.43%\n'
 </pre></div>
@@ -704,7 +696,7 @@ model.</p>
 <li><p><a class="reference external" href="https://github.com/pytorch/ios-demo-app/tree/master/ViT4MNIST">Vision Transformer with ImageNet and MNIST on iOS</a></p></li>
 <li><p><a class="reference external" href="https://github.com/pytorch/android-demo-app/tree/master/ViT4MNIST">Vision Transformer with ImageNet and MNIST on Android</a></p></li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  25.347 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  23.248 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-vt-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/82714b1145e891e2eba191bec427b2dd/vt_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vt_tutorial.py</span></code></a></p>
