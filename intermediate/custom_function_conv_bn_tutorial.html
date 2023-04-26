@@ -762,29 +762,29 @@ The code below is after some light modifications to the example here:
 Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
   0%|          | 0/9912422 [00:00&lt;?, ?it/s]
- 73%|#######3  | 7274496/9912422 [00:00&lt;00:00, 72673643.11it/s]
-100%|##########| 9912422/9912422 [00:00&lt;00:00, 88140902.71it/s]
+ 92%|#########1| 9076736/9912422 [00:00&lt;00:00, 90694576.07it/s]
+100%|##########| 9912422/9912422 [00:00&lt;00:00, 96221362.62it/s]
 Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
   0%|          | 0/28881 [00:00&lt;?, ?it/s]
-100%|##########| 28881/28881 [00:00&lt;00:00, 105335385.93it/s]
+100%|##########| 28881/28881 [00:00&lt;00:00, 121014679.14it/s]
 Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
   0%|          | 0/1648877 [00:00&lt;?, ?it/s]
-100%|##########| 1648877/1648877 [00:00&lt;00:00, 26722918.84it/s]
+100%|##########| 1648877/1648877 [00:00&lt;00:00, 27195797.86it/s]
 Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
   0%|          | 0/4542 [00:00&lt;?, ?it/s]
-100%|##########| 4542/4542 [00:00&lt;00:00, 28139628.90it/s]
+100%|##########| 4542/4542 [00:00&lt;00:00, 24299143.84it/s]
 Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 </pre></div>
 </div>
@@ -850,22 +850,22 @@ Train Epoch: 0 [57344/60000 (93%)]      Loss: 0.794893
 Test set: Average loss: 0.4699, Accuracy: 8564/10000 (86%)
 
 Train Epoch: 0 [0/60000 (0%)]   Loss: 2.352356
-Train Epoch: 0 [4096/60000 (7%)]        Loss: 7.323086
-Train Epoch: 0 [8192/60000 (13%)]       Loss: 4.011034
-Train Epoch: 0 [12288/60000 (20%)]      Loss: 2.065248
-Train Epoch: 0 [16384/60000 (27%)]      Loss: 2.220381
-Train Epoch: 0 [20480/60000 (33%)]      Loss: 1.890509
-Train Epoch: 0 [24576/60000 (40%)]      Loss: 1.612795
-Train Epoch: 0 [28672/60000 (47%)]      Loss: 1.696726
-Train Epoch: 0 [32768/60000 (53%)]      Loss: 1.622840
-Train Epoch: 0 [36864/60000 (60%)]      Loss: 1.212312
-Train Epoch: 0 [40960/60000 (67%)]      Loss: 1.160400
-Train Epoch: 0 [45056/60000 (73%)]      Loss: 1.020465
-Train Epoch: 0 [49152/60000 (80%)]      Loss: 0.870559
-Train Epoch: 0 [53248/60000 (87%)]      Loss: 0.877392
-Train Epoch: 0 [57344/60000 (93%)]      Loss: 0.741686
+Train Epoch: 0 [4096/60000 (7%)]        Loss: 7.323084
+Train Epoch: 0 [8192/60000 (13%)]       Loss: 4.011031
+Train Epoch: 0 [12288/60000 (20%)]      Loss: 2.065259
+Train Epoch: 0 [16384/60000 (27%)]      Loss: 2.220758
+Train Epoch: 0 [20480/60000 (33%)]      Loss: 1.881380
+Train Epoch: 0 [24576/60000 (40%)]      Loss: 1.610609
+Train Epoch: 0 [28672/60000 (47%)]      Loss: 1.692987
+Train Epoch: 0 [32768/60000 (53%)]      Loss: 1.607537
+Train Epoch: 0 [36864/60000 (60%)]      Loss: 1.208927
+Train Epoch: 0 [40960/60000 (67%)]      Loss: 1.184492
+Train Epoch: 0 [45056/60000 (73%)]      Loss: 1.006855
+Train Epoch: 0 [49152/60000 (80%)]      Loss: 0.814700
+Train Epoch: 0 [53248/60000 (87%)]      Loss: 0.867272
+Train Epoch: 0 [57344/60000 (93%)]      Loss: 0.858148
 
-Test set: Average loss: 0.5559, Accuracy: 8065/10000 (81%)
+Test set: Average loss: 0.4031, Accuracy: 8931/10000 (89%)
 
 cuDNN version: 8500
 
@@ -875,7 +875,7 @@ Memory allocated at end of forward pass:
 fused: 0.59GB, unfused: 0.96GB
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  39.278 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  38.763 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-custom-function-conv-bn-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/187aea79daf1552dd05cdde1f4b4e34d/custom_function_conv_bn_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">custom_function_conv_bn_tutorial.py</span></code></a></p>

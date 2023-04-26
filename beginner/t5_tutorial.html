@@ -453,7 +453,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 15.1MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.3MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -478,44 +478,160 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|1         | 11.5M/945M [00:00&lt;00:08, 120MB/s]
-  4%|3         | 37.7M/945M [00:00&lt;00:04, 211MB/s]
-  7%|6         | 64.2M/945M [00:00&lt;00:03, 241MB/s]
-  9%|9         | 87.2M/945M [00:00&lt;00:03, 237MB/s]
- 12%|#1        | 113M/945M [00:00&lt;00:03, 249MB/s]
- 15%|#4        | 138M/945M [00:00&lt;00:03, 253MB/s]
- 17%|#7        | 165M/945M [00:00&lt;00:03, 263MB/s]
- 20%|##        | 192M/945M [00:00&lt;00:02, 270MB/s]
- 23%|##3       | 219M/945M [00:00&lt;00:02, 274MB/s]
- 26%|##6       | 246M/945M [00:01&lt;00:02, 276MB/s]
- 29%|##8       | 272M/945M [00:01&lt;00:04, 155MB/s]
- 31%|###1      | 293M/945M [00:01&lt;00:06, 105MB/s]
- 34%|###3      | 319M/945M [00:01&lt;00:05, 130MB/s]
- 37%|###6      | 345M/945M [00:01&lt;00:04, 155MB/s]
- 39%|###9      | 372M/945M [00:02&lt;00:03, 180MB/s]
- 42%|####2     | 398M/945M [00:02&lt;00:02, 202MB/s]
- 45%|####5     | 425M/945M [00:02&lt;00:02, 222MB/s]
- 48%|####7     | 451M/945M [00:02&lt;00:02, 233MB/s]
- 50%|#####     | 477M/945M [00:02&lt;00:02, 244MB/s]
- 53%|#####3    | 503M/945M [00:02&lt;00:01, 254MB/s]
- 56%|#####6    | 530M/945M [00:02&lt;00:01, 261MB/s]
- 59%|#####8    | 557M/945M [00:02&lt;00:01, 266MB/s]
- 62%|######1   | 583M/945M [00:03&lt;00:02, 161MB/s]
- 64%|######3   | 603M/945M [00:03&lt;00:03, 115MB/s]
- 67%|######6   | 630M/945M [00:03&lt;00:02, 141MB/s]
- 70%|######9   | 657M/945M [00:03&lt;00:01, 168MB/s]
- 72%|#######2  | 681M/945M [00:03&lt;00:01, 185MB/s]
- 75%|#######4  | 704M/945M [00:03&lt;00:01, 198MB/s]
- 77%|#######6  | 726M/945M [00:03&lt;00:01, 208MB/s]
- 79%|#######9  | 749M/945M [00:04&lt;00:00, 216MB/s]
- 82%|########1 | 772M/945M [00:04&lt;00:00, 221MB/s]
- 84%|########4 | 797M/945M [00:04&lt;00:00, 233MB/s]
- 87%|########7 | 824M/945M [00:04&lt;00:00, 249MB/s]
- 90%|########9 | 849M/945M [00:04&lt;00:00, 249MB/s]
- 92%|#########2| 873M/945M [00:04&lt;00:00, 126MB/s]
- 94%|#########4| 892M/945M [00:05&lt;00:00, 115MB/s]
- 97%|#########7| 920M/945M [00:05&lt;00:00, 146MB/s]
-100%|##########| 945M/945M [00:05&lt;00:00, 187MB/s]
+  0%|          | 4.48M/945M [00:00&lt;00:21, 46.9MB/s]
+  1%|          | 8.96M/945M [00:00&lt;00:22, 43.9MB/s]
+  1%|1         | 13.6M/945M [00:00&lt;00:21, 46.1MB/s]
+  2%|2         | 19.4M/945M [00:00&lt;00:18, 51.5MB/s]
+  3%|2         | 25.0M/945M [00:00&lt;00:18, 52.8MB/s]
+  3%|3         | 31.7M/945M [00:00&lt;00:16, 58.2MB/s]
+  4%|4         | 38.1M/945M [00:00&lt;00:15, 61.1MB/s]
+  5%|4         | 44.0M/945M [00:00&lt;00:15, 61.0MB/s]
+  5%|5         | 50.6M/945M [00:00&lt;00:14, 63.5MB/s]
+  6%|5         | 56.7M/945M [00:01&lt;00:15, 61.9MB/s]
+  7%|6         | 62.6M/945M [00:01&lt;00:15, 58.6MB/s]
+  7%|7         | 69.3M/945M [00:01&lt;00:14, 61.9MB/s]
+  8%|8         | 75.6M/945M [00:01&lt;00:14, 63.2MB/s]
+  9%|8         | 81.6M/945M [00:01&lt;00:14, 62.1MB/s]
+  9%|9         | 87.6M/945M [00:01&lt;00:15, 59.1MB/s]
+ 10%|9         | 94.2M/945M [00:01&lt;00:14, 61.9MB/s]
+ 11%|#         | 101M/945M [00:01&lt;00:13, 63.3MB/s]
+ 11%|#1        | 107M/945M [00:01&lt;00:13, 63.8MB/s]
+ 12%|#2        | 114M/945M [00:01&lt;00:13, 66.7MB/s]
+ 13%|#2        | 121M/945M [00:02&lt;00:12, 68.0MB/s]
+ 13%|#3        | 127M/945M [00:02&lt;00:12, 67.9MB/s]
+ 14%|#4        | 134M/945M [00:02&lt;00:12, 66.2MB/s]
+ 15%|#4        | 141M/945M [00:02&lt;00:12, 67.4MB/s]
+ 16%|#5        | 147M/945M [00:02&lt;00:13, 62.2MB/s]
+ 16%|#6        | 153M/945M [00:02&lt;00:13, 62.2MB/s]
+ 17%|#6        | 159M/945M [00:02&lt;00:13, 59.6MB/s]
+ 17%|#7        | 165M/945M [00:02&lt;00:13, 61.1MB/s]
+ 18%|#8        | 171M/945M [00:02&lt;00:13, 61.9MB/s]
+ 19%|#8        | 177M/945M [00:03&lt;00:14, 55.9MB/s]
+ 19%|#9        | 183M/945M [00:03&lt;00:15, 52.6MB/s]
+ 20%|#9        | 188M/945M [00:03&lt;00:15, 51.5MB/s]
+ 20%|##        | 193M/945M [00:03&lt;00:15, 51.1MB/s]
+ 21%|##1       | 199M/945M [00:03&lt;00:14, 53.7MB/s]
+ 22%|##1       | 205M/945M [00:03&lt;00:13, 57.8MB/s]
+ 22%|##2       | 211M/945M [00:03&lt;00:13, 57.8MB/s]
+ 23%|##2       | 217M/945M [00:03&lt;00:13, 58.3MB/s]
+ 24%|##3       | 223M/945M [00:03&lt;00:12, 60.0MB/s]
+ 24%|##4       | 229M/945M [00:04&lt;00:12, 60.1MB/s]
+ 25%|##4       | 235M/945M [00:04&lt;00:12, 58.9MB/s]
+ 26%|##5       | 241M/945M [00:04&lt;00:12, 59.8MB/s]
+ 26%|##6       | 247M/945M [00:04&lt;00:12, 58.5MB/s]
+ 27%|##6       | 253M/945M [00:04&lt;00:13, 53.3MB/s]
+ 27%|##7       | 259M/945M [00:04&lt;00:12, 55.4MB/s]
+ 28%|##8       | 265M/945M [00:04&lt;00:12, 58.9MB/s]
+ 29%|##8       | 272M/945M [00:04&lt;00:11, 62.6MB/s]
+ 29%|##9       | 278M/945M [00:04&lt;00:11, 58.8MB/s]
+ 30%|###       | 285M/945M [00:05&lt;00:11, 61.8MB/s]
+ 31%|###       | 291M/945M [00:05&lt;00:11, 61.7MB/s]
+ 32%|###1      | 298M/945M [00:05&lt;00:10, 65.4MB/s]
+ 32%|###2      | 304M/945M [00:05&lt;00:12, 54.9MB/s]
+ 33%|###2      | 310M/945M [00:05&lt;00:12, 54.1MB/s]
+ 33%|###3      | 315M/945M [00:05&lt;00:12, 53.9MB/s]
+ 34%|###3      | 321M/945M [00:05&lt;00:11, 55.2MB/s]
+ 35%|###4      | 326M/945M [00:05&lt;00:11, 56.2MB/s]
+ 35%|###5      | 333M/945M [00:05&lt;00:10, 58.6MB/s]
+ 36%|###5      | 339M/945M [00:06&lt;00:10, 60.7MB/s]
+ 37%|###6      | 345M/945M [00:06&lt;00:10, 61.0MB/s]
+ 37%|###7      | 351M/945M [00:06&lt;00:09, 62.7MB/s]
+ 38%|###7      | 358M/945M [00:06&lt;00:09, 65.1MB/s]
+ 39%|###8      | 364M/945M [00:06&lt;00:09, 64.0MB/s]
+ 39%|###9      | 371M/945M [00:06&lt;00:09, 60.4MB/s]
+ 40%|###9      | 376M/945M [00:06&lt;00:11, 53.5MB/s]
+ 40%|####      | 382M/945M [00:06&lt;00:11, 53.1MB/s]
+ 41%|####1     | 388M/945M [00:06&lt;00:10, 55.7MB/s]
+ 42%|####1     | 393M/945M [00:06&lt;00:10, 57.0MB/s]
+ 42%|####2     | 399M/945M [00:07&lt;00:10, 56.0MB/s]
+ 43%|####2     | 406M/945M [00:07&lt;00:09, 59.8MB/s]
+ 44%|####3     | 412M/945M [00:07&lt;00:09, 60.7MB/s]
+ 44%|####4     | 417M/945M [00:07&lt;00:09, 59.5MB/s]
+ 45%|####4     | 423M/945M [00:07&lt;00:09, 59.7MB/s]
+ 45%|####5     | 429M/945M [00:07&lt;00:09, 58.4MB/s]
+ 46%|####5     | 434M/945M [00:07&lt;00:10, 52.5MB/s]
+ 47%|####6     | 441M/945M [00:07&lt;00:09, 56.8MB/s]
+ 47%|####7     | 447M/945M [00:07&lt;00:08, 58.3MB/s]
+ 48%|####8     | 454M/945M [00:08&lt;00:08, 61.5MB/s]
+ 49%|####8     | 460M/945M [00:08&lt;00:08, 60.3MB/s]
+ 49%|####9     | 466M/945M [00:08&lt;00:08, 61.3MB/s]
+ 50%|####9     | 472M/945M [00:08&lt;00:09, 53.8MB/s]
+ 51%|#####     | 478M/945M [00:08&lt;00:08, 55.6MB/s]
+ 51%|#####1    | 484M/945M [00:08&lt;00:08, 57.7MB/s]
+ 52%|#####1    | 489M/945M [00:08&lt;00:08, 57.7MB/s]
+ 52%|#####2    | 496M/945M [00:08&lt;00:07, 60.0MB/s]
+ 53%|#####3    | 502M/945M [00:08&lt;00:07, 62.3MB/s]
+ 54%|#####3    | 509M/945M [00:09&lt;00:07, 62.8MB/s]
+ 55%|#####4    | 516M/945M [00:09&lt;00:06, 66.4MB/s]
+ 55%|#####5    | 523M/945M [00:09&lt;00:06, 66.9MB/s]
+ 56%|#####6    | 529M/945M [00:09&lt;00:06, 65.9MB/s]
+ 57%|#####6    | 535M/945M [00:09&lt;00:06, 62.0MB/s]
+ 57%|#####7    | 542M/945M [00:09&lt;00:06, 63.7MB/s]
+ 58%|#####8    | 549M/945M [00:09&lt;00:06, 65.9MB/s]
+ 59%|#####8    | 555M/945M [00:09&lt;00:06, 66.4MB/s]
+ 59%|#####9    | 562M/945M [00:09&lt;00:06, 65.2MB/s]
+ 60%|######    | 569M/945M [00:09&lt;00:05, 68.3MB/s]
+ 61%|######    | 575M/945M [00:10&lt;00:05, 65.4MB/s]
+ 62%|######1   | 582M/945M [00:10&lt;00:05, 66.1MB/s]
+ 62%|######2   | 588M/945M [00:10&lt;00:05, 66.7MB/s]
+ 63%|######2   | 595M/945M [00:10&lt;00:05, 63.1MB/s]
+ 64%|######3   | 601M/945M [00:10&lt;00:05, 64.9MB/s]
+ 64%|######4   | 608M/945M [00:10&lt;00:05, 64.4MB/s]
+ 65%|######5   | 614M/945M [00:10&lt;00:05, 65.4MB/s]
+ 66%|######5   | 621M/945M [00:10&lt;00:05, 59.5MB/s]
+ 66%|######6   | 626M/945M [00:10&lt;00:06, 53.6MB/s]
+ 67%|######6   | 632M/945M [00:11&lt;00:06, 52.0MB/s]
+ 68%|######7   | 638M/945M [00:11&lt;00:05, 56.0MB/s]
+ 68%|######8   | 644M/945M [00:11&lt;00:05, 57.8MB/s]
+ 69%|######8   | 650M/945M [00:11&lt;00:05, 55.8MB/s]
+ 69%|######9   | 656M/945M [00:11&lt;00:05, 58.4MB/s]
+ 70%|#######   | 662M/945M [00:11&lt;00:05, 57.8MB/s]
+ 71%|#######   | 667M/945M [00:11&lt;00:04, 58.4MB/s]
+ 71%|#######1  | 673M/945M [00:11&lt;00:05, 56.8MB/s]
+ 72%|#######1  | 679M/945M [00:11&lt;00:04, 58.2MB/s]
+ 73%|#######2  | 685M/945M [00:12&lt;00:04, 60.3MB/s]
+ 73%|#######3  | 692M/945M [00:12&lt;00:04, 62.2MB/s]
+ 74%|#######3  | 697M/945M [00:12&lt;00:04, 61.3MB/s]
+ 74%|#######4  | 703M/945M [00:12&lt;00:04, 60.1MB/s]
+ 75%|#######5  | 709M/945M [00:12&lt;00:04, 55.9MB/s]
+ 76%|#######5  | 714M/945M [00:12&lt;00:04, 49.3MB/s]
+ 76%|#######6  | 721M/945M [00:12&lt;00:04, 53.2MB/s]
+ 77%|#######6  | 726M/945M [00:12&lt;00:04, 53.4MB/s]
+ 78%|#######7  | 733M/945M [00:12&lt;00:03, 57.9MB/s]
+ 78%|#######8  | 739M/945M [00:13&lt;00:03, 61.9MB/s]
+ 79%|#######9  | 747M/945M [00:13&lt;00:03, 65.8MB/s]
+ 80%|#######9  | 753M/945M [00:13&lt;00:03, 64.3MB/s]
+ 80%|########  | 759M/945M [00:13&lt;00:02, 65.2MB/s]
+ 81%|########1 | 766M/945M [00:13&lt;00:02, 64.1MB/s]
+ 82%|########1 | 772M/945M [00:13&lt;00:02, 64.2MB/s]
+ 82%|########2 | 778M/945M [00:13&lt;00:03, 48.7MB/s]
+ 83%|########2 | 783M/945M [00:13&lt;00:03, 48.7MB/s]
+ 83%|########3 | 788M/945M [00:13&lt;00:03, 48.5MB/s]
+ 84%|########3 | 793M/945M [00:14&lt;00:03, 48.3MB/s]
+ 85%|########4 | 799M/945M [00:14&lt;00:03, 50.5MB/s]
+ 85%|########5 | 804M/945M [00:14&lt;00:02, 52.8MB/s]
+ 86%|########5 | 810M/945M [00:14&lt;00:02, 54.3MB/s]
+ 86%|########6 | 815M/945M [00:14&lt;00:02, 53.9MB/s]
+ 87%|########6 | 822M/945M [00:14&lt;00:02, 58.0MB/s]
+ 88%|########7 | 827M/945M [00:14&lt;00:03, 37.8MB/s]
+ 88%|########8 | 836M/945M [00:14&lt;00:02, 48.1MB/s]
+ 89%|########9 | 841M/945M [00:15&lt;00:02, 50.9MB/s]
+ 90%|########9 | 848M/945M [00:15&lt;00:01, 55.9MB/s]
+ 91%|######### | 855M/945M [00:15&lt;00:01, 60.2MB/s]
+ 91%|#########1| 862M/945M [00:15&lt;00:01, 63.5MB/s]
+ 92%|#########1| 869M/945M [00:15&lt;00:01, 65.4MB/s]
+ 93%|#########2| 875M/945M [00:15&lt;00:01, 66.2MB/s]
+ 93%|#########3| 882M/945M [00:15&lt;00:00, 67.8MB/s]
+ 94%|#########4| 889M/945M [00:15&lt;00:00, 66.2MB/s]
+ 95%|#########4| 895M/945M [00:15&lt;00:00, 63.0MB/s]
+ 95%|#########5| 902M/945M [00:16&lt;00:00, 64.8MB/s]
+ 96%|#########6| 909M/945M [00:16&lt;00:00, 67.1MB/s]
+ 97%|#########6| 916M/945M [00:16&lt;00:00, 68.2MB/s]
+ 98%|#########7| 922M/945M [00:16&lt;00:00, 67.0MB/s]
+ 98%|#########8| 928M/945M [00:16&lt;00:00, 64.3MB/s]
+ 99%|#########9| 936M/945M [00:16&lt;00:00, 66.8MB/s]
+100%|#########9| 942M/945M [00:16&lt;00:00, 66.8MB/s]
+100%|##########| 945M/945M [00:16&lt;00:00, 59.4MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -727,37 +843,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: stall-holder Tania Rahman, 27, was asked if she wanted to run a stand . but when she asked to be counted in she was told it was not 'English-themed' . she was sent a letter from council saying it 'only wanted english food' council has since apologised and invited her to run a stand on the day .
+prediction: the 42-year-old mother-of-three from Mississippi has officiated college games as a line judge . she was on the NFL's list of officiating prospects and is set to be named as one of eight new officials for the 2015 season .
 
-target: Stall-owner Tania Rahman, 27, was invited to take part in the celebrations . But then Salisbury Council told her food wasn't English enough for event . She called move 'discriminatory' and said St George was born in Palestine . And locals were also left furious forcing council to do embarasing U-turn .
+target: Thomas set to be named as one of eight new referees for the 2015 season . The married mother-of-three has regularly officiated college games . Thomas was the first woman to officiate an NCAA game  in 2007 . She has also spent time in the NFL's developmental program for officials .
 
 
 Example 2:
 
-prediction: a trainee corrections officer 'waded in and fired off his shotgun four times in a row' the blasts killed Carlos Manuel Perez Jr, 28, and left Andrew Jay Arevalo, 24, with wounds to his face . the two were supposed to be kept apart in the prison's corridors . the lawsuit claims the guards knew a fight would be inevitable if they let the two prisoners encounter one another .
+prediction: qpr boss has lost six out of seven games in charge of the club . he will be given an instant route back into football if he leaves in the summer . he also wishes he had striker Darren Bent at his disposal .
 
-target: Carlos Manuel Perez, 28, allegedly made to fight Andrew Jay Arevalo, 24 . Fight happened at High Desert State Prison in Indian Springs in November . Perez was shot dead by corrections officer; Arevalo survived with wounds . Attorney has claimed officers staged the fight between the two . Filed lawsuit for large amount of damages in Nevada state court .
+target: Tim Sherwood has a close relationship with QPR manager Chris Ramsey . Sherwood could ask Ramsey to join him at Villa if he departs QPR . Sherwood also revealed his wish for Darren Bent to be at Villa Park .
 
 
 Example 3:
 
-prediction: researchers say antibiotics may be fattening our children . third of 10-11 year olds and a fifth of 4-5 year olds in england are overweight . by two years-old, one in five boys and one in ten girls was overweight . repeat prescriptions before age of two also raised odds of being fat .
+prediction: brothers Marc and Shanon Parker have designed and built a fleet of movie-inspired vehicles . a lifelike Batman's Tumbler and a Ghostbusters' Cadillac are among their creations . the brothers have even made an Optimus Prime truck and a motorbike .
 
-target: Researchers claimed antibiotics could be  contributing to 'obesity epidemic' Their large-scale study was published in the respected Pediatrics journal . It found one third of 10 to 11-year-olds in England are overweight or obese . Children who took antibiotics as babies were more likely to be overweight .
+target: Duo started out by making versions of famous vehicles they loved . Celebrities and wealthy film fans are flocking to buy the pair's creations . The fleet includes a Transformers-style truck and 'Tron' motorbike .
 
 
 Example 4:
 
-prediction: employees in the US, UK, Australia, Canada, China, France, Germany, Hong Kong and Japan will be eligible for a 50% discount . this includes the standard model and the sport model . prices for the Sport model start at $349 in the us and £299 in the uk . the stainless steel Watch starts at $549 (£479) and the watch goes on sale on 24 April .
+prediction: the change.org petition has received 50,627 signatures since it was launched . it is titled 'Please release Nadia the baby elephant to a sanctuary immediately' the elephants are ridden by tourists and sanctuaries across Thailand . they are bought at a very young age by private contractors .
 
-target: The plans were revealed in a leaked memo from Apple boss Tim Cook . He thanked staff for their help and offered employees a 50% discount . This discount applies from Friday and will last for 90 days . Apple staff already receive discounts on all products at around 30% .
+target: Shocking photo of baby elephant tied to a pole spark online campaign . More than 50,000 have signed petition to have baby elephant, Nadia, freed . Marina Phuket Resort reportedly keeps elephant in tiny enclosure . 'Nadia' is also forced to perform tricks and is ridden by resort guests . 'It is absolutely barbaric,' says Jaime Singleton, who started campaign . Comes after Phuket resort posted pictures of baby elephant near pool . Party-goers snapped dancing with elephant, and one person seen riding it .
 
 
 Example 5:
 
-prediction: a professional florist can help you keep your flowers fresh for a week . but there are tricks you can use to prolong the life of your flowers . from cutting them in hairspray to keeping them away from fruit, you can do it all .
+prediction: the church paid a father-son team of detectives $10,000 a week to track Ron Miscavige's every move, review his electronic correspondence and eavesdrop on his conversations . the claims come just weeks after the premiere of the explosive HBO documentary going clear . former members of the church accused the church of systemic harassment, abuse and blackmail .
 
-target: Spring is the perfect time to fill your home with seasonal flowers . We've gathered a list of simple, unlikely tips to help them last . Include spraying them in hairspray and keeping them far away from fruit .
+target: Wisconsin police arrested private investigator Dwayne Powell in 2013 who claimed he was hired by Church of Scientology to spy on Ron Miscavige . David Miscavige's 79-year-old father had left the church a couple of years ago . Powell reportedly told police his job was to track Miscavige's movements, read his emails and listen in on his conversations . David Miscavige allegedly prohibited the private investigator from helping his father during a medical emergency . Church of Scientology and David Miscavige's attorneys vehemently denied Powell's claims .
 </pre></div>
 </div>
 </div>
@@ -1050,7 +1166,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  15.167 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  4.769 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
