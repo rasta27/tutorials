@@ -490,6 +490,8 @@ initialization</a></p></li>
 initializes the distributed process group.</p></li>
 <li><p>Read more about <a class="reference external" href="https://pytorch.org/docs/stable/distributed.html#which-backend-to-use">choosing a DDP
 backend</a></p></li>
+<li><p><a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.cuda.set_device.html?highlight=set_device#torch.cuda.set_device">set_device</a>
+sets the default GPU for each process. This is important to prevent hangs or excessive memory utilization on <cite>GPU:0</cite></p></li>
 </ul>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gi">+ def ddp_setup(rank: int, world_size: int):</span>
 <span class="gi">+   """</span>
@@ -500,6 +502,7 @@ backend</a></p></li>
 <span class="gi">+   os.environ["MASTER_ADDR"] = "localhost"</span>
 <span class="gi">+   os.environ["MASTER_PORT"] = "12355"</span>
 <span class="gi">+   init_process_group(backend="nccl", rank=rank, world_size=world_size)</span>
+<span class="gi">+   torch.cuda.set_device(rank)</span>
 </pre></div>
 </div>
 </div>

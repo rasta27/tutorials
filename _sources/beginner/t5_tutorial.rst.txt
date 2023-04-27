@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 16.4MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.0MB/s]
 
 
 
@@ -135,56 +135,143 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.03M/945M [00:00<00:13, 73.7MB/s]
-      2%|2         | 22.0M/945M [00:00<00:07, 122MB/s] 
-      4%|4         | 40.3M/945M [00:00<00:06, 154MB/s]
-      6%|6         | 59.7M/945M [00:00<00:05, 173MB/s]
-      8%|8         | 78.4M/945M [00:00<00:05, 181MB/s]
-     10%|#         | 97.9M/945M [00:00<00:04, 189MB/s]
-     12%|#2        | 118M/945M [00:00<00:04, 195MB/s] 
-     15%|#4        | 142M/945M [00:00<00:03, 212MB/s]
-     18%|#7        | 166M/945M [00:00<00:03, 227MB/s]
-     20%|##        | 191M/945M [00:01<00:03, 236MB/s]
-     23%|##2       | 213M/945M [00:01<00:05, 138MB/s]
-     24%|##4       | 231M/945M [00:01<00:05, 145MB/s]
-     26%|##6       | 248M/945M [00:01<00:07, 92.6MB/s]
-     28%|##7       | 264M/945M [00:01<00:06, 103MB/s] 
-     30%|##9       | 282M/945M [00:02<00:05, 120MB/s]
-     32%|###2      | 305M/945M [00:02<00:04, 145MB/s]
-     34%|###4      | 323M/945M [00:02<00:04, 145MB/s]
-     36%|###5      | 340M/945M [00:02<00:04, 153MB/s]
-     38%|###7      | 356M/945M [00:02<00:04, 152MB/s]
-     39%|###9      | 373M/945M [00:02<00:03, 157MB/s]
-     41%|####1     | 389M/945M [00:02<00:03, 160MB/s]
-     43%|####3     | 410M/945M [00:02<00:03, 176MB/s]
-     46%|####5     | 431M/945M [00:02<00:02, 188MB/s]
-     48%|####7     | 449M/945M [00:03<00:05, 90.7MB/s]
-     49%|####9     | 464M/945M [00:03<00:05, 93.9MB/s]
-     50%|#####     | 476M/945M [00:03<00:06, 79.3MB/s]
-     52%|#####1    | 487M/945M [00:03<00:05, 83.9MB/s]
-     54%|#####3    | 506M/945M [00:03<00:04, 106MB/s] 
-     56%|#####6    | 529M/945M [00:04<00:03, 136MB/s]
-     58%|#####8    | 552M/945M [00:04<00:02, 161MB/s]
-     60%|######    | 571M/945M [00:04<00:02, 159MB/s]
-     63%|######2   | 594M/945M [00:04<00:02, 182MB/s]
-     65%|######4   | 613M/945M [00:04<00:01, 186MB/s]
-     67%|######7   | 635M/945M [00:04<00:01, 195MB/s]
-     69%|######9   | 656M/945M [00:04<00:01, 205MB/s]
-     72%|#######1  | 677M/945M [00:04<00:01, 205MB/s]
-     74%|#######3  | 697M/945M [00:04<00:01, 166MB/s]
-     76%|#######5  | 714M/945M [00:05<00:03, 70.4MB/s]
-     77%|#######6  | 727M/945M [00:05<00:02, 76.8MB/s]
-     79%|#######9  | 748M/945M [00:05<00:02, 98.0MB/s]
-     82%|########1 | 772M/945M [00:05<00:01, 125MB/s] 
-     84%|########3 | 793M/945M [00:06<00:01, 146MB/s]
-     86%|########6 | 814M/945M [00:06<00:00, 161MB/s]
-     88%|########8 | 834M/945M [00:06<00:00, 174MB/s]
-     90%|######### | 854M/945M [00:06<00:00, 183MB/s]
-     93%|#########2| 877M/945M [00:06<00:00, 199MB/s]
-     95%|#########5| 900M/945M [00:06<00:00, 210MB/s]
-     98%|#########7| 922M/945M [00:06<00:00, 218MB/s]
-    100%|#########9| 944M/945M [00:06<00:00, 142MB/s]
-    100%|##########| 945M/945M [00:06<00:00, 142MB/s]
+      0%|          | 4.70M/945M [00:00<00:20, 48.2MB/s]
+      1%|1         | 11.1M/945M [00:00<00:16, 59.3MB/s]
+      2%|1         | 17.0M/945M [00:00<00:16, 60.6MB/s]
+      3%|2         | 24.0M/945M [00:00<00:14, 65.2MB/s]
+      3%|3         | 31.4M/945M [00:00<00:13, 69.5MB/s]
+      4%|4         | 38.0M/945M [00:00<00:15, 61.0MB/s]
+      5%|4         | 45.9M/945M [00:00<00:13, 67.3MB/s]
+      6%|5         | 52.5M/945M [00:00<00:13, 68.1MB/s]
+      6%|6         | 59.2M/945M [00:00<00:13, 68.7MB/s]
+      7%|6         | 65.9M/945M [00:01<00:14, 64.8MB/s]
+      8%|7         | 73.6M/945M [00:01<00:13, 69.5MB/s]
+      9%|8         | 81.5M/945M [00:01<00:12, 73.0MB/s]
+      9%|9         | 88.7M/945M [00:01<00:12, 73.9MB/s]
+     10%|#         | 95.9M/945M [00:01<00:12, 72.7MB/s]
+     11%|#         | 103M/945M [00:01<00:12, 72.6MB/s] 
+     12%|#1        | 110M/945M [00:01<00:12, 67.7MB/s]
+     12%|#2        | 116M/945M [00:01<00:13, 66.5MB/s]
+     13%|#3        | 123M/945M [00:01<00:12, 68.3MB/s]
+     14%|#3        | 130M/945M [00:02<00:13, 62.9MB/s]
+     14%|#4        | 137M/945M [00:02<00:12, 66.0MB/s]
+     15%|#5        | 144M/945M [00:02<00:12, 69.6MB/s]
+     16%|#6        | 152M/945M [00:02<00:11, 70.9MB/s]
+     17%|#6        | 159M/945M [00:02<00:11, 72.9MB/s]
+     18%|#7        | 166M/945M [00:02<00:11, 73.3MB/s]
+     18%|#8        | 173M/945M [00:02<00:11, 70.4MB/s]
+     19%|#9        | 180M/945M [00:02<00:11, 68.0MB/s]
+     20%|#9        | 186M/945M [00:02<00:12, 63.8MB/s]
+     20%|##        | 193M/945M [00:02<00:12, 63.8MB/s]
+     21%|##1       | 200M/945M [00:03<00:11, 67.6MB/s]
+     22%|##1       | 207M/945M [00:03<00:11, 68.8MB/s]
+     23%|##2       | 213M/945M [00:03<00:11, 68.8MB/s]
+     23%|##3       | 221M/945M [00:03<00:10, 72.5MB/s]
+     24%|##4       | 228M/945M [00:03<00:10, 70.3MB/s]
+     25%|##4       | 235M/945M [00:03<00:10, 68.9MB/s]
+     26%|##5       | 242M/945M [00:03<00:10, 69.5MB/s]
+     26%|##6       | 248M/945M [00:03<00:10, 68.8MB/s]
+     27%|##6       | 255M/945M [00:03<00:11, 64.5MB/s]
+     28%|##7       | 262M/945M [00:04<00:10, 67.7MB/s]
+     28%|##8       | 269M/945M [00:04<00:10, 68.6MB/s]
+     29%|##9       | 276M/945M [00:04<00:11, 61.1MB/s]
+     30%|##9       | 282M/945M [00:04<00:11, 60.2MB/s]
+     30%|###       | 287M/945M [00:04<00:11, 57.7MB/s]
+     31%|###1      | 294M/945M [00:04<00:11, 59.6MB/s]
+     32%|###1      | 300M/945M [00:04<00:10, 62.7MB/s]
+     32%|###2      | 306M/945M [00:04<00:10, 61.5MB/s]
+     33%|###3      | 312M/945M [00:04<00:10, 61.7MB/s]
+     34%|###3      | 319M/945M [00:05<00:10, 64.9MB/s]
+     34%|###4      | 326M/945M [00:05<00:09, 65.1MB/s]
+     35%|###5      | 333M/945M [00:05<00:09, 68.0MB/s]
+     36%|###6      | 340M/945M [00:05<00:08, 70.9MB/s]
+     37%|###6      | 347M/945M [00:05<00:08, 71.8MB/s]
+     37%|###7      | 354M/945M [00:05<00:08, 69.6MB/s]
+     38%|###8      | 362M/945M [00:05<00:08, 71.9MB/s]
+     39%|###9      | 368M/945M [00:05<00:08, 71.5MB/s]
+     40%|###9      | 375M/945M [00:05<00:08, 70.7MB/s]
+     40%|####      | 382M/945M [00:05<00:08, 70.9MB/s]
+     41%|####1     | 389M/945M [00:06<00:08, 67.9MB/s]
+     42%|####1     | 396M/945M [00:06<00:08, 68.8MB/s]
+     43%|####2     | 402M/945M [00:06<00:08, 64.7MB/s]
+     43%|####3     | 409M/945M [00:06<00:08, 66.5MB/s]
+     44%|####3     | 415M/945M [00:06<00:08, 66.2MB/s]
+     45%|####4     | 422M/945M [00:06<00:08, 66.1MB/s]
+     45%|####5     | 429M/945M [00:06<00:08, 66.8MB/s]
+     46%|####6     | 435M/945M [00:06<00:08, 65.7MB/s]
+     47%|####6     | 441M/945M [00:06<00:08, 64.8MB/s]
+     48%|####7     | 449M/945M [00:06<00:07, 69.0MB/s]
+     48%|####8     | 455M/945M [00:07<00:07, 68.1MB/s]
+     49%|####8     | 463M/945M [00:07<00:07, 70.5MB/s]
+     50%|####9     | 470M/945M [00:07<00:07, 70.9MB/s]
+     50%|#####     | 476M/945M [00:07<00:07, 67.9MB/s]
+     51%|#####1    | 483M/945M [00:07<00:07, 68.9MB/s]
+     52%|#####1    | 490M/945M [00:07<00:07, 66.5MB/s]
+     53%|#####2    | 497M/945M [00:07<00:06, 68.3MB/s]
+     53%|#####3    | 503M/945M [00:07<00:07, 61.9MB/s]
+     54%|#####4    | 510M/945M [00:07<00:07, 64.6MB/s]
+     55%|#####4    | 517M/945M [00:08<00:06, 66.1MB/s]
+     55%|#####5    | 523M/945M [00:08<00:06, 65.9MB/s]
+     56%|#####6    | 530M/945M [00:08<00:06, 65.9MB/s]
+     57%|#####6    | 536M/945M [00:08<00:06, 66.0MB/s]
+     57%|#####7    | 543M/945M [00:08<00:06, 67.8MB/s]
+     58%|#####8    | 551M/945M [00:08<00:05, 72.1MB/s]
+     59%|#####9    | 558M/945M [00:08<00:05, 72.3MB/s]
+     60%|#####9    | 565M/945M [00:08<00:05, 72.5MB/s]
+     61%|######    | 572M/945M [00:08<00:05, 71.2MB/s]
+     61%|######1   | 580M/945M [00:08<00:05, 75.3MB/s]
+     62%|######2   | 587M/945M [00:09<00:04, 75.1MB/s]
+     63%|######2   | 594M/945M [00:09<00:05, 71.0MB/s]
+     64%|######3   | 602M/945M [00:09<00:04, 74.3MB/s]
+     64%|######4   | 609M/945M [00:09<00:05, 63.7MB/s]
+     65%|######5   | 616M/945M [00:09<00:05, 67.2MB/s]
+     66%|######5   | 623M/945M [00:09<00:05, 67.2MB/s]
+     67%|######6   | 630M/945M [00:09<00:04, 69.1MB/s]
+     67%|######7   | 638M/945M [00:09<00:04, 71.2MB/s]
+     68%|######8   | 644M/945M [00:09<00:04, 68.4MB/s]
+     69%|######8   | 651M/945M [00:10<00:04, 62.1MB/s]
+     70%|######9   | 657M/945M [00:10<00:04, 61.1MB/s]
+     70%|#######   | 664M/945M [00:10<00:04, 63.0MB/s]
+     71%|#######   | 670M/945M [00:10<00:04, 65.5MB/s]
+     72%|#######1  | 678M/945M [00:10<00:03, 70.2MB/s]
+     73%|#######2  | 685M/945M [00:10<00:04, 67.4MB/s]
+     73%|#######3  | 692M/945M [00:10<00:03, 67.5MB/s]
+     74%|#######3  | 698M/945M [00:10<00:04, 54.3MB/s]
+     75%|#######4  | 704M/945M [00:11<00:04, 56.1MB/s]
+     75%|#######5  | 712M/945M [00:11<00:03, 62.6MB/s]
+     76%|#######6  | 719M/945M [00:11<00:03, 66.1MB/s]
+     77%|#######6  | 726M/945M [00:11<00:03, 69.8MB/s]
+     78%|#######7  | 734M/945M [00:11<00:03, 72.9MB/s]
+     78%|#######8  | 741M/945M [00:11<00:03, 61.2MB/s]
+     79%|#######9  | 748M/945M [00:11<00:03, 61.6MB/s]
+     80%|#######9  | 754M/945M [00:11<00:03, 62.2MB/s]
+     81%|########  | 761M/945M [00:11<00:02, 67.2MB/s]
+     81%|########1 | 768M/945M [00:12<00:02, 62.5MB/s]
+     82%|########2 | 775M/945M [00:12<00:02, 65.2MB/s]
+     83%|########2 | 782M/945M [00:12<00:02, 67.5MB/s]
+     83%|########3 | 789M/945M [00:12<00:02, 68.1MB/s]
+     84%|########4 | 795M/945M [00:12<00:02, 68.4MB/s]
+     85%|########4 | 802M/945M [00:12<00:02, 69.6MB/s]
+     86%|########5 | 809M/945M [00:12<00:02, 69.7MB/s]
+     86%|########6 | 815M/945M [00:12<00:02, 46.6MB/s]
+     87%|########7 | 825M/945M [00:13<00:02, 58.5MB/s]
+     88%|########8 | 833M/945M [00:13<00:01, 63.4MB/s]
+     89%|########8 | 840M/945M [00:13<00:01, 67.4MB/s]
+     90%|########9 | 847M/945M [00:13<00:01, 67.5MB/s]
+     90%|######### | 854M/945M [00:13<00:01, 65.7MB/s]
+     91%|#########1| 862M/945M [00:13<00:01, 69.6MB/s]
+     92%|#########2| 869M/945M [00:13<00:01, 71.6MB/s]
+     93%|#########2| 876M/945M [00:13<00:01, 66.7MB/s]
+     94%|#########3| 884M/945M [00:13<00:00, 70.2MB/s]
+     94%|#########4| 892M/945M [00:13<00:00, 73.9MB/s]
+     95%|#########5| 899M/945M [00:14<00:00, 72.1MB/s]
+     96%|#########5| 906M/945M [00:14<00:00, 71.1MB/s]
+     97%|#########6| 913M/945M [00:14<00:00, 65.3MB/s]
+     97%|#########7| 921M/945M [00:14<00:00, 69.6MB/s]
+     98%|#########8| 929M/945M [00:14<00:00, 73.5MB/s]
+     99%|#########9| 936M/945M [00:14<00:00, 72.0MB/s]
+    100%|#########9| 943M/945M [00:14<00:00, 69.0MB/s]
+    100%|##########| 945M/945M [00:14<00:00, 67.0MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -480,37 +567,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: gang member 'loved living the high life' and gambling with money he made . officers seized £4million worth of heroin and cocaine in raid of 'stash house' in north west london . also found stacks of money, counterfeit identity documents and equipment . beheluli, 24, jailed alongside fellow gang members for a total of 31 years .
+    prediction: clare verrall was walking her french bulldog Dutchy when a man jumped out from behind some bins . she was left with a broken nose, black eye and broken toe . she kneed the man in the groin and kicked him before fleeing . she said she didn't believe she would have been able to fight off her attacker had she not learned self-defence .
 
-    target: Olsi Beheluli posted picture of himself with £250,000 in cash on Twitter . The 24-year-old was part of a gang found with £4million in Class A drugs . Police said he enjoyed 'living the high life' with cash made from his crimes . Beheluli claimed he appeared on Channel 4 dating show My Little Princess .
+    target: Clare Verrall was randomly attacked while walking her dog on Wednesday . The Melbourne woman was just streets from her Prahan home . She suffered a black eye, broken nose, broken toe, and other injuries . Ms Verrall managed to get away by kneeing her attacker in the groin . She credits the kickboxing and self-defence classes for her escape .
 
 
     Example 2:
 
-    prediction: a judge ordered a teen to be held in custody of the state in december . she ran away from the hospital in an effort to discontinue chemo . she was diagnosed with hodgkin's lymphoma in september .
+    prediction: 'i'm getting bored by Newcastle,' says carragher . carragher says he's alarmed at the state the club are in . 'i've had it at my own club Liverpool with George Gillett and Tom Hicks and it's the same at Newcastle' .
 
-    target: Teen allowed to return home now that her chemotherapy is complete . 'Cassandra' was diagnosed with Hodgkin's lymphoma in September . Teen was in temporary custody of the Connecticut Department of Children and Families .
+    target: Jamie Carragher has slammed Newcastle United owner Mike Ashley . The Sportsmail columnist called the club 'boring' saying Ashley just wants to make money while in charge . Carragher says he understands the fans frustration at how club is run . CLICK HERE for all the latest Newcastle United news .
 
 
     Example 3:
 
-    prediction: General Motors has unveiled the Chevrolet-FNR car . it has 'dragonfly' swing doors that open upwards and 'crystal laser headlights' the car was unveiled at the Shanghai general motors gala night this week . it was developed in Shanghai by GM’s Pan Asia Technical Automotive Centre . Chevrolet said the car offered a ‘glimpse at mobility of the future’ .
+    prediction: researchers developed a model that combined long-term fisheries data with climate model projections from the Met Office . from this they predicted the abundance and distribution of popular fish, such as haddock and plaice, could fall as the North Sea warms . this could see prices of these fish soar or see them being taken off the menu completely .
 
-    target: General Motors unveiled their concept car at an event in Shanghai . Chevrolet-FNR has 'dragonfly' swing doors and 'crystal laser headlights' It is self-driving, electric, and the front chairs can swivel round . And using iris recognition software you can start it using just your eyes .
+    target: Researchers developed a model that combined long-term fisheries data with climate model projections from the Met Office . As the North Sea warms the number of popular species is likely to fall . The prices of these staple fish could also rise as they become more rare . John dory and red mullet may replace haddock, plaice and lemon sole .
 
 
     Example 4:
 
-    prediction: actor, 89, is selling off more than 200 items he has collected over his career . he is selling a 3d model of the battle of Agincourt and a longbow . he is also selling paintings, furniture, swords, flintlock rifles and silverware .
+    prediction: ECB's head of selectors looks set to end when new director of cricket is appointed . he will be in overall charge of selection, leading to the end of his stint . a letter regarding the end of allardyce's tenure at blackburn does the rounds .
 
-    target: Robert Hardy, 89, is a military enthusiast who studied English literature under J.R.R. Tolkien . He is selling off a huge collection of books, artwork and furniture . Among the objects which have gone up for auction are a huge 3D diorama of the Battle of Agincourt .
+    target: James Whitaker's brief reign as ECB head of selectors is coming to an end . Sam Allardyce's future as West Ham boss is subject to speculation at a time when a letter sent by Venky's lawyers is doing the rounds . The letter, from December 2011, makes numerous disputed claims about Kentaro's involvement in Blackburn after Venky's bought the club . The FA Cup is set to be rebranded as the Emirates FA Cup .
 
 
     Example 5:
 
-    prediction: reigning f1 champion Lewis Hamilton takes pole for the Shanghai international circuit . the 30-year-old finished just 0.042secs ahead of his team-mate Nico Rosberg . the briton now has a record 41 poles to his name at the track .
+    prediction: Jessica Carey surprised her grandmother with a portrait of her grandmother . she had the tattooed on her forearm and it was captured on camera . the video was captured in february but the priceless reaction is now online .
 
-    target: Lewis Hamilton claimed his third straight pole position of the season . Nico Rosberg was just 0.042secs slower than his Mercedes team-mate . German says: 'Oh, come on, guys,' when told he is slower than Hamilton . Sebastian Vettel will start third for Ferrari with Felipe Massa fourth . McLaren endured another difficult day with Jenson Button and Fernando Alonso only 17th and 18th on the grid for Sunday's race .
+    target: Jessica Carey had her grandmother's portrait tattooed on her forearm . She then drove almost four hours to surprise her grandmother with it . Her grandmother Patty Lawing's priceless reaction is captured on film .
 
 
 
@@ -864,7 +951,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  9.104 seconds)
+   **Total running time of the script:** ( 4 minutes  17.857 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

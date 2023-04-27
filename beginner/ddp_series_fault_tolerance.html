@@ -513,6 +513,7 @@ variables</a></p></li>
 <span class="gd">-     os.environ["MASTER_PORT"] = "12355"</span>
 <span class="gd">-     init_process_group(backend="nccl", rank=rank, world_size=world_size)</span>
 <span class="gi">+     init_process_group(backend="nccl")</span>
+<span class="w"> </span>     torch.cuda.set_device(int(os.environ["LOCAL_RANK"]))
 </pre></div>
 </div>
 </div>

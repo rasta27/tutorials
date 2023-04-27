@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['il est en train de dessiner une pomme .', 'he s sketching an apple .']
+    ['il est plein d ambition .', 'he is full of ambition .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 20s (- 18m 53s) (5000 6%) 2.8433
-    2m 36s (- 16m 54s) (10000 13%) 2.2825
-    3m 51s (- 15m 27s) (15000 20%) 1.9696
-    5m 7s (- 14m 5s) (20000 26%) 1.7312
-    6m 23s (- 12m 47s) (25000 33%) 1.5338
-    7m 39s (- 11m 29s) (30000 40%) 1.3460
-    8m 56s (- 10m 12s) (35000 46%) 1.2288
-    10m 12s (- 8m 55s) (40000 53%) 1.1127
-    11m 28s (- 7m 39s) (45000 60%) 0.9926
-    12m 45s (- 6m 22s) (50000 66%) 0.9164
-    14m 4s (- 5m 7s) (55000 73%) 0.8233
-    15m 22s (- 3m 50s) (60000 80%) 0.7429
-    16m 38s (- 2m 33s) (65000 86%) 0.6939
-    17m 55s (- 1m 16s) (70000 93%) 0.6380
-    19m 12s (- 0m 0s) (75000 100%) 0.5916
+    1m 21s (- 19m 2s) (5000 6%) 2.8403
+    2m 38s (- 17m 9s) (10000 13%) 2.2633
+    3m 55s (- 15m 43s) (15000 20%) 1.9491
+    5m 13s (- 14m 21s) (20000 26%) 1.7185
+    6m 31s (- 13m 2s) (25000 33%) 1.5258
+    7m 48s (- 11m 43s) (30000 40%) 1.3647
+    9m 6s (- 10m 24s) (35000 46%) 1.1688
+    10m 24s (- 9m 6s) (40000 53%) 1.1023
+    11m 42s (- 7m 48s) (45000 60%) 0.9926
+    13m 0s (- 6m 30s) (50000 66%) 0.9069
+    14m 17s (- 5m 11s) (55000 73%) 0.8090
+    15m 35s (- 3m 53s) (60000 80%) 0.7527
+    16m 53s (- 2m 35s) (65000 86%) 0.6777
+    18m 10s (- 1m 17s) (70000 93%) 0.6295
+    19m 28s (- 0m 0s) (75000 100%) 0.5649
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > c est un membre du comite .
-    = he is a member of the committee .
-    < he is a the the the committee . <EOS>
+    > vous etes ambitieuse .
+    = you re ambitious .
+    < you re ambitious . <EOS>
 
-    > ils se trouvent juste derriere vous .
-    = they re right behind you .
-    < they re right behind you . <EOS>
+    > j etudie l art dramatique du kabuki .
+    = i m studying kabuki drama .
+    < i m studying studying the future . <EOS>
 
-    > tu es d une humeur etrange aujourd hui .
-    = you re in a strange mood today .
-    < you re in the mood mood . <EOS>
+    > vous etes arrogantes .
+    = you re arrogant .
+    < you re arrogant . <EOS>
 
-    > il porte ses livres sous son bras .
-    = he is holding his books under his arm .
-    < he is holding his under his his own . .
+    > je suis en securite .
+    = i m safe .
+    < i m safe . <EOS>
 
-    > j ai seize ans .
-    = i am sixteen years old .
-    < i m years old . <EOS>
+    > elle a peur des chats .
+    = she is afraid of cats .
+    < she is scared of cats . <EOS>
 
-    > nous sommes les meilleures .
-    = we re the best .
-    < we re the best . <EOS>
+    > tu es tres chouette .
+    = you re very nice .
+    < you re very nice . <EOS>
 
-    > je partirai a dix heures .
-    = i am leaving at ten o clock .
-    < i am thinking at the time . <EOS>
+    > nous sommes assez presses .
+    = we re in kind of a hurry .
+    < we re kind of . . <EOS>
 
-    > je suis impartial .
-    = i m unbiased .
-    < i m unbiased . <EOS>
+    > je suis un vendeur .
+    = i m a salesman .
+    < i m a salesman . . <EOS>
 
-    > je suis minutieuse .
-    = i m thorough .
-    < i m thorough . <EOS>
+    > on n a plus le temps .
+    = we re out of time .
+    < we re out of time . <EOS>
 
-    > vous n etes pas mon ami .
-    = you re not my friend .
-    < you re not my friend . <EOS>
+    > elles sont toutes decedees .
+    = they re all dead .
+    < they re all dead . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f15cd21e020>
+    <matplotlib.image.AxesImage object at 0x7fa318199c30>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she s five years younger than i am . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s my older . <EOS>
+    output = she is too loud . . . <EOS>
     input = je ne crains pas de mourir .
     output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young of . <EOS>
+    output = he s a talented young . . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  26.544 seconds)
+   **Total running time of the script:** ( 19 minutes  42.080 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
