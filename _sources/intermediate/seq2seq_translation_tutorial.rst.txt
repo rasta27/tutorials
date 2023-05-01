@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['il est plein d ambition .', 'he is full of ambition .']
+    ['c est vous la plus vieille .', 'you re the oldest .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 21s (- 19m 2s) (5000 6%) 2.8403
-    2m 38s (- 17m 9s) (10000 13%) 2.2633
-    3m 55s (- 15m 43s) (15000 20%) 1.9491
-    5m 13s (- 14m 21s) (20000 26%) 1.7185
-    6m 31s (- 13m 2s) (25000 33%) 1.5258
-    7m 48s (- 11m 43s) (30000 40%) 1.3647
-    9m 6s (- 10m 24s) (35000 46%) 1.1688
-    10m 24s (- 9m 6s) (40000 53%) 1.1023
-    11m 42s (- 7m 48s) (45000 60%) 0.9926
-    13m 0s (- 6m 30s) (50000 66%) 0.9069
-    14m 17s (- 5m 11s) (55000 73%) 0.8090
-    15m 35s (- 3m 53s) (60000 80%) 0.7527
-    16m 53s (- 2m 35s) (65000 86%) 0.6777
-    18m 10s (- 1m 17s) (70000 93%) 0.6295
-    19m 28s (- 0m 0s) (75000 100%) 0.5649
+    1m 19s (- 18m 35s) (5000 6%) 2.8370
+    2m 35s (- 16m 48s) (10000 13%) 2.2800
+    3m 49s (- 15m 19s) (15000 20%) 1.9781
+    5m 4s (- 13m 58s) (20000 26%) 1.7336
+    6m 20s (- 12m 41s) (25000 33%) 1.5535
+    7m 36s (- 11m 24s) (30000 40%) 1.3888
+    8m 52s (- 10m 8s) (35000 46%) 1.2464
+    10m 8s (- 8m 52s) (40000 53%) 1.1107
+    11m 24s (- 7m 36s) (45000 60%) 0.9709
+    12m 40s (- 6m 20s) (50000 66%) 0.9024
+    13m 56s (- 5m 4s) (55000 73%) 0.8220
+    15m 12s (- 3m 48s) (60000 80%) 0.7772
+    16m 28s (- 2m 32s) (65000 86%) 0.6835
+    17m 44s (- 1m 16s) (70000 93%) 0.6281
+    19m 0s (- 0m 0s) (75000 100%) 0.5893
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > vous etes ambitieuse .
-    = you re ambitious .
-    < you re ambitious . <EOS>
+    > vous etes pardonnees .
+    = you re forgiven .
+    < you re forgiven . <EOS>
 
-    > j etudie l art dramatique du kabuki .
-    = i m studying kabuki drama .
-    < i m studying studying the future . <EOS>
+    > vous etes allemands n est ce pas ?
+    = you re germans aren t you ?
+    < you re alone aren t you ? <EOS>
 
-    > vous etes arrogantes .
-    = you re arrogant .
-    < you re arrogant . <EOS>
+    > c est un tres bon joueur de tennis .
+    = he is a good tennis player .
+    < he is a good tennis player . <EOS>
 
-    > je suis en securite .
-    = i m safe .
-    < i m safe . <EOS>
+    > je songe a demissionner immediatement .
+    = i am thinking of resigning at once .
+    < i m thinking of resigning at once . <EOS>
 
-    > elle a peur des chats .
-    = she is afraid of cats .
-    < she is scared of cats . <EOS>
+    > je suis americaine .
+    = i am american .
+    < i am an american . <EOS>
 
-    > tu es tres chouette .
-    = you re very nice .
-    < you re very nice . <EOS>
+    > ce ne sont pas des criminelles .
+    = they re not criminals .
+    < they re not criminals . <EOS>
 
-    > nous sommes assez presses .
-    = we re in kind of a hurry .
-    < we re kind of . . <EOS>
+    > vous etes une chouette gonzesse .
+    = you are a good person .
+    < you are a good person . <EOS>
 
-    > je suis un vendeur .
-    = i m a salesman .
-    < i m a salesman . . <EOS>
+    > vous etes tellement paranoiaque !
+    = you re so paranoid .
+    < you re so paranoid . <EOS>
 
-    > on n a plus le temps .
-    = we re out of time .
-    < we re out of time . <EOS>
+    > tu es ma fierte et ma joie .
+    = you are my pride and joy .
+    < you are my and . <EOS>
 
-    > elles sont toutes decedees .
-    = they re all dead .
-    < they re all dead . <EOS>
+    > nous sur reagissons .
+    = we re overreacting .
+    < we re having on . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7fa318199c30>
+    <matplotlib.image.AxesImage object at 0x7f3d08ed5300>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than i am . <EOS>
+    output = she is five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too loud . . . <EOS>
+    output = she is too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared to die . <EOS>
+    output = i m not scared of dying . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . . <EOS>
+    output = he s a talented young director . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  42.080 seconds)
+   **Total running time of the script:** ( 19 minutes  14.418 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 18.0MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 10.3MB/s]
 
 
 
@@ -135,143 +135,45 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 4.70M/945M [00:00<00:20, 48.2MB/s]
-      1%|1         | 11.1M/945M [00:00<00:16, 59.3MB/s]
-      2%|1         | 17.0M/945M [00:00<00:16, 60.6MB/s]
-      3%|2         | 24.0M/945M [00:00<00:14, 65.2MB/s]
-      3%|3         | 31.4M/945M [00:00<00:13, 69.5MB/s]
-      4%|4         | 38.0M/945M [00:00<00:15, 61.0MB/s]
-      5%|4         | 45.9M/945M [00:00<00:13, 67.3MB/s]
-      6%|5         | 52.5M/945M [00:00<00:13, 68.1MB/s]
-      6%|6         | 59.2M/945M [00:00<00:13, 68.7MB/s]
-      7%|6         | 65.9M/945M [00:01<00:14, 64.8MB/s]
-      8%|7         | 73.6M/945M [00:01<00:13, 69.5MB/s]
-      9%|8         | 81.5M/945M [00:01<00:12, 73.0MB/s]
-      9%|9         | 88.7M/945M [00:01<00:12, 73.9MB/s]
-     10%|#         | 95.9M/945M [00:01<00:12, 72.7MB/s]
-     11%|#         | 103M/945M [00:01<00:12, 72.6MB/s] 
-     12%|#1        | 110M/945M [00:01<00:12, 67.7MB/s]
-     12%|#2        | 116M/945M [00:01<00:13, 66.5MB/s]
-     13%|#3        | 123M/945M [00:01<00:12, 68.3MB/s]
-     14%|#3        | 130M/945M [00:02<00:13, 62.9MB/s]
-     14%|#4        | 137M/945M [00:02<00:12, 66.0MB/s]
-     15%|#5        | 144M/945M [00:02<00:12, 69.6MB/s]
-     16%|#6        | 152M/945M [00:02<00:11, 70.9MB/s]
-     17%|#6        | 159M/945M [00:02<00:11, 72.9MB/s]
-     18%|#7        | 166M/945M [00:02<00:11, 73.3MB/s]
-     18%|#8        | 173M/945M [00:02<00:11, 70.4MB/s]
-     19%|#9        | 180M/945M [00:02<00:11, 68.0MB/s]
-     20%|#9        | 186M/945M [00:02<00:12, 63.8MB/s]
-     20%|##        | 193M/945M [00:02<00:12, 63.8MB/s]
-     21%|##1       | 200M/945M [00:03<00:11, 67.6MB/s]
-     22%|##1       | 207M/945M [00:03<00:11, 68.8MB/s]
-     23%|##2       | 213M/945M [00:03<00:11, 68.8MB/s]
-     23%|##3       | 221M/945M [00:03<00:10, 72.5MB/s]
-     24%|##4       | 228M/945M [00:03<00:10, 70.3MB/s]
-     25%|##4       | 235M/945M [00:03<00:10, 68.9MB/s]
-     26%|##5       | 242M/945M [00:03<00:10, 69.5MB/s]
-     26%|##6       | 248M/945M [00:03<00:10, 68.8MB/s]
-     27%|##6       | 255M/945M [00:03<00:11, 64.5MB/s]
-     28%|##7       | 262M/945M [00:04<00:10, 67.7MB/s]
-     28%|##8       | 269M/945M [00:04<00:10, 68.6MB/s]
-     29%|##9       | 276M/945M [00:04<00:11, 61.1MB/s]
-     30%|##9       | 282M/945M [00:04<00:11, 60.2MB/s]
-     30%|###       | 287M/945M [00:04<00:11, 57.7MB/s]
-     31%|###1      | 294M/945M [00:04<00:11, 59.6MB/s]
-     32%|###1      | 300M/945M [00:04<00:10, 62.7MB/s]
-     32%|###2      | 306M/945M [00:04<00:10, 61.5MB/s]
-     33%|###3      | 312M/945M [00:04<00:10, 61.7MB/s]
-     34%|###3      | 319M/945M [00:05<00:10, 64.9MB/s]
-     34%|###4      | 326M/945M [00:05<00:09, 65.1MB/s]
-     35%|###5      | 333M/945M [00:05<00:09, 68.0MB/s]
-     36%|###6      | 340M/945M [00:05<00:08, 70.9MB/s]
-     37%|###6      | 347M/945M [00:05<00:08, 71.8MB/s]
-     37%|###7      | 354M/945M [00:05<00:08, 69.6MB/s]
-     38%|###8      | 362M/945M [00:05<00:08, 71.9MB/s]
-     39%|###9      | 368M/945M [00:05<00:08, 71.5MB/s]
-     40%|###9      | 375M/945M [00:05<00:08, 70.7MB/s]
-     40%|####      | 382M/945M [00:05<00:08, 70.9MB/s]
-     41%|####1     | 389M/945M [00:06<00:08, 67.9MB/s]
-     42%|####1     | 396M/945M [00:06<00:08, 68.8MB/s]
-     43%|####2     | 402M/945M [00:06<00:08, 64.7MB/s]
-     43%|####3     | 409M/945M [00:06<00:08, 66.5MB/s]
-     44%|####3     | 415M/945M [00:06<00:08, 66.2MB/s]
-     45%|####4     | 422M/945M [00:06<00:08, 66.1MB/s]
-     45%|####5     | 429M/945M [00:06<00:08, 66.8MB/s]
-     46%|####6     | 435M/945M [00:06<00:08, 65.7MB/s]
-     47%|####6     | 441M/945M [00:06<00:08, 64.8MB/s]
-     48%|####7     | 449M/945M [00:06<00:07, 69.0MB/s]
-     48%|####8     | 455M/945M [00:07<00:07, 68.1MB/s]
-     49%|####8     | 463M/945M [00:07<00:07, 70.5MB/s]
-     50%|####9     | 470M/945M [00:07<00:07, 70.9MB/s]
-     50%|#####     | 476M/945M [00:07<00:07, 67.9MB/s]
-     51%|#####1    | 483M/945M [00:07<00:07, 68.9MB/s]
-     52%|#####1    | 490M/945M [00:07<00:07, 66.5MB/s]
-     53%|#####2    | 497M/945M [00:07<00:06, 68.3MB/s]
-     53%|#####3    | 503M/945M [00:07<00:07, 61.9MB/s]
-     54%|#####4    | 510M/945M [00:07<00:07, 64.6MB/s]
-     55%|#####4    | 517M/945M [00:08<00:06, 66.1MB/s]
-     55%|#####5    | 523M/945M [00:08<00:06, 65.9MB/s]
-     56%|#####6    | 530M/945M [00:08<00:06, 65.9MB/s]
-     57%|#####6    | 536M/945M [00:08<00:06, 66.0MB/s]
-     57%|#####7    | 543M/945M [00:08<00:06, 67.8MB/s]
-     58%|#####8    | 551M/945M [00:08<00:05, 72.1MB/s]
-     59%|#####9    | 558M/945M [00:08<00:05, 72.3MB/s]
-     60%|#####9    | 565M/945M [00:08<00:05, 72.5MB/s]
-     61%|######    | 572M/945M [00:08<00:05, 71.2MB/s]
-     61%|######1   | 580M/945M [00:08<00:05, 75.3MB/s]
-     62%|######2   | 587M/945M [00:09<00:04, 75.1MB/s]
-     63%|######2   | 594M/945M [00:09<00:05, 71.0MB/s]
-     64%|######3   | 602M/945M [00:09<00:04, 74.3MB/s]
-     64%|######4   | 609M/945M [00:09<00:05, 63.7MB/s]
-     65%|######5   | 616M/945M [00:09<00:05, 67.2MB/s]
-     66%|######5   | 623M/945M [00:09<00:05, 67.2MB/s]
-     67%|######6   | 630M/945M [00:09<00:04, 69.1MB/s]
-     67%|######7   | 638M/945M [00:09<00:04, 71.2MB/s]
-     68%|######8   | 644M/945M [00:09<00:04, 68.4MB/s]
-     69%|######8   | 651M/945M [00:10<00:04, 62.1MB/s]
-     70%|######9   | 657M/945M [00:10<00:04, 61.1MB/s]
-     70%|#######   | 664M/945M [00:10<00:04, 63.0MB/s]
-     71%|#######   | 670M/945M [00:10<00:04, 65.5MB/s]
-     72%|#######1  | 678M/945M [00:10<00:03, 70.2MB/s]
-     73%|#######2  | 685M/945M [00:10<00:04, 67.4MB/s]
-     73%|#######3  | 692M/945M [00:10<00:03, 67.5MB/s]
-     74%|#######3  | 698M/945M [00:10<00:04, 54.3MB/s]
-     75%|#######4  | 704M/945M [00:11<00:04, 56.1MB/s]
-     75%|#######5  | 712M/945M [00:11<00:03, 62.6MB/s]
-     76%|#######6  | 719M/945M [00:11<00:03, 66.1MB/s]
-     77%|#######6  | 726M/945M [00:11<00:03, 69.8MB/s]
-     78%|#######7  | 734M/945M [00:11<00:03, 72.9MB/s]
-     78%|#######8  | 741M/945M [00:11<00:03, 61.2MB/s]
-     79%|#######9  | 748M/945M [00:11<00:03, 61.6MB/s]
-     80%|#######9  | 754M/945M [00:11<00:03, 62.2MB/s]
-     81%|########  | 761M/945M [00:11<00:02, 67.2MB/s]
-     81%|########1 | 768M/945M [00:12<00:02, 62.5MB/s]
-     82%|########2 | 775M/945M [00:12<00:02, 65.2MB/s]
-     83%|########2 | 782M/945M [00:12<00:02, 67.5MB/s]
-     83%|########3 | 789M/945M [00:12<00:02, 68.1MB/s]
-     84%|########4 | 795M/945M [00:12<00:02, 68.4MB/s]
-     85%|########4 | 802M/945M [00:12<00:02, 69.6MB/s]
-     86%|########5 | 809M/945M [00:12<00:02, 69.7MB/s]
-     86%|########6 | 815M/945M [00:12<00:02, 46.6MB/s]
-     87%|########7 | 825M/945M [00:13<00:02, 58.5MB/s]
-     88%|########8 | 833M/945M [00:13<00:01, 63.4MB/s]
-     89%|########8 | 840M/945M [00:13<00:01, 67.4MB/s]
-     90%|########9 | 847M/945M [00:13<00:01, 67.5MB/s]
-     90%|######### | 854M/945M [00:13<00:01, 65.7MB/s]
-     91%|#########1| 862M/945M [00:13<00:01, 69.6MB/s]
-     92%|#########2| 869M/945M [00:13<00:01, 71.6MB/s]
-     93%|#########2| 876M/945M [00:13<00:01, 66.7MB/s]
-     94%|#########3| 884M/945M [00:13<00:00, 70.2MB/s]
-     94%|#########4| 892M/945M [00:13<00:00, 73.9MB/s]
-     95%|#########5| 899M/945M [00:14<00:00, 72.1MB/s]
-     96%|#########5| 906M/945M [00:14<00:00, 71.1MB/s]
-     97%|#########6| 913M/945M [00:14<00:00, 65.3MB/s]
-     97%|#########7| 921M/945M [00:14<00:00, 69.6MB/s]
-     98%|#########8| 929M/945M [00:14<00:00, 73.5MB/s]
-     99%|#########9| 936M/945M [00:14<00:00, 72.0MB/s]
-    100%|#########9| 943M/945M [00:14<00:00, 69.0MB/s]
-    100%|##########| 945M/945M [00:14<00:00, 67.0MB/s]
+      1%|          | 5.74M/945M [00:00<00:16, 60.2MB/s]
+      3%|2         | 25.0M/945M [00:00<00:06, 143MB/s] 
+      5%|5         | 50.7M/945M [00:00<00:04, 201MB/s]
+      8%|8         | 77.8M/945M [00:00<00:03, 233MB/s]
+     11%|#         | 102M/945M [00:00<00:03, 242MB/s] 
+     13%|#3        | 126M/945M [00:00<00:03, 240MB/s]
+     16%|#6        | 152M/945M [00:00<00:03, 252MB/s]
+     19%|#8        | 178M/945M [00:00<00:03, 260MB/s]
+     22%|##1       | 205M/945M [00:00<00:02, 265MB/s]
+     25%|##4       | 232M/945M [00:01<00:02, 270MB/s]
+     27%|##7       | 257M/945M [00:01<00:02, 242MB/s]
+     30%|###       | 283M/945M [00:01<00:02, 250MB/s]
+     33%|###2      | 309M/945M [00:01<00:02, 255MB/s]
+     35%|###5      | 334M/945M [00:01<00:02, 257MB/s]
+     38%|###7      | 359M/945M [00:01<00:02, 252MB/s]
+     41%|####      | 383M/945M [00:01<00:02, 220MB/s]
+     43%|####2     | 405M/945M [00:01<00:02, 201MB/s]
+     45%|####5     | 430M/945M [00:01<00:02, 216MB/s]
+     48%|####7     | 451M/945M [00:02<00:02, 210MB/s]
+     50%|#####     | 474M/945M [00:02<00:02, 217MB/s]
+     53%|#####2    | 499M/945M [00:02<00:02, 231MB/s]
+     55%|#####5    | 522M/945M [00:02<00:01, 231MB/s]
+     58%|#####7    | 544M/945M [00:02<00:01, 218MB/s]
+     60%|######    | 570M/945M [00:02<00:01, 232MB/s]
+     63%|######2   | 592M/945M [00:02<00:01, 230MB/s]
+     65%|######5   | 614M/945M [00:03<00:02, 126MB/s]
+     68%|######7   | 642M/945M [00:03<00:02, 155MB/s]
+     71%|#######   | 668M/945M [00:03<00:01, 180MB/s]
+     74%|#######3  | 695M/945M [00:03<00:01, 203MB/s]
+     76%|#######6  | 722M/945M [00:03<00:01, 223MB/s]
+     79%|#######9  | 749M/945M [00:03<00:00, 239MB/s]
+     82%|########1 | 774M/945M [00:03<00:00, 246MB/s]
+     85%|########4 | 800M/945M [00:03<00:00, 250MB/s]
+     88%|########7 | 827M/945M [00:03<00:00, 260MB/s]
+     90%|######### | 854M/945M [00:03<00:00, 266MB/s]
+     93%|#########3| 881M/945M [00:04<00:00, 271MB/s]
+     96%|#########6| 907M/945M [00:04<00:00, 138MB/s]
+     98%|#########8| 928M/945M [00:04<00:00, 95.4MB/s]
+    100%|##########| 945M/945M [00:05<00:00, 197MB/s] 
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -567,37 +469,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: clare verrall was walking her french bulldog Dutchy when a man jumped out from behind some bins . she was left with a broken nose, black eye and broken toe . she kneed the man in the groin and kicked him before fleeing . she said she didn't believe she would have been able to fight off her attacker had she not learned self-defence .
+    prediction: wesley sneijder launched knife range in Galatasaray colours on 15th anniversary of two stabbed to death in Istanbul . two Leeds fans, Kevin Speight and Christopher Loftus, were killed before UEFA cup semi-final first leg against Galatasaray on April 5, 2000 . a minute's silence will be held before Leeds and blackburn Rovers meet at Elland Road on saturday .
 
-    target: Clare Verrall was randomly attacked while walking her dog on Wednesday . The Melbourne woman was just streets from her Prahan home . She suffered a black eye, broken nose, broken toe, and other injuries . Ms Verrall managed to get away by kneeing her attacker in the groin . She credits the kickboxing and self-defence classes for her escape .
+    target: Leeds fans, Kevin Speight and Christopher Loftus, were killed before the UEFA Cup semi-final first leg against Galatasaray in  Istanbul in April 2000 . Leeds are marking 15th anniversary with a minute's silence on Saturday . Wesley Sneijder tweeted on the morning of the match: 'Finally my GalatasaraySK knife set is now available and can be delivered everywhere' The striker later deleted the tweet after receiving angry responses . Sneijder replied to one supporter: 'Very sorry. I didn't know this and deleted our promotion for the merchandise kitchen item. #Respect'
 
 
     Example 2:
 
-    prediction: 'i'm getting bored by Newcastle,' says carragher . carragher says he's alarmed at the state the club are in . 'i've had it at my own club Liverpool with George Gillett and Tom Hicks and it's the same at Newcastle' .
+    prediction: a train headed from queens into Manhattan was stalled underneath the east river . its conductor saw smoke coming from the board along the track's third rail . more than 500 passengers were taken by a rescue train to grand central station . service on the 7 line was suspended for just less than two hours .
 
-    target: Jamie Carragher has slammed Newcastle United owner Mike Ashley . The Sportsmail columnist called the club 'boring' saying Ashley just wants to make money while in charge . Carragher says he understands the fans frustration at how club is run . CLICK HERE for all the latest Newcastle United news .
+    target: Train suddenly stopped on 7 line between Queens and Manhattan . Passengers evacuated to Grand Central Station with rescue train . Riders spent roughly and hour and a half trapped underground . No injuries, though one woman requested attention after feeling faint .
 
 
     Example 3:
 
-    prediction: researchers developed a model that combined long-term fisheries data with climate model projections from the Met Office . from this they predicted the abundance and distribution of popular fish, such as haddock and plaice, could fall as the North Sea warms . this could see prices of these fish soar or see them being taken off the menu completely .
+    prediction: cui Hongfang, 73, died after she was knocked over by a Canadian tourist . police interviewed the 38-year-old woman and ruled the death an accident . the victim's family filed a civil lawsuit against the tourist, identified by Chinese media as debra Fortin .
 
-    target: Researchers developed a model that combined long-term fisheries data with climate model projections from the Met Office . As the North Sea warms the number of popular species is likely to fall . The prices of these staple fish could also rise as they become more rare . John dory and red mullet may replace haddock, plaice and lemon sole .
+    target: Cui Hongfang, 73, died in front of her family after she was knocked over . She fell down a set of steep stairs and struck her head on the stone wall . Police interviewed witnesses and ruled the woman's death an accident . Victim's family sued the tourist and attempted to stop her from leaving .
 
 
     Example 4:
 
-    prediction: ECB's head of selectors looks set to end when new director of cricket is appointed . he will be in overall charge of selection, leading to the end of his stint . a letter regarding the end of allardyce's tenure at blackburn does the rounds .
+    prediction: blackburn face liverpool in the quarter-finals of the fa cup on tuesday . the foxes were thrashed 5-0 by city in the last season's quarter-final . but the winger has sympathy for the youngster who is on his way back . he says he will be happy if it takes 'a few extra seconds' to control the ball .
 
-    target: James Whitaker's brief reign as ECB head of selectors is coming to an end . Sam Allardyce's future as West Ham boss is subject to speculation at a time when a letter sent by Venky's lawyers is doing the rounds . The letter, from December 2011, makes numerous disputed claims about Kentaro's involvement in Blackburn after Venky's bought the club . The FA Cup is set to be rebranded as the Emirates FA Cup .
+    target: Blackburn face Liverpool in the FA Cup quarter-final replay on Wednesday . Tom Cairney has sympathy for Raheem Sterling over his contract . Sterling rejected a £100,000-a-week new deal at Anfield .
 
 
     Example 5:
 
-    prediction: Jessica Carey surprised her grandmother with a portrait of her grandmother . she had the tattooed on her forearm and it was captured on camera . the video was captured in february but the priceless reaction is now online .
+    prediction: a desperate Ted Koran, 59, called the veterans suicide hotline on saturday night . he was put on hold for 10 minutes and only wanted to care for 60 animals . he said he was thinking suicidal thoughts because his wife passed away . the veterans association estimates that 22 veterans end their lives every day across the us .
 
-    target: Jessica Carey had her grandmother's portrait tattooed on her forearm . She then drove almost four hours to surprise her grandmother with it . Her grandmother Patty Lawing's priceless reaction is captured on film .
+    target: Ted Koran was missing his recently deceased wife Karen on Saturday night . The Florida Air Force veteran says he kept on being put through to recorded messages . Only the thought of the 60 rescue animals he and his wife cared for kept him alive . Both ran Florida wildlife sanctuary called The Critter Place .
 
 
 
@@ -951,7 +853,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  17.857 seconds)
+   **Total running time of the script:** ( 4 minutes  14.283 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
