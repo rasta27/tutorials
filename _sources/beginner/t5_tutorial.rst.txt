@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 10.3MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.1MB/s]
 
 
 
@@ -135,45 +135,97 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 5.74M/945M [00:00<00:16, 60.2MB/s]
-      3%|2         | 25.0M/945M [00:00<00:06, 143MB/s] 
-      5%|5         | 50.7M/945M [00:00<00:04, 201MB/s]
-      8%|8         | 77.8M/945M [00:00<00:03, 233MB/s]
-     11%|#         | 102M/945M [00:00<00:03, 242MB/s] 
-     13%|#3        | 126M/945M [00:00<00:03, 240MB/s]
-     16%|#6        | 152M/945M [00:00<00:03, 252MB/s]
-     19%|#8        | 178M/945M [00:00<00:03, 260MB/s]
-     22%|##1       | 205M/945M [00:00<00:02, 265MB/s]
-     25%|##4       | 232M/945M [00:01<00:02, 270MB/s]
-     27%|##7       | 257M/945M [00:01<00:02, 242MB/s]
-     30%|###       | 283M/945M [00:01<00:02, 250MB/s]
-     33%|###2      | 309M/945M [00:01<00:02, 255MB/s]
-     35%|###5      | 334M/945M [00:01<00:02, 257MB/s]
-     38%|###7      | 359M/945M [00:01<00:02, 252MB/s]
-     41%|####      | 383M/945M [00:01<00:02, 220MB/s]
-     43%|####2     | 405M/945M [00:01<00:02, 201MB/s]
-     45%|####5     | 430M/945M [00:01<00:02, 216MB/s]
-     48%|####7     | 451M/945M [00:02<00:02, 210MB/s]
-     50%|#####     | 474M/945M [00:02<00:02, 217MB/s]
-     53%|#####2    | 499M/945M [00:02<00:02, 231MB/s]
-     55%|#####5    | 522M/945M [00:02<00:01, 231MB/s]
-     58%|#####7    | 544M/945M [00:02<00:01, 218MB/s]
-     60%|######    | 570M/945M [00:02<00:01, 232MB/s]
-     63%|######2   | 592M/945M [00:02<00:01, 230MB/s]
-     65%|######5   | 614M/945M [00:03<00:02, 126MB/s]
-     68%|######7   | 642M/945M [00:03<00:02, 155MB/s]
-     71%|#######   | 668M/945M [00:03<00:01, 180MB/s]
-     74%|#######3  | 695M/945M [00:03<00:01, 203MB/s]
-     76%|#######6  | 722M/945M [00:03<00:01, 223MB/s]
-     79%|#######9  | 749M/945M [00:03<00:00, 239MB/s]
-     82%|########1 | 774M/945M [00:03<00:00, 246MB/s]
-     85%|########4 | 800M/945M [00:03<00:00, 250MB/s]
-     88%|########7 | 827M/945M [00:03<00:00, 260MB/s]
-     90%|######### | 854M/945M [00:03<00:00, 266MB/s]
-     93%|#########3| 881M/945M [00:04<00:00, 271MB/s]
-     96%|#########6| 907M/945M [00:04<00:00, 138MB/s]
-     98%|#########8| 928M/945M [00:04<00:00, 95.4MB/s]
-    100%|##########| 945M/945M [00:05<00:00, 197MB/s] 
+      1%|          | 5.03M/945M [00:00<00:18, 52.7MB/s]
+      2%|1         | 16.4M/945M [00:00<00:11, 87.8MB/s]
+      3%|3         | 32.1M/945M [00:00<00:10, 89.5MB/s]
+      4%|4         | 40.5M/945M [00:00<00:13, 70.7MB/s]
+      5%|5         | 49.1M/945M [00:00<00:13, 69.6MB/s]
+      7%|6         | 63.9M/945M [00:00<00:10, 91.0MB/s]
+      8%|7         | 73.3M/945M [00:01<00:13, 70.1MB/s]
+      9%|8         | 81.9M/945M [00:01<00:14, 60.6MB/s]
+     10%|#         | 97.6M/945M [00:01<00:11, 75.2MB/s]
+     11%|#1        | 106M/945M [00:01<00:12, 72.1MB/s] 
+     12%|#1        | 113M/945M [00:01<00:13, 64.6MB/s]
+     13%|#2        | 119M/945M [00:01<00:17, 48.2MB/s]
+     14%|#3        | 131M/945M [00:02<00:14, 59.1MB/s]
+     15%|#4        | 138M/945M [00:02<00:18, 45.6MB/s]
+     15%|#5        | 143M/945M [00:02<00:27, 30.0MB/s]
+     16%|#5        | 147M/945M [00:02<00:27, 30.2MB/s]
+     17%|#7        | 162M/945M [00:03<00:16, 48.5MB/s]
+     18%|#7        | 168M/945M [00:03<00:17, 47.4MB/s]
+     19%|#8        | 179M/945M [00:03<00:15, 53.5MB/s]
+     20%|#9        | 185M/945M [00:03<00:14, 55.3MB/s]
+     21%|##        | 197M/945M [00:03<00:12, 60.9MB/s]
+     22%|##2       | 210M/945M [00:03<00:09, 78.8MB/s]
+     23%|##3       | 219M/945M [00:03<00:11, 66.7MB/s]
+     24%|##4       | 229M/945M [00:04<00:12, 58.7MB/s]
+     26%|##5       | 244M/945M [00:04<00:10, 72.4MB/s]
+     27%|##6       | 252M/945M [00:04<00:13, 54.4MB/s]
+     28%|##7       | 260M/945M [00:04<00:12, 58.3MB/s]
+     28%|##8       | 267M/945M [00:04<00:12, 57.5MB/s]
+     29%|##9       | 279M/945M [00:04<00:11, 62.5MB/s]
+     31%|###1      | 295M/945M [00:05<00:10, 66.1MB/s]
+     33%|###2      | 311M/945M [00:05<00:09, 72.1MB/s]
+     35%|###4      | 326M/945M [00:05<00:08, 79.3MB/s]
+     35%|###5      | 334M/945M [00:05<00:08, 77.7MB/s]
+     36%|###6      | 344M/945M [00:05<00:09, 67.8MB/s]
+     38%|###8      | 360M/945M [00:06<00:07, 79.6MB/s]
+     39%|###8      | 368M/945M [00:06<00:08, 74.9MB/s]
+     40%|###9      | 376M/945M [00:06<00:08, 71.6MB/s]
+     41%|####      | 383M/945M [00:06<00:09, 59.6MB/s]
+     42%|####1     | 393M/945M [00:06<00:10, 57.7MB/s]
+     43%|####3     | 410M/945M [00:06<00:08, 68.2MB/s]
+     44%|####4     | 417M/945M [00:06<00:07, 69.2MB/s]
+     45%|####4     | 425M/945M [00:07<00:07, 72.7MB/s]
+     46%|####5     | 432M/945M [00:07<00:08, 66.7MB/s]
+     46%|####6     | 438M/945M [00:07<00:09, 56.6MB/s]
+     47%|####7     | 444M/945M [00:07<00:10, 51.4MB/s]
+     48%|####8     | 457M/945M [00:07<00:07, 67.2MB/s]
+     49%|####9     | 464M/945M [00:07<00:10, 49.5MB/s]
+     50%|####9     | 469M/945M [00:08<00:10, 47.2MB/s]
+     50%|#####     | 475M/945M [00:08<00:12, 39.6MB/s]
+     52%|#####1    | 490M/945M [00:08<00:08, 56.4MB/s]
+     53%|#####2    | 496M/945M [00:08<00:09, 47.2MB/s]
+     54%|#####3    | 508M/945M [00:08<00:08, 52.1MB/s]
+     55%|#####5    | 522M/945M [00:08<00:06, 69.0MB/s]
+     56%|#####6    | 529M/945M [00:09<00:09, 44.7MB/s]
+     57%|#####7    | 540M/945M [00:09<00:08, 52.2MB/s]
+     58%|#####7    | 547M/945M [00:09<00:08, 51.2MB/s]
+     59%|#####8    | 557M/945M [00:09<00:07, 55.8MB/s]
+     61%|######    | 573M/945M [00:09<00:06, 64.5MB/s]
+     62%|######2   | 590M/945M [00:10<00:04, 79.4MB/s]
+     64%|######4   | 606M/945M [00:10<00:04, 79.1MB/s]
+     66%|######5   | 623M/945M [00:10<00:04, 80.7MB/s]
+     68%|######7   | 639M/945M [00:10<00:04, 75.9MB/s]
+     69%|######9   | 654M/945M [00:10<00:03, 86.1MB/s]
+     70%|#######   | 663M/945M [00:11<00:04, 73.0MB/s]
+     71%|#######   | 670M/945M [00:11<00:03, 74.1MB/s]
+     72%|#######1  | 678M/945M [00:11<00:04, 68.6MB/s]
+     73%|#######2  | 688M/945M [00:11<00:03, 69.6MB/s]
+     74%|#######4  | 704M/945M [00:11<00:02, 89.5MB/s]
+     75%|#######5  | 713M/945M [00:11<00:02, 84.4MB/s]
+     76%|#######6  | 722M/945M [00:11<00:03, 73.8MB/s]
+     78%|#######8  | 737M/945M [00:12<00:02, 73.3MB/s]
+     80%|#######9  | 754M/945M [00:12<00:02, 72.8MB/s]
+     81%|########1 | 769M/945M [00:12<00:02, 86.3MB/s]
+     82%|########2 | 778M/945M [00:12<00:02, 61.1MB/s]
+     83%|########3 | 785M/945M [00:12<00:02, 63.0MB/s]
+     84%|########3 | 792M/945M [00:13<00:03, 42.7MB/s]
+     85%|########4 | 800M/945M [00:13<00:03, 43.7MB/s]
+     85%|########5 | 805M/945M [00:13<00:03, 39.4MB/s]
+     87%|########6 | 818M/945M [00:13<00:02, 53.8MB/s]
+     87%|########7 | 825M/945M [00:13<00:02, 53.2MB/s]
+     88%|########8 | 836M/945M [00:14<00:01, 59.3MB/s]
+     90%|######### | 850M/945M [00:14<00:01, 67.1MB/s]
+     91%|######### | 857M/945M [00:14<00:01, 63.5MB/s]
+     92%|#########1| 868M/945M [00:14<00:01, 67.6MB/s]
+     94%|#########3| 885M/945M [00:14<00:00, 76.4MB/s]
+     95%|#########5| 899M/945M [00:14<00:00, 77.2MB/s]
+     96%|#########6| 907M/945M [00:15<00:00, 67.2MB/s]
+     97%|#########7| 918M/945M [00:15<00:00, 63.0MB/s]
+     99%|#########8| 933M/945M [00:15<00:00, 75.3MB/s]
+    100%|#########9| 941M/945M [00:15<00:00, 67.6MB/s]
+    100%|##########| 945M/945M [00:15<00:00, 63.1MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +521,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: wesley sneijder launched knife range in Galatasaray colours on 15th anniversary of two stabbed to death in Istanbul . two Leeds fans, Kevin Speight and Christopher Loftus, were killed before UEFA cup semi-final first leg against Galatasaray on April 5, 2000 . a minute's silence will be held before Leeds and blackburn Rovers meet at Elland Road on saturday .
+    prediction: the premier league leaders trained at their base in Cobham on friday . they will face their former club at the weekend to extend their lead . didier Drogba and Loic Remy could start up front for the gunners .
 
-    target: Leeds fans, Kevin Speight and Christopher Loftus, were killed before the UEFA Cup semi-final first leg against Galatasaray in  Istanbul in April 2000 . Leeds are marking 15th anniversary with a minute's silence on Saturday . Wesley Sneijder tweeted on the morning of the match: 'Finally my GalatasaraySK knife set is now available and can be delivered everywhere' The striker later deleted the tweet after receiving angry responses . Sneijder replied to one supporter: 'Very sorry. I didn't know this and deleted our promotion for the merchandise kitchen item. #Respect'
+    target: Chelsea players train at their Cobham headquarters on Friday . Jose Mourinho's side face Arsenal at the Emirates on Sunday . Chelsea looking to extend their 10-point lead over second-placed Arsenal . Mourinho has never lost to Arsenal manager Arsene Wenger . Cesc Fabregas chose Chelsea over Arsenal for trophies, says Mourinho .
 
 
     Example 2:
 
-    prediction: a train headed from queens into Manhattan was stalled underneath the east river . its conductor saw smoke coming from the board along the track's third rail . more than 500 passengers were taken by a rescue train to grand central station . service on the 7 line was suspended for just less than two hours .
+    prediction: brothers of convicted sex offenders are five times more likely to commit sex crimes . research analysed DNA from 21,566 men convicted between 1973 and 2009 . sons and brothers of convicted sex offenders are four to five times more likely .
 
-    target: Train suddenly stopped on 7 line between Queens and Manhattan . Passengers evacuated to Grand Central Station with rescue train . Riders spent roughly and hour and a half trapped underground . No injuries, though one woman requested attention after feeling faint .
+    target: Recent study found sons and brothers of convicted sex offenders were four to five times more likely to be convicted of sex crimes . Some argue this knowledge could help prevent people from offending . Dr Mairi Levitt says the genetic study can't separate nature from nurture .
 
 
     Example 3:
 
-    prediction: cui Hongfang, 73, died after she was knocked over by a Canadian tourist . police interviewed the 38-year-old woman and ruled the death an accident . the victim's family filed a civil lawsuit against the tourist, identified by Chinese media as debra Fortin .
+    prediction: the late fashion trendsetter's 250-piece Lilly Pulitzer for Target collection sold out online and flew off shelves at stores shortly after debuting on sunday . shoppers logged online early and waited in long lines outside Target stores before they opened . more than 30,000 pieces have been listed for resale on eBay, many at higher price points .
 
-    target: Cui Hongfang, 73, died in front of her family after she was knocked over . She fell down a set of steep stairs and struck her head on the stone wall . Police interviewed witnesses and ruled the woman's death an accident . Victim's family sued the tourist and attempted to stop her from leaving .
+    target: The designer diffusion line went on sale Sunday morning but was almost completely sold out online before noon, with stores selling out minutes after opening . Re-sellers initially tried to unload merchandise at inflated prices including $799 for a $150 hammock; now thousands of pieces are available on eBay with smaller markups . Outraged customers have formed a social media campaign to boycott the merchandise from second-hand sellers .
 
 
     Example 4:
 
-    prediction: blackburn face liverpool in the quarter-finals of the fa cup on tuesday . the foxes were thrashed 5-0 by city in the last season's quarter-final . but the winger has sympathy for the youngster who is on his way back . he says he will be happy if it takes 'a few extra seconds' to control the ball .
+    prediction: mark Clattenburg will take charge of the champions league quarter-final clash between Paris Saint-Germain and Barcelona . the referee is regarded by UEFA as the top official in the country . he will be assisted by assistants Simon Beck and Jake Collin, assistants Anthony Taylor and Andre Marriner and fourth official Stuart Burt .
 
-    target: Blackburn face Liverpool in the FA Cup quarter-final replay on Wednesday . Tom Cairney has sympathy for Raheem Sterling over his contract . Sterling rejected a £100,000-a-week new deal at Anfield .
+    target: Mark Clattenburg will referee Barcelona vs PSG in the Champions League . He will be assisted by five other Englishmen at the Parc des Princes . Martin Atkinson has not been chosen by UEFA for this round of fixtures . Referees from Serbia, Czech Republic and Spain also selected for games . GRAHAM POLL: Clattenburg was right to confer for Vincent Kompany foul .
 
 
     Example 5:
 
-    prediction: a desperate Ted Koran, 59, called the veterans suicide hotline on saturday night . he was put on hold for 10 minutes and only wanted to care for 60 animals . he said he was thinking suicidal thoughts because his wife passed away . the veterans association estimates that 22 veterans end their lives every day across the us .
+    prediction: the robot sub was examining the depths of the Gulf of Mexico off the coast of Louisiana when a giant sperm whale suddenly appeared . the whale circled several times and swam in and out of the camera lights, at times spinning and looking directly into the camera . the whale is listed as an endangered species under the u.s. endangered species act .
 
-    target: Ted Koran was missing his recently deceased wife Karen on Saturday night . The Florida Air Force veteran says he kept on being put through to recorded messages . Only the thought of the 60 rescue animals he and his wife cared for kept him alive . Both ran Florida wildlife sanctuary called The Critter Place .
+    target: Robosub was exploring the Gulf of Mexico off the coast of Louisiana . At 598 meters the sperm whale appeared in the robosub's cameras .
 
 
 
@@ -853,7 +905,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  14.283 seconds)
+   **Total running time of the script:** ( 4 minutes  3.502 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
