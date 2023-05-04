@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['nous sommes les meilleurs amis .', 'we re best friends .']
+    ['vous etes pardonne .', 'you re forgiven .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 22s (- 19m 18s) (5000 6%) 2.8477
-    2m 40s (- 17m 20s) (10000 13%) 2.2712
-    3m 57s (- 15m 51s) (15000 20%) 1.9533
-    5m 15s (- 14m 28s) (20000 26%) 1.7473
-    6m 34s (- 13m 9s) (25000 33%) 1.5421
-    7m 53s (- 11m 50s) (30000 40%) 1.3839
-    9m 11s (- 10m 30s) (35000 46%) 1.2538
-    10m 29s (- 9m 10s) (40000 53%) 1.1389
-    11m 47s (- 7m 51s) (45000 60%) 1.0432
-    13m 5s (- 6m 32s) (50000 66%) 0.9191
-    14m 23s (- 5m 14s) (55000 73%) 0.8552
-    15m 41s (- 3m 55s) (60000 80%) 0.7548
-    16m 59s (- 2m 36s) (65000 86%) 0.7006
-    18m 17s (- 1m 18s) (70000 93%) 0.6474
-    19m 35s (- 0m 0s) (75000 100%) 0.5806
+    1m 20s (- 18m 46s) (5000 6%) 2.8188
+    2m 36s (- 16m 55s) (10000 13%) 2.2881
+    3m 52s (- 15m 31s) (15000 20%) 1.9612
+    5m 9s (- 14m 11s) (20000 26%) 1.7034
+    6m 27s (- 12m 54s) (25000 33%) 1.5215
+    7m 44s (- 11m 37s) (30000 40%) 1.3368
+    9m 2s (- 10m 20s) (35000 46%) 1.2070
+    10m 20s (- 9m 3s) (40000 53%) 1.1104
+    11m 41s (- 7m 47s) (45000 60%) 0.9670
+    12m 59s (- 6m 29s) (50000 66%) 0.8923
+    14m 17s (- 5m 11s) (55000 73%) 0.8229
+    15m 34s (- 3m 53s) (60000 80%) 0.7410
+    16m 53s (- 2m 35s) (65000 86%) 0.6713
+    18m 11s (- 1m 17s) (70000 93%) 0.6120
+    19m 29s (- 0m 0s) (75000 100%) 0.5574
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > je ne vais pas vous epouser .
-    = i m not marrying you .
-    < i m not marrying you . <EOS>
+    > c est un gros mangeur .
+    = he is a big eater .
+    < he s a member lover . <EOS>
 
-    > elles ne sont pas en ville .
-    = they re out of town .
-    < they re out of town . <EOS>
+    > nous y sommes tous ensemble .
+    = we re all in this together .
+    < we re all working together together . <EOS>
 
-    > nous changeons de vetements .
-    = we are changing our clothes .
-    < we re going back to <EOS>
+    > elle a ans .
+    = she is thirty one .
+    < she is years . <EOS>
 
-    > je ne rougis pas !
-    = i m not blushing !
-    < i m not listening ! <EOS>
+    > tu ne pretes meme pas attention .
+    = you re not even paying attention .
+    < you re not even paying attention . <EOS>
 
-    > je suis serieux .
-    = i m serious .
-    < i am serious . <EOS>
+    > je suis impatient de te voir danser .
+    = i m looking forward to seeing you dance .
+    < i m looking forward to seeing you dance . <EOS>
 
-    > il est unique en son genre .
-    = he s one of a kind .
-    < he s one of a kind . <EOS>
+    > je suis celibataire .
+    = i m unmarried .
+    < i am a university . <EOS>
 
-    > tu n es pas rationnelle .
-    = you re not being rational .
-    < you re not being rational . <EOS>
+    > vous etes extraverti .
+    = you re extroverted .
+    < you re extroverted . <EOS>
 
-    > je suis normale .
-    = i m normal .
-    < i m normal . <EOS>
+    > je refuse de vous vendre ma voiture .
+    = i m not selling you my car .
+    < i m not selling you my car . <EOS>
 
-    > vous etes fort emotives .
-    = you re very emotional .
-    < you re very emotional . <EOS>
+    > je suis inquiet pour lui .
+    = i m worried about him .
+    < i m worried about him . <EOS>
 
-    > je suis desolee mais je ne comprends pas .
-    = i m sorry but i don t understand .
-    < i m sorry but i don t understand . <EOS>
+    > tu es dans l erreur .
+    = you re wrong .
+    < you re wrong . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f2a87873c70>
+    <matplotlib.image.AxesImage object at 0x7ff014431b10>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than me . <EOS>
+    output = she s five years younger than i am . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1259,7 +1259,7 @@ and labels:
     input = je ne crains pas de mourir .
     output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a very talented . . <EOS>
+    output = he s a talented young man . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  48.655 seconds)
+   **Total running time of the script:** ( 19 minutes  43.330 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
