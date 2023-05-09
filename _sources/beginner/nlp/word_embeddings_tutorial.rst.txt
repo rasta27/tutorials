@@ -195,7 +195,7 @@ indices are integers, not floats).
  .. code-block:: none
 
 
-    <torch._C.Generator object at 0x7f66175b4030>
+    <torch._C.Generator object at 0x7f32ab16c030>
 
 
 
@@ -343,9 +343,9 @@ examples and update the parameters with backpropagation.
  .. code-block:: none
 
     [(['forty', 'When'], 'winters'), (['winters', 'forty'], 'shall'), (['shall', 'winters'], 'besiege')]
-    [523.4596672058105, 520.8571138381958, 518.2730407714844, 515.7073678970337, 513.1575901508331, 510.6241965293884, 508.106059551239, 505.60092878341675, 503.1083776950836, 500.62638902664185]
-    tensor([-0.6579, -1.1970, -0.3017,  0.0804, -0.9754,  0.7976, -0.8474,  0.1589,
-             0.8572, -2.0910], grad_fn=<SelectBackward0>)
+    [519.6917126178741, 517.1725468635559, 514.669549703598, 512.181147813797, 509.70680141448975, 507.24592089653015, 504.7966401576996, 502.3591022491455, 499.932115316391, 497.5144064426422]
+    tensor([-0.4558, -0.2154,  1.5456, -0.3919,  1.4459, -1.1440,  0.7898, -0.6760,
+             0.2530, -0.6624], grad_fn=<SelectBackward0>)
 
 
 
@@ -439,14 +439,14 @@ tips:
 
     [(['are', 'We', 'to', 'study'], 'about'), (['about', 'are', 'study', 'the'], 'to'), (['to', 'about', 'the', 'idea'], 'study'), (['study', 'to', 'idea', 'of'], 'the'), (['the', 'study', 'of', 'a'], 'idea')]
 
-    tensor([21, 12, 28, 23])
+    tensor([ 5, 13, 23, 19])
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.596 seconds)
+   **Total running time of the script:** ( 0 minutes  0.648 seconds)
 
 
 .. _sphx_glr_download_beginner_nlp_word_embeddings_tutorial.py:
