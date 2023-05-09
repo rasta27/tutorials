@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NLP From Scratch: Generating Names with a Character-Level RNN — PyTorch Tutorials 2.0.0+cu117 documentation</title>
+<title>NLP From Scratch: Generating Names with a Character-Level RNN — PyTorch Tutorials 2.0.1+cu117 documentation</title>
 <link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
 <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
@@ -183,7 +183,7 @@
 <div aria-label="main navigation" class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation">
 <div class="pytorch-left-menu-search">
 <div class="version">
-                  2.0.0+cu117
+                  2.0.1+cu117
                 </div>
 <div role="search">
 <form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
@@ -714,26 +714,26 @@ in <code class="docutils literal notranslate"><span class="pre">all_losses</span
         <span class="n">total_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0m 13s (5000 5%) 3.1145
-0m 27s (10000 10%) 2.5653
-0m 41s (15000 15%) 1.8826
-0m 54s (20000 20%) 2.1353
-1m 8s (25000 25%) 3.5065
-1m 22s (30000 30%) 1.8878
-1m 35s (35000 35%) 3.0167
-1m 49s (40000 40%) 2.4650
-2m 2s (45000 45%) 2.6601
-2m 16s (50000 50%) 2.2064
-2m 30s (55000 55%) 2.4805
-2m 43s (60000 60%) 2.6500
-2m 57s (65000 65%) 2.6362
-3m 10s (70000 70%) 2.4438
-3m 24s (75000 75%) 1.3234
-3m 38s (80000 80%) 2.5156
-3m 51s (85000 85%) 2.5076
-4m 5s (90000 90%) 2.0308
-4m 18s (95000 95%) 2.3162
-4m 32s (100000 100%) 2.4167
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0m 12s (5000 5%) 3.1805
+0m 25s (10000 10%) 2.5263
+0m 38s (15000 15%) 2.6882
+0m 50s (20000 20%) 1.9110
+1m 3s (25000 25%) 2.8352
+1m 15s (30000 30%) 2.2588
+1m 28s (35000 35%) 1.1344
+1m 41s (40000 40%) 3.1067
+1m 53s (45000 45%) 3.0433
+2m 6s (50000 50%) 2.3992
+2m 19s (55000 55%) 2.3454
+2m 31s (60000 60%) 2.6468
+2m 44s (65000 65%) 2.4213
+2m 57s (70000 70%) 2.1956
+3m 9s (75000 75%) 2.4885
+3m 22s (80000 80%) 1.4296
+3m 34s (85000 85%) 2.3663
+3m 47s (90000 90%) 2.3761
+3m 59s (95000 95%) 1.9884
+4m 12s (100000 100%) 1.8330
 </pre></div>
 </div>
 </div>
@@ -747,7 +747,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn generation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_generation_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_generation_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7fd27b5ef460&gt;]
+<img alt="char rnn generation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_generation_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_generation_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7fb092e623e0&gt;]
 </pre></div>
 </div>
 </div>
@@ -814,16 +814,16 @@ training and have the network choose its own starting letter.</p>
 <span class="n">samples</span><span class="p">(</span><span class="s1">'Chinese'</span><span class="p">,</span> <span class="s1">'CHI'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Rovako
-Uanevan
-Sakovakov
-Gerten
-Erenger
-Rang
-Sandero
-Parel
-Arane
-Chang
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Rovakov
+Uangovak
+Santovak
+Gerter
+Eren
+Reren
+Serana
+Parez
+Aller
+Cha
 Han
 Iun
 </pre></div>
@@ -848,7 +848,7 @@ choosing a start letter</p></li>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  32.840 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  12.508 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-generation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/322506af160d5e2056afd75de1fd34ee/char_rnn_generation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_generation_tutorial.py</span></code></a></p>

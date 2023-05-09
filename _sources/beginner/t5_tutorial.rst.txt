@@ -85,7 +85,8 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 11.2MB/s]
+     87%|########6 | 688k/792k [00:00<00:00, 6.81MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 6.95MB/s]
 
 
 
@@ -135,52 +136,48 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 9.27M/945M [00:00<00:10, 97.1MB/s]
-      3%|3         | 28.7M/945M [00:00<00:06, 160MB/s] 
-      5%|5         | 48.8M/945M [00:00<00:05, 183MB/s]
-      7%|7         | 69.4M/945M [00:00<00:04, 196MB/s]
-     10%|9         | 90.1M/945M [00:00<00:04, 204MB/s]
-     12%|#1        | 112M/945M [00:00<00:04, 211MB/s] 
-     14%|#4        | 133M/945M [00:00<00:03, 217MB/s]
-     16%|#6        | 154M/945M [00:00<00:03, 218MB/s]
-     19%|#8        | 176M/945M [00:00<00:03, 219MB/s]
-     21%|##        | 197M/945M [00:01<00:03, 221MB/s]
-     23%|##3       | 218M/945M [00:01<00:03, 214MB/s]
-     25%|##5       | 239M/945M [00:01<00:04, 150MB/s]
-     28%|##7       | 260M/945M [00:01<00:04, 166MB/s]
-     30%|##9       | 281M/945M [00:01<00:03, 180MB/s]
-     32%|###2      | 302M/945M [00:01<00:03, 192MB/s]
-     34%|###4      | 324M/945M [00:01<00:03, 201MB/s]
-     37%|###6      | 345M/945M [00:01<00:03, 207MB/s]
-     39%|###8      | 367M/945M [00:01<00:02, 212MB/s]
-     41%|####1     | 388M/945M [00:02<00:02, 216MB/s]
-     43%|####3     | 409M/945M [00:02<00:02, 218MB/s]
-     46%|####5     | 431M/945M [00:02<00:02, 220MB/s]
-     48%|####7     | 452M/945M [00:02<00:02, 220MB/s]
-     50%|#####     | 473M/945M [00:02<00:02, 191MB/s]
-     52%|#####2    | 492M/945M [00:02<00:03, 138MB/s]
-     54%|#####4    | 513M/945M [00:02<00:02, 155MB/s]
-     57%|#####6    | 534M/945M [00:02<00:02, 170MB/s]
-     59%|#####8    | 555M/945M [00:03<00:02, 182MB/s]
-     61%|######    | 576M/945M [00:03<00:02, 192MB/s]
-     63%|######3   | 597M/945M [00:03<00:01, 200MB/s]
-     65%|######5   | 618M/945M [00:03<00:01, 205MB/s]
-     68%|######7   | 638M/945M [00:03<00:01, 209MB/s]
-     70%|######9   | 659M/945M [00:03<00:01, 213MB/s]
-     72%|#######2  | 680M/945M [00:03<00:01, 214MB/s]
-     74%|#######4  | 702M/945M [00:03<00:01, 217MB/s]
-     76%|#######6  | 723M/945M [00:03<00:01, 204MB/s]
-     79%|#######8  | 744M/945M [00:03<00:01, 209MB/s]
-     81%|########  | 764M/945M [00:04<00:00, 212MB/s]
-     83%|########3 | 785M/945M [00:04<00:00, 214MB/s]
-     85%|########5 | 806M/945M [00:04<00:00, 215MB/s]
-     88%|########7 | 827M/945M [00:04<00:00, 217MB/s]
-     90%|########9 | 848M/945M [00:04<00:00, 218MB/s]
-     92%|#########2| 869M/945M [00:04<00:00, 219MB/s]
-     94%|#########4| 891M/945M [00:04<00:00, 221MB/s]
-     97%|#########6| 912M/945M [00:04<00:00, 222MB/s]
-     99%|#########8| 934M/945M [00:04<00:00, 222MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 201MB/s]
+      0%|          | 728k/945M [00:00<02:15, 7.30MB/s]
+      0%|          | 1.88M/945M [00:00<01:38, 10.0MB/s]
+      0%|          | 3.71M/945M [00:00<01:09, 14.1MB/s]
+      1%|          | 6.61M/945M [00:00<00:48, 20.5MB/s]
+      1%|1         | 11.1M/945M [00:00<00:32, 30.0MB/s]
+      2%|1         | 18.3M/945M [00:00<00:21, 45.4MB/s]
+      3%|3         | 29.9M/945M [00:00<00:13, 70.1MB/s]
+      5%|5         | 48.6M/945M [00:00<00:08, 110MB/s] 
+      8%|8         | 75.8M/945M [00:00<00:05, 165MB/s]
+     11%|#         | 104M/945M [00:01<00:04, 205MB/s] 
+     14%|#3        | 132M/945M [00:01<00:03, 231MB/s]
+     17%|#6        | 160M/945M [00:01<00:03, 251MB/s]
+     20%|#9        | 188M/945M [00:01<00:02, 265MB/s]
+     23%|##2       | 217M/945M [00:01<00:02, 275MB/s]
+     26%|##5       | 245M/945M [00:01<00:02, 282MB/s]
+     29%|##8       | 273M/945M [00:01<00:02, 286MB/s]
+     32%|###1      | 302M/945M [00:01<00:02, 289MB/s]
+     35%|###4      | 330M/945M [00:01<00:02, 292MB/s]
+     38%|###7      | 358M/945M [00:01<00:02, 287MB/s]
+     41%|####      | 385M/945M [00:02<00:02, 278MB/s]
+     44%|####3     | 412M/945M [00:02<00:02, 273MB/s]
+     46%|####6     | 438M/945M [00:02<00:01, 270MB/s]
+     49%|####9     | 464M/945M [00:02<00:01, 265MB/s]
+     52%|#####1    | 489M/945M [00:02<00:01, 264MB/s]
+     54%|#####4    | 514M/945M [00:02<00:01, 261MB/s]
+     57%|#####7    | 539M/945M [00:02<00:01, 253MB/s]
+     60%|#####9    | 563M/945M [00:02<00:01, 249MB/s]
+     62%|######2   | 587M/945M [00:02<00:01, 249MB/s]
+     65%|######4   | 611M/945M [00:02<00:01, 247MB/s]
+     67%|######7   | 635M/945M [00:03<00:01, 247MB/s]
+     70%|######9   | 658M/945M [00:03<00:01, 248MB/s]
+     73%|#######2  | 686M/945M [00:03<00:01, 261MB/s]
+     76%|#######5  | 714M/945M [00:03<00:00, 269MB/s]
+     78%|#######8  | 741M/945M [00:03<00:00, 273MB/s]
+     81%|########1 | 769M/945M [00:03<00:00, 279MB/s]
+     84%|########4 | 796M/945M [00:03<00:00, 283MB/s]
+     87%|########7 | 824M/945M [00:03<00:00, 286MB/s]
+     90%|######### | 852M/945M [00:03<00:00, 288MB/s]
+     93%|#########3| 880M/945M [00:03<00:00, 290MB/s]
+     96%|#########6| 908M/945M [00:04<00:00, 291MB/s]
+     99%|#########9| 936M/945M [00:04<00:00, 291MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 236MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -476,37 +473,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: 'i think John Kerry tried to come back and sell a bill of goods, hoping maybe that the Iranians wouldn’t say much about it,' the republican lawmaker said . 'i think Kerry tried to come back and sell a bill of goods, hoping maybe that the Iranians wouldn’t say much about it,' he said . 'i think i have a feeling that i have a lot of respect for the Iranian people,' he said .
+    prediction: rapist left teenager for dead after brutal attack at bus stop in Leeds . police have come across footage of a man following three other women . one woman was forced to flee from the man by bus after walking to her car . another woman was forced to walk miles away from the man by bus . a third woman can be seen turning around to find herself just an inch away .
 
-    target: Kerry 'is delusional' if he expected to claim the Iranians agreed to the phased lifting of sanctions when they didn't and get away with it, he said . Senate Armed Services Chair John McCain was responding to Iran saying there would be no formal pact unless sanctions relief is 'instant' 'I think John Kerry tried to come back and sell a bill of goods, hoping maybe that the Iranians wouldn’t say much about it,' GOP lawmaker said . 'At best, Iran agreed to disagree with the United States on key nuclear weapons-related issues and to continue talks,' another GOP senator said . Another  said 'the Ayatollah and President Obama appear to be talking about two separate agreements...unfortunately, I can’t say I’m surprised'
+    target: Man also followed three other women on the night of the attack in Leeds . One woman was forced to flee by bus while another went and hid in a shop . He later brutally raped an 18-year-old who had been waiting at a bus stop . Hit her on the head with a rock 20 times before dragging her into a garden .
 
 
     Example 2:
 
-    prediction: Mike Hand, 39, has been left wheelchair bound after being diagnosed with a tumour on his spine . he and wife Kate, who have an eight-year-old daughter, tried to claim for financial support to adapt their semi-detached home . but they were told they couldn't claim because they don't claim income support . they would have to earn 'virtually nothing' to receive the disability grant .
+    prediction: a final round of 66 saw the world no 1 finish on 12 under par in fourth place . he is six shots behind the eventual winner, who is yet to win the tournament . the american is the first man ever to reach 19 under par in the Masters .
 
-    target: Mark Hand, 39, was left wheelchair bound due to a tumour on his spine . Tried to claim for a disability grant to adapt his house with new bathroom . But was told that as his wife Kate works, he wouldn't be entitled to grant . Will be expected to spend all of his time in his living room with adaptations .
+    target: Rory McIlroy finished strongly to finish an impressive fourth in Augusta . McIlroy did his best to repair the damage of a tentative opening 27 holes . But the battle came too late to challenge long-time leader Jordan Spieth . Spieth rounded off a record-breaking week by winning first major of career . READ: McIIroy and Justin Rose lead tributes to Spieth after Masters win .
 
 
     Example 3:
 
-    prediction: the champions of England were smashed into submission at the Stade Marcel Michelin . it was a brutal mismatch and a shattering result for the english game as a whole . northampton were obliterated by the formidable top 14 giants .
+    prediction: puren was youngest brother of the final Qing monarch Puyi . 96-year-old died on friday after being taken to hospital with pneumonia . he had been suffering from poor health and memory loss in recent years .
 
-    target: Northampton were 27-0 down at the break at the Stade Marcel-Michelin . Noa Nakaitaci, Wesley Fofana and Nick Abendanon went over for Clermont . Alex Waller scored a late try for the visitors on Saturday night .
+    target: Puren was the youngest brother of Puyi, who ruled from 1908 to 1912 . Died on Friday after being taken to hospital with pneumonia in February . Previously established a primary school and taught until the late 1960s . He had been suffering from poor health and memory loss in recent years .
 
 
     Example 4:
 
-    prediction: the 16-year-old wonderkid cost £2.3million and was substituted after 65 minutes against Tudelano with the club's second team a goal down . he was substituted after 65 minutes with the club's second team a goal down . the starlet was whistled by supporters before the match, which ended 1-1 .
+    prediction: chelsea beat manchester united 1-0 at stamford bridge . a '10 against 10' match was played between the two sides . chelsea boss jose mourinho said he wanted the game to be 10 against 10 .
 
-    target: Martin Odegaard was dropped by Castilla boss Zinedine Zidane previously . He was substituted after 65 minutes against Tudelano on Sunday . Castilla were a goal down at the time as Odegaard was replaced . CLICK HERE for all the latest Real Madrid news .
+    target: Kurt Zouma kept an eye on Marouane Fellaini during Chelsea's 1-0 win . The French defender played as a defensive midfielder against Man United . Jose Mourinho wanted the 20-year-old to keep Fellaini out of the game . Chelsea boss impressed with Zouma's form during first season at the club . READ: Mourinho critics don't have leg to stand on as he is getting job done .
 
 
     Example 5:
 
-    prediction: three children feature in ground-breaking tv documentary . they become first children in the world to go through pioneering treatment . toxicity of immunotherapy means children have to be sedated .
+    prediction: social media expert says people need to be more aware of their ramblings . jade Ruthven was recently slammed for posting 'so over' her baby's life . social media expert says people need to be more aware of their ramblings .
 
-    target: Ground-breaking TV documentary followed three children in medical trials . They were the first in world to have pioneering treatment immunotherapy . It uses powerful drugs to kill off cancer cells and destroy bone marrow . Toxicity of immunotherapy means children often need to be sedated . In the film, the children's parents reveal why they decided to take part . The documentary, Raining In My Heart, will be shown on ITV on April 15 . Raining In My Heart will be shown on ITV on April 15.
+    target: There has been a rise in 'sharenting' - sharing photos of children online . The trend could be dangerous for your child in the long run . Who is really looking at your photos and how far do they reach online? People who don't turn off location settings are leaving kids vulnerable . An Australian woman received a scathing letter over posting baby photos .
 
 
 
@@ -860,7 +857,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 5 minutes  5.525 seconds)
+   **Total running time of the script:** ( 4 minutes  0.411 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

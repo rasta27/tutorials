@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Neural Transfer Using PyTorch — PyTorch Tutorials 2.0.0+cu117 documentation</title>
+<title>Neural Transfer Using PyTorch — PyTorch Tutorials 2.0.1+cu117 documentation</title>
 <link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
 <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
@@ -181,7 +181,7 @@
 <div aria-label="main navigation" class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation">
 <div class="pytorch-left-menu-search">
 <div class="version">
-                  2.0.0+cu117
+                  2.0.1+cu117
                 </div>
 <div role="search">
 <form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
@@ -662,27 +662,41 @@ Arguments other than a weight enum or `None` for 'weights' are deprecated since 
 Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth
 
   0%|          | 0.00/548M [00:00&lt;?, ?B/s]
-  2%|2         | 12.2M/548M [00:00&lt;00:04, 128MB/s]
-  7%|7         | 40.3M/548M [00:00&lt;00:02, 226MB/s]
- 12%|#2        | 68.2M/548M [00:00&lt;00:01, 257MB/s]
- 18%|#7        | 96.2M/548M [00:00&lt;00:01, 271MB/s]
- 23%|##2       | 124M/548M [00:00&lt;00:01, 279MB/s]
- 28%|##7       | 152M/548M [00:00&lt;00:01, 285MB/s]
- 33%|###2      | 180M/548M [00:00&lt;00:01, 288MB/s]
- 38%|###8      | 208M/548M [00:00&lt;00:01, 289MB/s]
- 43%|####3     | 237M/548M [00:00&lt;00:01, 291MB/s]
- 48%|####8     | 265M/548M [00:01&lt;00:01, 293MB/s]
- 53%|#####3    | 293M/548M [00:01&lt;00:00, 294MB/s]
- 59%|#####8    | 321M/548M [00:01&lt;00:00, 294MB/s]
- 64%|######3   | 350M/548M [00:01&lt;00:00, 295MB/s]
- 69%|######8   | 378M/548M [00:01&lt;00:00, 295MB/s]
- 74%|#######4  | 406M/548M [00:01&lt;00:00, 293MB/s]
- 79%|#######9  | 434M/548M [00:01&lt;00:00, 280MB/s]
- 84%|########4 | 461M/548M [00:01&lt;00:00, 273MB/s]
- 89%|########8 | 487M/548M [00:01&lt;00:00, 268MB/s]
- 93%|#########3| 512M/548M [00:01&lt;00:00, 264MB/s]
- 98%|#########8| 537M/548M [00:02&lt;00:00, 260MB/s]
-100%|##########| 548M/548M [00:02&lt;00:00, 275MB/s]
+  2%|1         | 9.22M/548M [00:00&lt;00:05, 96.7MB/s]
+  4%|3         | 21.2M/548M [00:00&lt;00:04, 113MB/s]
+  7%|6         | 38.3M/548M [00:00&lt;00:03, 144MB/s]
+ 10%|9         | 52.3M/548M [00:00&lt;00:03, 145MB/s]
+ 13%|#2        | 69.0M/548M [00:00&lt;00:03, 156MB/s]
+ 15%|#5        | 84.3M/548M [00:00&lt;00:03, 157MB/s]
+ 18%|#8        | 101M/548M [00:00&lt;00:02, 163MB/s]
+ 21%|##1       | 117M/548M [00:00&lt;00:02, 162MB/s]
+ 24%|##4       | 132M/548M [00:00&lt;00:02, 160MB/s]
+ 27%|##6       | 147M/548M [00:01&lt;00:02, 157MB/s]
+ 30%|##9       | 162M/548M [00:01&lt;00:04, 98.7MB/s]
+ 33%|###2      | 179M/548M [00:01&lt;00:03, 108MB/s]
+ 35%|###4      | 191M/548M [00:01&lt;00:03, 96.5MB/s]
+ 38%|###8      | 208M/548M [00:01&lt;00:03, 115MB/s]
+ 42%|####1     | 228M/548M [00:01&lt;00:02, 137MB/s]
+ 45%|####5     | 249M/548M [00:01&lt;00:02, 154MB/s]
+ 48%|####8     | 265M/548M [00:02&lt;00:01, 152MB/s]
+ 52%|#####1    | 285M/548M [00:02&lt;00:01, 166MB/s]
+ 55%|#####5    | 301M/548M [00:02&lt;00:01, 143MB/s]
+ 58%|#####8    | 319M/548M [00:02&lt;00:01, 151MB/s]
+ 61%|######1   | 336M/548M [00:02&lt;00:01, 159MB/s]
+ 64%|######4   | 352M/548M [00:02&lt;00:01, 132MB/s]
+ 67%|######6   | 365M/548M [00:03&lt;00:02, 82.4MB/s]
+ 69%|######8   | 377M/548M [00:03&lt;00:01, 89.8MB/s]
+ 73%|#######3  | 400M/548M [00:03&lt;00:01, 119MB/s]
+ 77%|#######6  | 420M/548M [00:03&lt;00:00, 138MB/s]
+ 80%|#######9  | 436M/548M [00:03&lt;00:00, 141MB/s]
+ 83%|########2 | 452M/548M [00:03&lt;00:00, 149MB/s]
+ 85%|########5 | 468M/548M [00:03&lt;00:00, 152MB/s]
+ 88%|########8 | 484M/548M [00:03&lt;00:00, 155MB/s]
+ 91%|#########1| 500M/548M [00:03&lt;00:00, 158MB/s]
+ 94%|#########4| 517M/548M [00:03&lt;00:00, 164MB/s]
+ 97%|#########7| 533M/548M [00:04&lt;00:00, 126MB/s]
+100%|#########9| 546M/548M [00:04&lt;00:00, 94.2MB/s]
+100%|##########| 548M/548M [00:04&lt;00:00, 129MB/s]
 </pre></div>
 </div>
 <p>Additionally, VGG networks are trained on images with each channel
@@ -895,25 +909,25 @@ To copy construct from a tensor, it is recommended to use sourceTensor.clone().d
 
 Optimizing..
 run [50]:
-Style Loss : 4.177477 Content Loss: 4.143873
+Style Loss : 4.839496 Content Loss: 4.111456
 
 run [100]:
-Style Loss : 1.180913 Content Loss: 3.071980
+Style Loss : 1.138684 Content Loss: 3.050140
 
 run [150]:
-Style Loss : 0.736375 Content Loss: 2.669044
+Style Loss : 0.718338 Content Loss: 2.655228
 
 run [200]:
-Style Loss : 0.498682 Content Loss: 2.506294
+Style Loss : 0.477471 Content Loss: 2.492918
 
 run [250]:
-Style Loss : 0.359533 Content Loss: 2.413907
+Style Loss : 0.348636 Content Loss: 2.406418
 
 run [300]:
-Style Loss : 0.273335 Content Loss: 2.353902
+Style Loss : 0.263655 Content Loss: 2.351333
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  33.047 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  35.627 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-neural-style-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/b3bcd49c4dd9be3a44c6c5d2e2a8b0cd/neural_style_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_style_tutorial.py</span></code></a></p>

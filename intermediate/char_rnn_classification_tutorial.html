@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NLP From Scratch: Classifying Names with a Character-Level RNN — PyTorch Tutorials 2.0.0+cu117 documentation</title>
+<title>NLP From Scratch: Classifying Names with a Character-Level RNN — PyTorch Tutorials 2.0.1+cu117 documentation</title>
 <link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
 <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
@@ -183,7 +183,7 @@
 <div aria-label="main navigation" class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation">
 <div class="pytorch-left-menu-search">
 <div class="version">
-                  2.0.0+cu117
+                  2.0.1+cu117
                 </div>
 <div role="search">
 <form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
@@ -678,16 +678,16 @@ language):</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'category ='</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="s1">'/ line ='</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Russian / line = Vyshkvarko
-category = Polish / line = Mozdzierz
-category = Russian / line = Zhelezov
-category = Scottish / line = Stevenson
-category = Polish / line = Wojda
-category = French / line = Plamondon
-category = English / line = Forrest
-category = Czech / line = Opizka
-category = Polish / line = Krakowski
-category = Dutch / line = Leeuwenhoek
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Polish / line = Zuraw
+category = English / line = Austen
+category = Czech / line = Navratil
+category = English / line = Kinsella
+category = Scottish / line = Mcgregor
+category = Italian / line = Balboni
+category = Japanese / line = Higashiyama
+category = Scottish / line = Sutherland
+category = English / line = Stretton
+category = Vietnamese / line = Vuong
 </pre></div>
 </div>
 </div>
@@ -777,26 +777,26 @@ average of the loss.</p>
         <span class="n">current_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 2.3473 Pho / Chinese ✗ (Vietnamese)
-10000 10% (0m 13s) 2.7111 Foxley / Czech ✗ (English)
-15000 15% (0m 20s) 1.7404 Garcia / Portuguese ✓
-20000 20% (0m 26s) 2.0301 Villa / Spanish ✗ (Italian)
-25000 25% (0m 33s) 1.7410 O'Neal / Irish ✓
-30000 30% (0m 40s) 2.8315 Bach / Vietnamese ✗ (German)
-35000 35% (0m 46s) 2.1008 Costa / Arabic ✗ (Portuguese)
-40000 40% (0m 53s) 0.7608 Juan / Chinese ✓
-45000 45% (1m 0s) 3.8249 King / Chinese ✗ (Scottish)
-50000 50% (1m 7s) 0.9805 Peter / German ✓
-55000 55% (1m 13s) 1.5980 Metzger / Dutch ✗ (German)
-60000 60% (1m 20s) 3.5155 Albuquerque / French ✗ (Portuguese)
-65000 65% (1m 27s) 0.2666 Trieu / Vietnamese ✓
-70000 70% (1m 33s) 0.9262 Gabler / German ✓
-75000 75% (1m 40s) 1.4221 Daher / Arabic ✓
-80000 80% (1m 47s) 4.4163 Eberg / Dutch ✗ (Russian)
-85000 85% (1m 53s) 2.4931 Cummins / Irish ✗ (English)
-90000 90% (2m 0s) 3.1550 Petersen / Dutch ✗ (Czech)
-95000 95% (2m 6s) 0.0799 Meeuweszen / Dutch ✓
-100000 100% (2m 13s) 0.9934 Monette / French ✓
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 3.1030 Ohme / Vietnamese ✗ (German)
+10000 10% (0m 12s) 1.0547 Lai / Chinese ✓
+15000 15% (0m 18s) 0.8862 Accosi / Italian ✓
+20000 20% (0m 24s) 1.1630 Parodi / Italian ✓
+25000 25% (0m 30s) 1.3575 Dong / Vietnamese ✗ (Chinese)
+30000 30% (0m 37s) 1.5622 Bello / Italian ✗ (Spanish)
+35000 35% (0m 43s) 0.3944 Mikolajczak / Polish ✓
+40000 40% (0m 49s) 2.6931 Chamberlain / Irish ✗ (English)
+45000 45% (0m 55s) 1.1129 Spiker / Dutch ✓
+50000 50% (1m 1s) 1.3320 Rosa / Spanish ✓
+55000 55% (1m 7s) 0.4101 Kasprzak / Polish ✓
+60000 60% (1m 14s) 0.0499 Laconi / Italian ✓
+65000 65% (1m 20s) 0.9569 Rooiakker / Dutch ✓
+70000 70% (1m 26s) 0.4959 Feng / Chinese ✓
+75000 75% (1m 32s) 0.4993 Paitakes / Greek ✓
+80000 80% (1m 39s) 1.0765 Trang / Vietnamese ✓
+85000 85% (1m 45s) 1.6373 Espino / Italian ✗ (Spanish)
+90000 90% (1m 51s) 2.5926 Eruzalimchik / Polish ✗ (Russian)
+95000 95% (1m 57s) 0.4094 Iwahashi / Japanese ✓
+100000 100% (2m 3s) 1.2833 Samaha / Japanese ✗ (Arabic)
 </pre></div>
 </div>
 </div>
@@ -811,7 +811,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f672d43e0b0&gt;]
+<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f8c29fdded0&gt;]
 </pre></div>
 </div>
 </div>
@@ -902,19 +902,19 @@ English (perhaps because of overlap with other languages).</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.59) Czech
-(-1.21) Russian
-(-2.87) Polish
+(-0.35) Russian
+(-2.24) Czech
+(-2.45) Polish
 
 &gt; Jackson
-(-0.39) Scottish
-(-2.03) English
-(-2.70) Czech
+(-0.30) Scottish
+(-2.33) English
+(-2.73) Russian
 
 &gt; Satoshi
-(-0.64) Italian
-(-1.87) Polish
-(-2.14) Japanese
+(-0.92) Italian
+(-2.45) Polish
+(-2.57) Japanese
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -958,7 +958,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  21.345 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  11.123 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/37c8905519d3fd3f437b783a48d06eac/char_rnn_classification_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></p>

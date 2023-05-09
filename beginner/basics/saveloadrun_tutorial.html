@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Save and Load the Model — PyTorch Tutorials 2.0.0+cu117 documentation</title>
+<title>Save and Load the Model — PyTorch Tutorials 2.0.1+cu117 documentation</title>
 <link href="../../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <!-- <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> -->
 <link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
@@ -183,7 +183,7 @@
 <div aria-label="main navigation" class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation">
 <div class="pytorch-left-menu-search">
 <div class="version">
-                  2.0.0+cu117
+                  2.0.1+cu117
                 </div>
 <div role="search">
 <form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
@@ -436,33 +436,128 @@ method:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg16-397923af.pth
 
   0%|          | 0.00/528M [00:00&lt;?, ?B/s]
-  2%|2         | 11.2M/528M [00:00&lt;00:04, 117MB/s]
-  7%|6         | 35.8M/528M [00:00&lt;00:02, 200MB/s]
- 11%|#1        | 60.6M/528M [00:00&lt;00:02, 227MB/s]
- 16%|#6        | 86.1M/528M [00:00&lt;00:01, 243MB/s]
- 21%|##1       | 112M/528M [00:00&lt;00:01, 252MB/s]
- 26%|##5       | 137M/528M [00:00&lt;00:01, 255MB/s]
- 31%|###       | 162M/528M [00:00&lt;00:01, 260MB/s]
- 35%|###5      | 187M/528M [00:00&lt;00:01, 260MB/s]
- 40%|####      | 212M/528M [00:00&lt;00:01, 261MB/s]
- 45%|####4     | 237M/528M [00:01&lt;00:01, 262MB/s]
- 50%|####9     | 263M/528M [00:01&lt;00:01, 263MB/s]
- 55%|#####4    | 288M/528M [00:01&lt;00:00, 263MB/s]
- 59%|#####9    | 313M/528M [00:01&lt;00:00, 263MB/s]
- 64%|######4   | 338M/528M [00:01&lt;00:00, 264MB/s]
- 69%|######8   | 364M/528M [00:01&lt;00:00, 266MB/s]
- 74%|#######3  | 390M/528M [00:01&lt;00:00, 267MB/s]
- 79%|#######8  | 415M/528M [00:01&lt;00:00, 266MB/s]
- 84%|########3 | 441M/528M [00:01&lt;00:00, 265MB/s]
- 88%|########8 | 466M/528M [00:01&lt;00:00, 265MB/s]
- 93%|#########3| 491M/528M [00:02&lt;00:00, 265MB/s]
- 98%|#########7| 517M/528M [00:02&lt;00:00, 265MB/s]
-100%|##########| 528M/528M [00:02&lt;00:00, 258MB/s]
+  2%|2         | 10.6M/528M [00:00&lt;00:04, 111MB/s]
+  7%|6         | 34.5M/528M [00:00&lt;00:02, 193MB/s]
+ 11%|#1        | 58.4M/528M [00:00&lt;00:02, 220MB/s]
+ 16%|#5        | 81.9M/528M [00:00&lt;00:02, 230MB/s]
+ 20%|#9        | 104M/528M [00:00&lt;00:01, 230MB/s]
+ 24%|##3       | 126M/528M [00:00&lt;00:01, 224MB/s]
+ 28%|##7       | 147M/528M [00:00&lt;00:02, 137MB/s]
+ 31%|###1      | 164M/528M [00:01&lt;00:05, 65.3MB/s]
+ 33%|###3      | 176M/528M [00:01&lt;00:07, 52.0MB/s]
+ 35%|###5      | 186M/528M [00:02&lt;00:08, 44.2MB/s]
+ 37%|###6      | 193M/528M [00:02&lt;00:08, 43.6MB/s]
+ 38%|###7      | 199M/528M [00:02&lt;00:08, 40.6MB/s]
+ 39%|###8      | 204M/528M [00:02&lt;00:08, 41.4MB/s]
+ 40%|###9      | 209M/528M [00:02&lt;00:07, 42.5MB/s]
+ 41%|####      | 214M/528M [00:03&lt;00:07, 41.1MB/s]
+ 41%|####1     | 218M/528M [00:03&lt;00:08, 40.2MB/s]
+ 42%|####2     | 223M/528M [00:03&lt;00:07, 42.3MB/s]
+ 43%|####3     | 228M/528M [00:03&lt;00:08, 37.4MB/s]
+ 44%|####3     | 231M/528M [00:03&lt;00:08, 37.2MB/s]
+ 45%|####4     | 236M/528M [00:03&lt;00:07, 38.6MB/s]
+ 45%|####5     | 239M/528M [00:04&lt;00:13, 22.7MB/s]
+ 46%|####5     | 242M/528M [00:04&lt;00:12, 24.0MB/s]
+ 46%|####6     | 245M/528M [00:04&lt;00:11, 25.2MB/s]
+ 47%|####7     | 248M/528M [00:04&lt;00:12, 24.2MB/s]
+ 48%|####7     | 251M/528M [00:04&lt;00:11, 24.5MB/s]
+ 48%|####8     | 254M/528M [00:04&lt;00:11, 24.3MB/s]
+ 49%|####8     | 256M/528M [00:04&lt;00:12, 23.3MB/s]
+ 49%|####8     | 258M/528M [00:04&lt;00:12, 22.9MB/s]
+ 50%|####9     | 261M/528M [00:05&lt;00:11, 25.3MB/s]
+ 50%|#####     | 264M/528M [00:05&lt;00:10, 25.2MB/s]
+ 50%|#####     | 266M/528M [00:05&lt;00:15, 17.8MB/s]
+ 51%|#####     | 269M/528M [00:05&lt;00:14, 19.3MB/s]
+ 51%|#####1    | 272M/528M [00:05&lt;00:12, 21.3MB/s]
+ 52%|#####1    | 274M/528M [00:05&lt;00:11, 23.1MB/s]
+ 52%|#####2    | 277M/528M [00:05&lt;00:12, 21.7MB/s]
+ 53%|#####2    | 279M/528M [00:05&lt;00:12, 20.4MB/s]
+ 53%|#####3    | 281M/528M [00:06&lt;00:14, 17.8MB/s]
+ 54%|#####3    | 283M/528M [00:06&lt;00:14, 18.0MB/s]
+ 54%|#####3    | 285M/528M [00:06&lt;00:13, 18.4MB/s]
+ 55%|#####4    | 288M/528M [00:06&lt;00:11, 22.5MB/s]
+ 55%|#####5    | 291M/528M [00:06&lt;00:10, 24.8MB/s]
+ 56%|#####5    | 294M/528M [00:06&lt;00:09, 26.5MB/s]
+ 56%|#####6    | 296M/528M [00:06&lt;00:09, 26.1MB/s]
+ 57%|#####6    | 299M/528M [00:07&lt;00:19, 12.3MB/s]
+ 57%|#####7    | 301M/528M [00:07&lt;00:16, 14.1MB/s]
+ 57%|#####7    | 303M/528M [00:07&lt;00:15, 15.4MB/s]
+ 58%|#####7    | 305M/528M [00:07&lt;00:14, 15.7MB/s]
+ 58%|#####8    | 307M/528M [00:07&lt;00:14, 16.0MB/s]
+ 59%|#####8    | 309M/528M [00:07&lt;00:14, 15.9MB/s]
+ 59%|#####8    | 311M/528M [00:07&lt;00:15, 15.0MB/s]
+ 59%|#####9    | 313M/528M [00:08&lt;00:14, 15.9MB/s]
+ 60%|#####9    | 314M/528M [00:08&lt;00:13, 16.7MB/s]
+ 60%|#####9    | 316M/528M [00:08&lt;00:14, 15.2MB/s]
+ 60%|######    | 318M/528M [00:08&lt;00:13, 16.5MB/s]
+ 61%|######    | 321M/528M [00:08&lt;00:11, 18.9MB/s]
+ 61%|######1   | 323M/528M [00:08&lt;00:10, 21.4MB/s]
+ 62%|######1   | 325M/528M [00:08&lt;00:10, 19.4MB/s]
+ 62%|######2   | 327M/528M [00:08&lt;00:14, 14.4MB/s]
+ 62%|######2   | 330M/528M [00:09&lt;00:12, 16.8MB/s]
+ 63%|######2   | 332M/528M [00:09&lt;00:13, 15.2MB/s]
+ 63%|######3   | 334M/528M [00:09&lt;00:12, 16.2MB/s]
+ 64%|######3   | 337M/528M [00:09&lt;00:10, 19.7MB/s]
+ 65%|######4   | 341M/528M [00:09&lt;00:08, 23.7MB/s]
+ 65%|######5   | 345M/528M [00:09&lt;00:07, 26.4MB/s]
+ 66%|######6   | 349M/528M [00:09&lt;00:05, 32.0MB/s]
+ 67%|######6   | 352M/528M [00:09&lt;00:06, 28.3MB/s]
+ 67%|######7   | 355M/528M [00:10&lt;00:06, 26.7MB/s]
+ 68%|######7   | 358M/528M [00:10&lt;00:06, 26.8MB/s]
+ 68%|######8   | 361M/528M [00:10&lt;00:06, 27.5MB/s]
+ 69%|######9   | 365M/528M [00:10&lt;00:05, 32.8MB/s]
+ 70%|######9   | 369M/528M [00:10&lt;00:04, 33.5MB/s]
+ 70%|#######   | 372M/528M [00:10&lt;00:05, 31.2MB/s]
+ 71%|#######1  | 375M/528M [00:10&lt;00:05, 29.9MB/s]
+ 72%|#######1  | 378M/528M [00:10&lt;00:05, 30.8MB/s]
+ 72%|#######2  | 381M/528M [00:10&lt;00:04, 31.4MB/s]
+ 73%|#######2  | 385M/528M [00:11&lt;00:04, 32.6MB/s]
+ 74%|#######3  | 389M/528M [00:11&lt;00:04, 35.3MB/s]
+ 74%|#######4  | 392M/528M [00:11&lt;00:04, 34.5MB/s]
+ 75%|#######4  | 396M/528M [00:11&lt;00:04, 34.3MB/s]
+ 76%|#######5  | 399M/528M [00:11&lt;00:03, 35.3MB/s]
+ 76%|#######6  | 403M/528M [00:11&lt;00:03, 33.4MB/s]
+ 77%|#######6  | 406M/528M [00:11&lt;00:04, 29.1MB/s]
+ 78%|#######7  | 410M/528M [00:11&lt;00:03, 32.4MB/s]
+ 78%|#######8  | 413M/528M [00:12&lt;00:05, 23.9MB/s]
+ 79%|#######8  | 416M/528M [00:12&lt;00:04, 25.5MB/s]
+ 79%|#######9  | 419M/528M [00:12&lt;00:06, 18.3MB/s]
+ 80%|#######9  | 422M/528M [00:12&lt;00:05, 20.9MB/s]
+ 80%|########  | 425M/528M [00:12&lt;00:05, 21.4MB/s]
+ 81%|########1 | 428M/528M [00:12&lt;00:04, 23.8MB/s]
+ 82%|########1 | 432M/528M [00:12&lt;00:03, 25.6MB/s]
+ 82%|########2 | 435M/528M [00:13&lt;00:03, 26.9MB/s]
+ 83%|########2 | 438M/528M [00:13&lt;00:04, 23.4MB/s]
+ 83%|########3 | 440M/528M [00:13&lt;00:04, 22.6MB/s]
+ 84%|########4 | 445M/528M [00:13&lt;00:02, 29.6MB/s]
+ 85%|########5 | 450M/528M [00:13&lt;00:02, 34.4MB/s]
+ 86%|########6 | 454M/528M [00:13&lt;00:02, 36.5MB/s]
+ 87%|########6 | 458M/528M [00:13&lt;00:02, 32.7MB/s]
+ 87%|########7 | 461M/528M [00:13&lt;00:02, 28.4MB/s]
+ 88%|########7 | 464M/528M [00:14&lt;00:02, 27.4MB/s]
+ 88%|########8 | 467M/528M [00:14&lt;00:02, 25.9MB/s]
+ 89%|########8 | 469M/528M [00:14&lt;00:02, 25.9MB/s]
+ 89%|########9 | 472M/528M [00:14&lt;00:02, 25.2MB/s]
+ 90%|########9 | 475M/528M [00:14&lt;00:02, 26.5MB/s]
+ 90%|######### | 477M/528M [00:14&lt;00:02, 18.9MB/s]
+ 92%|#########2| 488M/528M [00:14&lt;00:01, 39.5MB/s]
+ 93%|#########3| 493M/528M [00:15&lt;00:00, 39.7MB/s]
+ 94%|#########4| 497M/528M [00:15&lt;00:00, 34.4MB/s]
+ 95%|#########4| 501M/528M [00:15&lt;00:00, 31.0MB/s]
+ 96%|#########5| 505M/528M [00:15&lt;00:00, 26.4MB/s]
+ 96%|#########6| 508M/528M [00:15&lt;00:00, 27.7MB/s]
+ 97%|#########6| 511M/528M [00:15&lt;00:00, 26.1MB/s]
+ 97%|#########7| 515M/528M [00:15&lt;00:00, 29.2MB/s]
+ 98%|#########8| 518M/528M [00:15&lt;00:00, 30.1MB/s]
+ 99%|#########8| 521M/528M [00:16&lt;00:00, 25.0MB/s]
+ 99%|#########9| 523M/528M [00:16&lt;00:00, 25.0MB/s]
+100%|#########9| 527M/528M [00:16&lt;00:00, 26.5MB/s]
+100%|##########| 528M/528M [00:16&lt;00:00, 33.7MB/s]
 </pre></div>
 </div>
 <p>To load model weights, you need to create an instance of the same model first, and then load the parameters
 using <code class="docutils literal notranslate"><span class="pre">load_state_dict()</span></code> method.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torchvision-models sphx-glr-backref-type-py-function" href="https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg16.html#torchvision.models.vgg16" title="torchvision.models.vgg16"><span class="n">models</span><span class="o">.</span><span class="n">vgg16</span></a><span class="p">()</span> <span class="c1"># we do not specify weights, i.e. create untrained model</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torchvision-models sphx-glr-backref-type-py-function" href="https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg16.html#torchvision.models.vgg16" title="torchvision.models.vgg16"><span class="n">models</span><span class="o">.</span><span class="n">vgg16</span></a><span class="p">()</span> <span class="c1"># we do not specify ``weights``, i.e. create untrained model</span>
 <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.load_state_dict" title="torch.nn.Module.load_state_dict"><span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.load.html#torch.load" title="torch.load"><span class="n">torch</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span><span class="s1">'model_weights.pth'</span><span class="p">))</span>
 <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.eval" title="torch.nn.Module.eval"><span class="n">model</span><span class="o">.</span><span class="n">eval</span></a><span class="p">()</span>
 </pre></div>
@@ -539,7 +634,7 @@ the model, in which case we can pass <code class="docutils literal notranslate">
 <div class="section" id="related-tutorials">
 <h2>Related Tutorials<a class="headerlink" href="#related-tutorials" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html">Saving and Loading a General Checkpoint in PyTorch</a></p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.068 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  22.605 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-basics-saveloadrun-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3648b0dccaebca71b234070fe2124770/saveloadrun_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">saveloadrun_tutorial.py</span></code></a></p>
