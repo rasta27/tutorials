@@ -566,15 +566,15 @@ and <code class="docutils literal notranslate"><span class="pre">torch.nn.functi
 </pre></div>
 </div>
 </div>
-<div class="section" id="define-and-intialize-the-neural-network">
-<h3>2. Define and intialize the neural network<a class="headerlink" href="#define-and-intialize-the-neural-network" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="define-and-initialize-the-neural-network">
+<h3>2. Define and initialize the neural network<a class="headerlink" href="#define-and-initialize-the-neural-network" title="Permalink to this heading">¶</a></h3>
 <p>Our network will recognize images. We will use a process built into
 PyTorch called convolution. Convolution adds each element of an image to
 its local neighbors, weighted by a kernel, or a small matrix, that
 helps us extract certain features (like edge detection, sharpness,
 blurriness, etc.) from the input image.</p>
 <p>There are two requirements for defining the <code class="docutils literal notranslate"><span class="pre">Net</span></code> class of your model.
-The first is writing an <code class="docutils literal notranslate"><span class="pre">__init__</span></code> function that references
+The first is writing an __init__ function that references
 <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>. This function is where you define the fully connected
 layers in your neural network.</p>
 <p>Using convolution, we will define our model to take 1 input image
@@ -642,7 +642,7 @@ algorithm.</p>
       <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
       <span class="c1"># Flatten x with start_dim=1</span>
       <span class="n">x</span> <span class="o">=</span> <a href="https://pytorch.org/docs/stable/generated/torch.flatten.html#torch.flatten" title="torch.flatten" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function"><span class="n">torch</span><span class="o">.</span><span class="n">flatten</span></a><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-      <span class="c1"># Pass data through fc1</span>
+      <span class="c1"># Pass data through ``fc1``</span>
       <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
       <span class="n">x</span> <span class="o">=</span> <a href="https://pytorch.org/docs/stable/generated/torch.nn.functional.relu.html#torch.nn.functional.relu" title="torch.nn.functional.relu" class="sphx-glr-backref-module-torch-nn-functional sphx-glr-backref-type-py-function"><span class="n">F</span><span class="o">.</span><span class="n">relu</span></a><span class="p">(</span><span class="n">x</span><span class="p">)</span>
       <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -758,7 +758,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <li><a class="reference internal" href="#setup">Setup</a></li>
 <li><a class="reference internal" href="#steps">Steps</a><ul>
 <li><a class="reference internal" href="#import-necessary-libraries-for-loading-our-data">1. Import necessary libraries for loading our data</a></li>
-<li><a class="reference internal" href="#define-and-intialize-the-neural-network">2. Define and intialize the neural network</a></li>
+<li><a class="reference internal" href="#define-and-initialize-the-neural-network">2. Define and initialize the neural network</a></li>
 <li><a class="reference internal" href="#specify-how-data-will-pass-through-your-model">3. Specify how data will pass through your model</a></li>
 <li><a class="reference internal" href="#optional-pass-data-through-your-model-to-test">4. [Optional] Pass data through your model to test</a></li>
 </ul>

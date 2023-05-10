@@ -134,22 +134,23 @@ We transform them to Tensors of normalized range [-1, 1].
     Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
 
       0%|          | 0/170498071 [00:00<?, ?it/s]
-      0%|          | 458752/170498071 [00:00<00:40, 4151284.66it/s]
-      4%|4         | 7503872/170498071 [00:00<00:03, 41472280.61it/s]
-     11%|#1        | 19234816/170498071 [00:00<00:02, 75262815.97it/s]
-     18%|#8        | 30965760/170498071 [00:00<00:01, 91598905.65it/s]
-     25%|##5       | 42696704/170498071 [00:00<00:01, 100716150.23it/s]
-     32%|###1      | 54427648/170498071 [00:00<00:01, 106264107.63it/s]
-     39%|###8      | 66191360/170498071 [00:00<00:00, 109889249.29it/s]
-     46%|####5     | 77922304/170498071 [00:00<00:00, 112167706.51it/s]
-     53%|#####2    | 89653248/170498071 [00:00<00:00, 113765352.33it/s]
-     59%|#####9    | 101384192/170498071 [00:01<00:00, 114828563.98it/s]
-     66%|######6   | 113115136/170498071 [00:01<00:00, 115563032.00it/s]
-     73%|#######3  | 124846080/170498071 [00:01<00:00, 116070358.65it/s]
-     80%|########  | 136577024/170498071 [00:01<00:00, 116387417.81it/s]
-     87%|########6 | 148275200/170498071 [00:01<00:00, 116538525.73it/s]
-     94%|#########3| 160038912/170498071 [00:01<00:00, 116769214.04it/s]
-    100%|##########| 170498071/170498071 [00:01<00:00, 106318938.23it/s]
+      0%|          | 458752/170498071 [00:00<00:41, 4106236.25it/s]
+      4%|4         | 7176192/170498071 [00:00<00:04, 39448424.42it/s]
+     11%|#         | 18382848/170498071 [00:00<00:02, 71682464.78it/s]
+     17%|#7        | 29425664/170498071 [00:00<00:01, 86691390.31it/s]
+     24%|##3       | 40402944/170498071 [00:00<00:01, 94877548.92it/s]
+     30%|###       | 51707904/170498071 [00:00<00:01, 100980921.75it/s]
+     37%|###6      | 62455808/170498071 [00:00<00:01, 103035593.39it/s]
+     43%|####3     | 73990144/170498071 [00:00<00:00, 106902101.14it/s]
+     50%|####9     | 84738048/170498071 [00:00<00:00, 106993701.79it/s]
+     56%|#####6    | 96010240/170498071 [00:01<00:00, 108730050.48it/s]
+     63%|######2   | 106921984/170498071 [00:01<00:00, 108117440.80it/s]
+     69%|######9   | 118128640/170498071 [00:01<00:00, 109305713.56it/s]
+     76%|#######5  | 129138688/170498071 [00:01<00:00, 109440248.83it/s]
+     82%|########2 | 140115968/170498071 [00:01<00:00, 109238442.56it/s]
+     89%|########8 | 151224320/170498071 [00:01<00:00, 109762539.51it/s]
+     95%|#########5| 162234368/170498071 [00:01<00:00, 108924142.54it/s]
+    100%|##########| 170498071/170498071 [00:01<00:00, 100653679.78it/s]
     Extracting ./data/cifar-10-python.tar.gz to ./data
     Files already downloaded and verified
 
@@ -201,7 +202,7 @@ Let us show some of the training images, for fun.
 
  .. code-block:: none
 
-    truck horse ship  plane
+    ship  deer  cat   cat  
 
 
 
@@ -320,18 +321,18 @@ network and optimize.
 
  .. code-block:: none
 
-    [1,  2000] loss: 2.171
-    [1,  4000] loss: 1.865
-    [1,  6000] loss: 1.662
-    [1,  8000] loss: 1.588
-    [1, 10000] loss: 1.527
-    [1, 12000] loss: 1.453
-    [2,  2000] loss: 1.401
+    [1,  2000] loss: 2.216
+    [1,  4000] loss: 1.882
+    [1,  6000] loss: 1.667
+    [1,  8000] loss: 1.578
+    [1, 10000] loss: 1.528
+    [1, 12000] loss: 1.488
+    [2,  2000] loss: 1.406
     [2,  4000] loss: 1.378
-    [2,  6000] loss: 1.361
-    [2,  8000] loss: 1.348
-    [2, 10000] loss: 1.328
-    [2, 12000] loss: 1.306
+    [2,  6000] loss: 1.375
+    [2,  8000] loss: 1.339
+    [2, 10000] loss: 1.325
+    [2, 12000] loss: 1.308
     Finished Training
 
 
@@ -471,7 +472,7 @@ So, let's get the index of the highest energy:
 
  .. code-block:: none
 
-    Predicted:  cat   ship  ship  plane
+    Predicted:  cat   car   plane plane
 
 
 
@@ -510,7 +511,7 @@ Let us look at how the network performs on the whole dataset.
 
  .. code-block:: none
 
-    Accuracy of the network on the 10000 test images: 53 %
+    Accuracy of the network on the 10000 test images: 50 %
 
 
 
@@ -559,16 +560,16 @@ not perform well:
 
  .. code-block:: none
 
-    Accuracy for class: plane is 64.9 %
-    Accuracy for class: car   is 74.1 %
-    Accuracy for class: bird  is 41.5 %
-    Accuracy for class: cat   is 39.7 %
-    Accuracy for class: deer  is 44.0 %
-    Accuracy for class: dog   is 46.0 %
-    Accuracy for class: frog  is 75.0 %
-    Accuracy for class: horse is 44.7 %
-    Accuracy for class: ship  is 64.0 %
-    Accuracy for class: truck is 42.8 %
+    Accuracy for class: plane is 75.0 %
+    Accuracy for class: car   is 71.3 %
+    Accuracy for class: bird  is 59.6 %
+    Accuracy for class: cat   is 14.6 %
+    Accuracy for class: deer  is 16.8 %
+    Accuracy for class: dog   is 59.7 %
+    Accuracy for class: frog  is 45.1 %
+    Accuracy for class: horse is 60.7 %
+    Accuracy for class: ship  is 49.0 %
+    Accuracy for class: truck is 57.2 %
 
 
 
@@ -682,7 +683,7 @@ Where do I go next?
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  51.105 seconds)
+   **Total running time of the script:** ( 1 minutes  59.364 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_cifar10_tutorial.py:

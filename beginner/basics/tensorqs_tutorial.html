@@ -458,8 +458,8 @@ section). If you’re familiar with ndarrays, you’ll be right at home with the
         [1, 1]])
 
 Random Tensor:
- tensor([[0.2256, 0.9553],
-        [0.2078, 0.3868]])
+ tensor([[0.6510, 0.0796],
+        [0.5005, 0.8835]])
 </pre></div>
 </div>
 <p><strong>With random or constant values:</strong></p>
@@ -475,8 +475,8 @@ Random Tensor:
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Random Tensor:
- tensor([[0.9329, 0.2455, 0.2850],
-        [0.1598, 0.7647, 0.4761]])
+ tensor([[0.8886, 0.1407, 0.5815],
+        [0.9627, 0.7284, 0.6710]])
 
 Ones Tensor:
  tensor([[1., 1., 1.],
@@ -543,7 +543,7 @@ tensor([[1., 0., 1., 1.],
 </div>
 <p><strong>Joining tensors</strong> You can use <code class="docutils literal notranslate"><span class="pre">torch.cat</span></code> to concatenate a sequence of tensors along a given dimension.
 See also <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.stack.html">torch.stack</a>,
-another tensor joining option that is subtly different from <code class="docutils literal notranslate"><span class="pre">torch.cat</span></code>.</p>
+another tensor joining operator that is subtly different from <code class="docutils literal notranslate"><span class="pre">torch.cat</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">t1</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.cat.html#torch.cat" title="torch.cat"><span class="n">torch</span><span class="o">.</span><span class="n">cat</span></a><span class="p">([</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">tensor</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">tensor</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">tensor</span></a><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">t1</span></a><span class="p">)</span>
 </pre></div>
@@ -658,7 +658,7 @@ n: [2. 2. 2. 2. 2.]
 n: [2. 2. 2. 2. 2.]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.055 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.051 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-basics-tensorqs-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3fb82dc8278b08d5e5dee31ec1c16170/tensorqs_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tensorqs_tutorial.py</span></code></a></p>

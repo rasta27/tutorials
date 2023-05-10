@@ -541,7 +541,7 @@ These datasets are currently available in:</p>
 <li><p><a class="reference external" href="https://pytorch.org/text/stable/datasets.html">torchtext</a></p></li>
 </ul>
 <p>with more to come.
-Using the Yesno dataset from <code class="docutils literal notranslate"><span class="pre">torchaudio.datasets.YESNO</span></code>, we will
+Using the <code class="docutils literal notranslate"><span class="pre">yesno</span></code> dataset from <code class="docutils literal notranslate"><span class="pre">torchaudio.datasets.YESNO</span></code>, we will
 demonstrate how to effectively and efficiently load data from a PyTorch
 <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> into a PyTorch <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>.</p>
 </div>
@@ -579,10 +579,10 @@ what built-in datasets you use, you can also install and import
 </div>
 <div class="section" id="access-the-data-in-the-dataset">
 <h2>2. Access the data in the dataset<a class="headerlink" href="#access-the-data-in-the-dataset" title="Permalink to this heading">¶</a></h2>
-<p>The Yesno dataset in <code class="docutils literal notranslate"><span class="pre">torchaudio</span></code> features sixty recordings of one
+<p>The <code class="docutils literal notranslate"><span class="pre">yesno</span></code> dataset in <code class="docutils literal notranslate"><span class="pre">torchaudio</span></code> features sixty recordings of one
 individual saying yes or no in Hebrew; with each recording being eight
 words long (<a class="reference external" href="https://www.openslr.org/1/">read more here</a>).</p>
-<p><code class="docutils literal notranslate"><span class="pre">torchaudio.datasets.YESNO</span></code> creates a dataset for YesNo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">torchaudio.datasets.YESNO</span></code> creates a dataset for <code class="docutils literal notranslate"><span class="pre">yesno</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://pytorch.org/audio/stable/generated/torchaudio.datasets.YESNO.html#torchaudio.datasets.YESNO" title="torchaudio.datasets.YESNO" class="sphx-glr-backref-module-torchaudio-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">torchaudio</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">YESNO</span></a><span class="p">(</span>
      <span class="n">root</span><span class="o">=</span><span class="s1">&#39;./&#39;</span><span class="p">,</span>
      <span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://www.openslr.org/resources/1/waves_yesno.tar.gz&#39;</span><span class="p">,</span>
@@ -592,20 +592,20 @@ words long (<a class="reference external" href="https://www.openslr.org/1/">read
 </div>
 <p>Each item in the dataset is a tuple of the form: (waveform, sample_rate,
 labels).</p>
-<p>You must set a <code class="docutils literal notranslate"><span class="pre">root</span></code> for the Yesno dataset, which is where the
+<p>You must set a <code class="docutils literal notranslate"><span class="pre">root</span></code> for the <code class="docutils literal notranslate"><span class="pre">yesno</span></code> dataset, which is where the
 training and testing dataset will exist. The other parameters are
 optional, with their default values shown. Here is some additional
 useful info on the other parameters:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># * ``download``: If true, downloads the dataset from the internet and puts it in root directory. If dataset is already downloaded, it is not downloaded again.</span>
 <span class="c1">#</span>
-<span class="c1"># Let’s access our Yesno data:</span>
+<span class="c1"># Let’s access our ``yesno`` data:</span>
 <span class="c1">#</span>
 
-<span class="c1"># A data point in Yesno is a tuple (waveform, sample_rate, labels) where labels</span>
+<span class="c1"># A data point in ``yesno`` is a tuple (waveform, sample_rate, labels) where labels</span>
 <span class="c1"># is a list of integers with 1 for yes and 0 for no.</span>
 <span class="n">yesno_data</span> <span class="o">=</span> <a href="https://pytorch.org/audio/stable/generated/torchaudio.datasets.YESNO.html#torchaudio.datasets.YESNO" title="torchaudio.datasets.YESNO" class="sphx-glr-backref-module-torchaudio-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">torchaudio</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">YESNO</span></a><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Pick data point number 3 to see an example of the the yesno_data:</span>
+<span class="c1"># Pick data point number 3 to see an example of the the ``yesno_data``:</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">waveform</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">yesno_data</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waveform: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Sample rate: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Labels: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">waveform</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>

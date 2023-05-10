@@ -559,7 +559,7 @@ available.</p>
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Import all necessary libraries for loading our data</p></li>
-<li><p>Define and intialize the neural network</p></li>
+<li><p>Define and initialize the neural network</p></li>
 <li><p>Initialize the optimizer</p></li>
 <li><p>Save and load the model via <code class="docutils literal notranslate"><span class="pre">state_dict</span></code></p></li>
 <li><p>Save and load the entire model</p></li>
@@ -574,8 +574,8 @@ and <code class="docutils literal notranslate"><span class="pre">torch.optim</sp
 </pre></div>
 </div>
 </div>
-<div class="section" id="define-and-intialize-the-neural-network">
-<h3>2. Define and intialize the neural network<a class="headerlink" href="#define-and-intialize-the-neural-network" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="define-and-initialize-the-neural-network">
+<h3>2. Define and initialize the neural network<a class="headerlink" href="#define-and-initialize-the-neural-network" title="Permalink to this heading">¶</a></h3>
 <p>For sake of example, we will create a neural network for training
 images. To learn more see the Defining a Neural Network recipe.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Net</span><span class="p">(</span><a href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module" class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">nn</span><span class="o">.</span><span class="n">Module</span></a><span class="p">):</span>
@@ -649,7 +649,7 @@ Failing to do this will yield inconsistent inference results.</p>
 <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Again here, remember that you must call model.eval() to set dropout and
+<p>Again here, remember that you must call <code class="docutils literal notranslate"><span class="pre">model.eval()</span></code> to set dropout and
 batch normalization layers to evaluation mode before running inference.</p>
 <p>Congratulations! You have successfully saved and load models for
 inference in PyTorch.</p>
@@ -741,7 +741,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <li><a class="reference internal" href="#setup">Setup</a></li>
 <li><a class="reference internal" href="#steps">Steps</a><ul>
 <li><a class="reference internal" href="#import-necessary-libraries-for-loading-our-data">1. Import necessary libraries for loading our data</a></li>
-<li><a class="reference internal" href="#define-and-intialize-the-neural-network">2. Define and intialize the neural network</a></li>
+<li><a class="reference internal" href="#define-and-initialize-the-neural-network">2. Define and initialize the neural network</a></li>
 <li><a class="reference internal" href="#initialize-the-optimizer">3. Initialize the optimizer</a></li>
 <li><a class="reference internal" href="#save-and-load-the-model-via-state-dict">4. Save and load the model via <code class="docutils literal notranslate"><span class="pre">state_dict</span></code></a></li>
 <li><a class="reference internal" href="#save-and-load-entire-model">5. Save and load entire model</a></li>

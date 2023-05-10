@@ -133,8 +133,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
             [1, 1]]) 
 
     Random Tensor: 
-     tensor([[0.2256, 0.9553],
-            [0.2078, 0.3868]]) 
+     tensor([[0.6510, 0.0796],
+            [0.5005, 0.8835]]) 
 
 
 
@@ -171,8 +171,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
  .. code-block:: none
 
     Random Tensor: 
-     tensor([[0.9329, 0.2455, 0.2850],
-            [0.1598, 0.7647, 0.4761]]) 
+     tensor([[0.8886, 0.1407, 0.5815],
+            [0.9627, 0.7284, 0.6710]]) 
 
     Ones Tensor: 
      tensor([[1., 1., 1.],
@@ -307,7 +307,7 @@ If you're familiar with the NumPy API, you'll find the Tensor API a breeze to us
 
 **Joining tensors** You can use ``torch.cat`` to concatenate a sequence of tensors along a given dimension.
 See also `torch.stack <https://pytorch.org/docs/stable/generated/torch.stack.html>`__,
-another tensor joining option that is subtly different from ``torch.cat``.
+another tensor joining operator that is subtly different from ``torch.cat``.
 
 .. GENERATED FROM PYTHON SOURCE LINES 137-141
 
@@ -563,7 +563,7 @@ Changes in the NumPy array reflects in the tensor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.055 seconds)
+   **Total running time of the script:** ( 0 minutes  0.051 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_tensorqs_tutorial.py:
