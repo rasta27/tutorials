@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je m en sors .', 'i m managing .']
+    ['j apprends vite .', 'i m a quick learner .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 26s (- 20m 17s) (5000 6%) 2.8957
-    2m 50s (- 18m 27s) (10000 13%) 2.2952
-    4m 11s (- 16m 45s) (15000 20%) 1.9521
-    5m 30s (- 15m 9s) (20000 26%) 1.7226
-    6m 49s (- 13m 39s) (25000 33%) 1.5302
-    8m 8s (- 12m 12s) (30000 40%) 1.3643
-    9m 26s (- 10m 47s) (35000 46%) 1.2154
-    10m 44s (- 9m 24s) (40000 53%) 1.0808
-    12m 1s (- 8m 0s) (45000 60%) 0.9720
-    13m 17s (- 6m 38s) (50000 66%) 0.8930
-    14m 34s (- 5m 17s) (55000 73%) 0.8081
-    15m 51s (- 3m 57s) (60000 80%) 0.7076
-    17m 7s (- 2m 38s) (65000 86%) 0.6605
-    18m 24s (- 1m 18s) (70000 93%) 0.5964
-    19m 40s (- 0m 0s) (75000 100%) 0.5316
+    1m 22s (- 19m 10s) (5000 6%) 2.8399
+    2m 39s (- 17m 19s) (10000 13%) 2.2683
+    3m 58s (- 15m 54s) (15000 20%) 1.9907
+    5m 15s (- 14m 28s) (20000 26%) 1.7264
+    6m 33s (- 13m 6s) (25000 33%) 1.5264
+    7m 49s (- 11m 44s) (30000 40%) 1.3641
+    9m 7s (- 10m 25s) (35000 46%) 1.2336
+    10m 23s (- 9m 5s) (40000 53%) 1.1303
+    11m 40s (- 7m 47s) (45000 60%) 1.0192
+    12m 57s (- 6m 28s) (50000 66%) 0.9212
+    14m 14s (- 5m 10s) (55000 73%) 0.8479
+    15m 31s (- 3m 52s) (60000 80%) 0.7611
+    16m 48s (- 2m 35s) (65000 86%) 0.6882
+    18m 5s (- 1m 17s) (70000 93%) 0.6389
+    19m 22s (- 0m 0s) (75000 100%) 0.5746
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > je suis triste sans vous .
-    = i m sad without you .
-    < i m sad to you . <EOS>
+    > je ne suis pas vraiment inquiet .
+    = i m not really worried .
+    < i m not really worried . <EOS>
 
-    > il joue bien au tennis .
-    = he is good at playing tennis .
-    < he is good at playing tennis . <EOS>
+    > je suis stupefaite .
+    = i m astonished .
+    < i m astonished . <EOS>
 
-    > je suis convaincu qu il est innocent .
-    = i am convinced that he is innocent .
-    < i am that he is innocent . <EOS>
+    > j en ai assez de ses excuses .
+    = i m sick of her excuses .
+    < i m sick of her excuses . <EOS>
 
-    > j ai faim !
-    = i m hungry !
-    < i m hungry ! <EOS>
+    > je ne suis pas abruti .
+    = i m not dumb .
+    < i m not embarrassed . <EOS>
 
-    > je ne vais pas fermer la porte .
-    = i m not going to close the door .
-    < i m not going to study the door . <EOS>
+    > il tend a etre paresseux .
+    = he is inclined to be lazy .
+    < he is waiting for a be . . <EOS>
 
-    > tu es difficile pas vrai ?
-    = you re picky aren t you ?
-    < you re picky aren t you ? <EOS>
+    > je ne suis pas autorise a vous aider .
+    = i m not allowed to help you .
+    < i m not allowed to help you . <EOS>
 
-    > vous etes charmantes .
-    = you re charming .
-    < you re clever . <EOS>
+    > je suis desolee de vous ennuyer si souvent .
+    = i m sorry to bother you so often .
+    < i m sorry to bother you so often . <EOS>
 
-    > je suis en bonne sante .
-    = i m in good health .
-    < i m healthy . <EOS>
+    > je suis etudiant mais lui non .
+    = i am a student but he isn t .
+    < i am an only but but is . <EOS>
 
-    > je suis sur que tu es tres occupee .
-    = i m sure you re very busy .
-    < i m sure you re very busy you are busy
+    > tu te fais comprendre .
+    = you re assertive .
+    < you re scaring kidding . <EOS>
 
-    > tu es consciencieuse .
-    = you re conscientious .
-    < you re conscientious . <EOS>
+    > il est plein d energie .
+    = he is full of energy .
+    < he is full of energy . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f2d0ff1a530>
+    <matplotlib.image.AxesImage object at 0x7f2d8c82f730>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she is two years younger than i am <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too short . <EOS>
+    output = she is too short . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared to die . <EOS>
+    output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s a talented young . . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  54.553 seconds)
+   **Total running time of the script:** ( 19 minutes  36.133 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

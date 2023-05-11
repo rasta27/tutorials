@@ -446,6 +446,7 @@ to achieve better performance. In PyTorch, the <a class="reference external" hre
 ensures each device gets a non-overlapping input batch. The model is replicated on all the devices;
 each replica calculates gradients and simultaneously synchronizes with the others using the <a class="reference external" href="https://tech.preferred.jp/en/blog/technologies-behind-distributed-deep-learning-allreduce/">ring all-reduce
 algorithm</a>.</p>
+<p>This <a class="reference external" href="https://pytorch.org/tutorials/intermediate/dist_tuto.html#">illustrative tutorial</a> provides a more in-depth python view of the mechanics of DDP.</p>
 <div class="section" id="why-you-should-prefer-ddp-over-dataparallel-dp">
 <h2>Why you should prefer DDP over DataParallel (DP)<a class="headerlink" href="#why-you-should-prefer-ddp-over-dataparallel-dp" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html">DataParallel</a>
@@ -489,6 +490,7 @@ multiprocessing</p></td>
 API</a></p></li>
 <li><p><a class="reference external" href="https://pytorch.org/docs/master/notes/ddp.html#internal-design">DDP Internal
 Design</a></p></li>
+<li><p><a class="reference external" href="https://pytorch.org/tutorials/intermediate/dist_tuto.html#">DDP Mechanics Tutorial</a></p></li>
 </ul>
 </div>
 </div>

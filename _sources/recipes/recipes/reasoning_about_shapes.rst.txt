@@ -60,7 +60,7 @@ of a layer without materializing any data.
  .. code-block:: none
 
     tensor(..., device='meta', size=(2, 5, 9, 9), grad_fn=<ConvolutionBackward0>)
-    Time taken: 0.00660448799999358
+    Time taken: 0.006340178000073138
 
 
 
@@ -94,7 +94,7 @@ inputs will not significantly alter the time taken for shape computation.
 
     tensor(..., device='meta', size=(1024, 5, 65535, 65535),
            grad_fn=<ConvolutionBackward0>)
-    Time taken: 0.0010344689999328693
+    Time taken: 0.0018564750000678032
 
 
 
@@ -193,7 +193,7 @@ forward hook to each layer that prints the shape of the output.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.064 seconds)
+   **Total running time of the script:** ( 0 minutes  0.063 seconds)
 
 
 .. _sphx_glr_download_recipes_recipes_reasoning_about_shapes.py:
