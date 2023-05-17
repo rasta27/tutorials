@@ -438,9 +438,9 @@ Python’s math module to facilitate some of the examples.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class 'torch.Tensor'&gt;
-tensor([[2.0578e-22, 4.5827e-41, 2.0584e-22, 4.5827e-41],
-        [9.9636e-22, 4.5827e-41, 1.7104e-22, 4.5827e-41],
-        [2.4824e-22, 4.5827e-41, 2.4824e-22, 4.5827e-41]])
+tensor([[0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00],
+        [0.0000e+00, 0.0000e+00, 1.3593e-43, 0.0000e+00]])
 </pre></div>
 </div>
 <p>Let’s unpack what we just did:</p>
@@ -561,17 +561,17 @@ have the <code class="docutils literal notranslate"><span class="pre">torch.*_li
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 2, 3])
-tensor([[[3.7418e-22, 4.5827e-41, 5.9066e-34],
-         [0.0000e+00, 2.9161e+29, 4.5825e-41]],
+tensor([[[-8.7999e-03,  4.5821e-41,  3.5213e-34],
+         [ 0.0000e+00,  1.1504e-32,  4.5821e-41]],
 
-        [[1.0129e-21, 4.5827e-41, 8.4977e-23],
-         [4.5827e-41, 1.0360e+33, 4.5825e-41]]])
+        [[ 1.0026e-32,  4.5821e-41,  1.0435e-26],
+         [ 4.5821e-41,  1.1013e-32,  4.5821e-41]]])
 torch.Size([2, 2, 3])
-tensor([[[7.3787e+28, 1.1726e-19, 1.2991e+34],
-         [1.8966e+28, 4.8562e+33, 1.3556e-19]],
+tensor([[[-2.3164e-02,  4.5821e-41,  9.9682e-33],
+         [ 4.5821e-41, -4.9805e-03,  4.5821e-41]],
 
-        [[8.0521e+34, 1.9849e+23, 7.1443e+31],
-         [1.1128e+27, 5.4263e-14, 1.3563e-19]]])
+        [[-6.0679e-03,  4.5821e-41, -2.4505e-02],
+         [ 4.5821e-41, -5.5883e-03,  4.5821e-41]]])
 torch.Size([2, 2, 3])
 tensor([[[0., 0., 0.],
          [0., 0., 0.]],
@@ -1525,7 +1525,7 @@ are reflected in the other:</p>
  [ 0.2853077  17.          0.5695162 ]]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.299 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.157 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-introyt-tensors-deeper-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/be017e7b39198fdf668c138fd8d57abe/tensors_deeper_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tensors_deeper_tutorial.py</span></code></a></p>
