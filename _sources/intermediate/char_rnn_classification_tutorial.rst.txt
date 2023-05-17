@@ -446,16 +446,16 @@ language):
 
  .. code-block:: none
 
-    category = Japanese / line = Otomo
-    category = English / line = Bloom
-    category = Greek / line = Christodoulou
-    category = Scottish / line = Robertson
-    category = English / line = Hewitt
-    category = German / line = Meindl
-    category = Russian / line = Tzakh
-    category = Russian / line = Kalambetov
-    category = German / line = Haber
-    category = English / line = Tatlow
+    category = Spanish / line = Ubina
+    category = Japanese / line = Satoh
+    category = Arabic / line = Kalb
+    category = German / line = Spitznogle
+    category = Chinese / line = Kan
+    category = Spanish / line = Pelaez
+    category = Scottish / line = Mcmillan
+    category = Japanese / line = Akamatsu
+    category = Greek / line = Giannakos
+    category = Italian / line = Acerbi
 
 
 
@@ -595,26 +595,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 5s) 2.7281 Jamussa / Czech ✗ (Greek)
-    10000 10% (0m 11s) 2.5004 Beckert / French ✗ (German)
-    15000 15% (0m 16s) 2.4227 Girard / Dutch ✗ (French)
-    20000 20% (0m 22s) 0.9111 Wojewodzki / Polish ✓
-    25000 25% (0m 27s) 0.7614 Armani / Italian ✓
-    30000 30% (0m 33s) 1.0499 Luc / Chinese ✗ (Vietnamese)
-    35000 35% (0m 38s) 1.7544 Serak / Portuguese ✗ (Czech)
-    40000 40% (0m 44s) 0.3309 Hayami / Japanese ✓
-    45000 45% (0m 49s) 2.3571 Mata / Japanese ✗ (Portuguese)
-    50000 50% (0m 55s) 0.0990 Missiakos / Greek ✓
-    55000 55% (1m 1s) 2.4428 Shula / Portuguese ✗ (Czech)
-    60000 60% (1m 6s) 1.3440 Dupond / French ✓
-    65000 65% (1m 12s) 2.5934 Munro / Italian ✗ (Scottish)
-    70000 70% (1m 17s) 4.3643 Fabian / Irish ✗ (Polish)
-    75000 75% (1m 23s) 1.2486 Mckay / Polish ✗ (Scottish)
-    80000 80% (1m 28s) 1.6612 Shamoon / Japanese ✗ (Arabic)
-    85000 85% (1m 34s) 2.0257 Hay / Vietnamese ✗ (Scottish)
-    90000 90% (1m 39s) 0.1411 Thao / Vietnamese ✓
-    95000 95% (1m 45s) 0.5979 Cho / Korean ✓
-    100000 100% (1m 51s) 0.2908 Qin / Chinese ✓
+    5000 5% (0m 5s) 3.3166 Close / German ✗ (Greek)
+    10000 10% (0m 11s) 1.6540 Schermer / German ✗ (Dutch)
+    15000 15% (0m 16s) 2.8010 Keight / Arabic ✗ (English)
+    20000 20% (0m 22s) 2.8740 Till / Scottish ✗ (Czech)
+    25000 25% (0m 27s) 1.0335 Hofwegen / Dutch ✓
+    30000 30% (0m 33s) 2.3808 Frank / Vietnamese ✗ (German)
+    35000 35% (0m 38s) 1.1262 Dritsas / Greek ✓
+    40000 40% (0m 44s) 1.6117 Sitz / German ✓
+    45000 45% (0m 49s) 1.4728 Schwartz / German ✓
+    50000 50% (0m 55s) 0.0579 Warszawski / Polish ✓
+    55000 55% (1m 0s) 1.2960 Capello / Italian ✗ (Spanish)
+    60000 60% (1m 5s) 1.9849 Rumisek / Polish ✗ (Czech)
+    65000 65% (1m 11s) 1.8117 Meadhra / Czech ✗ (Irish)
+    70000 70% (1m 16s) 2.1338 Dempster / German ✗ (English)
+    75000 75% (1m 22s) 2.8489 John / Korean ✗ (Irish)
+    80000 80% (1m 27s) 0.2728 Soldati / Italian ✓
+    85000 85% (1m 33s) 0.8171 Demarchis / Greek ✓
+    90000 90% (1m 38s) 0.0645 Munakata / Japanese ✓
+    95000 95% (1m 44s) 0.3461 Czajkowski / Polish ✓
+    100000 100% (1m 49s) 1.9394 Han / Chinese ✗ (Vietnamese)
 
 
 
@@ -654,7 +654,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7fae39dc95d0>]
+    [<matplotlib.lines.Line2D object at 0x7f7116141c90>]
 
 
 
@@ -792,19 +792,19 @@ Running on User Input
 
 
     > Dovesky
-    (-0.81) Russian
-    (-0.91) Czech
-    (-2.56) Polish
+    (-0.44) Russian
+    (-1.52) Czech
+    (-2.98) Polish
 
     > Jackson
-    (-0.43) Scottish
-    (-1.95) Russian
-    (-2.54) Greek
+    (-0.16) Scottish
+    (-2.36) English
+    (-3.74) Russian
 
     > Satoshi
-    (-0.63) Arabic
-    (-1.29) Japanese
-    (-3.09) Polish
+    (-0.95) Arabic
+    (-1.13) Japanese
+    (-1.88) Polish
 
 
 
@@ -858,7 +858,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  57.628 seconds)
+   **Total running time of the script:** ( 1 minutes  56.359 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:

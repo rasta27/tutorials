@@ -660,7 +660,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['j apprends vite .', 'i m a quick learner .']
+['elle sait parler dix langues .', 'she is able to speak ten languages .']
 </pre></div>
 </div>
 </div>
@@ -1102,65 +1102,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 22s (- 19m 10s) (5000 6%) 2.8399
-2m 39s (- 17m 19s) (10000 13%) 2.2683
-3m 58s (- 15m 54s) (15000 20%) 1.9907
-5m 15s (- 14m 28s) (20000 26%) 1.7264
-6m 33s (- 13m 6s) (25000 33%) 1.5264
-7m 49s (- 11m 44s) (30000 40%) 1.3641
-9m 7s (- 10m 25s) (35000 46%) 1.2336
-10m 23s (- 9m 5s) (40000 53%) 1.1303
-11m 40s (- 7m 47s) (45000 60%) 1.0192
-12m 57s (- 6m 28s) (50000 66%) 0.9212
-14m 14s (- 5m 10s) (55000 73%) 0.8479
-15m 31s (- 3m 52s) (60000 80%) 0.7611
-16m 48s (- 2m 35s) (65000 86%) 0.6882
-18m 5s (- 1m 17s) (70000 93%) 0.6389
-19m 22s (- 0m 0s) (75000 100%) 0.5746
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 23s (- 19m 29s) (5000 6%) 2.8236
+2m 43s (- 17m 45s) (10000 13%) 2.2646
+4m 4s (- 16m 16s) (15000 20%) 1.9124
+5m 22s (- 14m 47s) (20000 26%) 1.7068
+6m 41s (- 13m 22s) (25000 33%) 1.5007
+7m 59s (- 11m 59s) (30000 40%) 1.3236
+9m 17s (- 10m 37s) (35000 46%) 1.1853
+10m 36s (- 9m 17s) (40000 53%) 1.0832
+11m 55s (- 7m 56s) (45000 60%) 0.9493
+13m 13s (- 6m 36s) (50000 66%) 0.8749
+14m 32s (- 5m 17s) (55000 73%) 0.7863
+15m 51s (- 3m 57s) (60000 80%) 0.7201
+17m 10s (- 2m 38s) (65000 86%) 0.6581
+18m 31s (- 1m 19s) (70000 93%) 0.5939
+19m 51s (- 0m 0s) (75000 100%) 0.5332
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je ne suis pas vraiment inquiet .
-= i m not really worried .
-&lt; i m not really worried . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; ils sont toujours a court d argent .
+= they are always short of money .
+&lt; they are always short of money . &lt;EOS&gt;
 
-&gt; je suis stupefaite .
-= i m astonished .
-&lt; i m astonished . &lt;EOS&gt;
+&gt; tu gagnes .
+= you re winning .
+&lt; you re winning . &lt;EOS&gt;
 
-&gt; j en ai assez de ses excuses .
-= i m sick of her excuses .
-&lt; i m sick of her excuses . &lt;EOS&gt;
+&gt; ils viennent pour moi .
+= they re coming for me .
+&lt; they re coming for me . &lt;EOS&gt;
 
-&gt; je ne suis pas abruti .
-= i m not dumb .
-&lt; i m not embarrassed . &lt;EOS&gt;
+&gt; il etudie a sa table de travail .
+= he is studying at his desk .
+&lt; he is studying with his his . &lt;EOS&gt;
 
-&gt; il tend a etre paresseux .
-= he is inclined to be lazy .
-&lt; he is waiting for a be . . &lt;EOS&gt;
+&gt; je ne suis pas impressionnee .
+= i m not impressed .
+&lt; i m not impressed . &lt;EOS&gt;
 
-&gt; je ne suis pas autorise a vous aider .
-= i m not allowed to help you .
-&lt; i m not allowed to help you . &lt;EOS&gt;
+&gt; c est mon meilleur ami .
+= he s my best friend .
+&lt; he s my best friend . &lt;EOS&gt;
 
-&gt; je suis desolee de vous ennuyer si souvent .
-= i m sorry to bother you so often .
-&lt; i m sorry to bother you so often . &lt;EOS&gt;
+&gt; nous venons .
+= we re coming .
+&lt; we re coming . &lt;EOS&gt;
 
-&gt; je suis etudiant mais lui non .
-= i am a student but he isn t .
-&lt; i am an only but but is . &lt;EOS&gt;
+&gt; je fredonne .
+= i m humming .
+&lt; i m staying . &lt;EOS&gt;
 
-&gt; tu te fais comprendre .
-= you re assertive .
-&lt; you re scaring kidding . &lt;EOS&gt;
+&gt; il n a pas entierement tort .
+= he is not altogether wrong .
+&lt; he is not a wrong . &lt;EOS&gt;
 
-&gt; il est plein d energie .
-= he is full of energy .
-&lt; he is full of energy . &lt;EOS&gt;
+&gt; elles se rendent dans cette direction .
+= they re headed this way .
+&lt; they re headed this way . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1177,7 +1177,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f2d8c82f730&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fc66eaa9ba0&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1225,7 +1225,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she is two years younger than i am &lt;EOS&gt;
+output = she s five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1235,11 +1235,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she is too short . &lt;EOS&gt;
+output = she is too tired . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not afraid to die . &lt;EOS&gt;
+output = i m not scared of dying . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young . . &lt;EOS&gt;
+output = he s a talented young . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1269,7 +1269,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  36.133 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  4.579 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

@@ -457,7 +457,7 @@ with random weights and only this layer is trained.</p></li>
 <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>   <span class="c1"># interactive mode</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7f28fd177d90&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7f32235a71c0&gt;
 </pre></div>
 </div>
 <div class="section" id="load-data">
@@ -533,7 +533,7 @@ augmentations.</p>
 <span class="n">imshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">out</span></a><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="p">[</span><span class="n">class_names</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">classes</span></a><span class="p">])</span>
 </pre></div>
 </div>
-<img alt="['ants', 'bees', 'ants', 'ants']" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_001.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_001.png"/></div>
+<img alt="['ants', 'bees', 'bees', 'ants']" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_001.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_001.png"/></div>
 </div>
 <div class="section" id="training-the-model">
 <h2>Training the model<a class="headerlink" href="#training-the-model" title="Permalink to this heading">¶</a></h2>
@@ -667,14 +667,9 @@ illustrate:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
   0%|          | 0.00/44.7M [00:00&lt;?, ?B/s]
-  2%|2         | 1.09M/44.7M [00:00&lt;00:04, 11.2MB/s]
-  6%|6         | 2.88M/44.7M [00:00&lt;00:02, 15.6MB/s]
- 13%|#2        | 5.65M/44.7M [00:00&lt;00:01, 21.6MB/s]
- 22%|##2       | 9.87M/44.7M [00:00&lt;00:01, 30.4MB/s]
- 36%|###6      | 16.2M/44.7M [00:00&lt;00:00, 43.4MB/s]
- 58%|#####8    | 26.0M/44.7M [00:00&lt;00:00, 63.5MB/s]
- 92%|#########2| 41.1M/44.7M [00:00&lt;00:00, 94.5MB/s]
-100%|##########| 44.7M/44.7M [00:00&lt;00:00, 64.8MB/s]
+ 24%|##4       | 10.8M/44.7M [00:00&lt;00:00, 113MB/s]
+ 78%|#######8  | 34.9M/44.7M [00:00&lt;00:00, 195MB/s]
+100%|##########| 44.7M/44.7M [00:00&lt;00:00, 194MB/s]
 </pre></div>
 </div>
 <div class="section" id="train-and-evaluate">
@@ -687,137 +682,137 @@ minute.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Epoch 0/24
 ----------
-train Loss: 0.7787 Acc: 0.6762
-val Loss: 0.2155 Acc: 0.9281
+train Loss: 0.6702 Acc: 0.6967
+val Loss: 0.6246 Acc: 0.7320
 
 Epoch 1/24
 ----------
-train Loss: 0.5016 Acc: 0.8074
-val Loss: 0.3470 Acc: 0.8758
+train Loss: 0.6189 Acc: 0.7582
+val Loss: 0.2010 Acc: 0.9412
 
 Epoch 2/24
 ----------
-train Loss: 0.5702 Acc: 0.8074
-val Loss: 0.2129 Acc: 0.9150
+train Loss: 0.6589 Acc: 0.7418
+val Loss: 0.1946 Acc: 0.9150
 
 Epoch 3/24
 ----------
-train Loss: 0.4649 Acc: 0.7910
-val Loss: 0.3132 Acc: 0.8824
+train Loss: 0.5543 Acc: 0.7951
+val Loss: 0.1972 Acc: 0.9281
 
 Epoch 4/24
 ----------
-train Loss: 0.4650 Acc: 0.8238
-val Loss: 0.2670 Acc: 0.9085
+train Loss: 0.5714 Acc: 0.7828
+val Loss: 0.3765 Acc: 0.8497
 
 Epoch 5/24
 ----------
-train Loss: 0.6932 Acc: 0.7500
-val Loss: 0.2514 Acc: 0.9085
+train Loss: 0.4362 Acc: 0.8197
+val Loss: 0.2364 Acc: 0.9150
 
 Epoch 6/24
 ----------
-train Loss: 0.5858 Acc: 0.7828
-val Loss: 0.3152 Acc: 0.8693
+train Loss: 0.3508 Acc: 0.8484
+val Loss: 0.2673 Acc: 0.9085
 
 Epoch 7/24
 ----------
-train Loss: 0.2613 Acc: 0.8852
-val Loss: 0.2528 Acc: 0.8954
+train Loss: 0.2352 Acc: 0.9139
+val Loss: 0.2788 Acc: 0.8889
 
 Epoch 8/24
 ----------
-train Loss: 0.2968 Acc: 0.8607
-val Loss: 0.2249 Acc: 0.9150
+train Loss: 0.3055 Acc: 0.8934
+val Loss: 0.1824 Acc: 0.9216
 
 Epoch 9/24
 ----------
-train Loss: 0.2636 Acc: 0.8934
-val Loss: 0.2045 Acc: 0.9346
+train Loss: 0.2431 Acc: 0.8975
+val Loss: 0.1870 Acc: 0.9346
 
 Epoch 10/24
 ----------
-train Loss: 0.3738 Acc: 0.8607
-val Loss: 0.2141 Acc: 0.9281
+train Loss: 0.3238 Acc: 0.8770
+val Loss: 0.1753 Acc: 0.9346
 
 Epoch 11/24
 ----------
-train Loss: 0.3791 Acc: 0.8361
-val Loss: 0.2160 Acc: 0.9346
+train Loss: 0.2631 Acc: 0.8811
+val Loss: 0.1666 Acc: 0.9346
 
 Epoch 12/24
 ----------
-train Loss: 0.3382 Acc: 0.8566
-val Loss: 0.2089 Acc: 0.9216
+train Loss: 0.2410 Acc: 0.8934
+val Loss: 0.1787 Acc: 0.9216
 
 Epoch 13/24
 ----------
-train Loss: 0.3290 Acc: 0.8689
-val Loss: 0.1980 Acc: 0.9346
+train Loss: 0.2729 Acc: 0.8934
+val Loss: 0.1784 Acc: 0.9281
 
 Epoch 14/24
 ----------
-train Loss: 0.3050 Acc: 0.8689
-val Loss: 0.2076 Acc: 0.9150
+train Loss: 0.2648 Acc: 0.8893
+val Loss: 0.1672 Acc: 0.9281
 
 Epoch 15/24
 ----------
-train Loss: 0.2979 Acc: 0.8525
-val Loss: 0.2051 Acc: 0.9216
+train Loss: 0.2874 Acc: 0.8811
+val Loss: 0.1758 Acc: 0.9216
 
 Epoch 16/24
 ----------
-train Loss: 0.2327 Acc: 0.9057
-val Loss: 0.2015 Acc: 0.9216
+train Loss: 0.2348 Acc: 0.8770
+val Loss: 0.1754 Acc: 0.9346
 
 Epoch 17/24
 ----------
-train Loss: 0.2393 Acc: 0.8975
-val Loss: 0.2107 Acc: 0.9346
+train Loss: 0.2400 Acc: 0.9057
+val Loss: 0.1580 Acc: 0.9281
 
 Epoch 18/24
 ----------
-train Loss: 0.3527 Acc: 0.8484
-val Loss: 0.2045 Acc: 0.9281
+train Loss: 0.2953 Acc: 0.8525
+val Loss: 0.1656 Acc: 0.9346
 
 Epoch 19/24
 ----------
-train Loss: 0.2460 Acc: 0.8852
-val Loss: 0.2087 Acc: 0.9216
+train Loss: 0.2311 Acc: 0.9262
+val Loss: 0.1596 Acc: 0.9346
 
 Epoch 20/24
 ----------
-train Loss: 0.2714 Acc: 0.8689
-val Loss: 0.1965 Acc: 0.9477
+train Loss: 0.2624 Acc: 0.8934
+val Loss: 0.1649 Acc: 0.9281
 
 Epoch 21/24
 ----------
-train Loss: 0.2526 Acc: 0.8852
-val Loss: 0.1994 Acc: 0.9477
+train Loss: 0.2629 Acc: 0.9180
+val Loss: 0.1568 Acc: 0.9477
 
 Epoch 22/24
 ----------
-train Loss: 0.3565 Acc: 0.8320
-val Loss: 0.2070 Acc: 0.9412
+train Loss: 0.3430 Acc: 0.8443
+val Loss: 0.1918 Acc: 0.9281
 
 Epoch 23/24
 ----------
-train Loss: 0.3069 Acc: 0.8361
-val Loss: 0.2079 Acc: 0.9477
+train Loss: 0.1956 Acc: 0.9262
+val Loss: 0.2121 Acc: 0.9281
 
 Epoch 24/24
 ----------
-train Loss: 0.2635 Acc: 0.8852
-val Loss: 0.1977 Acc: 0.9281
+train Loss: 0.2339 Acc: 0.9016
+val Loss: 0.1625 Acc: 0.9412
 
-Training complete in 1m 12s
+Training complete in 1m 10s
 Best val Acc: 0.947712
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualize_model</span><span class="p">(</span><span class="n">model_ft</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="predicted: ants, predicted: ants, predicted: bees, predicted: ants, predicted: ants, predicted: ants" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_002.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_002.png"/></div>
+<img alt="predicted: ants, predicted: ants, predicted: bees, predicted: ants, predicted: bees, predicted: bees" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_002.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_002.png"/></div>
 </div>
 <div class="section" id="convnet-as-fixed-feature-extractor">
 <h2>ConvNet as fixed feature extractor<a class="headerlink" href="#convnet-as-fixed-feature-extractor" title="Permalink to this heading">¶</a></h2>
@@ -857,131 +852,131 @@ network. However, forward does need to be computed.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Epoch 0/24
 ----------
-train Loss: 0.6615 Acc: 0.6393
-val Loss: 0.2098 Acc: 0.9216
+train Loss: 0.8054 Acc: 0.5287
+val Loss: 0.2046 Acc: 0.9412
 
 Epoch 1/24
 ----------
-train Loss: 0.4946 Acc: 0.7910
-val Loss: 0.1915 Acc: 0.9412
+train Loss: 0.4333 Acc: 0.8238
+val Loss: 0.1940 Acc: 0.9281
 
 Epoch 2/24
 ----------
-train Loss: 0.6760 Acc: 0.7459
-val Loss: 0.1895 Acc: 0.9150
+train Loss: 0.4201 Acc: 0.8320
+val Loss: 0.2432 Acc: 0.9085
 
 Epoch 3/24
 ----------
-train Loss: 0.3686 Acc: 0.8484
-val Loss: 0.2387 Acc: 0.9085
+train Loss: 0.7586 Acc: 0.7049
+val Loss: 0.1970 Acc: 0.9346
 
 Epoch 4/24
 ----------
-train Loss: 0.5671 Acc: 0.7828
-val Loss: 0.1464 Acc: 0.9542
+train Loss: 0.4593 Acc: 0.8033
+val Loss: 0.1793 Acc: 0.9477
 
 Epoch 5/24
 ----------
-train Loss: 0.5172 Acc: 0.7828
-val Loss: 0.1891 Acc: 0.9412
+train Loss: 0.5449 Acc: 0.7582
+val Loss: 0.1858 Acc: 0.9542
 
 Epoch 6/24
 ----------
-train Loss: 0.7014 Acc: 0.7459
-val Loss: 0.1511 Acc: 0.9542
+train Loss: 0.4877 Acc: 0.8033
+val Loss: 0.2528 Acc: 0.9216
 
 Epoch 7/24
 ----------
-train Loss: 0.3563 Acc: 0.8320
-val Loss: 0.1677 Acc: 0.9608
+train Loss: 0.4481 Acc: 0.7992
+val Loss: 0.1787 Acc: 0.9477
 
 Epoch 8/24
 ----------
-train Loss: 0.4028 Acc: 0.8238
-val Loss: 0.1993 Acc: 0.9346
+train Loss: 0.3682 Acc: 0.8279
+val Loss: 0.1880 Acc: 0.9477
 
 Epoch 9/24
 ----------
-train Loss: 0.3953 Acc: 0.8197
-val Loss: 0.1578 Acc: 0.9608
+train Loss: 0.3722 Acc: 0.8443
+val Loss: 0.2124 Acc: 0.9477
 
 Epoch 10/24
 ----------
-train Loss: 0.3556 Acc: 0.8402
-val Loss: 0.1862 Acc: 0.9477
+train Loss: 0.3956 Acc: 0.8279
+val Loss: 0.1755 Acc: 0.9542
 
 Epoch 11/24
 ----------
-train Loss: 0.3466 Acc: 0.8402
-val Loss: 0.1628 Acc: 0.9412
+train Loss: 0.4070 Acc: 0.8361
+val Loss: 0.2021 Acc: 0.9477
 
 Epoch 12/24
 ----------
-train Loss: 0.3989 Acc: 0.8197
-val Loss: 0.1666 Acc: 0.9542
+train Loss: 0.3128 Acc: 0.8648
+val Loss: 0.1827 Acc: 0.9412
 
 Epoch 13/24
 ----------
-train Loss: 0.2655 Acc: 0.8770
-val Loss: 0.1734 Acc: 0.9477
+train Loss: 0.3330 Acc: 0.8607
+val Loss: 0.2146 Acc: 0.9346
 
 Epoch 14/24
 ----------
-train Loss: 0.3050 Acc: 0.8689
-val Loss: 0.1648 Acc: 0.9412
+train Loss: 0.3081 Acc: 0.8484
+val Loss: 0.1979 Acc: 0.9477
 
 Epoch 15/24
 ----------
-train Loss: 0.3772 Acc: 0.8156
-val Loss: 0.1670 Acc: 0.9477
+train Loss: 0.3691 Acc: 0.8320
+val Loss: 0.1921 Acc: 0.9542
 
 Epoch 16/24
 ----------
-train Loss: 0.3932 Acc: 0.8156
-val Loss: 0.1594 Acc: 0.9412
+train Loss: 0.2732 Acc: 0.8770
+val Loss: 0.1922 Acc: 0.9542
 
 Epoch 17/24
 ----------
-train Loss: 0.2227 Acc: 0.9262
-val Loss: 0.1656 Acc: 0.9542
+train Loss: 0.2525 Acc: 0.9139
+val Loss: 0.1769 Acc: 0.9477
 
 Epoch 18/24
 ----------
-train Loss: 0.3500 Acc: 0.8402
-val Loss: 0.1565 Acc: 0.9477
+train Loss: 0.3393 Acc: 0.8566
+val Loss: 0.1890 Acc: 0.9542
 
 Epoch 19/24
 ----------
-train Loss: 0.3681 Acc: 0.8361
-val Loss: 0.1753 Acc: 0.9477
+train Loss: 0.2680 Acc: 0.8770
+val Loss: 0.1841 Acc: 0.9477
 
 Epoch 20/24
 ----------
-train Loss: 0.3197 Acc: 0.8648
-val Loss: 0.1588 Acc: 0.9542
+train Loss: 0.3912 Acc: 0.8279
+val Loss: 0.1916 Acc: 0.9346
 
 Epoch 21/24
 ----------
-train Loss: 0.3581 Acc: 0.8361
-val Loss: 0.1835 Acc: 0.9477
+train Loss: 0.3047 Acc: 0.8893
+val Loss: 0.1887 Acc: 0.9542
 
 Epoch 22/24
 ----------
-train Loss: 0.3203 Acc: 0.8607
-val Loss: 0.1664 Acc: 0.9412
+train Loss: 0.3657 Acc: 0.8197
+val Loss: 0.1731 Acc: 0.9673
 
 Epoch 23/24
 ----------
-train Loss: 0.3651 Acc: 0.8361
-val Loss: 0.1658 Acc: 0.9477
+train Loss: 0.3398 Acc: 0.8648
+val Loss: 0.1779 Acc: 0.9673
 
 Epoch 24/24
 ----------
-train Loss: 0.3458 Acc: 0.8361
-val Loss: 0.1882 Acc: 0.9412
+train Loss: 0.3076 Acc: 0.8607
+val Loss: 0.1810 Acc: 0.9608
 
-Training complete in 0m 45s
-Best val Acc: 0.960784
+Training complete in 0m 43s
+Best val Acc: 0.967320
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">visualize_model</span><span class="p">(</span><span class="n">model_conv</span><span class="p">)</span>
@@ -990,13 +985,13 @@ Best val Acc: 0.960784
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="predicted: ants, predicted: ants, predicted: bees, predicted: bees, predicted: ants, predicted: ants" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_003.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_003.png"/></div>
+<img alt="predicted: ants, predicted: ants, predicted: ants, predicted: ants, predicted: bees, predicted: bees" class="sphx-glr-single-img" src="../_images/sphx_glr_transfer_learning_tutorial_003.png" srcset="../_images/sphx_glr_transfer_learning_tutorial_003.png"/></div>
 </div>
 <div class="section" id="further-learning">
 <h2>Further Learning<a class="headerlink" href="#further-learning" title="Permalink to this heading">¶</a></h2>
 <p>If you would like to learn more about the applications of transfer learning,
 checkout our <a class="reference external" href="https://pytorch.org/tutorials/intermediate/quantized_transfer_learning_tutorial.html">Quantized Transfer Learning for Computer Vision Tutorial</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  3.414 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  58.737 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-transfer-learning-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/d923ca53b1bfbeb3c222ae46d65d485e/transfer_learning_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transfer_learning_tutorial.py</span></code></a></p>

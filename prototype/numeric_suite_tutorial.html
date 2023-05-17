@@ -570,16 +570,9 @@ Arguments other than a weight enum or `None` for &#39;weights&#39; are deprecate
 Downloading: &quot;https://download.pytorch.org/models/resnet18-f37072fd.pth&quot; to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
   0%|          | 0.00/44.7M [00:00&lt;?, ?B/s]
-  6%|5         | 2.62M/44.7M [00:00&lt;00:01, 27.5MB/s]
- 14%|#3        | 6.12M/44.7M [00:00&lt;00:01, 32.3MB/s]
- 21%|##        | 9.21M/44.7M [00:00&lt;00:01, 29.1MB/s]
- 34%|###4      | 15.4M/44.7M [00:00&lt;00:00, 42.1MB/s]
- 46%|####6     | 20.7M/44.7M [00:00&lt;00:00, 46.7MB/s]
- 59%|#####8    | 26.2M/44.7M [00:00&lt;00:00, 49.5MB/s]
- 72%|#######2  | 32.3M/44.7M [00:00&lt;00:00, 53.9MB/s]
- 84%|########3 | 37.5M/44.7M [00:00&lt;00:00, 53.1MB/s]
- 95%|#########5| 42.6M/44.7M [00:00&lt;00:00, 53.1MB/s]
-100%|##########| 44.7M/44.7M [00:00&lt;00:00, 47.4MB/s]
+ 28%|##8       | 12.6M/44.7M [00:00&lt;00:00, 132MB/s]
+ 91%|######### | 40.6M/44.7M [00:00&lt;00:00, 227MB/s]
+100%|##########| 44.7M/44.7M [00:00&lt;00:00, 217MB/s]
 </pre></div>
 </div>
 </div>
@@ -697,36 +690,36 @@ torch.Size([2, 64, 5, 5])
     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">compute_error</span><span class="p">(</span><span class="n">act_compare_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;float&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">act_compare_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;quantized&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dequantize</span><span class="p">()))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>conv1.stats tensor(37.4698, grad_fn=&lt;MulBackward0&gt;)
-layer1.0.conv1.stats tensor(30.5289, grad_fn=&lt;MulBackward0&gt;)
-layer1.0.conv2.stats tensor(29.1625, grad_fn=&lt;MulBackward0&gt;)
-layer1.0.add_relu.stats tensor(32.6282, grad_fn=&lt;MulBackward0&gt;)
-layer1.1.conv1.stats tensor(30.1167, grad_fn=&lt;MulBackward0&gt;)
-layer1.1.conv2.stats tensor(26.5646, grad_fn=&lt;MulBackward0&gt;)
-layer1.1.add_relu.stats tensor(30.5585, grad_fn=&lt;MulBackward0&gt;)
-layer2.0.conv1.stats tensor(27.5579, grad_fn=&lt;MulBackward0&gt;)
-layer2.0.conv2.stats tensor(26.6823, grad_fn=&lt;MulBackward0&gt;)
-layer2.0.downsample.0.stats tensor(22.5314, grad_fn=&lt;MulBackward0&gt;)
-layer2.0.add_relu.stats tensor(26.1316, grad_fn=&lt;MulBackward0&gt;)
-layer2.1.conv1.stats tensor(25.7124, grad_fn=&lt;MulBackward0&gt;)
-layer2.1.conv2.stats tensor(24.6058, grad_fn=&lt;MulBackward0&gt;)
-layer2.1.add_relu.stats tensor(26.1432, grad_fn=&lt;MulBackward0&gt;)
-layer3.0.conv1.stats tensor(26.8095, grad_fn=&lt;MulBackward0&gt;)
-layer3.0.conv2.stats tensor(26.6887, grad_fn=&lt;MulBackward0&gt;)
-layer3.0.downsample.0.stats tensor(24.7175, grad_fn=&lt;MulBackward0&gt;)
-layer3.0.add_relu.stats tensor(24.7503, grad_fn=&lt;MulBackward0&gt;)
-layer3.1.conv1.stats tensor(30.3775, grad_fn=&lt;MulBackward0&gt;)
-layer3.1.conv2.stats tensor(25.7999, grad_fn=&lt;MulBackward0&gt;)
-layer3.1.add_relu.stats tensor(25.3330, grad_fn=&lt;MulBackward0&gt;)
-layer4.0.conv1.stats tensor(26.7308, grad_fn=&lt;MulBackward0&gt;)
-layer4.0.conv2.stats tensor(26.7178, grad_fn=&lt;MulBackward0&gt;)
-layer4.0.downsample.0.stats tensor(21.8661, grad_fn=&lt;MulBackward0&gt;)
-layer4.0.add_relu.stats tensor(20.6327, grad_fn=&lt;MulBackward0&gt;)
-layer4.1.conv1.stats tensor(26.0480, grad_fn=&lt;MulBackward0&gt;)
-layer4.1.conv2.stats tensor(17.7665, grad_fn=&lt;MulBackward0&gt;)
-layer4.1.add_relu.stats tensor(18.4212, grad_fn=&lt;MulBackward0&gt;)
-fc.stats tensor(20.4697, grad_fn=&lt;MulBackward0&gt;)
-quant.stats tensor(48.1801)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>conv1.stats tensor(37.4984, grad_fn=&lt;MulBackward0&gt;)
+layer1.0.conv1.stats tensor(29.9014, grad_fn=&lt;MulBackward0&gt;)
+layer1.0.conv2.stats tensor(28.2380, grad_fn=&lt;MulBackward0&gt;)
+layer1.0.add_relu.stats tensor(31.9365, grad_fn=&lt;MulBackward0&gt;)
+layer1.1.conv1.stats tensor(29.3009, grad_fn=&lt;MulBackward0&gt;)
+layer1.1.conv2.stats tensor(25.5800, grad_fn=&lt;MulBackward0&gt;)
+layer1.1.add_relu.stats tensor(29.1658, grad_fn=&lt;MulBackward0&gt;)
+layer2.0.conv1.stats tensor(25.6632, grad_fn=&lt;MulBackward0&gt;)
+layer2.0.conv2.stats tensor(25.7922, grad_fn=&lt;MulBackward0&gt;)
+layer2.0.downsample.0.stats tensor(22.2473, grad_fn=&lt;MulBackward0&gt;)
+layer2.0.add_relu.stats tensor(25.0793, grad_fn=&lt;MulBackward0&gt;)
+layer2.1.conv1.stats tensor(24.7531, grad_fn=&lt;MulBackward0&gt;)
+layer2.1.conv2.stats tensor(23.8798, grad_fn=&lt;MulBackward0&gt;)
+layer2.1.add_relu.stats tensor(25.1236, grad_fn=&lt;MulBackward0&gt;)
+layer3.0.conv1.stats tensor(26.2195, grad_fn=&lt;MulBackward0&gt;)
+layer3.0.conv2.stats tensor(26.6054, grad_fn=&lt;MulBackward0&gt;)
+layer3.0.downsample.0.stats tensor(23.9760, grad_fn=&lt;MulBackward0&gt;)
+layer3.0.add_relu.stats tensor(24.4878, grad_fn=&lt;MulBackward0&gt;)
+layer3.1.conv1.stats tensor(30.1759, grad_fn=&lt;MulBackward0&gt;)
+layer3.1.conv2.stats tensor(25.9344, grad_fn=&lt;MulBackward0&gt;)
+layer3.1.add_relu.stats tensor(25.1298, grad_fn=&lt;MulBackward0&gt;)
+layer4.0.conv1.stats tensor(27.1464, grad_fn=&lt;MulBackward0&gt;)
+layer4.0.conv2.stats tensor(27.2931, grad_fn=&lt;MulBackward0&gt;)
+layer4.0.downsample.0.stats tensor(21.5623, grad_fn=&lt;MulBackward0&gt;)
+layer4.0.add_relu.stats tensor(20.0892, grad_fn=&lt;MulBackward0&gt;)
+layer4.1.conv1.stats tensor(25.2457, grad_fn=&lt;MulBackward0&gt;)
+layer4.1.conv2.stats tensor(17.5109, grad_fn=&lt;MulBackward0&gt;)
+layer4.1.add_relu.stats tensor(17.0896, grad_fn=&lt;MulBackward0&gt;)
+fc.stats tensor(18.7461, grad_fn=&lt;MulBackward0&gt;)
+quant.stats tensor(48.0538)
 </pre></div>
 </div>
 <p>If we want to do the comparison for more than one input data, we can do the following.
@@ -836,14 +829,14 @@ torch.Size([64, 3, 3])
     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">compute_error</span><span class="p">(</span><span class="n">ob_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;float&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">ob_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;quantized&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dequantize</span><span class="p">()))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>layer1.0.stats tensor(32.7435)
-layer1.1.stats tensor(33.9107)
-layer2.0.stats tensor(29.2024)
-layer2.1.stats tensor(31.9994)
-layer3.0.stats tensor(27.9835)
-layer3.1.stats tensor(31.5789)
-layer4.0.stats tensor(25.3240)
-layer4.1.stats tensor(23.5542)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>layer1.0.stats tensor(32.4776)
+layer1.1.stats tensor(34.1646)
+layer2.0.stats tensor(28.9793)
+layer2.1.stats tensor(31.1360)
+layer3.0.stats tensor(29.5498)
+layer3.1.stats tensor(31.4655)
+layer4.0.stats tensor(25.3565)
+layer4.1.stats tensor(23.0448)
 </pre></div>
 </div>
 <p>If we want to do the comparison for more than one input data, we can do the following.</p>
@@ -952,12 +945,12 @@ layer4.1.stats tensor(23.5542)
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>encoder.weight tensor(inf)
-rnn._all_weight_values.0.param tensor(48.1489)
-rnn._all_weight_values.1.param tensor(48.1426)
-rnn._all_weight_values.2.param tensor(48.1367)
-rnn._all_weight_values.3.param tensor(48.1334)
-rnn._all_weight_values.4.param tensor(48.1276)
-decoder._packed_params._packed_params tensor(48.1704)
+rnn._all_weight_values.0.param tensor(48.1272)
+rnn._all_weight_values.1.param tensor(48.1357)
+rnn._all_weight_values.2.param tensor(48.1513)
+rnn._all_weight_values.3.param tensor(48.1405)
+rnn._all_weight_values.4.param tensor(48.1291)
+decoder._packed_params._packed_params tensor(48.2952)
 </pre></div>
 </div>
 <p>The Inf value in <code class="docutils literal notranslate"><span class="pre">encoder.weight</span></code> entry above is because encoder module is not quantized and the weights are the same in both floating point and quantized models.</p>
@@ -981,8 +974,8 @@ decoder._packed_params._packed_params tensor(48.1704)
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>encoder.stats tensor(inf, grad_fn=&lt;MulBackward0&gt;)
-rnn.stats tensor(55.4788, grad_fn=&lt;MulBackward0&gt;)
-decoder.stats tensor(38.1169, grad_fn=&lt;MulBackward0&gt;)
+rnn.stats tensor(55.7335, grad_fn=&lt;MulBackward0&gt;)
+decoder.stats tensor(41.8298, grad_fn=&lt;MulBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -1017,8 +1010,8 @@ decoder.stats tensor(38.1169, grad_fn=&lt;MulBackward0&gt;)
     <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">compute_error</span><span class="p">(</span><span class="n">ob_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;float&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">ob_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;quantized&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>rnn.stats tensor(55.6537)
-decoder.stats tensor(33.1989)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>rnn.stats tensor(55.8252)
+decoder.stats tensor(39.5052)
 </pre></div>
 </div>
 <p>SQNR of 40 dB is high and this is a situation where we have very good numerical alignment between the floating point and quantized model.</p>
@@ -1032,7 +1025,7 @@ decoder.stats tensor(33.1989)
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <p>[1] <a class="reference external" href="https://pytorch.org/tutorials/advanced/dynamic_quantization_tutorial.html">DYNAMIC QUANTIZATION ON AN LSTM WORD LANGUAGE MODEL</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.776 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.077 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-prototype-numeric-suite-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/6aefea42cfe1bb0d4cb1b244c3feba1b/numeric_suite_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">numeric_suite_tutorial.py</span></code></a></p>
