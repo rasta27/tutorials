@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.3MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 15.3MB/s]
 
 
 
@@ -135,104 +135,55 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.20M/945M [00:00<00:13, 75.5MB/s]
-      2%|1         | 17.0M/945M [00:00<00:10, 91.2MB/s]
-      3%|2         | 26.7M/945M [00:00<00:10, 96.1MB/s]
-      4%|3         | 36.5M/945M [00:00<00:09, 98.7MB/s]
-      5%|4         | 46.3M/945M [00:00<00:09, 99.9MB/s]
-      6%|5         | 56.2M/945M [00:00<00:09, 101MB/s] 
-      7%|6         | 65.8M/945M [00:00<00:09, 101MB/s]
-      8%|7         | 75.4M/945M [00:00<00:09, 101MB/s]
-      9%|9         | 85.1M/945M [00:00<00:08, 101MB/s]
-     10%|#         | 94.8M/945M [00:01<00:08, 99.9MB/s]
-     11%|#1        | 104M/945M [00:01<00:08, 99.1MB/s] 
-     12%|#2        | 114M/945M [00:01<00:08, 99.2MB/s]
-     13%|#3        | 124M/945M [00:01<00:08, 100MB/s] 
-     14%|#4        | 133M/945M [00:01<00:08, 99.2MB/s]
-     15%|#5        | 143M/945M [00:01<00:08, 99.2MB/s]
-     16%|#6        | 152M/945M [00:01<00:08, 99.5MB/s]
-     17%|#7        | 162M/945M [00:01<00:08, 101MB/s] 
-     18%|#8        | 172M/945M [00:01<00:08, 99.9MB/s]
-     19%|#9        | 181M/945M [00:01<00:08, 99.8MB/s]
-     20%|##        | 191M/945M [00:02<00:07, 99.1MB/s]
-     21%|##1       | 200M/945M [00:02<00:07, 98.3MB/s]
-     22%|##2       | 210M/945M [00:02<00:07, 99.0MB/s]
-     23%|##3       | 219M/945M [00:02<00:07, 99.1MB/s]
-     24%|##4       | 229M/945M [00:02<00:07, 99.3MB/s]
-     25%|##5       | 238M/945M [00:02<00:07, 99.6MB/s]
-     26%|##6       | 248M/945M [00:02<00:07, 100MB/s] 
-     27%|##7       | 258M/945M [00:02<00:07, 101MB/s]
-     28%|##8       | 267M/945M [00:02<00:07, 101MB/s]
-     29%|##9       | 277M/945M [00:02<00:06, 101MB/s]
-     30%|###       | 287M/945M [00:03<00:06, 102MB/s]
-     31%|###1      | 297M/945M [00:03<00:06, 102MB/s]
-     32%|###2      | 306M/945M [00:03<00:06, 101MB/s]
-     33%|###3      | 316M/945M [00:03<00:06, 99.8MB/s]
-     34%|###4      | 326M/945M [00:03<00:06, 101MB/s] 
-     36%|###5      | 336M/945M [00:03<00:06, 102MB/s]
-     37%|###6      | 345M/945M [00:03<00:06, 102MB/s]
-     38%|###7      | 355M/945M [00:03<00:06, 101MB/s]
-     39%|###8      | 365M/945M [00:03<00:05, 101MB/s]
-     40%|###9      | 375M/945M [00:03<00:05, 101MB/s]
-     41%|####      | 384M/945M [00:04<00:05, 102MB/s]
-     42%|####1     | 394M/945M [00:04<00:05, 102MB/s]
-     43%|####2     | 404M/945M [00:04<00:05, 99.6MB/s]
-     44%|####3     | 414M/945M [00:04<00:05, 101MB/s] 
-     45%|####4     | 423M/945M [00:04<00:05, 100MB/s]
-     46%|####5     | 433M/945M [00:04<00:05, 101MB/s]
-     47%|####6     | 443M/945M [00:04<00:05, 101MB/s]
-     48%|####7     | 453M/945M [00:04<00:05, 101MB/s]
-     49%|####8     | 463M/945M [00:04<00:04, 102MB/s]
-     50%|#####     | 472M/945M [00:04<00:04, 102MB/s]
-     51%|#####1    | 482M/945M [00:05<00:04, 102MB/s]
-     52%|#####2    | 492M/945M [00:05<00:04, 102MB/s]
-     53%|#####3    | 502M/945M [00:05<00:04, 102MB/s]
-     54%|#####4    | 512M/945M [00:05<00:04, 102MB/s]
-     55%|#####5    | 521M/945M [00:05<00:04, 101MB/s]
-     56%|#####6    | 531M/945M [00:05<00:04, 100MB/s]
-     57%|#####7    | 541M/945M [00:05<00:04, 101MB/s]
-     58%|#####8    | 550M/945M [00:05<00:04, 100MB/s]
-     59%|#####9    | 560M/945M [00:05<00:04, 98.5MB/s]
-     60%|######    | 569M/945M [00:05<00:03, 98.7MB/s]
-     61%|######1   | 579M/945M [00:06<00:03, 99.0MB/s]
-     62%|######2   | 589M/945M [00:06<00:03, 100MB/s] 
-     63%|######3   | 599M/945M [00:06<00:03, 101MB/s]
-     64%|######4   | 608M/945M [00:06<00:03, 101MB/s]
-     65%|######5   | 618M/945M [00:06<00:03, 100MB/s]
-     66%|######6   | 627M/945M [00:06<00:03, 99.6MB/s]
-     67%|######7   | 637M/945M [00:06<00:03, 101MB/s] 
-     69%|######8   | 647M/945M [00:06<00:03, 101MB/s]
-     70%|######9   | 657M/945M [00:06<00:02, 102MB/s]
-     71%|#######   | 667M/945M [00:06<00:02, 101MB/s]
-     72%|#######1  | 676M/945M [00:07<00:02, 99.6MB/s]
-     73%|#######2  | 686M/945M [00:07<00:02, 98.9MB/s]
-     74%|#######3  | 696M/945M [00:07<00:02, 99.5MB/s]
-     75%|#######4  | 705M/945M [00:07<00:02, 99.4MB/s]
-     76%|#######5  | 715M/945M [00:07<00:02, 100MB/s] 
-     77%|#######6  | 724M/945M [00:07<00:02, 99.7MB/s]
-     78%|#######7  | 734M/945M [00:07<00:02, 99.3MB/s]
-     79%|#######8  | 743M/945M [00:07<00:02, 98.1MB/s]
-     80%|#######9  | 753M/945M [00:07<00:02, 98.4MB/s]
-     81%|########  | 762M/945M [00:07<00:01, 99.5MB/s]
-     82%|########1 | 773M/945M [00:08<00:01, 101MB/s] 
-     83%|########2 | 783M/945M [00:08<00:01, 102MB/s]
-     84%|########3 | 792M/945M [00:08<00:01, 101MB/s]
-     85%|########4 | 802M/945M [00:08<00:01, 101MB/s]
-     86%|########5 | 812M/945M [00:08<00:01, 103MB/s]
-     87%|########7 | 822M/945M [00:08<00:01, 101MB/s]
-     88%|########8 | 832M/945M [00:08<00:01, 102MB/s]
-     89%|########9 | 842M/945M [00:08<00:01, 101MB/s]
-     90%|######### | 851M/945M [00:08<00:00, 101MB/s]
-     91%|#########1| 861M/945M [00:09<00:00, 100MB/s]
-     92%|#########2| 871M/945M [00:09<00:00, 101MB/s]
-     93%|#########3| 881M/945M [00:09<00:00, 98.6MB/s]
-     94%|#########4| 891M/945M [00:09<00:00, 101MB/s] 
-     95%|#########5| 900M/945M [00:09<00:00, 101MB/s]
-     96%|#########6| 910M/945M [00:09<00:00, 98.1MB/s]
-     97%|#########7| 920M/945M [00:09<00:00, 99.2MB/s]
-     98%|#########8| 929M/945M [00:09<00:00, 100MB/s] 
-     99%|#########9| 939M/945M [00:09<00:00, 100MB/s]
-    100%|##########| 945M/945M [00:09<00:00, 100MB/s]
+      0%|          | 656k/945M [00:00<02:33, 6.45MB/s]
+      0%|          | 1.67M/945M [00:00<01:50, 8.97MB/s]
+      0%|          | 3.23M/945M [00:00<01:20, 12.2MB/s]
+      1%|          | 5.67M/945M [00:00<00:56, 17.5MB/s]
+      1%|1         | 9.48M/945M [00:00<00:38, 25.5MB/s]
+      2%|1         | 15.4M/945M [00:00<00:25, 37.8MB/s]
+      3%|2         | 24.7M/945M [00:00<00:16, 57.4MB/s]
+      4%|4         | 39.6M/945M [00:00<00:10, 88.5MB/s]
+      6%|6         | 60.4M/945M [00:00<00:07, 129MB/s] 
+      9%|8         | 81.9M/945M [00:01<00:05, 159MB/s]
+     11%|#         | 104M/945M [00:01<00:04, 180MB/s] 
+     13%|#3        | 125M/945M [00:01<00:04, 194MB/s]
+     16%|#5        | 147M/945M [00:01<00:04, 205MB/s]
+     18%|#7        | 169M/945M [00:01<00:03, 211MB/s]
+     20%|##        | 191M/945M [00:01<00:03, 217MB/s]
+     22%|##2       | 212M/945M [00:01<00:03, 220MB/s]
+     25%|##4       | 234M/945M [00:01<00:03, 222MB/s]
+     27%|##7       | 256M/945M [00:01<00:03, 224MB/s]
+     29%|##9       | 277M/945M [00:01<00:03, 224MB/s]
+     32%|###1      | 299M/945M [00:02<00:02, 226MB/s]
+     34%|###3      | 321M/945M [00:02<00:02, 226MB/s]
+     36%|###6      | 344M/945M [00:02<00:02, 229MB/s]
+     39%|###8      | 365M/945M [00:02<00:02, 227MB/s]
+     41%|####1     | 388M/945M [00:02<00:02, 229MB/s]
+     43%|####3     | 410M/945M [00:02<00:02, 230MB/s]
+     46%|####5     | 432M/945M [00:02<00:02, 227MB/s]
+     48%|####8     | 454M/945M [00:02<00:02, 230MB/s]
+     50%|#####     | 476M/945M [00:02<00:02, 228MB/s]
+     53%|#####2    | 498M/945M [00:02<00:02, 228MB/s]
+     55%|#####5    | 521M/945M [00:03<00:01, 232MB/s]
+     58%|#####7    | 543M/945M [00:03<00:01, 228MB/s]
+     60%|#####9    | 566M/945M [00:03<00:01, 230MB/s]
+     62%|######2   | 588M/945M [00:03<00:01, 226MB/s]
+     65%|######4   | 610M/945M [00:03<00:01, 228MB/s]
+     67%|######6   | 632M/945M [00:03<00:01, 226MB/s]
+     69%|######9   | 654M/945M [00:03<00:01, 228MB/s]
+     72%|#######1  | 676M/945M [00:03<00:01, 226MB/s]
+     74%|#######3  | 698M/945M [00:03<00:01, 228MB/s]
+     76%|#######6  | 720M/945M [00:03<00:01, 229MB/s]
+     79%|#######8  | 742M/945M [00:04<00:00, 227MB/s]
+     81%|########  | 764M/945M [00:04<00:00, 229MB/s]
+     83%|########3 | 787M/945M [00:04<00:00, 231MB/s]
+     86%|########5 | 810M/945M [00:04<00:00, 235MB/s]
+     88%|########8 | 833M/945M [00:04<00:00, 237MB/s]
+     91%|######### | 856M/945M [00:04<00:00, 236MB/s]
+     93%|#########3| 878M/945M [00:04<00:00, 235MB/s]
+     95%|#########5| 901M/945M [00:04<00:00, 236MB/s]
+     98%|#########7| 924M/945M [00:04<00:00, 238MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 201MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -528,37 +479,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: the flash pack's Lee Thompson captured the wacky things people carry on the back of a motorbike or scooter in southeast Asia . the photojournalist was on a 14-day trip to the country with a group of nine . he captured images of a man puffing on a cigarette and carrying what looks like more than 20 live chickens in woven baskets .
+    prediction: petr cech has made just five Premier League appearances this season . the 32-year-old has been understudy to Thibaut Courtois . but he is set to leave the club at the end of the season, insists aaron ramsey .
 
-    target: The Flash Pack co-owner Lee Thompson photographed incredible uses for scooters in southeast Asia . Award-winning photojournalist Thompson was with a 14-day tour of Vietnam and Cambodia in April . Woven baskets filled with chickens and pigs, and unique child seats seen on the scooters .
+    target: Petr Cech looks set to leave Chelsea at the end of the season . The 32-year-old goalkeeper revealed last week he does not want to spend another season as understudy to first-choice Thibaut Courtois . Cech has made just five Premier League appearances this season . Former Chelsea goalkeeper Carlo Cudicini feels Arsenal should sign him . READ: Arsenal waiting for  Cech decision before they move for keeper . CLICK HERE for all the latest Arsenal news .
 
 
     Example 2:
 
-    prediction: the 35-year-old math teacher from Philadelphia pleaded guilty in December to institutional sexual assault and disseminating sexually explicit materials to a minor . during her sentencing, Montgomery County Court Judge Garrett D. Page reportedly asked 'What young man would not jump on that candy?' he also reportedly chastised her for sending the student explicit photos and videos of herself . she will also face three years’ probation, 100 hours of community service and will have to register as a s
+    prediction: improvised bomb explodes near a vehicle traveling near the northeastern city of Garowe . four aid workers for the international children's agency UNICEF are among the dead . the bomber also died in the attack, according to authorities .
 
-    target: Erica Ginnetti, 35, must also serve 60 days under house arrest, 100 hours of community service and three years' probation . Judge Garrett Page reportedly asked 'What young man would not jump on that candy?' Ginnetti pleaded guilty in a Pennsylvania court in December to having sex with a 17-year-old student . Page told Ginneti her 'sexual hunger' had devastating consequences for two families . Married mother of three said she has mended fences with her family and became a fitness instructor . She first approached her victim in May 2013 when she chaperoned the senior prom and invited him to come work out at her gym .
+    target: The bombing is "an attack against the future of our country," Somalia's President says . UNICEF says the staff members' vehicle was hit by an explosion on its way to their office . Four wounded staff members are in serious condition, the agency says .
 
 
     Example 3:
 
-    prediction: family moved to rural village of Geldeston in 2005 with five children . but their happiness was shattered in 2014 after their dogs were shot . they were accused of killing farmer's birds after escaping onto his land . a farmer next door complained about their dogs trespassing on his land . but he returned to complain that their labrador had killed 120 birds .
+    prediction: Nicola Sturgeon said she would back calls for all tax powers to be devolved to scotland 'as soon as possible' but labour leader Jim Murphy warned it would leave a £7.6billion black hole in finances . the first minister was booed for refusing to rule out a snap second referendum .
 
-    target: Lisa and James Tuttle moved with children to idyllic Geldeston, Norfolk . Their dogs kept escaping onto neighbouring farmland . They were warned if dogs kept bothering farmer's birds, they'd be shot . Couple believed dogs were gentle and wouldn't have attacked birds . In 2014 while family were on holiday, gamekeeper shot two of the dogs . Acted within law so was not charged . Family are devastated by loss of pets and now want to move .
+    target: Miss Sturgeon made the call in debate at King's College, Aberdeen, tonight . Said she wants powers 'as quickly as the other parties agree to give them' Scots Labour leader Jim Murphy said move would ruin country's finances . Drop in value of North Sea oil would mean a £7.6bn hole in the budget . Mr Rennie, who openly admitted the LibDems had broken a promise not to raise tuition fees, cautioned Miss Sturgeon against breaking her promise that last year's referendum was a 'once-in-a-generation' vote. Miss Davidson was forced to accept the UK Government could not stand in the way of another referendum. Mr Harvie called for the end of North Sea oil extraction – in a city where thousands of workers rely on its future.
 
 
     Example 4:
 
-    prediction: Jake castner, 19, from Ballarat in Victoria, went into hiding last week . he boasted on the social media site: 'we don't talk to police!' . on his fourth day on the run he boasted about the 'nightmare' title a magistrate gave him last year .
+    prediction: new textbook claims dictator learned to drive when he was three years old . claims he won yacht race aged nine and can draw and compose music . manual contains mention of country's history, instead of major details .
 
-    target: Jake Castner is wanted over burglary and theft-related offences . He is boasting about how the police 'can't catch' him on Facebook . He also appears to offer to sell drugs and a locked iPhone 4 . The 19-year-old was called a nightmare by a magistrate last year . Police are appealing for help to find the teen from Ballarat, Victoria .
+    target: Pupils are taught manual called Kim Jong-un's Revolutionary Activities . Perhaps unsurprisingly, it contains no mention of the country's history . Text also claims Kim can draw well and knows how to compose music .
 
 
     Example 5:
 
-    prediction: the event was broadcast on the popular talk show Live! with Kelly and Michael . the event is aimed at promoting more active and healthy lifestyles . world no 5 Caroline Wozniacki took part in the event on Monday .
+    prediction: a 20-kilometer (12-mile) exclusion zone has been established around the crater . the explosion produced an extensive plume but was also described as smaller .
 
-    target: Caroline Wozniacki played tennis with US President Barack Obama as part of the #gimmegive campaign at the annual Easter Egg Roll . The campaign aimed at promoting more active and healthy lifestyles among American people involved several celebrities . The event was broadcast on the popular American talk show Live! with Kelly and Michael .
+    target: "There is still smoke on and off," says resident with distant view . The volcano erupts for third time since April 22 . About 1,500 people are evacuated, an official says, according to CNN Chile .
 
 
 
@@ -912,7 +863,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 5 minutes  5.718 seconds)
+   **Total running time of the script:** ( 3 minutes  52.989 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

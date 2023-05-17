@@ -660,7 +660,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['vous ne pretez meme pas attention .', 'you re not even paying attention .']
+['elle n est pas aussi agee que marie .', 'she s not as old as mary .']
 </pre></div>
 </div>
 </div>
@@ -1102,65 +1102,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 30s (- 21m 13s) (5000 6%) 2.8553
-2m 56s (- 19m 5s) (10000 13%) 2.2696
-4m 21s (- 17m 26s) (15000 20%) 1.9353
-5m 47s (- 15m 54s) (20000 26%) 1.7136
-7m 13s (- 14m 27s) (25000 33%) 1.5355
-8m 40s (- 13m 0s) (30000 40%) 1.3346
-10m 6s (- 11m 32s) (35000 46%) 1.2104
-11m 32s (- 10m 6s) (40000 53%) 1.0824
-12m 59s (- 8m 39s) (45000 60%) 0.9835
-14m 26s (- 7m 13s) (50000 66%) 0.8911
-15m 52s (- 5m 46s) (55000 73%) 0.7917
-17m 18s (- 4m 19s) (60000 80%) 0.7220
-18m 45s (- 2m 53s) (65000 86%) 0.6678
-20m 12s (- 1m 26s) (70000 93%) 0.6298
-21m 39s (- 0m 0s) (75000 100%) 0.5806
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 22s (- 19m 11s) (5000 6%) 2.8655
+2m 39s (- 17m 18s) (10000 13%) 2.2911
+3m 57s (- 15m 51s) (15000 20%) 1.9701
+5m 15s (- 14m 28s) (20000 26%) 1.7205
+6m 33s (- 13m 7s) (25000 33%) 1.5224
+7m 51s (- 11m 47s) (30000 40%) 1.3825
+9m 10s (- 10m 29s) (35000 46%) 1.2042
+10m 29s (- 9m 10s) (40000 53%) 1.1053
+11m 47s (- 7m 51s) (45000 60%) 1.0040
+13m 6s (- 6m 33s) (50000 66%) 0.8911
+14m 25s (- 5m 14s) (55000 73%) 0.8121
+15m 44s (- 3m 56s) (60000 80%) 0.7430
+17m 3s (- 2m 37s) (65000 86%) 0.6819
+18m 22s (- 1m 18s) (70000 93%) 0.6079
+19m 40s (- 0m 0s) (75000 100%) 0.5625
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; ce sont mes amies .
-= they are my friends .
-&lt; they are my friends . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; il est ingenu .
+= he s innocent .
+&lt; he is innocent . &lt;EOS&gt;
 
-&gt; il est nerveux et facilement effraye .
-= he s nervous and easily frightened .
-&lt; he is nervous and easily frightened his . . &lt;EOS&gt;
+&gt; excusez mon retard .
+= i m sorry i m late .
+&lt; i m sorry i m late . &lt;EOS&gt;
 
-&gt; tu as tort dans ce cas .
-= you re wrong in this case .
-&lt; you re wrong in this case . &lt;EOS&gt;
+&gt; tu es tres serviable .
+= you re very helpful .
+&lt; you re very helpful . &lt;EOS&gt;
 
-&gt; je suis fortunee .
-= i m wealthy .
-&lt; i m wealthy . &lt;EOS&gt;
+&gt; nous gachons un temps precieux .
+= we re wasting valuable time here .
+&lt; we re wasting time time . &lt;EOS&gt;
 
-&gt; je n ai pas encore faim .
-= i m not hungry yet .
-&lt; i m not hungry yet . &lt;EOS&gt;
+&gt; j arrive tout de suite .
+= i m coming at once .
+&lt; i m coming right away . &lt;EOS&gt;
 
-&gt; elles sont toutes ici .
-= they re all here .
-&lt; they re all here . &lt;EOS&gt;
+&gt; je suis egoiste .
+= i m selfish .
+&lt; i m selfish . &lt;EOS&gt;
 
-&gt; je suis cultivee .
-= i m cultured .
-&lt; i m spontaneous . &lt;EOS&gt;
+&gt; je suis desole mais je ne peux pas .
+= i m afraid i can t .
+&lt; i m sorry but i can . &lt;EOS&gt;
 
-&gt; je rechigne a lui rendre visite .
-= i m reluctant to visit him .
-&lt; i am thinking to him him . &lt;EOS&gt;
+&gt; je le fais pour ma famille .
+= i m doing this for my family .
+&lt; i m doing this for my family . &lt;EOS&gt;
 
-&gt; c est un informaticien boutonneux .
-= he s a computer nerd .
-&lt; he s a tough worker . &lt;EOS&gt;
+&gt; il a encore des doutes .
+= he is still having doubts .
+&lt; he is still having doubts . &lt;EOS&gt;
 
-&gt; vous n etes pas assez rapide .
-= you re not fast enough .
-&lt; you re not fast enough . &lt;EOS&gt;
+&gt; vous etes toutes seules .
+= you re all alone .
+&lt; you re all alone . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1177,7 +1177,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fac7437e320&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f9ef2069f90&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1225,7 +1225,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than i am . &lt;EOS&gt;
+output = she s five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1237,9 +1237,9 @@ FixedFormatter should only be used together with FixedLocator
 input = elle est trop petit .
 output = she is too drunk . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared of dying . &lt;EOS&gt;
+output = i m not afraid to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young man . &lt;EOS&gt;
+output = he s a talented young . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1269,7 +1269,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 21 minutes  53.761 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  54.669 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>
