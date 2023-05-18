@@ -465,26 +465,26 @@ in ``all_losses`` for plotting later.
 
  .. code-block:: none
 
-    0m 13s (5000 5%) 2.4828
-    0m 27s (10000 10%) 2.8305
-    0m 41s (15000 15%) 1.4279
-    0m 54s (20000 20%) 3.3382
-    1m 7s (25000 25%) 2.6889
-    1m 20s (30000 30%) 2.8563
-    1m 34s (35000 35%) 2.3812
-    1m 47s (40000 40%) 3.1734
-    2m 0s (45000 45%) 2.9756
-    2m 14s (50000 50%) 2.6591
-    2m 28s (55000 55%) 1.9706
-    2m 42s (60000 60%) 2.0236
-    2m 56s (65000 65%) 2.4645
-    3m 10s (70000 70%) 1.0380
-    3m 23s (75000 75%) 3.2503
-    3m 37s (80000 80%) 2.9587
-    3m 51s (85000 85%) 2.4900
-    4m 4s (90000 90%) 2.6986
-    4m 18s (95000 95%) 2.5497
-    4m 32s (100000 100%) 2.0829
+    0m 13s (5000 5%) 3.1692
+    0m 27s (10000 10%) 2.4929
+    0m 41s (15000 15%) 2.7096
+    0m 55s (20000 20%) 2.4202
+    1m 8s (25000 25%) 2.5049
+    1m 22s (30000 30%) 3.0854
+    1m 35s (35000 35%) 3.1236
+    1m 48s (40000 40%) 2.6999
+    2m 2s (45000 45%) 1.8946
+    2m 15s (50000 50%) 2.4694
+    2m 29s (55000 55%) 2.2295
+    2m 42s (60000 60%) 1.2566
+    2m 55s (65000 65%) 2.2984
+    3m 8s (70000 70%) 1.2330
+    3m 21s (75000 75%) 1.7395
+    3m 34s (80000 80%) 2.8796
+    3m 47s (85000 85%) 2.4968
+    4m 0s (90000 90%) 2.5519
+    4m 13s (95000 95%) 2.3729
+    4m 26s (100000 100%) 1.8150
 
 
 
@@ -523,7 +523,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7fe77f5c3dc0>]
+    [<matplotlib.lines.Line2D object at 0x7f6810aaa290>]
 
 
 
@@ -604,18 +604,18 @@ feed that in as the next letter, and repeat until the EOS token.
 
  .. code-block:: none
 
-    Rovakovovs
-    Uantonov
-    Shantov
-    Gant
-    Ering
-    Rong
-    Santal
-    Parer
-    Arana
+    Roulov
+    Uanton
+    Shallon
+    Gerre
+    Eeren
+    Ronert
+    Seran
+    Paran
+    Alane
     Chan
     Han
-    Iun
+    Iuan
 
 
 
@@ -642,7 +642,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  32.378 seconds)
+   **Total running time of the script:** ( 4 minutes  26.391 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_generation_tutorial.py:

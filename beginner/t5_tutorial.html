@@ -453,7 +453,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 11.9MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 10.8MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -478,108 +478,46 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 7.56M/945M [00:00&lt;00:12, 79.2MB/s]
-  2%|1         | 16.3M/945M [00:00&lt;00:11, 86.4MB/s]
-  3%|2         | 25.6M/945M [00:00&lt;00:10, 91.5MB/s]
-  4%|3         | 34.9M/945M [00:00&lt;00:10, 93.7MB/s]
-  5%|4         | 43.8M/945M [00:00&lt;00:10, 93.0MB/s]
-  6%|5         | 52.9M/945M [00:00&lt;00:09, 93.8MB/s]
-  7%|6         | 61.9M/945M [00:00&lt;00:09, 93.1MB/s]
-  8%|7         | 70.9M/945M [00:00&lt;00:09, 93.5MB/s]
-  9%|8         | 80.4M/945M [00:00&lt;00:09, 95.5MB/s]
- 10%|9         | 89.8M/945M [00:01&lt;00:09, 96.4MB/s]
- 10%|#         | 99.0M/945M [00:01&lt;00:09, 94.6MB/s]
- 12%|#1        | 109M/945M [00:01&lt;00:09, 96.4MB/s]
- 12%|#2        | 118M/945M [00:01&lt;00:08, 96.8MB/s]
- 13%|#3        | 128M/945M [00:01&lt;00:08, 97.6MB/s]
- 15%|#4        | 137M/945M [00:01&lt;00:08, 98.1MB/s]
- 15%|#5        | 146M/945M [00:01&lt;00:08, 96.3MB/s]
- 16%|#6        | 156M/945M [00:01&lt;00:08, 96.9MB/s]
- 18%|#7        | 165M/945M [00:01&lt;00:08, 97.9MB/s]
- 19%|#8        | 175M/945M [00:01&lt;00:08, 99.2MB/s]
- 20%|#9        | 185M/945M [00:02&lt;00:08, 99.4MB/s]
- 21%|##        | 194M/945M [00:02&lt;00:08, 97.4MB/s]
- 22%|##1       | 204M/945M [00:02&lt;00:07, 97.9MB/s]
- 23%|##2       | 213M/945M [00:02&lt;00:07, 97.0MB/s]
- 24%|##3       | 222M/945M [00:02&lt;00:07, 96.1MB/s]
- 25%|##4       | 231M/945M [00:02&lt;00:07, 94.7MB/s]
- 25%|##5       | 240M/945M [00:02&lt;00:08, 90.9MB/s]
- 26%|##6       | 250M/945M [00:02&lt;00:07, 92.3MB/s]
- 27%|##7       | 259M/945M [00:02&lt;00:07, 93.5MB/s]
- 28%|##8       | 268M/945M [00:02&lt;00:07, 94.5MB/s]
- 29%|##9       | 277M/945M [00:03&lt;00:07, 95.3MB/s]
- 30%|###       | 286M/945M [00:03&lt;00:07, 95.0MB/s]
- 31%|###1      | 296M/945M [00:03&lt;00:07, 96.1MB/s]
- 32%|###2      | 305M/945M [00:03&lt;00:07, 93.4MB/s]
- 33%|###3      | 314M/945M [00:03&lt;00:06, 94.4MB/s]
- 34%|###4      | 324M/945M [00:03&lt;00:06, 95.1MB/s]
- 35%|###5      | 333M/945M [00:03&lt;00:06, 96.0MB/s]
- 36%|###6      | 343M/945M [00:03&lt;00:06, 97.4MB/s]
- 37%|###7      | 352M/945M [00:03&lt;00:06, 96.6MB/s]
- 38%|###8      | 361M/945M [00:03&lt;00:06, 96.6MB/s]
- 39%|###9      | 370M/945M [00:04&lt;00:06, 96.4MB/s]
- 40%|####      | 380M/945M [00:04&lt;00:06, 97.1MB/s]
- 41%|####1     | 389M/945M [00:04&lt;00:05, 97.1MB/s]
- 42%|####2     | 398M/945M [00:04&lt;00:06, 94.1MB/s]
- 43%|####3     | 408M/945M [00:04&lt;00:05, 95.4MB/s]
- 44%|####4     | 417M/945M [00:04&lt;00:05, 95.0MB/s]
- 45%|####5     | 426M/945M [00:04&lt;00:05, 94.2MB/s]
- 46%|####6     | 435M/945M [00:04&lt;00:05, 95.2MB/s]
- 47%|####7     | 444M/945M [00:04&lt;00:05, 95.2MB/s]
- 48%|####8     | 454M/945M [00:04&lt;00:05, 96.0MB/s]
- 49%|####9     | 463M/945M [00:05&lt;00:05, 95.8MB/s]
- 50%|####9     | 472M/945M [00:05&lt;00:05, 96.4MB/s]
- 51%|#####     | 482M/945M [00:05&lt;00:04, 97.4MB/s]
- 52%|#####1    | 491M/945M [00:05&lt;00:05, 90.9MB/s]
- 53%|#####2    | 500M/945M [00:05&lt;00:05, 92.1MB/s]
- 54%|#####3    | 509M/945M [00:05&lt;00:04, 92.7MB/s]
- 55%|#####4    | 518M/945M [00:05&lt;00:04, 93.8MB/s]
- 56%|#####5    | 527M/945M [00:05&lt;00:04, 94.0MB/s]
- 57%|#####6    | 536M/945M [00:05&lt;00:04, 93.5MB/s]
- 58%|#####7    | 545M/945M [00:06&lt;00:04, 90.4MB/s]
- 59%|#####8    | 555M/945M [00:06&lt;00:04, 93.1MB/s]
- 60%|#####9    | 564M/945M [00:06&lt;00:04, 94.9MB/s]
- 61%|######    | 574M/945M [00:06&lt;00:04, 96.4MB/s]
- 62%|######1   | 583M/945M [00:06&lt;00:03, 95.2MB/s]
- 63%|######2   | 592M/945M [00:06&lt;00:03, 96.5MB/s]
- 64%|######3   | 602M/945M [00:06&lt;00:03, 97.8MB/s]
- 65%|######4   | 612M/945M [00:06&lt;00:03, 98.5MB/s]
- 66%|######5   | 621M/945M [00:06&lt;00:03, 96.1MB/s]
- 67%|######6   | 630M/945M [00:06&lt;00:03, 95.6MB/s]
- 68%|######7   | 640M/945M [00:07&lt;00:03, 96.5MB/s]
- 69%|######8   | 649M/945M [00:07&lt;00:03, 97.7MB/s]
- 70%|######9   | 659M/945M [00:07&lt;00:03, 98.7MB/s]
- 71%|#######   | 668M/945M [00:07&lt;00:02, 98.1MB/s]
- 72%|#######1  | 678M/945M [00:07&lt;00:02, 94.9MB/s]
- 73%|#######2  | 687M/945M [00:07&lt;00:02, 96.8MB/s]
- 74%|#######3  | 697M/945M [00:07&lt;00:02, 97.4MB/s]
- 75%|#######4  | 706M/945M [00:07&lt;00:02, 98.4MB/s]
- 76%|#######5  | 716M/945M [00:07&lt;00:02, 98.1MB/s]
- 77%|#######6  | 725M/945M [00:07&lt;00:02, 97.5MB/s]
- 78%|#######7  | 735M/945M [00:08&lt;00:02, 97.8MB/s]
- 79%|#######8  | 744M/945M [00:08&lt;00:02, 97.7MB/s]
- 80%|#######9  | 753M/945M [00:08&lt;00:02, 97.9MB/s]
- 81%|########  | 763M/945M [00:08&lt;00:01, 98.6MB/s]
- 82%|########1 | 772M/945M [00:08&lt;00:01, 96.8MB/s]
- 83%|########2 | 782M/945M [00:08&lt;00:01, 97.3MB/s]
- 84%|########3 | 791M/945M [00:08&lt;00:01, 98.7MB/s]
- 85%|########4 | 801M/945M [00:08&lt;00:01, 99.0MB/s]
- 86%|########5 | 810M/945M [00:08&lt;00:01, 99.0MB/s]
- 87%|########6 | 820M/945M [00:08&lt;00:01, 97.7MB/s]
- 88%|########7 | 829M/945M [00:09&lt;00:01, 98.3MB/s]
- 89%|########8 | 839M/945M [00:09&lt;00:01, 98.5MB/s]
- 90%|########9 | 848M/945M [00:09&lt;00:01, 98.2MB/s]
- 91%|######### | 858M/945M [00:09&lt;00:00, 97.0MB/s]
- 92%|#########1| 867M/945M [00:09&lt;00:00, 97.6MB/s]
- 93%|#########2| 876M/945M [00:09&lt;00:00, 95.5MB/s]
- 94%|#########3| 886M/945M [00:09&lt;00:00, 96.7MB/s]
- 95%|#########4| 895M/945M [00:09&lt;00:00, 97.3MB/s]
- 96%|#########5| 905M/945M [00:09&lt;00:00, 98.0MB/s]
- 97%|#########6| 914M/945M [00:09&lt;00:00, 97.6MB/s]
- 98%|#########7| 924M/945M [00:10&lt;00:00, 96.7MB/s]
- 99%|#########8| 933M/945M [00:10&lt;00:00, 65.6MB/s]
-100%|#########9| 942M/945M [00:10&lt;00:00, 73.2MB/s]
-100%|##########| 945M/945M [00:10&lt;00:00, 94.5MB/s]
+  0%|          | 1.87M/945M [00:00&lt;00:50, 19.6MB/s]
+  1%|          | 5.24M/945M [00:00&lt;00:34, 28.8MB/s]
+  1%|1         | 10.5M/945M [00:00&lt;00:23, 41.0MB/s]
+  2%|1         | 18.8M/945M [00:00&lt;00:16, 58.8MB/s]
+  3%|3         | 31.9M/945M [00:00&lt;00:10, 87.2MB/s]
+  6%|5         | 53.0M/945M [00:00&lt;00:07, 133MB/s]
+  8%|8         | 79.8M/945M [00:00&lt;00:05, 181MB/s]
+ 11%|#1        | 107M/945M [00:00&lt;00:04, 215MB/s]
+ 14%|#4        | 135M/945M [00:00&lt;00:03, 238MB/s]
+ 17%|#7        | 162M/945M [00:01&lt;00:03, 253MB/s]
+ 20%|##        | 189M/945M [00:01&lt;00:03, 264MB/s]
+ 23%|##2       | 217M/945M [00:01&lt;00:02, 271MB/s]
+ 26%|##5       | 245M/945M [00:01&lt;00:02, 277MB/s]
+ 29%|##8       | 272M/945M [00:01&lt;00:02, 279MB/s]
+ 32%|###1      | 299M/945M [00:01&lt;00:02, 282MB/s]
+ 35%|###4      | 327M/945M [00:01&lt;00:02, 283MB/s]
+ 37%|###7      | 354M/945M [00:01&lt;00:02, 285MB/s]
+ 40%|####      | 382M/945M [00:01&lt;00:02, 286MB/s]
+ 43%|####3     | 409M/945M [00:01&lt;00:01, 287MB/s]
+ 46%|####6     | 437M/945M [00:02&lt;00:01, 287MB/s]
+ 49%|####9     | 464M/945M [00:02&lt;00:01, 287MB/s]
+ 52%|#####2    | 492M/945M [00:02&lt;00:01, 288MB/s]
+ 55%|#####4    | 519M/945M [00:02&lt;00:01, 287MB/s]
+ 58%|#####7    | 547M/945M [00:02&lt;00:01, 287MB/s]
+ 61%|######    | 574M/945M [00:02&lt;00:01, 287MB/s]
+ 64%|######3   | 602M/945M [00:02&lt;00:01, 287MB/s]
+ 67%|######6   | 629M/945M [00:02&lt;00:01, 287MB/s]
+ 69%|######9   | 656M/945M [00:02&lt;00:01, 287MB/s]
+ 72%|#######2  | 684M/945M [00:02&lt;00:00, 286MB/s]
+ 75%|#######5  | 711M/945M [00:03&lt;00:00, 286MB/s]
+ 78%|#######8  | 738M/945M [00:03&lt;00:00, 285MB/s]
+ 81%|########1 | 765M/945M [00:03&lt;00:00, 267MB/s]
+ 84%|########3 | 791M/945M [00:03&lt;00:00, 257MB/s]
+ 86%|########6 | 816M/945M [00:03&lt;00:00, 249MB/s]
+ 89%|########8 | 840M/945M [00:03&lt;00:00, 250MB/s]
+ 92%|#########1| 864M/945M [00:03&lt;00:00, 252MB/s]
+ 94%|#########4| 889M/945M [00:03&lt;00:00, 254MB/s]
+ 97%|#########6| 914M/945M [00:03&lt;00:00, 257MB/s]
+ 99%|#########9| 939M/945M [00:03&lt;00:00, 259MB/s]
+100%|##########| 945M/945M [00:03&lt;00:00, 249MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -791,37 +729,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: six people have been killed in the violent protests in south africa . around 200 protesters pelted passing vehicles and police with rocks . police responded by firing rubber bullets and tear gas to disperse crowds .
+prediction: training consultant's firm brought in just £3,378 over the 12 months to July 2014 . his latest accounts for the year to July 2014 were filed to Companies house . heiress's family is worth an estimated £3billion and they own a £300,000 Ferrari .
 
-target: Anti-immigrant protests have been ongoing in South Africa for two weeks and at least six people have been killed . Carol Lloyd was injured after rocks were thrown at and smashed her car window as she drove near to Jeppestown . Foreign nationals have been loading trucks with their wares as they flee  Johannesburg and neighbouring towns . Protesters are angry about  foreigners in the country when unemployment is high and wealth isn't distributed equally .
+target: Jay Rutland, 34, is married to 30-year-old daughter of Bernie Ecclestone . His company had total net assets of £3,378 last year, down from £18,131 . Former stockbroker lives with his wife and daughter in £45million house . Brigante Business Developments is management consultancy company .
 
 
 Example 2:
 
-prediction: centre pompidou malaga is the first of several pop-up versions of the famous Parisian gallery . the centre is housed in a low-slung white building topped with a giant glass cube . it is the latest bold step in branding Malaga a 'City of Museums'
+prediction: the premier league and the premier league are furious with the BBC . both Chelsea and the premier league are furious with the BBC . the 20-strong stadium tour group at Chelsea clearly saw the premier league silverware on the pitch .
 
-target: Visitor numbers to the Spanish port are soaring and they are set to rise . Pop-up gallery, Centre Pompidou Malaga, opened this week, in a giant cube . A Museum of Fine Arts and Archaeology will open to the public in 2016 .
+target: Chelsea agreed to request from BBC to film the trophy at Stamford Bridge . The Blues agreed on understanding public could not see the trophy . However, a 20-strong stadium tour saw the silverware on the pitch . Chelsea can win the Premier League with victory over Crystal Palace .
 
 
 Example 3:
 
-prediction: former two-weight world champion was stopped at Dubai airport . he was accused of writing a cheque which bounced as payment for a new property . the 34-year-old also handed over his passport to authorities . he has been unable to leave the united arab emirates .
+prediction: military leaders in norway are nervous about neighbour's presence on its coastline . concerns have peaked after three ships spent winter docked in base . complex was once heavily guarded military facility in the mountains . but experts have criticised shutting down of Olavsvern naval base since 2009 .
 
-target: Haye, 34, stopped as he arrived at Dubai International Airport for a holiday . He was taken to a police station and handed over his passport . Cheque had been the final payment on a new property in the UAE . He says the 'bounced' cheque was down to an administrative error .
+target: Three Russian ships that docked in Olavsvern Naval Base for the entire winter . Base which was shut down in 2009 is nestled deep inside mountainous region . Norway's military fears Russian presence on 'strategically important' coastline .
 
 
 Example 4:
 
-prediction: the 34-member team plans to trek up the 8,850-meter mountain to pick up waste . the mountain is part of the Himalaya mountain range on the border between Nepal and the Tibet region .
+prediction: fans are planning a protest at the KC stadium on thursday night . the protest is against the rising cost of tickets in the premier league . the cost of tickets to the game at the kc stadium has risen by £50 .
 
-target: Generations of Everest climbers have left tons of trash . The Indian army plans to remove at least 4,000 kilograms from the peak .
+target: Liverpool fans are being charged £50 for a ticket to Hull City, compared to Everton fans being charged £35 . Fans' group Spirit of Shankly want some of the money in the game to be passed back to the fans . Brendan Rodgers said he respect the supporters' right to protest . READ: Liverpool ramp up Memphis Depay chase . READ: Rodgers vows to do 'what is best' for Daniel Sturridge .
 
 
 Example 5:
 
-prediction: up to 100 teachers could be banned from working in schools for life . watchdog is investigating alleged links to the Trojan horse scandal . allegations include al-Qaeda style video was copied in a classroom . teachers alleged exchanged as many as 3,000 messages in a WhatsApp group . also alleged they claimed murder of soldier was a hoax .
+prediction: more than 200 mourners gathered to attend funeral for 23-year-old . mother, Ana, was among more than 200 who attended funeral in Manhattan . carrying red rose and button featuring son's image, she wept as casket was loaded . father, Nixon, told mourners: 'my son is broken. my wife is broken. It hurts' . former bowling lane employee was on second date at sushi restaurant . he was declared missing following the terrifying incident in may . but body was
 
-target: Teaching watchdog investigating some 100 staff with links to the scandal . In some Birmingham schools, Islamic views forced on staff and pupils . Alleged al-Qaeda style video with masked gunmen copied in a classroom . Also claimed teachers punished children by making them kneel on tiles . Staff members also alleged sent offensive messages in a WhatsApp group . Messages claimed murder of Lee Rigby and Boston bombings were a hoax .
+target: Nicholas Figueroa, 23, killed in gas explosion in the East Village last month . On Tuesday, relatives, friends and strangers bid him an emotional farewell . Mr Figueroa's father said family was broken over his 'heartbreaking' death . Brother paid tribute to 'best friend' whom he will name his future son after . And Mother, Ava, wore button on her jacket featuring Mr Figueroa's image . Tear-jerking service held at Manhattan's Church of the Holy Name of Jesus . Moises Locon, 26, also died in March 27 blast - and 22 others were injured .
 </pre></div>
 </div>
 </div>
@@ -1114,7 +1052,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  51.010 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  19.826 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

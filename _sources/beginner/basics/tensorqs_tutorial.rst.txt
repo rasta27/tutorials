@@ -133,8 +133,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
             [1, 1]]) 
 
     Random Tensor: 
-     tensor([[0.4334, 0.8234],
-            [0.3689, 0.1674]]) 
+     tensor([[0.6559, 0.2233],
+            [0.2892, 0.5893]]) 
 
 
 
@@ -171,8 +171,8 @@ The new tensor retains the properties (shape, datatype) of the argument tensor, 
  .. code-block:: none
 
     Random Tensor: 
-     tensor([[0.4221, 0.3597, 0.8215],
-            [0.3654, 0.4552, 0.1297]]) 
+     tensor([[0.4623, 0.7238, 0.4019],
+            [0.7540, 0.9267, 0.4989]]) 
 
     Ones Tensor: 
      tensor([[1., 1., 1.],
