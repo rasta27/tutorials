@@ -258,6 +258,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../beginner/torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -604,56 +605,56 @@ properly - similarly to before, we follow
 | Generated 700/1000 words
 | Generated 800/1000 words
 | Generated 900/1000 words
-b'against' b'full' b'add' b'from' b'the' b'theoretical' b'products' b'.' b'This' b'legs' b'is' b'more' b'confident' b'than' b'he' b'of' b'2003' b'is' b'so' b'City'
-b'(' b'by' b'is' b'known' b'Certain' b'times' b'long' b'at' b'46' b'%' b'of' b')' b',' b'compared' b'to' b'with' b'collaborations' b'Future' b'Base' b','
-b'a' b'speaker' b'4' b'kilometres' b'/' b'h' b'(' b'only' b'18' b'mph' b'above' b'Miracle' b'.' b'Smaller' b'male' b'swing' b'call' b'Meteorology' b'and' b'm3'
-b'over' b'254' b'screens' b'very' b'suit' b'uncontrolled' b'a' b'680' b'sorting' b')' b'.' b'A' b'tertiary' b'enhancing' b'that' b'would' b'be' b'then' b'transmitted' b','
-b'both' b',' b'remained' b'vulnerable' b'to' b'a' b'variety' b'of' b'connection' b'at' b'Japan' b'.' b'The' b'other' b'great' b'windows' b'appear' b'into' b'the' b'groom'
-b'and' b'(' b'a' b'forty' b'MeV' b';' b'widespread' b'bodies' b')' b'cabin' b'through' b'an' b'above' b'@-@' b'face' b'event' b',' b'while' b'European' b'males'
-b'write' b'&lt;unk&gt;' b'nmi' b'and' b'occupy' b'a' b'broad' b'grayish' b'event' b'to' b'1876' b'that' b'can' b'be' b'males' b'from' b'Ozploitation' b'.' b'&lt;eos&gt;' b'&lt;eos&gt;'
-b'=' b'=' b'History' b'=' b'=' b'&lt;eos&gt;' b'&lt;eos&gt;' b'Kitsune' b'show' b'Les' b'Dumpty' b'the' b'highly' b'light' b'uniform' b',' b'those' b'of' b'the' b'finest'
-b'or' b'categories' b'(' b'being' b'duplicity' b'school' b'as' b'his' b'disappointing' b'body' b')' b'.' b'In' b'New' b'1914' b',' b'his' b'977' b'and' b'political'
-b'lease' b'spare' b'excitement' b'in' b'favor' b'of' b'land' b'live' b'before' b'an' b'year' b'.' b'&lt;eos&gt;' b'However' b',' b'in' b'eastern' b'Omaha' b',' b'Cadet'
-b'E.' b'Boom' b'Church' b'the' b'shop' b'for' b'1801' b'=' b'yesterday' b'and' b'demons' b'changes' b'is' b'split' b'down' b'rotation' b';' b'away' b',' b'if'
-b'some' b'individuals' b'are' b'PML' b',' b'these' b'Melvin' b'once' b'Grenache' b'influence' b',' b'including' b'in' b'Spain' b',' b'and' b'his' b'extensive' b'size' b'in'
-b'1905' b',' b'even' b'who' b'would' b'be' b'very' b'important' b'.' b'If' b'it' b'will' b'be' b'viewed' b'as' b'narrow' b',' b'it' b'has' b'even'
-b'made' b'several' b'objects' b'in' b'Ireland' b'.' b'The' b'planning' b'has' b'a' b'long' b'or' b'two' b'&lt;unk&gt;' b'&lt;unk&gt;' b'.' b'The' b'fusing' b'literature' b','
-b'and' b'only' b'it' b'nonetheless' b'will' b'have' b'extinct' b'content' b',' b'such' b'as' b'Havilland' b'forests' b'they' b"'m" b'&lt;unk&gt;' b',' b'Northern' b'or' b'wild'
-b',' b'rounded' b'up' b',' b'criterion' b',' b'or' b'passive' b',' b'the' b'latter' b'.' b'The' b'snake' b'coins' b'from' b'DNA' b'.' b'These' b'windows'
-b'vary' b'by' b'breast' b'control' b',' b'fly' b'inhabited' b'by' b'weight' b'.' b'Because' b'they' b'were' b'chemicals' b'to' b'help' b'the' b'nuclear' b'edition' b','
-b'the' b'pattern' b'or' b'to' b'territory' b'on' b'Sherman' b'axial' b',' b'by' b'Fair' b'nodes' b',' b'are' b'sympathy' b'were' b'analyzed' b'by' b'microtubules' b'.'
-b'For' b'example' b',' b'&lt;unk&gt;' b'numerous' b'Anhui' b'are' b'preserved' b'.' b'Most' b'are' b'TBSA' b'nuance' b'source' b'of' b'a' b'planet' b'to' b'a' b'American'
-b'inner' b'species' b'by' b'Northern' b'Florida' b'and' b'&lt;unk&gt;' b',' b'who' b'is' b'the' b'weariness' b'of' b'Stratford' b'solely' b'by' b'other' b'sculptures' b'.' b'&lt;eos&gt;'
-b'The' b'story' b'of' b'Djedkare' b'had' b'lived' b'as' b'much' b'substance' b',' b'prey' b',' b'Austrian' b',' b'&lt;unk&gt;' b',' b'Guinea' b',' b'stood' b'with'
-b'over' b'400' b'million' b'.' b'Smaller' b'income' b'first' b'feature' b'it' b'should' b'be' b'&lt;unk&gt;' b'a' b'deterrent' b'parallax' b'.' b'&lt;eos&gt;' b'In' b'desk' b','
-b'fruits' b'were' b'theorem' b',' b'particularly' b'required' b'when' b'they' b'is' b'generally' b'used' b'as' b'that' b',' b'most' b'of' b'his' b'habit' b'of' b'nests'
-b'and' b'specimens' b'bearing' b'them' b'study' b'.' b'In' b'contrast' b',' b'common' b'starlings' b'were' b'separated' b'within' b'Hema' b'(' b'AD' b'Vault' b')' b','
-b'such' b'as' b'Crime' b',' b'291' b'%' b'of' b'humans' b',' b'Carpenter' b'and' b'&lt;unk&gt;' b'.' b'A' b'exact' b'second' b'season' b'from' b'Lincoln' b','
-b'Arizona' b',' b'refer' b'to' b'pub' b'stepped' b'up' b'control' b'of' b'DNA' b'Handel' b'.' b'The' b'remote' b'stable' b'features' b'of' b'birds' b'are' b'paved'
-b'to' b'multiple' b'islands' b',' b'brackets' b',' b'particularly' b'to' b'change' b'by' b'fresh' b'starlings' b'(' b'Homarus' b'native' b',' b'and' b'&lt;unk&gt;' b')' b'.'
-b'This' b'precise' b'successful' b'slender' b'species' b'was' b'a' b'within' b'@-@' b'round' b'annual' b'geographical' b'system' b'from' b'Natural' b'reagent' b',' b'but' b'&lt;unk&gt;' b','
-b'without' b'the' b'children' b'sleeping' b'around' b'a' b'wings' b',' b'and' b'head' b'trees' b'.' b'If' b'more' b'Germany' b'easily' b'same' b'rufous' b',' b'sometimes'
-b'favorable' b',' b'they' b'became' b'also' b'do' b'not' b'migrate' b'to' b'what' b'should' b'take' b'in' b'Crash' b':' b'region' b'of' b'Lynn' b'.' b'If'
-b'consumed' b'if' b'it' b'is' b'placed' b'into' b'possibility' b'-' b'they' b'are' b'as' b'not' b'pulling' b'to' b'less' b'rounded' b',' b'as' b'in' b'2'
-b'@.@' b'5' b',' b'were' b'expected' b'to' b'be' b'of' b'dark' b'dramaturgical' b',' b'they' b'stands' b'for' b'the' b'first' b'necessary' b'eye' b'.' b'likening'
-b'the' b'input' b'on' b'roosts' b',' b'it' b'may' b'be' b'nowhere' b'to' b'feed' b'in' b'1643' b',' b'or' b'2' b':' b'106' b'p.m.' b'green'
-b'soils' b'include' b'its' b'plumage' b'every' b'loss' b'in' b'europium' b'or' b'.' b'&lt;eos&gt;' b'While' b'subspecies' b'gun' b'highlights' b',' b'the' b'cellular' b'activity' b'is'
-b'being' b'incomplete' b'.' b'The' b'C' b'broods' b'on' b'a' b'nests' b'@-@' b'products' b'of' b'officiating' b'residents' b'birth' b'for' b'1' b'@.@' b'5' b'\xe2\x80\x93'
-b'4' b'lb' b'per' b'week' b',' b'with' b'E' b'6' b',' b'so' b'other' b'eye' b'populations' b'often' b'are' b'present' b'on' b'60' b'April' b'.'
-b'These' b'individuals' b'were' b'sacred' b'as' b'one' b'of' b'six' b'birds' b'between' b'humans' b',' b'probably' b'to' b'fly' b'.' b'nostrils' b',' b'also' b'as'
-b'they' b'walked' b'&lt;unk&gt;' b',' b'is' b'123' b'as' b'economically' b'activities' b',' b'and' b'their' b'neck' b'can' b'be' b'done' b'and' b'additional' b'spots' b'tea'
-b'pet' b',' b'other' b'snakes' b'have' b'their' b'offerings' b'.' b'Males' b'warns' b'math' b',' b'friar' b',' b'or' b'distinct' b'birds' b'or' b'lives' b'in'
-b'humans' b'growing' b'that' b'lateral' b'long' b'depth' b'should' b'also' b'be' b'have' b'no' b'activity' b'.' b'Males' b'require' b'abnormal' b'astronomers' b',' b'when' b'it'
-b'is' b'slept' b'.' b'&lt;eos&gt;' b'Once' b'in' b'winter' b',' b'they' b'are' b'very' b'pay' b'after' b'they' b'are' b'strong' b'.' b'There' b'can' b'be'
-b'compared' b'to' b'Celtic' b'starling' b'tissue' b'regions' b'such' b'as' b'they' b'bio' b'activity' b'may' b'resign' b'&lt;unk&gt;' b',' b'particularly' b'believed' b'to' b'ensure' b'that'
-b'they' b'feed' b'on' b'endangered' b'.' b'Those' b'art' b'and' b'shrubs' b'are' b'"' b'generally' b'one' b'to' b'people' b'or' b'by' b'were' b'than' b'responsible'
-b'to' b'fire' b'contributors' b'"' b'.' b'Joseph' b'only' b'of' b'@-@' b'central' b'Heritage' b',' b'since' b'he' b'meets' b'with' b'Cajal' b'areas' b'being' b'found'
-b'to' b'be' b'bubbles' b'on' b'the' b'decree' b',' b'so' b'"' b'they' b'can' b'throw' b'no' b'nests' b'as' b'we' b'might' b'still' b'be' b'practical'
-b'further' b'.' b'If' b'they' b'why' b'one' b'was' b'the' b'best' b'defensive' b'buffalo' b'are' b'raids' b'in' b'his' b'claim' b'"' b'.' b'packaged' b'by'
-b'partial' b'starlings' b'demonstrated' b'where' b'it' b'blows' b'calls' b'throughout' b'Europe' b'Handwriting' b'including' b'other' b'may' b'be' b'required' b'on' b'the' b'island' b'on' b'it'
-b'between' b'kun' b':' b'Central' b'descendants' b'.' b'In' b'16th' b'research' b',' b'and' b'some' b'large' b'accidents' b',' b'they' b'live' b'one' b'length' b'of'
-b'Alkan' b'@-@' b'old' b'in' b'their' b'head' b'.' b'Loss' b'often' b'call' b'their' b'beak' b'.' b'They' b'have' b'stain' b'carried' b'very' b'hemmema' b'.'
-b'After' b'60' b'%' b'surrounding' b'males' b',' b'it' b'may' b'be' b'introduced' b',' b'Uyghurs' b',' b'usually' b'and' b'even' b'.' b'They' b'posits' b'it'
+b'.' b'As' b'the' b'last' b'most' b'million' b'moves' b',' b'hotel' b'obscurity' b'will' b'be' b'played' b',' b'&lt;unk&gt;' b',' b'or' b'obsolete' b'or' b'other'
+b'independent' b'insects' b'.' b'The' b'series' b'was' b'similar' b'to' b'average' b'Article' b'Williams' b'Rosberg' b',' b'a' b'imposing' b'feature' b'incumbent' b'for' b'American' b'Acts'
+b'of' b'Caucasian' b'@-@' b'speaking' b'research' b',' b'which' b'was' b'few' b'scripts' b'caught' b',' b'and' b'a' b'by' b'@-@' b'06' b'mission' b'published' b'as'
+b'the' b'Polish' b'newly' b'humour' b'&lt;unk&gt;' b'.' b'&lt;eos&gt;' b'Because' b'it' b'is' b'apparent' b'to' b'be' b'held' b'at' b'stem' b':' b'the' b'interpret' b'annexed'
+b'nest' b',' b'big' b'Gaelic' b'compositions' b'can' b'accumulate' b',' b'and' b'as' b'duplicate' b'on' b'marine' b'cricket' b'by' b'Fauna' b'and' b'west' b'of' b'those'
+b'who' b'Tuy' b"'s" b'linked' b'throughout' b'human' b'elevations' b'.' b'Those' b'of' b'the' b'convection' b',' b'Chen' b'brings' b'his' b'own' b'hands' b'the' b'central'
+b'son' b'of' b'890' b',' b'Venus' b'based' b'and' b'to' b'examine' b'Doctorate' b'of' b'43' b'mph' b'(' b'190' b'ft' b')' b',' b'and' b'follow'
+b'the' b'increase' b'to' b'a' b'insomnia' b'containing' b'her' b'window' b',' b'and' b'sprint' b'Skedar' b'Nigel' b'&lt;unk&gt;' b'in' b',' b'aggressively' b'(' b'breeding' b')'
+b'was' b'also' b'problem' b'.' b'Similarly' b',' b'the' b'fifth' b'was' b'discovered' b'by' b'tarmac' b'.' b'Multiple' b'social' b'health' b'allowed' b'Chestnuts' b',' b'a'
+b'thin' b'man' b'based' b'before' b'he' b'plays' b'through' b'eastern' b'broad' b'areas' b'\xe2\x80\x94' b'only' b'of' b'three' b'more' b'models' b'from' b'galaxies' b'from' b'ibotenic'
+b'Kitty' b',' b'two' b'females' b'and' b'iron' b'pedestrian' b',' b'such' b'at' b'demon' b'County' b'and' b'Q.' b',' b'&lt;unk&gt;' b'via' b'agriculture' b'(' b'drying'
+b')' b'.' b'It' b'also' b'follows' b'severe' b'budget' b',' b'larger' b',' b'background' b'\xe2\x80\x94' b'etc' b',' b'business' b'and' b'very' b'Ned' b'vocals' b','
+b'in' b'TrekNation' b'and' b'other' b'agriculture' b'.' b'Its' b'flow' b'included' b'Important' b'literature' b'and' b'production' b'.' b'In' b'2006' b',' b'Erythraean' b'State' b'('
+b'd' b'Guineas' b')' b'recognised' b'private' b'despatched' b'from' b'domestic' b'pests' b',' b'but' b'&lt;unk&gt;' b'this' b'compound' b'is' b'oriented' b',' b'so' b'the' b'population'
+b'of' b'it' b'as' b'imagery' b'of' b'them' b'is' b'considered' b'to' b'prepare' b'by' b'hydrogen' b'.' b'&lt;eos&gt;' b'The' b'closest' b'amount' b'of' b'common' b'damage'
+b'worn' b'@,@' b'000' b'may' b'be' b'used' b'to' b'enter' b'police' b'races' b',' b'meanwhile' b',' b'pectoral' b'control' b'lakes' b'.' b'Many' b'smelling' b'&lt;unk&gt;'
+b'have' b'declined' b'another' b',' b'occasionally' b'while' b'I' b'were' b'affected' b'by' b'&lt;unk&gt;' b'.' b'According' b',' b'it' b'is' b'red' b',' b'and' b'if'
+b'during' b'this' b'Oldham' b',' b'a' b'roof' b'is' b'lowered' b'by' b'bright' b'activity' b'species' b',' b'which' b'she' b'says' b',' b'"' b'The' b'principal'
+b'kakapo' b'to' b'take' b'their' b'product' b'earn' b'"' b'clear' b'with' b'additional' b'XeF' b"'s" b'diet' b'.' b'A' b'inscription' b'of' b'magnetic' b'view' b'enough'
+b'to' b'be' b'interpreted' b'during' b'its' b'kind' b'and' b'also' b'their' b'&lt;unk&gt;' b',' b'most' b'or' b'two' b'cases' b'were' b'that' b'they' b'knew' b'when'
+b'to' b'comply' b'further' b'if' b'also' b',' b'as' b'even' b'two' b'or' b'one' b'or' b'other' b'models' b'have' b'won' b'marked' b'development' b'.' b'By'
+b'this' b'time' b'large' b'vinegar' b'is' b'set' b'spread' b'after' b'Celtic' b'or' b'some' b'best' b'of' b'injury' b'and' b'foot' b'by' b'ibotenic' b'Chai' b'.'
+b'stem' b',' b'such' b'as' b'vegetables' b',' b'&lt;unk&gt;' b'threw' b'structures' b',' b'recreational' b'counsel' b'.' b'Herrera' b'is' b'reflected' b'after' b'golf' b'species' b','
+b'often' b'corresponds' b'to' b'their' b'common' b'communities' b',' b'claims' b'to' b'provide' b'it' b'arrange' b'and' b'donors' b'\xe2\x80\x94' b'including' b'young' b'areas' b'and' b'approached'
+b'contact' b'into' b'Inari' b'cargo' b'generally' b'.' b'Males' b'have' b'a' b'rivers' b'must' b'be' b'merely' b'below' b'and' b'Pictish' b'Africa' b'associated' b'to' b'&lt;unk&gt;'
+b'.' b'&lt;eos&gt;' b'&lt;eos&gt;' b'=' b'=' b'Conservation' b'=' b'=' b'&lt;eos&gt;' b'&lt;eos&gt;' b'Local' b'starlings' b'such' b'as' b'flight' b',' b'historical' b',' b'decrease' b','
+b'alleging' b'they' b'would' b'be' b'recorded' b'in' b'Mediterranean' b'.' b'This' b'bypasses' b'immediate' b'sections' b'called' b'an' b'small' b'step' b'may' b'be' b'amounts' b'of'
+b'SSH' b'sulfides' b',' b'and' b'not' b'in' b'forestry' b'by' b'&lt;unk&gt;' b'acres' b'.' b'It' b'be' b'commonly' b'endemic' b'to' b'statements' b'that' b'this' b'smallest'
+b'care' b'after' b'they' b'are' b'brought' b'up' b'force' b'Nest' b'countries' b'.' b'Three' b'separate' b'bright' b'starlings' b'from' b'art' b'.' b'The' b'metabolism' b'have'
+b'expected' b'their' b'&lt;unk&gt;' b'(' b'446' b'and' b'one' b'@-@' b'third' b')' b'.' b'&lt;eos&gt;' b'&lt;unk&gt;' b'below' b',' b'the' b'inner' b'starling' b'was' b'created'
+b'by' b'thematic' b'areas' b',' b'while' b'as' b'they' b'do' b'not' b'occur' b'down' b'the' b'forward' b'amount' b'of' b'a' b'courtship' b'machine' b',' b'oriental'
+b'to' b'form' b'emotional' b'behavior' b'.' b'If' b'females' b'have' b'shown' b'his' b'head' b'themes' b'.' b'If' b'breeding' b'cells' b'gave' b'sea' b'chicks' b','
+b'helium' b'perfectly' b'constituted' b'similar' b'herding' b'formations' b'in' b'some' b'passages' b'for' b'adults' b',' b'and' b'thinks' b'it' b'may' b'also' b'mention' b'distress' b'course'
+b'of' b'suggest' b'.' b'Reports' b'tell' b'another' b'earlier' b',' b'potentially' b'report' b',' b'lotus' b',' b'and' b'some' b'females' b'behaves' b'related' b'.' b'Polyurethane'
+b'absorb' b'cirrhifer' b'and' b'&lt;unk&gt;' b'are' b'said' b'to' b'be' b'Sound' b"'s" b'auditory' b'.' b'&lt;eos&gt;' b'The' b'corona' b'does' b'not' b'exposure' b'to' b'his'
+b'zero' b'courtship' b'numbers' b',' b'but' b'the' b'latter' b'defined' b'to' b'their' b'successors' b'was' b'&lt;unk&gt;' b'.' b'On' b'the' b'non' b'\xe2\x80\x93' b'&lt;unk&gt;' b','
+b'types' b'of' b'transits' b'China' b'\xe2\x80\x94' b'when' b'&lt;unk&gt;' b',' b'ultraviolet' b'and' b'female' b'(' b'except' b')' b'may' b'be' b'occurring' b'before' b'eggs' b'.'
+b'Sometimes' b'usually' b'Alkan' b"'s" b'two' b'assumption' b',' b'are' b'capable' b'of' b'ibotenic' b'&lt;unk&gt;' b'(' b'mammalian' b'drama' b')' b'into' b'the' b'North' b'African'
+b'state' b'.' b'These' b'methods' b'have' b'developed' b'short' b'concentrations' b'from' b'specific' b'clay' b'leaves' b'figures' b'as' b'early' b',' b'with' b'the' b'exception' b'of'
+b'natural' b'white' b'molecules' b'and' b'insect' b'them' b'to' b'have' b'suggested' b'about' b'it' b'when' b'they' b'eukaryotes' b'.' b'Kakapo' b'denticles' b'infection' b'have' b'lbw'
+b'shares' b'than' b'any' b'&lt;unk&gt;' b'or' b'bony' b'speaker' b'.' b'&lt;eos&gt;' b'Adults' b'batsman' b'regarded' b'work' b'as' b'an' b'different' b'dwarf' b'(' b'Tanzania' b')'
+b'.' b'&lt;eos&gt;' b'There' b'are' b'Irish' b'evidence' b'in' b'various' b'rural' b'spots' b',' b'over' b'15' b'kilometres' b'(' b'4' b'@.@' b'30' b'mi' b')'
+b'.' b'The' b'kakapo' b'is' b'isolated' b',' b'and' b'by' b'on' b'a' b'other' b'display' b'and' b'help' b'the' b'cults' b'of' b'males' b'to' b'meet'
+b'&lt;unk&gt;' b'at' b'Zhou' b'or' b'movement' b'.' b'The' b'kakapo' b'&lt;unk&gt;' b'above' b'the' b'nest' b'after' b'sometimes' b'immune' b'.' b'The' b'plumage' b'is' b'commercially'
+b'straight' b'by' b'major' b'lakes' b',' b'lungs' b',' b'having' b'no' b'high' b'surface' b'temperature' b',' b'so' b'may' b'begin' b'up' b'.' b'They' b'are'
+b'wide' b';' b'If' b'after' b'they' b'takes' b'actually' b'a' b'surface' b',' b'it' b'does' b'not' b'attend' b'such' b'part' b'of' b'them' b'directly' b'.'
+b'Many' b'learning' b'husbands' b',' b'so' b'areas' b'brought' b'thirty' b'one' b'of' b'the' b'population' b'water' b'being' b'being' b'in' b'turn' b'.' b'Some' b'additional'
+b'latex' b'starlings' b'occur' b'to' b'some' b'other' b'traders' b'of' b'&lt;unk&gt;' b',' b'Proteins' b'&lt;unk&gt;' b',' b'white' b',' b'damages' b',' b'form' b',' b'or'
+b'cold' b';' b'cardinals' b'can' b'be' b'rounded' b'.' b'As' b'one' b'of' b'the' b'strum' b'drawn' b'large' b',' b'they' b'begin' b'to' b'be' b'prohibited'
+b'on' b'fourteen' b'a' b'enemy' b',' b'usually' b'occasionally' b'burial' b',' b'and' b'use' b',' b'and' b'at' b'structurally' b'times' b'motion' b'.' b'The' b'flock'
 </pre></div>
 </div>
 <p>It’s no GPT-2, but it looks like the model has started to learn the structure of
@@ -762,9 +763,9 @@ models run single threaded.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>loss: 5.167
-elapsed time (seconds): 187.0
+elapsed time (seconds): 175.2
 loss: 5.168
-elapsed time (seconds): 110.6
+elapsed time (seconds): 103.8
 </pre></div>
 </div>
 <p>Running this locally on a MacBook Pro, without quantization, inference takes about 200 seconds,
@@ -776,7 +777,7 @@ and with quantization it takes just about 100 seconds.</p>
 having a limited effect on accuracy.</p>
 <p>Thanks for reading! As always, we welcome any feedback, so please create an issue
 <a class="reference external" href="https://github.com/pytorch/pytorch/issues">here</a> if you have any.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 5 minutes  6.286 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  47.691 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-dynamic-quantization-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/256861ec2cab5f0dc50c523f520dfefd/dynamic_quantization_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">dynamic_quantization_tutorial.py</span></code></a></p>

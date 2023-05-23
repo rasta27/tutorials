@@ -256,6 +256,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../beginner/torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -662,35 +663,30 @@ Arguments other than a weight enum or `None` for 'weights' are deprecated since 
 Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth
 
   0%|          | 0.00/548M [00:00&lt;?, ?B/s]
-  2%|1         | 9.03M/548M [00:00&lt;00:05, 94.7MB/s]
-  5%|5         | 28.7M/548M [00:00&lt;00:03, 160MB/s]
-  9%|8         | 48.2M/548M [00:00&lt;00:02, 180MB/s]
- 12%|#2        | 68.2M/548M [00:00&lt;00:02, 192MB/s]
- 16%|#5        | 87.6M/548M [00:00&lt;00:02, 196MB/s]
- 20%|#9        | 107M/548M [00:00&lt;00:02, 199MB/s]
- 23%|##3       | 127M/548M [00:00&lt;00:02, 202MB/s]
- 27%|##6       | 146M/548M [00:00&lt;00:02, 203MB/s]
- 30%|###       | 166M/548M [00:00&lt;00:01, 204MB/s]
- 34%|###3      | 186M/548M [00:01&lt;00:01, 205MB/s]
- 37%|###7      | 205M/548M [00:01&lt;00:01, 202MB/s]
- 41%|####1     | 225M/548M [00:01&lt;00:01, 203MB/s]
- 45%|####4     | 245M/548M [00:01&lt;00:01, 205MB/s]
- 48%|####8     | 265M/548M [00:01&lt;00:01, 206MB/s]
- 52%|#####1    | 284M/548M [00:01&lt;00:01, 206MB/s]
- 55%|#####5    | 304M/548M [00:01&lt;00:01, 206MB/s]
- 59%|#####9    | 324M/548M [00:01&lt;00:01, 205MB/s]
- 63%|######2   | 343M/548M [00:01&lt;00:01, 206MB/s]
- 66%|######6   | 363M/548M [00:01&lt;00:00, 205MB/s]
- 70%|######9   | 383M/548M [00:02&lt;00:00, 203MB/s]
- 73%|#######3  | 402M/548M [00:02&lt;00:00, 203MB/s]
- 77%|#######6  | 421M/548M [00:02&lt;00:00, 203MB/s]
- 80%|########  | 441M/548M [00:02&lt;00:00, 204MB/s]
- 84%|########4 | 460M/548M [00:02&lt;00:00, 203MB/s]
- 88%|########7 | 480M/548M [00:02&lt;00:00, 200MB/s]
- 91%|#########1| 500M/548M [00:02&lt;00:00, 202MB/s]
- 95%|#########4| 519M/548M [00:02&lt;00:00, 203MB/s]
- 98%|#########8| 539M/548M [00:02&lt;00:00, 204MB/s]
-100%|##########| 548M/548M [00:02&lt;00:00, 201MB/s]
+  2%|1         | 10.5M/548M [00:00&lt;00:05, 110MB/s]
+  6%|6         | 34.2M/548M [00:00&lt;00:02, 192MB/s]
+ 11%|#         | 58.1M/548M [00:00&lt;00:02, 219MB/s]
+ 15%|#4        | 81.8M/548M [00:00&lt;00:02, 230MB/s]
+ 19%|#9        | 105M/548M [00:00&lt;00:01, 236MB/s]
+ 24%|##3       | 131M/548M [00:00&lt;00:01, 246MB/s]
+ 28%|##8       | 155M/548M [00:00&lt;00:01, 250MB/s]
+ 33%|###2      | 180M/548M [00:00&lt;00:01, 253MB/s]
+ 37%|###7      | 205M/548M [00:00&lt;00:01, 255MB/s]
+ 42%|####1     | 230M/548M [00:01&lt;00:01, 257MB/s]
+ 46%|####6     | 254M/548M [00:01&lt;00:01, 252MB/s]
+ 51%|#####     | 278M/548M [00:01&lt;00:01, 247MB/s]
+ 55%|#####5    | 302M/548M [00:01&lt;00:01, 246MB/s]
+ 59%|#####9    | 325M/548M [00:01&lt;00:00, 245MB/s]
+ 64%|######3   | 350M/548M [00:01&lt;00:00, 249MB/s]
+ 68%|######8   | 374M/548M [00:01&lt;00:00, 250MB/s]
+ 73%|#######2  | 398M/548M [00:01&lt;00:00, 249MB/s]
+ 77%|#######6  | 422M/548M [00:01&lt;00:00, 250MB/s]
+ 81%|########1 | 446M/548M [00:01&lt;00:00, 250MB/s]
+ 86%|########5 | 470M/548M [00:02&lt;00:00, 247MB/s]
+ 90%|######### | 493M/548M [00:02&lt;00:00, 244MB/s]
+ 94%|#########4| 517M/548M [00:02&lt;00:00, 243MB/s]
+ 99%|#########8| 540M/548M [00:02&lt;00:00, 240MB/s]
+100%|##########| 548M/548M [00:02&lt;00:00, 243MB/s]
 </pre></div>
 </div>
 <p>Additionally, VGG networks are trained on images with each channel
@@ -903,25 +899,25 @@ To copy construct from a tensor, it is recommended to use sourceTensor.clone().d
 
 Optimizing..
 run [50]:
-Style Loss : 3.857177 Content Loss: 4.077528
+Style Loss : 4.351027 Content Loss: 4.111927
 
 run [100]:
-Style Loss : 1.128356 Content Loss: 3.003583
+Style Loss : 1.131637 Content Loss: 3.030550
 
 run [150]:
-Style Loss : 0.696827 Content Loss: 2.640996
+Style Loss : 0.702805 Content Loss: 2.640701
 
 run [200]:
-Style Loss : 0.469032 Content Loss: 2.484118
+Style Loss : 0.470998 Content Loss: 2.487999
 
 run [250]:
-Style Loss : 0.342076 Content Loss: 2.401282
+Style Loss : 0.337672 Content Loss: 2.397170
 
 run [300]:
-Style Loss : 0.262358 Content Loss: 2.348244
+Style Loss : 0.260293 Content Loss: 2.347417
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  33.976 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  33.593 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-neural-style-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/b3bcd49c4dd9be3a44c6c5d2e2a8b0cd/neural_style_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_style_tutorial.py</span></code></a></p>

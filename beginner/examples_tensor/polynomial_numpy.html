@@ -258,6 +258,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -418,27 +419,27 @@ backward pass.</p>
 <p>A numpy array is a generic n-dimensional array; it does not know anything about
 deep learning or gradients or computational graphs, and is just a way to perform
 generic numeric computations.</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 8001.657353379748
-199 5297.516260301611
-299 3508.3999054580786
-399 2324.636045928188
-499 1541.3693307664005
-599 1023.0783922755164
-699 680.1067293562118
-799 453.1385573121614
-899 302.9297865907272
-999 203.51503086862468
-1099 137.71390037347578
-1199 94.15823588413505
-1299 65.32544563793466
-1399 46.237397279719495
-1499 33.59959876551707
-1599 25.231655258262577
-1699 19.690427739299636
-1799 16.02068317894815
-1899 13.59009629729241
-1999 11.980062634351281
-Result: y = 0.010774118261692575 + 0.8029739427258809 x + -0.0018587146822436982 x^2 + -0.08568251567239711 x^3
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 3032.524470636569
+199 2083.426445852515
+299 1433.8562516227967
+399 988.7740895522622
+499 683.4567467261438
+599 473.7766705765267
+699 329.6138125651598
+799 230.38559724414048
+899 162.01071592267456
+999 114.84454100577966
+1099 82.27365730328266
+1199 59.758004700722445
+1299 44.177333117335614
+1399 33.384778207539355
+1499 25.901566739179987
+1599 20.70799565584394
+1699 17.100160884973423
+1799 14.591641293713261
+1899 12.845955239894526
+1999 11.630105710490202
+Result: y = -0.05043906345411032 + 0.8341049204346511 x + 0.008701577755472728 x^2 + -0.09011062616053073 x^3
 </pre></div>
 </div>
 <div class="line-block">
@@ -484,7 +485,7 @@ Result: y = 0.010774118261692575 + 0.8029739427258809 x + -0.0018587146822436982
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Result: y = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1"> x + </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1"> x^2 + </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1"> x^3'</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.698 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.706 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-examples-tensor-polynomial-numpy-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b933d0448c714d8481c9dcf6d47c556d/polynomial_numpy.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">polynomial_numpy.py</span></code></a></p>

@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['tu es trop jeune pour voyager seul .', 'you are too young to travel alone .']
+    ['il est photogenique .', 'he s photogenic .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 23s (- 19m 33s) (5000 6%) 2.8406
-    2m 43s (- 17m 40s) (10000 13%) 2.2733
-    4m 2s (- 16m 10s) (15000 20%) 1.9816
-    5m 22s (- 14m 47s) (20000 26%) 1.7062
-    6m 42s (- 13m 25s) (25000 33%) 1.5128
-    8m 1s (- 12m 1s) (30000 40%) 1.3952
-    9m 19s (- 10m 39s) (35000 46%) 1.2193
-    10m 39s (- 9m 19s) (40000 53%) 1.1072
-    12m 1s (- 8m 0s) (45000 60%) 1.0018
-    13m 24s (- 6m 42s) (50000 66%) 0.8895
-    14m 45s (- 5m 22s) (55000 73%) 0.8395
-    16m 5s (- 4m 1s) (60000 80%) 0.7478
-    17m 23s (- 2m 40s) (65000 86%) 0.6860
-    18m 41s (- 1m 20s) (70000 93%) 0.6139
-    20m 1s (- 0m 0s) (75000 100%) 0.5582
+    1m 23s (- 19m 35s) (5000 6%) 2.8658
+    2m 42s (- 17m 38s) (10000 13%) 2.3062
+    4m 1s (- 16m 7s) (15000 20%) 1.9662
+    5m 21s (- 14m 42s) (20000 26%) 1.7114
+    6m 40s (- 13m 21s) (25000 33%) 1.5153
+    7m 59s (- 11m 59s) (30000 40%) 1.3222
+    9m 18s (- 10m 38s) (35000 46%) 1.2147
+    10m 37s (- 9m 17s) (40000 53%) 1.0760
+    11m 55s (- 7m 56s) (45000 60%) 0.9596
+    13m 14s (- 6m 37s) (50000 66%) 0.8971
+    14m 36s (- 5m 18s) (55000 73%) 0.7914
+    15m 56s (- 3m 59s) (60000 80%) 0.7429
+    17m 18s (- 2m 39s) (65000 86%) 0.6881
+    18m 38s (- 1m 19s) (70000 93%) 0.6250
+    19m 57s (- 0m 0s) (75000 100%) 0.5795
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > tu es plus grand que moi .
-    = you re taller than i am .
-    < you re taller than me . <EOS>
+    > vous n etes pas seules .
+    = you re not alone .
+    < you aren t one . <EOS>
 
-    > il est poissonnier .
-    = he is a fishmonger .
-    < he is a coward person . <EOS>
+    > je suis desole je ne gobe pas ca .
+    = i m sorry i don t buy it .
+    < i m sorry i don t buy it . <EOS>
 
-    > nous avons vraiment de la chance .
-    = we re really lucky .
-    < we re really lucky . <EOS>
+    > il n est pas revenu de la montagne .
+    = he isn t back from the mountain .
+    < he is t back the mountain . <EOS>
 
-    > tu es la meilleure .
-    = you re the best .
-    < you re the best . <EOS>
+    > ses parents lui font confiance .
+    = he is trusted by his parents .
+    < she is pleased with my parents . <EOS>
 
-    > nous sommes tres reconnaissantes .
-    = we re very grateful .
-    < we re very grateful . <EOS>
+    > vous gagnez n est ce pas ?
+    = you re winning aren t you ?
+    < you re lying aren t you ? <EOS>
 
-    > vous etes tres religieuses n est ce pas ?
-    = you re very religious aren t you ?
-    < you re really very aren t you ? you ?
+    > je suis pret a jeter l eponge .
+    = i m ready to throw in the towel .
+    < i m ready to throw in the towel . <EOS>
 
-    > il a environ votre age .
-    = he is about your age .
-    < he is about your age . <EOS>
+    > je ne suis pas tout a fait surpris .
+    = i m not exactly surprised .
+    < i m not exactly surprised . <EOS>
 
-    > nous sommes endurantes .
-    = we re resilient .
-    < we re resilient . <EOS>
+    > vous n etes pas ma mere .
+    = you aren t my mother .
+    < you re not my mother . <EOS>
 
-    > elle va mieux de jour en jour .
-    = she is getting better day by day .
-    < she is getting better day day day . <EOS>
+    > moi aussi je prends ce train .
+    = i m also taking this train .
+    < i m also taking . . <EOS>
 
-    > je suis reellement fier de vous .
-    = i m really proud of you .
-    < i m really proud of you . <EOS>
+    > tu es tenace .
+    = you re resilient .
+    < you re resilient . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f4bae4a2530>
+    <matplotlib.image.AxesImage object at 0x7fbb18476b00>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she s five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1257,9 +1257,9 @@ and labels:
     input = elle est trop petit .
     output = she is too short . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared of dying . <EOS>
+    output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s a talented young talented . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  14.910 seconds)
+   **Total running time of the script:** ( 20 minutes  10.710 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

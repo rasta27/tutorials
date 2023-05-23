@@ -258,6 +258,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beginner/translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../beginner/torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -660,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['tu es trop jeune pour voyager seul .', 'you are too young to travel alone .']
+['il est photogenique .', 'he s photogenic .']
 </pre></div>
 </div>
 </div>
@@ -1102,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 23s (- 19m 33s) (5000 6%) 2.8406
-2m 43s (- 17m 40s) (10000 13%) 2.2733
-4m 2s (- 16m 10s) (15000 20%) 1.9816
-5m 22s (- 14m 47s) (20000 26%) 1.7062
-6m 42s (- 13m 25s) (25000 33%) 1.5128
-8m 1s (- 12m 1s) (30000 40%) 1.3952
-9m 19s (- 10m 39s) (35000 46%) 1.2193
-10m 39s (- 9m 19s) (40000 53%) 1.1072
-12m 1s (- 8m 0s) (45000 60%) 1.0018
-13m 24s (- 6m 42s) (50000 66%) 0.8895
-14m 45s (- 5m 22s) (55000 73%) 0.8395
-16m 5s (- 4m 1s) (60000 80%) 0.7478
-17m 23s (- 2m 40s) (65000 86%) 0.6860
-18m 41s (- 1m 20s) (70000 93%) 0.6139
-20m 1s (- 0m 0s) (75000 100%) 0.5582
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 23s (- 19m 35s) (5000 6%) 2.8658
+2m 42s (- 17m 38s) (10000 13%) 2.3062
+4m 1s (- 16m 7s) (15000 20%) 1.9662
+5m 21s (- 14m 42s) (20000 26%) 1.7114
+6m 40s (- 13m 21s) (25000 33%) 1.5153
+7m 59s (- 11m 59s) (30000 40%) 1.3222
+9m 18s (- 10m 38s) (35000 46%) 1.2147
+10m 37s (- 9m 17s) (40000 53%) 1.0760
+11m 55s (- 7m 56s) (45000 60%) 0.9596
+13m 14s (- 6m 37s) (50000 66%) 0.8971
+14m 36s (- 5m 18s) (55000 73%) 0.7914
+15m 56s (- 3m 59s) (60000 80%) 0.7429
+17m 18s (- 2m 39s) (65000 86%) 0.6881
+18m 38s (- 1m 19s) (70000 93%) 0.6250
+19m 57s (- 0m 0s) (75000 100%) 0.5795
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; tu es plus grand que moi .
-= you re taller than i am .
-&lt; you re taller than me . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; vous n etes pas seules .
+= you re not alone .
+&lt; you aren t one . &lt;EOS&gt;
 
-&gt; il est poissonnier .
-= he is a fishmonger .
-&lt; he is a coward person . &lt;EOS&gt;
+&gt; je suis desole je ne gobe pas ca .
+= i m sorry i don t buy it .
+&lt; i m sorry i don t buy it . &lt;EOS&gt;
 
-&gt; nous avons vraiment de la chance .
-= we re really lucky .
-&lt; we re really lucky . &lt;EOS&gt;
+&gt; il n est pas revenu de la montagne .
+= he isn t back from the mountain .
+&lt; he is t back the mountain . &lt;EOS&gt;
 
-&gt; tu es la meilleure .
-= you re the best .
-&lt; you re the best . &lt;EOS&gt;
+&gt; ses parents lui font confiance .
+= he is trusted by his parents .
+&lt; she is pleased with my parents . &lt;EOS&gt;
 
-&gt; nous sommes tres reconnaissantes .
-= we re very grateful .
-&lt; we re very grateful . &lt;EOS&gt;
+&gt; vous gagnez n est ce pas ?
+= you re winning aren t you ?
+&lt; you re lying aren t you ? &lt;EOS&gt;
 
-&gt; vous etes tres religieuses n est ce pas ?
-= you re very religious aren t you ?
-&lt; you re really very aren t you ? you ?
+&gt; je suis pret a jeter l eponge .
+= i m ready to throw in the towel .
+&lt; i m ready to throw in the towel . &lt;EOS&gt;
 
-&gt; il a environ votre age .
-= he is about your age .
-&lt; he is about your age . &lt;EOS&gt;
+&gt; je ne suis pas tout a fait surpris .
+= i m not exactly surprised .
+&lt; i m not exactly surprised . &lt;EOS&gt;
 
-&gt; nous sommes endurantes .
-= we re resilient .
-&lt; we re resilient . &lt;EOS&gt;
+&gt; vous n etes pas ma mere .
+= you aren t my mother .
+&lt; you re not my mother . &lt;EOS&gt;
 
-&gt; elle va mieux de jour en jour .
-= she is getting better day by day .
-&lt; she is getting better day day day . &lt;EOS&gt;
+&gt; moi aussi je prends ce train .
+= i m also taking this train .
+&lt; i m also taking . . &lt;EOS&gt;
 
-&gt; je suis reellement fier de vous .
-= i m really proud of you .
-&lt; i m really proud of you . &lt;EOS&gt;
+&gt; tu es tenace .
+= you re resilient .
+&lt; you re resilient . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1177,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f4bae4a2530&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fbb18476b00&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1225,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she is five years younger than me . &lt;EOS&gt;
+output = she s five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1237,9 +1238,9 @@ FixedFormatter should only be used together with FixedLocator
 input = elle est trop petit .
 output = she is too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared of dying . &lt;EOS&gt;
+output = i m not afraid to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young . &lt;EOS&gt;
+output = he s a talented young talented . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1269,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  14.910 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  10.710 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

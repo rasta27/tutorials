@@ -258,6 +258,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -503,8 +504,8 @@ the MNIST dataset, please resize the images from the dataset to 32x32.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">out</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-0.0677,  0.0291,  0.0148,  0.1523,  0.0093, -0.0682,  0.1467,  0.1351,
-          0.0904,  0.0021]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.0880,  0.0791,  0.0346, -0.1022, -0.0118, -0.0629,  0.1124, -0.0207,
+          0.0474, -0.1234]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 <p>Zero the gradient buffers of all parameters and backprops with random
@@ -572,7 +573,7 @@ between the output and the target.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.3108, grad_fn=&lt;MseLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(1.0130, grad_fn=&lt;MseLossBackward0&gt;)
 </pre></div>
 </div>
 <p>Now, if you follow <code class="docutils literal notranslate"><span class="pre">loss</span></code> in the backward direction, using its
@@ -594,9 +595,9 @@ gradient.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="o">.</span><span class="n">grad_fn</span><span class="o">.</span><span class="n">next_functions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">next_functions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># ReLU</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward0 object at 0x7f5c7b84b280&gt;
-&lt;AddmmBackward0 object at 0x7f5c7b84bc10&gt;
-&lt;AccumulateGrad object at 0x7f5c7b84afb0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward0 object at 0x7faa9ea819f0&gt;
+&lt;AddmmBackward0 object at 0x7faa9ea816c0&gt;
+&lt;AccumulateGrad object at 0x7faa9e890970&gt;
 </pre></div>
 </div>
 </div>
@@ -621,7 +622,7 @@ gradients before and after the backward.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>conv1.bias.grad before backward
 None
 conv1.bias.grad after backward
-tensor([-0.0044, -0.0022,  0.0026, -0.0031,  0.0027,  0.0025])
+tensor([ 0.0082,  0.0045,  0.0005, -0.0219, -0.0167,  0.0142])
 </pre></div>
 </div>
 <p>Now, we have seen how to use loss functions.</p>
@@ -674,7 +675,7 @@ implements all these methods. Using it is very simple:</p>
 <code class="docutils literal notranslate"><span class="pre">optimizer.zero_grad()</span></code>. This is because gradients are accumulated
 as explained in the <a class="reference internal" href="#backprop">Backprop</a> section.</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.241 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.156 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-blitz-neural-networks-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/fb69edad8880ff72cdc3687bb1dad1e6/neural_networks_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_networks_tutorial.py</span></code></a></p>

@@ -258,6 +258,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -446,52 +447,53 @@ To make these transformations, we use <code class="docutils literal notranslate"
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz
 
   0%|          | 0/26421880 [00:00&lt;?, ?it/s]
-  0%|          | 32768/26421880 [00:00&lt;01:27, 302723.64it/s]
-  0%|          | 65536/26421880 [00:00&lt;01:27, 301633.66it/s]
-  0%|          | 131072/26421880 [00:00&lt;00:59, 438419.82it/s]
-  1%|          | 229376/26421880 [00:00&lt;00:42, 622811.94it/s]
-  2%|1         | 491520/26421880 [00:00&lt;00:20, 1265918.35it/s]
-  4%|3         | 950272/26421880 [00:00&lt;00:11, 2266694.35it/s]
-  7%|7         | 1933312/26421880 [00:00&lt;00:05, 4476457.61it/s]
- 15%|#4        | 3833856/26421880 [00:00&lt;00:02, 8609858.90it/s]
- 26%|##6       | 6979584/26421880 [00:00&lt;00:01, 14926991.71it/s]
- 38%|###8      | 10059776/26421880 [00:01&lt;00:00, 19059752.59it/s]
- 50%|####9     | 13172736/26421880 [00:01&lt;00:00, 21922577.13it/s]
- 62%|######1   | 16252928/26421880 [00:01&lt;00:00, 23885876.60it/s]
- 73%|#######3  | 19365888/26421880 [00:01&lt;00:00, 25266589.70it/s]
- 85%|########5 | 22478848/26421880 [00:01&lt;00:00, 26275859.59it/s]
- 96%|#########5| 25296896/26421880 [00:01&lt;00:00, 25691527.54it/s]
-100%|##########| 26421880/26421880 [00:01&lt;00:00, 16080821.14it/s]
+  0%|          | 32768/26421880 [00:00&lt;01:25, 308496.64it/s]
+  0%|          | 65536/26421880 [00:00&lt;01:26, 303399.45it/s]
+  0%|          | 131072/26421880 [00:00&lt;00:59, 440078.32it/s]
+  1%|          | 229376/26421880 [00:00&lt;00:42, 623410.69it/s]
+  2%|1         | 491520/26421880 [00:00&lt;00:20, 1266553.88it/s]
+  4%|3         | 950272/26421880 [00:00&lt;00:11, 2268229.85it/s]
+  7%|7         | 1933312/26421880 [00:00&lt;00:05, 4462794.95it/s]
+ 15%|#4        | 3833856/26421880 [00:00&lt;00:02, 8613667.73it/s]
+ 26%|##6       | 6946816/26421880 [00:00&lt;00:01, 14847992.07it/s]
+ 38%|###8      | 10059776/26421880 [00:01&lt;00:00, 19077241.52it/s]
+ 50%|####9     | 13205504/26421880 [00:01&lt;00:00, 22004365.77it/s]
+ 62%|######1   | 16318464/26421880 [00:01&lt;00:00, 24062822.67it/s]
+ 74%|#######3  | 19431424/26421880 [00:01&lt;00:00, 25410521.82it/s]
+ 85%|########5 | 22511616/26421880 [00:01&lt;00:00, 26255066.99it/s]
+ 97%|#########6| 25624576/26421880 [00:01&lt;00:00, 26886787.95it/s]
+100%|##########| 26421880/26421880 [00:01&lt;00:00, 16084539.13it/s]
 Extracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
 
   0%|          | 0/29515 [00:00&lt;?, ?it/s]
-100%|##########| 29515/29515 [00:00&lt;00:00, 273559.30it/s]
-100%|##########| 29515/29515 [00:00&lt;00:00, 272271.74it/s]
+100%|##########| 29515/29515 [00:00&lt;00:00, 268325.42it/s]
+100%|##########| 29515/29515 [00:00&lt;00:00, 266928.75it/s]
 Extracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
 
   0%|          | 0/4422102 [00:00&lt;?, ?it/s]
-  1%|          | 32768/4422102 [00:00&lt;00:14, 302935.16it/s]
-  1%|1         | 65536/4422102 [00:00&lt;00:14, 302008.70it/s]
-  3%|2         | 131072/4422102 [00:00&lt;00:09, 439057.46it/s]
-  5%|5         | 229376/4422102 [00:00&lt;00:06, 622768.60it/s]
- 11%|#1        | 491520/4422102 [00:00&lt;00:03, 1266217.08it/s]
- 21%|##1       | 950272/4422102 [00:00&lt;00:01, 2270421.42it/s]
- 44%|####3     | 1933312/4422102 [00:00&lt;00:00, 4482199.88it/s]
- 87%|########6 | 3833856/4422102 [00:00&lt;00:00, 8613979.60it/s]
-100%|##########| 4422102/4422102 [00:00&lt;00:00, 5072186.01it/s]
+  1%|          | 32768/4422102 [00:00&lt;00:14, 298684.24it/s]
+  1%|1         | 65536/4422102 [00:00&lt;00:14, 297406.79it/s]
+  3%|2         | 131072/4422102 [00:00&lt;00:09, 432862.30it/s]
+  5%|5         | 229376/4422102 [00:00&lt;00:06, 613453.10it/s]
+ 10%|#         | 458752/4422102 [00:00&lt;00:03, 1141441.14it/s]
+ 14%|#4        | 622592/4422102 [00:00&lt;00:03, 1256931.20it/s]
+ 21%|##1       | 950272/4422102 [00:00&lt;00:01, 1816970.46it/s]
+ 38%|###7      | 1671168/4422102 [00:00&lt;00:00, 3316334.47it/s]
+ 70%|######9   | 3080192/4422102 [00:00&lt;00:00, 6265196.65it/s]
+100%|##########| 4422102/4422102 [00:00&lt;00:00, 4436866.15it/s]
 Extracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
 
   0%|          | 0/5148 [00:00&lt;?, ?it/s]
-100%|##########| 5148/5148 [00:00&lt;00:00, 27125976.12it/s]
+100%|##########| 5148/5148 [00:00&lt;00:00, 23598116.93it/s]
 Extracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw
 </pre></div>
 </div>
@@ -518,7 +520,7 @@ It first creates a zero tensor of size 10 (the number of labels in our dataset) 
 <ul class="simple">
 <li><p><a class="reference external" href="https://pytorch.org/vision/stable/transforms.html">torchvision.transforms API</a></p></li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.207 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.337 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-basics-transforms-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2f1ec3031a7101e25403c5d53a40a401/transforms_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transforms_tutorial.py</span></code></a></p>

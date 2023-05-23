@@ -256,6 +256,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../intermediate/seq2seq_translation_tutorial.html">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_sentiment_ngrams_tutorial.html">Text classification with the torchtext library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="translation_transformer.html">Language Translation with <code class="docutils literal notranslate"><span class="pre">nn.Transformer</span></code> and torchtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="torchtext_custom_dataset_tutorial.html">Preprocess custom text dataset using Torchtext</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
@@ -453,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 10.8MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 14.0MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -478,46 +479,45 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  0%|          | 1.87M/945M [00:00&lt;00:50, 19.6MB/s]
-  1%|          | 5.24M/945M [00:00&lt;00:34, 28.8MB/s]
-  1%|1         | 10.5M/945M [00:00&lt;00:23, 41.0MB/s]
-  2%|1         | 18.8M/945M [00:00&lt;00:16, 58.8MB/s]
-  3%|3         | 31.9M/945M [00:00&lt;00:10, 87.2MB/s]
-  6%|5         | 53.0M/945M [00:00&lt;00:07, 133MB/s]
-  8%|8         | 79.8M/945M [00:00&lt;00:05, 181MB/s]
- 11%|#1        | 107M/945M [00:00&lt;00:04, 215MB/s]
- 14%|#4        | 135M/945M [00:00&lt;00:03, 238MB/s]
- 17%|#7        | 162M/945M [00:01&lt;00:03, 253MB/s]
- 20%|##        | 189M/945M [00:01&lt;00:03, 264MB/s]
- 23%|##2       | 217M/945M [00:01&lt;00:02, 271MB/s]
- 26%|##5       | 245M/945M [00:01&lt;00:02, 277MB/s]
- 29%|##8       | 272M/945M [00:01&lt;00:02, 279MB/s]
- 32%|###1      | 299M/945M [00:01&lt;00:02, 282MB/s]
- 35%|###4      | 327M/945M [00:01&lt;00:02, 283MB/s]
- 37%|###7      | 354M/945M [00:01&lt;00:02, 285MB/s]
- 40%|####      | 382M/945M [00:01&lt;00:02, 286MB/s]
- 43%|####3     | 409M/945M [00:01&lt;00:01, 287MB/s]
- 46%|####6     | 437M/945M [00:02&lt;00:01, 287MB/s]
- 49%|####9     | 464M/945M [00:02&lt;00:01, 287MB/s]
- 52%|#####2    | 492M/945M [00:02&lt;00:01, 288MB/s]
- 55%|#####4    | 519M/945M [00:02&lt;00:01, 287MB/s]
- 58%|#####7    | 547M/945M [00:02&lt;00:01, 287MB/s]
- 61%|######    | 574M/945M [00:02&lt;00:01, 287MB/s]
- 64%|######3   | 602M/945M [00:02&lt;00:01, 287MB/s]
- 67%|######6   | 629M/945M [00:02&lt;00:01, 287MB/s]
- 69%|######9   | 656M/945M [00:02&lt;00:01, 287MB/s]
- 72%|#######2  | 684M/945M [00:02&lt;00:00, 286MB/s]
- 75%|#######5  | 711M/945M [00:03&lt;00:00, 286MB/s]
- 78%|#######8  | 738M/945M [00:03&lt;00:00, 285MB/s]
- 81%|########1 | 765M/945M [00:03&lt;00:00, 267MB/s]
- 84%|########3 | 791M/945M [00:03&lt;00:00, 257MB/s]
- 86%|########6 | 816M/945M [00:03&lt;00:00, 249MB/s]
- 89%|########8 | 840M/945M [00:03&lt;00:00, 250MB/s]
- 92%|#########1| 864M/945M [00:03&lt;00:00, 252MB/s]
- 94%|#########4| 889M/945M [00:03&lt;00:00, 254MB/s]
- 97%|#########6| 914M/945M [00:03&lt;00:00, 257MB/s]
- 99%|#########9| 939M/945M [00:03&lt;00:00, 259MB/s]
-100%|##########| 945M/945M [00:03&lt;00:00, 249MB/s]
+  1%|          | 7.70M/945M [00:00&lt;00:12, 80.8MB/s]
+  2%|2         | 20.5M/945M [00:00&lt;00:08, 112MB/s]
+  4%|4         | 40.0M/945M [00:00&lt;00:06, 154MB/s]
+  7%|6         | 63.6M/945M [00:00&lt;00:04, 191MB/s]
+  9%|8         | 82.8M/945M [00:00&lt;00:04, 194MB/s]
+ 11%|#1        | 107M/945M [00:00&lt;00:04, 216MB/s]
+ 14%|#4        | 133M/945M [00:00&lt;00:03, 234MB/s]
+ 17%|#6        | 160M/945M [00:00&lt;00:03, 250MB/s]
+ 20%|#9        | 187M/945M [00:00&lt;00:03, 258MB/s]
+ 23%|##2       | 214M/945M [00:01&lt;00:02, 267MB/s]
+ 26%|##5       | 241M/945M [00:01&lt;00:02, 271MB/s]
+ 28%|##8       | 267M/945M [00:01&lt;00:02, 244MB/s]
+ 31%|###1      | 294M/945M [00:01&lt;00:02, 255MB/s]
+ 34%|###4      | 321M/945M [00:01&lt;00:02, 264MB/s]
+ 37%|###6      | 349M/945M [00:01&lt;00:02, 270MB/s]
+ 40%|###9      | 376M/945M [00:01&lt;00:02, 274MB/s]
+ 43%|####2     | 402M/945M [00:01&lt;00:02, 276MB/s]
+ 45%|####5     | 429M/945M [00:01&lt;00:01, 278MB/s]
+ 48%|####8     | 457M/945M [00:01&lt;00:01, 280MB/s]
+ 51%|#####1    | 484M/945M [00:02&lt;00:01, 282MB/s]
+ 54%|#####4    | 511M/945M [00:02&lt;00:01, 282MB/s]
+ 57%|#####6    | 538M/945M [00:02&lt;00:01, 259MB/s]
+ 60%|#####9    | 563M/945M [00:02&lt;00:01, 259MB/s]
+ 62%|######2   | 588M/945M [00:02&lt;00:01, 257MB/s]
+ 65%|######4   | 612M/945M [00:02&lt;00:01, 253MB/s]
+ 67%|######7   | 637M/945M [00:02&lt;00:01, 253MB/s]
+ 70%|#######   | 664M/945M [00:02&lt;00:01, 261MB/s]
+ 73%|#######3  | 691M/945M [00:02&lt;00:00, 268MB/s]
+ 76%|#######6  | 718M/945M [00:02&lt;00:00, 273MB/s]
+ 79%|#######8  | 745M/945M [00:03&lt;00:00, 275MB/s]
+ 82%|########1 | 772M/945M [00:03&lt;00:00, 278MB/s]
+ 85%|########4 | 798M/945M [00:03&lt;00:00, 189MB/s]
+ 87%|########6 | 820M/945M [00:03&lt;00:01, 113MB/s]
+ 89%|########8 | 837M/945M [00:04&lt;00:01, 89.0MB/s]
+ 91%|#########1| 863M/945M [00:04&lt;00:00, 115MB/s]
+ 94%|#########4| 890M/945M [00:04&lt;00:00, 143MB/s]
+ 97%|#########7| 917M/945M [00:04&lt;00:00, 169MB/s]
+100%|#########9| 941M/945M [00:04&lt;00:00, 188MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 214MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -729,37 +729,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: training consultant's firm brought in just £3,378 over the 12 months to July 2014 . his latest accounts for the year to July 2014 were filed to Companies house . heiress's family is worth an estimated £3billion and they own a £300,000 Ferrari .
+prediction: reigning world champion wins china grand prix . teammate Nico Rosberg claims he ruined race by driving slowly . british driver claims he was 'scared' by his teammate's behaviour .
 
-target: Jay Rutland, 34, is married to 30-year-old daughter of Bernie Ecclestone . His company had total net assets of £3,378 last year, down from £18,131 . Former stockbroker lives with his wife and daughter in £45million house . Brigante Business Developments is management consultancy company .
+target: Lewis Hamilton took victory for the Silver Arrows at the Chinese Grand Prix . Nico Rosberg claims Hamilton ruined his race by driving slowly .
 
 
 Example 2:
 
-prediction: the premier league and the premier league are furious with the BBC . both Chelsea and the premier league are furious with the BBC . the 20-strong stadium tour group at Chelsea clearly saw the premier league silverware on the pitch .
+prediction: just four in 10 renters aged 20 to 45 are saving for a deposit to buy a home . this compares to almost half a year ago (49%), research by Halifax found . three-quarters of renters fear they will never be able to afford to buy their own house . this rises to eight in 10 for Londoners, where house prices have risen by double-digits in recent years .
 
-target: Chelsea agreed to request from BBC to film the trophy at Stamford Bridge . The Blues agreed on understanding public could not see the trophy . However, a 20-strong stadium tour saw the silverware on the pitch . Chelsea can win the Premier League with victory over Crystal Palace .
+target: Just four in 10 renters aged 20 to 45 are saving for a deposit to buy a home . This is compared to almost half a year ago, according to Halifax research . Also found that three-quarters of UK renters fear they will never be able to afford to buy their own house .
 
 
 Example 3:
 
-prediction: military leaders in norway are nervous about neighbour's presence on its coastline . concerns have peaked after three ships spent winter docked in base . complex was once heavily guarded military facility in the mountains . but experts have criticised shutting down of Olavsvern naval base since 2009 .
+prediction: new analysis of Finnish education suggests pupil aptitude has declined . it suggests pupil aptitude has declined since country embraced techniques . findings will add weight to arguments by former education secretary, Michael Gove .
 
-target: Three Russian ships that docked in Olavsvern Naval Base for the entire winter . Base which was shut down in 2009 is nestled deep inside mountainous region . Norway's military fears Russian presence on 'strategically important' coastline .
+target: Finnish methods include pupils working in small groups or independently . In 2006 Finland was second in world for maths, but down to 12th by 2012 . During period its test scores dropped 29 points in maths and 23 in reading . Michael Gove has argued for return to traditional teacher-led lessons .
 
 
 Example 4:
 
-prediction: fans are planning a protest at the KC stadium on thursday night . the protest is against the rising cost of tickets in the premier league . the cost of tickets to the game at the kc stadium has risen by £50 .
+prediction: the northern irishman will tee off at 3.41pm on thursday at augusta national . he will be joined over the first two rounds by three-time Masters champion Phil Mickelson and another mercurial american in Ryan Moore . but all eyes will be trained on Tiger Woods among the later starters .
 
-target: Liverpool fans are being charged £50 for a ticket to Hull City, compared to Everton fans being charged £35 . Fans' group Spirit of Shankly want some of the money in the game to be passed back to the fans . Brendan Rodgers said he respect the supporters' right to protest . READ: Liverpool ramp up Memphis Depay chase . READ: Rodgers vows to do 'what is best' for Daniel Sturridge .
+target: The 79th Masters Tournament starts on Thursday at Augusta National . Rory McIlroy tees off his bid for a Grand Slam alongside Phil Mickelson . Tiger Woods returns to action and plays in group with Jamie Donaldson .
 
 
 Example 5:
 
-prediction: more than 200 mourners gathered to attend funeral for 23-year-old . mother, Ana, was among more than 200 who attended funeral in Manhattan . carrying red rose and button featuring son's image, she wept as casket was loaded . father, Nixon, told mourners: 'my son is broken. my wife is broken. It hurts' . former bowling lane employee was on second date at sushi restaurant . he was declared missing following the terrifying incident in may . but body was
+prediction: aston villa host spurs at white hart lane on saturday afternoon . manager Tim Sherwood is a passionate man but he can't afford to let things get personal . sherwood was in charge of the youth set-up for years but was not trusted long-term .
 
-target: Nicholas Figueroa, 23, killed in gas explosion in the East Village last month . On Tuesday, relatives, friends and strangers bid him an emotional farewell . Mr Figueroa's father said family was broken over his 'heartbreaking' death . Brother paid tribute to 'best friend' whom he will name his future son after . And Mother, Ava, wore button on her jacket featuring Mr Figueroa's image . Tear-jerking service held at Manhattan's Church of the Holy Name of Jesus . Moises Locon, 26, also died in March 27 blast - and 22 others were injured .
+target: Sherwood is a passionate man but he can’t afford to let things get personal . At new club Aston Villa, he has set the emotional bar high but it’s working . Christian Benteke has found a new lease of life at the Midlands outfit .
 </pre></div>
 </div>
 </div>
@@ -1052,7 +1052,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  19.826 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  11.597 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
