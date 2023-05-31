@@ -491,29 +491,28 @@ https://github.com/pytorch/examples/tree/master/mnist
     Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/9912422 [00:00<?, ?it/s]
-     96%|#########5| 9469952/9912422 [00:00<00:00, 94314419.46it/s]
-    100%|##########| 9912422/9912422 [00:00<00:00, 97429296.12it/s]
+    100%|##########| 9912422/9912422 [00:00<00:00, 100606925.23it/s]
     Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/28881 [00:00<?, ?it/s]
-    100%|##########| 28881/28881 [00:00<00:00, 140528647.13it/s]
+    100%|##########| 28881/28881 [00:00<00:00, 115367327.45it/s]
     Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/1648877 [00:00<?, ?it/s]
-    100%|##########| 1648877/1648877 [00:00<00:00, 25575291.86it/s]
+    100%|##########| 1648877/1648877 [00:00<00:00, 25825222.92it/s]
     Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/4542 [00:00<?, ?it/s]
-    100%|##########| 4542/4542 [00:00<00:00, 20820250.02it/s]
+    100%|##########| 4542/4542 [00:00<00:00, 25883870.61it/s]
     Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
 
@@ -598,22 +597,22 @@ allocate one fewer buffer per fused ``conv-bn`` pair.
     Test set: Average loss: 0.4699, Accuracy: 8564/10000 (86%)
 
     Train Epoch: 0 [0/60000 (0%)]   Loss: 2.352356
-    Train Epoch: 0 [4096/60000 (7%)]        Loss: 7.323084
-    Train Epoch: 0 [8192/60000 (13%)]       Loss: 4.011045
-    Train Epoch: 0 [12288/60000 (20%)]      Loss: 2.065247
-    Train Epoch: 0 [16384/60000 (27%)]      Loss: 2.220393
-    Train Epoch: 0 [20480/60000 (33%)]      Loss: 1.890502
-    Train Epoch: 0 [24576/60000 (40%)]      Loss: 1.612762
-    Train Epoch: 0 [28672/60000 (47%)]      Loss: 1.696717
-    Train Epoch: 0 [32768/60000 (53%)]      Loss: 1.622840
-    Train Epoch: 0 [36864/60000 (60%)]      Loss: 1.212154
-    Train Epoch: 0 [40960/60000 (67%)]      Loss: 1.158558
-    Train Epoch: 0 [45056/60000 (73%)]      Loss: 1.030467
-    Train Epoch: 0 [49152/60000 (80%)]      Loss: 0.849011
-    Train Epoch: 0 [53248/60000 (87%)]      Loss: 0.863772
-    Train Epoch: 0 [57344/60000 (93%)]      Loss: 0.722066
+    Train Epoch: 0 [4096/60000 (7%)]        Loss: 7.323087
+    Train Epoch: 0 [8192/60000 (13%)]       Loss: 4.011035
+    Train Epoch: 0 [12288/60000 (20%)]      Loss: 2.065243
+    Train Epoch: 0 [16384/60000 (27%)]      Loss: 2.220389
+    Train Epoch: 0 [20480/60000 (33%)]      Loss: 1.890461
+    Train Epoch: 0 [24576/60000 (40%)]      Loss: 1.613472
+    Train Epoch: 0 [28672/60000 (47%)]      Loss: 1.697268
+    Train Epoch: 0 [32768/60000 (53%)]      Loss: 1.620774
+    Train Epoch: 0 [36864/60000 (60%)]      Loss: 1.252653
+    Train Epoch: 0 [40960/60000 (67%)]      Loss: 1.093784
+    Train Epoch: 0 [45056/60000 (73%)]      Loss: 0.985566
+    Train Epoch: 0 [49152/60000 (80%)]      Loss: 0.917038
+    Train Epoch: 0 [53248/60000 (87%)]      Loss: 0.894802
+    Train Epoch: 0 [57344/60000 (93%)]      Loss: 0.761358
 
-    Test set: Average loss: 0.5775, Accuracy: 7946/10000 (79%)
+    Test set: Average loss: 0.3543, Accuracy: 9058/10000 (91%)
 
     cuDNN version: 8500
 
@@ -628,7 +627,7 @@ allocate one fewer buffer per fused ``conv-bn`` pair.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  38.460 seconds)
+   **Total running time of the script:** ( 0 minutes  41.703 seconds)
 
 
 .. _sphx_glr_download_intermediate_custom_function_conv_bn_tutorial.py:
