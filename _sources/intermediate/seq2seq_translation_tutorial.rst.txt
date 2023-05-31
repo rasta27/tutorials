@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['vous etes courtois .', 'you re courteous .']
+    ['je suis amoureuse de toi .', 'i m in love with you .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 26s (- 20m 7s) (5000 6%) 2.8490
-    2m 47s (- 18m 9s) (10000 13%) 2.2991
-    4m 9s (- 16m 38s) (15000 20%) 1.9664
-    5m 32s (- 15m 14s) (20000 26%) 1.7125
-    6m 54s (- 13m 49s) (25000 33%) 1.5187
-    8m 17s (- 12m 26s) (30000 40%) 1.3583
-    9m 39s (- 11m 2s) (35000 46%) 1.2109
-    11m 2s (- 9m 39s) (40000 53%) 1.0982
-    12m 25s (- 8m 16s) (45000 60%) 0.9530
-    13m 48s (- 6m 54s) (50000 66%) 0.8690
-    15m 11s (- 5m 31s) (55000 73%) 0.7958
-    16m 34s (- 4m 8s) (60000 80%) 0.7087
-    17m 56s (- 2m 45s) (65000 86%) 0.6505
-    19m 19s (- 1m 22s) (70000 93%) 0.5962
-    20m 42s (- 0m 0s) (75000 100%) 0.5436
+    1m 23s (- 19m 25s) (5000 6%) 2.8511
+    2m 42s (- 17m 36s) (10000 13%) 2.2635
+    4m 1s (- 16m 4s) (15000 20%) 1.9554
+    5m 20s (- 14m 40s) (20000 26%) 1.7336
+    6m 40s (- 13m 20s) (25000 33%) 1.5093
+    7m 59s (- 11m 59s) (30000 40%) 1.3393
+    9m 18s (- 10m 38s) (35000 46%) 1.1902
+    10m 38s (- 9m 18s) (40000 53%) 1.0722
+    11m 57s (- 7m 58s) (45000 60%) 0.9506
+    13m 17s (- 6m 38s) (50000 66%) 0.8640
+    14m 37s (- 5m 19s) (55000 73%) 0.7927
+    15m 57s (- 3m 59s) (60000 80%) 0.7306
+    17m 17s (- 2m 39s) (65000 86%) 0.6448
+    18m 37s (- 1m 19s) (70000 93%) 0.5918
+    19m 56s (- 0m 0s) (75000 100%) 0.6101
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > il est mechant .
-    = he is nasty .
-    < he s an . <EOS>
+    > vous prechez des convaincues .
+    = you re preaching to the choir .
+    < you re preaching to the choir . <EOS>
 
-    > tu n es pas gros .
-    = you re not fat .
-    < you re not fat . <EOS>
+    > c est un monsieur .
+    = he is a gentleman .
+    < he is a gentleman . <EOS>
 
-    > vous etes tres genereux .
-    = you re very generous .
-    < you re very generous . <EOS>
+    > elle n est ni riche ni connue .
+    = she s neither rich nor famous .
+    < she is such rich in that . <EOS>
 
-    > elle est ouverte d esprit .
-    = she s open minded .
-    < she s an member . <EOS>
+    > je ne suis pas assure .
+    = i m uninsured .
+    < i m not . <EOS>
 
-    > il est dj .
-    = he s a dj .
-    < he is a dj . <EOS>
+    > je ne suis pas particulierement impressionnee .
+    = i m not particularly impressed .
+    < i m not impressed impressed . <EOS>
 
-    > il est nerveusement use .
-    = he s a nervous wreck .
-    < he s a nervous wreck . <EOS>
+    > je ne vais pas disparaitre .
+    = i m not going to disappear .
+    < i m not going that . <EOS>
 
-    > je suis un bon garcon .
-    = i am a good boy .
-    < i am a good boy . <EOS>
+    > ce sont tous deux des collegues a moi .
+    = they are both colleagues of mine .
+    < they are both teachers . <EOS>
 
-    > vous etes en retard ce matin .
-    = you are late this morning .
-    < you are late this morning . <EOS>
+    > elles ont toutes faim .
+    = they re all hungry .
+    < they re all hungry . <EOS>
 
-    > ta chance est epuisee .
-    = you re out of luck .
-    < you re out of luck . <EOS>
+    > elle n est qu une enfant .
+    = she is just a child .
+    < she is just a child . <EOS>
 
-    > tu es endurante .
-    = you re resilient .
-    < you re resilient . <EOS>
+    > c est un malade du controle .
+    = he s a control freak .
+    < he s a control freak . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7fd63156a980>
+    <matplotlib.image.AxesImage object at 0x7ff0b0586260>
 
 
 
@@ -1257,9 +1257,9 @@ and labels:
     input = elle est trop petit .
     output = she s too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared to die . <EOS>
+    output = i m not afraid of death . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young director . <EOS>
+    output = he s a talented young full . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  56.026 seconds)
+   **Total running time of the script:** ( 20 minutes  10.306 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
