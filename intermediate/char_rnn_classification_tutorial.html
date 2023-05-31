@@ -411,7 +411,7 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="nlp-from-scratch-classifying-names-with-a-character-level-rnn">
 <span id="sphx-glr-intermediate-char-rnn-classification-tutorial-py"></span><h1>NLP From Scratch: Classifying Names with a Character-Level RNN<a class="headerlink" href="#nlp-from-scratch-classifying-names-with-a-character-level-rnn" title="Permalink to this heading">¶</a></h1>
-<p><strong>Author</strong>: <a class="reference external" href="https://github.com/spro/practical-pytorch">Sean Robertson</a></p>
+<p><strong>Author</strong>: <a class="reference external" href="https://github.com/spro">Sean Robertson</a></p>
 <p>We will be building and training a basic character-level RNN to classify
 words. This tutorial, along with the following two, show how to do
 preprocess data for NLP modeling “from scratch”, in particular not using
@@ -679,16 +679,16 @@ language):</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'category ='</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="s1">'/ line ='</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Chinese / line = Lam
-category = Arabic / line = Handal
-category = Polish / line = Mozdzierz
-category = Czech / line = Bleskan
-category = Czech / line = Slezak
-category = Spanish / line = Bermudez
-category = Korean / line = Ko
-category = Czech / line = Vaculova
-category = Japanese / line = Yoshida
-category = Korean / line = Chun
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = English / line = Kilmurry
+category = Greek / line = Theohari
+category = German / line = Unruh
+category = Korean / line = Gu
+category = Korean / line = Gil
+category = English / line = Foucher
+category = English / line = Farge
+category = Arabic / line = Gaber
+category = Japanese / line = Morinaga
+category = German / line = Tritten
 </pre></div>
 </div>
 </div>
@@ -778,26 +778,26 @@ average of the loss.</p>
         <span class="n">current_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 5s) 2.1908 Bezumov / Russian ✓
-10000 10% (0m 11s) 3.1700 Roma / Japanese ✗ (Italian)
-15000 15% (0m 17s) 2.3345 Rosario / Greek ✗ (Portuguese)
-20000 20% (0m 23s) 2.3354 Perevuznik / Greek ✗ (Czech)
-25000 25% (0m 29s) 3.1208 Albuquerque / French ✗ (Spanish)
-30000 30% (0m 34s) 0.4937 Lillis / Greek ✓
-35000 35% (0m 40s) 0.3446 Majewski / Polish ✓
-40000 40% (0m 46s) 2.3975 Oliver / French ✗ (Spanish)
-45000 45% (0m 52s) 0.3977 Pirumov / Russian ✓
-50000 50% (0m 58s) 1.6648 Pena / Chinese ✗ (Spanish)
-55000 55% (1m 4s) 1.8056 Silva / Czech ✗ (Portuguese)
-60000 60% (1m 9s) 1.4386 Andreu / Spanish ✓
-65000 65% (1m 15s) 0.8055 Turati / Italian ✓
-70000 70% (1m 21s) 0.4030 Trapani / Italian ✓
-75000 75% (1m 27s) 0.1923 Coelho / Portuguese ✓
-80000 80% (1m 32s) 0.5712 Gorka / Polish ✓
-85000 85% (1m 38s) 3.3863 Weisener / German ✗ (Czech)
-90000 90% (1m 44s) 0.7993 Lian / Chinese ✓
-95000 95% (1m 50s) 0.6497 Chi / Korean ✓
-100000 100% (1m 55s) 0.0430 Khoury / Arabic ✓
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 5s) 2.7830 Ramaaker / Russian ✗ (Dutch)
+10000 10% (0m 11s) 3.5757 Vo / Korean ✗ (German)
+15000 15% (0m 17s) 1.2965 Hong / Korean ✗ (Chinese)
+20000 20% (0m 23s) 0.8677 Hadad / Arabic ✓
+25000 25% (0m 28s) 1.0701 Pletcher / German ✓
+30000 30% (0m 34s) 2.6631 D'cruze / French ✗ (Spanish)
+35000 35% (0m 40s) 2.0740 Fleming / German ✗ (Scottish)
+40000 40% (0m 45s) 1.3558 Alves / Portuguese ✓
+45000 45% (0m 51s) 0.0635 Pappayiorgas / Greek ✓
+50000 50% (0m 57s) 2.7452 Natale / French ✗ (Italian)
+55000 55% (1m 3s) 0.4620 Kouros / Greek ✓
+60000 60% (1m 8s) 2.2919 Atiyeh / Czech ✗ (Arabic)
+65000 65% (1m 14s) 2.2752 Nestrojil / Polish ✗ (Czech)
+70000 70% (1m 20s) 0.8279 Gwozdek / Polish ✓
+75000 75% (1m 25s) 0.6893 Rosario / Portuguese ✓
+80000 80% (1m 31s) 0.9314 Lac / Vietnamese ✓
+85000 85% (1m 37s) 1.7169 Santos / Greek ✗ (Portuguese)
+90000 90% (1m 42s) 0.4461 Favager / French ✓
+95000 95% (1m 48s) 0.1600 Kedzierski / Polish ✓
+100000 100% (1m 53s) 1.3302 Jorda / Spanish ✓
 </pre></div>
 </div>
 </div>
@@ -812,7 +812,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f5cd3488700&gt;]
+<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f29fef2b6d0&gt;]
 </pre></div>
 </div>
 </div>
@@ -903,19 +903,19 @@ English (perhaps because of overlap with other languages).</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.78) Czech
-(-0.91) Russian
-(-3.02) English
+(-0.94) Czech
+(-1.20) Russian
+(-1.63) Polish
 
 &gt; Jackson
-(-0.66) Scottish
-(-1.26) English
-(-2.85) French
+(-0.24) Scottish
+(-2.63) Russian
+(-2.90) English
 
 &gt; Satoshi
-(-0.38) Arabic
-(-1.79) Japanese
-(-3.06) Italian
+(-0.64) Japanese
+(-1.76) Arabic
+(-2.36) Italian
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -959,7 +959,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  2.905 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  0.413 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/37c8905519d3fd3f437b783a48d06eac/char_rnn_classification_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></p>

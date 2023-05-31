@@ -20,7 +20,7 @@
 
 NLP From Scratch: Translation with a Sequence to Sequence Network and Attention
 *******************************************************************************
-**Author**: `Sean Robertson <https://github.com/spro/practical-pytorch>`_
+**Author**: `Sean Robertson <https://github.com/spro>`_
 
 This is the third and final tutorial on doing "NLP From Scratch", where we
 write our own classes and functions to preprocess the data to do our NLP
@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['les etudes sociales m interessent beaucoup .', 'i m very interested in social studies .']
+    ['je suis trop fatigue pour continuer de marcher .', 'i am too tired to keep on walking .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 24s (- 19m 37s) (5000 6%) 2.8739
-    2m 43s (- 17m 41s) (10000 13%) 2.2727
-    4m 2s (- 16m 11s) (15000 20%) 1.9215
-    5m 24s (- 14m 51s) (20000 26%) 1.6971
-    6m 45s (- 13m 30s) (25000 33%) 1.5154
-    8m 4s (- 12m 7s) (30000 40%) 1.3721
-    9m 23s (- 10m 43s) (35000 46%) 1.2013
-    10m 42s (- 9m 22s) (40000 53%) 1.0654
-    12m 1s (- 8m 0s) (45000 60%) 0.9890
-    13m 19s (- 6m 39s) (50000 66%) 0.8650
-    14m 36s (- 5m 18s) (55000 73%) 0.7936
-    15m 54s (- 3m 58s) (60000 80%) 0.7322
-    17m 12s (- 2m 38s) (65000 86%) 0.6810
-    18m 29s (- 1m 19s) (70000 93%) 0.5962
-    19m 46s (- 0m 0s) (75000 100%) 0.5517
+    1m 23s (- 19m 32s) (5000 6%) 2.8655
+    2m 42s (- 17m 34s) (10000 13%) 2.2498
+    4m 1s (- 16m 4s) (15000 20%) 1.9528
+    5m 19s (- 14m 39s) (20000 26%) 1.6920
+    6m 39s (- 13m 18s) (25000 33%) 1.5196
+    7m 58s (- 11m 57s) (30000 40%) 1.3235
+    9m 17s (- 10m 37s) (35000 46%) 1.1991
+    10m 37s (- 9m 17s) (40000 53%) 1.0892
+    11m 56s (- 7m 57s) (45000 60%) 0.9686
+    13m 16s (- 6m 38s) (50000 66%) 0.8753
+    14m 35s (- 5m 18s) (55000 73%) 0.7902
+    15m 55s (- 3m 58s) (60000 80%) 0.7577
+    17m 15s (- 2m 39s) (65000 86%) 0.6727
+    18m 34s (- 1m 19s) (70000 93%) 0.5792
+    19m 54s (- 0m 0s) (75000 100%) 0.5790
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > c est un gaucher .
-    = he s a southpaw .
-    < he s a southpaw . <EOS>
+    > je suis trop vieux pour aller en allemagne .
+    = i m too old to go to germany .
+    < i m too old to go to . <EOS>
 
-    > c est une dactylographe .
-    = she is a typist .
-    < she is a japanese . <EOS>
+    > je cherche ma cle .
+    = i m looking for my key .
+    < i m looking for my . . <EOS>
 
-    > tu n es pas cense fumer ici .
-    = you are not supposed to smoke here .
-    < you are not supposed to smoke here . <EOS>
+    > nous sommes ici seules .
+    = we re here alone .
+    < we re here alone . <EOS>
 
-    > j en ai fini de faire l andouille .
-    = i m done fooling around now .
-    < i m done listening to . . <EOS>
+    > je suis terrible avec les enfants .
+    = i m horrible with kids .
+    < i m horrible with kids . <EOS>
 
-    > elles vont commettre des erreurs .
-    = they re going to make mistakes .
-    < they re going to make mistakes . <EOS>
+    > ce sont tous les miens .
+    = they re all mine .
+    < they re all mine . <EOS>
 
-    > j en suis mecontent .
-    = i m not happy with this .
-    < i m not happy with this . <EOS>
+    > son travail l absorbe .
+    = he is absorbed in his work .
+    < he is absorbed in his work . <EOS>
 
-    > il se plaint toujours de quelque chose .
-    = he s always complaining about something .
-    < he s always complaining about something . <EOS>
+    > il aime beaucoup la musique .
+    = he is very fond of music .
+    < he is fond of music . <EOS>
 
-    > je me rejouis que vous vous portiez bien .
-    = i m glad you re all right .
-    < i m glad you re all right . <EOS>
+    > je suis ton ami .
+    = i m your friend .
+    < i m your friend . <EOS>
 
-    > elle va avoir un bebe .
-    = she s going to have a baby .
-    < she s going to have a baby . <EOS>
+    > je suis une nouvelle etudiante .
+    = i m a new student .
+    < i m a new student . <EOS>
 
-    > tu es trop tendu .
-    = you re too tense .
-    < you re too tense . <EOS>
+    > je suis loin de chez moi .
+    = i m a long way from home .
+    < i m a so for myself . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f18d1357400>
+    <matplotlib.image.AxesImage object at 0x7f61e1092650>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too sensitive . <EOS>
+    output = she is too too . <EOS>
     input = je ne crains pas de mourir .
     output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a young young young . . <EOS>
+    output = he s an talented young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  0.333 seconds)
+   **Total running time of the script:** ( 20 minutes  8.292 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

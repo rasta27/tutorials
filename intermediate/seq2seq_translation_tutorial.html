@@ -411,7 +411,7 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="nlp-from-scratch-translation-with-a-sequence-to-sequence-network-and-attention">
 <span id="sphx-glr-intermediate-seq2seq-translation-tutorial-py"></span><h1>NLP From Scratch: Translation with a Sequence to Sequence Network and Attention<a class="headerlink" href="#nlp-from-scratch-translation-with-a-sequence-to-sequence-network-and-attention" title="Permalink to this heading">¶</a></h1>
-<p><strong>Author</strong>: <a class="reference external" href="https://github.com/spro/practical-pytorch">Sean Robertson</a></p>
+<p><strong>Author</strong>: <a class="reference external" href="https://github.com/spro">Sean Robertson</a></p>
 <p>This is the third and final tutorial on doing “NLP From Scratch”, where we
 write our own classes and functions to preprocess the data to do our NLP
 modeling tasks. We hope after you complete this tutorial that you’ll proceed to
@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['les etudes sociales m interessent beaucoup .', 'i m very interested in social studies .']
+['je suis trop fatigue pour continuer de marcher .', 'i am too tired to keep on walking .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 24s (- 19m 37s) (5000 6%) 2.8739
-2m 43s (- 17m 41s) (10000 13%) 2.2727
-4m 2s (- 16m 11s) (15000 20%) 1.9215
-5m 24s (- 14m 51s) (20000 26%) 1.6971
-6m 45s (- 13m 30s) (25000 33%) 1.5154
-8m 4s (- 12m 7s) (30000 40%) 1.3721
-9m 23s (- 10m 43s) (35000 46%) 1.2013
-10m 42s (- 9m 22s) (40000 53%) 1.0654
-12m 1s (- 8m 0s) (45000 60%) 0.9890
-13m 19s (- 6m 39s) (50000 66%) 0.8650
-14m 36s (- 5m 18s) (55000 73%) 0.7936
-15m 54s (- 3m 58s) (60000 80%) 0.7322
-17m 12s (- 2m 38s) (65000 86%) 0.6810
-18m 29s (- 1m 19s) (70000 93%) 0.5962
-19m 46s (- 0m 0s) (75000 100%) 0.5517
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 23s (- 19m 32s) (5000 6%) 2.8655
+2m 42s (- 17m 34s) (10000 13%) 2.2498
+4m 1s (- 16m 4s) (15000 20%) 1.9528
+5m 19s (- 14m 39s) (20000 26%) 1.6920
+6m 39s (- 13m 18s) (25000 33%) 1.5196
+7m 58s (- 11m 57s) (30000 40%) 1.3235
+9m 17s (- 10m 37s) (35000 46%) 1.1991
+10m 37s (- 9m 17s) (40000 53%) 1.0892
+11m 56s (- 7m 57s) (45000 60%) 0.9686
+13m 16s (- 6m 38s) (50000 66%) 0.8753
+14m 35s (- 5m 18s) (55000 73%) 0.7902
+15m 55s (- 3m 58s) (60000 80%) 0.7577
+17m 15s (- 2m 39s) (65000 86%) 0.6727
+18m 34s (- 1m 19s) (70000 93%) 0.5792
+19m 54s (- 0m 0s) (75000 100%) 0.5790
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; c est un gaucher .
-= he s a southpaw .
-&lt; he s a southpaw . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je suis trop vieux pour aller en allemagne .
+= i m too old to go to germany .
+&lt; i m too old to go to . &lt;EOS&gt;
 
-&gt; c est une dactylographe .
-= she is a typist .
-&lt; she is a japanese . &lt;EOS&gt;
+&gt; je cherche ma cle .
+= i m looking for my key .
+&lt; i m looking for my . . &lt;EOS&gt;
 
-&gt; tu n es pas cense fumer ici .
-= you are not supposed to smoke here .
-&lt; you are not supposed to smoke here . &lt;EOS&gt;
+&gt; nous sommes ici seules .
+= we re here alone .
+&lt; we re here alone . &lt;EOS&gt;
 
-&gt; j en ai fini de faire l andouille .
-= i m done fooling around now .
-&lt; i m done listening to . . &lt;EOS&gt;
+&gt; je suis terrible avec les enfants .
+= i m horrible with kids .
+&lt; i m horrible with kids . &lt;EOS&gt;
 
-&gt; elles vont commettre des erreurs .
-= they re going to make mistakes .
-&lt; they re going to make mistakes . &lt;EOS&gt;
+&gt; ce sont tous les miens .
+= they re all mine .
+&lt; they re all mine . &lt;EOS&gt;
 
-&gt; j en suis mecontent .
-= i m not happy with this .
-&lt; i m not happy with this . &lt;EOS&gt;
+&gt; son travail l absorbe .
+= he is absorbed in his work .
+&lt; he is absorbed in his work . &lt;EOS&gt;
 
-&gt; il se plaint toujours de quelque chose .
-= he s always complaining about something .
-&lt; he s always complaining about something . &lt;EOS&gt;
+&gt; il aime beaucoup la musique .
+= he is very fond of music .
+&lt; he is fond of music . &lt;EOS&gt;
 
-&gt; je me rejouis que vous vous portiez bien .
-= i m glad you re all right .
-&lt; i m glad you re all right . &lt;EOS&gt;
+&gt; je suis ton ami .
+= i m your friend .
+&lt; i m your friend . &lt;EOS&gt;
 
-&gt; elle va avoir un bebe .
-= she s going to have a baby .
-&lt; she s going to have a baby . &lt;EOS&gt;
+&gt; je suis une nouvelle etudiante .
+= i m a new student .
+&lt; i m a new student . &lt;EOS&gt;
 
-&gt; tu es trop tendu .
-= you re too tense .
-&lt; you re too tense . &lt;EOS&gt;
+&gt; je suis loin de chez moi .
+= i m a long way from home .
+&lt; i m a so for myself . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f18d1357400&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f61e1092650&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s too sensitive . &lt;EOS&gt;
+output = she is too too . &lt;EOS&gt;
 input = je ne crains pas de mourir .
 output = i m not scared to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a young young young . . &lt;EOS&gt;
+output = he s an talented young . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  0.333 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  8.292 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

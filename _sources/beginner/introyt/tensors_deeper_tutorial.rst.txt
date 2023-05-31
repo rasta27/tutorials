@@ -87,9 +87,9 @@ The simplest way to create a tensor is with the ``torch.empty()`` call:
  .. code-block:: none
 
     <class 'torch.Tensor'>
-    tensor([[1.8841e+05, 1.8329e+05, 2.2385e-39, 0.0000e+00],
-            [3.5873e-43, 0.0000e+00, 2.9915e+11, 4.5689e-41],
-            [1.7937e-43, 0.0000e+00, 6.7262e-44, 0.0000e+00]])
+    tensor([[-1.2711e+33,  4.5618e-41,  7.7688e-19,  0.0000e+00],
+            [ 6.0636e+37,  4.5618e-41, -2.4179e+35,  0.0000e+00],
+            [ 2.1306e+04,  0.0000e+00,  0.0000e+00,  0.0000e+00]])
 
 
 
@@ -274,7 +274,7 @@ have the ``torch.*_like()`` methods:
     tensor([[[0.0000e+00, 0.0000e+00, 0.0000e+00],
              [0.0000e+00, 0.0000e+00, 0.0000e+00]],
 
-            [[0.0000e+00, 0.0000e+00, 4.3368e-19],
+            [[0.0000e+00, 0.0000e+00, 7.1054e-15],
              [0.0000e+00, 0.0000e+00, 0.0000e+00]]])
     torch.Size([2, 2, 3])
     tensor([[[0., 0., 0.],
@@ -1782,7 +1782,7 @@ are reflected in the other:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.666 seconds)
+   **Total running time of the script:** ( 0 minutes  2.716 seconds)
 
 
 .. _sphx_glr_download_beginner_introyt_tensors_deeper_tutorial.py:
