@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 16.9MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.8MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,51 +479,131 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  0%|          | 696k/945M [00:00&lt;02:20, 7.03MB/s]
-  0%|          | 1.80M/945M [00:00&lt;01:41, 9.74MB/s]
-  0%|          | 3.51M/945M [00:00&lt;01:13, 13.4MB/s]
-  1%|          | 6.23M/945M [00:00&lt;00:50, 19.3MB/s]
-  1%|1         | 10.5M/945M [00:00&lt;00:34, 28.3MB/s]
-  2%|1         | 17.1M/945M [00:00&lt;00:22, 42.3MB/s]
-  3%|2         | 27.9M/945M [00:00&lt;00:14, 65.1MB/s]
-  5%|4         | 44.4M/945M [00:00&lt;00:09, 99.3MB/s]
-  7%|7         | 69.8M/945M [00:00&lt;00:06, 151MB/s]
- 10%|#         | 94.5M/945M [00:01&lt;00:04, 184MB/s]
- 13%|#2        | 118M/945M [00:01&lt;00:04, 205MB/s]
- 15%|#5        | 143M/945M [00:01&lt;00:03, 221MB/s]
- 18%|#7        | 168M/945M [00:01&lt;00:03, 233MB/s]
- 20%|##        | 192M/945M [00:01&lt;00:03, 239MB/s]
- 23%|##2       | 217M/945M [00:01&lt;00:03, 245MB/s]
- 26%|##5       | 242M/945M [00:01&lt;00:02, 250MB/s]
- 28%|##8       | 266M/945M [00:01&lt;00:02, 253MB/s]
- 31%|###       | 291M/945M [00:01&lt;00:02, 254MB/s]
- 33%|###3      | 316M/945M [00:01&lt;00:02, 257MB/s]
- 36%|###6      | 341M/945M [00:02&lt;00:02, 258MB/s]
- 39%|###8      | 365M/945M [00:02&lt;00:02, 258MB/s]
- 41%|####1     | 390M/945M [00:02&lt;00:02, 259MB/s]
- 44%|####3     | 415M/945M [00:02&lt;00:02, 255MB/s]
- 47%|####6     | 439M/945M [00:02&lt;00:02, 251MB/s]
- 49%|####9     | 464M/945M [00:02&lt;00:01, 253MB/s]
- 52%|#####1    | 488M/945M [00:02&lt;00:01, 253MB/s]
- 54%|#####4    | 512M/945M [00:02&lt;00:01, 251MB/s]
- 57%|#####6    | 536M/945M [00:02&lt;00:01, 251MB/s]
- 59%|#####9    | 561M/945M [00:02&lt;00:01, 252MB/s]
- 62%|######1   | 585M/945M [00:03&lt;00:01, 251MB/s]
- 65%|######4   | 610M/945M [00:03&lt;00:01, 254MB/s]
- 67%|######7   | 634M/945M [00:03&lt;00:01, 255MB/s]
- 70%|######9   | 658M/945M [00:03&lt;00:01, 249MB/s]
- 72%|#######2  | 682M/945M [00:03&lt;00:01, 249MB/s]
- 75%|#######4  | 707M/945M [00:03&lt;00:00, 253MB/s]
- 78%|#######7  | 732M/945M [00:03&lt;00:00, 255MB/s]
- 80%|########  | 756M/945M [00:03&lt;00:00, 254MB/s]
- 83%|########2 | 781M/945M [00:03&lt;00:00, 253MB/s]
- 85%|########5 | 805M/945M [00:03&lt;00:00, 252MB/s]
- 88%|########7 | 829M/945M [00:04&lt;00:00, 252MB/s]
- 90%|######### | 853M/945M [00:04&lt;00:00, 251MB/s]
- 93%|#########2| 877M/945M [00:04&lt;00:00, 252MB/s]
- 96%|#########5| 902M/945M [00:04&lt;00:00, 254MB/s]
- 98%|#########8| 926M/945M [00:04&lt;00:00, 255MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 220MB/s]
+  1%|          | 6.41M/945M [00:00&lt;00:14, 67.0MB/s]
+  1%|1         | 13.5M/945M [00:00&lt;00:13, 71.0MB/s]
+  2%|2         | 20.2M/945M [00:00&lt;00:14, 69.1MB/s]
+  3%|2         | 26.8M/945M [00:00&lt;00:15, 61.7MB/s]
+  4%|3         | 33.8M/945M [00:00&lt;00:14, 65.3MB/s]
+  4%|4         | 42.4M/945M [00:00&lt;00:12, 73.2MB/s]
+  5%|5         | 50.7M/945M [00:00&lt;00:12, 77.4MB/s]
+  6%|6         | 58.1M/945M [00:00&lt;00:12, 76.3MB/s]
+  7%|6         | 65.5M/945M [00:00&lt;00:12, 72.8MB/s]
+  8%|7         | 72.6M/945M [00:01&lt;00:12, 73.5MB/s]
+  8%|8         | 79.7M/945M [00:01&lt;00:13, 65.5MB/s]
+  9%|9         | 86.1M/945M [00:01&lt;00:14, 64.0MB/s]
+ 10%|9         | 93.1M/945M [00:01&lt;00:13, 66.4MB/s]
+ 11%|#         | 99.6M/945M [00:01&lt;00:13, 65.4MB/s]
+ 11%|#1        | 106M/945M [00:01&lt;00:13, 65.3MB/s]
+ 12%|#1        | 113M/945M [00:01&lt;00:13, 67.1MB/s]
+ 13%|#2        | 119M/945M [00:01&lt;00:13, 65.2MB/s]
+ 13%|#3        | 125M/945M [00:01&lt;00:13, 62.8MB/s]
+ 14%|#4        | 133M/945M [00:02&lt;00:12, 67.7MB/s]
+ 15%|#4        | 141M/945M [00:02&lt;00:11, 71.2MB/s]
+ 16%|#5        | 149M/945M [00:02&lt;00:11, 74.8MB/s]
+ 17%|#6        | 156M/945M [00:02&lt;00:10, 76.5MB/s]
+ 17%|#7        | 164M/945M [00:02&lt;00:11, 73.4MB/s]
+ 18%|#8        | 171M/945M [00:02&lt;00:13, 60.9MB/s]
+ 19%|#8        | 179M/945M [00:02&lt;00:11, 67.5MB/s]
+ 20%|#9        | 187M/945M [00:02&lt;00:11, 69.9MB/s]
+ 21%|##        | 194M/945M [00:02&lt;00:11, 66.1MB/s]
+ 21%|##1       | 200M/945M [00:03&lt;00:11, 65.7MB/s]
+ 22%|##1       | 207M/945M [00:03&lt;00:12, 62.6MB/s]
+ 23%|##2       | 213M/945M [00:03&lt;00:12, 59.1MB/s]
+ 23%|##3       | 219M/945M [00:03&lt;00:12, 61.0MB/s]
+ 24%|##3       | 226M/945M [00:03&lt;00:11, 63.9MB/s]
+ 25%|##4       | 232M/945M [00:03&lt;00:11, 63.4MB/s]
+ 25%|##5       | 240M/945M [00:03&lt;00:10, 68.7MB/s]
+ 26%|##6       | 248M/945M [00:03&lt;00:10, 71.5MB/s]
+ 27%|##7       | 255M/945M [00:03&lt;00:09, 74.9MB/s]
+ 28%|##7       | 263M/945M [00:04&lt;00:09, 77.0MB/s]
+ 29%|##8       | 271M/945M [00:04&lt;00:09, 77.1MB/s]
+ 29%|##9       | 278M/945M [00:04&lt;00:09, 71.0MB/s]
+ 30%|###       | 286M/945M [00:04&lt;00:09, 74.3MB/s]
+ 31%|###1      | 293M/945M [00:04&lt;00:09, 75.1MB/s]
+ 32%|###1      | 301M/945M [00:04&lt;00:09, 71.6MB/s]
+ 33%|###2      | 308M/945M [00:04&lt;00:08, 74.4MB/s]
+ 33%|###3      | 316M/945M [00:04&lt;00:08, 76.7MB/s]
+ 34%|###4      | 324M/945M [00:04&lt;00:08, 77.4MB/s]
+ 35%|###5      | 331M/945M [00:04&lt;00:08, 77.2MB/s]
+ 36%|###5      | 339M/945M [00:05&lt;00:08, 72.7MB/s]
+ 37%|###6      | 346M/945M [00:05&lt;00:08, 72.5MB/s]
+ 37%|###7      | 353M/945M [00:05&lt;00:08, 74.5MB/s]
+ 38%|###8      | 362M/945M [00:05&lt;00:07, 78.2MB/s]
+ 39%|###9      | 370M/945M [00:05&lt;00:07, 81.9MB/s]
+ 40%|####      | 378M/945M [00:05&lt;00:07, 81.5MB/s]
+ 41%|####      | 387M/945M [00:05&lt;00:06, 83.8MB/s]
+ 42%|####1     | 395M/945M [00:05&lt;00:07, 81.7MB/s]
+ 43%|####2     | 403M/945M [00:05&lt;00:06, 81.5MB/s]
+ 43%|####3     | 410M/945M [00:06&lt;00:06, 81.7MB/s]
+ 44%|####4     | 418M/945M [00:06&lt;00:06, 80.7MB/s]
+ 45%|####5     | 426M/945M [00:06&lt;00:06, 80.8MB/s]
+ 46%|####5     | 434M/945M [00:06&lt;00:06, 77.4MB/s]
+ 47%|####6     | 441M/945M [00:06&lt;00:06, 76.4MB/s]
+ 47%|####7     | 448M/945M [00:06&lt;00:06, 76.0MB/s]
+ 48%|####8     | 456M/945M [00:06&lt;00:06, 76.4MB/s]
+ 49%|####9     | 463M/945M [00:06&lt;00:06, 76.8MB/s]
+ 50%|####9     | 471M/945M [00:06&lt;00:06, 76.2MB/s]
+ 51%|#####     | 478M/945M [00:06&lt;00:06, 76.9MB/s]
+ 51%|#####1    | 486M/945M [00:07&lt;00:06, 79.2MB/s]
+ 52%|#####2    | 494M/945M [00:07&lt;00:05, 78.9MB/s]
+ 53%|#####3    | 502M/945M [00:07&lt;00:05, 80.4MB/s]
+ 54%|#####3    | 510M/945M [00:07&lt;00:05, 81.8MB/s]
+ 55%|#####4    | 518M/945M [00:07&lt;00:05, 82.0MB/s]
+ 56%|#####5    | 526M/945M [00:07&lt;00:05, 81.0MB/s]
+ 56%|#####6    | 533M/945M [00:07&lt;00:05, 80.0MB/s]
+ 57%|#####7    | 541M/945M [00:07&lt;00:05, 78.3MB/s]
+ 58%|#####8    | 548M/945M [00:07&lt;00:05, 77.8MB/s]
+ 59%|#####8    | 556M/945M [00:07&lt;00:05, 79.3MB/s]
+ 60%|#####9    | 565M/945M [00:08&lt;00:04, 82.2MB/s]
+ 61%|######    | 573M/945M [00:08&lt;00:04, 84.1MB/s]
+ 62%|######1   | 581M/945M [00:08&lt;00:04, 79.9MB/s]
+ 62%|######2   | 589M/945M [00:08&lt;00:04, 78.0MB/s]
+ 63%|######3   | 597M/945M [00:08&lt;00:04, 75.6MB/s]
+ 64%|######3   | 604M/945M [00:08&lt;00:04, 77.4MB/s]
+ 65%|######4   | 612M/945M [00:08&lt;00:04, 78.2MB/s]
+ 66%|######5   | 620M/945M [00:08&lt;00:04, 78.1MB/s]
+ 66%|######6   | 627M/945M [00:08&lt;00:04, 75.3MB/s]
+ 67%|######7   | 635M/945M [00:09&lt;00:04, 76.6MB/s]
+ 68%|######7   | 642M/945M [00:09&lt;00:04, 73.9MB/s]
+ 69%|######8   | 649M/945M [00:09&lt;00:04, 73.1MB/s]
+ 70%|######9   | 657M/945M [00:09&lt;00:04, 73.3MB/s]
+ 70%|#######   | 666M/945M [00:09&lt;00:03, 78.8MB/s]
+ 71%|#######1  | 674M/945M [00:09&lt;00:03, 80.8MB/s]
+ 72%|#######2  | 682M/945M [00:09&lt;00:03, 80.9MB/s]
+ 73%|#######2  | 689M/945M [00:09&lt;00:03, 79.5MB/s]
+ 74%|#######3  | 697M/945M [00:09&lt;00:03, 79.8MB/s]
+ 75%|#######4  | 705M/945M [00:09&lt;00:03, 80.2MB/s]
+ 75%|#######5  | 712M/945M [00:10&lt;00:03, 80.5MB/s]
+ 76%|#######6  | 720M/945M [00:10&lt;00:02, 81.2MB/s]
+ 77%|#######7  | 728M/945M [00:10&lt;00:02, 80.9MB/s]
+ 78%|#######7  | 736M/945M [00:10&lt;00:02, 78.4MB/s]
+ 79%|#######8  | 743M/945M [00:10&lt;00:02, 74.9MB/s]
+ 80%|#######9  | 751M/945M [00:10&lt;00:02, 76.3MB/s]
+ 80%|########  | 759M/945M [00:10&lt;00:02, 78.7MB/s]
+ 81%|########1 | 767M/945M [00:10&lt;00:02, 78.3MB/s]
+ 82%|########2 | 775M/945M [00:10&lt;00:02, 80.8MB/s]
+ 83%|########2 | 783M/945M [00:10&lt;00:02, 82.5MB/s]
+ 84%|########3 | 791M/945M [00:11&lt;00:02, 78.4MB/s]
+ 85%|########4 | 799M/945M [00:11&lt;00:01, 81.0MB/s]
+ 85%|########5 | 807M/945M [00:11&lt;00:01, 80.2MB/s]
+ 86%|########6 | 815M/945M [00:11&lt;00:01, 74.6MB/s]
+ 87%|########7 | 823M/945M [00:11&lt;00:01, 76.0MB/s]
+ 88%|########7 | 831M/945M [00:11&lt;00:01, 78.4MB/s]
+ 89%|########8 | 838M/945M [00:11&lt;00:01, 77.8MB/s]
+ 90%|########9 | 846M/945M [00:11&lt;00:01, 74.6MB/s]
+ 90%|######### | 853M/945M [00:11&lt;00:01, 75.1MB/s]
+ 91%|#########1| 861M/945M [00:12&lt;00:01, 76.7MB/s]
+ 92%|#########1| 868M/945M [00:12&lt;00:01, 73.8MB/s]
+ 93%|#########2| 876M/945M [00:12&lt;00:00, 76.7MB/s]
+ 94%|#########3| 885M/945M [00:12&lt;00:00, 80.3MB/s]
+ 94%|#########4| 893M/945M [00:12&lt;00:00, 81.5MB/s]
+ 95%|#########5| 901M/945M [00:12&lt;00:00, 83.7MB/s]
+ 96%|#########6| 909M/945M [00:12&lt;00:00, 79.9MB/s]
+ 97%|#########7| 917M/945M [00:12&lt;00:00, 80.1MB/s]
+ 98%|#########7| 924M/945M [00:13&lt;00:00, 52.3MB/s]
+ 99%|#########8| 933M/945M [00:13&lt;00:00, 59.8MB/s]
+ 99%|#########9| 940M/945M [00:13&lt;00:00, 61.7MB/s]
+100%|##########| 945M/945M [00:13&lt;00:00, 74.3MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -735,37 +815,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: support for the Greens has dropped sharply to only 15 per cent . the proportion of students who disliked her has doubled since September . but the proportion of students who disliked her has doubled to 24 per cent .
+prediction: alaa Abdullah Esayed posted 45,600 tweets in less than a year . some included pictures of dead bodies and encouraging children to fight . 22-year-old pleaded guilty to encouraging terrorism and disseminating terrorist publications .
 
-target: Support for Greens on campuses falls from 28% to 15% in two months . Dramatic slump means the Tories as well as Labour are now more popular . Since September, percentage who dislike Natalie Bennett doubled to 24% .
+target: Alaa Abdullah Esayed posted 45,600 tweets supporting ISIS to followers . Some posts included pictures of the dead bodies of jihadi fighters . Others quotes a poem advising parents how to raise children to be violent . Esayed, 22, could face 14 years in prison after she admitted  encouraging terrorism and disseminating terrorist publications .
 
 
 Example 2:
 
-prediction: last month's average temperature soared to 56.4°F (13.6°C) - 1.5°F (0.85°C) above the average for the 20th century . this was the highest for March in the 1880–2015 record, surpassing the previous record of 2010 by 0.09°F (0.05°C) scientists blame the heat on El Ni ⁇ o and climate change .
+prediction: a man with autism is seen drawing a world map from scratch . the map was created by a student in a new york classroom . the boy is seen kneeling on a chair and drawing the map from scratch .
 
-target: World experience average temperatures of 56.4°F (13.6°C) last month - 1.5°F above average for the 20th century . First 3 months of 2015 have set new high temperature marks, and the trend could continue throughout the year . Scientists warn fossil fuels are pushing greenhouse gas into the atmosphere, leading to increased temperatures . But El Niño, a blob of record hot water in the Northeast Pacific Ocean, could also be driving up temperatures .
+target: Image went viral after it was posted by user Bobitis on Reddit . The unnamed youth, from New York, knelt on a chair to reach whiteboard . The boy is the son of New York professor and drew map from memory .
 
 
 Example 3:
 
-prediction: police raided home of father-of-eight in colne, Lancashire, in september 2013 . they found almost 20,000 images of child abuse on a digital storage device . almost 700 of the images were of the most serious category . there were also 17,821 other indecent images with 106 movies .
+prediction: more than 140 pupils have been removed from their classes in washington . they could not prove they had the required vaccinations, which includes measles . health experts warn the country is in danger of being gripped by a measles pandemic .
 
-target: Alan Greaves owned almost 700 of the worst type of child abuse images . He also had more than 100 indecent videos stored at his Lancashire home . Greaves told detectives that he did not have any sexual interest in children . The father of eight was jailed for 21 months by Burnley Crown Court .
+target: Pupils in Spokane, Washington, were removed from classes on Monday . A total of 143 were kicked out of school because they did not have documents to prove they have had legally required vaccinations . Officials decided to act after spread of the measles virus in America . Experts have warned there is a danger of a pandemic as people who have not been vaccinated are being exposed to the rest of the population .
 
 
 Example 4:
 
-prediction: 'i wished Falkirk all the best and good luck in the final but Peter's comments', says the Hibs boss . 'i think you need to ask Peter what he said when he came into my office after we got beat 1-0 in the first game', says the manager . 'for someone who is so inexperienced, i am not soft,' says the manager .
+prediction: standard-issue police van does not have bolts sticking out from back door . spokesman says that law enforcement agencies customise their own vehicles . comes as report of internal investigation into Freddie Gray's death emerged . report said that there was 'no evidence' he sustained fatal spine injury . instead he allegedly broke neck after falling head-first in police van .
 
-target: Alan Stubbs felt Hibernian did enough to reach Scottish Cup final . Falkirk manager Peter Houston hit back at Stubbs' post-match comments . Houston's side take on Inverness Caledonian Thistle on May 30 .
+target: Medical examiner's report described how Gray may have injured neck . Theory claimed he fell forward while cuffed and hit his head on a bolt . But specifications for the Chevrolet Express van show no such bolt . Photographs of other Baltimore Police also contradict theory . Gray's spine was somehow severed while in police custody on April 12 .
 
 
 Example 5:
 
-prediction: Tiger Woods has not played on the PGA Tour since withdrawing from the Farmers Insurance Open on February 5 . the 14-time major winner has been spotted practising at augusta on Tuesday . he is said to have returned to the course for a practice session .
+prediction: Byron Meth opened with a 74 on his Masters debut . the american amateur continues to impress at augusta . he is adamant he will be able to play in the tees next week .
 
-target: Tiger Woods increased speculation regarding possible Major comeback . Woods has been spotted at Augusta National on more than once occasion . The 39-year-old has dropped out of top 100 for first time in almost 19 years .
+target: Byron Meth opened with a 74 on his Masters debut . Half of the players had a scoring average of 4.2 or higher on day one . Liverpool legend Kenny Dalglish will be present at the Masters this week .
 </pre></div>
 </div>
 </div>
@@ -1058,7 +1138,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  0.819 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  2.743 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
