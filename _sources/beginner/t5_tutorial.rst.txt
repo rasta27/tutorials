@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 16.8MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.2MB/s]
 
 
 
@@ -135,131 +135,42 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 6.41M/945M [00:00<00:14, 67.0MB/s]
-      1%|1         | 13.5M/945M [00:00<00:13, 71.0MB/s]
-      2%|2         | 20.2M/945M [00:00<00:14, 69.1MB/s]
-      3%|2         | 26.8M/945M [00:00<00:15, 61.7MB/s]
-      4%|3         | 33.8M/945M [00:00<00:14, 65.3MB/s]
-      4%|4         | 42.4M/945M [00:00<00:12, 73.2MB/s]
-      5%|5         | 50.7M/945M [00:00<00:12, 77.4MB/s]
-      6%|6         | 58.1M/945M [00:00<00:12, 76.3MB/s]
-      7%|6         | 65.5M/945M [00:00<00:12, 72.8MB/s]
-      8%|7         | 72.6M/945M [00:01<00:12, 73.5MB/s]
-      8%|8         | 79.7M/945M [00:01<00:13, 65.5MB/s]
-      9%|9         | 86.1M/945M [00:01<00:14, 64.0MB/s]
-     10%|9         | 93.1M/945M [00:01<00:13, 66.4MB/s]
-     11%|#         | 99.6M/945M [00:01<00:13, 65.4MB/s]
-     11%|#1        | 106M/945M [00:01<00:13, 65.3MB/s] 
-     12%|#1        | 113M/945M [00:01<00:13, 67.1MB/s]
-     13%|#2        | 119M/945M [00:01<00:13, 65.2MB/s]
-     13%|#3        | 125M/945M [00:01<00:13, 62.8MB/s]
-     14%|#4        | 133M/945M [00:02<00:12, 67.7MB/s]
-     15%|#4        | 141M/945M [00:02<00:11, 71.2MB/s]
-     16%|#5        | 149M/945M [00:02<00:11, 74.8MB/s]
-     17%|#6        | 156M/945M [00:02<00:10, 76.5MB/s]
-     17%|#7        | 164M/945M [00:02<00:11, 73.4MB/s]
-     18%|#8        | 171M/945M [00:02<00:13, 60.9MB/s]
-     19%|#8        | 179M/945M [00:02<00:11, 67.5MB/s]
-     20%|#9        | 187M/945M [00:02<00:11, 69.9MB/s]
-     21%|##        | 194M/945M [00:02<00:11, 66.1MB/s]
-     21%|##1       | 200M/945M [00:03<00:11, 65.7MB/s]
-     22%|##1       | 207M/945M [00:03<00:12, 62.6MB/s]
-     23%|##2       | 213M/945M [00:03<00:12, 59.1MB/s]
-     23%|##3       | 219M/945M [00:03<00:12, 61.0MB/s]
-     24%|##3       | 226M/945M [00:03<00:11, 63.9MB/s]
-     25%|##4       | 232M/945M [00:03<00:11, 63.4MB/s]
-     25%|##5       | 240M/945M [00:03<00:10, 68.7MB/s]
-     26%|##6       | 248M/945M [00:03<00:10, 71.5MB/s]
-     27%|##7       | 255M/945M [00:03<00:09, 74.9MB/s]
-     28%|##7       | 263M/945M [00:04<00:09, 77.0MB/s]
-     29%|##8       | 271M/945M [00:04<00:09, 77.1MB/s]
-     29%|##9       | 278M/945M [00:04<00:09, 71.0MB/s]
-     30%|###       | 286M/945M [00:04<00:09, 74.3MB/s]
-     31%|###1      | 293M/945M [00:04<00:09, 75.1MB/s]
-     32%|###1      | 301M/945M [00:04<00:09, 71.6MB/s]
-     33%|###2      | 308M/945M [00:04<00:08, 74.4MB/s]
-     33%|###3      | 316M/945M [00:04<00:08, 76.7MB/s]
-     34%|###4      | 324M/945M [00:04<00:08, 77.4MB/s]
-     35%|###5      | 331M/945M [00:04<00:08, 77.2MB/s]
-     36%|###5      | 339M/945M [00:05<00:08, 72.7MB/s]
-     37%|###6      | 346M/945M [00:05<00:08, 72.5MB/s]
-     37%|###7      | 353M/945M [00:05<00:08, 74.5MB/s]
-     38%|###8      | 362M/945M [00:05<00:07, 78.2MB/s]
-     39%|###9      | 370M/945M [00:05<00:07, 81.9MB/s]
-     40%|####      | 378M/945M [00:05<00:07, 81.5MB/s]
-     41%|####      | 387M/945M [00:05<00:06, 83.8MB/s]
-     42%|####1     | 395M/945M [00:05<00:07, 81.7MB/s]
-     43%|####2     | 403M/945M [00:05<00:06, 81.5MB/s]
-     43%|####3     | 410M/945M [00:06<00:06, 81.7MB/s]
-     44%|####4     | 418M/945M [00:06<00:06, 80.7MB/s]
-     45%|####5     | 426M/945M [00:06<00:06, 80.8MB/s]
-     46%|####5     | 434M/945M [00:06<00:06, 77.4MB/s]
-     47%|####6     | 441M/945M [00:06<00:06, 76.4MB/s]
-     47%|####7     | 448M/945M [00:06<00:06, 76.0MB/s]
-     48%|####8     | 456M/945M [00:06<00:06, 76.4MB/s]
-     49%|####9     | 463M/945M [00:06<00:06, 76.8MB/s]
-     50%|####9     | 471M/945M [00:06<00:06, 76.2MB/s]
-     51%|#####     | 478M/945M [00:06<00:06, 76.9MB/s]
-     51%|#####1    | 486M/945M [00:07<00:06, 79.2MB/s]
-     52%|#####2    | 494M/945M [00:07<00:05, 78.9MB/s]
-     53%|#####3    | 502M/945M [00:07<00:05, 80.4MB/s]
-     54%|#####3    | 510M/945M [00:07<00:05, 81.8MB/s]
-     55%|#####4    | 518M/945M [00:07<00:05, 82.0MB/s]
-     56%|#####5    | 526M/945M [00:07<00:05, 81.0MB/s]
-     56%|#####6    | 533M/945M [00:07<00:05, 80.0MB/s]
-     57%|#####7    | 541M/945M [00:07<00:05, 78.3MB/s]
-     58%|#####8    | 548M/945M [00:07<00:05, 77.8MB/s]
-     59%|#####8    | 556M/945M [00:07<00:05, 79.3MB/s]
-     60%|#####9    | 565M/945M [00:08<00:04, 82.2MB/s]
-     61%|######    | 573M/945M [00:08<00:04, 84.1MB/s]
-     62%|######1   | 581M/945M [00:08<00:04, 79.9MB/s]
-     62%|######2   | 589M/945M [00:08<00:04, 78.0MB/s]
-     63%|######3   | 597M/945M [00:08<00:04, 75.6MB/s]
-     64%|######3   | 604M/945M [00:08<00:04, 77.4MB/s]
-     65%|######4   | 612M/945M [00:08<00:04, 78.2MB/s]
-     66%|######5   | 620M/945M [00:08<00:04, 78.1MB/s]
-     66%|######6   | 627M/945M [00:08<00:04, 75.3MB/s]
-     67%|######7   | 635M/945M [00:09<00:04, 76.6MB/s]
-     68%|######7   | 642M/945M [00:09<00:04, 73.9MB/s]
-     69%|######8   | 649M/945M [00:09<00:04, 73.1MB/s]
-     70%|######9   | 657M/945M [00:09<00:04, 73.3MB/s]
-     70%|#######   | 666M/945M [00:09<00:03, 78.8MB/s]
-     71%|#######1  | 674M/945M [00:09<00:03, 80.8MB/s]
-     72%|#######2  | 682M/945M [00:09<00:03, 80.9MB/s]
-     73%|#######2  | 689M/945M [00:09<00:03, 79.5MB/s]
-     74%|#######3  | 697M/945M [00:09<00:03, 79.8MB/s]
-     75%|#######4  | 705M/945M [00:09<00:03, 80.2MB/s]
-     75%|#######5  | 712M/945M [00:10<00:03, 80.5MB/s]
-     76%|#######6  | 720M/945M [00:10<00:02, 81.2MB/s]
-     77%|#######7  | 728M/945M [00:10<00:02, 80.9MB/s]
-     78%|#######7  | 736M/945M [00:10<00:02, 78.4MB/s]
-     79%|#######8  | 743M/945M [00:10<00:02, 74.9MB/s]
-     80%|#######9  | 751M/945M [00:10<00:02, 76.3MB/s]
-     80%|########  | 759M/945M [00:10<00:02, 78.7MB/s]
-     81%|########1 | 767M/945M [00:10<00:02, 78.3MB/s]
-     82%|########2 | 775M/945M [00:10<00:02, 80.8MB/s]
-     83%|########2 | 783M/945M [00:10<00:02, 82.5MB/s]
-     84%|########3 | 791M/945M [00:11<00:02, 78.4MB/s]
-     85%|########4 | 799M/945M [00:11<00:01, 81.0MB/s]
-     85%|########5 | 807M/945M [00:11<00:01, 80.2MB/s]
-     86%|########6 | 815M/945M [00:11<00:01, 74.6MB/s]
-     87%|########7 | 823M/945M [00:11<00:01, 76.0MB/s]
-     88%|########7 | 831M/945M [00:11<00:01, 78.4MB/s]
-     89%|########8 | 838M/945M [00:11<00:01, 77.8MB/s]
-     90%|########9 | 846M/945M [00:11<00:01, 74.6MB/s]
-     90%|######### | 853M/945M [00:11<00:01, 75.1MB/s]
-     91%|#########1| 861M/945M [00:12<00:01, 76.7MB/s]
-     92%|#########1| 868M/945M [00:12<00:01, 73.8MB/s]
-     93%|#########2| 876M/945M [00:12<00:00, 76.7MB/s]
-     94%|#########3| 885M/945M [00:12<00:00, 80.3MB/s]
-     94%|#########4| 893M/945M [00:12<00:00, 81.5MB/s]
-     95%|#########5| 901M/945M [00:12<00:00, 83.7MB/s]
-     96%|#########6| 909M/945M [00:12<00:00, 79.9MB/s]
-     97%|#########7| 917M/945M [00:12<00:00, 80.1MB/s]
-     98%|#########7| 924M/945M [00:13<00:00, 52.3MB/s]
-     99%|#########8| 933M/945M [00:13<00:00, 59.8MB/s]
-     99%|#########9| 940M/945M [00:13<00:00, 61.7MB/s]
-    100%|##########| 945M/945M [00:13<00:00, 74.3MB/s]
+      1%|          | 7.48M/945M [00:00<00:12, 78.4MB/s]
+      3%|2         | 26.2M/945M [00:00<00:06, 148MB/s] 
+      6%|5         | 53.2M/945M [00:00<00:04, 209MB/s]
+      9%|8         | 80.6M/945M [00:00<00:03, 240MB/s]
+     11%|#1        | 108M/945M [00:00<00:03, 258MB/s] 
+     14%|#4        | 136M/945M [00:00<00:03, 270MB/s]
+     17%|#7        | 164M/945M [00:00<00:02, 276MB/s]
+     20%|##        | 191M/945M [00:00<00:02, 280MB/s]
+     23%|##3       | 219M/945M [00:00<00:02, 284MB/s]
+     26%|##6       | 247M/945M [00:01<00:02, 286MB/s]
+     29%|##9       | 274M/945M [00:01<00:02, 287MB/s]
+     32%|###1      | 302M/945M [00:01<00:02, 288MB/s]
+     35%|###4      | 330M/945M [00:01<00:02, 289MB/s]
+     38%|###7      | 357M/945M [00:01<00:02, 288MB/s]
+     41%|####      | 385M/945M [00:01<00:02, 289MB/s]
+     44%|####3     | 413M/945M [00:01<00:01, 289MB/s]
+     47%|####6     | 440M/945M [00:01<00:01, 289MB/s]
+     50%|####9     | 468M/945M [00:01<00:01, 289MB/s]
+     52%|#####2    | 495M/945M [00:01<00:01, 287MB/s]
+     55%|#####5    | 523M/945M [00:02<00:01, 287MB/s]
+     58%|#####8    | 550M/945M [00:02<00:01, 287MB/s]
+     61%|######1   | 578M/945M [00:02<00:01, 286MB/s]
+     64%|######4   | 605M/945M [00:02<00:01, 287MB/s]
+     67%|######6   | 633M/945M [00:02<00:01, 285MB/s]
+     70%|######9   | 660M/945M [00:02<00:01, 286MB/s]
+     73%|#######2  | 687M/945M [00:02<00:00, 286MB/s]
+     76%|#######5  | 715M/945M [00:02<00:00, 287MB/s]
+     79%|#######8  | 742M/945M [00:02<00:00, 287MB/s]
+     81%|########1 | 770M/945M [00:02<00:00, 288MB/s]
+     84%|########4 | 797M/945M [00:03<00:00, 284MB/s]
+     87%|########7 | 825M/945M [00:03<00:00, 285MB/s]
+     90%|######### | 852M/945M [00:03<00:00, 287MB/s]
+     93%|#########3| 880M/945M [00:03<00:00, 287MB/s]
+     96%|#########6| 908M/945M [00:03<00:00, 288MB/s]
+     99%|#########8| 935M/945M [00:03<00:00, 287MB/s]
+    100%|##########| 945M/945M [00:03<00:00, 279MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -555,37 +466,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: alaa Abdullah Esayed posted 45,600 tweets in less than a year . some included pictures of dead bodies and encouraging children to fight . 22-year-old pleaded guilty to encouraging terrorism and disseminating terrorist publications .
+    prediction: a video of a reporter berating a towing company employee surfaced on tuesday . "i'm in the news, sweetheart. I will (expletive) sue this place," she says .
 
-    target: Alaa Abdullah Esayed posted 45,600 tweets supporting ISIS to followers . Some posts included pictures of the dead bodies of jihadi fighters . Others quotes a poem advising parents how to raise children to be violent . Esayed, 22, could face 14 years in prison after she admitted  encouraging terrorism and disseminating terrorist publications .
+    target: #firebrittmchenry has become a popular hashtag on Twitter . Britt McHenry is a reporter for the sports network, and she is based in Washington . She apologized on Twitter for losing control of her emotions, not taking the high road .
 
 
     Example 2:
 
-    prediction: a man with autism is seen drawing a world map from scratch . the map was created by a student in a new york classroom . the boy is seen kneeling on a chair and drawing the map from scratch .
+    prediction: author of the bestselling Adrian Mole books died last year aged 68 . she left the bulk of her estate in trust with her second husband and four children named as beneficiaries .
 
-    target: Image went viral after it was posted by user Bobitis on Reddit . The unnamed youth, from New York, knelt on a chair to reach whiteboard . The boy is the son of New York professor and drew map from memory .
+    target: Novelist, who died last year, had huge success with Adrian Mole books . The eight-book series sold more than eight million copies worldwide . She left the bulk of her estate to her second husband Colin Broadway .
 
 
     Example 3:
 
-    prediction: more than 140 pupils have been removed from their classes in washington . they could not prove they had the required vaccinations, which includes measles . health experts warn the country is in danger of being gripped by a measles pandemic .
+    prediction: british driver claims he is selfish by compromising his race position . but he says he is well within his rights to look after himself . he won his fourth race of the season and his second in china .
 
-    target: Pupils in Spokane, Washington, were removed from classes on Monday . A total of 143 were kicked out of school because they did not have documents to prove they have had legally required vaccinations . Officials decided to act after spread of the measles virus in America . Experts have warned there is a danger of a pandemic as people who have not been vaccinated are being exposed to the rest of the population .
+    target: Lewis Hamilton won the Chinese GP with Nico Rosberg finishing second . Rosberg accused his team-mate of being selfish by driving too slow . Mika Hakkinen says Hamilton was right to worry about his own race . READ: Hamilton insists Rosberg was not trying to win in Shanghai . READ: Hamilton ready for Rosberg's underhand tactics .
 
 
     Example 4:
 
-    prediction: standard-issue police van does not have bolts sticking out from back door . spokesman says that law enforcement agencies customise their own vehicles . comes as report of internal investigation into Freddie Gray's death emerged . report said that there was 'no evidence' he sustained fatal spine injury . instead he allegedly broke neck after falling head-first in police van .
+    prediction: Virgil van Dijk scored in the 3-2 defeat to inverness on sunday . the hoops boss had targeted the treble in his first season . but the defeat ended in a controversial manner .
 
-    target: Medical examiner's report described how Gray may have injured neck . Theory claimed he fell forward while cuffed and hit his head on a bolt . But specifications for the Chevrolet Express van show no such bolt . Photographs of other Baltimore Police also contradict theory . Gray's spine was somehow severed while in police custody on April 12 .
+    target: Celtic missed out on the chance to secure a domestic treble after crashing out of the Scottish Cup semi-final 3-2 to Inverness on Sunday . The Hoops were controversially denied a penalty after a blatant handball by Inverness' Josh Meekings in the area . Still, with the League Cup already won in March, Celtic have the opportunity to win two trophies if they can clinch the SPL title . Defender Virgil van Dijk wants to wrap up the league as soon as possible .
 
 
     Example 5:
 
-    prediction: Byron Meth opened with a 74 on his Masters debut . the american amateur continues to impress at augusta . he is adamant he will be able to play in the tees next week .
+    prediction: photographer John Chapple has captured all types of landscapes, including grassy fields in England and major US cities . he uses a Linhof Technorama 617s III film camera .
 
-    target: Byron Meth opened with a 74 on his Masters debut . Half of the players had a scoring average of 4.2 or higher on day one . Liverpool legend Kenny Dalglish will be present at the Masters this week .
+    target: English photographer John Chapple has traveled all over the world - and along the way created stunning panoramic images using a film camera . Chapple, originally from North Devon, first worked as a news and show business photographer before he got into landscape photography . He has captured grassy fields in England, major US cities, and sandy beaches in Australia . Chapple often takes landscapes with a Linhof Technorama 617s III camera .
 
 
 
@@ -939,7 +850,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  2.743 seconds)
+   **Total running time of the script:** ( 3 minutes  18.440 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

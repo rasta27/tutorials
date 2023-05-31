@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['ils le font comme il faut .', 'they re doing it right .']
+    ['elles sont encore des enfants .', 'they are still children .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 22s (- 19m 20s) (5000 6%) 2.8861
-    2m 40s (- 17m 21s) (10000 13%) 2.2721
-    3m 57s (- 15m 50s) (15000 20%) 1.9866
-    5m 15s (- 14m 27s) (20000 26%) 1.7469
-    6m 33s (- 13m 6s) (25000 33%) 1.5138
-    7m 50s (- 11m 46s) (30000 40%) 1.3223
-    9m 7s (- 10m 26s) (35000 46%) 1.1956
-    10m 26s (- 9m 8s) (40000 53%) 1.0822
-    11m 48s (- 7m 52s) (45000 60%) 0.9824
-    13m 10s (- 6m 35s) (50000 66%) 0.8876
-    14m 29s (- 5m 16s) (55000 73%) 0.7687
-    15m 47s (- 3m 56s) (60000 80%) 0.7017
-    17m 4s (- 2m 37s) (65000 86%) 0.6259
-    18m 19s (- 1m 18s) (70000 93%) 0.5827
-    19m 36s (- 0m 0s) (75000 100%) 0.5257
+    1m 24s (- 19m 45s) (5000 6%) 2.8301
+    2m 41s (- 17m 29s) (10000 13%) 2.2662
+    3m 57s (- 15m 50s) (15000 20%) 1.9699
+    5m 13s (- 14m 22s) (20000 26%) 1.7102
+    6m 29s (- 12m 58s) (25000 33%) 1.5053
+    7m 44s (- 11m 37s) (30000 40%) 1.3267
+    9m 0s (- 10m 17s) (35000 46%) 1.2069
+    10m 16s (- 8m 59s) (40000 53%) 1.0673
+    11m 32s (- 7m 41s) (45000 60%) 0.9857
+    12m 48s (- 6m 24s) (50000 66%) 0.8786
+    14m 4s (- 5m 7s) (55000 73%) 0.8012
+    15m 20s (- 3m 50s) (60000 80%) 0.7386
+    16m 39s (- 2m 33s) (65000 86%) 0.6669
+    17m 57s (- 1m 16s) (70000 93%) 0.6046
+    19m 17s (- 0m 0s) (75000 100%) 0.5538
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > nous sommes dans une bibliotheque .
-    = we are in a library .
-    < we re in a library . <EOS>
+    > je suis tellement content que tu sois la .
+    = i m so happy that you re here .
+    < i m so glad you re here . <EOS>
 
-    > vous etes maintenant en voie de retablissement .
-    = you are now on the way to recovery .
-    < you are on the way to go . <EOS>
+    > vous etes odieux .
+    = you re obnoxious .
+    < you re obnoxious . <EOS>
 
-    > vous etes fort ingenieux .
-    = you re very clever .
-    < you re very clever . <EOS>
+    > nous en avons fini .
+    = we re through .
+    < we re through . <EOS>
 
-    > elles ont toutes disparu .
-    = they re all gone .
-    < they re all gone . <EOS>
+    > elles jalousent notre succes .
+    = they are jealous of our success .
+    < they are jealous of our success . <EOS>
 
-    > je viens de croatie .
-    = i m from croatia .
-    < i m from croatia . <EOS>
+    > tu es chanceux .
+    = you re fortunate .
+    < you re fortunate . <EOS>
 
-    > vous n etes pas contrarie si ?
-    = you re not upset are you ?
-    < you re not upset are you ? <EOS>
+    > nous sommes desormais pour ainsi dire morts .
+    = we re as good as dead now .
+    < we re as good as dead now . <EOS>
 
-    > je suis content de vous revoir .
-    = i m happy to see you again .
-    < i m glad to see you again . <EOS>
+    > je cherche un correspondant francais .
+    = i m looking for a french penpal .
+    < i m looking for a french . <EOS>
 
-    > il a la grippe .
-    = he s got the flu .
-    < he s taking a shower . <EOS>
+    > je commence a apercevoir un motif .
+    = i m beginning to see a pattern .
+    < i m beginning to a a pattern . <EOS>
 
-    > je suis heureux de vous avoir engages .
-    = i m glad i hired you .
-    < i m happy i hired you . <EOS>
+    > je suis fier de moi .
+    = i m proud of myself .
+    < i m proud of myself . <EOS>
 
-    > je n en suis simplement pas sur .
-    = i m just not sure .
-    < i m just not sure . <EOS>
+    > je pars en voyage .
+    = i m going on a trip .
+    < i m leaving on a trip . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7fc2f108e5c0>
+    <matplotlib.image.AxesImage object at 0x7f86d9c1ecb0>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = they re too short . <EOS>
+    output = she is too short . <EOS>
     input = je ne crains pas de mourir .
     output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young s . <EOS>
+    output = he s a talented young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  49.862 seconds)
+   **Total running time of the script:** ( 19 minutes  31.923 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
