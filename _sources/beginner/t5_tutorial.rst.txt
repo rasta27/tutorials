@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 18.1MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 16.9MB/s]
 
 
 
@@ -135,47 +135,51 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 2.02M/945M [00:00<00:46, 21.0MB/s]
-      1%|          | 5.81M/945M [00:00<00:30, 31.9MB/s]
-      1%|1         | 11.7M/945M [00:00<00:21, 45.4MB/s]
-      2%|2         | 21.2M/945M [00:00<00:14, 66.6MB/s]
-      4%|3         | 36.3M/945M [00:00<00:09, 99.6MB/s]
-      6%|6         | 59.2M/945M [00:00<00:06, 147MB/s] 
-      9%|8         | 84.6M/945M [00:00<00:04, 186MB/s]
-     12%|#1        | 110M/945M [00:00<00:04, 212MB/s] 
-     14%|#4        | 136M/945M [00:00<00:03, 231MB/s]
-     17%|#7        | 164M/945M [00:01<00:03, 249MB/s]
-     20%|##        | 191M/945M [00:01<00:03, 262MB/s]
-     23%|##3       | 219M/945M [00:01<00:02, 270MB/s]
-     26%|##5       | 245M/945M [00:01<00:02, 269MB/s]
-     29%|##8       | 272M/945M [00:01<00:02, 274MB/s]
-     32%|###1      | 300M/945M [00:01<00:02, 279MB/s]
-     35%|###4      | 328M/945M [00:01<00:02, 283MB/s]
-     38%|###7      | 355M/945M [00:01<00:02, 284MB/s]
-     41%|####      | 383M/945M [00:01<00:02, 286MB/s]
-     43%|####3     | 411M/945M [00:01<00:01, 288MB/s]
-     46%|####6     | 438M/945M [00:02<00:01, 288MB/s]
-     49%|####9     | 466M/945M [00:02<00:01, 288MB/s]
-     52%|#####2    | 493M/945M [00:02<00:01, 286MB/s]
-     55%|#####5    | 521M/945M [00:02<00:01, 275MB/s]
-     58%|#####7    | 547M/945M [00:02<00:01, 271MB/s]
-     61%|######    | 573M/945M [00:02<00:01, 266MB/s]
-     63%|######3   | 598M/945M [00:02<00:01, 263MB/s]
-     66%|######6   | 623M/945M [00:02<00:01, 263MB/s]
-     69%|######8   | 649M/945M [00:02<00:01, 261MB/s]
-     71%|#######1  | 674M/945M [00:02<00:01, 260MB/s]
-     74%|#######3  | 698M/945M [00:03<00:01, 256MB/s]
-     77%|#######6  | 723M/945M [00:03<00:00, 255MB/s]
-     79%|#######9  | 748M/945M [00:03<00:00, 256MB/s]
-     82%|########1 | 772M/945M [00:03<00:00, 257MB/s]
-     84%|########4 | 797M/945M [00:03<00:00, 257MB/s]
-     87%|########6 | 821M/945M [00:03<00:00, 255MB/s]
-     90%|########9 | 846M/945M [00:03<00:00, 255MB/s]
-     92%|#########2| 870M/945M [00:03<00:00, 254MB/s]
-     95%|#########4| 894M/945M [00:03<00:00, 255MB/s]
-     97%|#########7| 919M/945M [00:03<00:00, 255MB/s]
-    100%|#########9| 943M/945M [00:04<00:00, 253MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 244MB/s]
+      0%|          | 696k/945M [00:00<02:20, 7.03MB/s]
+      0%|          | 1.80M/945M [00:00<01:41, 9.74MB/s]
+      0%|          | 3.51M/945M [00:00<01:13, 13.4MB/s]
+      1%|          | 6.23M/945M [00:00<00:50, 19.3MB/s]
+      1%|1         | 10.5M/945M [00:00<00:34, 28.3MB/s]
+      2%|1         | 17.1M/945M [00:00<00:22, 42.3MB/s]
+      3%|2         | 27.9M/945M [00:00<00:14, 65.1MB/s]
+      5%|4         | 44.4M/945M [00:00<00:09, 99.3MB/s]
+      7%|7         | 69.8M/945M [00:00<00:06, 151MB/s] 
+     10%|#         | 94.5M/945M [00:01<00:04, 184MB/s]
+     13%|#2        | 118M/945M [00:01<00:04, 205MB/s] 
+     15%|#5        | 143M/945M [00:01<00:03, 221MB/s]
+     18%|#7        | 168M/945M [00:01<00:03, 233MB/s]
+     20%|##        | 192M/945M [00:01<00:03, 239MB/s]
+     23%|##2       | 217M/945M [00:01<00:03, 245MB/s]
+     26%|##5       | 242M/945M [00:01<00:02, 250MB/s]
+     28%|##8       | 266M/945M [00:01<00:02, 253MB/s]
+     31%|###       | 291M/945M [00:01<00:02, 254MB/s]
+     33%|###3      | 316M/945M [00:01<00:02, 257MB/s]
+     36%|###6      | 341M/945M [00:02<00:02, 258MB/s]
+     39%|###8      | 365M/945M [00:02<00:02, 258MB/s]
+     41%|####1     | 390M/945M [00:02<00:02, 259MB/s]
+     44%|####3     | 415M/945M [00:02<00:02, 255MB/s]
+     47%|####6     | 439M/945M [00:02<00:02, 251MB/s]
+     49%|####9     | 464M/945M [00:02<00:01, 253MB/s]
+     52%|#####1    | 488M/945M [00:02<00:01, 253MB/s]
+     54%|#####4    | 512M/945M [00:02<00:01, 251MB/s]
+     57%|#####6    | 536M/945M [00:02<00:01, 251MB/s]
+     59%|#####9    | 561M/945M [00:02<00:01, 252MB/s]
+     62%|######1   | 585M/945M [00:03<00:01, 251MB/s]
+     65%|######4   | 610M/945M [00:03<00:01, 254MB/s]
+     67%|######7   | 634M/945M [00:03<00:01, 255MB/s]
+     70%|######9   | 658M/945M [00:03<00:01, 249MB/s]
+     72%|#######2  | 682M/945M [00:03<00:01, 249MB/s]
+     75%|#######4  | 707M/945M [00:03<00:00, 253MB/s]
+     78%|#######7  | 732M/945M [00:03<00:00, 255MB/s]
+     80%|########  | 756M/945M [00:03<00:00, 254MB/s]
+     83%|########2 | 781M/945M [00:03<00:00, 253MB/s]
+     85%|########5 | 805M/945M [00:03<00:00, 252MB/s]
+     88%|########7 | 829M/945M [00:04<00:00, 252MB/s]
+     90%|######### | 853M/945M [00:04<00:00, 251MB/s]
+     93%|#########2| 877M/945M [00:04<00:00, 252MB/s]
+     96%|#########5| 902M/945M [00:04<00:00, 254MB/s]
+     98%|#########8| 926M/945M [00:04<00:00, 255MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 220MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -471,37 +475,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: rebel fighter Ahmed Shaheed, 28, bought a tiger cub while fighting in Syria . the extravagant purchase will remain with its mother until it is old enough to become Shaheed's pet . the rebel only confirmed that he bought the cub from a small village, near the Syrian city of Aleppo .
+    prediction: support for the Greens has dropped sharply to only 15 per cent . the proportion of students who disliked her has doubled since September . but the proportion of students who disliked her has doubled to 24 per cent .
 
-    target: The photo shows a beautiful young tiger cub in the hands of a rebel fighter, known as Ahmed Shaheed . Shaheed is believed to be a former Bond university student from Sydney . The 27-year-old considered buying an little owl and a leopard from a zoo near Aleppo, Syria .
+    target: Support for Greens on campuses falls from 28% to 15% in two months . Dramatic slump means the Tories as well as Labour are now more popular . Since September, percentage who dislike Natalie Bennett doubled to 24% .
 
 
     Example 2:
 
-    prediction: Hadas had 'the cut' when she was just a few months old . she says she doesn't blame her mother for taking her to have the procedure . 'in my culture, it is believed that when the vagina is cut, the desire to have sex is cut as well,' she says .
+    prediction: last month's average temperature soared to 56.4°F (13.6°C) - 1.5°F (0.85°C) above the average for the 20th century . this was the highest for March in the 1880–2015 record, surpassing the previous record of 2010 by 0.09°F (0.05°C) scientists blame the heat on El Ni ⁇ o and climate change .
 
-    target: Hadas had the barbaric practice in Eritrea, Africa, where FGM is common . Her mother believed putting her through the ordeal as a baby was best . In her village 'uncut' women will be sluts and even grow up to be clumsy . Woman, who wants to remain anonymous, was sex trafficked to the UK .
+    target: World experience average temperatures of 56.4°F (13.6°C) last month - 1.5°F above average for the 20th century . First 3 months of 2015 have set new high temperature marks, and the trend could continue throughout the year . Scientists warn fossil fuels are pushing greenhouse gas into the atmosphere, leading to increased temperatures . But El Niño, a blob of record hot water in the Northeast Pacific Ocean, could also be driving up temperatures .
 
 
     Example 3:
 
-    prediction: former England star Kevin Pietersen was dismissed for 19 on his return to the LV= County Championship . the 34-year-old was hoping to make an England return after his 170 against the students last week . pietersen had been in good form before edging behind off the bowling of Craig Meschede .
+    prediction: police raided home of father-of-eight in colne, Lancashire, in september 2013 . they found almost 20,000 images of child abuse on a digital storage device . almost 700 of the images were of the most serious category . there were also 17,821 other indecent images with 106 movies .
 
-    target: Kevin Pietersen playing his first County Championship game for two years . Pietersen was caught at slip off the bowling off Craig Meschede for 19 . Kumar Sangakkara scored a debut century for Surrey after KP was out . Surrey reach 363 for three at stumps on day one against Glamorgan .
+    target: Alan Greaves owned almost 700 of the worst type of child abuse images . He also had more than 100 indecent videos stored at his Lancashire home . Greaves told detectives that he did not have any sexual interest in children . The father of eight was jailed for 21 months by Burnley Crown Court .
 
 
     Example 4:
 
-    prediction: park crescent designed by architect of Buckingham palace could be demolished and rebuilt as apartments . developer has submitted fresh plans to demolish crescent and rebuild it as luxury flats . residents behind the site are furious at the proposals, claiming years of noise and disruption will ruin their lives .
+    prediction: 'i wished Falkirk all the best and good luck in the final but Peter's comments', says the Hibs boss . 'i think you need to ask Peter what he said when he came into my office after we got beat 1-0 in the first game', says the manager . 'for someone who is so inexperienced, i am not soft,' says the manager .
 
-    target: Developer's plans to build 73 luxury flats has angered residents who live nearby Park Crescent West in London . They claim that noise and disruption caused by the building work could last five years and will ruin their lives . The crescent was originally designed by John Nash, who also created Buckingham Palace, in the early 19th century . Plans to remove the crescent's facade and replace it with something more historically correct and accurate .
+    target: Alan Stubbs felt Hibernian did enough to reach Scottish Cup final . Falkirk manager Peter Houston hit back at Stubbs' post-match comments . Houston's side take on Inverness Caledonian Thistle on May 30 .
 
 
     Example 5:
 
-    prediction: Amol Gupta, from Manhattan, is suing ZogSports kickball league claiming he ran into a brick wall during a match two years ago . he claims he broke his nose and elbow, and also injured his spine . kickball is a popular schoolyard game similar to baseball where players kick the ball to bat instead of using bats .
+    prediction: Tiger Woods has not played on the PGA Tour since withdrawing from the Farmers Insurance Open on February 5 . the 14-time major winner has been spotted practising at augusta on Tuesday . he is said to have returned to the course for a practice session .
 
-    target: Amol Gupta was playing in a match on Roosevelt Island in April 2013 when he injured himself . Gupta suffered a broke nose and elbow, and damaged his spine when he slammed into retaining wall . Kickball game was organized by ZogSports league .
+    target: Tiger Woods increased speculation regarding possible Major comeback . Woods has been spotted at Augusta National on more than once occasion . The 39-year-old has dropped out of top 100 for first time in almost 19 years .
 
 
 
@@ -855,7 +859,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  46.099 seconds)
+   **Total running time of the script:** ( 4 minutes  0.819 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

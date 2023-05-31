@@ -174,52 +174,52 @@ Let’s start by adding sample images from our dataset to TensorBoard:
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/26421880 [00:00<?, ?it/s]
-      0%|          | 32768/26421880 [00:00<01:28, 297232.78it/s]
-      0%|          | 65536/26421880 [00:00<01:29, 295884.11it/s]
-      0%|          | 131072/26421880 [00:00<01:01, 430208.06it/s]
-      1%|          | 229376/26421880 [00:00<00:42, 609580.95it/s]
-      2%|1         | 491520/26421880 [00:00<00:20, 1239533.57it/s]
-      4%|3         | 950272/26421880 [00:00<00:11, 2221249.11it/s]
-      7%|7         | 1933312/26421880 [00:00<00:05, 4377531.95it/s]
-     15%|#4        | 3833856/26421880 [00:00<00:02, 8443363.57it/s]
-     26%|##6       | 6979584/26421880 [00:01<00:01, 14616416.30it/s]
-     38%|###8      | 10059776/26421880 [00:01<00:00, 18655810.28it/s]
-     50%|####9     | 13172736/26421880 [00:01<00:00, 21574434.69it/s]
-     62%|######1   | 16285696/26421880 [00:01<00:00, 23461426.24it/s]
-     73%|#######3  | 19365888/26421880 [00:01<00:00, 24836650.78it/s]
-     85%|########5 | 22478848/26421880 [00:01<00:00, 25805460.08it/s]
-     97%|#########6| 25559040/26421880 [00:01<00:00, 26382507.88it/s]
-    100%|##########| 26421880/26421880 [00:01<00:00, 15786220.20it/s]
+      0%|          | 32768/26421880 [00:00<01:28, 299165.35it/s]
+      0%|          | 65536/26421880 [00:00<01:28, 298056.69it/s]
+      0%|          | 131072/26421880 [00:00<01:00, 433552.36it/s]
+      1%|          | 229376/26421880 [00:00<00:42, 615027.09it/s]
+      2%|1         | 491520/26421880 [00:00<00:20, 1250688.86it/s]
+      4%|3         | 950272/26421880 [00:00<00:11, 2242487.03it/s]
+      7%|7         | 1933312/26421880 [00:00<00:05, 4361659.37it/s]
+     15%|#4        | 3833856/26421880 [00:00<00:02, 8540058.77it/s]
+     26%|##6       | 6881280/26421880 [00:00<00:01, 14527446.34it/s]
+     34%|###4      | 9076736/26421880 [00:01<00:01, 16171823.88it/s]
+     44%|####4     | 11730944/26421880 [00:01<00:00, 18592114.63it/s]
+     56%|#####6    | 14811136/26421880 [00:01<00:00, 21424103.07it/s]
+     68%|######7   | 17924096/26421880 [00:01<00:00, 23487204.51it/s]
+     80%|#######9  | 21037056/26421880 [00:01<00:00, 24920648.90it/s]
+     91%|#########1| 24117248/26421880 [00:01<00:00, 25830431.35it/s]
+    100%|##########| 26421880/26421880 [00:01<00:00, 15832833.70it/s]
     Extracting ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/29515 [00:00<?, ?it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 272662.14it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 271218.90it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 269595.79it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 268029.13it/s]
     Extracting ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/4422102 [00:00<?, ?it/s]
-      1%|          | 32768/4422102 [00:00<00:14, 300400.54it/s]
-      1%|1         | 65536/4422102 [00:00<00:14, 298940.78it/s]
-      3%|2         | 131072/4422102 [00:00<00:09, 434441.13it/s]
-      5%|5         | 229376/4422102 [00:00<00:06, 615861.91it/s]
-     11%|#1        | 491520/4422102 [00:00<00:03, 1252389.71it/s]
-     21%|##1       | 950272/4422102 [00:00<00:01, 2243645.56it/s]
-     44%|####3     | 1933312/4422102 [00:00<00:00, 4427929.80it/s]
-     87%|########6 | 3833856/4422102 [00:00<00:00, 8520812.53it/s]
-    100%|##########| 4422102/4422102 [00:00<00:00, 5012871.64it/s]
+      1%|          | 32768/4422102 [00:00<00:14, 303243.95it/s]
+      1%|1         | 65536/4422102 [00:00<00:14, 301921.44it/s]
+      3%|2         | 131072/4422102 [00:00<00:09, 439036.13it/s]
+      5%|5         | 229376/4422102 [00:00<00:06, 622183.00it/s]
+     11%|#1        | 491520/4422102 [00:00<00:03, 1265070.00it/s]
+     21%|##1       | 950272/4422102 [00:00<00:01, 2267429.30it/s]
+     44%|####3     | 1933312/4422102 [00:00<00:00, 4470417.59it/s]
+     87%|########6 | 3833856/4422102 [00:00<00:00, 8615741.20it/s]
+    100%|##########| 4422102/4422102 [00:00<00:00, 5064582.35it/s]
     Extracting ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/5148 [00:00<?, ?it/s]
-    100%|##########| 5148/5148 [00:00<00:00, 24398053.10it/s]
+    100%|##########| 5148/5148 [00:00<00:00, 22538911.27it/s]
     Extracting ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
 
@@ -509,7 +509,7 @@ For more information, have a look at:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  31.384 seconds)
+   **Total running time of the script:** ( 2 minutes  28.353 seconds)
 
 
 .. _sphx_glr_download_beginner_introyt_tensorboardyt_tutorial.py:

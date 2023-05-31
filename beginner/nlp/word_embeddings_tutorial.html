@@ -547,7 +547,7 @@ indices are integers, not floats).</p>
 <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;torch._C.Generator object at 0x7f7b8db40030&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;torch._C.Generator object at 0x7f98f72e0030&gt;
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_ix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"hello"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"world"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
@@ -663,9 +663,9 @@ examples and update the parameters with backpropagation.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(['forty', 'When'], 'winters'), (['winters', 'forty'], 'shall'), (['shall', 'winters'], 'besiege')]
-[517.1853959560394, 514.5754692554474, 511.98355984687805, 509.4087128639221, 506.8505175113678, 504.3068437576294, 501.77853560447693, 499.26504945755005, 496.76379561424255, 494.27535343170166]
-tensor([-1.2936, -0.1279,  1.0648, -2.3515,  1.1673,  0.1692,  0.5290,  2.8897,
-         0.1596, -0.3636], grad_fn=&lt;SelectBackward0&gt;)
+[523.0568337440491, 520.3832406997681, 517.7310557365417, 515.0972051620483, 512.4810609817505, 509.88174748420715, 507.2992527484894, 504.73268842697144, 502.17993927001953, 499.6409432888031]
+tensor([ 0.1585,  1.2538,  1.3287, -0.4957, -1.9808,  1.7989,  0.1003,  0.3397,
+        -0.6429, -0.2864], grad_fn=&lt;SelectBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -742,10 +742,10 @@ reshape.</p></li>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(['are', 'We', 'to', 'study'], 'about'), (['about', 'are', 'study', 'the'], 'to'), (['to', 'about', 'the', 'idea'], 'study'), (['study', 'to', 'idea', 'of'], 'the'), (['the', 'study', 'of', 'a'], 'idea')]
 
-tensor([ 6, 36, 18, 11])
+tensor([48, 38, 21,  5])
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.649 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.657 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-nlp-word-embeddings-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/58bdf45884d385ba7031225104b471d3/word_embeddings_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">word_embeddings_tutorial.py</span></code></a></p>
