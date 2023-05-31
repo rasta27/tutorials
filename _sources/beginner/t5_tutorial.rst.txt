@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 14.0MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.1MB/s]
 
 
 
@@ -135,45 +135,47 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.70M/945M [00:00<00:12, 80.8MB/s]
-      2%|2         | 20.5M/945M [00:00<00:08, 112MB/s] 
-      4%|4         | 40.0M/945M [00:00<00:06, 154MB/s]
-      7%|6         | 63.6M/945M [00:00<00:04, 191MB/s]
-      9%|8         | 82.8M/945M [00:00<00:04, 194MB/s]
-     11%|#1        | 107M/945M [00:00<00:04, 216MB/s] 
-     14%|#4        | 133M/945M [00:00<00:03, 234MB/s]
-     17%|#6        | 160M/945M [00:00<00:03, 250MB/s]
-     20%|#9        | 187M/945M [00:00<00:03, 258MB/s]
-     23%|##2       | 214M/945M [00:01<00:02, 267MB/s]
-     26%|##5       | 241M/945M [00:01<00:02, 271MB/s]
-     28%|##8       | 267M/945M [00:01<00:02, 244MB/s]
-     31%|###1      | 294M/945M [00:01<00:02, 255MB/s]
-     34%|###4      | 321M/945M [00:01<00:02, 264MB/s]
-     37%|###6      | 349M/945M [00:01<00:02, 270MB/s]
-     40%|###9      | 376M/945M [00:01<00:02, 274MB/s]
-     43%|####2     | 402M/945M [00:01<00:02, 276MB/s]
-     45%|####5     | 429M/945M [00:01<00:01, 278MB/s]
-     48%|####8     | 457M/945M [00:01<00:01, 280MB/s]
-     51%|#####1    | 484M/945M [00:02<00:01, 282MB/s]
-     54%|#####4    | 511M/945M [00:02<00:01, 282MB/s]
-     57%|#####6    | 538M/945M [00:02<00:01, 259MB/s]
-     60%|#####9    | 563M/945M [00:02<00:01, 259MB/s]
-     62%|######2   | 588M/945M [00:02<00:01, 257MB/s]
-     65%|######4   | 612M/945M [00:02<00:01, 253MB/s]
-     67%|######7   | 637M/945M [00:02<00:01, 253MB/s]
-     70%|#######   | 664M/945M [00:02<00:01, 261MB/s]
-     73%|#######3  | 691M/945M [00:02<00:00, 268MB/s]
-     76%|#######6  | 718M/945M [00:02<00:00, 273MB/s]
-     79%|#######8  | 745M/945M [00:03<00:00, 275MB/s]
-     82%|########1 | 772M/945M [00:03<00:00, 278MB/s]
-     85%|########4 | 798M/945M [00:03<00:00, 189MB/s]
-     87%|########6 | 820M/945M [00:03<00:01, 113MB/s]
-     89%|########8 | 837M/945M [00:04<00:01, 89.0MB/s]
-     91%|#########1| 863M/945M [00:04<00:00, 115MB/s] 
-     94%|#########4| 890M/945M [00:04<00:00, 143MB/s]
-     97%|#########7| 917M/945M [00:04<00:00, 169MB/s]
-    100%|#########9| 941M/945M [00:04<00:00, 188MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 214MB/s]
+      0%|          | 2.02M/945M [00:00<00:46, 21.0MB/s]
+      1%|          | 5.81M/945M [00:00<00:30, 31.9MB/s]
+      1%|1         | 11.7M/945M [00:00<00:21, 45.4MB/s]
+      2%|2         | 21.2M/945M [00:00<00:14, 66.6MB/s]
+      4%|3         | 36.3M/945M [00:00<00:09, 99.6MB/s]
+      6%|6         | 59.2M/945M [00:00<00:06, 147MB/s] 
+      9%|8         | 84.6M/945M [00:00<00:04, 186MB/s]
+     12%|#1        | 110M/945M [00:00<00:04, 212MB/s] 
+     14%|#4        | 136M/945M [00:00<00:03, 231MB/s]
+     17%|#7        | 164M/945M [00:01<00:03, 249MB/s]
+     20%|##        | 191M/945M [00:01<00:03, 262MB/s]
+     23%|##3       | 219M/945M [00:01<00:02, 270MB/s]
+     26%|##5       | 245M/945M [00:01<00:02, 269MB/s]
+     29%|##8       | 272M/945M [00:01<00:02, 274MB/s]
+     32%|###1      | 300M/945M [00:01<00:02, 279MB/s]
+     35%|###4      | 328M/945M [00:01<00:02, 283MB/s]
+     38%|###7      | 355M/945M [00:01<00:02, 284MB/s]
+     41%|####      | 383M/945M [00:01<00:02, 286MB/s]
+     43%|####3     | 411M/945M [00:01<00:01, 288MB/s]
+     46%|####6     | 438M/945M [00:02<00:01, 288MB/s]
+     49%|####9     | 466M/945M [00:02<00:01, 288MB/s]
+     52%|#####2    | 493M/945M [00:02<00:01, 286MB/s]
+     55%|#####5    | 521M/945M [00:02<00:01, 275MB/s]
+     58%|#####7    | 547M/945M [00:02<00:01, 271MB/s]
+     61%|######    | 573M/945M [00:02<00:01, 266MB/s]
+     63%|######3   | 598M/945M [00:02<00:01, 263MB/s]
+     66%|######6   | 623M/945M [00:02<00:01, 263MB/s]
+     69%|######8   | 649M/945M [00:02<00:01, 261MB/s]
+     71%|#######1  | 674M/945M [00:02<00:01, 260MB/s]
+     74%|#######3  | 698M/945M [00:03<00:01, 256MB/s]
+     77%|#######6  | 723M/945M [00:03<00:00, 255MB/s]
+     79%|#######9  | 748M/945M [00:03<00:00, 256MB/s]
+     82%|########1 | 772M/945M [00:03<00:00, 257MB/s]
+     84%|########4 | 797M/945M [00:03<00:00, 257MB/s]
+     87%|########6 | 821M/945M [00:03<00:00, 255MB/s]
+     90%|########9 | 846M/945M [00:03<00:00, 255MB/s]
+     92%|#########2| 870M/945M [00:03<00:00, 254MB/s]
+     95%|#########4| 894M/945M [00:03<00:00, 255MB/s]
+     97%|#########7| 919M/945M [00:03<00:00, 255MB/s]
+    100%|#########9| 943M/945M [00:04<00:00, 253MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 244MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +471,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: reigning world champion wins china grand prix . teammate Nico Rosberg claims he ruined race by driving slowly . british driver claims he was 'scared' by his teammate's behaviour .
+    prediction: rebel fighter Ahmed Shaheed, 28, bought a tiger cub while fighting in Syria . the extravagant purchase will remain with its mother until it is old enough to become Shaheed's pet . the rebel only confirmed that he bought the cub from a small village, near the Syrian city of Aleppo .
 
-    target: Lewis Hamilton took victory for the Silver Arrows at the Chinese Grand Prix . Nico Rosberg claims Hamilton ruined his race by driving slowly .
+    target: The photo shows a beautiful young tiger cub in the hands of a rebel fighter, known as Ahmed Shaheed . Shaheed is believed to be a former Bond university student from Sydney . The 27-year-old considered buying an little owl and a leopard from a zoo near Aleppo, Syria .
 
 
     Example 2:
 
-    prediction: just four in 10 renters aged 20 to 45 are saving for a deposit to buy a home . this compares to almost half a year ago (49%), research by Halifax found . three-quarters of renters fear they will never be able to afford to buy their own house . this rises to eight in 10 for Londoners, where house prices have risen by double-digits in recent years .
+    prediction: Hadas had 'the cut' when she was just a few months old . she says she doesn't blame her mother for taking her to have the procedure . 'in my culture, it is believed that when the vagina is cut, the desire to have sex is cut as well,' she says .
 
-    target: Just four in 10 renters aged 20 to 45 are saving for a deposit to buy a home . This is compared to almost half a year ago, according to Halifax research . Also found that three-quarters of UK renters fear they will never be able to afford to buy their own house .
+    target: Hadas had the barbaric practice in Eritrea, Africa, where FGM is common . Her mother believed putting her through the ordeal as a baby was best . In her village 'uncut' women will be sluts and even grow up to be clumsy . Woman, who wants to remain anonymous, was sex trafficked to the UK .
 
 
     Example 3:
 
-    prediction: new analysis of Finnish education suggests pupil aptitude has declined . it suggests pupil aptitude has declined since country embraced techniques . findings will add weight to arguments by former education secretary, Michael Gove .
+    prediction: former England star Kevin Pietersen was dismissed for 19 on his return to the LV= County Championship . the 34-year-old was hoping to make an England return after his 170 against the students last week . pietersen had been in good form before edging behind off the bowling of Craig Meschede .
 
-    target: Finnish methods include pupils working in small groups or independently . In 2006 Finland was second in world for maths, but down to 12th by 2012 . During period its test scores dropped 29 points in maths and 23 in reading . Michael Gove has argued for return to traditional teacher-led lessons .
+    target: Kevin Pietersen playing his first County Championship game for two years . Pietersen was caught at slip off the bowling off Craig Meschede for 19 . Kumar Sangakkara scored a debut century for Surrey after KP was out . Surrey reach 363 for three at stumps on day one against Glamorgan .
 
 
     Example 4:
 
-    prediction: the northern irishman will tee off at 3.41pm on thursday at augusta national . he will be joined over the first two rounds by three-time Masters champion Phil Mickelson and another mercurial american in Ryan Moore . but all eyes will be trained on Tiger Woods among the later starters .
+    prediction: park crescent designed by architect of Buckingham palace could be demolished and rebuilt as apartments . developer has submitted fresh plans to demolish crescent and rebuild it as luxury flats . residents behind the site are furious at the proposals, claiming years of noise and disruption will ruin their lives .
 
-    target: The 79th Masters Tournament starts on Thursday at Augusta National . Rory McIlroy tees off his bid for a Grand Slam alongside Phil Mickelson . Tiger Woods returns to action and plays in group with Jamie Donaldson .
+    target: Developer's plans to build 73 luxury flats has angered residents who live nearby Park Crescent West in London . They claim that noise and disruption caused by the building work could last five years and will ruin their lives . The crescent was originally designed by John Nash, who also created Buckingham Palace, in the early 19th century . Plans to remove the crescent's facade and replace it with something more historically correct and accurate .
 
 
     Example 5:
 
-    prediction: aston villa host spurs at white hart lane on saturday afternoon . manager Tim Sherwood is a passionate man but he can't afford to let things get personal . sherwood was in charge of the youth set-up for years but was not trusted long-term .
+    prediction: Amol Gupta, from Manhattan, is suing ZogSports kickball league claiming he ran into a brick wall during a match two years ago . he claims he broke his nose and elbow, and also injured his spine . kickball is a popular schoolyard game similar to baseball where players kick the ball to bat instead of using bats .
 
-    target: Sherwood is a passionate man but he can’t afford to let things get personal . At new club Aston Villa, he has set the emotional bar high but it’s working . Christian Benteke has found a new lease of life at the Midlands outfit .
+    target: Amol Gupta was playing in a match on Roosevelt Island in April 2013 when he injured himself . Gupta suffered a broke nose and elbow, and damaged his spine when he slammed into retaining wall . Kickball game was organized by ZogSports league .
 
 
 
@@ -853,7 +855,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  11.597 seconds)
+   **Total running time of the script:** ( 3 minutes  46.099 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
