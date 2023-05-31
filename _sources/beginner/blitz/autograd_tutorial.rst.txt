@@ -81,10 +81,11 @@ shape (1,1000).
     Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
       0%|          | 0.00/44.7M [00:00<?, ?B/s]
-     19%|#9        | 8.69M/44.7M [00:00<00:00, 91.1MB/s]
-     49%|####8     | 21.8M/44.7M [00:00<00:00, 118MB/s] 
-     94%|#########3| 41.8M/44.7M [00:00<00:00, 160MB/s]
-    100%|##########| 44.7M/44.7M [00:00<00:00, 149MB/s]
+      6%|5         | 2.56M/44.7M [00:00<00:01, 26.5MB/s]
+     17%|#6        | 7.45M/44.7M [00:00<00:00, 41.0MB/s]
+     34%|###3      | 15.1M/44.7M [00:00<00:00, 58.7MB/s]
+     62%|######1   | 27.6M/44.7M [00:00<00:00, 87.1MB/s]
+    100%|##########| 44.7M/44.7M [00:00<00:00, 95.1MB/s]
 
 
 
@@ -537,7 +538,7 @@ Further readings:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.976 seconds)
+   **Total running time of the script:** ( 0 minutes  1.240 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_autograd_tutorial.py:

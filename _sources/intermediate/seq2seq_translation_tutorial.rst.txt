@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je suis amoureuse de toi .', 'i m in love with you .']
+    ['il est employe de banque .', 'he is employed in a bank .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 23s (- 19m 25s) (5000 6%) 2.8511
-    2m 42s (- 17m 36s) (10000 13%) 2.2635
-    4m 1s (- 16m 4s) (15000 20%) 1.9554
-    5m 20s (- 14m 40s) (20000 26%) 1.7336
-    6m 40s (- 13m 20s) (25000 33%) 1.5093
-    7m 59s (- 11m 59s) (30000 40%) 1.3393
-    9m 18s (- 10m 38s) (35000 46%) 1.1902
-    10m 38s (- 9m 18s) (40000 53%) 1.0722
-    11m 57s (- 7m 58s) (45000 60%) 0.9506
-    13m 17s (- 6m 38s) (50000 66%) 0.8640
-    14m 37s (- 5m 19s) (55000 73%) 0.7927
-    15m 57s (- 3m 59s) (60000 80%) 0.7306
-    17m 17s (- 2m 39s) (65000 86%) 0.6448
-    18m 37s (- 1m 19s) (70000 93%) 0.5918
-    19m 56s (- 0m 0s) (75000 100%) 0.6101
+    1m 24s (- 19m 44s) (5000 6%) 2.8665
+    2m 44s (- 17m 49s) (10000 13%) 2.2835
+    4m 4s (- 16m 17s) (15000 20%) 1.9638
+    5m 25s (- 14m 53s) (20000 26%) 1.7221
+    6m 45s (- 13m 31s) (25000 33%) 1.5217
+    8m 6s (- 12m 9s) (30000 40%) 1.3511
+    9m 27s (- 10m 48s) (35000 46%) 1.2143
+    10m 48s (- 9m 27s) (40000 53%) 1.0844
+    12m 10s (- 8m 6s) (45000 60%) 1.0763
+    13m 30s (- 6m 45s) (50000 66%) 0.9364
+    14m 51s (- 5m 24s) (55000 73%) 0.8286
+    16m 12s (- 4m 3s) (60000 80%) 0.7556
+    17m 33s (- 2m 42s) (65000 86%) 0.6701
+    18m 54s (- 1m 21s) (70000 93%) 0.6267
+    20m 15s (- 0m 0s) (75000 100%) 0.5676
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > vous prechez des convaincues .
-    = you re preaching to the choir .
-    < you re preaching to the choir . <EOS>
+    > vous etes depourvues d ambition .
+    = you re unambitious .
+    < you re unambitious . <EOS>
 
-    > c est un monsieur .
-    = he is a gentleman .
-    < he is a gentleman . <EOS>
+    > il est en train de dessiner une pomme .
+    = he s sketching an apple .
+    < he s taking an . <EOS>
 
-    > elle n est ni riche ni connue .
-    = she s neither rich nor famous .
-    < she is such rich in that . <EOS>
+    > nous sommes tous en train de mourir .
+    = we re all dying .
+    < we re all dying . <EOS>
 
-    > je ne suis pas assure .
-    = i m uninsured .
-    < i m not . <EOS>
+    > nous connaissons la reussite .
+    = we re successful .
+    < we re taking . <EOS>
 
-    > je ne suis pas particulierement impressionnee .
-    = i m not particularly impressed .
-    < i m not impressed impressed . <EOS>
+    > tu gaches l atmosphere .
+    = you re spoiling the mood .
+    < you re spoiling . <EOS>
 
-    > je ne vais pas disparaitre .
-    = i m not going to disappear .
-    < i m not going that . <EOS>
+    > il n est pas encore la .
+    = he s not here yet .
+    < he is not here yet . <EOS>
 
-    > ce sont tous deux des collegues a moi .
-    = they are both colleagues of mine .
-    < they are both teachers . <EOS>
+    > je suis quasiment prete .
+    = i m about ready .
+    < i am almost ready . <EOS>
 
-    > elles ont toutes faim .
-    = they re all hungry .
-    < they re all hungry . <EOS>
+    > je ne rougis pas !
+    = i m not blushing !
+    < i m not blushing ! <EOS>
 
-    > elle n est qu une enfant .
-    = she is just a child .
-    < she is just a child . <EOS>
+    > c est un homme cruel .
+    = he is a cruel person .
+    < he is a man guy . <EOS>
 
-    > c est un malade du controle .
-    = he s a control freak .
-    < he s a control freak . <EOS>
+    > je sur reagis .
+    = i m overreacting .
+    < i m overreacting . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7ff0b0586260>
+    <matplotlib.image.AxesImage object at 0x7f3c5cc5aa10>
 
 
 
@@ -1257,9 +1257,9 @@ and labels:
     input = elle est trop petit .
     output = she s too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not afraid of death . <EOS>
+    output = i m not scared of death . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young full . <EOS>
+    output = he s a talented talented . . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  10.306 seconds)
+   **Total running time of the script:** ( 20 minutes  29.626 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

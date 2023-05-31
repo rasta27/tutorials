@@ -446,16 +446,16 @@ language):
 
  .. code-block:: none
 
-    category = German / line = Jager
-    category = Arabic / line = Salib
-    category = Dutch / line = Romijnsen
-    category = English / line = Whalley
-    category = German / line = Friedrich
-    category = Spanish / line = Rivera
-    category = English / line = Rackham
-    category = Spanish / line = Moralez
-    category = Arabic / line = Srour
-    category = Italian / line = Provenzano
+    category = French / line = Monette
+    category = Korean / line = Yang
+    category = Polish / line = Kowalski
+    category = French / line = Michel
+    category = Chinese / line = Gok
+    category = Greek / line = Close
+    category = Czech / line = Picha
+    category = Japanese / line = Suzuki
+    category = Korean / line = Hwang
+    category = Chinese / line = Xue
 
 
 
@@ -595,26 +595,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 5s) 2.9558 Brown / Irish ✗ (Scottish)
-    10000 10% (0m 11s) 2.1214 Gomes / Portuguese ✓
-    15000 15% (0m 17s) 2.1060 Marshall / Irish ✗ (Scottish)
-    20000 20% (0m 22s) 0.4077 Ontikov / Russian ✓
-    25000 25% (0m 28s) 0.8569 Ban / Chinese ✓
-    30000 30% (0m 34s) 3.5720 Portoghese / Irish ✗ (Italian)
-    35000 35% (0m 40s) 0.0634 Leontarakis / Greek ✓
-    40000 40% (0m 45s) 2.3247 Stein / Scottish ✗ (German)
-    45000 45% (0m 51s) 0.3493 Sienkiewicz / Polish ✓
-    50000 50% (0m 57s) 1.1271 Fearghal / Irish ✓
-    55000 55% (1m 3s) 0.6966 Le / Vietnamese ✓
-    60000 60% (1m 8s) 1.2081 Slezak / Polish ✗ (Czech)
-    65000 65% (1m 14s) 1.0018 Perrot / French ✓
-    70000 70% (1m 20s) 0.3691 Kosmatka / Polish ✓
-    75000 75% (1m 25s) 0.8514 Hakimi / Japanese ✗ (Arabic)
-    80000 80% (1m 31s) nan Shan / English ✗ (Chinese)
-    85000 85% (1m 37s) nan Lotkov / English ✗ (Russian)
-    90000 90% (1m 42s) nan Bang / English ✗ (Korean)
-    95000 95% (1m 48s) nan Seeger / English ✗ (Dutch)
-    100000 100% (1m 54s) nan Grant / English ✗ (Scottish)
+    5000 5% (0m 5s) 2.4032 Romagna / Czech ✗ (Italian)
+    10000 10% (0m 11s) 2.5175 Saliba / Japanese ✗ (Arabic)
+    15000 15% (0m 16s) 0.6699 Safar / Arabic ✓
+    20000 20% (0m 22s) 1.5810 Vuong / Vietnamese ✓
+    25000 25% (0m 28s) 2.6526 Hakimi / Japanese ✗ (Arabic)
+    30000 30% (0m 33s) 2.7366 Paige / French ✗ (English)
+    35000 35% (0m 39s) 0.0860 Stawski / Polish ✓
+    40000 40% (0m 45s) 0.0245 Yasukawa / Japanese ✓
+    45000 45% (0m 50s) 1.5210 Noguerra / Spanish ✓
+    50000 50% (0m 56s) 0.4945 Dreschner / German ✓
+    55000 55% (1m 2s) 0.1060 Garofalis / Greek ✓
+    60000 60% (1m 7s) 1.6581 Dehmel / German ✗ (Czech)
+    65000 65% (1m 13s) 0.1387 Khouri / Arabic ✓
+    70000 70% (1m 19s) 3.7794 Stewart / Polish ✗ (Scottish)
+    75000 75% (1m 24s) 0.4817 Ling / Chinese ✓
+    80000 80% (1m 30s) 3.1091 Laar / Arabic ✗ (Dutch)
+    85000 85% (1m 36s) 0.8556 Kuffel / Czech ✓
+    90000 90% (1m 41s) 1.9006 Kumiega / Japanese ✗ (Polish)
+    95000 95% (1m 47s) 0.5750 Mustafa / Arabic ✓
+    100000 100% (1m 53s) 0.4467 Zhu / Chinese ✓
 
 
 
@@ -654,7 +654,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f6181634250>]
+    [<matplotlib.lines.Line2D object at 0x7fb106bd0250>]
 
 
 
@@ -792,19 +792,19 @@ Running on User Input
 
 
     > Dovesky
-    (nan) English
-    (nan) Scottish
-    (nan) Polish
+    (-0.66) Russian
+    (-1.21) Czech
+    (-2.59) English
 
     > Jackson
-    (nan) English
-    (nan) Scottish
-    (nan) Polish
+    (-0.55) Scottish
+    (-1.38) English
+    (-2.81) Russian
 
     > Satoshi
-    (nan) English
-    (nan) Scottish
-    (nan) Polish
+    (-1.22) Japanese
+    (-1.30) Polish
+    (-1.67) Italian
 
 
 
@@ -858,7 +858,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  1.260 seconds)
+   **Total running time of the script:** ( 2 minutes  0.189 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:
