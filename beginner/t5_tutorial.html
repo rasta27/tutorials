@@ -454,8 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
- 56%|#####5    | 442k/792k [00:00&lt;00:00, 4.38MB/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 4.98MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.9MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -480,92 +479,47 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  0%|          | 384k/945M [00:00&lt;04:13, 3.90MB/s]
-  0%|          | 1.00M/945M [00:00&lt;03:01, 5.44MB/s]
-  0%|          | 1.73M/945M [00:00&lt;02:33, 6.45MB/s]
-  0%|          | 2.67M/945M [00:00&lt;02:07, 7.76MB/s]
-  0%|          | 3.81M/945M [00:00&lt;01:46, 9.27MB/s]
-  1%|          | 5.17M/945M [00:00&lt;01:30, 10.9MB/s]
-  1%|          | 6.92M/945M [00:00&lt;01:14, 13.3MB/s]
-  1%|          | 9.02M/945M [00:00&lt;01:01, 16.0MB/s]
-  1%|1         | 11.6M/945M [00:00&lt;00:50, 19.5MB/s]
-  2%|1         | 14.8M/945M [00:01&lt;00:41, 23.7MB/s]
-  2%|1         | 18.8M/945M [00:01&lt;00:33, 29.0MB/s]
-  3%|2         | 23.6M/945M [00:01&lt;00:27, 35.7MB/s]
-  3%|3         | 29.5M/945M [00:01&lt;00:22, 43.3MB/s]
-  4%|3         | 36.7M/945M [00:01&lt;00:17, 53.2MB/s]
-  5%|4         | 45.9M/945M [00:01&lt;00:14, 66.1MB/s]
-  6%|6         | 56.9M/945M [00:01&lt;00:11, 80.9MB/s]
-  7%|7         | 69.6M/945M [00:01&lt;00:09, 96.4MB/s]
-  9%|8         | 82.4M/945M [00:01&lt;00:08, 108MB/s]
- 10%|#         | 95.1M/945M [00:01&lt;00:07, 115MB/s]
- 11%|#1        | 108M/945M [00:02&lt;00:07, 120MB/s]
- 13%|#2        | 120M/945M [00:02&lt;00:06, 124MB/s]
- 14%|#4        | 133M/945M [00:02&lt;00:06, 127MB/s]
- 15%|#5        | 146M/945M [00:02&lt;00:06, 128MB/s]
- 17%|#6        | 158M/945M [00:02&lt;00:06, 130MB/s]
- 18%|#8        | 171M/945M [00:02&lt;00:06, 131MB/s]
- 19%|#9        | 184M/945M [00:02&lt;00:06, 131MB/s]
- 21%|##        | 196M/945M [00:02&lt;00:05, 132MB/s]
- 22%|##2       | 209M/945M [00:02&lt;00:05, 132MB/s]
- 23%|##3       | 222M/945M [00:02&lt;00:05, 132MB/s]
- 25%|##4       | 235M/945M [00:03&lt;00:05, 133MB/s]
- 26%|##6       | 247M/945M [00:03&lt;00:05, 133MB/s]
- 28%|##7       | 260M/945M [00:03&lt;00:05, 133MB/s]
- 29%|##8       | 273M/945M [00:03&lt;00:05, 133MB/s]
- 30%|###       | 286M/945M [00:03&lt;00:05, 133MB/s]
- 32%|###1      | 298M/945M [00:03&lt;00:05, 133MB/s]
- 33%|###2      | 311M/945M [00:03&lt;00:04, 133MB/s]
- 34%|###4      | 324M/945M [00:03&lt;00:04, 133MB/s]
- 36%|###5      | 337M/945M [00:03&lt;00:04, 133MB/s]
- 37%|###6      | 349M/945M [00:03&lt;00:04, 133MB/s]
- 38%|###8      | 362M/945M [00:04&lt;00:04, 133MB/s]
- 40%|###9      | 375M/945M [00:04&lt;00:04, 133MB/s]
- 41%|####1     | 388M/945M [00:04&lt;00:04, 132MB/s]
- 42%|####2     | 400M/945M [00:04&lt;00:04, 133MB/s]
- 44%|####3     | 413M/945M [00:04&lt;00:04, 133MB/s]
- 45%|####5     | 426M/945M [00:04&lt;00:04, 133MB/s]
- 46%|####6     | 439M/945M [00:04&lt;00:03, 133MB/s]
- 48%|####7     | 451M/945M [00:04&lt;00:03, 133MB/s]
- 49%|####9     | 464M/945M [00:04&lt;00:03, 133MB/s]
- 50%|#####     | 477M/945M [00:04&lt;00:03, 133MB/s]
- 52%|#####1    | 490M/945M [00:05&lt;00:03, 133MB/s]
- 53%|#####3    | 502M/945M [00:05&lt;00:03, 133MB/s]
- 55%|#####4    | 515M/945M [00:05&lt;00:03, 133MB/s]
- 56%|#####5    | 528M/945M [00:05&lt;00:03, 133MB/s]
- 57%|#####7    | 540M/945M [00:05&lt;00:03, 133MB/s]
- 59%|#####8    | 553M/945M [00:05&lt;00:03, 133MB/s]
- 60%|#####9    | 566M/945M [00:05&lt;00:02, 133MB/s]
- 61%|######1   | 579M/945M [00:05&lt;00:02, 133MB/s]
- 63%|######2   | 591M/945M [00:05&lt;00:02, 133MB/s]
- 64%|######3   | 604M/945M [00:05&lt;00:02, 133MB/s]
- 65%|######5   | 617M/945M [00:06&lt;00:02, 133MB/s]
- 67%|######6   | 629M/945M [00:06&lt;00:02, 133MB/s]
- 68%|######7   | 642M/945M [00:06&lt;00:02, 133MB/s]
- 69%|######9   | 655M/945M [00:06&lt;00:02, 133MB/s]
- 71%|#######   | 668M/945M [00:06&lt;00:02, 133MB/s]
- 72%|#######2  | 680M/945M [00:06&lt;00:02, 133MB/s]
- 73%|#######3  | 693M/945M [00:06&lt;00:01, 133MB/s]
- 75%|#######4  | 706M/945M [00:06&lt;00:01, 133MB/s]
- 76%|#######6  | 719M/945M [00:06&lt;00:01, 133MB/s]
- 77%|#######7  | 731M/945M [00:06&lt;00:01, 133MB/s]
- 79%|#######8  | 744M/945M [00:07&lt;00:01, 133MB/s]
- 80%|########  | 757M/945M [00:07&lt;00:01, 133MB/s]
- 81%|########1 | 770M/945M [00:07&lt;00:01, 133MB/s]
- 83%|########2 | 782M/945M [00:07&lt;00:01, 132MB/s]
- 84%|########4 | 795M/945M [00:07&lt;00:01, 133MB/s]
- 86%|########5 | 808M/945M [00:07&lt;00:01, 132MB/s]
- 87%|########6 | 820M/945M [00:07&lt;00:00, 132MB/s]
- 88%|########8 | 833M/945M [00:07&lt;00:00, 132MB/s]
- 90%|########9 | 846M/945M [00:07&lt;00:00, 132MB/s]
- 91%|######### | 858M/945M [00:07&lt;00:00, 132MB/s]
- 92%|#########2| 871M/945M [00:08&lt;00:00, 133MB/s]
- 94%|#########3| 884M/945M [00:08&lt;00:00, 132MB/s]
- 95%|#########4| 896M/945M [00:08&lt;00:00, 133MB/s]
- 96%|#########6| 909M/945M [00:08&lt;00:00, 133MB/s]
- 98%|#########7| 922M/945M [00:08&lt;00:00, 133MB/s]
- 99%|#########8| 934M/945M [00:08&lt;00:00, 132MB/s]
-100%|##########| 945M/945M [00:08&lt;00:00, 115MB/s]
+  1%|1         | 11.0M/945M [00:00&lt;00:08, 115MB/s]
+  4%|3         | 35.6M/945M [00:00&lt;00:04, 199MB/s]
+  6%|6         | 61.3M/945M [00:00&lt;00:04, 231MB/s]
+  9%|9         | 86.4M/945M [00:00&lt;00:03, 244MB/s]
+ 12%|#1        | 111M/945M [00:00&lt;00:03, 250MB/s]
+ 14%|#4        | 135M/945M [00:00&lt;00:03, 249MB/s]
+ 17%|#6        | 159M/945M [00:00&lt;00:03, 250MB/s]
+ 19%|#9        | 183M/945M [00:00&lt;00:03, 251MB/s]
+ 22%|##1       | 207M/945M [00:00&lt;00:03, 247MB/s]
+ 24%|##4       | 231M/945M [00:01&lt;00:03, 248MB/s]
+ 27%|##6       | 255M/945M [00:01&lt;00:02, 249MB/s]
+ 29%|##9       | 279M/945M [00:01&lt;00:02, 245MB/s]
+ 32%|###2      | 303M/945M [00:01&lt;00:02, 248MB/s]
+ 35%|###4      | 327M/945M [00:01&lt;00:02, 248MB/s]
+ 37%|###7      | 351M/945M [00:01&lt;00:02, 250MB/s]
+ 40%|###9      | 375M/945M [00:01&lt;00:02, 252MB/s]
+ 42%|####2     | 399M/945M [00:01&lt;00:02, 251MB/s]
+ 45%|####4     | 424M/945M [00:01&lt;00:02, 252MB/s]
+ 47%|####7     | 448M/945M [00:01&lt;00:02, 252MB/s]
+ 50%|####9     | 472M/945M [00:02&lt;00:01, 252MB/s]
+ 53%|#####2    | 496M/945M [00:02&lt;00:01, 249MB/s]
+ 55%|#####5    | 520M/945M [00:02&lt;00:01, 245MB/s]
+ 58%|#####7    | 543M/945M [00:02&lt;00:01, 245MB/s]
+ 60%|#####9    | 567M/945M [00:02&lt;00:01, 243MB/s]
+ 63%|######2   | 590M/945M [00:02&lt;00:01, 245MB/s]
+ 65%|######4   | 614M/945M [00:02&lt;00:01, 240MB/s]
+ 67%|######7   | 637M/945M [00:02&lt;00:01, 243MB/s]
+ 70%|######9   | 661M/945M [00:02&lt;00:01, 240MB/s]
+ 72%|#######2  | 684M/945M [00:02&lt;00:01, 242MB/s]
+ 75%|#######4  | 708M/945M [00:03&lt;00:01, 238MB/s]
+ 77%|#######7  | 731M/945M [00:03&lt;00:00, 241MB/s]
+ 80%|#######9  | 754M/945M [00:03&lt;00:00, 237MB/s]
+ 82%|########2 | 777M/945M [00:03&lt;00:00, 237MB/s]
+ 85%|########4 | 799M/945M [00:03&lt;00:00, 229MB/s]
+ 87%|########7 | 822M/945M [00:03&lt;00:00, 232MB/s]
+ 89%|########9 | 844M/945M [00:03&lt;00:00, 231MB/s]
+ 92%|#########1| 867M/945M [00:03&lt;00:00, 232MB/s]
+ 94%|#########4| 889M/945M [00:03&lt;00:00, 211MB/s]
+ 96%|#########6| 909M/945M [00:04&lt;00:00, 195MB/s]
+ 99%|#########8| 932M/945M [00:04&lt;00:00, 206MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 237MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -777,37 +731,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: gareth bale is out of real's champions league quarter-final clash with atletico . the £86million striker is adamant he wants to stay at the club . the england international has been heavily linked with a move to manchester united .
+prediction: Immerse is available from firebox for £29.95 ($45) it works with any android and iOS phone that can run virtual reality apps from the respective stores . it also lets people watch 3D movies - all for the relatively cheap price of £29.99 ($45) the maximum size of compatible devices is 3.5 x 5.7-inches (8.2 x 15.4cm) the headset is fitted with an earphone slot to truly immerse the wearer in whatever they are watching and has adjustable head straps and lenses
 
-target: Gareth Bale has been linked with a summer move to Manchester United . The Wales forward has been criticised by Real Madrid fans this season . United want Bale but he has no desire to cut short his time in Spain . A swap deal involving United keeper David de Gea has been mooted . Real are interested in bringing De Gea to Spain to replace Iker Casillas .
+target: The virtual reality headset is available to buy from Firebox for £29.95 . It works with Android and iOS phones via virtual reality apps and 3D films . The maximum size of the device must be 3.5 x 5.7-inches (8.2 x 15.4cm) It calls itself an affordable alternative to rivals such as Oculus Rift .
 
 
 Example 2:
 
-prediction: richie Benaud has died at the age of 84 after battling skin cancer . the broadcaster passed away peacefully in his sleep overnight . he had been receiving radiation treatment for skin cancer since November . former captain and cricketer was a key figure in world series cricket . prime minister to offer his family a state funeral in recognition of his towering stature .
+prediction: burnley drew 0-0 with spurs at turf moor in their premier league clash . defender Michael Duff was satisfied with the way his side subdued prolific goalscorer Harry Kane . the result means neither side would have escaped the bottom three had they won .
 
-target: Former Australian captain died peacefully in his sleep at a Sydney hospice . He had been receiving radiation treatment for skin cancer since November . Benaud had witnessed, as player and commentator, over 500 Test matches . Tributes flowed in  to the legendary 'Godfather of cricket' from all circles . Australian Prime Minister Tony Abbott offers his family a state funeral .
+target: Burnley and Tottenham played out a 0-0 draw low on quality on Sunday . Harry Kane captained Spurs but the league's top goalscorer struggled . Kane could not find the net and Michael Duff says his team stopped him .
 
 
 Example 3:
 
-prediction: a spokesman for the human rights commission says he's heard complaints about xenophobia . "i will have done something to change the country," says a south african who has brought allegations .
+prediction: dove grey suit was once worn by notorious Nazi commander Hermann Goering . sweat stains on the suit linked it to the overweight commander . it is now expected to fetch £85,000 when it goes under the hammer in Plymouth .
 
-target: More than 10,000 people marched in Durban against violence, officials say . Twitter followers voiced their support through hashtag campaigns . A Cape Town resident tweets his complaints against a Zulu King .
+target: Herman Goering founded the Gestapo and was head of the Nazi air force . He was known for being overweight and for his tendency to sweat a lot . Wear and tear on the suit made by Viennese tailor helped experts identify Goering as its owner . It is being auctioned by Devon-Parade Antiques and is expected to fetch £85,000 .
 
 
 Example 4:
 
-prediction: estate agent's wife has been scared to leave home since his murder last year . she said: 'every time I walk in the front door I think am I going to get a knife in my back?' . she said: 'we've been turned upside down. our lives have been turned upside down' .
+prediction: davion only, 16, was born in 2013 and spent his entire life in foster care . he made a heartbreaking plea to his foster mother to adopt him . three years later he has finally found a loving family with his caseworker . she has been by his side since he was seven and will become his mother .
 
-target: Andrew Else was knifed by Ephraim Norman after getting off bus last year . The 52-year-old estate agent had been at pub with friends before the attack . Wife Clare Else says her 'life has been turned upside down' since murder . Norman, 24, is now being detained indefinitely under the Mental Health Act .
+target: Davion Only, 16, captured hearts around the nation in 2013 when he made a plea for a family to 'love him forever' Later this month he will officially be adopted by his old caseworker Connie Bell Going and her family . Davion has been living with her two daughters and another adopted boy since December . Ms Going admitted it has not always been easy but says it is worth it  and 'everyday it gets a little bit better'
 
 
 Example 5:
 
-prediction: the man is unable to communicate how he came to be in the park . the mother allegedly left him there for more than four days . the man suffered eye problems, dehydration, malnutrition and a cut to the back .
+prediction: 'i would take Wayne's free-kicks because he practices them every day,' says Wilson . 'i would have to take Robin van Persie's movement,' he adds . 'i would have to take Radamel Falcao's instincts,' says the 19-year-old .
 
-target: Temperatures dipped into the mid-30s during 4 days man lay in woods of Philadelphia park . Mom told police son was with her in Maryland, but he was found Friday with blanket, Bible . Victim being treated for malnutrition, dehydration; mother faces host of charges after extradition .
+target: James Wilson reveals what he would take from each Man United striker . The 19-year-old would take Wayne Rooney's free-kick taking ability . Wilson would like to add Robin van Persie's movement to his own game . While he would like to harness Radamel Falcao's predatory instincts . Man Utd sacked Moyes one year ago... what has Van Gaal changed since? READ: Manchester United Gareth Bale to give his side needed dynamism .
 </pre></div>
 </div>
 </div>
@@ -1100,7 +1054,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  3.380 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  33.294 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
