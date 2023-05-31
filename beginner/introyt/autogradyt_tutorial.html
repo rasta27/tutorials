@@ -528,7 +528,7 @@ inputs:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">a</span></a><span class="o">.</span><span class="n">detach</span><span class="p">(),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">b</span></a><span class="o">.</span><span class="n">detach</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="autogradyt tutorial" class="sphx-glr-single-img" src="../../_images/sphx_glr_autogradyt_tutorial_001.png" srcset="../../_images/sphx_glr_autogradyt_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f5400ec6a10&gt;]
+<img alt="autogradyt tutorial" class="sphx-glr-single-img" src="../../_images/sphx_glr_autogradyt_tutorial_001.png" srcset="../../_images/sphx_glr_autogradyt_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7fa12a8a09d0&gt;]
 </pre></div>
 </div>
 <p>Let’s have a closer look at the tensor <code class="docutils literal notranslate"><span class="pre">b</span></code>. When we print it, we see
@@ -601,17 +601,17 @@ to the function with no history of its own.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>d:
-&lt;AddBackward0 object at 0x7f53f30b3100&gt;
-((&lt;MulBackward0 object at 0x7f53f30b3340&gt;, 0), (None, 0))
-((&lt;SinBackward0 object at 0x7f53f30b3340&gt;, 0), (None, 0))
-((&lt;AccumulateGrad object at 0x7f53f30b3100&gt;, 0),)
+&lt;AddBackward0 object at 0x7fa12a8a2380&gt;
+((&lt;MulBackward0 object at 0x7fa12a8a3dc0&gt;, 0), (None, 0))
+((&lt;SinBackward0 object at 0x7fa12a8a3dc0&gt;, 0), (None, 0))
+((&lt;AccumulateGrad object at 0x7fa12a8a2380&gt;, 0),)
 ()
 
 c:
-&lt;MulBackward0 object at 0x7f53f30b3340&gt;
+&lt;MulBackward0 object at 0x7fa12a8a3dc0&gt;
 
 b:
-&lt;SinBackward0 object at 0x7f53f30b3340&gt;
+&lt;SinBackward0 object at 0x7fa12a8a3dc0&gt;
 
 a:
 None
@@ -631,7 +631,7 @@ call the <code class="docutils literal notranslate"><span class="pre">backward()
         -1.4142e+00, -1.0000e+00, -5.1764e-01,  2.3850e-08,  5.1764e-01,
          1.0000e+00,  1.4142e+00,  1.7321e+00,  1.9319e+00,  2.0000e+00])
 
-[&lt;matplotlib.lines.Line2D object at 0x7f53f22b41f0&gt;]
+[&lt;matplotlib.lines.Line2D object at 0x7fa129578400&gt;]
 </pre></div>
 </div>
 <p>Recall the computation steps we took to get here:</p>
@@ -693,8 +693,8 @@ weights, and verify that no gradients have been computed yet:</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">model</span><span class="o">.</span><span class="n">layer2</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">grad</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0453,  0.0091, -0.0015, -0.0510, -0.0261, -0.0381, -0.0264,  0.0498,
-         0.0561,  0.0354], grad_fn=&lt;SliceBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0510,  0.0033, -0.0737, -0.0517, -0.0983,  0.0253,  0.0517,  0.0859,
+         0.0973,  0.0357], grad_fn=&lt;SliceBackward0&gt;)
 None
 </pre></div>
 </div>
@@ -710,7 +710,7 @@ basic stochastic gradient descent optimizer.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(157.2163, grad_fn=&lt;SumBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(178.2197, grad_fn=&lt;SumBackward0&gt;)
 </pre></div>
 </div>
 <p>Now, let’s call <code class="docutils literal notranslate"><span class="pre">loss.backward()</span></code> and see what happens:</p>
@@ -719,10 +719,10 @@ basic stochastic gradient descent optimizer.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">model</span><span class="o">.</span><span class="n">layer2</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">grad</span></a><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0453,  0.0091, -0.0015, -0.0510, -0.0261, -0.0381, -0.0264,  0.0498,
-         0.0561,  0.0354], grad_fn=&lt;SliceBackward0&gt;)
-tensor([-2.4069, -3.5740, -0.3335, -2.5139, -4.2373, -7.7255,  0.7764, -3.1883,
-        -4.7866, -0.3590])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0510,  0.0033, -0.0737, -0.0517, -0.0983,  0.0253,  0.0517,  0.0859,
+         0.0973,  0.0357], grad_fn=&lt;SliceBackward0&gt;)
+tensor([-0.9302, -5.5675, -4.1148, -1.9935, -1.8976,  0.5016, -1.0011,  0.7173,
+        -1.6868, -2.3249])
 </pre></div>
 </div>
 <p>We can see that the gradients have been computed for each learning
@@ -734,10 +734,10 @@ based on the computed gradients.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">model</span><span class="o">.</span><span class="n">layer2</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">grad</span></a><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0429,  0.0126, -0.0011, -0.0485, -0.0219, -0.0304, -0.0271,  0.0530,
-         0.0609,  0.0358], grad_fn=&lt;SliceBackward0&gt;)
-tensor([-2.4069, -3.5740, -0.3335, -2.5139, -4.2373, -7.7255,  0.7764, -3.1883,
-        -4.7866, -0.3590])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.0501,  0.0088, -0.0696, -0.0497, -0.0964,  0.0248,  0.0527,  0.0852,
+         0.0989,  0.0380], grad_fn=&lt;SliceBackward0&gt;)
+tensor([-0.9302, -5.5675, -4.1148, -1.9935, -1.8976,  0.5016, -1.0011,  0.7173,
+        -1.6868, -2.3249])
 </pre></div>
 </div>
 <p>You should see that <code class="docutils literal notranslate"><span class="pre">layer2</span></code>’s weights have changed.</p>
@@ -759,10 +759,10 @@ learning weights will accumulate:</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">model</span><span class="o">.</span><span class="n">layer2</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">grad</span></a><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-2.4069, -3.5740, -0.3335, -2.5139, -4.2373, -7.7255,  0.7764, -3.1883,
-        -4.7866, -0.3590])
-tensor([ -5.6079, -18.2132,  -6.0574,  -0.8343, -18.5633, -22.1691,   4.0057,
-        -19.9425, -26.8814,  -1.5421])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-0.9302, -5.5675, -4.1148, -1.9935, -1.8976,  0.5016, -1.0011,  0.7173,
+        -1.6868, -2.3249])
+tensor([-13.6925, -19.1206,   7.3366,   8.8888,  -3.0779,   1.7802,   2.6364,
+        -11.9763,  -9.8153, -20.2635])
 tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
@@ -867,8 +867,8 @@ from the computation history:</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">y</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([0.8515, 0.4932, 0.4633, 0.9887, 0.0152], requires_grad=True)
-tensor([0.8515, 0.4932, 0.4633, 0.9887, 0.0152])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([0.3948, 0.2232, 0.9172, 0.1777, 0.7657], requires_grad=True)
+tensor([0.3948, 0.2232, 0.9172, 0.1777, 0.7657])
 </pre></div>
 </div>
 <p>We did this above when we wanted to graph some of our tensors. This is
@@ -922,15 +922,15 @@ example usage:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
                        Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
 ---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-                  aten::div        47.37%       4.010ms        47.37%       4.010ms       4.010us       8.164ms        51.15%       8.164ms       8.164us          1000
-                  aten::mul        44.47%       3.765ms        44.47%       3.765ms       3.765us       7.796ms        48.85%       7.796ms       7.796us          1000
-      cudaDeviceSynchronize         6.15%     521.000us         6.15%     521.000us     521.000us       0.000us         0.00%       0.000us       0.000us             1
-    cudaGetDeviceProperties         1.95%     165.000us         1.95%     165.000us     165.000us       0.000us         0.00%       0.000us       0.000us             1
-      cudaStreamIsCapturing         0.06%       5.000us         0.06%       5.000us       1.667us       0.000us         0.00%       0.000us       0.000us             3
+                  aten::div        48.89%       3.284ms        48.89%       3.284ms       3.284us       7.351ms        50.55%       7.351ms       7.351us          1000
+                  aten::mul        47.76%       3.208ms        47.76%       3.208ms       3.208us       7.192ms        49.45%       7.192ms       7.192us          1000
+    cudaGetDeviceProperties         2.98%     200.000us         2.98%     200.000us     200.000us       0.000us         0.00%       0.000us       0.000us             1
+      cudaDeviceSynchronize         0.31%      21.000us         0.31%      21.000us      21.000us       0.000us         0.00%       0.000us       0.000us             1
+      cudaStreamIsCapturing         0.06%       4.000us         0.06%       4.000us       1.333us       0.000us         0.00%       0.000us       0.000us             3
          cudaGetDeviceCount         0.00%       0.000us         0.00%       0.000us       0.000us       0.000us         0.00%       0.000us       0.000us             1
 ---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-Self CPU time total: 8.466ms
-Self CUDA time total: 15.960ms
+Self CPU time total: 6.717ms
+Self CUDA time total: 14.543ms
 </pre></div>
 </div>
 <p>The profiler can also label individual sub-blocks of code, break out the
@@ -1000,7 +1000,7 @@ precedes it. Let’s try a specific example with a small vector:</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">y</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-113.9348, -610.3505, -907.3275], grad_fn=&lt;MulBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-473.5695, 1496.0146,  -80.2572], grad_fn=&lt;MulBackward0&gt;)
 </pre></div>
 </div>
 <p>If we tried to call <code class="docutils literal notranslate"><span class="pre">y.backward()</span></code> now, we’d get a runtime error and a
@@ -1037,9 +1037,9 @@ single-element inputs:</p>
 <a class="sphx-glr-backref-module-torch-autograd-functional sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.autograd.functional.jacobian.html#torch.autograd.functional.jacobian" title="torch.autograd.functional.jacobian"><span class="n">torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">jacobian</span></a><span class="p">(</span><span class="n">exp_adder</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">inputs</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([0.8761]), tensor([0.6195]))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([0.2458]), tensor([0.9157]))
 
-(tensor([[4.8031]]), tensor([[3.]]))
+(tensor([[2.5573]]), tensor([[3.]]))
 </pre></div>
 </div>
 <p>If you look closely, the first output should equal <span class="math">\(2e^x\)</span> (since
@@ -1051,11 +1051,11 @@ should be 3.</p>
 <a class="sphx-glr-backref-module-torch-autograd-functional sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.autograd.functional.jacobian.html#torch.autograd.functional.jacobian" title="torch.autograd.functional.jacobian"><span class="n">torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">jacobian</span></a><span class="p">(</span><span class="n">exp_adder</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">inputs</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([0.6403, 0.1011, 0.8263]), tensor([0.3834, 0.6901, 0.5758]))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([0.8094, 0.9314, 0.8274]), tensor([0.2672, 0.2810, 0.9354]))
 
-(tensor([[3.7942, 0.0000, 0.0000],
-        [0.0000, 2.2128, 0.0000],
-        [0.0000, 0.0000, 4.5698]]), tensor([[3., 0., 0.],
+(tensor([[4.4932, 0.0000, 0.0000],
+        [0.0000, 5.0759, 0.0000],
+        [0.0000, 0.0000, 4.5749]]), tensor([[3., 0., 0.],
         [0., 3., 0.],
         [0., 0., 3.]]))
 </pre></div>
@@ -1076,7 +1076,7 @@ product, if you provide the vector:</p>
 <a class="sphx-glr-backref-module-torch-autograd-functional sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.autograd.functional.vjp.html#torch.autograd.functional.vjp" title="torch.autograd.functional.vjp"><span class="n">torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">vjp</span></a><span class="p">(</span><span class="n">do_some_doubling</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">inputs</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">v</span></a><span class="o">=</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">my_gradients</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([   70.4095,  -247.7059, -1043.2161]), tensor([5.1200e+01, 5.1200e+02, 5.1200e-02]))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([ -49.7170, -824.1019, -715.5136]), tensor([1.0240e+02, 1.0240e+03, 1.0240e-01]))
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">torch.autograd.functional.jvp()</span></code> method performs the same matrix
@@ -1085,7 +1085,7 @@ and <code class="docutils literal notranslate"><span class="pre">hvp()</span></c
 <p>For more information, including performance notes on the <a class="reference external" href="https://pytorch.org/docs/stable/autograd.html#functional-higher-level-api">docs for the
 functional
 API</a></p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.733 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.823 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-introyt-autogradyt-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1a94e27be9b0e79da5acafc1f68a7143/autogradyt_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">autogradyt_tutorial.py</span></code></a></p>

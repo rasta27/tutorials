@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 16.9MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 9.33MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,47 +479,48 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|1         | 11.0M/945M [00:00&lt;00:08, 115MB/s]
-  4%|3         | 35.6M/945M [00:00&lt;00:04, 199MB/s]
-  6%|6         | 61.3M/945M [00:00&lt;00:04, 231MB/s]
-  9%|9         | 86.4M/945M [00:00&lt;00:03, 244MB/s]
- 12%|#1        | 111M/945M [00:00&lt;00:03, 250MB/s]
- 14%|#4        | 135M/945M [00:00&lt;00:03, 249MB/s]
- 17%|#6        | 159M/945M [00:00&lt;00:03, 250MB/s]
- 19%|#9        | 183M/945M [00:00&lt;00:03, 251MB/s]
- 22%|##1       | 207M/945M [00:00&lt;00:03, 247MB/s]
- 24%|##4       | 231M/945M [00:01&lt;00:03, 248MB/s]
- 27%|##6       | 255M/945M [00:01&lt;00:02, 249MB/s]
- 29%|##9       | 279M/945M [00:01&lt;00:02, 245MB/s]
- 32%|###2      | 303M/945M [00:01&lt;00:02, 248MB/s]
- 35%|###4      | 327M/945M [00:01&lt;00:02, 248MB/s]
- 37%|###7      | 351M/945M [00:01&lt;00:02, 250MB/s]
- 40%|###9      | 375M/945M [00:01&lt;00:02, 252MB/s]
- 42%|####2     | 399M/945M [00:01&lt;00:02, 251MB/s]
- 45%|####4     | 424M/945M [00:01&lt;00:02, 252MB/s]
- 47%|####7     | 448M/945M [00:01&lt;00:02, 252MB/s]
- 50%|####9     | 472M/945M [00:02&lt;00:01, 252MB/s]
- 53%|#####2    | 496M/945M [00:02&lt;00:01, 249MB/s]
- 55%|#####5    | 520M/945M [00:02&lt;00:01, 245MB/s]
- 58%|#####7    | 543M/945M [00:02&lt;00:01, 245MB/s]
- 60%|#####9    | 567M/945M [00:02&lt;00:01, 243MB/s]
- 63%|######2   | 590M/945M [00:02&lt;00:01, 245MB/s]
- 65%|######4   | 614M/945M [00:02&lt;00:01, 240MB/s]
- 67%|######7   | 637M/945M [00:02&lt;00:01, 243MB/s]
- 70%|######9   | 661M/945M [00:02&lt;00:01, 240MB/s]
- 72%|#######2  | 684M/945M [00:02&lt;00:01, 242MB/s]
- 75%|#######4  | 708M/945M [00:03&lt;00:01, 238MB/s]
- 77%|#######7  | 731M/945M [00:03&lt;00:00, 241MB/s]
- 80%|#######9  | 754M/945M [00:03&lt;00:00, 237MB/s]
- 82%|########2 | 777M/945M [00:03&lt;00:00, 237MB/s]
- 85%|########4 | 799M/945M [00:03&lt;00:00, 229MB/s]
- 87%|########7 | 822M/945M [00:03&lt;00:00, 232MB/s]
- 89%|########9 | 844M/945M [00:03&lt;00:00, 231MB/s]
- 92%|#########1| 867M/945M [00:03&lt;00:00, 232MB/s]
- 94%|#########4| 889M/945M [00:03&lt;00:00, 211MB/s]
- 96%|#########6| 909M/945M [00:04&lt;00:00, 195MB/s]
- 99%|#########8| 932M/945M [00:04&lt;00:00, 206MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 237MB/s]
+  0%|          | 1.66M/945M [00:00&lt;00:58, 17.0MB/s]
+  0%|          | 4.58M/945M [00:00&lt;00:39, 24.7MB/s]
+  1%|          | 9.12M/945M [00:00&lt;00:27, 35.1MB/s]
+  2%|1         | 16.3M/945M [00:00&lt;00:19, 50.7MB/s]
+  3%|2         | 27.5M/945M [00:00&lt;00:12, 74.6MB/s]
+  5%|4         | 45.6M/945M [00:00&lt;00:08, 114MB/s]
+  8%|7         | 71.4M/945M [00:00&lt;00:05, 165MB/s]
+ 10%|#         | 98.9M/945M [00:00&lt;00:04, 204MB/s]
+ 13%|#3        | 126M/945M [00:00&lt;00:03, 229MB/s]
+ 16%|#6        | 153M/945M [00:01&lt;00:03, 247MB/s]
+ 19%|#9        | 180M/945M [00:01&lt;00:03, 255MB/s]
+ 22%|##1       | 204M/945M [00:01&lt;00:03, 252MB/s]
+ 24%|##4       | 229M/945M [00:01&lt;00:02, 255MB/s]
+ 27%|##6       | 253M/945M [00:01&lt;00:02, 256MB/s]
+ 29%|##9       | 278M/945M [00:01&lt;00:02, 256MB/s]
+ 32%|###2      | 302M/945M [00:01&lt;00:02, 255MB/s]
+ 35%|###4      | 327M/945M [00:01&lt;00:02, 254MB/s]
+ 37%|###7      | 351M/945M [00:01&lt;00:02, 248MB/s]
+ 40%|###9      | 375M/945M [00:01&lt;00:02, 247MB/s]
+ 42%|####2     | 399M/945M [00:02&lt;00:02, 248MB/s]
+ 45%|####4     | 423M/945M [00:02&lt;00:02, 250MB/s]
+ 47%|####7     | 447M/945M [00:02&lt;00:02, 251MB/s]
+ 50%|####9     | 471M/945M [00:02&lt;00:01, 249MB/s]
+ 52%|#####2    | 495M/945M [00:02&lt;00:01, 248MB/s]
+ 55%|#####4    | 518M/945M [00:02&lt;00:01, 248MB/s]
+ 57%|#####7    | 543M/945M [00:02&lt;00:01, 249MB/s]
+ 60%|#####9    | 567M/945M [00:02&lt;00:01, 250MB/s]
+ 63%|######2   | 591M/945M [00:02&lt;00:01, 252MB/s]
+ 65%|######5   | 615M/945M [00:02&lt;00:01, 248MB/s]
+ 68%|######7   | 639M/945M [00:03&lt;00:01, 248MB/s]
+ 70%|#######   | 663M/945M [00:03&lt;00:01, 246MB/s]
+ 73%|#######3  | 690M/945M [00:03&lt;00:01, 257MB/s]
+ 76%|#######5  | 717M/945M [00:03&lt;00:00, 266MB/s]
+ 79%|#######8  | 744M/945M [00:03&lt;00:00, 270MB/s]
+ 82%|########1 | 771M/945M [00:03&lt;00:00, 274MB/s]
+ 84%|########4 | 798M/945M [00:03&lt;00:00, 277MB/s]
+ 87%|########7 | 824M/945M [00:03&lt;00:00, 271MB/s]
+ 90%|######### | 851M/945M [00:03&lt;00:00, 274MB/s]
+ 93%|#########2| 878M/945M [00:03&lt;00:00, 266MB/s]
+ 96%|#########5| 904M/945M [00:04&lt;00:00, 270MB/s]
+ 99%|#########8| 931M/945M [00:04&lt;00:00, 273MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 236MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -731,37 +732,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: Immerse is available from firebox for £29.95 ($45) it works with any android and iOS phone that can run virtual reality apps from the respective stores . it also lets people watch 3D movies - all for the relatively cheap price of £29.99 ($45) the maximum size of compatible devices is 3.5 x 5.7-inches (8.2 x 15.4cm) the headset is fitted with an earphone slot to truly immerse the wearer in whatever they are watching and has adjustable head straps and lenses
+prediction: more than 7million front lawns in the uk have been paved over . the royal horticultural society is calling for people to plant hedges, trees and flowers to attract wildlife . more than 60% said looking at a street of paved-over front gardens saddened them .
 
-target: The virtual reality headset is available to buy from Firebox for £29.95 . It works with Android and iOS phones via virtual reality apps and 3D films . The maximum size of the device must be 3.5 x 5.7-inches (8.2 x 15.4cm) It calls itself an affordable alternative to rivals such as Oculus Rift .
+target: The RHS has warned about the 'grey sprawl' with front gardens paved over . Around 7million grassy front gardens have been replaced with paving . RHS is calling on people to plant trees, shrubs and climbers to go green . Claims seeing a green front garden boosts mood for 95 per cent of people .
 
 
 Example 2:
 
-prediction: burnley drew 0-0 with spurs at turf moor in their premier league clash . defender Michael Duff was satisfied with the way his side subdued prolific goalscorer Harry Kane . the result means neither side would have escaped the bottom three had they won .
+prediction: prime minister will call the tories 'the party of working people' he will pledge discounts of up to 70 per cent to allow all 1.3million families in housing association properties to buy their home . subsidy will be funded by forcing councils to sell off their most expensive properties when they become vacant .
 
-target: Burnley and Tottenham played out a 0-0 draw low on quality on Sunday . Harry Kane captained Spurs but the league's top goalscorer struggled . Kane could not find the net and Michael Duff says his team stopped him .
+target: David Cameron to announce extension to right-to-buy housing policy . PM will extend the right-to-buy to all housing association tenants . Discounts of up to 70 per cent to allow all  families in housing association properties to buy their home.
 
 
 Example 3:
 
-prediction: dove grey suit was once worn by notorious Nazi commander Hermann Goering . sweat stains on the suit linked it to the overweight commander . it is now expected to fetch £85,000 when it goes under the hammer in Plymouth .
+prediction: al Qaeda in the Indian Subcontinent, or AQIS, made its presence known in September 2014 . a spokesman for the group compares the suspected hijackers to u.s. army psychiatrist Nidal Hasan .
 
-target: Herman Goering founded the Gestapo and was head of the Nazi air force . He was known for being overweight and for his tendency to sweat a lot . Wear and tear on the suit made by Viennese tailor helped experts identify Goering as its owner . It is being auctioned by Devon-Parade Antiques and is expected to fetch £85,000 .
+target: Ahmed Farouq was a leader in al Qaeda's India branch . He was killed in a U.S. counterterrorism airstrike in January . Like Adam Gadahn, Farouq was American and part of al Qaeda .
 
 
 Example 4:
 
-prediction: davion only, 16, was born in 2013 and spent his entire life in foster care . he made a heartbreaking plea to his foster mother to adopt him . three years later he has finally found a loving family with his caseworker . she has been by his side since he was seven and will become his mother .
+prediction: woman, thought to be in her 60s, found floating in the water at boat club . police say post-mortem examination failed to establish cause of death . man, 65, arrested and released on police bail following 'suspicious' death .
 
-target: Davion Only, 16, captured hearts around the nation in 2013 when he made a plea for a family to 'love him forever' Later this month he will officially be adopted by his old caseworker Connie Bell Going and her family . Davion has been living with her two daughters and another adopted boy since December . Ms Going admitted it has not always been easy but says it is worth it  and 'everyday it gets a little bit better'
+target: Woman's body found in the water at Derby Motor Boat Club on Sunday . Discovered just hours after children's Easter Egg hunt in the grounds . A 65-year-old man arrested in connection with her death has been bailed . Police say they are treating unidentified woman's death as 'suspicious'
 
 
 Example 5:
 
-prediction: 'i would take Wayne's free-kicks because he practices them every day,' says Wilson . 'i would have to take Robin van Persie's movement,' he adds . 'i would have to take Radamel Falcao's instincts,' says the 19-year-old .
+prediction: pep guardiola's trousers tore at the top of his leg during germany's 6-1 win . 'fixed' Bayern Munich beat porto 6-1 to reach the champions league semi-finals . 'terror in Munich' reports record, who call the defeat a 'disaster' .
 
-target: James Wilson reveals what he would take from each Man United striker . The 19-year-old would take Wayne Rooney's free-kick taking ability . Wilson would like to add Robin van Persie's movement to his own game . While he would like to harness Radamel Falcao's predatory instincts . Man Utd sacked Moyes one year ago... what has Van Gaal changed since? READ: Manchester United Gareth Bale to give his side needed dynamism .
+target: Bayern Munich thrashed Porto 6-1 in the Champions League on Tuesday . Bayern trailed 3-1 after their first leg defeat in Portugal . Manager Pep Guardiola appeared with a tear in his trousers on the sideline .
 </pre></div>
 </div>
 </div>
@@ -1054,7 +1055,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  33.294 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  40.890 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
