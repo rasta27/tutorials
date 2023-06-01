@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['c est un vrai gentilhomme .', 'he is a true gentleman .']
+['il desire ardemment y aller .', 'he is eager to go there .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 31s (- 21m 25s) (5000 6%) 2.8643
-2m 58s (- 19m 20s) (10000 13%) 2.2565
-4m 25s (- 17m 43s) (15000 20%) 1.9382
-5m 53s (- 16m 12s) (20000 26%) 1.7111
-7m 21s (- 14m 43s) (25000 33%) 1.5082
-8m 48s (- 13m 12s) (30000 40%) 1.3441
-10m 16s (- 11m 44s) (35000 46%) 1.2034
-11m 44s (- 10m 16s) (40000 53%) 1.0621
-13m 11s (- 8m 47s) (45000 60%) 0.9483
-14m 40s (- 7m 20s) (50000 66%) 0.8711
-16m 8s (- 5m 52s) (55000 73%) 0.7997
-17m 35s (- 4m 23s) (60000 80%) 0.7340
-19m 3s (- 2m 55s) (65000 86%) 0.6516
-20m 31s (- 1m 27s) (70000 93%) 0.6089
-21m 58s (- 0m 0s) (75000 100%) 0.5624
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 26s (- 20m 6s) (5000 6%) 2.8325
+2m 47s (- 18m 6s) (10000 13%) 2.2833
+4m 8s (- 16m 34s) (15000 20%) 1.9775
+5m 30s (- 15m 8s) (20000 26%) 1.7414
+6m 51s (- 13m 43s) (25000 33%) 1.5259
+8m 11s (- 12m 17s) (30000 40%) 1.3743
+9m 32s (- 10m 54s) (35000 46%) 1.2206
+10m 57s (- 9m 35s) (40000 53%) 1.1219
+12m 20s (- 8m 13s) (45000 60%) 1.0025
+13m 44s (- 6m 52s) (50000 66%) 0.8748
+15m 8s (- 5m 30s) (55000 73%) 0.8198
+16m 37s (- 4m 9s) (60000 80%) 0.7546
+18m 3s (- 2m 46s) (65000 86%) 0.7068
+19m 30s (- 1m 23s) (70000 93%) 0.6251
+20m 53s (- 0m 0s) (75000 100%) 0.5888
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; tu es en avance .
-= you re early .
-&lt; you re early . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; c est un romancier et un artiste .
+= he is a novelist and artist .
+&lt; he is an and and artist . &lt;EOS&gt;
 
-&gt; il est fatigue a cause du surmenage .
-= he is tired from overwork .
-&lt; he is tired from from . &lt;EOS&gt;
+&gt; je suis desolee de te deranger si souvent .
+= i m sorry to bother you so often .
+&lt; i m sorry to bother you so often . &lt;EOS&gt;
 
-&gt; je suis toute a vous .
-= i m all yours .
-&lt; i m all yours . &lt;EOS&gt;
+&gt; c est un frileux .
+= he is very sensitive to cold .
+&lt; he s a bigot . &lt;EOS&gt;
 
-&gt; vous n etes pas en retard .
-= you re not late .
-&lt; you re not late . &lt;EOS&gt;
+&gt; c est une autorite en matiere d humanites .
+= he is an authority on the humanities .
+&lt; he is an authority on the humanities . &lt;EOS&gt;
 
-&gt; tu deviens rouge .
-= you re turning red .
-&lt; you re getting closer . &lt;EOS&gt;
+&gt; tu as parfaitement raison .
+= you re perfectly right .
+&lt; you re absolutely right . &lt;EOS&gt;
 
-&gt; il est membre du conseil paroissial .
-= he is a member of the parish committee .
-&lt; he is a member of the the . . &lt;EOS&gt;
+&gt; je suis guerie .
+= i m cured .
+&lt; i m cured . &lt;EOS&gt;
 
-&gt; je suis pret a partir maintenant .
-= i m ready to go now .
-&lt; i m ready to leave now . &lt;EOS&gt;
+&gt; je ne suis pas concerne par cette affaire .
+= i am not concerned with this affair .
+&lt; i am not concerned with this affair . &lt;EOS&gt;
 
-&gt; vous etes creative .
-= you re creative .
-&lt; you re creative . &lt;EOS&gt;
+&gt; il est intelligent et ambitieux .
+= he s smart and ambitious .
+&lt; he s smart and ambitious . &lt;EOS&gt;
 
-&gt; je suis rationnelle .
-= i m rational .
-&lt; i m rational . &lt;EOS&gt;
+&gt; je suis sur qu elles vont gagner .
+= i m sure they ll win .
+&lt; i m sure they ll win . &lt;EOS&gt;
 
-&gt; je suis desole de decevoir vos plans .
-= i m sorry to upset your plans .
-&lt; i m sorry to your plans . &lt;EOS&gt;
+&gt; il travaille sur un nouveau roman .
+= he is working on a new novel .
+&lt; he is working on a new . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f6a5e5cf5e0&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f8b80205d50&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s too loud . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared to die . &lt;EOS&gt;
+output = i m not afraid to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a young young . &lt;EOS&gt;
+output = he s a talented young talented . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 22 minutes  13.767 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 21 minutes  6.945 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

@@ -195,7 +195,7 @@ We get the prediction probabilities by passing it through an instance of the ``n
 
  .. code-block:: none
 
-    Predicted class: tensor([4], device='cuda:0')
+    Predicted class: tensor([5], device='cuda:0')
 
 
 
@@ -325,26 +325,26 @@ linear layers, but there's other activations to introduce non-linearity in your 
 
  .. code-block:: none
 
-    Before ReLU: tensor([[ 0.5908,  1.0493, -0.5969, -0.1057, -0.1830, -0.2119,  0.0280, -0.4112,
-              0.2575,  0.1174,  0.2817,  0.2553,  0.3503, -0.4680, -0.0683,  0.2621,
-             -0.2608,  0.2247, -0.1682, -0.2597],
-            [ 0.8891,  0.7333, -0.5538, -0.1625, -0.4010, -0.2552, -0.0045, -0.1552,
-              0.2904,  0.5488,  0.0763,  0.1155, -0.0302, -0.4419, -0.1088, -0.0206,
-             -0.1555,  0.1289, -0.1183,  0.0132],
-            [ 0.2528,  0.6429, -0.6063, -0.2888, -0.3954,  0.0734,  0.2739, -0.4773,
-             -0.0405,  0.0538,  0.1907,  0.3777,  0.2417, -0.3790, -0.2980,  0.0413,
-             -0.3567,  0.0954,  0.0360, -0.1687]], grad_fn=<AddmmBackward0>)
+    Before ReLU: tensor([[ 0.1464, -0.1361, -0.1877,  0.2799,  0.0163, -0.7691,  0.2358, -0.4758,
+             -0.1607,  0.2364, -0.2579, -0.4214, -0.1685, -0.3426, -0.3890, -0.0899,
+              0.0303,  0.7352, -0.1432,  0.2596],
+            [ 0.2035, -0.0321, -0.1261, -0.0342, -0.2077, -0.6492,  0.4171, -0.4076,
+              0.1963,  0.2015, -0.0969, -0.0290, -0.3869, -0.0232, -0.3229,  0.0186,
+             -0.0740,  0.4677, -0.3219,  0.0744],
+            [ 0.1377,  0.1225, -0.2130, -0.4203, -0.2194, -0.9429,  0.1856, -0.1867,
+              0.0133,  0.4366,  0.1542, -0.3262, -0.3064,  0.0512, -0.7076, -0.0597,
+              0.1767,  0.1720, -0.2335,  0.3371]], grad_fn=<AddmmBackward0>)
 
 
-    After ReLU: tensor([[0.5908, 1.0493, 0.0000, 0.0000, 0.0000, 0.0000, 0.0280, 0.0000, 0.2575,
-             0.1174, 0.2817, 0.2553, 0.3503, 0.0000, 0.0000, 0.2621, 0.0000, 0.2247,
-             0.0000, 0.0000],
-            [0.8891, 0.7333, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2904,
-             0.5488, 0.0763, 0.1155, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.1289,
-             0.0000, 0.0132],
-            [0.2528, 0.6429, 0.0000, 0.0000, 0.0000, 0.0734, 0.2739, 0.0000, 0.0000,
-             0.0538, 0.1907, 0.3777, 0.2417, 0.0000, 0.0000, 0.0413, 0.0000, 0.0954,
-             0.0360, 0.0000]], grad_fn=<ReluBackward0>)
+    After ReLU: tensor([[0.1464, 0.0000, 0.0000, 0.2799, 0.0163, 0.0000, 0.2358, 0.0000, 0.0000,
+             0.2364, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0303, 0.7352,
+             0.0000, 0.2596],
+            [0.2035, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.4171, 0.0000, 0.1963,
+             0.2015, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0186, 0.0000, 0.4677,
+             0.0000, 0.0744],
+            [0.1377, 0.1225, 0.0000, 0.0000, 0.0000, 0.0000, 0.1856, 0.0000, 0.0133,
+             0.4366, 0.1542, 0.0000, 0.0000, 0.0512, 0.0000, 0.0000, 0.1767, 0.1720,
+             0.0000, 0.3371]], grad_fn=<ReluBackward0>)
 
 
 
@@ -446,24 +446,23 @@ In this example, we iterate over each parameter, and print its size and a previe
     )
 
 
-    Layer: linear_relu_stack.0.weight | Size: torch.Size([512, 784]) | Values : tensor([[-0.0039,  0.0219,  0.0064,  ...,  0.0243, -0.0239,  0.0149],
-            [ 0.0335, -0.0076, -0.0330,  ..., -0.0222,  0.0259,  0.0291]],
+    Layer: linear_relu_stack.0.weight | Size: torch.Size([512, 784]) | Values : tensor([[-0.0206, -0.0315,  0.0214,  ...,  0.0283,  0.0067, -0.0190],
+            [-0.0219, -0.0163, -0.0207,  ...,  0.0040,  0.0145,  0.0136]],
            device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.0.bias | Size: torch.Size([512]) | Values : tensor([-0.0291,  0.0319], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.0.bias | Size: torch.Size([512]) | Values : tensor([ 0.0058, -0.0113], device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.2.weight | Size: torch.Size([512, 512]) | Values : tensor([[ 0.0101, -0.0278, -0.0287,  ..., -0.0375,  0.0319,  0.0328],
-            [ 0.0067, -0.0217, -0.0425,  ...,  0.0435,  0.0154,  0.0370]],
+    Layer: linear_relu_stack.2.weight | Size: torch.Size([512, 512]) | Values : tensor([[-0.0394, -0.0256, -0.0079,  ...,  0.0128,  0.0126,  0.0025],
+            [-0.0122, -0.0073, -0.0181,  ...,  0.0051,  0.0376,  0.0008]],
            device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.2.bias | Size: torch.Size([512]) | Values : tensor([-0.0120,  0.0169], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.2.bias | Size: torch.Size([512]) | Values : tensor([0.0230, 0.0390], device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.4.weight | Size: torch.Size([10, 512]) | Values : tensor([[-4.0137e-02,  2.3935e-02,  3.6725e-02,  ...,  5.1061e-05,
-              9.3389e-03,  3.9535e-03],
-            [-1.3752e-02,  2.0271e-02, -1.4720e-02,  ..., -8.6456e-03,
-              2.7599e-02,  2.8198e-02]], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.4.weight | Size: torch.Size([10, 512]) | Values : tensor([[ 0.0353,  0.0340,  0.0091,  ..., -0.0044,  0.0117, -0.0342],
+            [-0.0357,  0.0412, -0.0407,  ..., -0.0117, -0.0261, -0.0105]],
+           device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.4.bias | Size: torch.Size([10]) | Values : tensor([0.0002, 0.0367], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.4.bias | Size: torch.Size([10]) | Values : tensor([-0.0179,  0.0371], device='cuda:0', grad_fn=<SliceBackward0>) 
 
 
 
@@ -483,7 +482,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.918 seconds)
+   **Total running time of the script:** ( 0 minutes  4.638 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_buildmodel_tutorial.py:
