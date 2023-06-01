@@ -81,7 +81,7 @@ These two major transfer learning scenarios look as follows:
  .. code-block:: none
 
 
-    <contextlib.ExitStack object at 0x7fd5f8c13a30>
+    <contextlib.ExitStack object at 0x7f18a3ba7e50>
 
 
 
@@ -186,7 +186,7 @@ augmentations.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_001.png
-   :alt: ['ants', 'bees', 'bees', 'bees']
+   :alt: ['ants', 'ants', 'bees', 'bees']
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_001.png
    :class: sphx-glr-single-img
 
@@ -374,9 +374,13 @@ Load a pretrained model and reset final fully connected layer.
     Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
       0%|          | 0.00/44.7M [00:00<?, ?B/s]
-     27%|##7       | 12.2M/44.7M [00:00<00:00, 128MB/s]
-     88%|########8 | 39.5M/44.7M [00:00<00:00, 221MB/s]
-    100%|##########| 44.7M/44.7M [00:00<00:00, 213MB/s]
+      2%|2         | 1.10M/44.7M [00:00<00:03, 11.5MB/s]
+      7%|6         | 3.00M/44.7M [00:00<00:02, 16.3MB/s]
+     13%|#3        | 5.99M/44.7M [00:00<00:01, 23.1MB/s]
+     24%|##3       | 10.7M/44.7M [00:00<00:01, 33.3MB/s]
+     40%|####      | 18.0M/44.7M [00:00<00:00, 49.0MB/s]
+     67%|######7   | 30.0M/44.7M [00:00<00:00, 74.8MB/s]
+    100%|##########| 44.7M/44.7M [00:00<00:00, 68.4MB/s]
 
 
 
@@ -408,131 +412,131 @@ minute.
 
     Epoch 0/24
     ----------
-    train Loss: 0.6418 Acc: 0.6393
-    val Loss: 0.2291 Acc: 0.9281
+    train Loss: 0.5517 Acc: 0.6967
+    val Loss: 0.1693 Acc: 0.9542
 
     Epoch 1/24
     ----------
-    train Loss: 0.4781 Acc: 0.7951
-    val Loss: 0.3476 Acc: 0.8562
+    train Loss: 0.6300 Acc: 0.7746
+    val Loss: 0.4150 Acc: 0.8301
 
     Epoch 2/24
     ----------
-    train Loss: 0.5001 Acc: 0.7787
-    val Loss: 0.4195 Acc: 0.8627
+    train Loss: 0.4596 Acc: 0.8279
+    val Loss: 0.2345 Acc: 0.9412
 
     Epoch 3/24
     ----------
-    train Loss: 0.5069 Acc: 0.7869
-    val Loss: 0.2404 Acc: 0.8824
+    train Loss: 0.5047 Acc: 0.7992
+    val Loss: 0.3464 Acc: 0.8889
 
     Epoch 4/24
     ----------
-    train Loss: 0.5946 Acc: 0.7869
-    val Loss: 0.5699 Acc: 0.8105
+    train Loss: 0.4437 Acc: 0.7992
+    val Loss: 0.5851 Acc: 0.8170
 
     Epoch 5/24
     ----------
-    train Loss: 0.6083 Acc: 0.8238
-    val Loss: 0.2098 Acc: 0.9216
+    train Loss: 0.4993 Acc: 0.8361
+    val Loss: 0.2813 Acc: 0.9150
 
     Epoch 6/24
     ----------
-    train Loss: 0.4761 Acc: 0.8238
-    val Loss: 0.5580 Acc: 0.7974
+    train Loss: 0.5261 Acc: 0.8156
+    val Loss: 0.3111 Acc: 0.8627
 
     Epoch 7/24
     ----------
-    train Loss: 0.4026 Acc: 0.8279
-    val Loss: 0.2161 Acc: 0.9281
+    train Loss: 0.4277 Acc: 0.7992
+    val Loss: 0.2848 Acc: 0.9020
 
     Epoch 8/24
     ----------
-    train Loss: 0.3070 Acc: 0.8770
-    val Loss: 0.2140 Acc: 0.9346
+    train Loss: 0.3210 Acc: 0.8566
+    val Loss: 0.2526 Acc: 0.9085
 
     Epoch 9/24
     ----------
-    train Loss: 0.3026 Acc: 0.8811
-    val Loss: 0.2240 Acc: 0.9150
+    train Loss: 0.3396 Acc: 0.8689
+    val Loss: 0.2391 Acc: 0.9085
 
     Epoch 10/24
     ----------
-    train Loss: 0.4050 Acc: 0.8402
-    val Loss: 0.2286 Acc: 0.9150
+    train Loss: 0.2658 Acc: 0.8852
+    val Loss: 0.2227 Acc: 0.9020
 
     Epoch 11/24
     ----------
-    train Loss: 0.2525 Acc: 0.9016
-    val Loss: 0.2090 Acc: 0.9346
+    train Loss: 0.3138 Acc: 0.8730
+    val Loss: 0.2119 Acc: 0.9020
 
     Epoch 12/24
     ----------
-    train Loss: 0.2666 Acc: 0.8770
-    val Loss: 0.2366 Acc: 0.9150
+    train Loss: 0.3638 Acc: 0.8361
+    val Loss: 0.2481 Acc: 0.8824
 
     Epoch 13/24
     ----------
-    train Loss: 0.3938 Acc: 0.8320
-    val Loss: 0.2072 Acc: 0.9412
+    train Loss: 0.2842 Acc: 0.8648
+    val Loss: 0.2048 Acc: 0.9150
 
     Epoch 14/24
     ----------
-    train Loss: 0.2098 Acc: 0.9057
-    val Loss: 0.2202 Acc: 0.9281
+    train Loss: 0.3230 Acc: 0.8770
+    val Loss: 0.2065 Acc: 0.9150
 
     Epoch 15/24
     ----------
-    train Loss: 0.2563 Acc: 0.9016
-    val Loss: 0.2149 Acc: 0.9281
+    train Loss: 0.3198 Acc: 0.8607
+    val Loss: 0.2164 Acc: 0.9216
 
     Epoch 16/24
     ----------
-    train Loss: 0.2138 Acc: 0.9303
-    val Loss: 0.2132 Acc: 0.9346
+    train Loss: 0.2844 Acc: 0.8648
+    val Loss: 0.2106 Acc: 0.9150
 
     Epoch 17/24
     ----------
-    train Loss: 0.2586 Acc: 0.8852
-    val Loss: 0.2097 Acc: 0.9346
+    train Loss: 0.3030 Acc: 0.8811
+    val Loss: 0.2075 Acc: 0.9085
 
     Epoch 18/24
     ----------
-    train Loss: 0.2443 Acc: 0.9098
-    val Loss: 0.2297 Acc: 0.9216
+    train Loss: 0.2515 Acc: 0.8975
+    val Loss: 0.2198 Acc: 0.9150
 
     Epoch 19/24
     ----------
-    train Loss: 0.2483 Acc: 0.8934
-    val Loss: 0.2054 Acc: 0.9281
+    train Loss: 0.2603 Acc: 0.8934
+    val Loss: 0.1998 Acc: 0.9216
 
     Epoch 20/24
     ----------
-    train Loss: 0.2446 Acc: 0.8934
-    val Loss: 0.2071 Acc: 0.9346
+    train Loss: 0.2433 Acc: 0.8975
+    val Loss: 0.2173 Acc: 0.9216
 
     Epoch 21/24
     ----------
-    train Loss: 0.2711 Acc: 0.8770
-    val Loss: 0.2070 Acc: 0.9281
+    train Loss: 0.2713 Acc: 0.9057
+    val Loss: 0.2059 Acc: 0.9150
 
     Epoch 22/24
     ----------
-    train Loss: 0.2781 Acc: 0.8893
-    val Loss: 0.1996 Acc: 0.9346
+    train Loss: 0.3150 Acc: 0.8689
+    val Loss: 0.2051 Acc: 0.9216
 
     Epoch 23/24
     ----------
-    train Loss: 0.2593 Acc: 0.8934
-    val Loss: 0.2094 Acc: 0.9216
+    train Loss: 0.2372 Acc: 0.9016
+    val Loss: 0.2101 Acc: 0.9216
 
     Epoch 24/24
     ----------
-    train Loss: 0.3182 Acc: 0.8689
-    val Loss: 0.2099 Acc: 0.9346
+    train Loss: 0.3318 Acc: 0.8648
+    val Loss: 0.2231 Acc: 0.8954
 
     Training complete in 1m 10s
-    Best val Acc: 0.941176
+    Best val Acc: 0.954248
 
 
 
@@ -549,7 +553,7 @@ minute.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_002.png
-   :alt: predicted: ants, predicted: bees, predicted: ants, predicted: ants, predicted: ants, predicted: ants
+   :alt: predicted: ants, predicted: bees, predicted: ants, predicted: ants, predicted: bees, predicted: ants
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_002.png
    :class: sphx-glr-single-img
 
@@ -630,130 +634,130 @@ network. However, forward does need to be computed.
 
     Epoch 0/24
     ----------
-    train Loss: 0.5498 Acc: 0.6762
-    val Loss: 0.3347 Acc: 0.8627
+    train Loss: 0.5605 Acc: 0.6721
+    val Loss: 0.2021 Acc: 0.9477
 
     Epoch 1/24
     ----------
-    train Loss: 0.7156 Acc: 0.7295
-    val Loss: 0.1592 Acc: 0.9608
+    train Loss: 0.4737 Acc: 0.7705
+    val Loss: 0.2088 Acc: 0.9085
 
     Epoch 2/24
     ----------
-    train Loss: 0.5029 Acc: 0.7869
-    val Loss: 0.1686 Acc: 0.9412
+    train Loss: 0.4423 Acc: 0.8197
+    val Loss: 0.1652 Acc: 0.9412
 
     Epoch 3/24
     ----------
-    train Loss: 0.6171 Acc: 0.7705
-    val Loss: 0.3425 Acc: 0.8758
+    train Loss: 0.4582 Acc: 0.8197
+    val Loss: 0.2345 Acc: 0.9216
 
     Epoch 4/24
     ----------
-    train Loss: 0.4259 Acc: 0.7951
-    val Loss: 0.1843 Acc: 0.9542
+    train Loss: 0.5236 Acc: 0.7705
+    val Loss: 0.2309 Acc: 0.9085
 
     Epoch 5/24
     ----------
-    train Loss: 0.4769 Acc: 0.7828
-    val Loss: 0.2320 Acc: 0.9216
+    train Loss: 0.5165 Acc: 0.7746
+    val Loss: 0.1567 Acc: 0.9477
 
     Epoch 6/24
     ----------
-    train Loss: 0.5150 Acc: 0.8238
-    val Loss: 0.3365 Acc: 0.8889
+    train Loss: 0.4955 Acc: 0.7828
+    val Loss: 0.1857 Acc: 0.9477
 
     Epoch 7/24
     ----------
-    train Loss: 0.4940 Acc: 0.8320
-    val Loss: 0.2278 Acc: 0.9346
+    train Loss: 0.2889 Acc: 0.8770
+    val Loss: 0.2006 Acc: 0.9412
 
     Epoch 8/24
     ----------
-    train Loss: 0.4222 Acc: 0.8402
-    val Loss: 0.2164 Acc: 0.9477
+    train Loss: 0.2714 Acc: 0.8852
+    val Loss: 0.1806 Acc: 0.9412
 
     Epoch 9/24
     ----------
-    train Loss: 0.2911 Acc: 0.8648
-    val Loss: 0.2326 Acc: 0.9346
+    train Loss: 0.3334 Acc: 0.8689
+    val Loss: 0.1488 Acc: 0.9477
 
     Epoch 10/24
     ----------
-    train Loss: 0.3295 Acc: 0.8566
-    val Loss: 0.2013 Acc: 0.9412
+    train Loss: 0.2893 Acc: 0.8566
+    val Loss: 0.1772 Acc: 0.9412
 
     Epoch 11/24
     ----------
-    train Loss: 0.3532 Acc: 0.8689
-    val Loss: 0.2274 Acc: 0.9412
+    train Loss: 0.3518 Acc: 0.8402
+    val Loss: 0.1729 Acc: 0.9477
 
     Epoch 12/24
     ----------
-    train Loss: 0.3570 Acc: 0.8566
-    val Loss: 0.2132 Acc: 0.9412
+    train Loss: 0.4128 Acc: 0.8320
+    val Loss: 0.1755 Acc: 0.9477
 
     Epoch 13/24
     ----------
-    train Loss: 0.3466 Acc: 0.8525
-    val Loss: 0.2281 Acc: 0.9477
+    train Loss: 0.3375 Acc: 0.8566
+    val Loss: 0.1934 Acc: 0.9346
 
     Epoch 14/24
     ----------
-    train Loss: 0.2941 Acc: 0.8893
-    val Loss: 0.2036 Acc: 0.9477
+    train Loss: 0.3973 Acc: 0.8197
+    val Loss: 0.1547 Acc: 0.9477
 
     Epoch 15/24
     ----------
-    train Loss: 0.3638 Acc: 0.8074
-    val Loss: 0.2182 Acc: 0.9412
+    train Loss: 0.3944 Acc: 0.8197
+    val Loss: 0.1676 Acc: 0.9477
 
     Epoch 16/24
     ----------
-    train Loss: 0.4365 Acc: 0.8115
-    val Loss: 0.1904 Acc: 0.9477
+    train Loss: 0.3497 Acc: 0.8238
+    val Loss: 0.1820 Acc: 0.9412
 
     Epoch 17/24
     ----------
-    train Loss: 0.3058 Acc: 0.8566
-    val Loss: 0.1833 Acc: 0.9412
+    train Loss: 0.3196 Acc: 0.8607
+    val Loss: 0.1496 Acc: 0.9477
 
     Epoch 18/24
     ----------
-    train Loss: 0.3233 Acc: 0.8648
-    val Loss: 0.1870 Acc: 0.9542
+    train Loss: 0.3145 Acc: 0.8484
+    val Loss: 0.1698 Acc: 0.9477
 
     Epoch 19/24
     ----------
-    train Loss: 0.3193 Acc: 0.8566
-    val Loss: 0.1784 Acc: 0.9477
+    train Loss: 0.3293 Acc: 0.8607
+    val Loss: 0.1930 Acc: 0.9477
 
     Epoch 20/24
     ----------
-    train Loss: 0.3721 Acc: 0.8197
-    val Loss: 0.2336 Acc: 0.9216
+    train Loss: 0.3783 Acc: 0.8525
+    val Loss: 0.1617 Acc: 0.9608
 
     Epoch 21/24
     ----------
-    train Loss: 0.3426 Acc: 0.8525
-    val Loss: 0.2110 Acc: 0.9477
+    train Loss: 0.2729 Acc: 0.8770
+    val Loss: 0.1581 Acc: 0.9608
 
     Epoch 22/24
     ----------
-    train Loss: 0.3589 Acc: 0.8361
-    val Loss: 0.2013 Acc: 0.9542
+    train Loss: 0.2620 Acc: 0.8893
+    val Loss: 0.1614 Acc: 0.9477
 
     Epoch 23/24
     ----------
-    train Loss: 0.3692 Acc: 0.8443
-    val Loss: 0.1841 Acc: 0.9477
+    train Loss: 0.3839 Acc: 0.8320
+    val Loss: 0.1614 Acc: 0.9477
 
     Epoch 24/24
     ----------
-    train Loss: 0.3323 Acc: 0.8443
-    val Loss: 0.1998 Acc: 0.9477
+    train Loss: 0.2941 Acc: 0.8893
+    val Loss: 0.1658 Acc: 0.9608
 
-    Training complete in 0m 44s
+    Training complete in 0m 43s
     Best val Acc: 0.960784
 
 
@@ -773,7 +777,7 @@ network. However, forward does need to be computed.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_003.png
-   :alt: predicted: bees, predicted: ants, predicted: ants, predicted: ants, predicted: ants, predicted: ants
+   :alt: predicted: ants, predicted: ants, predicted: ants, predicted: bees, predicted: bees, predicted: bees
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_003.png
    :class: sphx-glr-single-img
 
@@ -794,7 +798,7 @@ checkout our `Quantized Transfer Learning for Computer Vision Tutorial <https://
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  0.417 seconds)
+   **Total running time of the script:** ( 1 minutes  59.719 seconds)
 
 
 .. _sphx_glr_download_beginner_transfer_learning_tutorial.py:

@@ -625,7 +625,7 @@ For this we will write a small function:
 
  .. code-block:: none
 
-    (([1, 5, 258, 4, 2], [1, 5, 602, 4, 2], [1, 5, 358, 4, 2], [1, 5220, 21, 4, 2]), ([1, 7, 23, 376, 4, 2], [1, 7, 23, 752, 4, 2], [1, 296, 10, 18, 577, 4, 2], [1, 864, 32, 20, 33, 1092, 24, 2]))
+    (([1, 5, 844, 194, 2], [1, 5, 844, 4, 2], [1, 2099, 106, 194, 2], [1, 5, 1261, 4, 2]), ([1, 7, 23, 922, 24, 2], [1, 7, 23, 922, 4, 2], [1, 4695, 5, 1328, 24, 2], [1, 7, 23, 32, 1474, 4, 2]))
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  38.210 seconds)
+   **Total running time of the script:** ( 4 minutes  32.705 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:
