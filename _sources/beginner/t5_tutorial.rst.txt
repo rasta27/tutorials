@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 14.8MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.2MB/s]
 
 
 
@@ -135,45 +135,48 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 1.21M/945M [00:00<01:18, 12.6MB/s]
-      0%|          | 3.29M/945M [00:00<00:55, 17.9MB/s]
-      1%|          | 6.58M/945M [00:00<00:38, 25.4MB/s]
-      1%|1         | 11.7M/945M [00:00<00:26, 36.7MB/s]
-      2%|2         | 20.0M/945M [00:00<00:17, 54.6MB/s]
-      4%|3         | 33.4M/945M [00:00<00:11, 83.8MB/s]
-      6%|5         | 55.0M/945M [00:00<00:07, 130MB/s] 
-      9%|8         | 83.3M/945M [00:00<00:04, 183MB/s]
-     12%|#1        | 112M/945M [00:00<00:03, 219MB/s] 
-     15%|#4        | 140M/945M [00:01<00:03, 243MB/s]
-     18%|#7        | 168M/945M [00:01<00:03, 259MB/s]
-     21%|##        | 197M/945M [00:01<00:02, 272MB/s]
-     24%|##3       | 226M/945M [00:01<00:02, 280MB/s]
-     27%|##6       | 253M/945M [00:01<00:02, 282MB/s]
-     30%|##9       | 281M/945M [00:01<00:02, 287MB/s]
-     33%|###2      | 310M/945M [00:01<00:02, 292MB/s]
-     36%|###5      | 339M/945M [00:01<00:02, 294MB/s]
-     39%|###8      | 367M/945M [00:01<00:02, 295MB/s]
-     42%|####1     | 396M/945M [00:01<00:01, 296MB/s]
-     45%|####4     | 424M/945M [00:02<00:01, 297MB/s]
-     48%|####7     | 453M/945M [00:02<00:01, 298MB/s]
-     51%|#####     | 481M/945M [00:02<00:01, 298MB/s]
-     54%|#####3    | 510M/945M [00:02<00:01, 292MB/s]
-     57%|#####6    | 538M/945M [00:02<00:01, 294MB/s]
-     60%|#####9    | 566M/945M [00:02<00:01, 290MB/s]
-     63%|######2   | 595M/945M [00:02<00:01, 292MB/s]
-     66%|######5   | 623M/945M [00:02<00:01, 293MB/s]
-     69%|######8   | 651M/945M [00:02<00:01, 294MB/s]
-     72%|#######1  | 679M/945M [00:02<00:00, 295MB/s]
-     75%|#######4  | 707M/945M [00:03<00:00, 293MB/s]
-     78%|#######7  | 736M/945M [00:03<00:00, 293MB/s]
-     81%|########  | 764M/945M [00:03<00:00, 294MB/s]
-     84%|########3 | 792M/945M [00:03<00:00, 287MB/s]
-     87%|########6 | 820M/945M [00:03<00:00, 289MB/s]
-     90%|########9 | 848M/945M [00:03<00:00, 291MB/s]
-     93%|#########2| 876M/945M [00:03<00:00, 292MB/s]
-     96%|#########5| 904M/945M [00:03<00:00, 288MB/s]
-     99%|#########8| 932M/945M [00:03<00:00, 289MB/s]
-    100%|##########| 945M/945M [00:03<00:00, 255MB/s]
+      1%|          | 5.24M/945M [00:00<00:17, 55.0MB/s]
+      2%|1         | 17.1M/945M [00:00<00:10, 95.6MB/s]
+      4%|3         | 35.8M/945M [00:00<00:06, 141MB/s] 
+      6%|6         | 59.2M/945M [00:00<00:05, 182MB/s]
+      9%|8         | 82.2M/945M [00:00<00:04, 204MB/s]
+     11%|#1        | 105M/945M [00:00<00:04, 217MB/s] 
+     14%|#3        | 128M/945M [00:00<00:03, 225MB/s]
+     16%|#6        | 151M/945M [00:00<00:03, 230MB/s]
+     19%|#8        | 175M/945M [00:00<00:03, 236MB/s]
+     21%|##1       | 199M/945M [00:01<00:03, 240MB/s]
+     24%|##3       | 223M/945M [00:01<00:03, 243MB/s]
+     26%|##6       | 247M/945M [00:01<00:02, 246MB/s]
+     29%|##8       | 270M/945M [00:01<00:02, 245MB/s]
+     31%|###1      | 294M/945M [00:01<00:02, 247MB/s]
+     34%|###3      | 318M/945M [00:01<00:02, 248MB/s]
+     36%|###6      | 342M/945M [00:01<00:02, 246MB/s]
+     39%|###8      | 365M/945M [00:01<00:02, 245MB/s]
+     41%|####1     | 389M/945M [00:01<00:02, 243MB/s]
+     44%|####3     | 413M/945M [00:01<00:02, 246MB/s]
+     46%|####6     | 437M/945M [00:02<00:02, 249MB/s]
+     49%|####8     | 461M/945M [00:02<00:02, 250MB/s]
+     51%|#####1    | 485M/945M [00:02<00:01, 246MB/s]
+     54%|#####3    | 509M/945M [00:02<00:01, 245MB/s]
+     56%|#####6    | 532M/945M [00:02<00:01, 243MB/s]
+     59%|#####8    | 555M/945M [00:02<00:01, 240MB/s]
+     61%|######1   | 579M/945M [00:02<00:01, 242MB/s]
+     64%|######3   | 602M/945M [00:02<00:01, 238MB/s]
+     66%|######6   | 626M/945M [00:02<00:01, 242MB/s]
+     69%|######8   | 649M/945M [00:02<00:01, 239MB/s]
+     71%|#######1  | 673M/945M [00:03<00:01, 242MB/s]
+     74%|#######3  | 696M/945M [00:03<00:01, 238MB/s]
+     76%|#######6  | 720M/945M [00:03<00:00, 241MB/s]
+     79%|#######8  | 743M/945M [00:03<00:00, 240MB/s]
+     81%|########1 | 767M/945M [00:03<00:00, 243MB/s]
+     84%|########3 | 790M/945M [00:03<00:00, 240MB/s]
+     86%|########6 | 813M/945M [00:03<00:00, 240MB/s]
+     88%|########8 | 836M/945M [00:03<00:00, 240MB/s]
+     91%|######### | 859M/945M [00:03<00:00, 240MB/s]
+     93%|#########3| 882M/945M [00:03<00:00, 240MB/s]
+     96%|#########5| 904M/945M [00:04<00:00, 239MB/s]
+     98%|#########8| 928M/945M [00:04<00:00, 241MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 235MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +472,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: mark vanhoenacker is a senior first officer with British Airways . he wants the reader to understand his passion for his job . he admires the 747s like a sculptor might a perfect human torso .
+    prediction: a group of fighters in Afghanistan agreed to be filmed by a CNN cameraman . they agreed to be filmed by a cameraman parading their ISIS flags in a valley . the men display their weapons, and practice high kicks .
 
-    target: The Germanwings tragedy has ignited debate about depression in pilots . Author, Vanhoenacker is a senior first officer with British Airways . He wants the reader to simply understand his passion for his job .
+    target: A group of fighters in Afghanistan is filmed by a CNN cameraman parading ISIS flags . U.S. official: ISIS militants have "no military capability" at present, but are trying to recruit disillusioned Taliban in several areas . Rivalry between ISIS and the Taliban in Afghanistan is fierce enough to mean the ISIS fighters could be killed for brandishing the flag .
 
 
     Example 2:
 
-    prediction: the chief political correspondent of Slate magazine was announced as the new host on Sunday after the 78-year-old announced he would be retiring last week . he is expected to make his first appearance this summer, ending Schieffer's 14-year reign as host of the long-running news program . Dickerson worked for time magazine for 12 years, four of them as white house correspondent, and has written extensively about the 2008 presidential campaign .
+    prediction: carwyn Scott-Howell was on holiday with his mother, sister and brother . he fell over a 164ft drop in the french Alps while skiing with family . his family said he was a 'very competent skier and snowboarder'
 
-    target: Dickerson was announced as replacement during show on Sunday . Journalist is the Chief Political Correspondent for Slate magazine . Revealed he is 'honored and excited' by the new job . His veteran CBS colleague announced he was stepping down last week . Texas native Schieffer has been host of the show since 1991 .
+    target: Carwyn Scott-Howell died on a family holiday in Flaine in French Alps . He went ahead alone when sister fell and his mother stopped to help . Skied into dense woodland before sliding towards a 164-foot cliff . Thought he may have entered woodland as thought it was shortcut to hotel . Family described him as a 'very daring, outgoing, determined little boy'
 
 
     Example 3:
 
-    prediction: paramedics found Kyle Hargreaves kissing a girl on a stretcher in the back of the ambulance . they had been called to an address in Grimsby, Lincolnshire . the crew had left the doors open while they collected a 92-year-old man . they returned to find Hargreaves and the girl lying on top of each other . when confronted by paramedic, he said: 'what's your problem? we are just trying to have sex'
+    prediction: a number of players have been linked with a move for the danish international . wass has been watched by the likes of chelsea, manchester city and manchester city . he is available for around £3.5million and has been watched by the likes of swansea, liverpool and manchester city .
 
-    target: Kyle Hargreaves was caught kissing a girl on a stretcher in the ambulance . When confronted, the 18-year-old replied 'we are just trying to have sex' He punched paramedic Michael Newman three times and spat in his face .
+    target: Chelsea and Liverpool target Daniel Wass can play as a full back or winger . Schalke and Inter Milan have also shown interest in the 25-year-old . Stoke are also interested in Lee Cattermole and Javier Hernandez . Denmark international could be sold for a fee close to £3.5million .
 
 
     Example 4:
 
-    prediction: "i thought I lost you," the father of a sailor says of his son . "he's got very strong constitution and (is strong) not only physically, but spiritually," he says .
+    prediction: Kyle Wittstock, 22, died after his paraglider crashed into a garage door . he was taken to hospital and pronounced dead shortly after arrival . the paraglider was powered by a helium-powered motor .
 
-    target: Louis Jordan says his sailboat capsized three times . He survived by collecting rainwater and eating raw fish . Frank Jordan told CNN his son isn't an experienced sailor but has a strong will .
+    target: Kyle Wittstock crashed into a garage door when his paraglider was swept to the ground by a strong wind . The 22-year-old was taken to hospital and pronounced dead . He leaves behind a fiance and nine-week-old daughter . Mr Wittstock posted pictures of himself in the air hours before the crash . Friends and family were quick to express their grief over his death .
 
 
     Example 5:
 
-    prediction: defender says promotion to the premier league is an 'unbelievable achievement' . players and staff erupted on the team-bus after 2-0 win at Brighton . defender says the club can stay up and will add to squad in summer .
+    prediction: west brom host liverpool at the hawthorns on saturday . the baggies are eight points above the relegation zone . they also face manchester united, arsenal and Chelsea .
 
-    target: Watford have sealed an automatic return to the Premier League following their 2-0 win at Brighton and Middlesbrough's 4-3 loss at Fulham . Players celebrated wildly on the team-bus as the news came in . Defender Tommie Hoban is confident that the team has what it takes to stay up next season and insists they already have a strong squad to build on .
+    target: Tony Pulis has called on his players to embrace being cast as outsiders . West Brom begin tricky fixture list with visit of Liverpool to the Hawthorns . Baggies also face Manchester United, Chelsea and Arsenal in the run-in . CLICK HERE for all the West Brom vs Liverpool team news .
 
 
 
@@ -853,7 +856,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  44.155 seconds)
+   **Total running time of the script:** ( 3 minutes  41.122 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

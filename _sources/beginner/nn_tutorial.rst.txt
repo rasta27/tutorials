@@ -288,8 +288,8 @@ random at this stage, since we start with random weights.
 
  .. code-block:: none
 
-    tensor([-2.9519, -2.3688, -2.0265, -2.3135, -1.9231, -2.2895, -1.8859, -2.4662,
-            -2.5198, -2.8320], grad_fn=<SelectBackward0>) torch.Size([64, 10])
+    tensor([-1.9556, -2.5020, -2.4145, -2.3146, -2.5411, -1.9140, -2.1962, -2.5470,
+            -2.3313, -2.5850], grad_fn=<SelectBackward0>) torch.Size([64, 10])
 
 
 
@@ -342,7 +342,7 @@ after a backprop pass later.
 
  .. code-block:: none
 
-    tensor(2.4198, grad_fn=<NegBackward0>)
+    tensor(2.2840, grad_fn=<NegBackward0>)
 
 
 
@@ -389,7 +389,7 @@ accuracy improves as our loss improves.
 
  .. code-block:: none
 
-    tensor(0.0312)
+    tensor(0.2031)
 
 
 
@@ -479,7 +479,7 @@ have increased, and they have.
 
  .. code-block:: none
 
-    tensor(0.0807, grad_fn=<NegBackward0>) tensor(1.)
+    tensor(0.0824, grad_fn=<NegBackward0>) tensor(1.)
 
 
 
@@ -547,7 +547,7 @@ confirm that our loss and accuracy are the same as before:
 
  .. code-block:: none
 
-    tensor(0.0807, grad_fn=<NllLossBackward0>) tensor(1.)
+    tensor(0.0824, grad_fn=<NllLossBackward0>) tensor(1.)
 
 
 
@@ -632,7 +632,7 @@ method automatically.
 
  .. code-block:: none
 
-    tensor(2.3572, grad_fn=<NllLossBackward0>)
+    tensor(2.2873, grad_fn=<NllLossBackward0>)
 
 
 
@@ -715,7 +715,7 @@ Let's double-check that our loss has gone down:
 
  .. code-block:: none
 
-    tensor(0.0808, grad_fn=<NllLossBackward0>)
+    tensor(0.0806, grad_fn=<NllLossBackward0>)
 
 
 
@@ -773,7 +773,7 @@ We instantiate our model and calculate the loss in the same way as before:
 
  .. code-block:: none
 
-    tensor(2.2252, grad_fn=<NllLossBackward0>)
+    tensor(2.3232, grad_fn=<NllLossBackward0>)
 
 
 
@@ -799,7 +799,7 @@ We are still able to use our same ``fit`` method as before.
 
  .. code-block:: none
 
-    tensor(0.0816, grad_fn=<NllLossBackward0>)
+    tensor(0.0818, grad_fn=<NllLossBackward0>)
 
 
 
@@ -885,8 +885,8 @@ can reuse it in the future.
 
  .. code-block:: none
 
-    tensor(2.2987, grad_fn=<NllLossBackward0>)
-    tensor(0.0822, grad_fn=<NllLossBackward0>)
+    tensor(2.3726, grad_fn=<NllLossBackward0>)
+    tensor(0.0817, grad_fn=<NllLossBackward0>)
 
 
 
@@ -986,7 +986,7 @@ Now, we can do these two steps together:
 
  .. code-block:: none
 
-    tensor(0.0813, grad_fn=<NllLossBackward0>)
+    tensor(0.0811, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1061,7 +1061,7 @@ Now, our loop is much cleaner, as ``(xb, yb)`` are loaded automatically from the
 
  .. code-block:: none
 
-    tensor(0.0821, grad_fn=<NllLossBackward0>)
+    tensor(0.0828, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1149,8 +1149,8 @@ and ``nn.Dropout`` to ensure appropriate behavior for these different phases.)
 
  .. code-block:: none
 
-    0 tensor(0.3154)
-    1 tensor(0.3565)
+    0 tensor(0.3003)
+    1 tensor(0.2842)
 
 
 
@@ -1271,8 +1271,8 @@ model can be run in 3 lines of code:
 
  .. code-block:: none
 
-    0 0.38768876864910123
-    1 0.7209547061681747
+    0 0.3139729129076004
+    1 0.27888440992236135
 
 
 
@@ -1349,8 +1349,8 @@ and generally leads to faster training.
 
  .. code-block:: none
 
-    0 0.33139880061149596
-    1 0.2387863173723221
+    0 0.48888975512981414
+    1 0.2929596885681152
 
 
 
@@ -1428,8 +1428,8 @@ The model created with ``Sequential`` is simple:
 
  .. code-block:: none
 
-    0 0.3730425444364548
-    1 0.23700534975528717
+    0 0.3501092688322067
+    1 0.27349247834682466
 
 
 
@@ -1447,7 +1447,7 @@ Let's get rid of these two assumptions, so our model works with any 2d
 single channel image. First, we can remove the initial Lambda layer by
 moving the data preprocessing into a generator:
 
-.. GENERATED FROM PYTHON SOURCE LINES 784-806
+.. GENERATED FROM PYTHON SOURCE LINES 784-805
 
 .. code-block:: default
 
@@ -1465,8 +1465,7 @@ moving the data preprocessing into a generator:
             return len(self.dl)
 
         def __iter__(self):
-            batches = iter(self.dl)
-            for b in batches:
+            for b in self.dl:
                 yield (self.func(*b))
 
     train_dl, valid_dl = get_data(train_ds, valid_ds, bs)
@@ -1480,14 +1479,14 @@ moving the data preprocessing into a generator:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 807-811
+.. GENERATED FROM PYTHON SOURCE LINES 806-810
 
 Next, we can replace ``nn.AvgPool2d`` with ``nn.AdaptiveAvgPool2d``, which
 allows us to define the size of the *output* tensor we want, rather than
 the *input* tensor we have. As a result, our model will work with any
 size input.
 
-.. GENERATED FROM PYTHON SOURCE LINES 811-825
+.. GENERATED FROM PYTHON SOURCE LINES 810-824
 
 .. code-block:: default
 
@@ -1512,11 +1511,11 @@ size input.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 826-827
+.. GENERATED FROM PYTHON SOURCE LINES 825-826
 
 Let's try it out:
 
-.. GENERATED FROM PYTHON SOURCE LINES 827-830
+.. GENERATED FROM PYTHON SOURCE LINES 826-829
 
 .. code-block:: default
 
@@ -1531,13 +1530,13 @@ Let's try it out:
 
  .. code-block:: none
 
-    0 0.30914514837265017
-    1 0.227817942738533
+    0 0.3845822737932205
+    1 0.24807579399347304
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 831-838
+.. GENERATED FROM PYTHON SOURCE LINES 830-837
 
 Using your GPU
 ---------------
@@ -1547,7 +1546,7 @@ rent one for about $0.50/hour from most cloud providers) you can
 use it to speed up your code. First check that your GPU is working in
 Pytorch:
 
-.. GENERATED FROM PYTHON SOURCE LINES 838-841
+.. GENERATED FROM PYTHON SOURCE LINES 837-840
 
 .. code-block:: default
 
@@ -1567,11 +1566,11 @@ Pytorch:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 842-843
+.. GENERATED FROM PYTHON SOURCE LINES 841-842
 
 And then create a device object for it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 843-847
+.. GENERATED FROM PYTHON SOURCE LINES 842-846
 
 .. code-block:: default
 
@@ -1586,11 +1585,11 @@ And then create a device object for it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 848-849
+.. GENERATED FROM PYTHON SOURCE LINES 847-848
 
 Let's update ``preprocess`` to move batches to the GPU:
 
-.. GENERATED FROM PYTHON SOURCE LINES 849-859
+.. GENERATED FROM PYTHON SOURCE LINES 848-858
 
 .. code-block:: default
 
@@ -1611,11 +1610,11 @@ Let's update ``preprocess`` to move batches to the GPU:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 860-861
+.. GENERATED FROM PYTHON SOURCE LINES 859-860
 
 Finally, we can move our model to the GPU.
 
-.. GENERATED FROM PYTHON SOURCE LINES 861-865
+.. GENERATED FROM PYTHON SOURCE LINES 860-864
 
 .. code-block:: default
 
@@ -1630,11 +1629,11 @@ Finally, we can move our model to the GPU.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 866-867
+.. GENERATED FROM PYTHON SOURCE LINES 865-866
 
 You should find it runs faster now:
 
-.. GENERATED FROM PYTHON SOURCE LINES 867-870
+.. GENERATED FROM PYTHON SOURCE LINES 866-869
 
 .. code-block:: default
 
@@ -1649,13 +1648,13 @@ You should find it runs faster now:
 
  .. code-block:: none
 
-    0 0.19762331058979035
-    1 0.173232123170048
+    0 0.21936764780282975
+    1 0.19986252081394196
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 871-903
+.. GENERATED FROM PYTHON SOURCE LINES 870-902
 
 Closing thoughts
 -----------------
@@ -1693,7 +1692,7 @@ what we've seen:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  41.250 seconds)
+   **Total running time of the script:** ( 0 minutes  42.691 seconds)
 
 
 .. _sphx_glr_download_beginner_nn_tutorial.py:

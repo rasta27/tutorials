@@ -255,29 +255,29 @@ pretrained weights.
     Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/9912422 [00:00<?, ?it/s]
-     87%|########6 | 8617984/9912422 [00:00<00:00, 82102309.23it/s]
-    100%|##########| 9912422/9912422 [00:00<00:00, 91989599.20it/s]
+     93%|#########2| 9175040/9912422 [00:00<00:00, 89452278.61it/s]
+    100%|##########| 9912422/9912422 [00:00<00:00, 95053444.49it/s]
     Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/28881 [00:00<?, ?it/s]
-    100%|##########| 28881/28881 [00:00<00:00, 99047991.68it/s]
+    100%|##########| 28881/28881 [00:00<00:00, 136567862.26it/s]
     Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/1648877 [00:00<?, ?it/s]
-    100%|##########| 1648877/1648877 [00:00<00:00, 27401280.53it/s]
+    100%|##########| 1648877/1648877 [00:00<00:00, 25494400.05it/s]
     Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/4542 [00:00<?, ?it/s]
-    100%|##########| 4542/4542 [00:00<00:00, 23035705.89it/s]
+    100%|##########| 4542/4542 [00:00<00:00, 22255290.62it/s]
     Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     CUDA Available:  True
@@ -570,7 +570,7 @@ still capable of identifying the correct class despite the added noise.
 
 
 .. image-sg:: /beginner/images/sphx_glr_fgsm_tutorial_002.png
-   :alt: 5 -> 5, 5 -> 5, 5 -> 5, 1 -> 1, 5 -> 5, 7 -> 2, 1 -> 8, 5 -> 6, 5 -> 6, 6 -> 0, 7 -> 9, 4 -> 9, 2 -> 0, 3 -> 8, 2 -> 6, 7 -> 9, 6 -> 2, 4 -> 8, 9 -> 8, 5 -> 3, 6 -> 5, 9 -> 8, 5 -> 3, 0 -> 4, 4 -> 8, 5 -> 1, 3 -> 2, 3 -> 5, 3 -> 8, 1 -> 8, 5 -> 8, 0 -> 8, 7 -> 8, 9 -> 7, 4 -> 3
+   :alt: 4 -> 4, 2 -> 2, 5 -> 5, 8 -> 8, 1 -> 1, 1 -> 6, 3 -> 8, 4 -> 9, 7 -> 9, 9 -> 3, 4 -> 8, 8 -> 2, 3 -> 2, 4 -> 9, 4 -> 8, 9 -> 8, 5 -> 4, 7 -> 9, 5 -> 2, 9 -> 8, 8 -> 2, 2 -> 1, 4 -> 9, 4 -> 9, 9 -> 4, 1 -> 8, 5 -> 8, 3 -> 8, 1 -> 2, 1 -> 2, 6 -> 5, 2 -> 8, 7 -> 2, 7 -> 8, 2 -> 3
    :srcset: /beginner/images/sphx_glr_fgsm_tutorial_002.png
    :class: sphx-glr-single-img
 
@@ -608,7 +608,7 @@ attacks.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  52.515 seconds)
+   **Total running time of the script:** ( 2 minutes  38.382 seconds)
 
 
 .. _sphx_glr_download_beginner_fgsm_tutorial.py:

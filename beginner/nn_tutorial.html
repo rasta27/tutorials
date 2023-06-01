@@ -562,8 +562,8 @@ random at this stage, since we start with random weights.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">preds</span></a><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">preds</span></a><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-2.9519, -2.3688, -2.0265, -2.3135, -1.9231, -2.2895, -1.8859, -2.4662,
-        -2.5198, -2.8320], grad_fn=&lt;SelectBackward0&gt;) torch.Size([64, 10])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-1.9556, -2.5020, -2.4145, -2.3146, -2.5411, -1.9140, -2.1962, -2.5470,
+        -2.3313, -2.5850], grad_fn=&lt;SelectBackward0&gt;) torch.Size([64, 10])
 </pre></div>
 </div>
 <p>As you see, the <code class="docutils literal notranslate"><span class="pre">preds</span></code> tensor contains not only the tensor values, but also a
@@ -582,7 +582,7 @@ after a backprop pass later.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">preds</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.4198, grad_fn=&lt;NegBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.2840, grad_fn=&lt;NegBackward0&gt;)
 </pre></div>
 </div>
 <p>Let’s also implement a function to calculate the accuracy of our model.
@@ -598,7 +598,7 @@ accuracy improves as our loss improves.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">accuracy</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">preds</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0312)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.2031)
 </pre></div>
 </div>
 <p>We can now run a training loop.  For each iteration, we will:</p>
@@ -656,7 +656,7 @@ have increased, and they have.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">),</span> <span class="n">accuracy</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0807, grad_fn=&lt;NegBackward0&gt;) tensor(1.)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0824, grad_fn=&lt;NegBackward0&gt;) tensor(1.)
 </pre></div>
 </div>
 </div>
@@ -691,7 +691,7 @@ confirm that our loss and accuracy are the same as before:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">),</span> <span class="n">accuracy</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0807, grad_fn=&lt;NllLossBackward0&gt;) tensor(1.)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0824, grad_fn=&lt;NllLossBackward0&gt;) tensor(1.)
 </pre></div>
 </div>
 </div>
@@ -734,7 +734,7 @@ method automatically.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.3572, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.2873, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 <p>Previously for our training loop we had to update the values for each parameter
@@ -780,7 +780,7 @@ again later.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0808, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0806, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -807,7 +807,7 @@ faster too.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.2252, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.3232, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 <p>We are still able to use our same <code class="docutils literal notranslate"><span class="pre">fit</span></code> method as before.</p>
@@ -816,7 +816,7 @@ faster too.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0816, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0818, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -866,8 +866,8 @@ can reuse it in the future.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.2987, grad_fn=&lt;NllLossBackward0&gt;)
-tensor(0.0822, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(2.3726, grad_fn=&lt;NllLossBackward0&gt;)
+tensor(0.0817, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -916,7 +916,7 @@ which will be easier to iterate over and slice.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0813, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0811, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -957,7 +957,7 @@ the <code class="docutils literal notranslate"><span class="pre">DataLoader</spa
 <span class="nb">print</span><span class="p">(</span><span class="n">loss_func</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">xb</span></a><span class="p">),</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">yb</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0821, grad_fn=&lt;NllLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.0828, grad_fn=&lt;NllLossBackward0&gt;)
 </pre></div>
 </div>
 <p>Thanks to PyTorch’s <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>, <code class="docutils literal notranslate"><span class="pre">nn.Parameter</span></code>, <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>, and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>,
@@ -1010,8 +1010,8 @@ and <code class="docutils literal notranslate"><span class="pre">nn.Dropout</spa
     <span class="nb">print</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">valid_loss</span></a> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_dl</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 tensor(0.3154)
-1 tensor(0.3565)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 tensor(0.3003)
+1 tensor(0.2842)
 </pre></div>
 </div>
 </div>
@@ -1070,8 +1070,8 @@ model can be run in 3 lines of code:</p>
 <span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-optim sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD" title="torch.optim.SGD"><span class="n">opt</span></a><span class="p">,</span> <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.38768876864910123
-1 0.7209547061681747
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.3139729129076004
+1 0.27888440992236135
 </pre></div>
 </div>
 <p>You can use these basic 3 lines of code to train a wide variety of models.
@@ -1115,8 +1115,8 @@ and generally leads to faster training.</p>
 <span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-optim sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD" title="torch.optim.SGD"><span class="n">opt</span></a><span class="p">,</span> <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.33139880061149596
-1 0.2387863173723221
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.48888975512981414
+1 0.2929596885681152
 </pre></div>
 </div>
 </div>
@@ -1162,8 +1162,8 @@ will create a layer that we can then use when defining a network with
 <span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-optim sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD" title="torch.optim.SGD"><span class="n">opt</span></a><span class="p">,</span> <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.3730425444364548
-1 0.23700534975528717
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.3501092688322067
+1 0.27349247834682466
 </pre></div>
 </div>
 </div>
@@ -1192,8 +1192,7 @@ moving the data preprocessing into a generator:</p>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">batches</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">batches</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">:</span>
             <span class="k">yield</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">b</span><span class="p">))</span>
 
 <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-utils-data sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.TensorDataset" title="torch.utils.data.TensorDataset"><span class="n">train_ds</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch-utils-data sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.TensorDataset" title="torch.utils.data.TensorDataset"><span class="n">valid_ds</span></a><span class="p">,</span> <span class="n">bs</span><span class="p">)</span>
@@ -1223,8 +1222,8 @@ size input.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-optim sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD" title="torch.optim.SGD"><span class="n">opt</span></a><span class="p">,</span> <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.30914514837265017
-1 0.227817942738533
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.3845822737932205
+1 0.24807579399347304
 </pre></div>
 </div>
 </div>
@@ -1264,8 +1263,8 @@ Pytorch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><span class="n">model</span></a><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch-optim sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD" title="torch.optim.SGD"><span class="n">opt</span></a><span class="p">,</span> <span class="n">train_dl</span><span class="p">,</span> <span class="n">valid_dl</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.19762331058979035
-1 0.173232123170048
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0 0.21936764780282975
+1 0.19986252081394196
 </pre></div>
 </div>
 </div>
@@ -1303,7 +1302,7 @@ including classes provided with Pytorch such as <code class="docutils literal no
 <li><p><code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>: Takes any <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> and creates an iterator which returns batches of data.</p></li>
 </ul>
 </div></blockquote>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  41.250 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  42.691 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-nn-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/f16255c783f9e487235b8eff6c8792b9/nn_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">nn_tutorial.py</span></code></a></p>
