@@ -452,19 +452,19 @@ implementations:</p>
 <a class="sphx-glr-backref-module-torch-nn-functional sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html#torch.nn.functional.scaled_dot_product_attention" title="torch.nn.functional.scaled_dot_product_attention"><span class="n">F</span><span class="o">.</span><span class="n">scaled_dot_product_attention</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">query</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">key</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">value</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[[-0.5056,  0.1211, -0.1064,  0.1667, -0.2734,  0.2188, -0.0907,
-          -0.9441],
-         [-0.6218,  0.2732, -0.1117,  0.3859, -0.0391, -0.4403, -0.0247,
-          -0.5439],
-         [-0.4788,  0.1855,  0.0574,  0.2072, -0.1064, -0.0825, -0.0807,
-          -0.7343]],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[[-0.9140, -0.6412,  0.4477, -0.7680,  0.3659, -0.0185, -0.8606,
+          -0.0564],
+         [-1.4307, -0.7604,  0.3824, -0.7696,  0.7868,  0.2141, -0.8564,
+           0.5449],
+         [-0.1956, -1.0817,  1.1825, -0.8019,  0.2164, -0.1614, -0.9906,
+          -0.4927]],
 
-        [[ 0.8428, -0.9175,  0.1947, -0.8224,  0.1477, -0.1981, -0.4753,
-           0.7475],
-         [ 1.1927, -1.1068,  0.0430, -0.4566, -0.0254, -0.4674, -0.3710,
-           0.7509],
-         [ 0.8066, -0.9498,  0.2197, -0.7373,  0.0850, -0.2239, -0.4948,
-           0.7265]]], device='cuda:0')
+        [[-0.5059,  0.0109, -1.2113,  0.2628,  0.8002, -0.2190, -0.3187,
+           0.9142],
+         [-0.0674,  0.0730, -0.9921,  0.4274,  0.6369,  0.0521, -0.2216,
+           0.5367],
+         [-0.1386,  0.1335, -0.9379,  0.4701,  0.5094, -0.1448, -0.1148,
+           0.6264]]], device='cuda:0')
 </pre></div>
 </div>
 </div>
@@ -527,8 +527,8 @@ measuring performance.</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"EfficientAttention is not supported. See warnings for reasons."</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The default implementation runs in 6533.299 microseconds
-The math implementation runs in 14286.198 microseconds
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The default implementation runs in 6530.272 microseconds
+The math implementation runs in 14385.845 microseconds
 &lt;timeit-src&gt;:6: UserWarning:
 
 Memory efficient kernel not used because: (Triggered internally at ../aten/src/ATen/native/transformers/cuda/sdp_utils.h:545.)
@@ -546,7 +546,7 @@ Flash attention kernel not used because: (Triggered internally at ../aten/src/AT
 Flash attention only supports sm75 and sm8x gpu architectures. Attempting to run on a sm 7.0 gpu. (Triggered internally at ../aten/src/ATen/native/transformers/cuda/sdp_utils.h:352.)
 
 FlashAttention is not supported. See warnings for reasons.
-The memory efficient implementation runs in 6528.669 microseconds
+The memory efficient implementation runs in 6529.312 microseconds
 </pre></div>
 </div>
 </div>
@@ -729,8 +729,8 @@ To demonstrate this, let’s compile the <code class="docutils literal notransla
     <span class="sa">f</span><span class="s2">"The compiled module runs in  </span><span class="si">{</span><span class="n">benchmark_torch_function_in_microseconds</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-_dynamo sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/_dynamo.html#torch._dynamo.OptimizedModule" title="torch._dynamo.OptimizedModule"><span class="n">compiled_model</span></a><span class="p">,</span><span class="w"> </span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">x</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> microseconds"</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The non compiled module runs in  405.877 microseconds
-The compiled module runs in  441.392 microseconds
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The non compiled module runs in  403.927 microseconds
+The compiled module runs in  435.285 microseconds
 </pre></div>
 </div>
 <p>The exact execution time is dependent on machine, however the results for mine:
@@ -766,36 +766,36 @@ inspect the performance characteristics of your code.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
                                                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-                         Non-Compilied Causal Attention        27.15%       5.819ms        99.79%      21.391ms      21.391ms       0.000us         0.00%      10.966ms      10.966ms             1
-                                           aten::linear         1.01%     216.000us        45.40%       9.732ms     194.640us       0.000us         0.00%       6.614ms     132.280us            50
-                                           aten::matmul         5.43%       1.164ms        42.22%       9.050ms     181.000us       0.000us         0.00%       6.614ms     132.280us            50
-                                               aten::mm        23.86%       5.114ms        30.75%       6.592ms     131.840us       5.783ms        58.94%       6.614ms     132.280us            50
-           volta_fp16_s884gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.783ms        58.94%       5.783ms     115.660us            50
-                     aten::scaled_dot_product_attention         5.07%       1.087ms        16.63%       3.564ms     142.560us       0.000us         0.00%       4.352ms     174.080us            25
-          aten::_scaled_dot_product_efficient_attention         2.86%     612.000us        11.56%       2.477ms      99.080us       0.000us         0.00%       4.352ms     174.080us            25
-                     aten::_efficient_attention_forward         4.88%       1.045ms         8.05%       1.726ms      69.040us       4.028ms        41.06%       4.352ms     174.080us            25
-void attention_kernel_batched&lt;AttentionKernel&lt;cutlas...         0.00%       0.000us         0.00%       0.000us       0.000us       4.028ms        41.06%       4.028ms     161.120us            25
-cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         3.89%     834.000us         3.89%     834.000us       8.340us     696.000us         7.09%     696.000us       6.960us           100
+                         Non-Compilied Causal Attention        29.04%       5.810ms        99.82%      19.971ms      19.971ms       0.000us         0.00%      10.964ms      10.964ms             1
+                                           aten::linear         0.99%     199.000us        43.10%       8.624ms     172.480us       0.000us         0.00%       6.611ms     132.220us            50
+                                           aten::matmul         5.10%       1.021ms        40.04%       8.011ms     160.220us       0.000us         0.00%       6.611ms     132.220us            50
+                                               aten::mm        24.48%       4.898ms        27.85%       5.572ms     111.440us       5.778ms        58.92%       6.611ms     132.220us            50
+           volta_fp16_s884gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.778ms        58.92%       5.778ms     115.560us            50
+                     aten::scaled_dot_product_attention         4.87%     975.000us        16.16%       3.234ms     129.360us       0.000us         0.00%       4.353ms     174.120us            25
+          aten::_scaled_dot_product_efficient_attention         2.66%     533.000us        11.29%       2.259ms      90.360us       0.000us         0.00%       4.353ms     174.120us            25
+                     aten::_efficient_attention_forward         4.76%     952.000us         7.94%       1.589ms      63.560us       4.029ms        41.08%       4.353ms     174.120us            25
+void attention_kernel_batched&lt;AttentionKernel&lt;cutlas...         0.00%       0.000us         0.00%       0.000us       0.000us       4.029ms        41.08%       4.029ms     161.160us            25
+cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.35%      71.000us         0.35%      71.000us       0.710us     697.000us         7.11%     697.000us       6.970us           100
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-Self CPU time total: 21.435ms
-Self CUDA time total: 9.811ms
+Self CPU time total: 20.007ms
+Self CUDA time total: 9.807ms
 
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
                                                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-                              Compiled Causal Attention        22.25%       4.211ms        99.76%      18.879ms      18.879ms       0.000us         0.00%      10.841ms      10.841ms             1
-                                       CompiledFunction        46.55%       8.809ms        76.61%      14.499ms     579.960us       0.000us         0.00%      10.841ms     433.640us            25
-                                               aten::mm         9.31%       1.762ms        13.53%       2.560ms      51.200us       5.808ms        59.12%       6.825ms     136.500us            50
-           volta_fp16_s884gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.808ms        59.12%       5.808ms     116.160us            50
-          aten::_scaled_dot_product_efficient_attention         1.93%     366.000us         8.66%       1.639ms      65.560us       0.000us         0.00%       4.016ms     160.640us            25
-                     aten::_efficient_attention_forward         2.13%     403.000us         5.83%       1.103ms      44.120us       4.016ms        40.88%       4.016ms     160.640us            25
-void attention_kernel_batched&lt;AttentionKernel&lt;cutlas...         0.00%       0.000us         0.00%       0.000us       0.000us       4.016ms        40.88%       4.016ms     160.640us            25
-cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.48%      91.000us         0.48%      91.000us       0.910us     785.000us         7.99%     785.000us       7.850us           100
-                                       cudaLaunchKernel         5.44%       1.030ms         5.44%       1.030ms      13.733us     232.000us         2.36%     232.000us       3.093us            75
-                                    aten::empty_strided         2.24%     424.000us         2.24%     424.000us       8.480us       0.000us         0.00%       0.000us       0.000us            50
+                              Compiled Causal Attention        22.27%       4.002ms        99.79%      17.933ms      17.933ms       0.000us         0.00%      10.756ms      10.756ms             1
+                                       CompiledFunction        46.53%       8.361ms        76.84%      13.808ms     552.320us       0.000us         0.00%      10.756ms     430.240us            25
+                                               aten::mm         9.43%       1.694ms        13.74%       2.469ms      49.380us       5.746ms        58.95%       6.754ms     135.080us            50
+           volta_fp16_s884gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.746ms        58.95%       5.746ms     114.920us            50
+          aten::_scaled_dot_product_efficient_attention         1.70%     305.000us         8.36%       1.503ms      60.120us       0.000us         0.00%       4.002ms     160.080us            25
+                     aten::_efficient_attention_forward         1.98%     355.000us         5.59%       1.004ms      40.160us       4.002ms        41.05%       4.002ms     160.080us            25
+void attention_kernel_batched&lt;AttentionKernel&lt;cutlas...         0.00%       0.000us         0.00%       0.000us       0.000us       4.002ms        41.05%       4.002ms     160.080us            25
+cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFla...         0.48%      86.000us         0.48%      86.000us       0.860us     777.000us         7.97%     777.000us       7.770us           100
+                                       cudaLaunchKernel         5.53%     994.000us         5.53%     994.000us      13.253us     231.000us         2.37%     231.000us       3.080us            75
+                                    aten::empty_strided         2.52%     453.000us         2.52%     453.000us       9.060us       0.000us         0.00%       0.000us       0.000us            50
 -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
-Self CPU time total: 18.925ms
-Self CUDA time total: 9.824ms
+Self CPU time total: 17.970ms
+Self CUDA time total: 9.748ms
 </pre></div>
 </div>
 <p>The previous code snippet generates a report of the top 10 PyTorch functions
@@ -822,7 +822,7 @@ implementation is used on GPU. As well, we built a simple
 compilable. In the process we have shown how to the profiling tools can
 be used to explore the performance characteristics of a user defined
 module.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.106 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.101 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-scaled-dot-product-attention-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e40ced94a143a49f0f8745e10c981139/scaled_dot_product_attention_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">scaled_dot_product_attention_tutorial.py</span></code></a></p>

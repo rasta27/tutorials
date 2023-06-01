@@ -454,7 +454,8 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 14.4MB/s]
+ 91%|#########1| 721k/792k [00:00&lt;00:00, 7.05MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 7.34MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,46 +480,48 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  0%|          | 1.88M/945M [00:00&lt;00:50, 19.6MB/s]
-  1%|          | 5.25M/945M [00:00&lt;00:34, 28.8MB/s]
-  1%|1         | 10.5M/945M [00:00&lt;00:23, 40.9MB/s]
-  2%|1         | 18.8M/945M [00:00&lt;00:16, 58.9MB/s]
-  3%|3         | 31.9M/945M [00:00&lt;00:10, 87.1MB/s]
-  6%|5         | 52.5M/945M [00:00&lt;00:07, 131MB/s]
-  8%|8         | 77.8M/945M [00:00&lt;00:05, 175MB/s]
- 11%|#         | 103M/945M [00:00&lt;00:04, 205MB/s]
- 14%|#3        | 128M/945M [00:00&lt;00:03, 222MB/s]
- 16%|#6        | 154M/945M [00:01&lt;00:03, 237MB/s]
- 19%|#9        | 180M/945M [00:01&lt;00:03, 247MB/s]
- 22%|##1       | 205M/945M [00:01&lt;00:03, 254MB/s]
- 24%|##4       | 231M/945M [00:01&lt;00:02, 259MB/s]
- 27%|##7       | 258M/945M [00:01&lt;00:02, 264MB/s]
- 30%|###       | 285M/945M [00:01&lt;00:02, 271MB/s]
- 33%|###3      | 312M/945M [00:01&lt;00:02, 276MB/s]
- 36%|###5      | 340M/945M [00:01&lt;00:02, 279MB/s]
- 39%|###8      | 367M/945M [00:01&lt;00:02, 282MB/s]
- 42%|####1     | 395M/945M [00:01&lt;00:02, 283MB/s]
- 45%|####4     | 422M/945M [00:02&lt;00:01, 285MB/s]
- 48%|####7     | 449M/945M [00:02&lt;00:01, 285MB/s]
- 50%|#####     | 477M/945M [00:02&lt;00:01, 285MB/s]
- 53%|#####3    | 504M/945M [00:02&lt;00:01, 287MB/s]
- 56%|#####6    | 532M/945M [00:02&lt;00:01, 286MB/s]
- 59%|#####9    | 559M/945M [00:02&lt;00:01, 286MB/s]
- 62%|######2   | 586M/945M [00:02&lt;00:01, 276MB/s]
- 65%|######4   | 614M/945M [00:02&lt;00:01, 279MB/s]
- 68%|######7   | 641M/945M [00:02&lt;00:01, 282MB/s]
- 71%|#######   | 668M/945M [00:02&lt;00:01, 282MB/s]
- 74%|#######3  | 695M/945M [00:03&lt;00:00, 284MB/s]
- 77%|#######6  | 723M/945M [00:03&lt;00:00, 285MB/s]
- 79%|#######9  | 750M/945M [00:03&lt;00:00, 286MB/s]
- 82%|########2 | 778M/945M [00:03&lt;00:00, 287MB/s]
- 85%|########5 | 805M/945M [00:03&lt;00:00, 287MB/s]
- 88%|########8 | 833M/945M [00:03&lt;00:00, 287MB/s]
- 91%|#########1| 860M/945M [00:03&lt;00:00, 277MB/s]
- 94%|#########3| 887M/945M [00:03&lt;00:00, 267MB/s]
- 97%|#########6| 912M/945M [00:03&lt;00:00, 262MB/s]
- 99%|#########9| 937M/945M [00:03&lt;00:00, 260MB/s]
-100%|##########| 945M/945M [00:03&lt;00:00, 249MB/s]
+  1%|          | 7.10M/945M [00:00&lt;00:13, 74.3MB/s]
+  2%|2         | 21.6M/945M [00:00&lt;00:08, 120MB/s]
+  5%|4         | 44.6M/945M [00:00&lt;00:05, 175MB/s]
+  7%|7         | 68.4M/945M [00:00&lt;00:04, 205MB/s]
+ 10%|9         | 92.8M/945M [00:00&lt;00:04, 223MB/s]
+ 12%|#2        | 117M/945M [00:00&lt;00:03, 234MB/s]
+ 15%|#4        | 141M/945M [00:00&lt;00:03, 240MB/s]
+ 18%|#7        | 165M/945M [00:00&lt;00:03, 244MB/s]
+ 20%|##        | 189M/945M [00:00&lt;00:03, 246MB/s]
+ 23%|##2       | 213M/945M [00:01&lt;00:03, 248MB/s]
+ 25%|##5       | 237M/945M [00:01&lt;00:03, 245MB/s]
+ 28%|##7       | 260M/945M [00:01&lt;00:03, 239MB/s]
+ 30%|##9       | 283M/945M [00:01&lt;00:02, 238MB/s]
+ 32%|###2      | 306M/945M [00:01&lt;00:02, 234MB/s]
+ 35%|###4      | 329M/945M [00:01&lt;00:02, 237MB/s]
+ 37%|###7      | 352M/945M [00:01&lt;00:02, 236MB/s]
+ 40%|###9      | 376M/945M [00:01&lt;00:02, 241MB/s]
+ 42%|####2     | 399M/945M [00:01&lt;00:02, 209MB/s]
+ 45%|####4     | 423M/945M [00:01&lt;00:02, 221MB/s]
+ 47%|####7     | 446M/945M [00:02&lt;00:02, 226MB/s]
+ 50%|####9     | 470M/945M [00:02&lt;00:02, 233MB/s]
+ 52%|#####2    | 493M/945M [00:02&lt;00:02, 235MB/s]
+ 55%|#####4    | 517M/945M [00:02&lt;00:01, 239MB/s]
+ 57%|#####7    | 539M/945M [00:02&lt;00:01, 237MB/s]
+ 60%|#####9    | 563M/945M [00:02&lt;00:01, 239MB/s]
+ 62%|######2   | 586M/945M [00:02&lt;00:01, 241MB/s]
+ 65%|######4   | 610M/945M [00:02&lt;00:01, 243MB/s]
+ 67%|######7   | 633M/945M [00:02&lt;00:01, 244MB/s]
+ 69%|######9   | 656M/945M [00:02&lt;00:01, 243MB/s]
+ 72%|#######1  | 680M/945M [00:03&lt;00:01, 244MB/s]
+ 74%|#######4  | 703M/945M [00:03&lt;00:01, 243MB/s]
+ 77%|#######6  | 726M/945M [00:03&lt;00:00, 243MB/s]
+ 79%|#######9  | 750M/945M [00:03&lt;00:00, 244MB/s]
+ 82%|########1 | 773M/945M [00:03&lt;00:00, 244MB/s]
+ 84%|########4 | 796M/945M [00:03&lt;00:00, 242MB/s]
+ 87%|########6 | 820M/945M [00:03&lt;00:00, 243MB/s]
+ 89%|########9 | 843M/945M [00:03&lt;00:00, 239MB/s]
+ 92%|#########1| 866M/945M [00:03&lt;00:00, 237MB/s]
+ 94%|#########4| 889M/945M [00:03&lt;00:00, 238MB/s]
+ 97%|#########6| 912M/945M [00:04&lt;00:00, 241MB/s]
+ 99%|#########9| 935M/945M [00:04&lt;00:00, 242MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 234MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -730,37 +733,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: defense team begins two-week campaign to avoid death penalty . defense: "no punishment could ever be equal to the terrible effects of this crime"
+prediction: former education secretary said he could not rule out further cuts . asked if he could confirm there would be 'no more changes to child benefit' . but he refused to rule out cuts to child benefit .
 
-target: Defense expected to show Dzhokhar Tsarnaev as a puppet of his dominant older brother . A deadlocked jury would result in an automatic life sentence for Tsarnaev .
+target: Asked if he could rule out child benefit cuts Mr Gove said: 'I can't say that' The chief whip ruled out any cuts to pensioner and disability benefits . Comes after George Osborne paved the way for further cuts to payments . He refused to rule out rolling Child Benefit into Universal Credit system .
 
 
 Example 2:
 
-prediction: the coroner's preliminary assessment is there was no foul play involved in the death . "a rise in my blood pressure places me in grave risk of substantial and irreparable injury or death," he wrote .
+prediction: real Sociedad took the lead through a Xabi Prieto penalty in the 31st minute . a deportivo penalty was awarded in the 38th minute to equalise . but the home side came back to equalise with a second half header .
 
-target: Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment . In a petition for a restraining order, Getty had written he had a serious medical condition. Police say this is not a criminal matter at this time .
+target: Xabi Prieto struck a 33rd-minute penalty to give Real Sociedad the lead . Perez Martínez equalised for Deportivo five minutes before the break . Gonzalo Castro restored Sociedad's lead with a stunning volley . But Verdu Nicolas rescued a point for the visitors late on .
 
 
 Example 3:
 
-prediction: a lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone lone
+prediction: the music video was released on the boxer's facebook page on monday . it includes a montage of Pacquiao's fights and humanitarian efforts . the tune translates as 'I will fight for the fillipino' .
 
-target: Dillard was the first of the Duggar daughters to be married . Her 9-pound, 10-ounce son was overdue .
+target: Manny Pacquiao faces Floyd Mayweather in $300m showdown on May 2 . Pac-Man has released own entrance song 'Lalaban Ako Para Sa Filipino' The 36-year-old also directed the music video ahead of Las Vegas clash .
 
 
 Example 4:
 
-prediction: arsenal beat reading 1-0 in extra time to reach the final of the fa cup . defending champions were beaten 1-0 by the likes of sami khedira and olivier giroud . defending champions will now face chelsea in the next round .
+prediction: temperatures to rise across the country today reaching 22C (72F) tomorrow . that is the warmest temperature recorded this year and will beat the average daytime temperature for august . 22C (72F) predicted in the south east on friday is also better than the 18C forecast in marbella, 16C in Rhodes, 10C in Istanbul and 16C in Malta .
 
-target: A howler from Reading goalkeeper Adam Federici helped Arsenal progress . Federici let a late effort squirm through his legs and in during extra-time . He left the field in tears after fumbling Sanchez's shot through his legs . Aaron Ramsey will be hoping to taste more FA Cup success in the final .
+target: 22C forecast for South East is 11C warmer than average - and would beat 2015 high of 20.7C in Aberdeenshire . Among the best coastal areas for warm weather tomorrow will be Hunstanton in Norfolk and Whitstable in Kent . Weather will stay mostly dry and sunny for next few days, but some showers are expected from late tomorrow . Defra warns asthma sufferers and people with lung problems of 'very high' air pollution in South East tomorrow .
 
 
 Example 5:
 
-prediction: police have found the body of 21-year-old Max Maisel in new york . he went missing on february 21 after his car was found abandoned on lake . his family said he loved the destination and had a sweet tooth . he is the son of senior ESPN writer and photographer Ivan Maisel .
+prediction: ten-year-old dog caught out by strong current while paddling in the water . with strength of tide, dog was quickly swept out to sea by her owner . RNLI crew managed to find her cold and shivering half a mile out to sea . they then pulled her on to lifeboat after managing to grab her collar . but despite rescue, RNLI warn about importance of owners not attempting to rescue their pets .
 
-target: Max Maisel, 21, had been missing since February 21 . He was last seen leaving his vehicle on the shores of the lake in New York . A fisherman saw his body 200 yards from a coast guard station Monday . Family said they were relieved his body had been found in a statement . Paid tribute to the sweet, sensitive and caring young man . Police and the coroner are yet to release a cause of death .
+target: Martha, aged 10, had been paddling in the water when she was swept out . Her owner launched their own rescue but was unable to grab the pet . RNLI eventually found the golden retriever who was cold and shivering . Brought her back to the shore after managing to grab her by the collar .
 </pre></div>
 </div>
 </div>
@@ -1053,7 +1056,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  28.267 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  0.118 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
