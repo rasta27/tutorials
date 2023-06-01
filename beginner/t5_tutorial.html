@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 17.3MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 14.8MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,123 +479,45 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 6.48M/945M [00:00&lt;00:14, 67.0MB/s]
-  2%|1         | 14.4M/945M [00:00&lt;00:12, 76.1MB/s]
-  2%|2         | 22.8M/945M [00:00&lt;00:11, 81.6MB/s]
-  3%|3         | 30.6M/945M [00:00&lt;00:11, 81.2MB/s]
-  4%|4         | 38.8M/945M [00:00&lt;00:11, 82.9MB/s]
-  5%|4         | 46.7M/945M [00:00&lt;00:11, 81.1MB/s]
-  6%|5         | 54.5M/945M [00:00&lt;00:11, 78.7MB/s]
-  7%|6         | 62.6M/945M [00:00&lt;00:11, 80.5MB/s]
-  7%|7         | 70.7M/945M [00:00&lt;00:11, 81.9MB/s]
-  8%|8         | 79.1M/945M [00:01&lt;00:10, 83.6MB/s]
-  9%|9         | 87.5M/945M [00:01&lt;00:10, 84.7MB/s]
- 10%|#         | 95.6M/945M [00:01&lt;00:10, 83.3MB/s]
- 11%|#         | 104M/945M [00:01&lt;00:11, 76.7MB/s]
- 12%|#1        | 112M/945M [00:01&lt;00:10, 79.6MB/s]
- 13%|#2        | 120M/945M [00:01&lt;00:10, 80.7MB/s]
- 14%|#3        | 128M/945M [00:01&lt;00:10, 81.0MB/s]
- 14%|#4        | 136M/945M [00:01&lt;00:10, 81.6MB/s]
- 15%|#5        | 143M/945M [00:01&lt;00:10, 81.8MB/s]
- 16%|#6        | 151M/945M [00:01&lt;00:10, 80.2MB/s]
- 17%|#6        | 159M/945M [00:02&lt;00:10, 81.9MB/s]
- 18%|#7        | 168M/945M [00:02&lt;00:09, 83.5MB/s]
- 19%|#8        | 176M/945M [00:02&lt;00:09, 83.8MB/s]
- 19%|#9        | 184M/945M [00:02&lt;00:09, 81.8MB/s]
- 20%|##        | 192M/945M [00:02&lt;00:09, 79.2MB/s]
- 21%|##1       | 200M/945M [00:02&lt;00:09, 81.7MB/s]
- 22%|##2       | 208M/945M [00:02&lt;00:09, 81.1MB/s]
- 23%|##2       | 216M/945M [00:02&lt;00:09, 82.1MB/s]
- 24%|##3       | 224M/945M [00:02&lt;00:09, 82.7MB/s]
- 25%|##4       | 232M/945M [00:02&lt;00:09, 80.7MB/s]
- 25%|##5       | 240M/945M [00:03&lt;00:09, 79.4MB/s]
- 26%|##6       | 248M/945M [00:03&lt;00:08, 81.2MB/s]
- 27%|##7       | 256M/945M [00:03&lt;00:09, 77.2MB/s]
- 28%|##7       | 263M/945M [00:03&lt;00:09, 75.6MB/s]
- 29%|##8       | 271M/945M [00:03&lt;00:08, 78.6MB/s]
- 30%|##9       | 279M/945M [00:03&lt;00:08, 80.2MB/s]
- 30%|###       | 287M/945M [00:03&lt;00:08, 79.1MB/s]
- 31%|###1      | 295M/945M [00:03&lt;00:08, 79.1MB/s]
- 32%|###1      | 302M/945M [00:03&lt;00:09, 70.6MB/s]
- 33%|###2      | 309M/945M [00:04&lt;00:09, 68.5MB/s]
- 33%|###3      | 316M/945M [00:04&lt;00:09, 68.8MB/s]
- 34%|###4      | 322M/945M [00:04&lt;00:09, 68.1MB/s]
- 35%|###4      | 329M/945M [00:04&lt;00:09, 69.3MB/s]
- 36%|###5      | 337M/945M [00:04&lt;00:08, 71.5MB/s]
- 36%|###6      | 344M/945M [00:04&lt;00:08, 72.2MB/s]
- 37%|###7      | 352M/945M [00:04&lt;00:08, 75.1MB/s]
- 38%|###8      | 359M/945M [00:04&lt;00:07, 76.9MB/s]
- 39%|###8      | 368M/945M [00:04&lt;00:07, 79.1MB/s]
- 40%|###9      | 375M/945M [00:05&lt;00:07, 79.9MB/s]
- 41%|####      | 384M/945M [00:05&lt;00:07, 81.4MB/s]
- 41%|####1     | 391M/945M [00:05&lt;00:08, 68.0MB/s]
- 43%|####2     | 404M/945M [00:05&lt;00:06, 86.4MB/s]
- 44%|####3     | 413M/945M [00:05&lt;00:06, 82.4MB/s]
- 45%|####4     | 421M/945M [00:05&lt;00:06, 83.0MB/s]
- 45%|####5     | 430M/945M [00:05&lt;00:06, 83.2MB/s]
- 46%|####6     | 438M/945M [00:05&lt;00:06, 83.3MB/s]
- 47%|####7     | 446M/945M [00:05&lt;00:06, 83.9MB/s]
- 48%|####8     | 454M/945M [00:06&lt;00:06, 81.1MB/s]
- 49%|####8     | 462M/945M [00:06&lt;00:06, 80.5MB/s]
- 50%|####9     | 470M/945M [00:06&lt;00:06, 81.6MB/s]
- 51%|#####     | 478M/945M [00:06&lt;00:06, 79.6MB/s]
- 51%|#####1    | 485M/945M [00:06&lt;00:06, 78.1MB/s]
- 52%|#####2    | 493M/945M [00:06&lt;00:06, 78.2MB/s]
- 53%|#####3    | 501M/945M [00:06&lt;00:05, 80.9MB/s]
- 54%|#####3    | 509M/945M [00:06&lt;00:05, 81.7MB/s]
- 55%|#####4    | 517M/945M [00:06&lt;00:05, 82.5MB/s]
- 56%|#####5    | 526M/945M [00:06&lt;00:05, 83.8MB/s]
- 56%|#####6    | 534M/945M [00:07&lt;00:05, 82.0MB/s]
- 57%|#####7    | 541M/945M [00:07&lt;00:05, 78.4MB/s]
- 58%|#####8    | 549M/945M [00:07&lt;00:05, 76.8MB/s]
- 59%|#####8    | 557M/945M [00:07&lt;00:05, 77.7MB/s]
- 60%|#####9    | 564M/945M [00:07&lt;00:05, 78.3MB/s]
- 61%|######    | 572M/945M [00:07&lt;00:05, 77.1MB/s]
- 61%|######1   | 580M/945M [00:07&lt;00:04, 79.2MB/s]
- 62%|######2   | 588M/945M [00:07&lt;00:04, 82.0MB/s]
- 63%|######3   | 596M/945M [00:07&lt;00:04, 81.8MB/s]
- 64%|######3   | 604M/945M [00:07&lt;00:04, 82.0MB/s]
- 65%|######4   | 612M/945M [00:08&lt;00:04, 82.9MB/s]
- 66%|######5   | 620M/945M [00:08&lt;00:04, 84.1MB/s]
- 67%|######6   | 629M/945M [00:08&lt;00:03, 84.9MB/s]
- 67%|######7   | 637M/945M [00:08&lt;00:03, 84.7MB/s]
- 68%|######8   | 645M/945M [00:08&lt;00:03, 84.7MB/s]
- 69%|######9   | 653M/945M [00:08&lt;00:03, 83.9MB/s]
- 70%|######9   | 661M/945M [00:08&lt;00:03, 80.7MB/s]
- 71%|#######   | 669M/945M [00:08&lt;00:03, 79.2MB/s]
- 72%|#######1  | 677M/945M [00:08&lt;00:03, 82.0MB/s]
- 73%|#######2  | 685M/945M [00:09&lt;00:03, 70.5MB/s]
- 73%|#######3  | 693M/945M [00:09&lt;00:03, 74.1MB/s]
- 74%|#######4  | 701M/945M [00:09&lt;00:03, 76.9MB/s]
- 75%|#######5  | 710M/945M [00:09&lt;00:03, 80.6MB/s]
- 76%|#######5  | 718M/945M [00:09&lt;00:02, 80.8MB/s]
- 77%|#######6  | 726M/945M [00:09&lt;00:02, 83.2MB/s]
- 78%|#######7  | 734M/945M [00:09&lt;00:02, 81.9MB/s]
- 79%|#######8  | 743M/945M [00:09&lt;00:02, 83.8MB/s]
- 79%|#######9  | 751M/945M [00:09&lt;00:02, 83.3MB/s]
- 80%|########  | 759M/945M [00:09&lt;00:02, 80.7MB/s]
- 81%|########1 | 767M/945M [00:10&lt;00:02, 83.2MB/s]
- 82%|########2 | 775M/945M [00:10&lt;00:02, 79.7MB/s]
- 83%|########2 | 783M/945M [00:10&lt;00:02, 81.9MB/s]
- 84%|########3 | 791M/945M [00:10&lt;00:02, 73.0MB/s]
- 85%|########4 | 800M/945M [00:10&lt;00:01, 76.7MB/s]
- 85%|########5 | 807M/945M [00:10&lt;00:01, 76.1MB/s]
- 86%|########6 | 815M/945M [00:10&lt;00:01, 78.1MB/s]
- 87%|########7 | 823M/945M [00:10&lt;00:01, 78.9MB/s]
- 88%|########7 | 830M/945M [00:10&lt;00:01, 77.7MB/s]
- 89%|########8 | 838M/945M [00:11&lt;00:01, 79.4MB/s]
- 90%|########9 | 846M/945M [00:11&lt;00:01, 80.3MB/s]
- 91%|######### | 855M/945M [00:11&lt;00:01, 83.9MB/s]
- 91%|#########1| 864M/945M [00:11&lt;00:00, 85.9MB/s]
- 92%|#########2| 872M/945M [00:11&lt;00:00, 85.3MB/s]
- 93%|#########3| 880M/945M [00:11&lt;00:01, 57.2MB/s]
- 95%|#########4| 897M/945M [00:11&lt;00:00, 83.6MB/s]
- 96%|#########5| 907M/945M [00:11&lt;00:00, 85.2MB/s]
- 97%|#########6| 916M/945M [00:12&lt;00:00, 82.6MB/s]
- 98%|#########7| 925M/945M [00:12&lt;00:00, 83.4MB/s]
- 99%|#########8| 933M/945M [00:12&lt;00:00, 82.5MB/s]
-100%|#########9| 942M/945M [00:12&lt;00:00, 75.6MB/s]
-100%|##########| 945M/945M [00:12&lt;00:00, 79.5MB/s]
+  0%|          | 1.21M/945M [00:00&lt;01:18, 12.6MB/s]
+  0%|          | 3.29M/945M [00:00&lt;00:55, 17.9MB/s]
+  1%|          | 6.58M/945M [00:00&lt;00:38, 25.4MB/s]
+  1%|1         | 11.7M/945M [00:00&lt;00:26, 36.7MB/s]
+  2%|2         | 20.0M/945M [00:00&lt;00:17, 54.6MB/s]
+  4%|3         | 33.4M/945M [00:00&lt;00:11, 83.8MB/s]
+  6%|5         | 55.0M/945M [00:00&lt;00:07, 130MB/s]
+  9%|8         | 83.3M/945M [00:00&lt;00:04, 183MB/s]
+ 12%|#1        | 112M/945M [00:00&lt;00:03, 219MB/s]
+ 15%|#4        | 140M/945M [00:01&lt;00:03, 243MB/s]
+ 18%|#7        | 168M/945M [00:01&lt;00:03, 259MB/s]
+ 21%|##        | 197M/945M [00:01&lt;00:02, 272MB/s]
+ 24%|##3       | 226M/945M [00:01&lt;00:02, 280MB/s]
+ 27%|##6       | 253M/945M [00:01&lt;00:02, 282MB/s]
+ 30%|##9       | 281M/945M [00:01&lt;00:02, 287MB/s]
+ 33%|###2      | 310M/945M [00:01&lt;00:02, 292MB/s]
+ 36%|###5      | 339M/945M [00:01&lt;00:02, 294MB/s]
+ 39%|###8      | 367M/945M [00:01&lt;00:02, 295MB/s]
+ 42%|####1     | 396M/945M [00:01&lt;00:01, 296MB/s]
+ 45%|####4     | 424M/945M [00:02&lt;00:01, 297MB/s]
+ 48%|####7     | 453M/945M [00:02&lt;00:01, 298MB/s]
+ 51%|#####     | 481M/945M [00:02&lt;00:01, 298MB/s]
+ 54%|#####3    | 510M/945M [00:02&lt;00:01, 292MB/s]
+ 57%|#####6    | 538M/945M [00:02&lt;00:01, 294MB/s]
+ 60%|#####9    | 566M/945M [00:02&lt;00:01, 290MB/s]
+ 63%|######2   | 595M/945M [00:02&lt;00:01, 292MB/s]
+ 66%|######5   | 623M/945M [00:02&lt;00:01, 293MB/s]
+ 69%|######8   | 651M/945M [00:02&lt;00:01, 294MB/s]
+ 72%|#######1  | 679M/945M [00:02&lt;00:00, 295MB/s]
+ 75%|#######4  | 707M/945M [00:03&lt;00:00, 293MB/s]
+ 78%|#######7  | 736M/945M [00:03&lt;00:00, 293MB/s]
+ 81%|########  | 764M/945M [00:03&lt;00:00, 294MB/s]
+ 84%|########3 | 792M/945M [00:03&lt;00:00, 287MB/s]
+ 87%|########6 | 820M/945M [00:03&lt;00:00, 289MB/s]
+ 90%|########9 | 848M/945M [00:03&lt;00:00, 291MB/s]
+ 93%|#########2| 876M/945M [00:03&lt;00:00, 292MB/s]
+ 96%|#########5| 904M/945M [00:03&lt;00:00, 288MB/s]
+ 99%|#########8| 932M/945M [00:03&lt;00:00, 289MB/s]
+100%|##########| 945M/945M [00:03&lt;00:00, 255MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -807,37 +729,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: the 36-year-old personal trainer from southport, is hoping his stunt will inspire others to take up cycling . he attempted the L'Etape du Tour on the Raleigh Chopper last year and finished in the top 20 per cent . the tour involves many hill climbs which are gruelling even for professionals using high-performance road bikes .
+prediction: mark vanhoenacker is a senior first officer with British Airways . he wants the reader to understand his passion for his job . he admires the 747s like a sculptor might a perfect human torso .
 
-target: Dave Sim has spent months training to ride Tour route on a Chopper . The 36-year-old personal trainer hopes to inspire people to begin riding . His Raleigh Chopper is the 2004 revival of the classic 1970s kids' bike . He said it had 'always been a dream' to ride the famous Tour de France .
+target: The Germanwings tragedy has ignited debate about depression in pilots . Author, Vanhoenacker is a senior first officer with British Airways . He wants the reader to simply understand his passion for his job .
 
 
 Example 2:
 
-prediction: the SS City of Cairo was sunk by a german U-boat in 1942 . the sinking was the stuff of legend .
+prediction: the chief political correspondent of Slate magazine was announced as the new host on Sunday after the 78-year-old announced he would be retiring last week . he is expected to make his first appearance this summer, ending Schieffer's 14-year reign as host of the long-running news program . Dickerson worked for time magazine for 12 years, four of them as white house correspondent, and has written extensively about the 2008 presidential campaign .
 
-target: The ship was sunk in 1942 hundreds of miles of the coast of South America . A British company says the salvage operation occurred at a world record depth . The torpedoing is the subject of the book "Goodnight, sorry for sinking you"
+target: Dickerson was announced as replacement during show on Sunday . Journalist is the Chief Political Correspondent for Slate magazine . Revealed he is 'honored and excited' by the new job . His veteran CBS colleague announced he was stepping down last week . Texas native Schieffer has been host of the show since 1991 .
 
 
 Example 3:
 
-prediction: new study from new world wealth found the number of multi-millionaires has grown by 71% over the past decade . the city formerly known as Saigon has seen 400% growth . in terms of national statistics, south America boasted multi-millionaire growth of 265 per cent .
+prediction: paramedics found Kyle Hargreaves kissing a girl on a stretcher in the back of the ambulance . they had been called to an address in Grimsby, Lincolnshire . the crew had left the doors open while they collected a 92-year-old man . they returned to find Hargreaves and the girl lying on top of each other . when confronted by paramedic, he said: 'what's your problem? we are just trying to have sex'
 
-target: New World Wealth compiled list of fastest-growing cities for the super-rich . Ho Chi Minh City has seen a 400% rise in multi-millionaires since 2004 . However, it's Hong Kong that boasts 15,400 millionaires among its borders .
+target: Kyle Hargreaves was caught kissing a girl on a stretcher in the ambulance . When confronted, the 18-year-old replied 'we are just trying to have sex' He punched paramedic Michael Newman three times and spat in his face .
 
 
 Example 4:
 
-prediction: the 91-year-old artist died in her Overton, nevada, home on Sunday . her often-copied sign sits in a median in the middle of Las Vegas Boulevard south of the strip . 'it's the most recognizable icon in the world,' said the museum's executive director .
+prediction: "i thought I lost you," the father of a sailor says of his son . "he's got very strong constitution and (is strong) not only physically, but spiritually," he says .
 
-target: Artist Betty Willis designed the famous neon sign in 1959 . The sign sits in a median in the middle of Las Vegas Boulevard south of the Strip and is a popular tourist attraction . In 2009 it was placed on the National Register of Historic Places . No one owns the copyright to the sign, so it is often imitated and appears on all kinds of souvenirs in Las Vegas and elsewhere .
+target: Louis Jordan says his sailboat capsized three times . He survived by collecting rainwater and eating raw fish . Frank Jordan told CNN his son isn't an experienced sailor but has a strong will .
 
 
 Example 5:
 
-prediction: eighth grade boy started blog on website called Wattpad in august last year . 11 chapters published up until January this year, with names like 'Massacre', 'Thrown Under The Bus' and 'Blood, Blood, And More Blood' . blog was pulled down and boy allowed to return to school last month . district and boy's parents say blog is a work of fiction and protected by First Amendment .
+prediction: defender says promotion to the premier league is an 'unbelievable achievement' . players and staff erupted on the team-bus after 2-0 win at Brighton . defender says the club can stay up and will add to squad in summer .
 
-target: Tidwell Middle School student - aged 13 or 14 - started the blog in August . It was called 'Killing Children' and about 'me murdering people I hate' Stories named classmates and described either killing, maiming or sexually assaulting them . The boy was taken out of school earlier this year and investigated . He was allowed to return last month, with the school district saying the stories were 'horror fiction' and not real . Local parents are outraged and staging protests outside the school .
+target: Watford have sealed an automatic return to the Premier League following their 2-0 win at Brighton and Middlesbrough's 4-3 loss at Fulham . Players celebrated wildly on the team-bus as the news came in . Defender Tommie Hoban is confident that the team has what it takes to stay up next season and insists they already have a strong squad to build on .
 </pre></div>
 </div>
 </div>
@@ -1130,7 +1052,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  23.781 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  44.155 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['elle est mon genre .', 'she s my type .']
+['je ne pleure pas .', 'i m not crying .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 26s (- 20m 6s) (5000 6%) 2.8293
-2m 48s (- 18m 15s) (10000 13%) 2.2911
-4m 10s (- 16m 40s) (15000 20%) 1.9686
-5m 30s (- 15m 8s) (20000 26%) 1.7352
-6m 49s (- 13m 39s) (25000 33%) 1.5062
-8m 8s (- 12m 13s) (30000 40%) 1.3587
-9m 26s (- 10m 47s) (35000 46%) 1.2081
-10m 45s (- 9m 24s) (40000 53%) 1.0880
-12m 4s (- 8m 2s) (45000 60%) 0.9908
-13m 22s (- 6m 41s) (50000 66%) 0.9067
-14m 40s (- 5m 20s) (55000 73%) 0.7885
-15m 59s (- 3m 59s) (60000 80%) 0.7378
-17m 17s (- 2m 39s) (65000 86%) 0.6841
-18m 36s (- 1m 19s) (70000 93%) 0.6319
-19m 55s (- 0m 0s) (75000 100%) 0.5652
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 23s (- 19m 27s) (5000 6%) 2.8368
+2m 41s (- 17m 28s) (10000 13%) 2.3149
+3m 58s (- 15m 54s) (15000 20%) 1.9613
+5m 16s (- 14m 29s) (20000 26%) 1.7398
+6m 33s (- 13m 7s) (25000 33%) 1.5194
+7m 51s (- 11m 46s) (30000 40%) 1.3480
+9m 8s (- 10m 27s) (35000 46%) 1.2001
+10m 30s (- 9m 11s) (40000 53%) 1.0855
+11m 49s (- 7m 52s) (45000 60%) 0.9886
+13m 7s (- 6m 33s) (50000 66%) 0.8875
+14m 27s (- 5m 15s) (55000 73%) 0.8135
+15m 50s (- 3m 57s) (60000 80%) 0.7268
+17m 12s (- 2m 38s) (65000 86%) 0.7233
+18m 40s (- 1m 20s) (70000 93%) 0.6131
+20m 6s (- 0m 0s) (75000 100%) 0.5553
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je ne suis pas contente .
-= i am not happy .
-&lt; i m not happy . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; elles ont toutes les deux raison .
+= they re both right .
+&lt; they re both right . &lt;EOS&gt;
 
-&gt; vous etes tenaces .
-= you re resilient .
-&lt; you re resilient . &lt;EOS&gt;
+&gt; tu n y es pas bonne .
+= you re not good at this .
+&lt; you re not good at this . &lt;EOS&gt;
 
-&gt; vous etes prevenant .
-= you re considerate .
-&lt; you re considerate . &lt;EOS&gt;
+&gt; je suis davantage qu un joli visage .
+= i m more than just a pretty face .
+&lt; i m more than just a pretty . . &lt;EOS&gt;
 
-&gt; vous etes mignon dans votre genre .
-= you re kind of cute .
-&lt; you re kind of your . &lt;EOS&gt;
+&gt; nous attendons du mauvais temps aujourd hui .
+= we re expecting lousy weather today .
+&lt; we re expecting weather today . &lt;EOS&gt;
 
-&gt; je l emporte .
-= i m winning .
-&lt; i m studying . &lt;EOS&gt;
+&gt; je ne vais nulle part .
+= i m not going anywhere .
+&lt; i m not going anywhere . &lt;EOS&gt;
 
-&gt; vous etes probablement fatigue .
-= you re probably tired .
-&lt; you re probably tired . &lt;EOS&gt;
+&gt; nous apprenons le chinois .
+= we re learning chinese .
+&lt; we re studying chinese . &lt;EOS&gt;
 
-&gt; nous sommes sauves .
-= we re saved .
-&lt; we re canadians . &lt;EOS&gt;
+&gt; j epargne pour une voiture .
+= i m saving money for a car .
+&lt; i m saving for for a car . &lt;EOS&gt;
 
-&gt; je suis paresseux .
-= i am lazy .
-&lt; i m lazy . &lt;EOS&gt;
+&gt; maintenant il court .
+= he is running now .
+&lt; he is running now . &lt;EOS&gt;
 
-&gt; nous sommes endurantes .
-= we re resilient .
-&lt; we re resilient . &lt;EOS&gt;
+&gt; il doit avoir la quarantaine .
+= he is about forty .
+&lt; he is cleaning . &lt;EOS&gt;
 
-&gt; vous etes vieilles .
-= you re old .
-&lt; you re old . &lt;EOS&gt;
+&gt; je te libere .
+= i m letting you go .
+&lt; i m letting you go . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f43813e2b30&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f278ea52350&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,9 +1236,9 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she is too weak . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not dying to die . &lt;EOS&gt;
+output = i m not scared to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
 output = he s a talented young . &lt;EOS&gt;
 </pre></div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  8.610 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  19.995 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>
