@@ -85,8 +85,8 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-     79%|#######8  | 623k/792k [00:00<00:00, 6.11MB/s]
-    100%|##########| 792k/792k [00:00<00:00, 6.50MB/s]
+     95%|#########5| 754k/792k [00:00<00:00, 7.33MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 7.35MB/s]
 
 
 
@@ -136,51 +136,48 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 696k/945M [00:00<02:19, 7.10MB/s]
-      0%|          | 1.79M/945M [00:00<01:41, 9.76MB/s]
-      0%|          | 3.46M/945M [00:00<01:14, 13.2MB/s]
-      1%|          | 6.13M/945M [00:00<00:51, 19.0MB/s]
-      1%|1         | 10.2M/945M [00:00<00:35, 27.6MB/s]
-      2%|1         | 16.8M/945M [00:00<00:23, 41.5MB/s]
-      3%|2         | 27.1M/945M [00:00<00:15, 63.1MB/s]
-      4%|4         | 41.3M/945M [00:00<00:10, 90.5MB/s]
-      6%|6         | 61.0M/945M [00:00<00:07, 127MB/s] 
-      9%|8         | 81.9M/945M [00:01<00:05, 155MB/s]
-     11%|#1        | 106M/945M [00:01<00:04, 186MB/s] 
-     14%|#3        | 130M/945M [00:01<00:04, 206MB/s]
-     16%|#6        | 155M/945M [00:01<00:03, 222MB/s]
-     19%|#9        | 180M/945M [00:01<00:03, 233MB/s]
-     22%|##1       | 204M/945M [00:01<00:03, 240MB/s]
-     24%|##4       | 229M/945M [00:01<00:03, 247MB/s]
-     27%|##6       | 254M/945M [00:01<00:02, 250MB/s]
-     29%|##9       | 278M/945M [00:01<00:02, 252MB/s]
-     32%|###2      | 302M/945M [00:01<00:02, 253MB/s]
-     35%|###4      | 326M/945M [00:02<00:02, 252MB/s]
-     37%|###7      | 350M/945M [00:02<00:02, 252MB/s]
-     40%|###9      | 375M/945M [00:02<00:02, 252MB/s]
-     42%|####2     | 399M/945M [00:02<00:02, 251MB/s]
-     45%|####4     | 423M/945M [00:02<00:02, 249MB/s]
-     47%|####7     | 446M/945M [00:02<00:02, 246MB/s]
-     50%|####9     | 470M/945M [00:02<00:02, 244MB/s]
-     52%|#####2    | 493M/945M [00:02<00:01, 245MB/s]
-     55%|#####4    | 517M/945M [00:02<00:01, 243MB/s]
-     57%|#####7    | 540M/945M [00:02<00:01, 243MB/s]
-     60%|#####9    | 564M/945M [00:03<00:01, 246MB/s]
-     63%|######2   | 592M/945M [00:03<00:01, 258MB/s]
-     66%|######5   | 619M/945M [00:03<00:01, 266MB/s]
-     68%|######8   | 646M/945M [00:03<00:01, 272MB/s]
-     71%|#######1  | 673M/945M [00:03<00:01, 276MB/s]
-     74%|#######4  | 700M/945M [00:03<00:00, 269MB/s]
-     77%|#######6  | 725M/945M [00:03<00:00, 261MB/s]
-     79%|#######9  | 750M/945M [00:03<00:00, 259MB/s]
-     82%|########2 | 775M/945M [00:03<00:00, 257MB/s]
-     85%|########4 | 800M/945M [00:03<00:00, 254MB/s]
-     87%|########7 | 824M/945M [00:04<00:00, 253MB/s]
-     90%|########9 | 848M/945M [00:04<00:00, 252MB/s]
-     92%|#########2| 872M/945M [00:04<00:00, 251MB/s]
-     95%|#########5| 898M/945M [00:04<00:00, 256MB/s]
-     98%|#########7| 924M/945M [00:04<00:00, 263MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 219MB/s]
+      0%|          | 688k/945M [00:00<02:20, 7.02MB/s]
+      0%|          | 1.72M/945M [00:00<01:45, 9.34MB/s]
+      0%|          | 3.38M/945M [00:00<01:16, 12.9MB/s]
+      1%|          | 5.94M/945M [00:00<00:53, 18.4MB/s]
+      1%|1         | 9.90M/945M [00:00<00:36, 26.7MB/s]
+      2%|1         | 16.0M/945M [00:00<00:24, 39.4MB/s]
+      3%|2         | 25.7M/945M [00:00<00:16, 59.4MB/s]
+      4%|4         | 40.9M/945M [00:00<00:10, 91.4MB/s]
+      7%|6         | 64.7M/945M [00:00<00:06, 141MB/s] 
+     10%|9         | 91.8M/945M [00:01<00:04, 185MB/s]
+     13%|#2        | 119M/945M [00:01<00:04, 216MB/s] 
+     15%|#5        | 146M/945M [00:01<00:03, 236MB/s]
+     18%|#8        | 173M/945M [00:01<00:03, 252MB/s]
+     21%|##1       | 201M/945M [00:01<00:02, 262MB/s]
+     24%|##4       | 228M/945M [00:01<00:02, 268MB/s]
+     27%|##6       | 255M/945M [00:01<00:02, 273MB/s]
+     30%|##9       | 282M/945M [00:01<00:02, 277MB/s]
+     33%|###2      | 309M/945M [00:01<00:02, 279MB/s]
+     36%|###5      | 337M/945M [00:01<00:02, 282MB/s]
+     39%|###8      | 364M/945M [00:02<00:02, 282MB/s]
+     41%|####1     | 391M/945M [00:02<00:02, 283MB/s]
+     44%|####4     | 418M/945M [00:02<00:01, 284MB/s]
+     47%|####7     | 445M/945M [00:02<00:01, 283MB/s]
+     50%|#####     | 473M/945M [00:02<00:01, 284MB/s]
+     53%|#####2    | 500M/945M [00:02<00:01, 285MB/s]
+     56%|#####5    | 527M/945M [00:02<00:01, 284MB/s]
+     59%|#####8    | 554M/945M [00:02<00:01, 285MB/s]
+     62%|######1   | 582M/945M [00:02<00:01, 284MB/s]
+     64%|######4   | 609M/945M [00:02<00:01, 284MB/s]
+     67%|######7   | 636M/945M [00:03<00:01, 285MB/s]
+     70%|#######   | 663M/945M [00:03<00:01, 285MB/s]
+     73%|#######3  | 690M/945M [00:03<00:00, 284MB/s]
+     76%|#######5  | 717M/945M [00:03<00:00, 283MB/s]
+     79%|#######8  | 744M/945M [00:03<00:00, 281MB/s]
+     82%|########1 | 771M/945M [00:03<00:00, 278MB/s]
+     84%|########4 | 798M/945M [00:03<00:00, 273MB/s]
+     87%|########7 | 824M/945M [00:03<00:00, 274MB/s]
+     90%|######### | 850M/945M [00:03<00:00, 274MB/s]
+     93%|#########2| 877M/945M [00:03<00:00, 275MB/s]
+     96%|#########5| 903M/945M [00:04<00:00, 274MB/s]
+     98%|#########8| 929M/945M [00:04<00:00, 273MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 237MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -476,37 +473,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: divers from california have been snapping exotic sea life for a decade . recently added a selfie stick to their trips to take incredible underwater photos .
+    prediction: an hour with Ruta aired on independent channel last week . it claimed foreign children were being seized and fostered with parents . argued that Norway's child protection service targeted Lithuanian children . 'in Norway, Lithuanian children are taken away from their parents', it said .
 
-    target: Divers Margo Sanchez and Stephanie Adamson have been photographing marine life for nearly a decade . The selfie stick allows them to keep a comfortable distance so they do not disturb marine life . The Californian pair co-own a diving school and travelled to many exotic locations to see incredible sea animals .
+    target: A Lithuanian talk show has accused Norway of seizing foreign children . Claimed they were needed to combat 'world's highest rate of inbreeding' An 'expert' said fresh blood was needed to strengthen genetic material' Lithuanian Gražina Leščinskiene's son was  taken into care early this year .
 
 
     Example 2:
 
-    prediction: the video shows a large crocodile swimming through a marina in Puerto Vallarta, in Mexico . a black dog wearing a red collar is lifeless in its mouth . the crocodile was on holiday with his wife when he saw the alarming sight . social media users have reacted in horror to the video posted on the Bogged facebook page .
+    prediction: 'she is drunk and on pills and she just attacked me,' says husband of 'seven years' 'she is on a detox from alcohol, but the marijuana is not,' says 911 caller . 'she is on a detox from alcohol, but the marijuana is not,' says 911 dispatcher .
 
-    target: A local bike shop owner's dog was snatched by a crocodile . The crocodile was swimming through Puerto Vallarta marina, in Mexico . New Zealander Tim Weston was on holiday and saw the bizarre sight . A video of the dog in the croc's jaws has been viewed half a million times .
+    target: Kate Major Lohan has been arrested for a 'drunken attack' on her husband Michael Lohan . Kate - who was ordered to rehab by Michael last year - is said to have had an alcohol relapse before getting physical with the father of Lindsay Lohan . New 911 call recording reveals Michael believed his wife was under the influence of marijuana, two prescriptions drugs, and alcohol . A child can be heard crying in the background of the 911 call recording .
 
 
     Example 3:
 
-    prediction: Mauricio pochettino says another season in the european competition could hamper their chances of breaking into the top four . the argentine has revealed that defenders hugo lloris and Kyle Walker are major doubts ahead of the clash with the magpies . pochettino has told bods in the firing line that escaping criticism is impossible as a manager .
+    prediction: police chief resigns after a motorist's drug charges are dropped . a man bloodied during a traffic stop is cleared of all charges . a new officer is charged with beating a man .
 
-    target: Mauricio Pochettino believes competing in the Europa League makes things 'difficult' for Premier League clubs . Tottenham were knocked out of Europa League by Fiorentina in February . Pochettino's side have struggled for results in recent weeks . Spurs face Premier League clash against Newcastle on Sunday .
+    target: Inkster, Michigan, Police Chief Vicki Yost resigns in the wake of charges against one of her former officers . William Melendez was caught on police car dashcam video in January beating an unarmed black motorist . Melendez was charged with assault on Monday; all charges against the motorist have been dropped .
 
 
     Example 4:
 
-    prediction: Oxford scientists say a Mercury-like body struck the young Earth . the object would have been the heat source for our planet's core . the same object could have been responsible for creating the moon . it also explains where some rare-Earth elements came from .
+    prediction: research suggests certain types of music can bring out flavours . this includes sweet, salty and bitter flavours in a range of foods . intensity of Luciano Pavarotti's Nessun Dorma is said to be perfect . high-pitched piano in billie Holiday's autumn in new york can help emphasise autumnal flavours in pumpkin pudding .
 
-    target: Oxford scientists say a Mercury-like body struck the young Earth . The Mars-sized object would have been the heat source for our planet . The same object could have been responsible for creating the moon . It also explains where some rare-Earth elements came from .
+    target: Research suggests certain types of music can bring out specific flavours . High-pitched music highlights sourness while sweetness is a rich sound . Billie Holiday's voice can emphasise autumnal flavour of pumpkin pudding . 'Digital seasoning' can also help drinkers enjoy wine by up to 15% more .
 
 
     Example 5:
 
-    prediction: GPs are the gateway to care – nine out of 10 times, the first contact a patient has with the health system is through their GP . but access to GPs has become a major policy and political issue . weekend opening hours for GPs has been touted as one solution .
+    prediction: the Borden family burial monument at Oak Grove Cemetery in Fall River, Massachusetts, was defaced with black and green paint . the vandalism was discovered on monday, the day after a Lifetime miniseries, the Lizzie Borden Chronicles, premiered on Sunday night . Borden went on trial for brutally murdering her father and stepmother with a hatchet in their fall river home in 1892 . she was acquitted, but her innocence is questioned even today .
 
-    target: Nine in 10 times, the first contact a patient has with the NHS is via a GP . Crisis in A&E has led some to blame lack of GP appointments . Weekend opening hours have been suggested as one solution . Vikram Pathania is a lecturer in economics at the University of Sussex .
+    target: Lizzie Borden and her family are buried in Fall River, Massachusetts . Their plot at Oak Grove Cemetery was defaced with black and green paint . Speculated graffiti is related to Lifetime's The Lizzie Borden Chronicles . Borden was acquitted after going on trial for the two murders in 1892 . Inspired rhyme: 'Lizzie Borden took an ax and gave her mother 40 whacks' Historic murder house is adjacent to where Aaron Hernandez is on trial .
 
 
 
@@ -860,7 +857,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  46.437 seconds)
+   **Total running time of the script:** ( 4 minutes  35.996 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
