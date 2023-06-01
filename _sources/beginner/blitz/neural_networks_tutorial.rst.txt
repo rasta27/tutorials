@@ -166,8 +166,8 @@ the MNIST dataset, please resize the images from the dataset to 32x32.
 
  .. code-block:: none
 
-    tensor([[ 0.0771,  0.1161,  0.0671, -0.0302, -0.0319,  0.0194,  0.0238,  0.0349,
-             -0.0979,  0.0248]], grad_fn=<AddmmBackward0>)
+    tensor([[ 0.1240,  0.1084, -0.0274, -0.0505,  0.0168,  0.1379, -0.0920, -0.0357,
+              0.0706,  0.0502]], grad_fn=<AddmmBackward0>)
 
 
 
@@ -264,7 +264,7 @@ For example:
 
  .. code-block:: none
 
-    tensor(1.3184, grad_fn=<MseLossBackward0>)
+    tensor(3.2518, grad_fn=<MseLossBackward0>)
 
 
 
@@ -306,9 +306,9 @@ For illustration, let us follow a few steps backward:
 
  .. code-block:: none
 
-    <MseLossBackward0 object at 0x7fb3a82687c0>
-    <AddmmBackward0 object at 0x7fb3a8268bb0>
-    <AccumulateGrad object at 0x7fb3a8269960>
+    <MseLossBackward0 object at 0x7f9ad73e9f90>
+    <AddmmBackward0 object at 0x7f9ad433e410>
+    <AccumulateGrad object at 0x7f9ad433e440>
 
 
 
@@ -352,7 +352,7 @@ gradients before and after the backward.
     conv1.bias.grad before backward
     None
     conv1.bias.grad after backward
-    tensor([ 0.0171, -0.0105,  0.0158,  0.0067, -0.0141,  0.0039])
+    tensor([-0.0068,  0.0224, -0.0242,  0.0248, -0.0049, -0.0170])
 
 
 
@@ -419,7 +419,7 @@ implements all these methods. Using it is very simple:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.141 seconds)
+   **Total running time of the script:** ( 0 minutes  0.142 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_neural_networks_tutorial.py:

@@ -85,8 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-     91%|#########1| 721k/792k [00:00<00:00, 7.05MB/s]
-    100%|##########| 792k/792k [00:00<00:00, 7.34MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.4MB/s]
 
 
 
@@ -136,48 +135,147 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.10M/945M [00:00<00:13, 74.3MB/s]
-      2%|2         | 21.6M/945M [00:00<00:08, 120MB/s] 
-      5%|4         | 44.6M/945M [00:00<00:05, 175MB/s]
-      7%|7         | 68.4M/945M [00:00<00:04, 205MB/s]
-     10%|9         | 92.8M/945M [00:00<00:04, 223MB/s]
-     12%|#2        | 117M/945M [00:00<00:03, 234MB/s] 
-     15%|#4        | 141M/945M [00:00<00:03, 240MB/s]
-     18%|#7        | 165M/945M [00:00<00:03, 244MB/s]
-     20%|##        | 189M/945M [00:00<00:03, 246MB/s]
-     23%|##2       | 213M/945M [00:01<00:03, 248MB/s]
-     25%|##5       | 237M/945M [00:01<00:03, 245MB/s]
-     28%|##7       | 260M/945M [00:01<00:03, 239MB/s]
-     30%|##9       | 283M/945M [00:01<00:02, 238MB/s]
-     32%|###2      | 306M/945M [00:01<00:02, 234MB/s]
-     35%|###4      | 329M/945M [00:01<00:02, 237MB/s]
-     37%|###7      | 352M/945M [00:01<00:02, 236MB/s]
-     40%|###9      | 376M/945M [00:01<00:02, 241MB/s]
-     42%|####2     | 399M/945M [00:01<00:02, 209MB/s]
-     45%|####4     | 423M/945M [00:01<00:02, 221MB/s]
-     47%|####7     | 446M/945M [00:02<00:02, 226MB/s]
-     50%|####9     | 470M/945M [00:02<00:02, 233MB/s]
-     52%|#####2    | 493M/945M [00:02<00:02, 235MB/s]
-     55%|#####4    | 517M/945M [00:02<00:01, 239MB/s]
-     57%|#####7    | 539M/945M [00:02<00:01, 237MB/s]
-     60%|#####9    | 563M/945M [00:02<00:01, 239MB/s]
-     62%|######2   | 586M/945M [00:02<00:01, 241MB/s]
-     65%|######4   | 610M/945M [00:02<00:01, 243MB/s]
-     67%|######7   | 633M/945M [00:02<00:01, 244MB/s]
-     69%|######9   | 656M/945M [00:02<00:01, 243MB/s]
-     72%|#######1  | 680M/945M [00:03<00:01, 244MB/s]
-     74%|#######4  | 703M/945M [00:03<00:01, 243MB/s]
-     77%|#######6  | 726M/945M [00:03<00:00, 243MB/s]
-     79%|#######9  | 750M/945M [00:03<00:00, 244MB/s]
-     82%|########1 | 773M/945M [00:03<00:00, 244MB/s]
-     84%|########4 | 796M/945M [00:03<00:00, 242MB/s]
-     87%|########6 | 820M/945M [00:03<00:00, 243MB/s]
-     89%|########9 | 843M/945M [00:03<00:00, 239MB/s]
-     92%|#########1| 866M/945M [00:03<00:00, 237MB/s]
-     94%|#########4| 889M/945M [00:03<00:00, 238MB/s]
-     97%|#########6| 912M/945M [00:04<00:00, 241MB/s]
-     99%|#########9| 935M/945M [00:04<00:00, 242MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 234MB/s]
+      1%|          | 5.66M/945M [00:00<00:16, 59.3MB/s]
+      1%|1         | 12.4M/945M [00:00<00:14, 65.7MB/s]
+      2%|1         | 18.6M/945M [00:00<00:15, 61.7MB/s]
+      3%|2         | 24.5M/945M [00:00<00:15, 61.4MB/s]
+      3%|3         | 31.1M/945M [00:00<00:14, 63.9MB/s]
+      4%|3         | 37.2M/945M [00:00<00:15, 61.6MB/s]
+      5%|4         | 45.1M/945M [00:00<00:13, 68.1MB/s]
+      5%|5         | 51.7M/945M [00:00<00:14, 66.4MB/s]
+      6%|6         | 58.0M/945M [00:00<00:14, 65.9MB/s]
+      7%|6         | 64.6M/945M [00:01<00:13, 66.4MB/s]
+      8%|7         | 71.7M/945M [00:01<00:13, 68.6MB/s]
+      8%|8         | 78.6M/945M [00:01<00:13, 69.7MB/s]
+      9%|9         | 85.5M/945M [00:01<00:12, 70.6MB/s]
+     10%|9         | 92.3M/945M [00:01<00:12, 70.0MB/s]
+     11%|#         | 99.6M/945M [00:01<00:12, 71.8MB/s]
+     11%|#1        | 106M/945M [00:01<00:12, 70.4MB/s] 
+     12%|#2        | 114M/945M [00:01<00:12, 72.3MB/s]
+     13%|#2        | 121M/945M [00:01<00:11, 73.2MB/s]
+     14%|#3        | 128M/945M [00:02<00:13, 64.1MB/s]
+     14%|#4        | 135M/945M [00:02<00:13, 65.3MB/s]
+     15%|#5        | 142M/945M [00:02<00:12, 68.2MB/s]
+     16%|#5        | 149M/945M [00:02<00:11, 70.5MB/s]
+     17%|#6        | 156M/945M [00:02<00:11, 71.0MB/s]
+     17%|#7        | 163M/945M [00:02<00:12, 68.2MB/s]
+     18%|#7        | 169M/945M [00:02<00:12, 65.3MB/s]
+     19%|#8        | 176M/945M [00:02<00:15, 50.8MB/s]
+     19%|#9        | 182M/945M [00:02<00:14, 53.7MB/s]
+     20%|#9        | 187M/945M [00:03<00:14, 54.3MB/s]
+     21%|##        | 195M/945M [00:03<00:12, 61.1MB/s]
+     21%|##1       | 201M/945M [00:03<00:12, 62.2MB/s]
+     22%|##1       | 207M/945M [00:03<00:12, 62.2MB/s]
+     23%|##2       | 214M/945M [00:03<00:12, 63.4MB/s]
+     23%|##3       | 220M/945M [00:03<00:12, 61.7MB/s]
+     24%|##3       | 226M/945M [00:03<00:12, 59.6MB/s]
+     25%|##4       | 232M/945M [00:03<00:12, 59.9MB/s]
+     25%|##5       | 238M/945M [00:03<00:14, 52.6MB/s]
+     26%|##5       | 243M/945M [00:04<00:14, 52.0MB/s]
+     26%|##6       | 250M/945M [00:04<00:12, 58.4MB/s]
+     27%|##7       | 256M/945M [00:04<00:12, 58.1MB/s]
+     28%|##7       | 262M/945M [00:04<00:12, 58.4MB/s]
+     28%|##8       | 267M/945M [00:04<00:12, 56.0MB/s]
+     29%|##9       | 274M/945M [00:04<00:11, 61.4MB/s]
+     30%|##9       | 280M/945M [00:04<00:12, 57.6MB/s]
+     30%|###       | 288M/945M [00:04<00:10, 62.9MB/s]
+     31%|###1      | 294M/945M [00:04<00:10, 64.0MB/s]
+     32%|###1      | 300M/945M [00:04<00:10, 63.5MB/s]
+     32%|###2      | 306M/945M [00:05<00:10, 63.3MB/s]
+     33%|###3      | 312M/945M [00:05<00:10, 62.8MB/s]
+     34%|###3      | 320M/945M [00:05<00:09, 67.4MB/s]
+     35%|###4      | 326M/945M [00:05<00:09, 65.9MB/s]
+     35%|###5      | 333M/945M [00:05<00:09, 66.4MB/s]
+     36%|###5      | 340M/945M [00:05<00:09, 67.6MB/s]
+     37%|###6      | 346M/945M [00:05<00:09, 65.1MB/s]
+     37%|###7      | 353M/945M [00:05<00:09, 66.0MB/s]
+     38%|###8      | 359M/945M [00:05<00:09, 64.9MB/s]
+     39%|###8      | 366M/945M [00:06<00:08, 68.6MB/s]
+     39%|###9      | 373M/945M [00:06<00:08, 67.6MB/s]
+     40%|####      | 380M/945M [00:06<00:08, 69.0MB/s]
+     41%|####      | 387M/945M [00:06<00:08, 71.4MB/s]
+     42%|####1     | 394M/945M [00:06<00:08, 70.5MB/s]
+     42%|####2     | 401M/945M [00:06<00:08, 67.6MB/s]
+     43%|####3     | 407M/945M [00:06<00:08, 64.1MB/s]
+     44%|####3     | 414M/945M [00:06<00:08, 66.5MB/s]
+     45%|####4     | 422M/945M [00:06<00:07, 69.8MB/s]
+     45%|####5     | 428M/945M [00:06<00:07, 67.9MB/s]
+     46%|####6     | 435M/945M [00:07<00:07, 68.7MB/s]
+     47%|####6     | 443M/945M [00:07<00:07, 71.0MB/s]
+     48%|####7     | 449M/945M [00:07<00:07, 65.3MB/s]
+     48%|####8     | 456M/945M [00:07<00:07, 64.4MB/s]
+     49%|####9     | 463M/945M [00:07<00:07, 67.3MB/s]
+     50%|####9     | 469M/945M [00:07<00:07, 66.6MB/s]
+     50%|#####     | 476M/945M [00:07<00:07, 67.0MB/s]
+     51%|#####1    | 483M/945M [00:07<00:07, 66.1MB/s]
+     52%|#####1    | 489M/945M [00:07<00:07, 66.9MB/s]
+     53%|#####2    | 496M/945M [00:08<00:06, 68.1MB/s]
+     53%|#####3    | 503M/945M [00:08<00:06, 68.2MB/s]
+     54%|#####3    | 510M/945M [00:08<00:06, 70.8MB/s]
+     55%|#####4    | 518M/945M [00:08<00:06, 73.3MB/s]
+     56%|#####5    | 525M/945M [00:08<00:06, 67.8MB/s]
+     56%|#####6    | 531M/945M [00:08<00:06, 68.5MB/s]
+     57%|#####6    | 538M/945M [00:08<00:06, 65.3MB/s]
+     58%|#####7    | 544M/945M [00:08<00:07, 55.4MB/s]
+     58%|#####8    | 550M/945M [00:08<00:07, 55.9MB/s]
+     59%|#####8    | 557M/945M [00:09<00:06, 60.1MB/s]
+     60%|#####9    | 563M/945M [00:09<00:06, 60.3MB/s]
+     60%|######    | 568M/945M [00:09<00:07, 55.9MB/s]
+     61%|######    | 575M/945M [00:09<00:06, 59.1MB/s]
+     62%|######1   | 581M/945M [00:09<00:06, 61.4MB/s]
+     62%|######2   | 589M/945M [00:09<00:05, 65.8MB/s]
+     63%|######3   | 595M/945M [00:09<00:05, 64.9MB/s]
+     64%|######3   | 602M/945M [00:09<00:05, 66.4MB/s]
+     64%|######4   | 609M/945M [00:09<00:05, 69.0MB/s]
+     65%|######5   | 616M/945M [00:09<00:05, 68.7MB/s]
+     66%|######5   | 623M/945M [00:10<00:04, 68.7MB/s]
+     67%|######6   | 629M/945M [00:10<00:04, 69.7MB/s]
+     67%|######7   | 636M/945M [00:10<00:04, 69.0MB/s]
+     68%|######8   | 644M/945M [00:10<00:04, 72.3MB/s]
+     69%|######8   | 651M/945M [00:10<00:04, 71.4MB/s]
+     70%|######9   | 659M/945M [00:10<00:03, 74.9MB/s]
+     71%|#######   | 666M/945M [00:10<00:03, 75.1MB/s]
+     71%|#######1  | 673M/945M [00:10<00:03, 71.2MB/s]
+     72%|#######2  | 680M/945M [00:10<00:03, 71.7MB/s]
+     73%|#######2  | 688M/945M [00:11<00:03, 72.9MB/s]
+     74%|#######3  | 695M/945M [00:11<00:03, 72.3MB/s]
+     74%|#######4  | 701M/945M [00:11<00:03, 65.8MB/s]
+     75%|#######4  | 708M/945M [00:11<00:03, 62.6MB/s]
+     76%|#######5  | 715M/945M [00:11<00:03, 65.7MB/s]
+     76%|#######6  | 721M/945M [00:11<00:05, 42.1MB/s]
+     77%|#######7  | 731M/945M [00:11<00:04, 54.7MB/s]
+     78%|#######8  | 738M/945M [00:11<00:03, 57.9MB/s]
+     79%|#######8  | 745M/945M [00:12<00:03, 62.5MB/s]
+     80%|#######9  | 752M/945M [00:12<00:03, 65.7MB/s]
+     80%|########  | 759M/945M [00:12<00:02, 66.0MB/s]
+     81%|########1 | 766M/945M [00:12<00:02, 63.0MB/s]
+     82%|########1 | 772M/945M [00:12<00:02, 61.2MB/s]
+     82%|########2 | 778M/945M [00:12<00:03, 54.6MB/s]
+     83%|########2 | 784M/945M [00:12<00:03, 54.4MB/s]
+     84%|########3 | 790M/945M [00:12<00:02, 57.0MB/s]
+     84%|########4 | 797M/945M [00:12<00:02, 60.8MB/s]
+     85%|########5 | 803M/945M [00:13<00:02, 63.1MB/s]
+     86%|########5 | 811M/945M [00:13<00:02, 68.2MB/s]
+     87%|########6 | 818M/945M [00:13<00:02, 65.4MB/s]
+     87%|########7 | 824M/945M [00:13<00:01, 66.1MB/s]
+     88%|########8 | 832M/945M [00:13<00:01, 70.1MB/s]
+     89%|########8 | 839M/945M [00:13<00:01, 67.7MB/s]
+     89%|########9 | 845M/945M [00:13<00:01, 66.7MB/s]
+     90%|######### | 852M/945M [00:13<00:01, 69.1MB/s]
+     91%|#########1| 860M/945M [00:13<00:01, 71.2MB/s]
+     92%|#########1| 867M/945M [00:14<00:01, 70.4MB/s]
+     92%|#########2| 873M/945M [00:14<00:01, 71.0MB/s]
+     93%|#########3| 880M/945M [00:14<00:00, 68.7MB/s]
+     94%|#########3| 887M/945M [00:14<00:00, 69.1MB/s]
+     95%|#########4| 894M/945M [00:14<00:00, 67.5MB/s]
+     95%|#########5| 900M/945M [00:14<00:00, 66.7MB/s]
+     96%|#########5| 906M/945M [00:14<00:00, 64.6MB/s]
+     97%|#########6| 914M/945M [00:14<00:00, 68.1MB/s]
+     97%|#########7| 920M/945M [00:14<00:00, 68.1MB/s]
+     98%|#########8| 927M/945M [00:15<00:00, 64.2MB/s]
+     99%|#########8| 933M/945M [00:15<00:00, 63.7MB/s]
+    100%|#########9| 940M/945M [00:15<00:00, 66.1MB/s]
+    100%|##########| 945M/945M [00:15<00:00, 64.9MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -473,37 +571,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: former education secretary said he could not rule out further cuts . asked if he could confirm there would be 'no more changes to child benefit' . but he refused to rule out cuts to child benefit .
+    prediction: polls have the two main parties locked on around 35 per cent . pointing to another hung parliament on may 7 . but bookies are seeing a completely different picture in private . one bookie alone has taken five bets for more than £10,000 on the tories .
 
-    target: Asked if he could rule out child benefit cuts Mr Gove said: 'I can't say that' The chief whip ruled out any cuts to pensioner and disability benefits . Comes after George Osborne paved the way for further cuts to payments . He refused to rule out rolling Child Benefit into Universal Credit system .
+    target: EXCLUSIVE: Punters  backing the Tories to finish as largest party . Twice as many bets are being placed on the Tories to win over Labour . One bookie alone has taken five bets for more than £10,000 on the Tories . General election set to be the first to break the £100million betting barrier .
 
 
     Example 2:
 
-    prediction: real Sociedad took the lead through a Xabi Prieto penalty in the 31st minute . a deportivo penalty was awarded in the 38th minute to equalise . but the home side came back to equalise with a second half header .
+    prediction: cardiologist's attorney says allegations against his client are "completely unsubstantiated" he is accused of conspiring to have another doctor hurt or killed . he pleaded not guilty to all charges .
 
-    target: Xabi Prieto struck a 33rd-minute penalty to give Real Sociedad the lead . Perez Martínez equalised for Deportivo five minutes before the break . Gonzalo Castro restored Sociedad's lead with a stunning volley . But Verdu Nicolas rescued a point for the visitors late on .
+    target: A lawyer for Dr. Anthony Moschetto says the charges against him are baseless . Moschetto, 54, was arrested for selling drugs and weapons, prosecutors say . Authorities allege Moschetto hired accomplices to burn down the practice of former associate .
 
 
     Example 3:
 
-    prediction: the music video was released on the boxer's facebook page on monday . it includes a montage of Pacquiao's fights and humanitarian efforts . the tune translates as 'I will fight for the fillipino' .
+    prediction: arsenal face reading in the premier league on sunday evening . the gunners will take on the foxes at the emirates stadium . arsene wenger says something must be done to solve fixture scheduling mess . the gunners boss also branded rumours that he will be replaced by Borussia Dortmund manager Jurgen Klopp as 'ridiculous' .
 
-    target: Manny Pacquiao faces Floyd Mayweather in $300m showdown on May 2 . Pac-Man has released own entrance song 'Lalaban Ako Para Sa Filipino' The 36-year-old also directed the music video ahead of Las Vegas clash .
+    target: Arsenal play Reading in FA Cup semi-final on Saturday evening . Chelsea kick off against Manchester United 10 minutes later . Wenger says 'something should be done' and 'it is difficult to understand' Arsenal manager also brands circus around Jurgen Klopp 'ridiculous' Klopp announce on Wednesday he will leave Dortmund this summer .
 
 
     Example 4:
 
-    prediction: temperatures to rise across the country today reaching 22C (72F) tomorrow . that is the warmest temperature recorded this year and will beat the average daytime temperature for august . 22C (72F) predicted in the south east on friday is also better than the 18C forecast in marbella, 16C in Rhodes, 10C in Istanbul and 16C in Malta .
+    prediction: Tara McIntyre, 24, was left virtually wheelchair-bound after crash . she had just popped out to shops in her small KA when she was hit . she suffered life-changing injuries including a fractured spine and pelvis . judge branded driver's driving 'madness' and accused him of changing her life .
 
-    target: 22C forecast for South East is 11C warmer than average - and would beat 2015 high of 20.7C in Aberdeenshire . Among the best coastal areas for warm weather tomorrow will be Hunstanton in Norfolk and Whitstable in Kent . Weather will stay mostly dry and sunny for next few days, but some showers are expected from late tomorrow . Defra warns asthma sufferers and people with lung problems of 'very high' air pollution in South East tomorrow .
+    target: Tara McIntyre, 24, was left with life-changing injuries after horrifying smash . Ben Hagon had been more than double legal alcohol limit when he crashed . Witnesses claimed his Mercedes was speeding up to 75mph in 40mph zone . Victim suffered fractured spine and pelvis leaving her wheelchair-bound .
 
 
     Example 5:
 
-    prediction: ten-year-old dog caught out by strong current while paddling in the water . with strength of tide, dog was quickly swept out to sea by her owner . RNLI crew managed to find her cold and shivering half a mile out to sea . they then pulled her on to lifeboat after managing to grab her collar . but despite rescue, RNLI warn about importance of owners not attempting to rescue their pets .
+    prediction: Marie D'Argent claims she suffered vertebral disc trauma, whiplash and nightmares when the elevator at the Princeton complex in Melbourne dropped suddenly on October 9 . the 55-year-old publicist says the fall also left her with a 'loss of libido', 'sexual discomfort and impairment' and 'curtailment of ­sexual adventurism'
 
-    target: Martha, aged 10, had been paddling in the water when she was swept out . Her owner launched their own rescue but was unable to grab the pet . RNLI eventually found the golden retriever who was cold and shivering . Brought her back to the shore after managing to grab her by the collar .
+    target: Marie D'Argent was injured when elevator at Melbourne apartment complex dropped suddenly in October . She says she suffered vertebral disc trauma and loss of libido as a result . The 55-year-old is suing building and elevator company for compensation . Ms D'Argent has filed a statement of claim at the County Court of Victoria .
 
 
 
@@ -857,7 +955,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  0.118 seconds)
+   **Total running time of the script:** ( 4 minutes  1.885 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

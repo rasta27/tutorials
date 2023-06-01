@@ -390,15 +390,15 @@ some results on our build machines:
 
  .. code-block:: none
 
-    Per-sample-grads without vmap <torch.utils.benchmark.utils.common.Measurement object at 0x7f49642fc820>
+    Per-sample-grads without vmap <torch.utils.benchmark.utils.common.Measurement object at 0x7f2094f2d360>
     compute_sample_grads(data, targets)
-      68.67 ms
+      68.09 ms
       1 measurement, 100 runs , 1 thread
-    Per-sample-grads with vmap <torch.utils.benchmark.utils.common.Measurement object at 0x7f4964377d00>
+    Per-sample-grads with vmap <torch.utils.benchmark.utils.common.Measurement object at 0x7f20a422bd90>
     ft_compute_sample_grad(params, buffers, data, targets)
-      7.58 ms
+      7.54 ms
       1 measurement, 100 runs , 1 thread
-    Performance delta: 805.8438 percent improvement with vmap 
+    Performance delta: 802.8886 percent improvement with vmap 
 
 
 
@@ -420,7 +420,7 @@ at on GitHub.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.755 seconds)
+   **Total running time of the script:** ( 0 minutes  8.650 seconds)
 
 
 .. _sphx_glr_download_intermediate_per_sample_grads.py:

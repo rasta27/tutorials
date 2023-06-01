@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['vous n etes pas habillees .', 'you re not dressed .']
+['on peut me faire confiance .', 'i m trustworthy .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 24s (- 19m 41s) (5000 6%) 2.8598
-2m 42s (- 17m 38s) (10000 13%) 2.2863
-4m 0s (- 16m 2s) (15000 20%) 1.9777
-5m 19s (- 14m 37s) (20000 26%) 1.6970
-6m 36s (- 13m 13s) (25000 33%) 1.5131
-7m 55s (- 11m 53s) (30000 40%) 1.3271
-9m 13s (- 10m 32s) (35000 46%) 1.1980
-10m 30s (- 9m 11s) (40000 53%) 1.0864
-11m 48s (- 7m 52s) (45000 60%) 0.9913
-13m 6s (- 6m 33s) (50000 66%) 0.8843
-14m 23s (- 5m 13s) (55000 73%) 0.7968
-15m 39s (- 3m 54s) (60000 80%) 0.7134
-16m 56s (- 2m 36s) (65000 86%) 0.6549
-18m 13s (- 1m 18s) (70000 93%) 0.6256
-19m 30s (- 0m 0s) (75000 100%) 0.5611
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 21s (- 19m 5s) (5000 6%) 2.8450
+2m 37s (- 17m 5s) (10000 13%) 2.2860
+3m 54s (- 15m 36s) (15000 20%) 1.9787
+5m 10s (- 14m 13s) (20000 26%) 1.7228
+6m 26s (- 12m 53s) (25000 33%) 1.5080
+7m 42s (- 11m 34s) (30000 40%) 1.3537
+8m 59s (- 10m 16s) (35000 46%) 1.2047
+10m 15s (- 8m 58s) (40000 53%) 1.1012
+11m 35s (- 7m 43s) (45000 60%) 0.9954
+12m 55s (- 6m 27s) (50000 66%) 0.9079
+14m 13s (- 5m 10s) (55000 73%) 0.8351
+15m 30s (- 3m 52s) (60000 80%) 0.7654
+16m 47s (- 2m 35s) (65000 86%) 0.7054
+18m 4s (- 1m 17s) (70000 93%) 0.6399
+19m 21s (- 0m 0s) (75000 100%) 0.5846
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; nous avons a moitie raison .
-= we re half right .
-&lt; we re half right . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je suis la pour vous proteger .
+= i m here to protect you .
+&lt; i m here to protect you . &lt;EOS&gt;
 
-&gt; il est toujours celibataire .
-= he s still single .
-&lt; he is still single . &lt;EOS&gt;
+&gt; je m ennuie en ce moment .
+= i m bored right now .
+&lt; i m right now . &lt;EOS&gt;
 
-&gt; nous avons juste peur .
-= we re just scared .
-&lt; we re just scared . &lt;EOS&gt;
+&gt; il n est pas parfait .
+= he s not perfect .
+&lt; he s t perfect . &lt;EOS&gt;
 
-&gt; il est respecte par tout le monde .
-= he is respected by everyone .
-&lt; he s respected by everyone . &lt;EOS&gt;
+&gt; c est un ecologiste .
+= he is an environmentalist .
+&lt; he s an . &lt;EOS&gt;
 
-&gt; elle est a son hotel maintenant .
-= she is in her hotel now .
-&lt; she s in his at now . &lt;EOS&gt;
+&gt; je prends du poids .
+= i m gaining weight .
+&lt; i m gaining weight . &lt;EOS&gt;
 
-&gt; c est un homme de raison .
-= he is a man of reason .
-&lt; he is a man of . &lt;EOS&gt;
+&gt; je suis de zambie .
+= i m from zambia .
+&lt; i m from fat . &lt;EOS&gt;
 
-&gt; nous sommes tres serieux .
-= we re very serious .
-&lt; we re very serious . &lt;EOS&gt;
+&gt; il a peur de nager .
+= he is afraid to swim .
+&lt; he is afraid to swim . &lt;EOS&gt;
 
-&gt; je suis desole de te deranger si souvent .
-= i m sorry to bother you so often .
-&lt; i m sorry to bother you so often . &lt;EOS&gt;
+&gt; ils le font correctement .
+= they re doing it right .
+&lt; they re doing it right . &lt;EOS&gt;
 
-&gt; on n est jamais trop vieux pour apprendre .
-= you re never too old to learn .
-&lt; you re never too old to learn . &lt;EOS&gt;
+&gt; il se tient sur la colline .
+= he is standing on the hill .
+&lt; he is standing on the hill . &lt;EOS&gt;
 
-&gt; j apprends deux langues etrangeres .
-= i am learning two foreign languages .
-&lt; i m learning a tv room . &lt;EOS&gt;
+&gt; tu fais desormais partie de la bande .
+= you re part of the gang now .
+&lt; you are part now of the time . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f1fcda66980&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f6e8c06f3a0&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she is two years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she is too short . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared to die . &lt;EOS&gt;
+output = i m not scared of die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a very talented . . &lt;EOS&gt;
+output = he s a talented young . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  44.403 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  35.287 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>
