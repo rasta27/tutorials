@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je suis sur le chemin de la maison .', 'i m on the way home .']
+    ['vous n etes plus seule .', 'you re not alone anymore .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 21s (- 18m 59s) (5000 6%) 2.8581
-    2m 37s (- 17m 5s) (10000 13%) 2.2911
-    3m 54s (- 15m 38s) (15000 20%) 1.9825
-    5m 12s (- 14m 18s) (20000 26%) 1.7276
-    6m 29s (- 12m 59s) (25000 33%) 1.5259
-    7m 46s (- 11m 40s) (30000 40%) 1.3646
-    9m 3s (- 10m 21s) (35000 46%) 1.2323
-    10m 20s (- 9m 3s) (40000 53%) 1.1050
-    11m 37s (- 7m 45s) (45000 60%) 1.0074
-    12m 54s (- 6m 27s) (50000 66%) 0.8892
-    14m 12s (- 5m 9s) (55000 73%) 0.8037
-    15m 29s (- 3m 52s) (60000 80%) 0.7540
-    16m 46s (- 2m 34s) (65000 86%) 0.6741
-    18m 3s (- 1m 17s) (70000 93%) 0.6437
-    19m 21s (- 0m 0s) (75000 100%) 0.5737
+    1m 19s (- 18m 36s) (5000 6%) 2.8059
+    2m 34s (- 16m 47s) (10000 13%) 2.2712
+    3m 50s (- 15m 22s) (15000 20%) 1.9965
+    5m 5s (- 14m 0s) (20000 26%) 1.7099
+    6m 21s (- 12m 43s) (25000 33%) 1.5324
+    7m 37s (- 11m 26s) (30000 40%) 1.3798
+    8m 53s (- 10m 9s) (35000 46%) 1.2271
+    10m 10s (- 8m 54s) (40000 53%) 1.0916
+    11m 25s (- 7m 37s) (45000 60%) 1.0025
+    12m 42s (- 6m 21s) (50000 66%) 0.9330
+    13m 58s (- 5m 5s) (55000 73%) 0.8198
+    15m 15s (- 3m 48s) (60000 80%) 0.7384
+    16m 31s (- 2m 32s) (65000 86%) 0.6995
+    17m 48s (- 1m 16s) (70000 93%) 0.6276
+    19m 5s (- 0m 0s) (75000 100%) 0.5921
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > tu es connu .
-    = you re famous .
-    < you re famous . <EOS>
+    > j ai peur de voler .
+    = i m afraid of flying .
+    < i m afraid of spiders . <EOS>
 
-    > vous etes sinistre .
-    = you re creepy .
-    < you re creepy . <EOS>
+    > je ne suis pas de garde demain .
+    = i am not on call tomorrow .
+    < i am off out of tomorrow . <EOS>
 
-    > vous n etes pas des leurs si ?
-    = you re not one of them are you ?
-    < you re not a city are you ? <EOS>
+    > tu te leurres .
+    = you are deceiving yourself .
+    < you are deceiving yourself . <EOS>
 
-    > nous sommes ruinees .
-    = we re ruined .
-    < we re concerned . <EOS>
+    > il est la pour moi .
+    = he s here for me .
+    < he is here for me . <EOS>
 
-    > je ne suis pas convaincue .
-    = i m not convinced .
-    < i m not convinced . <EOS>
+    > tu es splendide .
+    = you are gorgeous .
+    < you are gorgeous . <EOS>
 
-    > nous ne sommes pas fous .
-    = we re not mad .
-    < we re not unhappy . <EOS>
+    > je fais mes devoirs .
+    = i am doing my homework .
+    < i m doing my homework . <EOS>
 
-    > elle n est pas de taille avec moi .
-    = she is no match for me .
-    < she is no match for me . <EOS>
+    > il a peur de son pere .
+    = he is afraid of his father .
+    < he is afraid of his father <EOS>
 
-    > je ne m inquiete pas pour tom .
-    = i m not worried about tom .
-    < i m not worried about tom . <EOS>
+    > il a trois ans de plus que moi .
+    = he s three years older than me .
+    < he s three years older than me . <EOS>
 
-    > c est ma s ur .
-    = she s my sister .
-    < she is my sister . <EOS>
+    > il est satisfait du resultat .
+    = he is satisfied with the result .
+    < he is satisfied with the result . <EOS>
 
-    > je suis sur que tout se passera bien .
-    = i m sure everything will be ok .
-    < i m sure everything will be ok . <EOS>
+    > vous etes sournoises .
+    = you re sneaky .
+    < you re sneaky . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f2facdaece0>
+    <matplotlib.image.AxesImage object at 0x7f3b06a8aa40>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she s five years younger than me am . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too loud . <EOS>
+    output = she is too old . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not afraid to die . <EOS>
+    output = i m afraid of not scared . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s a talented young director . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  34.879 seconds)
+   **Total running time of the script:** ( 19 minutes  18.403 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

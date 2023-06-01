@@ -22,11 +22,14 @@ NLP From Scratch: Classifying Names with a Character-Level RNN
 **************************************************************
 **Author**: `Sean Robertson <https://github.com/spro>`_
 
-We will be building and training a basic character-level RNN to classify
-words. This tutorial, along with the following two, show how to do
-preprocess data for NLP modeling "from scratch", in particular not using
-many of the convenience functions of `torchtext`, so you can see how
-preprocessing for NLP modeling works at a low level.
+We will be building and training a basic character-level Recurrent Neural
+Network (RNN) to classify words. This tutorial, along with two other
+Natural Language Processing (NLP) "from scratch" tutorials
+:doc:`/intermediate/char_rnn_generation_tutorial` and
+:doc:`/intermediate/seq2seq_translation_tutorial`, show how to
+preprocess data to model NLP. In particular these tutorials do not
+use many of the convenience functions of `torchtext`, so you can see how
+preprocessing to model NLP works at a low level.
 
 A character-level RNN reads words as a series of characters -
 outputting a prediction and "hidden state" at each step, feeding its
@@ -50,13 +53,15 @@ spelling:
     (-2.68) Dutch
 
 
-**Recommended Reading:**
+Recommended Preparation
+=======================
 
-I assume you have at least installed PyTorch, know Python, and
-understand Tensors:
+Before starting this tutorial it is recommended that you have installed PyTorch,
+and have a basic understanding of Python programming language and Tensors:
 
 -  https://pytorch.org/ For installation instructions
 -  :doc:`/beginner/deep_learning_60min_blitz` to get started with PyTorch in general
+   and learn the basics of Tensors
 -  :doc:`/beginner/pytorch_with_examples` for a wide and deep overview
 -  :doc:`/beginner/former_torchies_tutorial` if you are former Lua Torch user
 
@@ -87,7 +92,7 @@ We'll end up with a dictionary of lists of names per language,
 ``{language: [names ...]}``. The generic variables "category" and "line"
 (for language and name in our case) are used for later extensibility.
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-115
+.. GENERATED FROM PYTHON SOURCE LINES 77-120
 
 .. code-block:: default
 
@@ -148,7 +153,7 @@ We'll end up with a dictionary of lists of names per language,
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-121
+.. GENERATED FROM PYTHON SOURCE LINES 121-126
 
 Now we have ``category_lines``, a dictionary mapping each category
 (language) to a list of lines (names). We also kept track of
@@ -156,7 +161,7 @@ Now we have ``category_lines``, a dictionary mapping each category
 later reference.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-125
+.. GENERATED FROM PYTHON SOURCE LINES 126-130
 
 .. code-block:: default
 
@@ -177,7 +182,7 @@ later reference.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-142
+.. GENERATED FROM PYTHON SOURCE LINES 131-147
 
 Turning Names into Tensors
 --------------------------
@@ -196,7 +201,7 @@ That extra 1 dimension is because PyTorch assumes everything is in
 batches - we're just using a batch size of 1 here.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-168
+.. GENERATED FROM PYTHON SOURCE LINES 147-173
 
 .. code-block:: default
 
@@ -243,7 +248,7 @@ batches - we're just using a batch size of 1 here.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 169-188
+.. GENERATED FROM PYTHON SOURCE LINES 174-189
 
 Creating the Network
 ====================
@@ -260,12 +265,8 @@ nn_tutorial.html#example-2-recurrent-net>`__)
 is just 2 linear layers which operate on an input and hidden state, with
 a ``LogSoftmax`` layer after the output.
 
-.. figure:: https://i.imgur.com/Z2xbySO.png
-   :alt:
 
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 188-215
+.. GENERATED FROM PYTHON SOURCE LINES 189-216
 
 .. code-block:: default
 
@@ -279,13 +280,13 @@ a ``LogSoftmax`` layer after the output.
             self.hidden_size = hidden_size
 
             self.i2h = nn.Linear(input_size + hidden_size, hidden_size)
-            self.i2o = nn.Linear(input_size + hidden_size, output_size)
+            self.h2o = nn.Linear(hidden_size, output_size)
             self.softmax = nn.LogSoftmax(dim=1)
 
         def forward(self, input, hidden):
             combined = torch.cat((input, hidden), 1)
             hidden = self.i2h(combined)
-            output = self.i2o(combined)
+            output = self.h2o(hidden)
             output = self.softmax(output)
             return output, hidden
 
@@ -303,7 +304,7 @@ a ``LogSoftmax`` layer after the output.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 216-222
+.. GENERATED FROM PYTHON SOURCE LINES 217-223
 
 To run a step of this network we need to pass an input (in our case, the
 Tensor for the current letter) and a previous hidden state (which we
@@ -312,7 +313,7 @@ each language) and a next hidden state (which we keep for the next
 step).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-229
+.. GENERATED FROM PYTHON SOURCE LINES 223-230
 
 .. code-block:: default
 
@@ -330,7 +331,7 @@ step).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-235
+.. GENERATED FROM PYTHON SOURCE LINES 231-236
 
 For the sake of efficiency we don't want to be creating a new Tensor for
 every step, so we will use ``lineToTensor`` instead of
@@ -338,7 +339,7 @@ every step, so we will use ``lineToTensor`` instead of
 precomputing batches of Tensors.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 235-243
+.. GENERATED FROM PYTHON SOURCE LINES 236-244
 
 .. code-block:: default
 
@@ -358,20 +359,20 @@ precomputing batches of Tensors.
 
  .. code-block:: none
 
-    tensor([[-2.9030, -2.9326, -2.8710, -2.9045, -2.8449, -2.8373, -2.8834, -2.8998,
-             -2.9550, -2.9127, -2.8795, -2.9122, -2.8276, -2.8879, -2.7957, -2.8853,
-             -2.9486, -2.9630]], grad_fn=<LogSoftmaxBackward0>)
+    tensor([[-2.8343, -2.8457, -2.8802, -2.9841, -2.8794, -2.9378, -2.9382, -2.7919,
+             -2.8719, -2.9774, -2.8968, -2.7736, -2.9417, -2.7679, -2.9532, -2.9465,
+             -3.0207, -2.8328]], grad_fn=<LogSoftmaxBackward0>)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 244-247
+.. GENERATED FROM PYTHON SOURCE LINES 245-248
 
 As you can see the output is a ``<1 x n_categories>`` Tensor, where
 every item is the likelihood of that category (higher is more likely).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-260
+.. GENERATED FROM PYTHON SOURCE LINES 251-261
 
 Training
 ========
@@ -384,7 +385,7 @@ likelihood of each category. We can use ``Tensor.topk`` to get the index
 of the greatest value:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 261-270
+.. GENERATED FROM PYTHON SOURCE LINES 262-271
 
 .. code-block:: default
 
@@ -405,18 +406,18 @@ of the greatest value:
 
  .. code-block:: none
 
-    ('Chinese', 14)
+    ('Scottish', 13)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-274
+.. GENERATED FROM PYTHON SOURCE LINES 272-275
 
 We will also want a quick way to get a training example (a name and its
 language):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 274-292
+.. GENERATED FROM PYTHON SOURCE LINES 275-293
 
 .. code-block:: default
 
@@ -446,21 +447,21 @@ language):
 
  .. code-block:: none
 
-    category = English / line = Nisbet
-    category = Korean / line = Si
-    category = Japanese / line = Masuko
-    category = Korean / line = Sung
-    category = German / line = Mas
-    category = Irish / line = Carey
-    category = English / line = Beer
-    category = Italian / line = Sacco
-    category = Korean / line = Chin
-    category = Greek / line = Banos
+    category = Dutch / line = Nifterick
+    category = Scottish / line = Henderson
+    category = Korean / line = Youn
+    category = Irish / line = Mullen
+    category = Polish / line = Marszaek
+    category = Scottish / line = Miller
+    category = Greek / line = Zouvelekis
+    category = Irish / line = Quirke
+    category = Arabic / line = Bitar
+    category = Dutch / line = Nifterik
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-302
+.. GENERATED FROM PYTHON SOURCE LINES 294-303
 
 Training the Network
 --------------------
@@ -472,7 +473,7 @@ For the loss function ``nn.NLLLoss`` is appropriate, since the last
 layer of the RNN is ``nn.LogSoftmax``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-306
+.. GENERATED FROM PYTHON SOURCE LINES 303-307
 
 .. code-block:: default
 
@@ -487,7 +488,7 @@ layer of the RNN is ``nn.LogSoftmax``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 307-319
+.. GENERATED FROM PYTHON SOURCE LINES 308-320
 
 Each loop of training will:
 
@@ -502,7 +503,7 @@ Each loop of training will:
 -  Return the output and loss
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 319-340
+.. GENERATED FROM PYTHON SOURCE LINES 320-341
 
 .. code-block:: default
 
@@ -534,7 +535,7 @@ Each loop of training will:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 341-347
+.. GENERATED FROM PYTHON SOURCE LINES 342-348
 
 Now we just have to run that with a bunch of examples. Since the
 ``train`` function returns both the output and loss we can print its
@@ -543,7 +544,7 @@ of examples we print only every ``print_every`` examples, and take an
 average of the loss.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 347-387
+.. GENERATED FROM PYTHON SOURCE LINES 348-388
 
 .. code-block:: default
 
@@ -595,31 +596,31 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 5s) 2.2410 Rosario / Portuguese ✓
-    10000 10% (0m 11s) 2.4360 Stokoe / Greek ✗ (English)
-    15000 15% (0m 17s) 1.5871 Masoni / Japanese ✓
-    20000 20% (0m 22s) 3.2244 St martin / Scottish ✗ (French)
-    25000 25% (0m 28s) 2.1488 Vaca / Japanese ✗ (Czech)
-    30000 30% (0m 34s) 1.1117 Antunez / Spanish ✓
-    35000 35% (0m 40s) 0.8109 Armati / Italian ✓
-    40000 40% (0m 45s) 0.3743 Quyen / Vietnamese ✓
-    45000 45% (0m 51s) 2.0386 Franco / Italian ✗ (Portuguese)
-    50000 50% (0m 57s) 0.5199 Chong / Korean ✓
-    55000 55% (1m 2s) 0.2720 Ferreira / Portuguese ✓
-    60000 60% (1m 8s) 1.9827 Markytan / Russian ✗ (Czech)
-    65000 65% (1m 14s) 1.9419 Vesin / Scottish ✗ (Russian)
-    70000 70% (1m 19s) 0.3458 Jaskolski / Polish ✓
-    75000 75% (1m 25s) 0.1367 Takeshita / Japanese ✓
-    80000 80% (1m 30s) 0.5888 Yun / Chinese ✓
-    85000 85% (1m 36s) 3.9262 Irie / French ✗ (Japanese)
-    90000 90% (1m 42s) 0.4938 Terajima / Japanese ✓
-    95000 95% (1m 47s) 1.7151 Kawagishi / Arabic ✗ (Japanese)
-    100000 100% (1m 53s) 2.6014 Haanrath / German ✗ (Dutch)
+    5000 5% (0m 5s) 3.1673 Chappell / Scottish ✗ (English)
+    10000 10% (0m 11s) 3.2117 Tobias / Greek ✗ (French)
+    15000 15% (0m 17s) 1.1046 Damhan / Irish ✓
+    20000 20% (0m 23s) 3.1122 Cheung / Korean ✗ (English)
+    25000 25% (0m 29s) 3.1910 Niemec / German ✗ (Polish)
+    30000 30% (0m 35s) 1.5264 Antar / Arabic ✓
+    35000 35% (0m 41s) 0.6310 D'cruz / Portuguese ✓
+    40000 40% (0m 47s) 0.6469 Said / Arabic ✓
+    45000 45% (0m 53s) 1.1654 Vinh / Vietnamese ✓
+    50000 50% (0m 59s) 0.4674 Czajkowski / Polish ✓
+    55000 55% (1m 4s) 0.1753 Klerken / Dutch ✓
+    60000 60% (1m 10s) 0.3585 Abboud / Arabic ✓
+    65000 65% (1m 16s) 1.3646 Tahan / Irish ✗ (Arabic)
+    70000 70% (1m 22s) 0.5996 Quraishi / Arabic ✓
+    75000 75% (1m 28s) 0.2953 Koo / Korean ✓
+    80000 80% (1m 34s) 2.1972 Eastaugh / Japanese ✗ (English)
+    85000 85% (1m 39s) 1.0375 Mohan / Chinese ✗ (Irish)
+    90000 90% (1m 45s) 6.8256 Verber / German ✗ (Russian)
+    95000 95% (1m 51s) 1.1807 Whyte / German ✗ (Scottish)
+    100000 100% (1m 57s) 0.6652 Hamilton / Scottish ✓
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 388-394
+.. GENERATED FROM PYTHON SOURCE LINES 389-395
 
 Plotting the Results
 --------------------
@@ -628,7 +629,7 @@ Plotting the historical loss from ``all_losses`` shows the network
 learning:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 394-402
+.. GENERATED FROM PYTHON SOURCE LINES 395-403
 
 .. code-block:: default
 
@@ -654,11 +655,11 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f73bc9e6ec0>]
+    [<matplotlib.lines.Line2D object at 0x7f8d86daa3b0>]
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 403-412
+.. GENERATED FROM PYTHON SOURCE LINES 404-413
 
 Evaluating the Results
 ======================
@@ -670,7 +671,7 @@ matrix a bunch of samples are run through the network with
 ``evaluate()``, which is the same as ``train()`` minus the backprop.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 412-456
+.. GENERATED FROM PYTHON SOURCE LINES 413-457
 
 .. code-block:: default
 
@@ -731,19 +732,19 @@ matrix a bunch of samples are run through the network with
 
  .. code-block:: none
 
-    /var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:445: UserWarning:
-
-    FixedFormatter should only be used together with FixedLocator
-
     /var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:446: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
 
+    /var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:447: UserWarning:
+
+    FixedFormatter should only be used together with FixedLocator
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 457-462
+
+.. GENERATED FROM PYTHON SOURCE LINES 458-463
 
 You can pick out bright spots off the main axis that show which
 languages it guesses incorrectly, e.g. Chinese for Korean, and Spanish
@@ -751,13 +752,13 @@ for Italian. It seems to do very well with Greek, and very poorly with
 English (perhaps because of overlap with other languages).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 465-468
+.. GENERATED FROM PYTHON SOURCE LINES 466-469
 
 Running on User Input
 ---------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 468-489
+.. GENERATED FROM PYTHON SOURCE LINES 469-490
 
 .. code-block:: default
 
@@ -792,24 +793,24 @@ Running on User Input
 
 
     > Dovesky
-    (-0.31) Czech
-    (-1.65) Russian
-    (-3.36) Polish
+    (-0.57) Russian
+    (-1.53) Czech
+    (-2.22) Irish
 
     > Jackson
-    (-1.29) English
-    (-1.46) Scottish
-    (-1.52) Russian
+    (-0.40) Scottish
+    (-1.93) English
+    (-2.48) Dutch
 
     > Satoshi
-    (-1.11) Arabic
-    (-1.14) Japanese
-    (-1.84) Polish
+    (-0.66) Arabic
+    (-1.23) Japanese
+    (-2.21) Italian
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 490-514
+.. GENERATED FROM PYTHON SOURCE LINES 491-515
 
 The final versions of the scripts `in the Practical PyTorch
 repo <https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification>`__
@@ -836,7 +837,7 @@ Run ``server.py`` and visit http://localhost:5533/Yourname to get JSON
 output of predictions.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 517-533
+.. GENERATED FROM PYTHON SOURCE LINES 518-534
 
 Exercises
 =========
@@ -858,7 +859,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  0.168 seconds)
+   **Total running time of the script:** ( 2 minutes  3.768 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:

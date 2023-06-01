@@ -412,11 +412,14 @@ to download the full example code</p>
 <div class="sphx-glr-example-title section" id="nlp-from-scratch-classifying-names-with-a-character-level-rnn">
 <span id="sphx-glr-intermediate-char-rnn-classification-tutorial-py"></span><h1>NLP From Scratch: Classifying Names with a Character-Level RNN<a class="headerlink" href="#nlp-from-scratch-classifying-names-with-a-character-level-rnn" title="Permalink to this heading">¶</a></h1>
 <p><strong>Author</strong>: <a class="reference external" href="https://github.com/spro">Sean Robertson</a></p>
-<p>We will be building and training a basic character-level RNN to classify
-words. This tutorial, along with the following two, show how to do
-preprocess data for NLP modeling “from scratch”, in particular not using
-many of the convenience functions of <cite>torchtext</cite>, so you can see how
-preprocessing for NLP modeling works at a low level.</p>
+<p>We will be building and training a basic character-level Recurrent Neural
+Network (RNN) to classify words. This tutorial, along with two other
+Natural Language Processing (NLP) “from scratch” tutorials
+<a class="reference internal" href="char_rnn_generation_tutorial.html"><span class="doc">NLP From Scratch: Generating Names with a Character-Level RNN</span></a> and
+<a class="reference internal" href="seq2seq_translation_tutorial.html"><span class="doc">NLP From Scratch: Translation with a Sequence to Sequence Network and Attention</span></a>, show how to
+preprocess data to model NLP. In particular these tutorials do not
+use many of the convenience functions of <cite>torchtext</cite>, so you can see how
+preprocessing to model NLP works at a low level.</p>
 <p>A character-level RNN reads words as a series of characters -
 outputting a prediction and “hidden state” at each step, feeding its
 previous hidden state into each next step. We take the final prediction
@@ -435,12 +438,14 @@ $ python predict.py Schmidhuber
 (-2.68) Dutch
 </pre></div>
 </div>
-<p><strong>Recommended Reading:</strong></p>
-<p>I assume you have at least installed PyTorch, know Python, and
-understand Tensors:</p>
+<div class="section" id="recommended-preparation">
+<h2>Recommended Preparation<a class="headerlink" href="#recommended-preparation" title="Permalink to this heading">¶</a></h2>
+<p>Before starting this tutorial it is recommended that you have installed PyTorch,
+and have a basic understanding of Python programming language and Tensors:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pytorch.org/">https://pytorch.org/</a> For installation instructions</p></li>
-<li><p><a class="reference internal" href="../beginner/deep_learning_60min_blitz.html"><span class="doc">Deep Learning with PyTorch: A 60 Minute Blitz</span></a> to get started with PyTorch in general</p></li>
+<li><p><a class="reference internal" href="../beginner/deep_learning_60min_blitz.html"><span class="doc">Deep Learning with PyTorch: A 60 Minute Blitz</span></a> to get started with PyTorch in general
+and learn the basics of Tensors</p></li>
 <li><p><a class="reference internal" href="../beginner/pytorch_with_examples.html"><span class="doc">Learning PyTorch with Examples</span></a> for a wide and deep overview</p></li>
 <li><p><a class="reference internal" href="../beginner/former_torchies_tutorial.html"><span class="doc">PyTorch for Former Torch Users</span></a> if you are former Lua Torch user</p></li>
 </ul>
@@ -454,6 +459,7 @@ Networks</a>
 is about LSTMs specifically but also informative about RNNs in
 general</p></li>
 </ul>
+</div>
 <div class="section" id="preparing-the-data">
 <h2>Preparing the Data<a class="headerlink" href="#preparing-the-data" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
@@ -582,9 +588,6 @@ as regular feed-forward layers.</p>
 tutorial</a>)
 is just 2 linear layers which operate on an input and hidden state, with
 a <code class="docutils literal notranslate"><span class="pre">LogSoftmax</span></code> layer after the output.</p>
-<div class="figure align-default">
-<img alt="" src="https://i.imgur.com/Z2xbySO.png"/>
-</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 
 <span class="k">class</span> <span class="nc">RNN</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><span class="n">nn</span><span class="o">.</span><span class="n">Module</span></a><span class="p">):</span>
@@ -594,13 +597,13 @@ a <code class="docutils literal notranslate"><span class="pre">LogSoftmax</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span> <span class="o">=</span> <span class="n">hidden_size</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span></a><span class="p">(</span><span class="n">input_size</span> <span class="o">+</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">i2o</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span></a><span class="p">(</span><span class="n">input_size</span> <span class="o">+</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span></a><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">softmax</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.LogSoftmax.html#torch.nn.LogSoftmax" title="torch.nn.LogSoftmax"><span class="n">nn</span><span class="o">.</span><span class="n">LogSoftmax</span></a><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">hidden</span></a><span class="p">):</span>
         <span class="n">combined</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.cat.html#torch.cat" title="torch.cat"><span class="n">torch</span><span class="o">.</span><span class="n">cat</span></a><span class="p">((</span><span class="nb">input</span><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">hidden</span></a><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">hidden</span></a> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>
-        <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2o</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>
+        <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">hidden</span></a><span class="p">)</span>
         <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a><span class="p">)</span>
         <span class="k">return</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">hidden</span></a>
 
@@ -633,9 +636,9 @@ precomputing batches of Tensors.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.9030, -2.9326, -2.8710, -2.9045, -2.8449, -2.8373, -2.8834, -2.8998,
-         -2.9550, -2.9127, -2.8795, -2.9122, -2.8276, -2.8879, -2.7957, -2.8853,
-         -2.9486, -2.9630]], grad_fn=&lt;LogSoftmaxBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.8343, -2.8457, -2.8802, -2.9841, -2.8794, -2.9378, -2.9382, -2.7919,
+         -2.8719, -2.9774, -2.8968, -2.7736, -2.9417, -2.7679, -2.9532, -2.9465,
+         -3.0207, -2.8328]], grad_fn=&lt;LogSoftmaxBackward0&gt;)
 </pre></div>
 </div>
 <p>As you can see the output is a <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">x</span> <span class="pre">n_categories&gt;</span></code> Tensor, where
@@ -657,7 +660,7 @@ of the greatest value:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">categoryFromOutput</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">output</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>('Chinese', 14)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>('Scottish', 13)
 </pre></div>
 </div>
 <p>We will also want a quick way to get a training example (a name and its
@@ -679,16 +682,16 @@ language):</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'category ='</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="s1">'/ line ='</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = English / line = Nisbet
-category = Korean / line = Si
-category = Japanese / line = Masuko
-category = Korean / line = Sung
-category = German / line = Mas
-category = Irish / line = Carey
-category = English / line = Beer
-category = Italian / line = Sacco
-category = Korean / line = Chin
-category = Greek / line = Banos
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Dutch / line = Nifterick
+category = Scottish / line = Henderson
+category = Korean / line = Youn
+category = Irish / line = Mullen
+category = Polish / line = Marszaek
+category = Scottish / line = Miller
+category = Greek / line = Zouvelekis
+category = Irish / line = Quirke
+category = Arabic / line = Bitar
+category = Dutch / line = Nifterik
 </pre></div>
 </div>
 </div>
@@ -778,26 +781,26 @@ average of the loss.</p>
         <span class="n">current_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 5s) 2.2410 Rosario / Portuguese ✓
-10000 10% (0m 11s) 2.4360 Stokoe / Greek ✗ (English)
-15000 15% (0m 17s) 1.5871 Masoni / Japanese ✓
-20000 20% (0m 22s) 3.2244 St martin / Scottish ✗ (French)
-25000 25% (0m 28s) 2.1488 Vaca / Japanese ✗ (Czech)
-30000 30% (0m 34s) 1.1117 Antunez / Spanish ✓
-35000 35% (0m 40s) 0.8109 Armati / Italian ✓
-40000 40% (0m 45s) 0.3743 Quyen / Vietnamese ✓
-45000 45% (0m 51s) 2.0386 Franco / Italian ✗ (Portuguese)
-50000 50% (0m 57s) 0.5199 Chong / Korean ✓
-55000 55% (1m 2s) 0.2720 Ferreira / Portuguese ✓
-60000 60% (1m 8s) 1.9827 Markytan / Russian ✗ (Czech)
-65000 65% (1m 14s) 1.9419 Vesin / Scottish ✗ (Russian)
-70000 70% (1m 19s) 0.3458 Jaskolski / Polish ✓
-75000 75% (1m 25s) 0.1367 Takeshita / Japanese ✓
-80000 80% (1m 30s) 0.5888 Yun / Chinese ✓
-85000 85% (1m 36s) 3.9262 Irie / French ✗ (Japanese)
-90000 90% (1m 42s) 0.4938 Terajima / Japanese ✓
-95000 95% (1m 47s) 1.7151 Kawagishi / Arabic ✗ (Japanese)
-100000 100% (1m 53s) 2.6014 Haanrath / German ✗ (Dutch)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 5s) 3.1673 Chappell / Scottish ✗ (English)
+10000 10% (0m 11s) 3.2117 Tobias / Greek ✗ (French)
+15000 15% (0m 17s) 1.1046 Damhan / Irish ✓
+20000 20% (0m 23s) 3.1122 Cheung / Korean ✗ (English)
+25000 25% (0m 29s) 3.1910 Niemec / German ✗ (Polish)
+30000 30% (0m 35s) 1.5264 Antar / Arabic ✓
+35000 35% (0m 41s) 0.6310 D'cruz / Portuguese ✓
+40000 40% (0m 47s) 0.6469 Said / Arabic ✓
+45000 45% (0m 53s) 1.1654 Vinh / Vietnamese ✓
+50000 50% (0m 59s) 0.4674 Czajkowski / Polish ✓
+55000 55% (1m 4s) 0.1753 Klerken / Dutch ✓
+60000 60% (1m 10s) 0.3585 Abboud / Arabic ✓
+65000 65% (1m 16s) 1.3646 Tahan / Irish ✗ (Arabic)
+70000 70% (1m 22s) 0.5996 Quraishi / Arabic ✓
+75000 75% (1m 28s) 0.2953 Koo / Korean ✓
+80000 80% (1m 34s) 2.1972 Eastaugh / Japanese ✗ (English)
+85000 85% (1m 39s) 1.0375 Mohan / Chinese ✗ (Irish)
+90000 90% (1m 45s) 6.8256 Verber / German ✗ (Russian)
+95000 95% (1m 51s) 1.1807 Whyte / German ✗ (Scottish)
+100000 100% (1m 57s) 0.6652 Hamilton / Scottish ✓
 </pre></div>
 </div>
 </div>
@@ -812,7 +815,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f73bc9e6ec0&gt;]
+<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f8d86daa3b0&gt;]
 </pre></div>
 </div>
 </div>
@@ -867,11 +870,11 @@ matrix a bunch of samples are run through the network with
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_002.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_002.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:445: UserWarning:
+<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_002.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_002.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:446: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
 
-/var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:446: UserWarning:
+/var/lib/jenkins/workspace/intermediate_source/char_rnn_classification_tutorial.py:447: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
 </pre></div>
@@ -903,19 +906,19 @@ English (perhaps because of overlap with other languages).</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.31) Czech
-(-1.65) Russian
-(-3.36) Polish
+(-0.57) Russian
+(-1.53) Czech
+(-2.22) Irish
 
 &gt; Jackson
-(-1.29) English
-(-1.46) Scottish
-(-1.52) Russian
+(-0.40) Scottish
+(-1.93) English
+(-2.48) Dutch
 
 &gt; Satoshi
-(-1.11) Arabic
-(-1.14) Japanese
-(-1.84) Polish
+(-0.66) Arabic
+(-1.23) Japanese
+(-2.21) Italian
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -959,7 +962,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  0.168 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  3.768 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/37c8905519d3fd3f437b783a48d06eac/char_rnn_classification_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></p>
@@ -1014,6 +1017,7 @@ if((window.location.href.indexOf("/prototype/")!= -1) && (window.location.href.i
 <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
 <ul>
 <li><a class="reference internal" href="#">NLP From Scratch: Classifying Names with a Character-Level RNN</a><ul>
+<li><a class="reference internal" href="#recommended-preparation">Recommended Preparation</a></li>
 <li><a class="reference internal" href="#preparing-the-data">Preparing the Data</a><ul>
 <li><a class="reference internal" href="#turning-names-into-tensors">Turning Names into Tensors</a></li>
 </ul>
