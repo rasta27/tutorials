@@ -422,27 +422,27 @@ a generic n-dimensional array to be used for arbitrary numeric computation.</p>
 <p>The biggest difference between a numpy array and a PyTorch Tensor is that
 a PyTorch Tensor can run on either CPU or GPU. To run operations on the GPU,
 just cast the Tensor to a cuda datatype.</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 1475.4627685546875
-199 994.922119140625
-299 672.40576171875
-399 455.7718505859375
-499 310.13818359375
-599 212.15060424804688
-699 146.16213989257812
-799 101.68208312988281
-899 71.67166900634766
-999 51.40401840209961
-1099 37.702640533447266
-1199 28.430673599243164
-1299 22.14961051940918
-1399 17.890146255493164
-1499 14.998472213745117
-1599 13.033214569091797
-1699 11.696041107177734
-1799 10.785229682922363
-1899 10.164137840270996
-1999 9.74010181427002
-Result: y = 0.023477016016840935 + 0.8365599513053894 x + -0.004050176125019789 x^2 + -0.09045983105897903 x^3
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 810.2427368164062
+199 575.8672485351562
+299 410.0394287109375
+399 292.70867919921875
+499 209.6908416748047
+599 150.950927734375
+699 109.38860321044922
+799 79.98028564453125
+899 59.171592712402344
+999 44.44773483276367
+1099 34.02934265136719
+1199 26.65740203857422
+1299 21.441030502319336
+1399 17.74993133544922
+1499 15.13811206817627
+1599 13.28996467590332
+1699 11.98220443725586
+1799 11.056812286376953
+1899 10.401988983154297
+1999 9.938627243041992
+Result: y = -0.03543626517057419 + 0.8559425473213196 x + 0.006113343872129917 x^2 + -0.09321683645248413 x^3
 </pre></div>
 </div>
 <div class="line-block">
@@ -493,7 +493,7 @@ Result: y = 0.023477016016840935 + 0.8365599513053894 x + -0.004050176125019789 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Result: y = </span><span class="si">{</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">a</span></a><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">b</span></a><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">c</span></a><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x^2 + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">d</span></a><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x^3'</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.288 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.253 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-examples-tensor-polynomial-tensor-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b1701799d465392dc244e3de4f56744b/polynomial_tensor.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">polynomial_tensor.py</span></code></a></p>

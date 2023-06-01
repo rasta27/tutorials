@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['tu es un de ces idiots !', 'you re such an idiot !']
+    ['tu es charmante .', 'you re charming .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 26s (- 20m 4s) (5000 6%) 2.8591
-    2m 46s (- 18m 2s) (10000 13%) 2.2800
-    4m 7s (- 16m 29s) (15000 20%) 1.9727
-    5m 28s (- 15m 3s) (20000 26%) 1.7296
-    6m 49s (- 13m 39s) (25000 33%) 1.5361
-    8m 11s (- 12m 16s) (30000 40%) 1.3618
-    9m 33s (- 10m 54s) (35000 46%) 1.2029
-    10m 54s (- 9m 33s) (40000 53%) 1.0658
-    12m 17s (- 8m 11s) (45000 60%) 0.9948
-    13m 38s (- 6m 49s) (50000 66%) 0.8785
-    15m 0s (- 5m 27s) (55000 73%) 0.7631
-    16m 20s (- 4m 5s) (60000 80%) 0.7242
-    17m 42s (- 2m 43s) (65000 86%) 0.6609
-    19m 2s (- 1m 21s) (70000 93%) 0.6134
-    20m 23s (- 0m 0s) (75000 100%) 0.5529
+    1m 22s (- 19m 13s) (5000 6%) 2.8492
+    2m 39s (- 17m 14s) (10000 13%) 2.2931
+    3m 56s (- 15m 46s) (15000 20%) 1.9819
+    5m 13s (- 14m 23s) (20000 26%) 1.7282
+    6m 30s (- 13m 0s) (25000 33%) 1.5169
+    7m 48s (- 11m 42s) (30000 40%) 1.3617
+    9m 5s (- 10m 23s) (35000 46%) 1.1908
+    10m 23s (- 9m 5s) (40000 53%) 1.0633
+    11m 40s (- 7m 47s) (45000 60%) 0.9513
+    12m 58s (- 6m 29s) (50000 66%) 0.8872
+    14m 15s (- 5m 11s) (55000 73%) 0.7848
+    15m 33s (- 3m 53s) (60000 80%) 0.7126
+    16m 50s (- 2m 35s) (65000 86%) 0.6347
+    18m 8s (- 1m 17s) (70000 93%) 0.6110
+    19m 26s (- 0m 0s) (75000 100%) 0.5338
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > elle est maigre comme un manche a balai .
-    = she is as thin as a broom stick .
-    < she is as a as a broom . <EOS>
+    > nous sommes en securite ici .
+    = we re safe here .
+    < we re safe here . <EOS>
 
-    > nous allons travailler ce soir .
-    = we re going to work tonight .
-    < we re going to play tonight . <EOS>
+    > je ne suis pas joueur .
+    = i m not a gambler .
+    < i m not a gambler . <EOS>
 
-    > il est beau et a du charme .
-    = he s handsome and charming .
-    < he s handsome and and healthy . <EOS>
+    > je tiens son succes pour certain .
+    = i am sure of her success .
+    < i am sure of of success . <EOS>
 
-    > c est un homme riche .
-    = he is a man of wealth .
-    < he is a rich man . <EOS>
+    > nous ne sommes toujours pas surs .
+    = we re still not sure .
+    < we re still not sure . <EOS>
 
-    > nous sommes australiens .
-    = we are australians .
-    < we re resilient . <EOS>
+    > nous allons travailler ensemble .
+    = we re going to work together .
+    < we re going to have work . <EOS>
 
-    > tu n es qu un enfant .
-    = you re just a boy .
-    < you re just a kid . <EOS>
+    > nous sommes anxieux a propos de ta sante .
+    = we are anxious about your health .
+    < we are anxious about your health . <EOS>
 
-    > il adore la peinture .
-    = he is fond of painting .
-    < he s fond of painting . <EOS>
+    > vous n etes plus seule .
+    = you re not alone anymore .
+    < you re not alone anymore . <EOS>
 
-    > je suis habituee a travailler toute la nuit .
-    = i m used to working all night .
-    < i m used to working all night . <EOS>
+    > je ne crains pas de mourir .
+    = i m not scared to die .
+    < i m not scared to die . <EOS>
 
-    > vous etes mignon dans votre genre .
-    = you re kind of cute .
-    < you re kind of cute . <EOS>
+    > je donne mes vieux livres .
+    = i m giving my old books away .
+    < i m giving my old books . <EOS>
 
-    > il est dans la cuisine .
-    = he is in the kitchen .
-    < he is in the kitchen . <EOS>
+    > ils sont presque la .
+    = they re almost here .
+    < they re almost here . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f0cc13ae2f0>
+    <matplotlib.image.AxesImage object at 0x7f23f44be140>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too loud . <EOS>
+    output = she s too fat . <EOS>
     input = je ne crains pas de mourir .
     output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s an talented talented talented . <EOS>
+    output = he s a talented young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  37.851 seconds)
+   **Total running time of the script:** ( 19 minutes  39.810 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

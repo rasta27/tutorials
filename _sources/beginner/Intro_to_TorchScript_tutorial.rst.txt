@@ -114,11 +114,11 @@ Let’s examine a small example:
 
  .. code-block:: none
 
-    (tensor([[0.7331, 0.8383, 0.8403, 0.3627],
-            [0.6595, 0.3388, 0.4799, 0.7309],
-            [0.8816, 0.8645, 0.6986, 0.9246]]), tensor([[0.7331, 0.8383, 0.8403, 0.3627],
-            [0.6595, 0.3388, 0.4799, 0.7309],
-            [0.8816, 0.8645, 0.6986, 0.9246]]))
+    (tensor([[0.8634, 0.5896, 0.6803, 0.4503],
+            [0.9177, 0.4845, 0.8876, 0.7488],
+            [0.8255, 0.6904, 0.8541, 0.7223]]), tensor([[0.8634, 0.5896, 0.6803, 0.4503],
+            [0.9177, 0.4845, 0.8876, 0.7488],
+            [0.8255, 0.6904, 0.8541, 0.7223]]))
 
 
 
@@ -173,11 +173,11 @@ Let’s do something a little more interesting:
     MyCell(
       (linear): Linear(in_features=4, out_features=4, bias=True)
     )
-    (tensor([[0.1794, 0.6410, 0.7913, 0.6446],
-            [0.3138, 0.3220, 0.5534, 0.6239],
-            [0.8391, 0.8054, 0.6714, 0.7060]], grad_fn=<TanhBackward0>), tensor([[0.1794, 0.6410, 0.7913, 0.6446],
-            [0.3138, 0.3220, 0.5534, 0.6239],
-            [0.8391, 0.8054, 0.6714, 0.7060]], grad_fn=<TanhBackward0>))
+    (tensor([[ 0.8550,  0.0643,  0.6474, -0.2881],
+            [ 0.9044, -0.4504,  0.7653,  0.3378],
+            [ 0.8224, -0.2053,  0.7582,  0.3183]], grad_fn=<TanhBackward0>), tensor([[ 0.8550,  0.0643,  0.6474, -0.2881],
+            [ 0.9044, -0.4504,  0.7653,  0.3378],
+            [ 0.8224, -0.2053,  0.7582,  0.3183]], grad_fn=<TanhBackward0>))
 
 
 
@@ -248,11 +248,11 @@ Now let’s examine said flexibility:
       (dg): MyDecisionGate()
       (linear): Linear(in_features=4, out_features=4, bias=True)
     )
-    (tensor([[ 0.2561, -0.1779,  0.1757,  0.8159],
-            [ 0.5577, -0.0981,  0.5337,  0.8742],
-            [ 0.7994,  0.6882,  0.7946,  0.9425]], grad_fn=<TanhBackward0>), tensor([[ 0.2561, -0.1779,  0.1757,  0.8159],
-            [ 0.5577, -0.0981,  0.5337,  0.8742],
-            [ 0.7994,  0.6882,  0.7946,  0.9425]], grad_fn=<TanhBackward0>))
+    (tensor([[ 0.9093,  0.6215,  0.6487, -0.1627],
+            [ 0.8892,  0.3723,  0.5545,  0.5385],
+            [ 0.8345,  0.5494,  0.5137,  0.4205]], grad_fn=<TanhBackward0>), tensor([[ 0.9093,  0.6215,  0.6487, -0.1627],
+            [ 0.8892,  0.3723,  0.5545,  0.5385],
+            [ 0.8345,  0.5494,  0.5137,  0.4205]], grad_fn=<TanhBackward0>))
 
 
 
@@ -325,11 +325,11 @@ Tracing ``Modules``
       (linear): Linear(original_name=Linear)
     )
 
-    (tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]], grad_fn=<TanhBackward0>), tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]], grad_fn=<TanhBackward0>))
+    (tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]], grad_fn=<TanhBackward0>), tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]], grad_fn=<TanhBackward0>))
 
 
 
@@ -453,17 +453,17 @@ the Python module:
 
  .. code-block:: none
 
-    (tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]], grad_fn=<TanhBackward0>), tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]], grad_fn=<TanhBackward0>))
-    (tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]],
-           grad_fn=<DifferentiableGraphBackward>), tensor([[ 0.1017, -0.0877,  0.7255, -0.1841],
-            [ 0.0556,  0.2020,  0.8262,  0.1934],
-            [-0.7453, -0.3341,  0.7910,  0.2430]],
+    (tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]], grad_fn=<TanhBackward0>), tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]], grad_fn=<TanhBackward0>))
+    (tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]],
+           grad_fn=<DifferentiableGraphBackward>), tensor([[0.8141, 0.8718, 0.5907, 0.8567],
+            [0.7793, 0.5937, 0.2241, 0.9232],
+            [0.4426, 0.8566, 0.3328, 0.8854]],
            grad_fn=<DifferentiableGraphBackward>))
 
 
@@ -520,18 +520,17 @@ the control-flow-laden submodule. Let’s examine that now:
     Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
 
     def forward(self,
-        argument_1: Tensor) -> NoneType:
-      return None
+        argument_1: Tensor) -> Tensor:
+      return torch.neg(argument_1)
 
     def forward(self,
         x: Tensor,
         h: Tensor) -> Tuple[Tensor, Tensor]:
       dg = self.dg
       linear = self.linear
-      _0 = (linear).forward(x, )
-      _1 = (dg).forward(_0, )
-      _2 = torch.tanh(torch.add(_0, h))
-      return (_2, _2)
+      _0 = torch.add((dg).forward((linear).forward(x, ), ), h)
+      _1 = torch.tanh(_0)
+      return (_1, _1)
 
 
 
@@ -619,11 +618,11 @@ TorchScript. Let’s now try running the program:
  .. code-block:: none
 
 
-    (tensor([[0.5120, 0.3600, 0.1665, 0.1826],
-            [0.7354, 0.8461, 0.6356, 0.8323],
-            [0.6558, 0.5483, 0.4884, 0.6690]], grad_fn=<TanhBackward0>), tensor([[0.5120, 0.3600, 0.1665, 0.1826],
-            [0.7354, 0.8461, 0.6356, 0.8323],
-            [0.6558, 0.5483, 0.4884, 0.6690]], grad_fn=<TanhBackward0>))
+    (tensor([[0.3343, 0.7662, 0.8149, 0.3161],
+            [0.0025, 0.7728, 0.6790, 0.8360],
+            [0.4390, 0.7297, 0.7792, 0.3095]], grad_fn=<TanhBackward0>), tensor([[0.3343, 0.7662, 0.8149, 0.3161],
+            [0.0025, 0.7728, 0.6790, 0.8360],
+            [0.4390, 0.7297, 0.7792, 0.3095]], grad_fn=<TanhBackward0>))
 
 
 
@@ -806,7 +805,7 @@ https://colab.research.google.com/drive/1HiICg6jRkBnr5hvK2-VnMi88Vi9pUzEJ
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.761 seconds)
+   **Total running time of the script:** ( 0 minutes  0.741 seconds)
 
 
 .. _sphx_glr_download_beginner_Intro_to_TorchScript_tutorial.py:

@@ -85,7 +85,8 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.1MB/s]
+     79%|#######8  | 623k/792k [00:00<00:00, 6.11MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 6.50MB/s]
 
 
 
@@ -135,47 +136,51 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 1.07M/945M [00:00<01:28, 11.2MB/s]
-      0%|          | 2.88M/945M [00:00<01:02, 15.7MB/s]
-      1%|          | 5.65M/945M [00:00<00:45, 21.8MB/s]
-      1%|1         | 10.0M/945M [00:00<00:31, 31.3MB/s]
-      2%|1         | 17.0M/945M [00:00<00:20, 46.3MB/s]
-      3%|3         | 28.3M/945M [00:00<00:13, 70.9MB/s]
-      5%|4         | 45.7M/945M [00:00<00:08, 107MB/s] 
-      8%|7         | 71.7M/945M [00:00<00:05, 160MB/s]
-     11%|#         | 99.6M/945M [00:00<00:04, 201MB/s]
-     13%|#3        | 126M/945M [00:01<00:03, 223MB/s] 
-     16%|#6        | 152M/945M [00:01<00:03, 238MB/s]
-     19%|#8        | 175M/945M [00:01<00:03, 241MB/s]
-     21%|##1       | 202M/945M [00:01<00:03, 253MB/s]
-     24%|##4       | 229M/945M [00:01<00:02, 263MB/s]
-     27%|##7       | 257M/945M [00:01<00:02, 270MB/s]
-     30%|###       | 284M/945M [00:01<00:02, 275MB/s]
-     33%|###3      | 312M/945M [00:01<00:02, 281MB/s]
-     36%|###5      | 340M/945M [00:01<00:02, 284MB/s]
-     39%|###8      | 368M/945M [00:01<00:02, 287MB/s]
-     42%|####1     | 396M/945M [00:02<00:01, 288MB/s]
-     45%|####4     | 424M/945M [00:02<00:01, 290MB/s]
-     48%|####7     | 451M/945M [00:02<00:01, 290MB/s]
-     51%|#####     | 479M/945M [00:02<00:01, 289MB/s]
-     54%|#####3    | 507M/945M [00:02<00:01, 288MB/s]
-     57%|#####6    | 534M/945M [00:02<00:01, 286MB/s]
-     59%|#####9    | 561M/945M [00:02<00:01, 285MB/s]
-     62%|######2   | 589M/945M [00:02<00:01, 283MB/s]
-     65%|######5   | 616M/945M [00:02<00:01, 285MB/s]
-     68%|######8   | 644M/945M [00:02<00:01, 286MB/s]
-     71%|#######1  | 671M/945M [00:03<00:00, 287MB/s]
-     74%|#######3  | 699M/945M [00:03<00:00, 285MB/s]
-     77%|#######6  | 726M/945M [00:03<00:00, 282MB/s]
-     80%|#######9  | 753M/945M [00:03<00:00, 282MB/s]
-     83%|########2 | 780M/945M [00:03<00:00, 279MB/s]
-     85%|########5 | 806M/945M [00:03<00:00, 280MB/s]
-     88%|########8 | 833M/945M [00:03<00:00, 280MB/s]
-     91%|#########1| 860M/945M [00:03<00:00, 281MB/s]
-     94%|#########3| 887M/945M [00:03<00:00, 280MB/s]
-     97%|#########6| 914M/945M [00:03<00:00, 277MB/s]
-    100%|#########9| 940M/945M [00:04<00:00, 277MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 245MB/s]
+      0%|          | 696k/945M [00:00<02:19, 7.10MB/s]
+      0%|          | 1.79M/945M [00:00<01:41, 9.76MB/s]
+      0%|          | 3.46M/945M [00:00<01:14, 13.2MB/s]
+      1%|          | 6.13M/945M [00:00<00:51, 19.0MB/s]
+      1%|1         | 10.2M/945M [00:00<00:35, 27.6MB/s]
+      2%|1         | 16.8M/945M [00:00<00:23, 41.5MB/s]
+      3%|2         | 27.1M/945M [00:00<00:15, 63.1MB/s]
+      4%|4         | 41.3M/945M [00:00<00:10, 90.5MB/s]
+      6%|6         | 61.0M/945M [00:00<00:07, 127MB/s] 
+      9%|8         | 81.9M/945M [00:01<00:05, 155MB/s]
+     11%|#1        | 106M/945M [00:01<00:04, 186MB/s] 
+     14%|#3        | 130M/945M [00:01<00:04, 206MB/s]
+     16%|#6        | 155M/945M [00:01<00:03, 222MB/s]
+     19%|#9        | 180M/945M [00:01<00:03, 233MB/s]
+     22%|##1       | 204M/945M [00:01<00:03, 240MB/s]
+     24%|##4       | 229M/945M [00:01<00:03, 247MB/s]
+     27%|##6       | 254M/945M [00:01<00:02, 250MB/s]
+     29%|##9       | 278M/945M [00:01<00:02, 252MB/s]
+     32%|###2      | 302M/945M [00:01<00:02, 253MB/s]
+     35%|###4      | 326M/945M [00:02<00:02, 252MB/s]
+     37%|###7      | 350M/945M [00:02<00:02, 252MB/s]
+     40%|###9      | 375M/945M [00:02<00:02, 252MB/s]
+     42%|####2     | 399M/945M [00:02<00:02, 251MB/s]
+     45%|####4     | 423M/945M [00:02<00:02, 249MB/s]
+     47%|####7     | 446M/945M [00:02<00:02, 246MB/s]
+     50%|####9     | 470M/945M [00:02<00:02, 244MB/s]
+     52%|#####2    | 493M/945M [00:02<00:01, 245MB/s]
+     55%|#####4    | 517M/945M [00:02<00:01, 243MB/s]
+     57%|#####7    | 540M/945M [00:02<00:01, 243MB/s]
+     60%|#####9    | 564M/945M [00:03<00:01, 246MB/s]
+     63%|######2   | 592M/945M [00:03<00:01, 258MB/s]
+     66%|######5   | 619M/945M [00:03<00:01, 266MB/s]
+     68%|######8   | 646M/945M [00:03<00:01, 272MB/s]
+     71%|#######1  | 673M/945M [00:03<00:01, 276MB/s]
+     74%|#######4  | 700M/945M [00:03<00:00, 269MB/s]
+     77%|#######6  | 725M/945M [00:03<00:00, 261MB/s]
+     79%|#######9  | 750M/945M [00:03<00:00, 259MB/s]
+     82%|########2 | 775M/945M [00:03<00:00, 257MB/s]
+     85%|########4 | 800M/945M [00:03<00:00, 254MB/s]
+     87%|########7 | 824M/945M [00:04<00:00, 253MB/s]
+     90%|########9 | 848M/945M [00:04<00:00, 252MB/s]
+     92%|#########2| 872M/945M [00:04<00:00, 251MB/s]
+     95%|#########5| 898M/945M [00:04<00:00, 256MB/s]
+     98%|#########7| 924M/945M [00:04<00:00, 263MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 219MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -471,37 +476,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: gunman shot and killed a longtime employee at the school . the suspect is 20-year-old Kenneth Morgan Stancil III .
+    prediction: divers from california have been snapping exotic sea life for a decade . recently added a selfie stick to their trips to take incredible underwater photos .
 
-    target: School print shop operator Ron Lane was killed, college president says . The man believed to be the gunman is identified as former student Kenneth Stancil . The two knew each other, authorities say .
+    target: Divers Margo Sanchez and Stephanie Adamson have been photographing marine life for nearly a decade . The selfie stick allows them to keep a comfortable distance so they do not disturb marine life . The Californian pair co-own a diving school and travelled to many exotic locations to see incredible sea animals .
 
 
     Example 2:
 
-    prediction: angela and Richard Maxwell scooped £53million from lottery last week . couple, who have two adult children, said they would buy new minibus . but they said they would carry on as normal with occasional splurge on clothes . 67-year-old said she would not give up five-hour shift at local lunch club .
+    prediction: the video shows a large crocodile swimming through a marina in Puerto Vallarta, in Mexico . a black dog wearing a red collar is lifeless in its mouth . the crocodile was on holiday with his wife when he saw the alarming sight . social media users have reacted in horror to the video posted on the Bogged facebook page .
 
-    target: Angela Maxwell returned to Coningsby Community Hall yesterday morning . The 67-year-old and her husband won £53million in last week's lottery . Couple said they planned to spend money on a new minibus for local OAPs . Mrs Maxwell volunteers for the council preparing meals for pensioners . She returned to the lunchtime club yesterday morning despite the windfall .
+    target: A local bike shop owner's dog was snatched by a crocodile . The crocodile was swimming through Puerto Vallarta marina, in Mexico . New Zealander Tim Weston was on holiday and saw the bizarre sight . A video of the dog in the croc's jaws has been viewed half a million times .
 
 
     Example 3:
 
-    prediction: the front row at the prestigious show were given an eyeful in sheer dresses and pants by designer Marriam Seddiq . one model wore a completely see-through mesh dress that left little to the imagination . another wore a waistcoat open to reveal her chest and stomach .
+    prediction: Mauricio pochettino says another season in the european competition could hamper their chances of breaking into the top four . the argentine has revealed that defenders hugo lloris and Kyle Walker are major doubts ahead of the clash with the magpies . pochettino has told bods in the firing line that escaping criticism is impossible as a manager .
 
-    target: Marriam Seddiq ensured models were turning heads on the catwalk . Part of the St George New Gen show of six up and coming designers . Collection featured sheer fabric and racily cut designs . The Raffles International Showcase also caused a stir with racy designs . Any Step showed a dress made of just leather straps and buckles .
+    target: Mauricio Pochettino believes competing in the Europa League makes things 'difficult' for Premier League clubs . Tottenham were knocked out of Europa League by Fiorentina in February . Pochettino's side have struggled for results in recent weeks . Spurs face Premier League clash against Newcastle on Sunday .
 
 
     Example 4:
 
-    prediction: excess salt contributes to the deaths of tens of thousands of americans each year . guidelines currently dictate the people should limit their intake to 2,300 milligrams, with an even stricter 1,500 milligram limit for African Americans and people over 50 . skeptics however believe most Americans are fine .
+    prediction: Oxford scientists say a Mercury-like body struck the young Earth . the object would have been the heat source for our planet's core . the same object could have been responsible for creating the moon . it also explains where some rare-Earth elements came from .
 
-    target: Current federal government guidelines dictate the people should limit their salt intake to 2,300 milligrams . Scientists now believe a typical healthy person can consume as much as 6,000 milligrams per day without significantly raising health risks . The same skeptics also warn of the health risks associated with consuming less than 3,000 milligrams . Average American ingests about 3,500 milligrams of salt per day .
+    target: Oxford scientists say a Mercury-like body struck the young Earth . The Mars-sized object would have been the heat source for our planet . The same object could have been responsible for creating the moon . It also explains where some rare-Earth elements came from .
 
 
     Example 5:
 
-    prediction: the Brugger family have launched a campaign to raise money for his treatment . the non-taxpayer subsidised treatment for his hodgkin's disease is Brentuximab Vedotin . the 35-year-old has been able to go back to work part-time in between travelling to Sydney for medical treatment . he has been able to go back to work in between travelling to Sydney for treatment .
+    prediction: GPs are the gateway to care – nine out of 10 times, the first contact a patient has with the health system is through their GP . but access to GPs has become a major policy and political issue . weekend opening hours for GPs has been touted as one solution .
 
-    target: 35-year-old, father-of-two from Griffith suffers from Hodgkin's disease . He says the non-taxpayer subsidised treatment improved his condition . The treatment costs a total of $16,000 every three weeks . His 'My Name Is Chris' campaign helped raise money needed for treatment . It has been so successful he has been able to go back to work part-time . 'My Name is Chris' was launched in mid-January following Chris's relapse .
+    target: Nine in 10 times, the first contact a patient has with the NHS is via a GP . Crisis in A&E has led some to blame lack of GP appointments . Weekend opening hours have been suggested as one solution . Vikram Pathania is a lecturer in economics at the University of Sussex .
 
 
 
@@ -855,7 +860,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  32.924 seconds)
+   **Total running time of the script:** ( 3 minutes  46.437 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
