@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['on peut me faire confiance .', 'i m trustworthy .']
+['tu es un de ces idiots !', 'you re such an idiot !']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 21s (- 19m 5s) (5000 6%) 2.8450
-2m 37s (- 17m 5s) (10000 13%) 2.2860
-3m 54s (- 15m 36s) (15000 20%) 1.9787
-5m 10s (- 14m 13s) (20000 26%) 1.7228
-6m 26s (- 12m 53s) (25000 33%) 1.5080
-7m 42s (- 11m 34s) (30000 40%) 1.3537
-8m 59s (- 10m 16s) (35000 46%) 1.2047
-10m 15s (- 8m 58s) (40000 53%) 1.1012
-11m 35s (- 7m 43s) (45000 60%) 0.9954
-12m 55s (- 6m 27s) (50000 66%) 0.9079
-14m 13s (- 5m 10s) (55000 73%) 0.8351
-15m 30s (- 3m 52s) (60000 80%) 0.7654
-16m 47s (- 2m 35s) (65000 86%) 0.7054
-18m 4s (- 1m 17s) (70000 93%) 0.6399
-19m 21s (- 0m 0s) (75000 100%) 0.5846
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 26s (- 20m 4s) (5000 6%) 2.8591
+2m 46s (- 18m 2s) (10000 13%) 2.2800
+4m 7s (- 16m 29s) (15000 20%) 1.9727
+5m 28s (- 15m 3s) (20000 26%) 1.7296
+6m 49s (- 13m 39s) (25000 33%) 1.5361
+8m 11s (- 12m 16s) (30000 40%) 1.3618
+9m 33s (- 10m 54s) (35000 46%) 1.2029
+10m 54s (- 9m 33s) (40000 53%) 1.0658
+12m 17s (- 8m 11s) (45000 60%) 0.9948
+13m 38s (- 6m 49s) (50000 66%) 0.8785
+15m 0s (- 5m 27s) (55000 73%) 0.7631
+16m 20s (- 4m 5s) (60000 80%) 0.7242
+17m 42s (- 2m 43s) (65000 86%) 0.6609
+19m 2s (- 1m 21s) (70000 93%) 0.6134
+20m 23s (- 0m 0s) (75000 100%) 0.5529
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je suis la pour vous proteger .
-= i m here to protect you .
-&lt; i m here to protect you . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; elle est maigre comme un manche a balai .
+= she is as thin as a broom stick .
+&lt; she is as a as a broom . &lt;EOS&gt;
 
-&gt; je m ennuie en ce moment .
-= i m bored right now .
-&lt; i m right now . &lt;EOS&gt;
+&gt; nous allons travailler ce soir .
+= we re going to work tonight .
+&lt; we re going to play tonight . &lt;EOS&gt;
 
-&gt; il n est pas parfait .
-= he s not perfect .
-&lt; he s t perfect . &lt;EOS&gt;
+&gt; il est beau et a du charme .
+= he s handsome and charming .
+&lt; he s handsome and and healthy . &lt;EOS&gt;
 
-&gt; c est un ecologiste .
-= he is an environmentalist .
-&lt; he s an . &lt;EOS&gt;
+&gt; c est un homme riche .
+= he is a man of wealth .
+&lt; he is a rich man . &lt;EOS&gt;
 
-&gt; je prends du poids .
-= i m gaining weight .
-&lt; i m gaining weight . &lt;EOS&gt;
+&gt; nous sommes australiens .
+= we are australians .
+&lt; we re resilient . &lt;EOS&gt;
 
-&gt; je suis de zambie .
-= i m from zambia .
-&lt; i m from fat . &lt;EOS&gt;
+&gt; tu n es qu un enfant .
+= you re just a boy .
+&lt; you re just a kid . &lt;EOS&gt;
 
-&gt; il a peur de nager .
-= he is afraid to swim .
-&lt; he is afraid to swim . &lt;EOS&gt;
+&gt; il adore la peinture .
+= he is fond of painting .
+&lt; he s fond of painting . &lt;EOS&gt;
 
-&gt; ils le font correctement .
-= they re doing it right .
-&lt; they re doing it right . &lt;EOS&gt;
+&gt; je suis habituee a travailler toute la nuit .
+= i m used to working all night .
+&lt; i m used to working all night . &lt;EOS&gt;
 
-&gt; il se tient sur la colline .
-= he is standing on the hill .
-&lt; he is standing on the hill . &lt;EOS&gt;
+&gt; vous etes mignon dans votre genre .
+= you re kind of cute .
+&lt; you re kind of cute . &lt;EOS&gt;
 
-&gt; tu fais desormais partie de la bande .
-= you re part of the gang now .
-&lt; you are part now of the time . &lt;EOS&gt;
+&gt; il est dans la cuisine .
+= he is in the kitchen .
+&lt; he is in the kitchen . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f6e8c06f3a0&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f0cc13ae2f0&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she is two years younger than me . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s too short . &lt;EOS&gt;
+output = she s too loud . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared of die . &lt;EOS&gt;
+output = i m not scared to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young . &lt;EOS&gt;
+output = he s an talented talented talented . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  35.287 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  37.851 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

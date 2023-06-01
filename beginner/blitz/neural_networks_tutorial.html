@@ -504,8 +504,8 @@ the MNIST dataset, please resize the images from the dataset to 32x32.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">out</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.1240,  0.1084, -0.0274, -0.0505,  0.0168,  0.1379, -0.0920, -0.0357,
-          0.0706,  0.0502]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.0598, -0.0453,  0.0173,  0.0525,  0.0679, -0.1979, -0.1509, -0.0606,
+         -0.0905,  0.0763]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 <p>Zero the gradient buffers of all parameters and backprops with random
@@ -573,7 +573,7 @@ between the output and the target.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(3.2518, grad_fn=&lt;MseLossBackward0&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(1.0298, grad_fn=&lt;MseLossBackward0&gt;)
 </pre></div>
 </div>
 <p>Now, if you follow <code class="docutils literal notranslate"><span class="pre">loss</span></code> in the backward direction, using its
@@ -595,9 +595,9 @@ gradient.</p>
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="o">.</span><span class="n">grad_fn</span><span class="o">.</span><span class="n">next_functions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">next_functions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># ReLU</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward0 object at 0x7f9ad73e9f90&gt;
-&lt;AddmmBackward0 object at 0x7f9ad433e410&gt;
-&lt;AccumulateGrad object at 0x7f9ad433e440&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward0 object at 0x7fe78618cca0&gt;
+&lt;AddmmBackward0 object at 0x7fe78618ce20&gt;
+&lt;AccumulateGrad object at 0x7fe78618c490&gt;
 </pre></div>
 </div>
 </div>
@@ -622,7 +622,7 @@ gradients before and after the backward.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>conv1.bias.grad before backward
 None
 conv1.bias.grad after backward
-tensor([-0.0068,  0.0224, -0.0242,  0.0248, -0.0049, -0.0170])
+tensor([-0.0147,  0.0090, -0.0268, -0.0014,  0.0039,  0.0013])
 </pre></div>
 </div>
 <p>Now, we have seen how to use loss functions.</p>
@@ -675,7 +675,7 @@ implements all these methods. Using it is very simple:</p>
 <code class="docutils literal notranslate"><span class="pre">optimizer.zero_grad()</span></code>. This is because gradients are accumulated
 as explained in the <a class="reference internal" href="#backprop">Backprop</a> section.</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.142 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.146 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-blitz-neural-networks-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/fb69edad8880ff72cdc3687bb1dad1e6/neural_networks_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_networks_tutorial.py</span></code></a></p>

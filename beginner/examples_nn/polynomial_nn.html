@@ -420,27 +420,27 @@ but raw autograd can be a bit too low-level for defining complex neural networks
 this is where the nn package can help. The nn package defines a set of Modules,
 which you can think of as a neural network layer that produces output from
 input and may have some trainable weights.</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 618.3584594726562
-199 416.864013671875
-299 282.1676940917969
-399 192.06793212890625
-499 131.7593994140625
-599 91.36353302001953
-699 64.28609466552734
-799 46.12234115600586
-899 33.92843246459961
-999 25.73558807373047
-1099 20.226455688476562
-1199 16.51864242553711
-1299 14.020939826965332
-1399 12.336812973022461
-1499 11.200187683105469
-1599 10.432331085205078
-1699 9.913064956665039
-1799 9.561558723449707
-1899 9.323356628417969
-1999 9.161771774291992
-Result: y = 0.012991110794246197 + 0.8432022333145142 x + -0.00224118260666728 x^2 + -0.09140463918447495 x^3
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>99 1342.9132080078125
+199 893.00146484375
+299 594.9087524414062
+399 397.37841796875
+499 266.4666442871094
+599 179.69271850585938
+699 122.16594696044922
+799 84.02191162109375
+899 58.725284576416016
+999 41.945457458496094
+1099 30.81279754638672
+1199 23.425155639648438
+1299 18.521564483642578
+1399 15.265905380249023
+1499 13.103825569152832
+1599 11.667623519897461
+1699 10.713285446166992
+1799 10.078930854797363
+1899 9.657155990600586
+1999 9.376594543457031
+Result: y = 0.008252636529505253 + 0.8350339531898499 x + -0.001423717476427555 x^2 + -0.09024276584386826 x^3
 </pre></div>
 </div>
 <div class="line-block">
@@ -517,7 +517,7 @@ Result: y = 0.012991110794246197 + 0.8432022333145142 x + -0.00224118260666728 x
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Result: y = </span><span class="si">{</span><a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><span class="n">linear_layer</span></a><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">linear_layer</span><span class="o">.</span><span class="n">weight</span></a><span class="p">[:,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">linear_layer</span><span class="o">.</span><span class="n">weight</span></a><span class="p">[:,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x^2 + </span><span class="si">{</span><a class="sphx-glr-backref-module-torch-nn-parameter sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><span class="n">linear_layer</span><span class="o">.</span><span class="n">weight</span></a><span class="p">[:,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1"> x^3'</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.645 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.593 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-examples-nn-polynomial-nn-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/cae15c367856daa07db2b142cddfe23f/polynomial_nn.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">polynomial_nn.py</span></code></a></p>
