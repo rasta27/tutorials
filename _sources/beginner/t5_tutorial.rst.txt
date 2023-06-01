@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 18.2MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.3MB/s]
 
 
 
@@ -135,48 +135,44 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 5.24M/945M [00:00<00:17, 55.0MB/s]
-      2%|1         | 17.1M/945M [00:00<00:10, 95.6MB/s]
-      4%|3         | 35.8M/945M [00:00<00:06, 141MB/s] 
-      6%|6         | 59.2M/945M [00:00<00:05, 182MB/s]
-      9%|8         | 82.2M/945M [00:00<00:04, 204MB/s]
-     11%|#1        | 105M/945M [00:00<00:04, 217MB/s] 
-     14%|#3        | 128M/945M [00:00<00:03, 225MB/s]
-     16%|#6        | 151M/945M [00:00<00:03, 230MB/s]
-     19%|#8        | 175M/945M [00:00<00:03, 236MB/s]
-     21%|##1       | 199M/945M [00:01<00:03, 240MB/s]
-     24%|##3       | 223M/945M [00:01<00:03, 243MB/s]
-     26%|##6       | 247M/945M [00:01<00:02, 246MB/s]
-     29%|##8       | 270M/945M [00:01<00:02, 245MB/s]
-     31%|###1      | 294M/945M [00:01<00:02, 247MB/s]
-     34%|###3      | 318M/945M [00:01<00:02, 248MB/s]
-     36%|###6      | 342M/945M [00:01<00:02, 246MB/s]
-     39%|###8      | 365M/945M [00:01<00:02, 245MB/s]
-     41%|####1     | 389M/945M [00:01<00:02, 243MB/s]
-     44%|####3     | 413M/945M [00:01<00:02, 246MB/s]
-     46%|####6     | 437M/945M [00:02<00:02, 249MB/s]
-     49%|####8     | 461M/945M [00:02<00:02, 250MB/s]
-     51%|#####1    | 485M/945M [00:02<00:01, 246MB/s]
-     54%|#####3    | 509M/945M [00:02<00:01, 245MB/s]
-     56%|#####6    | 532M/945M [00:02<00:01, 243MB/s]
-     59%|#####8    | 555M/945M [00:02<00:01, 240MB/s]
-     61%|######1   | 579M/945M [00:02<00:01, 242MB/s]
-     64%|######3   | 602M/945M [00:02<00:01, 238MB/s]
-     66%|######6   | 626M/945M [00:02<00:01, 242MB/s]
-     69%|######8   | 649M/945M [00:02<00:01, 239MB/s]
-     71%|#######1  | 673M/945M [00:03<00:01, 242MB/s]
-     74%|#######3  | 696M/945M [00:03<00:01, 238MB/s]
-     76%|#######6  | 720M/945M [00:03<00:00, 241MB/s]
-     79%|#######8  | 743M/945M [00:03<00:00, 240MB/s]
-     81%|########1 | 767M/945M [00:03<00:00, 243MB/s]
-     84%|########3 | 790M/945M [00:03<00:00, 240MB/s]
-     86%|########6 | 813M/945M [00:03<00:00, 240MB/s]
-     88%|########8 | 836M/945M [00:03<00:00, 240MB/s]
-     91%|######### | 859M/945M [00:03<00:00, 240MB/s]
-     93%|#########3| 882M/945M [00:03<00:00, 240MB/s]
-     96%|#########5| 904M/945M [00:04<00:00, 239MB/s]
-     98%|#########8| 928M/945M [00:04<00:00, 241MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 235MB/s]
+      0%|          | 2.40M/945M [00:00<00:39, 25.1MB/s]
+      1%|          | 6.93M/945M [00:00<00:25, 38.2MB/s]
+      1%|1         | 14.1M/945M [00:00<00:17, 55.1MB/s]
+      3%|2         | 25.5M/945M [00:00<00:11, 80.7MB/s]
+      5%|4         | 44.0M/945M [00:00<00:07, 121MB/s] 
+      8%|7         | 71.2M/945M [00:00<00:05, 177MB/s]
+     11%|#         | 99.6M/945M [00:00<00:04, 216MB/s]
+     14%|#3        | 128M/945M [00:00<00:03, 241MB/s] 
+     17%|#6        | 156M/945M [00:00<00:03, 258MB/s]
+     20%|#9        | 184M/945M [00:01<00:02, 270MB/s]
+     23%|##2       | 213M/945M [00:01<00:02, 278MB/s]
+     26%|##5       | 241M/945M [00:01<00:02, 284MB/s]
+     28%|##8       | 269M/945M [00:01<00:02, 288MB/s]
+     31%|###1      | 297M/945M [00:01<00:02, 290MB/s]
+     34%|###4      | 326M/945M [00:01<00:02, 292MB/s]
+     37%|###7      | 354M/945M [00:01<00:02, 293MB/s]
+     40%|####      | 382M/945M [00:01<00:02, 294MB/s]
+     43%|####3     | 410M/945M [00:01<00:01, 294MB/s]
+     46%|####6     | 438M/945M [00:01<00:01, 293MB/s]
+     49%|####9     | 466M/945M [00:02<00:01, 293MB/s]
+     52%|#####2    | 494M/945M [00:02<00:01, 292MB/s]
+     55%|#####5    | 522M/945M [00:02<00:01, 292MB/s]
+     58%|#####8    | 550M/945M [00:02<00:01, 293MB/s]
+     61%|######1   | 578M/945M [00:02<00:01, 293MB/s]
+     64%|######4   | 606M/945M [00:02<00:01, 293MB/s]
+     67%|######7   | 634M/945M [00:02<00:01, 293MB/s]
+     70%|#######   | 662M/945M [00:02<00:01, 293MB/s]
+     73%|#######3  | 690M/945M [00:02<00:00, 293MB/s]
+     76%|#######6  | 718M/945M [00:02<00:00, 292MB/s]
+     79%|#######8  | 746M/945M [00:03<00:00, 292MB/s]
+     82%|########1 | 774M/945M [00:03<00:00, 293MB/s]
+     85%|########4 | 802M/945M [00:03<00:00, 293MB/s]
+     88%|########7 | 830M/945M [00:03<00:00, 293MB/s]
+     91%|######### | 858M/945M [00:03<00:00, 293MB/s]
+     94%|#########3| 886M/945M [00:03<00:00, 292MB/s]
+     97%|#########6| 914M/945M [00:03<00:00, 291MB/s]
+    100%|#########9| 942M/945M [00:03<00:00, 293MB/s]
+    100%|##########| 945M/945M [00:03<00:00, 266MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -472,37 +468,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: a group of fighters in Afghanistan agreed to be filmed by a CNN cameraman . they agreed to be filmed by a cameraman parading their ISIS flags in a valley . the men display their weapons, and practice high kicks .
+    prediction: the eight-part series will take four years to make and is planned for a 2019 debut for Netflix customers internationally . the eight-part series will focus on the Earth's last wilderness areas and the animals living there .
 
-    target: A group of fighters in Afghanistan is filmed by a CNN cameraman parading ISIS flags . U.S. official: ISIS militants have "no military capability" at present, but are trying to recruit disillusioned Taliban in several areas . Rivalry between ISIS and the Taliban in Afghanistan is fierce enough to mean the ISIS fighters could be killed for brandishing the flag .
+    target: Filmmakers said they plan to use the latest Ultra HD camera technology . Eight-part series will take four years to make, will debut on Netflix in 2019 . Will focus on the Earth's last wilderness areas and the animals living there .
 
 
     Example 2:
 
-    prediction: carwyn Scott-Howell was on holiday with his mother, sister and brother . he fell over a 164ft drop in the french Alps while skiing with family . his family said he was a 'very competent skier and snowboarder'
+    prediction: half of three to six-year-olds worry about being fat, with a fifth of girls under 11 confessing to having even tried diets . half of girls under 13 worry about being fat, with a fifth of girls under 11 confessing to having even tried diets .
 
-    target: Carwyn Scott-Howell died on a family holiday in Flaine in French Alps . He went ahead alone when sister fell and his mother stopped to help . Skied into dense woodland before sliding towards a 164-foot cliff . Thought he may have entered woodland as thought it was shortcut to hotel . Family described him as a 'very daring, outgoing, determined little boy'
+    target: School children as young as nine are posting public 'Hot or Not' videos . Some more cutting clips can gather over 2,000 views online . What effect will this new form of humiliation have on the next generation?
 
 
     Example 3:
 
-    prediction: a number of players have been linked with a move for the danish international . wass has been watched by the likes of chelsea, manchester city and manchester city . he is available for around £3.5million and has been watched by the likes of swansea, liverpool and manchester city .
+    prediction: make-up artist used only her brushes and kryolan paint to create bunny . the 41-year-old from London used the special dense, long-lasting paint . she said she didn't use any prosthetics or special effects to achieve the result .
 
-    target: Chelsea and Liverpool target Daniel Wass can play as a full back or winger . Schalke and Inter Milan have also shown interest in the 25-year-old . Stoke are also interested in Lee Cattermole and Javier Hernandez . Denmark international could be sold for a fee close to £3.5million .
+    target: Maria Malone-Guerbaa, 41, used just brushes and paint to transform face . Posted pictures of the process ahead of the Easter weekend . London-based talent has also painted a cougar and owl on her features .
 
 
     Example 4:
 
-    prediction: Kyle Wittstock, 22, died after his paraglider crashed into a garage door . he was taken to hospital and pronounced dead shortly after arrival . the paraglider was powered by a helium-powered motor .
+    prediction: louis van gaal handed a list of potential targets at a club fan day . the former holland boss read out the names of the players he 'should' sign . the dossier was seen in a video posted on the united YouTube channel .
 
-    target: Kyle Wittstock crashed into a garage door when his paraglider was swept to the ground by a strong wind . The 22-year-old was taken to hospital and pronounced dead . He leaves behind a fiance and nine-week-old daughter . Mr Wittstock posted pictures of himself in the air hours before the crash . Friends and family were quick to express their grief over his death .
+    target: Man Utd fan gives Louis van Gaal transfer memo with six possible targets . Dutchman urged to sign Gareth Bale and Paul Pogba in summer spree . Southampton defender Nathaniel Clyne 'would cost £15 million' Mats Hummels, Jackson Martinez and Memphis Depay also make the list . Total expenditure would hit £300m if all signings were pulled off . READ: Manchester United must keep David de Gea, insists Phil Neville .
 
 
     Example 5:
 
-    prediction: west brom host liverpool at the hawthorns on saturday . the baggies are eight points above the relegation zone . they also face manchester united, arsenal and Chelsea .
+    prediction: former chairman of the joint chiefs says he knew about the circumstances surrounding the soldier's deserting . claims he and two other collegagues, Evan Buetow and Cody Full, were providing security for Mullen while he was on a trip to Afghanistan in 2009 .
 
-    target: Tony Pulis has called on his players to embrace being cast as outsiders . West Brom begin tricky fixture list with visit of Liverpool to the Hawthorns . Baggies also face Manchester United, Chelsea and Arsenal in the run-in . CLICK HERE for all the West Brom vs Liverpool team news .
+    target: Former Sgt. Matt Vierkant claims Admiral Mike Mullen knew Bergdhal deserted . Claims the Chairman of the Joint Chiefs told him this during private question and answer session . Ex-White House aides have said it is inconceivable that President Obama did not know . Bergdahl is charged with desertion and misbehavior before the enemy .
 
 
 
@@ -856,7 +852,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  41.122 seconds)
+   **Total running time of the script:** ( 3 minutes  25.819 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

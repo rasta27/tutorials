@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je vais faire un feu .', 'i m going to build a fire .']
+    ['je suis sur le chemin de la maison .', 'i m on the way home .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 25s (- 20m 3s) (5000 6%) 2.8599
-    2m 44s (- 17m 47s) (10000 13%) 2.2980
-    4m 2s (- 16m 10s) (15000 20%) 1.9674
-    5m 18s (- 14m 36s) (20000 26%) 1.7176
-    6m 34s (- 13m 8s) (25000 33%) 1.4922
-    7m 50s (- 11m 46s) (30000 40%) 1.3355
-    9m 6s (- 10m 24s) (35000 46%) 1.2102
-    10m 21s (- 9m 3s) (40000 53%) 1.0643
-    11m 37s (- 7m 45s) (45000 60%) 0.9991
-    12m 53s (- 6m 26s) (50000 66%) 0.8806
-    14m 9s (- 5m 8s) (55000 73%) 0.8041
-    15m 25s (- 3m 51s) (60000 80%) 0.7507
-    16m 41s (- 2m 34s) (65000 86%) 0.6874
-    17m 56s (- 1m 16s) (70000 93%) 0.5924
-    19m 13s (- 0m 0s) (75000 100%) 0.5682
+    1m 21s (- 18m 59s) (5000 6%) 2.8581
+    2m 37s (- 17m 5s) (10000 13%) 2.2911
+    3m 54s (- 15m 38s) (15000 20%) 1.9825
+    5m 12s (- 14m 18s) (20000 26%) 1.7276
+    6m 29s (- 12m 59s) (25000 33%) 1.5259
+    7m 46s (- 11m 40s) (30000 40%) 1.3646
+    9m 3s (- 10m 21s) (35000 46%) 1.2323
+    10m 20s (- 9m 3s) (40000 53%) 1.1050
+    11m 37s (- 7m 45s) (45000 60%) 1.0074
+    12m 54s (- 6m 27s) (50000 66%) 0.8892
+    14m 12s (- 5m 9s) (55000 73%) 0.8037
+    15m 29s (- 3m 52s) (60000 80%) 0.7540
+    16m 46s (- 2m 34s) (65000 86%) 0.6741
+    18m 3s (- 1m 17s) (70000 93%) 0.6437
+    19m 21s (- 0m 0s) (75000 100%) 0.5737
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > elle a une forte volonte .
-    = she s strong willed .
-    < she s strong willed . <EOS>
+    > tu es connu .
+    = you re famous .
+    < you re famous . <EOS>
 
-    > nous ne sommes pas serieuses .
-    = we re not serious .
-    < we aren t serious . <EOS>
+    > vous etes sinistre .
+    = you re creepy .
+    < you re creepy . <EOS>
 
-    > elle est puissante .
-    = she is powerful .
-    < she is powerful . <EOS>
+    > vous n etes pas des leurs si ?
+    = you re not one of them are you ?
+    < you re not a city are you ? <EOS>
 
-    > je me rejouis que vous soyez mon amie .
-    = i m glad you re my friend .
-    < i m glad you re my friend . <EOS>
+    > nous sommes ruinees .
+    = we re ruined .
+    < we re concerned . <EOS>
 
-    > nous sommes differents .
-    = we re different .
-    < we re different . <EOS>
+    > je ne suis pas convaincue .
+    = i m not convinced .
+    < i m not convinced . <EOS>
 
-    > je vais faire de mon mieux .
-    = i m going to do my best .
-    < i m going to do my best . <EOS>
+    > nous ne sommes pas fous .
+    = we re not mad .
+    < we re not unhappy . <EOS>
 
-    > tu n es plus seule .
-    = you re not alone anymore .
-    < you re no alone anymore . <EOS>
+    > elle n est pas de taille avec moi .
+    = she is no match for me .
+    < she is no match for me . <EOS>
 
-    > vous etes fort occupees .
-    = you re very busy .
-    < you re very busy . <EOS>
+    > je ne m inquiete pas pour tom .
+    = i m not worried about tom .
+    < i m not worried about tom . <EOS>
 
-    > tu es toujours en train de me tarabuster .
-    = you re always nagging me .
-    < you re always nagging me . <EOS>
+    > c est ma s ur .
+    = she s my sister .
+    < she is my sister . <EOS>
 
-    > vous etes bavard .
-    = you re talkative .
-    < you re talkative . <EOS>
+    > je suis sur que tout se passera bien .
+    = i m sure everything will be ok .
+    < i m sure everything will be ok . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f2ec80725c0>
+    <matplotlib.image.AxesImage object at 0x7f2facdaece0>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than i am . <EOS>
+    output = she is five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too short . <EOS>
+    output = she is too loud . <EOS>
     input = je ne crains pas de mourir .
     output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s the young young of . . <EOS>
+    output = he s a talented young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  27.456 seconds)
+   **Total running time of the script:** ( 19 minutes  34.879 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

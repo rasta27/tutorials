@@ -446,16 +446,16 @@ language):
 
  .. code-block:: none
 
-    category = Spanish / line = Jaso
-    category = Dutch / line = Daalen
-    category = Spanish / line = Arriola
-    category = Irish / line = Reagan
-    category = English / line = Rafferty
-    category = Polish / line = Auttenberg
-    category = Italian / line = Genovese
-    category = Japanese / line = Kajiyama
-    category = Italian / line = Maestri
-    category = Spanish / line = Valencia
+    category = English / line = Nisbet
+    category = Korean / line = Si
+    category = Japanese / line = Masuko
+    category = Korean / line = Sung
+    category = German / line = Mas
+    category = Irish / line = Carey
+    category = English / line = Beer
+    category = Italian / line = Sacco
+    category = Korean / line = Chin
+    category = Greek / line = Banos
 
 
 
@@ -595,26 +595,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 5s) 2.0956 Tsumura / Japanese ✓
-    10000 10% (0m 11s) 1.7821 Ngai / Chinese ✗ (Korean)
-    15000 15% (0m 17s) 1.5316 Charbonneau / French ✓
-    20000 20% (0m 23s) 2.2316 Dubois / Greek ✗ (French)
-    25000 25% (0m 29s) 0.7115 Que / Chinese ✓
-    30000 30% (0m 35s) 2.1352 Katschker / Russian ✗ (Czech)
-    35000 35% (0m 41s) 1.2345 Taylor / Scottish ✓
-    40000 40% (0m 47s) 1.9881 Hotta / Czech ✗ (Japanese)
-    45000 45% (0m 53s) 0.3624 Ying / Chinese ✓
-    50000 50% (0m 59s) 1.7856 Haik / Korean ✗ (Arabic)
-    55000 55% (1m 5s) 1.9215 Samios / Arabic ✗ (Greek)
-    60000 60% (1m 11s) 1.8702 Ponec / Dutch ✗ (Czech)
-    65000 65% (1m 17s) 1.9441 Tron / English ✗ (Vietnamese)
-    70000 70% (1m 23s) 1.7032 Gallo / Italian ✗ (Spanish)
-    75000 75% (1m 29s) 0.8222 Weeber / German ✓
-    80000 80% (1m 35s) 3.7405 Blanc / Scottish ✗ (French)
-    85000 85% (1m 41s) 2.3917 Rios / Greek ✗ (Spanish)
-    90000 90% (1m 47s) 0.7568 Sniders / Dutch ✓
-    95000 95% (1m 53s) 0.3257 Vo / Vietnamese ✓
-    100000 100% (1m 59s) 1.4046 Finogeev / Portuguese ✗ (Russian)
+    5000 5% (0m 5s) 2.2410 Rosario / Portuguese ✓
+    10000 10% (0m 11s) 2.4360 Stokoe / Greek ✗ (English)
+    15000 15% (0m 17s) 1.5871 Masoni / Japanese ✓
+    20000 20% (0m 22s) 3.2244 St martin / Scottish ✗ (French)
+    25000 25% (0m 28s) 2.1488 Vaca / Japanese ✗ (Czech)
+    30000 30% (0m 34s) 1.1117 Antunez / Spanish ✓
+    35000 35% (0m 40s) 0.8109 Armati / Italian ✓
+    40000 40% (0m 45s) 0.3743 Quyen / Vietnamese ✓
+    45000 45% (0m 51s) 2.0386 Franco / Italian ✗ (Portuguese)
+    50000 50% (0m 57s) 0.5199 Chong / Korean ✓
+    55000 55% (1m 2s) 0.2720 Ferreira / Portuguese ✓
+    60000 60% (1m 8s) 1.9827 Markytan / Russian ✗ (Czech)
+    65000 65% (1m 14s) 1.9419 Vesin / Scottish ✗ (Russian)
+    70000 70% (1m 19s) 0.3458 Jaskolski / Polish ✓
+    75000 75% (1m 25s) 0.1367 Takeshita / Japanese ✓
+    80000 80% (1m 30s) 0.5888 Yun / Chinese ✓
+    85000 85% (1m 36s) 3.9262 Irie / French ✗ (Japanese)
+    90000 90% (1m 42s) 0.4938 Terajima / Japanese ✓
+    95000 95% (1m 47s) 1.7151 Kawagishi / Arabic ✗ (Japanese)
+    100000 100% (1m 53s) 2.6014 Haanrath / German ✗ (Dutch)
 
 
 
@@ -654,7 +654,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7fbcb2271fc0>]
+    [<matplotlib.lines.Line2D object at 0x7f73bc9e6ec0>]
 
 
 
@@ -792,19 +792,19 @@ Running on User Input
 
 
     > Dovesky
-    (-0.79) Czech
-    (-0.83) Russian
-    (-2.95) English
+    (-0.31) Czech
+    (-1.65) Russian
+    (-3.36) Polish
 
     > Jackson
-    (-0.29) Scottish
-    (-1.88) English
-    (-3.49) Russian
+    (-1.29) English
+    (-1.46) Scottish
+    (-1.52) Russian
 
     > Satoshi
-    (-0.89) Italian
-    (-1.85) Japanese
-    (-1.97) Arabic
+    (-1.11) Arabic
+    (-1.14) Japanese
+    (-1.84) Polish
 
 
 
@@ -858,7 +858,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  6.538 seconds)
+   **Total running time of the script:** ( 2 minutes  0.168 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:

@@ -132,29 +132,26 @@ then run the script below:
     Downloading: "https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/deit_base_patch16_224-b5f2ef4d.pth
 
       0%|          | 0.00/330M [00:00<?, ?B/s]
-      0%|          | 1.16M/330M [00:00<00:28, 12.1MB/s]
-      1%|          | 3.10M/330M [00:00<00:20, 16.8MB/s]
-      2%|1         | 6.10M/330M [00:00<00:14, 23.4MB/s]
-      3%|3         | 10.7M/330M [00:00<00:10, 33.2MB/s]
-      5%|5         | 17.8M/330M [00:00<00:06, 48.0MB/s]
-      9%|8         | 29.0M/330M [00:00<00:04, 71.5MB/s]
-     14%|#3        | 45.7M/330M [00:00<00:02, 105MB/s] 
-     19%|#9        | 62.8M/330M [00:00<00:02, 129MB/s]
-     24%|##4       | 80.6M/330M [00:00<00:01, 147MB/s]
-     30%|##9       | 98.9M/330M [00:01<00:01, 161MB/s]
-     35%|###5      | 117M/330M [00:01<00:01, 169MB/s] 
-     41%|####      | 134M/330M [00:01<00:01, 174MB/s]
-     46%|####6     | 152M/330M [00:01<00:01, 178MB/s]
-     52%|#####1    | 170M/330M [00:01<00:00, 181MB/s]
-     57%|#####6    | 188M/330M [00:01<00:00, 183MB/s]
-     62%|######2   | 206M/330M [00:01<00:00, 185MB/s]
-     68%|######7   | 224M/330M [00:01<00:00, 186MB/s]
-     73%|#######3  | 242M/330M [00:01<00:00, 185MB/s]
-     79%|#######8  | 260M/330M [00:01<00:00, 185MB/s]
-     84%|########4 | 278M/330M [00:02<00:00, 187MB/s]
-     90%|########9 | 296M/330M [00:02<00:00, 188MB/s]
-     95%|#########5| 314M/330M [00:02<00:00, 189MB/s]
-    100%|##########| 330M/330M [00:02<00:00, 151MB/s]
+      2%|1         | 6.45M/330M [00:00<00:05, 67.6MB/s]
+      7%|6         | 22.2M/330M [00:00<00:02, 125MB/s] 
+     12%|#1        | 38.8M/330M [00:00<00:02, 147MB/s]
+     17%|#6        | 56.0M/330M [00:00<00:01, 160MB/s]
+     22%|##1       | 72.5M/330M [00:00<00:01, 165MB/s]
+     27%|##6       | 89.1M/330M [00:00<00:01, 168MB/s]
+     32%|###2      | 106M/330M [00:00<00:01, 173MB/s] 
+     38%|###7      | 125M/330M [00:00<00:01, 178MB/s]
+     43%|####3     | 142M/330M [00:00<00:01, 181MB/s]
+     48%|####8     | 160M/330M [00:01<00:01, 179MB/s]
+     54%|#####3    | 178M/330M [00:01<00:00, 182MB/s]
+     59%|#####9    | 195M/330M [00:01<00:00, 182MB/s]
+     65%|######4   | 213M/330M [00:01<00:00, 185MB/s]
+     70%|#######   | 232M/330M [00:01<00:00, 187MB/s]
+     76%|#######5  | 250M/330M [00:01<00:00, 187MB/s]
+     81%|########1 | 268M/330M [00:01<00:00, 188MB/s]
+     87%|########6 | 286M/330M [00:01<00:00, 189MB/s]
+     92%|#########2| 304M/330M [00:01<00:00, 186MB/s]
+     97%|#########7| 322M/330M [00:01<00:00, 187MB/s]
+    100%|##########| 330M/330M [00:01<00:00, 177MB/s]
     269
 
 
@@ -422,11 +419,11 @@ the optimized-quantized-and-scripted model - run the code below:
 
  .. code-block:: none
 
-    original model: 368.84ms
-    scripted model: 407.53ms
-    scripted & quantized model: 249.36ms
-    scripted & quantized & optimized model: 257.35ms
-    lite model: 223.84ms
+    original model: 343.90ms
+    scripted model: 382.62ms
+    scripted & quantized model: 232.37ms
+    scripted & quantized & optimized model: 232.22ms
+    lite model: 200.48ms
 
 
 
@@ -492,11 +489,11 @@ model.
  .. code-block:: none
 
                                         Model Inference Time Reduction
-    0                          original model       368.84ms        0%
-    1                          scripted model       407.53ms   -10.49%
-    2              scripted & quantized model       249.36ms    32.39%
-    3  scripted & quantized & optimized model       257.35ms    30.23%
-    4                              lite model       223.84ms    39.31%
+    0                          original model       343.90ms        0%
+    1                          scripted model       382.62ms   -11.26%
+    2              scripted & quantized model       232.37ms    32.43%
+    3  scripted & quantized & optimized model       232.22ms    32.47%
+    4                              lite model       200.48ms    41.71%
 
     '\n        Model                             Inference Time    Reduction\n0\toriginal model                             1236.69ms           0%\n1\tscripted model                             1226.72ms        0.81%\n2\tscripted & quantized model                  593.19ms       52.03%\n3\tscripted & quantized & optimized model      598.01ms       51.64%\n4\tlite model                                  600.72ms       51.43%\n'
 
@@ -514,7 +511,7 @@ Learn More
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  24.477 seconds)
+   **Total running time of the script:** ( 0 minutes  22.873 seconds)
 
 
 .. _sphx_glr_download_beginner_vt_tutorial.py:
