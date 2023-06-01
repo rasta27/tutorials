@@ -64,7 +64,7 @@ Fashion-MNIST dataset. Fashion-MNIST is a set of image tiles depicting
 various garments, with ten class labels indicating the type of garment
 depicted. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-68
+.. GENERATED FROM PYTHON SOURCE LINES 49-75
 
 .. code-block:: default
 
@@ -86,6 +86,13 @@ depicted.
     # PyTorch TensorBoard support
     from torch.utils.tensorboard import SummaryWriter
 
+    # In case you are using an environment that has TensorFlow installed,
+    # such as Google Colab, uncomment the following code to avoid
+    # a bug with saving embeddings to your TensorBoard directory
+
+    # import tensorflow as tf
+    # import tensorboard as tb
+    # tf.io.gfile = tb.compat.tensorflow_stub.io.gfile
 
 
 
@@ -94,7 +101,7 @@ depicted.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-74
+.. GENERATED FROM PYTHON SOURCE LINES 76-81
 
 Showing Images in TensorBoard
 -----------------------------
@@ -102,7 +109,7 @@ Showing Images in TensorBoard
 Let’s start by adding sample images from our dataset to TensorBoard:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-125
+.. GENERATED FROM PYTHON SOURCE LINES 81-132
 
 .. code-block:: default
 
@@ -174,59 +181,60 @@ Let’s start by adding sample images from our dataset to TensorBoard:
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/26421880 [00:00<?, ?it/s]
-      0%|          | 32768/26421880 [00:00<01:26, 306123.98it/s]
-      0%|          | 65536/26421880 [00:00<01:26, 304653.48it/s]
-      0%|          | 131072/26421880 [00:00<00:59, 442691.10it/s]
-      1%|          | 196608/26421880 [00:00<00:51, 506732.24it/s]
-      1%|1         | 393216/26421880 [00:00<00:26, 981529.47it/s]
-      3%|2         | 786432/26421880 [00:00<00:13, 1878987.04it/s]
-      6%|5         | 1572864/26421880 [00:00<00:06, 3654412.17it/s]
-     12%|#1        | 3112960/26421880 [00:00<00:03, 7051185.36it/s]
-     22%|##2       | 5931008/26421880 [00:00<00:01, 13023659.59it/s]
-     33%|###3      | 8781824/26421880 [00:01<00:01, 17112356.48it/s]
-     45%|####5     | 11894784/26421880 [00:01<00:00, 20693136.48it/s]
-     57%|#####6    | 14974976/26421880 [00:01<00:00, 23057534.96it/s]
-     67%|######7   | 17727488/26421880 [00:01<00:00, 23821557.89it/s]
-     79%|#######8  | 20807680/26421880 [00:01<00:00, 25201328.53it/s]
-     90%|######### | 23887872/26421880 [00:01<00:00, 25931743.41it/s]
-    100%|##########| 26421880/26421880 [00:01<00:00, 16127442.29it/s]
+      0%|          | 32768/26421880 [00:00<01:27, 302660.97it/s]
+      0%|          | 65536/26421880 [00:00<01:27, 301589.75it/s]
+      0%|          | 131072/26421880 [00:00<00:59, 438657.14it/s]
+      1%|          | 229376/26421880 [00:00<00:42, 622074.33it/s]
+      2%|1         | 491520/26421880 [00:00<00:20, 1261630.54it/s]
+      4%|3         | 950272/26421880 [00:00<00:11, 2269238.23it/s]
+      7%|7         | 1933312/26421880 [00:00<00:05, 4476751.02it/s]
+     15%|#4        | 3833856/26421880 [00:00<00:02, 8607213.40it/s]
+     26%|##6       | 6946816/26421880 [00:00<00:01, 14817997.11it/s]
+     38%|###8      | 10059776/26421880 [00:01<00:00, 19022962.06it/s]
+     50%|####9     | 13139968/26421880 [00:01<00:00, 21925936.95it/s]
+     61%|######1   | 16220160/26421880 [00:01<00:00, 23852872.25it/s]
+     72%|#######1  | 18972672/26421880 [00:01<00:00, 24275777.23it/s]
+     83%|########3 | 22020096/26421880 [00:01<00:00, 25322542.35it/s]
+     95%|#########5| 25133056/26421880 [00:01<00:00, 26215493.18it/s]
+    100%|##########| 26421880/26421880 [00:01<00:00, 16099531.24it/s]
     Extracting ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/29515 [00:00<?, ?it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 271328.87it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 269750.88it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 274545.16it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 273060.28it/s]
     Extracting ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/4422102 [00:00<?, ?it/s]
-      1%|          | 32768/4422102 [00:00<00:14, 302676.97it/s]
-      1%|1         | 65536/4422102 [00:00<00:14, 301051.85it/s]
-      3%|2         | 131072/4422102 [00:00<00:09, 437559.20it/s]
-      5%|5         | 229376/4422102 [00:00<00:06, 620060.72it/s]
-     11%|#1        | 491520/4422102 [00:00<00:03, 1259394.16it/s]
-     21%|##1       | 950272/4422102 [00:00<00:01, 2256402.51it/s]
-     44%|####3     | 1933312/4422102 [00:00<00:00, 4472639.76it/s]
-     87%|########6 | 3833856/4422102 [00:00<00:00, 8594634.22it/s]
-    100%|##########| 4422102/4422102 [00:00<00:00, 5049863.91it/s]
+      1%|          | 32768/4422102 [00:00<00:14, 299912.83it/s]
+      1%|1         | 65536/4422102 [00:00<00:14, 299083.97it/s]
+      3%|2         | 131072/4422102 [00:00<00:09, 435265.33it/s]
+      5%|5         | 229376/4422102 [00:00<00:06, 617331.29it/s]
+     10%|#         | 458752/4422102 [00:00<00:03, 1148274.58it/s]
+     13%|#3        | 589824/4422102 [00:00<00:03, 1163365.00it/s]
+     22%|##2       | 983040/4422102 [00:00<00:01, 1953406.81it/s]
+     39%|###8      | 1703936/4422102 [00:00<00:00, 3422916.39it/s]
+     73%|#######2  | 3211264/4422102 [00:00<00:00, 6633016.98it/s]
+    100%|##########| 4422102/4422102 [00:00<00:00, 4461328.85it/s]
     Extracting ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/5148 [00:00<?, ?it/s]
-    100%|##########| 5148/5148 [00:00<00:00, 22848970.36it/s]
+    100%|##########| 5148/5148 [00:00<00:00, 23242494.07it/s]
     Extracting ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-131
+.. GENERATED FROM PYTHON SOURCE LINES 133-138
 
 Above, we used TorchVision and Matplotlib to create a visual grid of a
 minibatch of our input data. Below, we use the ``add_image()`` call on
@@ -234,7 +242,7 @@ minibatch of our input data. Below, we use the ``add_image()`` call on
 we also call ``flush()`` to make sure it’s written to disk right away.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-145
+.. GENERATED FROM PYTHON SOURCE LINES 138-152
 
 .. code-block:: default
 
@@ -259,7 +267,7 @@ we also call ``flush()`` to make sure it’s written to disk right away.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-160
+.. GENERATED FROM PYTHON SOURCE LINES 153-167
 
 If you start TensorBoard at the command line and open it in a new
 browser tab (usually at `localhost:6006 <localhost:6006>`__), you should
@@ -276,7 +284,7 @@ Let’s define a model to categorize our image tiles, and an optimizer and
 loss function for training:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-186
+.. GENERATED FROM PYTHON SOURCE LINES 167-193
 
 .. code-block:: default
 
@@ -313,13 +321,13 @@ loss function for training:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-190
+.. GENERATED FROM PYTHON SOURCE LINES 194-197
 
 Now let’s train a single epoch, and evaluate the training vs. validation
 set losses every 1000 batches:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 190-232
+.. GENERATED FROM PYTHON SOURCE LINES 197-239
 
 .. code-block:: default
 
@@ -394,7 +402,7 @@ set losses every 1000 batches:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-242
+.. GENERATED FROM PYTHON SOURCE LINES 240-249
 
 Switch to your open TensorBoard and have a look at the SCALARS tab.
 
@@ -406,7 +414,7 @@ To do this, call the ``add_graph()`` method with a model and sample
 input. When you open
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 242-253
+.. GENERATED FROM PYTHON SOURCE LINES 249-260
 
 .. code-block:: default
 
@@ -428,7 +436,7 @@ input. When you open
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-271
+.. GENERATED FROM PYTHON SOURCE LINES 261-278
 
 When you switch over to TensorBoard, you should see a GRAPHS tab.
 Double-click the “NET” node to see the layers and data flow within your
@@ -448,7 +456,7 @@ with highest variance.
 Below, we’ll take a sample of our data, and generate such an embedding:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-294
+.. GENERATED FROM PYTHON SOURCE LINES 278-301
 
 .. code-block:: default
 
@@ -482,7 +490,7 @@ Below, we’ll take a sample of our data, and generate such an embedding:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-316
+.. GENERATED FROM PYTHON SOURCE LINES 302-323
 
 Now if you switch to TensorBoard and select the PROJECTOR tab, you
 should see a 3D representation of the projection. You can rotate and
@@ -509,7 +517,7 @@ For more information, have a look at:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  50.418 seconds)
+   **Total running time of the script:** ( 2 minutes  28.770 seconds)
 
 
 .. _sphx_glr_download_beginner_introyt_tensorboardyt_tutorial.py:

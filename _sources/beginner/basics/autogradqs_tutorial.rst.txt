@@ -113,8 +113,8 @@ documentation <https://pytorch.org/docs/stable/autograd.html#function>`__.
 
  .. code-block:: none
 
-    Gradient function for z = <AddBackward0 object at 0x7f1584aa3d30>
-    Gradient function for loss = <BinaryCrossEntropyWithLogitsBackward0 object at 0x7f1584a6e770>
+    Gradient function for z = <AddBackward0 object at 0x7f814b0a3700>
+    Gradient function for loss = <BinaryCrossEntropyWithLogitsBackward0 object at 0x7f814b0d3be0>
 
 
 
@@ -151,12 +151,12 @@ namely, we need :math:`\frac{\partial loss}{\partial w}` and
 
  .. code-block:: none
 
-    tensor([[0.0070, 0.3030, 0.2362],
-            [0.0070, 0.3030, 0.2362],
-            [0.0070, 0.3030, 0.2362],
-            [0.0070, 0.3030, 0.2362],
-            [0.0070, 0.3030, 0.2362]])
-    tensor([0.0070, 0.3030, 0.2362])
+    tensor([[0.3106, 0.1927, 0.1968],
+            [0.3106, 0.1927, 0.1968],
+            [0.3106, 0.1927, 0.1968],
+            [0.3106, 0.1927, 0.1968],
+            [0.3106, 0.1927, 0.1968]])
+    tensor([0.3106, 0.1927, 0.1968])
 
 
 
@@ -395,7 +395,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.055 seconds)
+   **Total running time of the script:** ( 0 minutes  0.086 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_autogradqs_tutorial.py:

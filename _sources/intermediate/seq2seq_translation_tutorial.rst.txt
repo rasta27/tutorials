@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['il est en train de vous regarder .', 'he s looking at you .']
+    ['elle est mon genre .', 'she s my type .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 24s (- 19m 45s) (5000 6%) 2.8356
-    2m 42s (- 17m 39s) (10000 13%) 2.2790
-    4m 1s (- 16m 6s) (15000 20%) 1.9453
-    5m 20s (- 14m 40s) (20000 26%) 1.7178
-    6m 40s (- 13m 20s) (25000 33%) 1.5294
-    7m 58s (- 11m 58s) (30000 40%) 1.3224
-    9m 17s (- 10m 37s) (35000 46%) 1.2055
-    10m 36s (- 9m 17s) (40000 53%) 1.0588
-    11m 56s (- 7m 57s) (45000 60%) 0.9798
-    13m 15s (- 6m 37s) (50000 66%) 0.8843
-    14m 33s (- 5m 17s) (55000 73%) 0.8167
-    15m 52s (- 3m 58s) (60000 80%) 0.7024
-    17m 11s (- 2m 38s) (65000 86%) 0.6539
-    18m 30s (- 1m 19s) (70000 93%) 0.6008
-    19m 48s (- 0m 0s) (75000 100%) 0.5618
+    1m 26s (- 20m 6s) (5000 6%) 2.8293
+    2m 48s (- 18m 15s) (10000 13%) 2.2911
+    4m 10s (- 16m 40s) (15000 20%) 1.9686
+    5m 30s (- 15m 8s) (20000 26%) 1.7352
+    6m 49s (- 13m 39s) (25000 33%) 1.5062
+    8m 8s (- 12m 13s) (30000 40%) 1.3587
+    9m 26s (- 10m 47s) (35000 46%) 1.2081
+    10m 45s (- 9m 24s) (40000 53%) 1.0880
+    12m 4s (- 8m 2s) (45000 60%) 0.9908
+    13m 22s (- 6m 41s) (50000 66%) 0.9067
+    14m 40s (- 5m 20s) (55000 73%) 0.7885
+    15m 59s (- 3m 59s) (60000 80%) 0.7378
+    17m 17s (- 2m 39s) (65000 86%) 0.6841
+    18m 36s (- 1m 19s) (70000 93%) 0.6319
+    19m 55s (- 0m 0s) (75000 100%) 0.5652
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > tu n es pas si vieille .
-    = you re not that old .
-    < you re not that old . <EOS>
+    > je ne suis pas contente .
+    = i am not happy .
+    < i m not happy . <EOS>
 
-    > je ne suis pas un escroc .
-    = i m not a crook .
-    < i m not a hero . <EOS>
+    > vous etes tenaces .
+    = you re resilient .
+    < you re resilient . <EOS>
 
-    > je rechigne a lui rendre visite .
-    = i m reluctant to visit him .
-    < i m used to be him . <EOS>
+    > vous etes prevenant .
+    = you re considerate .
+    < you re considerate . <EOS>
 
-    > je ne suis pas celui que tu penses .
-    = i m not who you think i am .
-    < i m not who you think i am . <EOS>
+    > vous etes mignon dans votre genre .
+    = you re kind of cute .
+    < you re kind of your . <EOS>
 
-    > vous etes les proprietaires .
-    = you re the owners .
-    < you re the owners . <EOS>
+    > je l emporte .
+    = i m winning .
+    < i m studying . <EOS>
 
-    > tu es responsable de cet accident .
-    = you are responsible for this accident .
-    < you are responsible for the accident . <EOS>
+    > vous etes probablement fatigue .
+    = you re probably tired .
+    < you re probably tired . <EOS>
 
-    > nous sommes pour ainsi dire pretes .
-    = we re about ready .
-    < we re ready ready . <EOS>
+    > nous sommes sauves .
+    = we re saved .
+    < we re canadians . <EOS>
 
-    > il ne voit pas d un il .
-    = he is blind in one eye .
-    < he is blind in one eye . <EOS>
+    > je suis paresseux .
+    = i am lazy .
+    < i m lazy . <EOS>
 
-    > vous n etes pas contrariees si ?
-    = you re not upset are you ?
-    < you re not upset are you ? <EOS>
+    > nous sommes endurantes .
+    = we re resilient .
+    < we re resilient . <EOS>
 
-    > sans vous je ne suis rien .
-    = i m nothing without you .
-    < i m nothing without you . <EOS>
+    > vous etes vieilles .
+    = you re old .
+    < you re old . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f1accf767d0>
+    <matplotlib.image.AxesImage object at 0x7f43813e2b30>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is busy too . <EOS>
+    output = she is too weak . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not afraid to die . <EOS>
+    output = i m not dying to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s very young talented . <EOS>
+    output = he s a talented young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  2.939 seconds)
+   **Total running time of the script:** ( 20 minutes  8.610 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
