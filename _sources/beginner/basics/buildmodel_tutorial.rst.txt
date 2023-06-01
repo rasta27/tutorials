@@ -195,7 +195,7 @@ We get the prediction probabilities by passing it through an instance of the ``n
 
  .. code-block:: none
 
-    Predicted class: tensor([8], device='cuda:0')
+    Predicted class: tensor([7], device='cuda:0')
 
 
 
@@ -325,30 +325,26 @@ linear layers, but there's other activations to introduce non-linearity in your 
 
  .. code-block:: none
 
-    Before ReLU: tensor([[ 3.2265e-01, -8.1525e-03,  2.1417e-01, -2.6613e-01, -9.0749e-01,
-             -1.5640e-01,  5.5881e-02,  1.7356e-01,  2.3714e-01, -3.5428e-01,
-              3.5729e-02, -2.0447e-01, -1.0601e-01,  1.5483e-01, -3.5796e-01,
-             -1.6322e-01,  1.3464e-01, -1.4024e-01, -2.2523e-01, -7.7765e-02],
-            [ 1.1702e-01,  4.7537e-02,  7.1686e-01, -2.5473e-01, -4.8049e-01,
-             -3.9477e-01,  2.0876e-01, -1.8267e-01,  2.9730e-01,  1.1128e-02,
-              1.2571e-01, -1.9435e-01, -1.4733e-01, -2.1096e-01, -2.4303e-01,
-             -2.8355e-01, -1.0480e-01,  1.3925e-01,  3.9847e-02,  8.6000e-02],
-            [-1.1409e-01,  3.4444e-01, -1.0147e-01, -2.4667e-01, -7.8247e-01,
-             -1.4158e-01,  4.2132e-01, -6.0824e-04,  3.0203e-01, -1.9722e-01,
-              1.3550e-01,  2.1344e-01, -3.2772e-02, -2.4617e-01, -8.5956e-02,
-             -2.3659e-01, -6.7154e-03, -1.5686e-01, -4.8436e-02,  2.3697e-02]],
-           grad_fn=<AddmmBackward0>)
+    Before ReLU: tensor([[-0.4843, -0.4075,  0.6019, -0.2892, -0.0622,  0.0975, -0.2345,  0.3772,
+             -0.1020, -0.4123, -0.0070, -0.3459, -0.1337,  0.1004,  0.0558,  0.0619,
+             -0.4261, -0.1712, -0.6240, -0.1491],
+            [-0.0423, -0.6606,  0.8101, -0.5330,  0.2650,  0.3946, -0.3334, -0.0960,
+              0.2126, -0.2643, -0.2981, -0.1420, -0.1942,  0.0533,  0.1728, -0.2137,
+             -0.4861, -0.1192, -0.5157, -0.0067],
+            [-0.3148, -0.4416,  0.8907, -0.5473,  0.0544,  0.0233, -0.1889,  0.0253,
+             -0.0792, -0.1710, -0.0439, -0.3091, -0.0818,  0.1673,  0.3255,  0.0708,
+             -0.2611,  0.0984, -0.6945, -0.0027]], grad_fn=<AddmmBackward0>)
 
 
-    After ReLU: tensor([[0.3226, 0.0000, 0.2142, 0.0000, 0.0000, 0.0000, 0.0559, 0.1736, 0.2371,
-             0.0000, 0.0357, 0.0000, 0.0000, 0.1548, 0.0000, 0.0000, 0.1346, 0.0000,
+    After ReLU: tensor([[0.0000, 0.0000, 0.6019, 0.0000, 0.0000, 0.0975, 0.0000, 0.3772, 0.0000,
+             0.0000, 0.0000, 0.0000, 0.0000, 0.1004, 0.0558, 0.0619, 0.0000, 0.0000,
              0.0000, 0.0000],
-            [0.1170, 0.0475, 0.7169, 0.0000, 0.0000, 0.0000, 0.2088, 0.0000, 0.2973,
-             0.0111, 0.1257, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.1393,
-             0.0398, 0.0860],
-            [0.0000, 0.3444, 0.0000, 0.0000, 0.0000, 0.0000, 0.4213, 0.0000, 0.3020,
-             0.0000, 0.1355, 0.2134, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
-             0.0000, 0.0237]], grad_fn=<ReluBackward0>)
+            [0.0000, 0.0000, 0.8101, 0.0000, 0.2650, 0.3946, 0.0000, 0.0000, 0.2126,
+             0.0000, 0.0000, 0.0000, 0.0000, 0.0533, 0.1728, 0.0000, 0.0000, 0.0000,
+             0.0000, 0.0000],
+            [0.0000, 0.0000, 0.8907, 0.0000, 0.0544, 0.0233, 0.0000, 0.0253, 0.0000,
+             0.0000, 0.0000, 0.0000, 0.0000, 0.1673, 0.3255, 0.0708, 0.0000, 0.0984,
+             0.0000, 0.0000]], grad_fn=<ReluBackward0>)
 
 
 
@@ -450,23 +446,23 @@ In this example, we iterate over each parameter, and print its size and a previe
     )
 
 
-    Layer: linear_relu_stack.0.weight | Size: torch.Size([512, 784]) | Values : tensor([[-0.0283, -0.0163,  0.0182,  ...,  0.0024,  0.0318,  0.0017],
-            [-0.0092,  0.0207,  0.0132,  ..., -0.0105, -0.0334, -0.0110]],
+    Layer: linear_relu_stack.0.weight | Size: torch.Size([512, 784]) | Values : tensor([[ 0.0339, -0.0245,  0.0078,  ...,  0.0277,  0.0341,  0.0035],
+            [-0.0162,  0.0048,  0.0174,  ...,  0.0004, -0.0293, -0.0235]],
            device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.0.bias | Size: torch.Size([512]) | Values : tensor([-0.0048,  0.0098], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.0.bias | Size: torch.Size([512]) | Values : tensor([-0.0040,  0.0287], device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.2.weight | Size: torch.Size([512, 512]) | Values : tensor([[ 0.0331,  0.0223,  0.0400,  ...,  0.0372,  0.0344, -0.0183],
-            [ 0.0313,  0.0428,  0.0240,  ...,  0.0086,  0.0335,  0.0368]],
+    Layer: linear_relu_stack.2.weight | Size: torch.Size([512, 512]) | Values : tensor([[-0.0406, -0.0282, -0.0024,  ...,  0.0165, -0.0328, -0.0021],
+            [ 0.0348,  0.0250,  0.0049,  ...,  0.0151, -0.0416, -0.0004]],
            device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.2.bias | Size: torch.Size([512]) | Values : tensor([ 0.0042, -0.0389], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.2.bias | Size: torch.Size([512]) | Values : tensor([-0.0120,  0.0091], device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.4.weight | Size: torch.Size([10, 512]) | Values : tensor([[-0.0009,  0.0007, -0.0322,  ...,  0.0187,  0.0190,  0.0144],
-            [-0.0144,  0.0326,  0.0377,  ..., -0.0296, -0.0262,  0.0116]],
+    Layer: linear_relu_stack.4.weight | Size: torch.Size([10, 512]) | Values : tensor([[-0.0337,  0.0186, -0.0085,  ...,  0.0081, -0.0421, -0.0286],
+            [-0.0218, -0.0041,  0.0109,  ...,  0.0115, -0.0261,  0.0213]],
            device='cuda:0', grad_fn=<SliceBackward0>) 
 
-    Layer: linear_relu_stack.4.bias | Size: torch.Size([10]) | Values : tensor([0.0111, 0.0044], device='cuda:0', grad_fn=<SliceBackward0>) 
+    Layer: linear_relu_stack.4.bias | Size: torch.Size([10]) | Values : tensor([-0.0122, -0.0425], device='cuda:0', grad_fn=<SliceBackward0>) 
 
 
 
@@ -486,7 +482,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.985 seconds)
+   **Total running time of the script:** ( 0 minutes  4.727 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_buildmodel_tutorial.py:

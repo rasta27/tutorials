@@ -466,8 +466,8 @@ documentation</a>.</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Gradient function for loss = </span><span class="si">{</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="o">.</span><span class="n">grad_fn</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Gradient function for z = &lt;AddBackward0 object at 0x7f3cff8b2d10&gt;
-Gradient function for loss = &lt;BinaryCrossEntropyWithLogitsBackward0 object at 0x7f3cff8b34f0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Gradient function for z = &lt;AddBackward0 object at 0x7f1584aa3d30&gt;
+Gradient function for loss = &lt;BinaryCrossEntropyWithLogitsBackward0 object at 0x7f1584a6e770&gt;
 </pre></div>
 </div>
 </div>
@@ -485,12 +485,12 @@ namely, we need <span class="math">\(\frac{\partial loss}{\partial w}\)</span> a
 <span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">b</span><span class="o">.</span><span class="n">grad</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[0.3272, 0.0823, 0.2666],
-        [0.3272, 0.0823, 0.2666],
-        [0.3272, 0.0823, 0.2666],
-        [0.3272, 0.0823, 0.2666],
-        [0.3272, 0.0823, 0.2666]])
-tensor([0.3272, 0.0823, 0.2666])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[0.0070, 0.3030, 0.2362],
+        [0.0070, 0.3030, 0.2362],
+        [0.0070, 0.3030, 0.2362],
+        [0.0070, 0.3030, 0.2362],
+        [0.0070, 0.3030, 0.2362]])
+tensor([0.0070, 0.3030, 0.2362])
 </pre></div>
 </div>
 <div class="admonition note">
