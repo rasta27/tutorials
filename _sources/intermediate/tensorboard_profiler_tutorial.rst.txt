@@ -37,7 +37,7 @@ Setup
 -----
 To install ``torch`` and ``torchvision`` use the following command:
 
-::
+.. code-block::
 
    pip install torch torchvision
 
@@ -218,7 +218,7 @@ Run the above code. The profiling result will be saved under ``./log/resnet18`` 
 
 Install PyTorch Profiler TensorBoard Plugin.
 
-::
+.. code-block::
 
     pip install torch_tb_profiler
 
@@ -227,7 +227,7 @@ Install PyTorch Profiler TensorBoard Plugin.
 
 Launch the TensorBoard.
 
-::
+.. code-block::
 
     tensorboard --logdir=./log
 
@@ -236,7 +236,7 @@ Launch the TensorBoard.
 
 Open the TensorBoard profile URL in Google Chrome browser or Microsoft Edge browser.
 
-::
+.. code-block::
 
     http://localhost:6006/#pytorch_profiler
 
@@ -348,7 +348,7 @@ User could enable multi-process data loading by setting the parameter ``num_work
 In this example, we follow the "Performance Recommendation" and set ``num_workers`` as below,
 pass a different name such as ``./log/resnet18_4workers`` to ``tensorboard_trace_handler``, and run it again.
 
-::
+.. code-block::
 
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=32, shuffle=True, num_workers=4)
 
@@ -379,7 +379,7 @@ To profile memory, ``profile_memory`` must be set to ``True`` in arguments of ``
 
 You can try it by using existing example on Azure
 
-::
+.. code-block::
 
     pip install azure-storage-blob
     tensorboard --logdir=https://torchtbprofiler.blob.core.windows.net/torchtbprofiler/demo/memory_demo_1_10
@@ -429,7 +429,7 @@ The plugin now supports distributed view on profiling DDP with NCCL/GLOO as back
 
 You can try it by using existing example on Azure:
 
-::
+.. code-block::
 
     pip install azure-storage-blob
     tensorboard --logdir=https://torchtbprofiler.blob.core.windows.net/torchtbprofiler/demo/distributed_bert

@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['quel menteur vous faites !', 'you re such a liar .']
+['il est plus fort que vous .', 'he s stronger than you .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 20s (- 18m 48s) (5000 6%) 2.8207
-2m 36s (- 17m 0s) (10000 13%) 2.2827
-3m 53s (- 15m 34s) (15000 20%) 1.9735
-5m 9s (- 14m 11s) (20000 26%) 1.7146
-6m 26s (- 12m 52s) (25000 33%) 1.5456
-7m 42s (- 11m 33s) (30000 40%) 1.3499
-8m 58s (- 10m 15s) (35000 46%) 1.2038
-10m 14s (- 8m 57s) (40000 53%) 1.1040
-11m 31s (- 7m 40s) (45000 60%) 0.9738
-12m 47s (- 6m 23s) (50000 66%) 0.8964
-14m 4s (- 5m 7s) (55000 73%) 0.8109
-15m 20s (- 3m 50s) (60000 80%) 0.7409
-16m 37s (- 2m 33s) (65000 86%) 0.6772
-17m 53s (- 1m 16s) (70000 93%) 0.6102
-19m 10s (- 0m 0s) (75000 100%) 0.5647
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 34s (- 21m 57s) (5000 6%) 2.8569
+3m 3s (- 19m 49s) (10000 13%) 2.2689
+4m 31s (- 18m 4s) (15000 20%) 1.9727
+6m 0s (- 16m 31s) (20000 26%) 1.7062
+7m 28s (- 14m 57s) (25000 33%) 1.5098
+8m 57s (- 13m 26s) (30000 40%) 1.3599
+10m 25s (- 11m 54s) (35000 46%) 1.1905
+11m 55s (- 10m 26s) (40000 53%) 1.0880
+13m 25s (- 8m 57s) (45000 60%) 0.9933
+14m 57s (- 7m 28s) (50000 66%) 0.8882
+16m 28s (- 5m 59s) (55000 73%) 0.8307
+17m 59s (- 4m 29s) (60000 80%) 0.7460
+19m 29s (- 2m 59s) (65000 86%) 0.6636
+20m 57s (- 1m 29s) (70000 93%) 0.6003
+22m 26s (- 0m 0s) (75000 100%) 0.5633
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; elle est douee pour jouer au tennis .
-= she is good at playing tennis .
-&lt; she is good at playing tennis . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; il n est pas ce qu il semble .
+= he is not what he seems .
+&lt; he is not in he . &lt;EOS&gt;
 
-&gt; elle est chanteuse .
-= she is a singer .
-&lt; she s a singer . &lt;EOS&gt;
+&gt; je vais les voir ce soir .
+= i m seeing them tonight .
+&lt; i m seeing to tonight tonight . &lt;EOS&gt;
 
-&gt; je suis dans la meme galere .
-= i m in the same boat .
-&lt; i am in the same . . &lt;EOS&gt;
+&gt; vous etes la plus mignonne .
+= you re the sweetest .
+&lt; you re the sweetest . &lt;EOS&gt;
 
-&gt; tu es suffisant .
-= you re conceited .
-&lt; you re conceited . &lt;EOS&gt;
+&gt; il ecrit une longue lettre .
+= he s writing a long letter .
+&lt; he is writing a new letter . &lt;EOS&gt;
 
-&gt; nous sommes dignes de confiance .
-= we re trustworthy .
-&lt; we are powerless . &lt;EOS&gt;
+&gt; je suis plus petit que vous .
+= i am shorter than you .
+&lt; i m shorter than you . &lt;EOS&gt;
 
-&gt; nous sommes en train de nous battre .
-= we re fighting .
-&lt; we re closed . &lt;EOS&gt;
+&gt; je suis important .
+= i m important .
+&lt; i m important . &lt;EOS&gt;
 
-&gt; vous etes tres contrarie .
-= you re very upset .
-&lt; you re very upset . &lt;EOS&gt;
+&gt; j en ai plus qu assez de lire .
+= i m sick and tired of reading .
+&lt; i m sick and tired of reading . &lt;EOS&gt;
 
-&gt; ils t attendent .
-= they re waiting for you .
-&lt; they re waiting for you . &lt;EOS&gt;
+&gt; vous etes vraiment geniales .
+= you re really awesome .
+&lt; you re really awesome . &lt;EOS&gt;
 
-&gt; il est faible en chimie .
-= he is poor at chemistry .
-&lt; he is a in in . &lt;EOS&gt;
+&gt; il n est pas si grand .
+= he is not so tall .
+&lt; he is not so tall . &lt;EOS&gt;
 
-&gt; je suis musicien .
-= i m a musician .
-&lt; i m a . . &lt;EOS&gt;
+&gt; je prends mon travail au serieux .
+= i m serious about my job .
+&lt; i m taking my patience with my . . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f6eedb5e950&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fc04ec6aad0&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than i am . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s always short . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared to die . &lt;EOS&gt;
+output = i m not afraid to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a intelligent young lady . &lt;EOS&gt;
+output = he s a talented young . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  23.696 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 22 minutes  42.191 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

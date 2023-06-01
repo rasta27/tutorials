@@ -85,8 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-     95%|#########5| 754k/792k [00:00<00:00, 7.33MB/s]
-    100%|##########| 792k/792k [00:00<00:00, 7.35MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.0MB/s]
 
 
 
@@ -136,48 +135,47 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      0%|          | 688k/945M [00:00<02:20, 7.02MB/s]
-      0%|          | 1.72M/945M [00:00<01:45, 9.34MB/s]
-      0%|          | 3.38M/945M [00:00<01:16, 12.9MB/s]
-      1%|          | 5.94M/945M [00:00<00:53, 18.4MB/s]
-      1%|1         | 9.90M/945M [00:00<00:36, 26.7MB/s]
-      2%|1         | 16.0M/945M [00:00<00:24, 39.4MB/s]
-      3%|2         | 25.7M/945M [00:00<00:16, 59.4MB/s]
-      4%|4         | 40.9M/945M [00:00<00:10, 91.4MB/s]
-      7%|6         | 64.7M/945M [00:00<00:06, 141MB/s] 
-     10%|9         | 91.8M/945M [00:01<00:04, 185MB/s]
-     13%|#2        | 119M/945M [00:01<00:04, 216MB/s] 
-     15%|#5        | 146M/945M [00:01<00:03, 236MB/s]
-     18%|#8        | 173M/945M [00:01<00:03, 252MB/s]
-     21%|##1       | 201M/945M [00:01<00:02, 262MB/s]
-     24%|##4       | 228M/945M [00:01<00:02, 268MB/s]
-     27%|##6       | 255M/945M [00:01<00:02, 273MB/s]
-     30%|##9       | 282M/945M [00:01<00:02, 277MB/s]
-     33%|###2      | 309M/945M [00:01<00:02, 279MB/s]
-     36%|###5      | 337M/945M [00:01<00:02, 282MB/s]
-     39%|###8      | 364M/945M [00:02<00:02, 282MB/s]
-     41%|####1     | 391M/945M [00:02<00:02, 283MB/s]
-     44%|####4     | 418M/945M [00:02<00:01, 284MB/s]
-     47%|####7     | 445M/945M [00:02<00:01, 283MB/s]
-     50%|#####     | 473M/945M [00:02<00:01, 284MB/s]
-     53%|#####2    | 500M/945M [00:02<00:01, 285MB/s]
-     56%|#####5    | 527M/945M [00:02<00:01, 284MB/s]
-     59%|#####8    | 554M/945M [00:02<00:01, 285MB/s]
-     62%|######1   | 582M/945M [00:02<00:01, 284MB/s]
-     64%|######4   | 609M/945M [00:02<00:01, 284MB/s]
-     67%|######7   | 636M/945M [00:03<00:01, 285MB/s]
-     70%|#######   | 663M/945M [00:03<00:01, 285MB/s]
-     73%|#######3  | 690M/945M [00:03<00:00, 284MB/s]
-     76%|#######5  | 717M/945M [00:03<00:00, 283MB/s]
-     79%|#######8  | 744M/945M [00:03<00:00, 281MB/s]
-     82%|########1 | 771M/945M [00:03<00:00, 278MB/s]
-     84%|########4 | 798M/945M [00:03<00:00, 273MB/s]
-     87%|########7 | 824M/945M [00:03<00:00, 274MB/s]
-     90%|######### | 850M/945M [00:03<00:00, 274MB/s]
-     93%|#########2| 877M/945M [00:03<00:00, 275MB/s]
-     96%|#########5| 903M/945M [00:04<00:00, 274MB/s]
-     98%|#########8| 929M/945M [00:04<00:00, 273MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 237MB/s]
+      1%|          | 5.09M/945M [00:00<00:18, 53.1MB/s]
+      2%|1         | 16.9M/945M [00:00<00:10, 94.4MB/s]
+      4%|3         | 35.3M/945M [00:00<00:06, 139MB/s] 
+      6%|6         | 60.3M/945M [00:00<00:04, 188MB/s]
+      9%|9         | 87.5M/945M [00:00<00:04, 223MB/s]
+     12%|#2        | 115M/945M [00:00<00:03, 246MB/s] 
+     15%|#4        | 140M/945M [00:00<00:03, 250MB/s]
+     17%|#7        | 164M/945M [00:00<00:03, 250MB/s]
+     20%|#9        | 188M/945M [00:00<00:03, 209MB/s]
+     22%|##2       | 210M/945M [00:01<00:03, 217MB/s]
+     25%|##4       | 235M/945M [00:01<00:03, 230MB/s]
+     28%|##7       | 260M/945M [00:01<00:03, 239MB/s]
+     30%|###       | 285M/945M [00:01<00:02, 245MB/s]
+     33%|###2      | 309M/945M [00:01<00:02, 247MB/s]
+     35%|###5      | 334M/945M [00:01<00:02, 250MB/s]
+     38%|###7      | 358M/945M [00:01<00:02, 253MB/s]
+     41%|####      | 383M/945M [00:01<00:02, 254MB/s]
+     43%|####3     | 408M/945M [00:01<00:02, 256MB/s]
+     46%|####5     | 432M/945M [00:01<00:02, 255MB/s]
+     48%|####8     | 457M/945M [00:02<00:02, 249MB/s]
+     51%|#####     | 481M/945M [00:02<00:01, 249MB/s]
+     53%|#####3    | 505M/945M [00:02<00:01, 251MB/s]
+     56%|#####6    | 529M/945M [00:02<00:01, 244MB/s]
+     58%|#####8    | 552M/945M [00:02<00:01, 242MB/s]
+     61%|######1   | 577M/945M [00:02<00:01, 247MB/s]
+     64%|######3   | 601M/945M [00:02<00:01, 243MB/s]
+     66%|######6   | 625M/945M [00:02<00:01, 247MB/s]
+     69%|######8   | 650M/945M [00:02<00:01, 250MB/s]
+     71%|#######1  | 673M/945M [00:02<00:01, 250MB/s]
+     74%|#######3  | 698M/945M [00:03<00:01, 252MB/s]
+     76%|#######6  | 722M/945M [00:03<00:00, 249MB/s]
+     79%|#######9  | 747M/945M [00:03<00:00, 254MB/s]
+     82%|########1 | 773M/945M [00:03<00:00, 257MB/s]
+     84%|########4 | 797M/945M [00:03<00:00, 257MB/s]
+     87%|########7 | 822M/945M [00:03<00:00, 260MB/s]
+     90%|########9 | 847M/945M [00:03<00:00, 253MB/s]
+     92%|#########2| 871M/945M [00:03<00:00, 250MB/s]
+     95%|#########4| 896M/945M [00:03<00:00, 250MB/s]
+     97%|#########7| 919M/945M [00:04<00:00, 250MB/s]
+    100%|#########9| 943M/945M [00:04<00:00, 250MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 241MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -473,37 +471,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: an hour with Ruta aired on independent channel last week . it claimed foreign children were being seized and fostered with parents . argued that Norway's child protection service targeted Lithuanian children . 'in Norway, Lithuanian children are taken away from their parents', it said .
+    prediction: special forces are on the ground in noncombat roles . they have helped parachute in weapons and communications equipment .
 
-    target: A Lithuanian talk show has accused Norway of seizing foreign children . Claimed they were needed to combat 'world's highest rate of inbreeding' An 'expert' said fresh blood was needed to strengthen genetic material' Lithuanian Gražina Leščinskiene's son was  taken into care early this year .
+    target: Two humanitarian workers killed . Two Saudi border guards killed in exchange with rebels, Saudi Press Agency reports . Saudi forces in non-combat roles "coordinating and guiding" fight against Houthis, source says .
 
 
     Example 2:
 
-    prediction: 'she is drunk and on pills and she just attacked me,' says husband of 'seven years' 'she is on a detox from alcohol, but the marijuana is not,' says 911 caller . 'she is on a detox from alcohol, but the marijuana is not,' says 911 dispatcher .
+    prediction: church elder and avid charity fundraiser was given power of attorney . she was given control of her dying friend's finances . but she 'overstepped the mark' and took at least £1,500 for herself . grandmother was given 12-month suspended jail sentence .
 
-    target: Kate Major Lohan has been arrested for a 'drunken attack' on her husband Michael Lohan . Kate - who was ordered to rehab by Michael last year - is said to have had an alcohol relapse before getting physical with the father of Lindsay Lohan . New 911 call recording reveals Michael believed his wife was under the influence of marijuana, two prescriptions drugs, and alcohol . A child can be heard crying in the background of the 911 call recording .
+    target: Kathleen Bailey, 70, was given power of attorney over friend's finances . Her 87-year-old victim was battling breast cancer and had no children . Bailey helped herself to at least £1,500 and took trips to north Wales . She was given suspended jail sentence after admitting one charge of theft .
 
 
     Example 3:
 
-    prediction: police chief resigns after a motorist's drug charges are dropped . a man bloodied during a traffic stop is cleared of all charges . a new officer is charged with beating a man .
+    prediction: real madrid and atletico madrid will both miss the second leg of their quarter final clash next week . both players were booked during the 0-0 draw at the Vicente Calderon . a total of nine yellow cards will be collected by the two clubs .
 
-    target: Inkster, Michigan, Police Chief Vicki Yost resigns in the wake of charges against one of her former officers . William Melendez was caught on police car dashcam video in January beating an unarmed black motorist . Melendez was charged with assault on Monday; all charges against the motorist have been dropped .
+    target: Mario Suarez and Marcelo will both be suspended for next week's Champions League quarter-final second leg . Atletico Madrid and Real Madrid played out a 0-0 draw on Tuesday night . Suarez wants a 'better referee' for the return leg at the Bernabeu . Dani Carvajal could face punishment for punching Mario Mandzukic .
 
 
     Example 4:
 
-    prediction: research suggests certain types of music can bring out flavours . this includes sweet, salty and bitter flavours in a range of foods . intensity of Luciano Pavarotti's Nessun Dorma is said to be perfect . high-pitched piano in billie Holiday's autumn in new york can help emphasise autumnal flavours in pumpkin pudding .
+    prediction: despite a decade-long deterioration of relations, differences over Syria and Iraq have kept both sides apart . despite the differences, the Saudi military is now directly battling it out with rebels in Yemen .
 
-    target: Research suggests certain types of music can bring out specific flavours . High-pitched music highlights sourness while sweetness is a rich sound . Billie Holiday's voice can emphasise autumnal flavour of pumpkin pudding . 'Digital seasoning' can also help drinkers enjoy wine by up to 15% more .
+    target: Vatanka: Tensions between Iran and Saudi Arabia are at an unprecedented level . Iran has proposed a four-point plan for Yemen but Saudis have ignored it . Vatanka: Saudis have tried to muster a ground invasion coalition but have failed .
 
 
     Example 5:
 
-    prediction: the Borden family burial monument at Oak Grove Cemetery in Fall River, Massachusetts, was defaced with black and green paint . the vandalism was discovered on monday, the day after a Lifetime miniseries, the Lizzie Borden Chronicles, premiered on Sunday night . Borden went on trial for brutally murdering her father and stepmother with a hatchet in their fall river home in 1892 . she was acquitted, but her innocence is questioned even today .
+    prediction: NORWICH beat bristol 2-0 to take their premier league hopes alive . a second-half winner from Bradley Johnson gave the visitors the lead . a second-half equaliser from a swiss cross was enough to seal victory .
 
-    target: Lizzie Borden and her family are buried in Fall River, Massachusetts . Their plot at Oak Grove Cemetery was defaced with black and green paint . Speculated graffiti is related to Lifetime's The Lizzie Borden Chronicles . Borden was acquitted after going on trial for the two murders in 1892 . Inspired rhyme: 'Lizzie Borden took an ax and gave her mother 40 whacks' Historic murder house is adjacent to where Aaron Hernandez is on trial .
+    target: Norwich move up to third spot with away victory against Brighton . Bradley Johnson struck in the 62nd minute to hand his side crucial win . Brighton remain in 16th position with six league games to go .
 
 
 
@@ -857,7 +855,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  35.996 seconds)
+   **Total running time of the script:** ( 3 minutes  19.463 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

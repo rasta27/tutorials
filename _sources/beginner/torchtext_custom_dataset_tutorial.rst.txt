@@ -625,7 +625,7 @@ For this we will write a small function:
 
  .. code-block:: none
 
-    (([1, 1096, 4, 2], [1, 2991, 4, 2], [1, 3, 194, 2], [1, 1662, 194, 2]), ([1, 1442, 4, 2], [1, 6163, 1603, 24, 2], [1, 735, 2376, 24, 2], [1, 1238, 3, 24, 2]))
+    (([1, 1188, 4, 2], [1, 558, 194, 2], [1, 558, 194, 2], [1, 1096, 194, 2]), ([1, 1537, 24, 2], [1, 20044, 24, 2], [1, 14285, 24, 2], [1, 1442, 24, 2]))
 
 
 
@@ -702,14 +702,14 @@ instead of indices:
 
  .. code-block:: none
 
-    Source:  <sos> Relax . <eos> <pad>
-    Traget:  <sos> Entspann dich . <eos>
-    Source:  <sos> I see . <eos>
-    Traget:  <sos> Aha . <eos> <pad>
-    Source:  <sos> I ran . <eos>
-    Traget:  <sos> Ich rannte . <eos>
-    Source:  <sos> I see . <eos>
-    Traget:  <sos> Ich verstehe . <eos>
+    Source:  <sos> <unk> ! <eos> <pad>
+    Traget:  <sos> Zum Wohl ! <eos>
+    Source:  <sos> Freeze ! <eos> <pad>
+    Traget:  <sos> Keine Bewegung ! <eos>
+    Source:  <sos> Got it ! <eos>
+    Traget:  <sos> Verstanden ! <eos> <pad>
+    Source:  <sos> Got it ! <eos>
+    Traget:  <sos> Aha ! <eos> <pad>
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  36.737 seconds)
+   **Total running time of the script:** ( 4 minutes  42.187 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:
