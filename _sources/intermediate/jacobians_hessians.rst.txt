@@ -261,13 +261,13 @@ And then run the performance comparison:
 
  .. code-block:: none
 
-    <torch.utils.benchmark.utils.common.Measurement object at 0x7f7435191c60>
+    <torch.utils.benchmark.utils.common.Measurement object at 0x7f1815385d20>
     compute_jac(xp)
-      1.21 ms
+      1.39 ms
       1 measurement, 500 runs , 1 thread
-    <torch.utils.benchmark.utils.common.Measurement object at 0x7f74351f7f70>
+    <torch.utils.benchmark.utils.common.Measurement object at 0x7f18154afdf0>
     jacrev(predict, argnums=2)(weight, bias, x)
-      602.84 us
+      660.74 us
       1 measurement, 500 runs , 1 thread
 
 
@@ -292,7 +292,7 @@ Let's do a relative performance comparison of the above with our ``get_perf`` fu
 
  .. code-block:: none
 
-     Performance delta: 50.2052 percent improvement with vmap 
+     Performance delta: 52.4452 percent improvement with vmap 
 
 
 
@@ -394,13 +394,13 @@ First, let's benchmark with more inputs than outputs:
  .. code-block:: none
 
     torch.Size([2048, 32])
-    jacfwd time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f7454249b70>
+    jacfwd time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f18154938e0>
     jacfwd(predict, argnums=2)(weight, bias, x)
-      1.12 ms
+      1.23 ms
       1 measurement, 500 runs , 1 thread
-    jacrev time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f74351f4ac0>
+    jacrev time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f18154afee0>
     jacrev(predict, argnums=2)(weight, bias, x)
-      9.32 ms
+      10.63 ms
       1 measurement, 500 runs , 1 thread
 
 
@@ -425,7 +425,7 @@ and then do a relative benchmark:
 
  .. code-block:: none
 
-     Performance delta: 735.6763 percent improvement with jacrev 
+     Performance delta: 767.4242 percent improvement with jacrev 
 
 
 
@@ -462,13 +462,13 @@ and now the reverse - more outputs (M) than inputs (N):
 
  .. code-block:: none
 
-    jacfwd time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f74351d0850>
+    jacfwd time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f1815493130>
     jacfwd(predict, argnums=2)(weight, bias, x)
-      5.97 ms
+      6.80 ms
       1 measurement, 500 runs , 1 thread
-    jacrev time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f743524dff0>
+    jacrev time: <torch.utils.benchmark.utils.common.Measurement object at 0x7f18407c3b20>
     jacrev(predict, argnums=2)(weight, bias, x)
-      721.25 us
+      794.91 us
       1 measurement, 500 runs , 1 thread
 
 
@@ -493,7 +493,7 @@ and a relative performance comparison:
 
  .. code-block:: none
 
-     Performance delta: 728.2396 percent improvement with jacfwd 
+     Performance delta: 755.6183 percent improvement with jacfwd 
 
 
 
@@ -749,7 +749,7 @@ instead compose reverse-mode AD with reverse-mode AD:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.597 seconds)
+   **Total running time of the script:** ( 0 minutes  13.067 seconds)
 
 
 .. _sphx_glr_download_intermediate_jacobians_hessians.py:

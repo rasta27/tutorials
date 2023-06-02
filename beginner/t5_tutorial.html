@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 16.0MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.8MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,49 +479,44 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 8.78M/945M [00:00&lt;00:10, 92.1MB/s]
-  3%|2         | 28.0M/945M [00:00&lt;00:06, 157MB/s]
-  5%|5         | 47.8M/945M [00:00&lt;00:05, 180MB/s]
-  8%|7         | 71.5M/945M [00:00&lt;00:04, 207MB/s]
- 10%|9         | 91.2M/945M [00:00&lt;00:04, 206MB/s]
- 12%|#1        | 111M/945M [00:00&lt;00:04, 207MB/s]
- 14%|#3        | 131M/945M [00:00&lt;00:04, 208MB/s]
- 16%|#6        | 151M/945M [00:00&lt;00:03, 208MB/s]
- 18%|#8        | 171M/945M [00:00&lt;00:03, 209MB/s]
- 20%|##        | 192M/945M [00:01&lt;00:03, 211MB/s]
- 22%|##2       | 212M/945M [00:01&lt;00:03, 210MB/s]
- 25%|##4       | 232M/945M [00:01&lt;00:03, 210MB/s]
- 27%|##6       | 253M/945M [00:01&lt;00:03, 212MB/s]
- 29%|##9       | 275M/945M [00:01&lt;00:03, 217MB/s]
- 32%|###1      | 299M/945M [00:01&lt;00:02, 228MB/s]
- 34%|###4      | 323M/945M [00:01&lt;00:02, 236MB/s]
- 37%|###6      | 347M/945M [00:01&lt;00:02, 241MB/s]
- 39%|###9      | 372M/945M [00:01&lt;00:02, 246MB/s]
- 42%|####1     | 396M/945M [00:01&lt;00:02, 248MB/s]
- 44%|####4     | 420M/945M [00:02&lt;00:02, 250MB/s]
- 47%|####7     | 445M/945M [00:02&lt;00:02, 252MB/s]
- 50%|####9     | 469M/945M [00:02&lt;00:01, 252MB/s]
- 52%|#####2    | 493M/945M [00:02&lt;00:01, 247MB/s]
- 55%|#####4    | 516M/945M [00:02&lt;00:01, 244MB/s]
- 57%|#####7    | 540M/945M [00:02&lt;00:01, 239MB/s]
- 60%|#####9    | 563M/945M [00:02&lt;00:01, 240MB/s]
- 62%|######2   | 586M/945M [00:02&lt;00:01, 238MB/s]
- 64%|######4   | 608M/945M [00:02&lt;00:01, 236MB/s]
- 67%|######6   | 631M/945M [00:02&lt;00:01, 237MB/s]
- 69%|######9   | 654M/945M [00:03&lt;00:01, 236MB/s]
- 72%|#######1  | 677M/945M [00:03&lt;00:01, 237MB/s]
- 74%|#######4  | 700M/945M [00:03&lt;00:01, 239MB/s]
- 77%|#######6  | 723M/945M [00:03&lt;00:00, 241MB/s]
- 79%|#######9  | 746M/945M [00:03&lt;00:00, 239MB/s]
- 81%|########1 | 769M/945M [00:03&lt;00:00, 237MB/s]
- 84%|########3 | 792M/945M [00:03&lt;00:00, 234MB/s]
- 86%|########6 | 815M/945M [00:03&lt;00:00, 236MB/s]
- 89%|########8 | 837M/945M [00:03&lt;00:00, 235MB/s]
- 91%|######### | 859M/945M [00:03&lt;00:00, 234MB/s]
- 93%|#########3| 883M/945M [00:04&lt;00:00, 238MB/s]
- 96%|#########5| 906M/945M [00:04&lt;00:00, 235MB/s]
- 98%|#########8| 928M/945M [00:04&lt;00:00, 234MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 229MB/s]
+  1%|1         | 11.1M/945M [00:00&lt;00:08, 116MB/s]
+  4%|3         | 34.0M/945M [00:00&lt;00:05, 189MB/s]
+  6%|6         | 60.1M/945M [00:00&lt;00:04, 228MB/s]
+  9%|9         | 87.2M/945M [00:00&lt;00:03, 250MB/s]
+ 12%|#2        | 114M/945M [00:00&lt;00:03, 262MB/s]
+ 15%|#4        | 141M/945M [00:00&lt;00:03, 267MB/s]
+ 18%|#7        | 167M/945M [00:00&lt;00:03, 270MB/s]
+ 21%|##        | 194M/945M [00:00&lt;00:02, 273MB/s]
+ 23%|##3       | 220M/945M [00:00&lt;00:02, 270MB/s]
+ 26%|##6       | 246M/945M [00:01&lt;00:02, 271MB/s]
+ 29%|##8       | 273M/945M [00:01&lt;00:02, 276MB/s]
+ 32%|###1      | 300M/945M [00:01&lt;00:02, 276MB/s]
+ 34%|###4      | 326M/945M [00:01&lt;00:02, 275MB/s]
+ 37%|###7      | 353M/945M [00:01&lt;00:02, 278MB/s]
+ 40%|####      | 379M/945M [00:01&lt;00:02, 266MB/s]
+ 43%|####2     | 405M/945M [00:01&lt;00:02, 259MB/s]
+ 45%|####5     | 429M/945M [00:01&lt;00:02, 255MB/s]
+ 48%|####8     | 454M/945M [00:01&lt;00:02, 241MB/s]
+ 51%|#####     | 477M/945M [00:01&lt;00:02, 242MB/s]
+ 53%|#####3    | 501M/945M [00:02&lt;00:01, 243MB/s]
+ 56%|#####5    | 525M/945M [00:02&lt;00:01, 246MB/s]
+ 58%|#####8    | 548M/945M [00:02&lt;00:01, 245MB/s]
+ 61%|######    | 572M/945M [00:02&lt;00:01, 245MB/s]
+ 63%|######3   | 596M/945M [00:02&lt;00:01, 249MB/s]
+ 66%|######5   | 620M/945M [00:02&lt;00:01, 240MB/s]
+ 68%|######8   | 645M/945M [00:02&lt;00:01, 247MB/s]
+ 71%|#######1  | 672M/945M [00:02&lt;00:01, 258MB/s]
+ 74%|#######3  | 697M/945M [00:02&lt;00:01, 257MB/s]
+ 77%|#######6  | 724M/945M [00:02&lt;00:00, 265MB/s]
+ 79%|#######9  | 749M/945M [00:03&lt;00:00, 257MB/s]
+ 82%|########2 | 776M/945M [00:03&lt;00:00, 264MB/s]
+ 85%|########4 | 803M/945M [00:03&lt;00:00, 269MB/s]
+ 88%|########7 | 828M/945M [00:03&lt;00:00, 243MB/s]
+ 91%|######### | 855M/945M [00:03&lt;00:00, 254MB/s]
+ 93%|#########3| 881M/945M [00:03&lt;00:00, 258MB/s]
+ 96%|#########5| 906M/945M [00:03&lt;00:00, 253MB/s]
+ 99%|#########8| 930M/945M [00:03&lt;00:00, 252MB/s]
+100%|##########| 945M/945M [00:03&lt;00:00, 255MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -733,37 +728,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: primatologists at Iowa state university recorded 300 hunts by chimps in Fongoli, Sénégal . found female chimps were using tools to capture prey in 60% of the observations . researchers say findings may provide hints at how humans first learned to use weapons to hunt .
+prediction: Southampton have already levelled the premier league points tally of 56 . the club are five points behind man city in the table . but manager Ronald Koeman believes they must win all six games .
 
-target: Researchers recorded chimps hunting with tools at Fongoli in Sénégal . Tool use was spotted on 300 occasions and 60% was by females . Male chimps did more hunting but tended to capture prey with their hands . The findings may provide clues as to how humans first learned to use tools .
+target: Southampton are currently five points behind fourth-placed Man City . Ronald Koeman has not given up hope of finishing inside the top four . The south coast outfit face Stoke at the Britannia Stadium on Saturday .
 
 
 Example 2:
 
-prediction: Sajid Javid declared some values prevalent in certain Asian communities were 'totally unacceptable in British society' comments come after inquiries into sexual abuse of vulnerable girls .
+prediction: a new york-based documentary photographer has spent three years traveling the u.s. photographing and interviewing gay veterans and servicemen . the project, Gays in the Military, was created to better understand why homosexuals would enlist in the military . the photos show commonalities between the subjects despite their different journeys, from a 92-year-old WW2 veteran to young soldiers who recently returned from Afghanistan .
 
-target: He said some values in certain communities were 'totally unacceptable' Comments come after sexual abuse by Asian men revealed in parts of UK . Javid said political correctness should not be a barrier to stopping abuse .
+target: Photo essay book, Gays in the Military, released by New York photographer Vincent Cianni . Individual stories tell the history of homosexuals in the military . Many were discharged because of their sexuality and suffer ongoing psychological damage . Rape, assault and bullying remain prevalent . Being gay was considered a criminal offense in the U.S. military until 1993 .
 
 
 Example 3:
 
-prediction: a drone carrying traces of a radioactive material was found on the roof of the equivalent to the white house . the discovery comes on the same day a court approved a government plan to restart two reactors at the Sendai nuclear power plant .
+prediction: transport workers' union's national secretary condemns request . he accuses supermarket giant of trying to reintroduce serfdom .
 
-target: The drone is sparking terrorism concerns, authorities say . It was equipped with a bottle containing radioactive material . It was discovered as a court approved a plan to restart two Japanese nuclear reactors .
+target: Aldi has requested the ability to make employees work more than 38 hours in a submission to Workplace Relations Productivity Commission . Supermarket giant was slammed by union secretary Tony Sheldon . He accused Aldi of reintroducing serfdom and 'trying to strip workers of their rights'
 
 
 Example 4:
 
-prediction: young girl, six or seven, shows herself firing machine gun at ISIS . she boasts she has killed 400 of the militants - and he says 'kill, kill' . but it is unclear exactly what she is shooting at in the video .
+prediction: louis van gaal has identified Michael Carrick and Wayne Rooney as his brightest players . van gaal demands a level of 'football intelligence' from his players . united have struggled to make the top four this season .
 
-target: Video of little girl firing several rounds 'towards ISIS' has gone viral . The girl, dressed in pink, tells man off camera she has killed 400 fighters . The man encourages her by saying 'kill, kill' as she shoots machine gun . Kurdish known for their female fighters - but ISIS known for using children .
+target: Very few Manchester United players possess the intelligence demanded . Michael Carrick, Wayne Rooney and Juan Mata can claim to have it . The Dutchman suggested some of his other players lack brains . Luke Shaw wasn't fit enough when he arrived last summer . Phil Jones thunders senselessly into tackles and gets injured . Even Ander Herrera is guilty of playing senseless long balls . Durham: Arsenal only turn it on when the pressure is off . Adrian Durham: Sterling would be earning the same as Balotelli if he signed £100,000-a-week deal at Liverpool... that's the real issue here . CLICK HERE for all the latest Manchester United news .
 
 
 Example 5:
 
-prediction: the most rev Justin welby said the 148 mainly Christian victims of the massacre were 'witnesses, unwilling, unjustly, wickedly, and they are martyrs in both senses of the word' . he also made a nod to the recent agreement between Iran and the international community over its nuclear power .
+prediction: deah Shaddy Barakat, 23, his wife, 21-year-old Yusor Mohammad Abu-Salha; and her sister, 19-year-old Razan Mohammad Abu-Salha were gunned down on february 10 . a superior court judge in north carolina ruled on Monday that Craig Hicks is 'death penalty qualified' .
 
-target: Archbishop of Canterbury Justin Welby hail victims of Kenya university massacre as martyrs . Thousands of Catholics brave bad weather to hear Pope Francis lead Easter Sunday Mass in the Vatican . Pope gave sombre message in St Peter's Square, praying for an end to the persecution of Christians . Pope Francis also commemorated students massacred by Islamist militants at a university in Kenya . The pontiff made a nod to Lausanne agreement between Iran and the international community a nuclear accord .
+target: A superior court judge in North Carolina ruled on Monday that Craig Hicks is 'death penalty qualified' He has been charged with first-degree murder in the killing of three Muslim college students on February 10 . His victims were Deah Shaddy Barakat, 23, his wife, Yusor Mohammad Abu-Salha, 21, and her sister, Razan Mohammad Abu-Salha, 19 . The victims' families are adamant that they were targeted because they were Muslims and have pushed for hate-crime charges .
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1051,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  38.775 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  19.314 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

@@ -661,7 +661,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['il est doue aux jeux video .', 'he s skilled at videogames .']
+['elles viennent nous chercher .', 'they re coming for us .']
 </pre></div>
 </div>
 </div>
@@ -1103,65 +1103,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 24s (- 19m 46s) (5000 6%) 2.8194
-2m 41s (- 17m 32s) (10000 13%) 2.2513
-3m 58s (- 15m 53s) (15000 20%) 1.9461
-5m 17s (- 14m 32s) (20000 26%) 1.7576
-6m 34s (- 13m 8s) (25000 33%) 1.5308
-7m 54s (- 11m 51s) (30000 40%) 1.3535
-9m 14s (- 10m 34s) (35000 46%) 1.2285
-10m 32s (- 9m 13s) (40000 53%) 1.1070
-11m 48s (- 7m 52s) (45000 60%) 1.0174
-13m 3s (- 6m 31s) (50000 66%) 0.9078
-14m 20s (- 5m 12s) (55000 73%) 0.8172
-15m 35s (- 3m 53s) (60000 80%) 0.7438
-16m 51s (- 2m 35s) (65000 86%) 0.6830
-18m 7s (- 1m 17s) (70000 93%) 0.5982
-19m 23s (- 0m 0s) (75000 100%) 0.5831
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 24s (- 19m 37s) (5000 6%) 2.8426
+2m 43s (- 17m 40s) (10000 13%) 2.2728
+4m 1s (- 16m 7s) (15000 20%) 1.9405
+5m 21s (- 14m 44s) (20000 26%) 1.7052
+6m 41s (- 13m 22s) (25000 33%) 1.5031
+8m 0s (- 12m 1s) (30000 40%) 1.3070
+9m 21s (- 10m 41s) (35000 46%) 1.2024
+10m 40s (- 9m 20s) (40000 53%) 1.0731
+12m 0s (- 8m 0s) (45000 60%) 0.9857
+13m 21s (- 6m 40s) (50000 66%) 0.8749
+14m 43s (- 5m 21s) (55000 73%) 0.7916
+16m 6s (- 4m 1s) (60000 80%) 0.7259
+17m 29s (- 2m 41s) (65000 86%) 0.6445
+18m 51s (- 1m 20s) (70000 93%) 0.5893
+20m 15s (- 0m 0s) (75000 100%) 0.5202
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; ils collectent des dons pour l eglise .
-= they are collecting contributions for the church .
-&lt; they are looking for the the accident . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; on s occupe bien d eux .
+= they are well looked after .
+&lt; they are well looked of him . &lt;EOS&gt;
 
-&gt; elle est fauchee .
-= she is hard up for money .
-&lt; she is a bad for . . &lt;EOS&gt;
+&gt; vous etes endurant .
+= you re resilient .
+&lt; you re resilient . &lt;EOS&gt;
 
-&gt; j ai une peur terrible des serpents .
-= i am terribly afraid of snakes .
-&lt; i am very afraid of snakes . &lt;EOS&gt;
+&gt; il souffre d un mal de dents .
+= he is suffering from toothache .
+&lt; he is suffering from toothache . &lt;EOS&gt;
 
-&gt; tu es presque aussi grand que tom .
-= you re almost as tall as tom .
-&lt; you re almost as tall as tom . &lt;EOS&gt;
+&gt; vous etes en train de rever .
+= you are dreaming .
+&lt; you are dreaming . &lt;EOS&gt;
 
-&gt; je suis deja pratiquement adulte .
-= i m practically an adult already .
-&lt; i m already an adult . &lt;EOS&gt;
+&gt; j en suis sure et certaine !
+= i m absolutely sure !
+&lt; i m absolutely sure ! &lt;EOS&gt;
 
-&gt; nous descendons .
-= we re going down .
-&lt; we re getting at . . &lt;EOS&gt;
+&gt; je deviens chauve .
+= i m going bald .
+&lt; i m going bald . &lt;EOS&gt;
 
-&gt; je suis si epuisee !
-= i am so exhausted !
-&lt; i am so exhausted ! &lt;EOS&gt;
+&gt; tu es plus grand que moi .
+= you re taller than me .
+&lt; you re taller than me . &lt;EOS&gt;
 
-&gt; ils sont apparentes .
-= they re related to each other .
-&lt; they re getting . &lt;EOS&gt;
+&gt; je suis desolee d etre en retard .
+= i m sorry for being late .
+&lt; i m sorry i m late . &lt;EOS&gt;
 
-&gt; elle est certaine de venir a temps .
-= she is certain to come on time .
-&lt; she is certain to come with time . &lt;EOS&gt;
+&gt; tu es tres vif .
+= you re very sharp .
+&lt; you re very sharp . &lt;EOS&gt;
 
-&gt; je suis desole ce vol est plein .
-= i m sorry the flight is full .
-&lt; i m sorry the flight is full . &lt;EOS&gt;
+&gt; il est pauvre mais heureux .
+= he is poor but happy .
+&lt; he is poor but happy . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1178,7 +1178,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fb5e0e911b0&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f723d44a260&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1226,7 +1226,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she is five years younger than i am . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1236,11 +1236,11 @@ FixedFormatter should only be used together with FixedLocator
 FixedFormatter should only be used together with FixedLocator
 
 input = elle est trop petit .
-output = she s too short . &lt;EOS&gt;
+output = she is too fat . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared to die . &lt;EOS&gt;
+output = i m not scared of dying . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young . &lt;EOS&gt;
+output = he s a talented young man . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 19 minutes  37.743 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 20 minutes  29.564 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>
