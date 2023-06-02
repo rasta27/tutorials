@@ -710,7 +710,7 @@ But, a batch in our <cite>data_pipe</cite> is of the form <cite>[(X_1,y_1), (X_2
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data_pipe</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[([1, 3487, 23, 4, 2], [1, 2163, 383, 24, 2]), ([1, 2011, 23, 4, 2], [1, 2357, 18, 4, 2]), ([1, 2011, 68, 4, 2], [1, 2357, 306, 24, 2]), ([1, 2011, 68, 4, 2], [1, 2357, 28, 4, 2])]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[([1, 5, 258, 4, 2], [1, 7, 23, 376, 4, 2]), ([1, 5, 602, 4, 2], [1, 7, 23, 752, 4, 2]), ([1, 5, 358, 4, 2], [1, 296, 10, 18, 577, 4, 2]), ([1, 5220, 21, 4, 2], [1, 864, 32, 20, 33, 1092, 24, 2])]
 </pre></div>
 </div>
 <p>So, we will now convert them into the form: <cite>((X_1,X_2,X_3,X_4), (y_1,y_2,y_3,y_4))</cite>.
@@ -728,7 +728,7 @@ For this we will write a small function:</p>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data_pipe</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(([1, 5, 434, 4, 2], [1, 5, 4841, 4, 2], [1, 5, 45, 4, 2], [1, 5, 434, 4, 2]), ([1, 7, 3132, 4, 2], [1, 7, 8563, 4, 2], [1, 7, 74, 4, 2], [1, 7, 664, 411, 4, 2]))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(([1, 8171, 194, 2], [1, 8171, 194, 2], [1, 9384, 4, 2], [1, 1822, 194, 2]), ([1, 790, 24, 2], [1, 12904, 24, 2], [1, 1720, 24, 2], [1, 3023, 56, 24, 2]))
 </pre></div>
 </div>
 <p>Now, we have the data as desired.</p>
@@ -775,20 +775,20 @@ instead of indices:</p>
 <span class="n">showSomeTransformedSentences</span><span class="p">(</span><span class="n">data_pipe</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Source:  &lt;sos&gt; Listen . &lt;eos&gt; &lt;pad&gt;
-Traget:  &lt;sos&gt; Hört zu . &lt;eos&gt;
-Source:  &lt;sos&gt; No way ! &lt;eos&gt;
-Traget:  &lt;sos&gt; Unmöglich ! &lt;eos&gt; &lt;pad&gt;
-Source:  &lt;sos&gt; No way ! &lt;eos&gt;
-Traget:  &lt;sos&gt; &lt;unk&gt; ! &lt;eos&gt; &lt;pad&gt;
-Source:  &lt;sos&gt; I paid . &lt;eos&gt;
-Traget:  &lt;sos&gt; Ich zahlte . &lt;eos&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Source:  &lt;sos&gt; &lt;unk&gt; . &lt;eos&gt; &lt;pad&gt;
+Traget:  &lt;sos&gt; Fang an . &lt;eos&gt;
+Source:  &lt;sos&gt; Do it . &lt;eos&gt;
+Traget:  &lt;sos&gt; Mache es ! &lt;eos&gt;
+Source:  &lt;sos&gt; Do it . &lt;eos&gt;
+Traget:  &lt;sos&gt; Tue es . &lt;eos&gt;
+Source:  &lt;sos&gt; Go on . &lt;eos&gt;
+Traget:  &lt;sos&gt; Mach weiter . &lt;eos&gt;
 </pre></div>
 </div>
 <p>In the above output we can observe that the shorter sentences are padded with <cite>&lt;pad&gt;</cite>. Now, we
 can use <cite>data_pipe</cite> while writing our training function.</p>
 <p>Some parts of this tutorial was inspired from <a class="reference external" href="https://medium.com/@bitdribble/migrate-torchtext-to-the-new-0-9-0-api-1ff1472b5d71">this article</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  27.759 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  35.406 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-torchtext-custom-dataset-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e80c8c5b8a71514d0905366c448448c0/torchtext_custom_dataset_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">torchtext_custom_dataset_tutorial.py</span></code></a></p>
