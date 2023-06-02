@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 15.5MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 16.0MB/s]
 
 
 
@@ -135,48 +135,48 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 7.74M/945M [00:00<00:12, 81.0MB/s]
-      3%|2         | 27.6M/945M [00:00<00:06, 156MB/s] 
-      5%|5         | 47.9M/945M [00:00<00:05, 182MB/s]
-      7%|7         | 67.6M/945M [00:00<00:04, 191MB/s]
-      9%|9         | 86.0M/945M [00:00<00:04, 192MB/s]
-     11%|#1        | 104M/945M [00:00<00:04, 193MB/s] 
-     13%|#3        | 124M/945M [00:00<00:04, 197MB/s]
-     15%|#5        | 144M/945M [00:00<00:04, 200MB/s]
-     17%|#7        | 164M/945M [00:00<00:04, 203MB/s]
-     20%|#9        | 184M/945M [00:01<00:03, 207MB/s]
-     22%|##1       | 206M/945M [00:01<00:03, 214MB/s]
-     24%|##4       | 230M/945M [00:01<00:03, 226MB/s]
-     27%|##6       | 254M/945M [00:01<00:03, 233MB/s]
-     30%|##9       | 279M/945M [00:01<00:02, 241MB/s]
-     32%|###2      | 304M/945M [00:01<00:02, 247MB/s]
-     35%|###4      | 329M/945M [00:01<00:02, 251MB/s]
-     37%|###7      | 353M/945M [00:01<00:02, 251MB/s]
-     40%|###9      | 377M/945M [00:01<00:02, 251MB/s]
-     42%|####2     | 401M/945M [00:01<00:02, 251MB/s]
-     45%|####4     | 425M/945M [00:02<00:02, 251MB/s]
-     47%|####7     | 449M/945M [00:02<00:02, 248MB/s]
-     50%|####9     | 472M/945M [00:02<00:02, 244MB/s]
-     52%|#####2    | 496M/945M [00:02<00:01, 244MB/s]
-     55%|#####4    | 519M/945M [00:02<00:01, 243MB/s]
-     57%|#####7    | 542M/945M [00:02<00:01, 240MB/s]
-     60%|#####9    | 565M/945M [00:02<00:01, 238MB/s]
-     62%|######2   | 588M/945M [00:02<00:01, 237MB/s]
-     65%|######4   | 610M/945M [00:02<00:01, 235MB/s]
-     67%|######7   | 633M/945M [00:02<00:01, 235MB/s]
-     69%|######9   | 655M/945M [00:03<00:01, 234MB/s]
-     72%|#######1  | 678M/945M [00:03<00:01, 234MB/s]
-     74%|#######4  | 701M/945M [00:03<00:01, 235MB/s]
-     77%|#######6  | 723M/945M [00:03<00:00, 235MB/s]
-     79%|#######9  | 747M/945M [00:03<00:00, 240MB/s]
-     82%|########1 | 770M/945M [00:03<00:00, 240MB/s]
-     84%|########3 | 793M/945M [00:03<00:00, 238MB/s]
-     86%|########6 | 816M/945M [00:03<00:00, 232MB/s]
-     89%|########8 | 838M/945M [00:03<00:00, 230MB/s]
-     91%|#########1| 861M/945M [00:03<00:00, 233MB/s]
-     94%|#########3| 884M/945M [00:04<00:00, 235MB/s]
-     96%|#########5| 906M/945M [00:04<00:00, 234MB/s]
-     98%|#########8| 929M/945M [00:04<00:00, 233MB/s]
+      1%|          | 8.78M/945M [00:00<00:10, 92.1MB/s]
+      3%|2         | 28.0M/945M [00:00<00:06, 157MB/s] 
+      5%|5         | 47.8M/945M [00:00<00:05, 180MB/s]
+      8%|7         | 71.5M/945M [00:00<00:04, 207MB/s]
+     10%|9         | 91.2M/945M [00:00<00:04, 206MB/s]
+     12%|#1        | 111M/945M [00:00<00:04, 207MB/s] 
+     14%|#3        | 131M/945M [00:00<00:04, 208MB/s]
+     16%|#6        | 151M/945M [00:00<00:03, 208MB/s]
+     18%|#8        | 171M/945M [00:00<00:03, 209MB/s]
+     20%|##        | 192M/945M [00:01<00:03, 211MB/s]
+     22%|##2       | 212M/945M [00:01<00:03, 210MB/s]
+     25%|##4       | 232M/945M [00:01<00:03, 210MB/s]
+     27%|##6       | 253M/945M [00:01<00:03, 212MB/s]
+     29%|##9       | 275M/945M [00:01<00:03, 217MB/s]
+     32%|###1      | 299M/945M [00:01<00:02, 228MB/s]
+     34%|###4      | 323M/945M [00:01<00:02, 236MB/s]
+     37%|###6      | 347M/945M [00:01<00:02, 241MB/s]
+     39%|###9      | 372M/945M [00:01<00:02, 246MB/s]
+     42%|####1     | 396M/945M [00:01<00:02, 248MB/s]
+     44%|####4     | 420M/945M [00:02<00:02, 250MB/s]
+     47%|####7     | 445M/945M [00:02<00:02, 252MB/s]
+     50%|####9     | 469M/945M [00:02<00:01, 252MB/s]
+     52%|#####2    | 493M/945M [00:02<00:01, 247MB/s]
+     55%|#####4    | 516M/945M [00:02<00:01, 244MB/s]
+     57%|#####7    | 540M/945M [00:02<00:01, 239MB/s]
+     60%|#####9    | 563M/945M [00:02<00:01, 240MB/s]
+     62%|######2   | 586M/945M [00:02<00:01, 238MB/s]
+     64%|######4   | 608M/945M [00:02<00:01, 236MB/s]
+     67%|######6   | 631M/945M [00:02<00:01, 237MB/s]
+     69%|######9   | 654M/945M [00:03<00:01, 236MB/s]
+     72%|#######1  | 677M/945M [00:03<00:01, 237MB/s]
+     74%|#######4  | 700M/945M [00:03<00:01, 239MB/s]
+     77%|#######6  | 723M/945M [00:03<00:00, 241MB/s]
+     79%|#######9  | 746M/945M [00:03<00:00, 239MB/s]
+     81%|########1 | 769M/945M [00:03<00:00, 237MB/s]
+     84%|########3 | 792M/945M [00:03<00:00, 234MB/s]
+     86%|########6 | 815M/945M [00:03<00:00, 236MB/s]
+     89%|########8 | 837M/945M [00:03<00:00, 235MB/s]
+     91%|######### | 859M/945M [00:03<00:00, 234MB/s]
+     93%|#########3| 883M/945M [00:04<00:00, 238MB/s]
+     96%|#########5| 906M/945M [00:04<00:00, 235MB/s]
+     98%|#########8| 928M/945M [00:04<00:00, 234MB/s]
     100%|##########| 945M/945M [00:04<00:00, 229MB/s]
 
     T5Model(
@@ -473,37 +473,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: the victims of a horrific medical experiment run by the united states in Guatemala are now suing Johns Hopkins . the study deliberately infected individuals with syphilis in order to test drugs and study the disease . some of the individuals who are still alive were almost all children when they were unknowingly infected . the lawsuit, which has 750 plaintiffs, claims that officials from Hopkins approved and helped to plan the study .
+    prediction: primatologists at Iowa state university recorded 300 hunts by chimps in Fongoli, Sénégal . found female chimps were using tools to capture prey in 60% of the observations . researchers say findings may provide hints at how humans first learned to use weapons to hunt .
 
-    target: Victims and their families of a US study that infected individuals with syphilis in Guatemala without their knowledge are suing Johns Hopkins . In a $1billion lawsuit, 750 plaintiffs claim the college approved and helped to plan the study, which ran from 1945 to 1956 . The victims were mostly orphans, children, prisoners, soldiers, prostitutes and mental patients . Marta Orellana was just 9 years old when one day at the orphanage she was ordered to go to the infirmary and infected with the disease . Federico Mesa was a solider who was forcibly injected with syphilis as a soldier and passed it along to his family . Marta Ruiz's husband was infected, and she gave birth to one child who did not have a brain and another who is severely handicapped . Another woman, Victoria, claims she was born blind because he father was infected . Blindness, deformities, and death are just some of the problems babies born with congenital syphilis face . A lawyer for Johns Hopkins has called the suit 'baseless'
+    target: Researchers recorded chimps hunting with tools at Fongoli in Sénégal . Tool use was spotted on 300 occasions and 60% was by females . Male chimps did more hunting but tended to capture prey with their hands . The findings may provide clues as to how humans first learned to use tools .
 
 
     Example 2:
 
-    prediction: number of allergy sufferers is soaring and almost half of those with severe allergies live in daily fear of suffering a potentially fatal reaction . two-thirds don't know how to use an adrenaline pen which can save lives of those suffering anaphylaxis . around 21million people have some kind of allergy, ranging from hayfever to reactions to food, medication and wasp stings .
+    prediction: Sajid Javid declared some values prevalent in certain Asian communities were 'totally unacceptable in British society' comments come after inquiries into sexual abuse of vulnerable girls .
 
-    target: Hospital admissions for allergies rose by 8 per cent between 2013 and 2014 . Around 21million Britons have some kind of allergy, such as hayfever . But more than two thirds would not know what to do if they saw someone having an allergic reaction .
+    target: He said some values in certain communities were 'totally unacceptable' Comments come after sexual abuse by Asian men revealed in parts of UK . Javid said political correctness should not be a barrier to stopping abuse .
 
 
     Example 3:
 
-    prediction: a blaze broke out at the General Electric Appliance Park in Louisville, Kentucky . the park is large, such that 34 football fields could fit in one of its warehouses .
+    prediction: a drone carrying traces of a radioactive material was found on the roof of the equivalent to the white house . the discovery comes on the same day a court approved a government plan to restart two reactors at the Sendai nuclear power plant .
 
-    target: Fire breaks out at the General Electric Appliance Park in Louisville, Kentucky . City official: No is believed to be injured or trapped .
+    target: The drone is sparking terrorism concerns, authorities say . It was equipped with a bottle containing radioactive material . It was discovered as a court approved a plan to restart two Japanese nuclear reactors .
 
 
     Example 4:
 
-    prediction: handwritten book was written in 1942 at government code and cypher school . it contains notes and calculations made by the mathematician at Bletchley park . the 56-page document was sold at auction for $1,025,000 (£698,000) it is believed to be the only extensive Turing manuscript in existence .
+    prediction: young girl, six or seven, shows herself firing machine gun at ISIS . she boasts she has killed 400 of the militants - and he says 'kill, kill' . but it is unclear exactly what she is shooting at in the video .
 
-    target: Notebook written by Alan Turing during World War II sold for £700,000 . It was written at the Bletchley Park code-breaking headquarters in 1942 . Only extensive Turing manuscript thought to exist, auctioneer said .
+    target: Video of little girl firing several rounds 'towards ISIS' has gone viral . The girl, dressed in pink, tells man off camera she has killed 400 fighters . The man encourages her by saying 'kill, kill' as she shoots machine gun . Kurdish known for their female fighters - but ISIS known for using children .
 
 
     Example 5:
 
-    prediction: Luke Shambrook went missing from the campground at lake eildon . he was found three kilometres away from where he went missing on friday . his parents have vowed to continue holidaying at the campground .
+    prediction: the most rev Justin welby said the 148 mainly Christian victims of the massacre were 'witnesses, unwilling, unjustly, wickedly, and they are martyrs in both senses of the word' . he also made a nod to the recent agreement between Iran and the international community over its nuclear power .
 
-    target: Luke Shambrook, 11, was found after he went missing on Good Friday . He went missing in Lake Eildon National Park - north-east of Melbourne . His family had taken him to the park since he was just one year old . 'Every year he's been up and down the hills,' his dad Tim said . The autistic boy was found on Tuesday by a police helicopter . Doctors are amazed at how well he is doing considering his four-day ordeal . The boy was suffering from dehydration, hypothermia and exhaustion .
+    target: Archbishop of Canterbury Justin Welby hail victims of Kenya university massacre as martyrs . Thousands of Catholics brave bad weather to hear Pope Francis lead Easter Sunday Mass in the Vatican . Pope gave sombre message in St Peter's Square, praying for an end to the persecution of Christians . Pope Francis also commemorated students massacred by Islamist militants at a university in Kenya . The pontiff made a nod to Lausanne agreement between Iran and the international community a nuclear accord .
 
 
 
@@ -857,7 +857,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  6.215 seconds)
+   **Total running time of the script:** ( 3 minutes  38.775 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

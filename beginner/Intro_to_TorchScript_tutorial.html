@@ -471,11 +471,11 @@ is invoked.</p></li>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_cell</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">x</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">h</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[0.4518, 0.2487, 0.8853, 0.8378],
-        [0.6855, 0.9288, 0.8486, 0.8579],
-        [0.9245, 0.7863, 0.8157, 0.1927]]), tensor([[0.4518, 0.2487, 0.8853, 0.8378],
-        [0.6855, 0.9288, 0.8486, 0.8579],
-        [0.9245, 0.7863, 0.8157, 0.1927]]))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[0.7009, 0.8394, 0.6857, 0.9067],
+        [0.5948, 0.3461, 0.4600, 0.6776],
+        [0.7057, 0.6712, 0.4533, 0.4763]]), tensor([[0.7009, 0.8394, 0.6857, 0.9067],
+        [0.5948, 0.3461, 0.4600, 0.6776],
+        [0.7057, 0.6712, 0.4533, 0.4763]]))
 </pre></div>
 </div>
 <p>So we’ve:</p>
@@ -510,11 +510,11 @@ matrices of random values. Then we invoked the cell with
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MyCell(
   (linear): Linear(in_features=4, out_features=4, bias=True)
 )
-(tensor([[ 0.5802, -0.0973,  0.8634,  0.4702],
-        [ 0.5408,  0.1141,  0.8542,  0.2452],
-        [ 0.7443, -0.4126,  0.9143, -0.5661]], grad_fn=&lt;TanhBackward0&gt;), tensor([[ 0.5802, -0.0973,  0.8634,  0.4702],
-        [ 0.5408,  0.1141,  0.8542,  0.2452],
-        [ 0.7443, -0.4126,  0.9143, -0.5661]], grad_fn=&lt;TanhBackward0&gt;))
+(tensor([[ 0.1805,  0.8232, -0.1156,  0.5317],
+        [ 0.4064,  0.2992,  0.0490,  0.7128],
+        [ 0.6262,  0.5743, -0.0468,  0.2492]], grad_fn=&lt;TanhBackward0&gt;), tensor([[ 0.1805,  0.8232, -0.1156,  0.5317],
+        [ 0.4064,  0.2992,  0.0490,  0.7128],
+        [ 0.6262,  0.5743, -0.0468,  0.2492]], grad_fn=&lt;TanhBackward0&gt;))
 </pre></div>
 </div>
 <p>We’ve redefined our module <code class="docutils literal notranslate"><span class="pre">MyCell</span></code>, but this time we’ve added a
@@ -561,11 +561,11 @@ flexibility in model authoring.</p>
   (dg): MyDecisionGate()
   (linear): Linear(in_features=4, out_features=4, bias=True)
 )
-(tensor([[0.7042, 0.6931, 0.5562, 0.8175],
-        [0.7443, 0.8869, 0.5791, 0.8126],
-        [0.8665, 0.6326, 0.7283, 0.3629]], grad_fn=&lt;TanhBackward0&gt;), tensor([[0.7042, 0.6931, 0.5562, 0.8175],
-        [0.7443, 0.8869, 0.5791, 0.8126],
-        [0.8665, 0.6326, 0.7283, 0.3629]], grad_fn=&lt;TanhBackward0&gt;))
+(tensor([[-0.1560,  0.5882,  0.6985,  0.5889],
+        [ 0.1048,  0.1189,  0.6124,  0.7951],
+        [ 0.5005,  0.3272,  0.5559,  0.3437]], grad_fn=&lt;TanhBackward0&gt;), tensor([[-0.1560,  0.5882,  0.6985,  0.5889],
+        [ 0.1048,  0.1189,  0.6124,  0.7951],
+        [ 0.5005,  0.3272,  0.5559,  0.3437]], grad_fn=&lt;TanhBackward0&gt;))
 </pre></div>
 </div>
 <p>We’ve once again redefined our <code class="docutils literal notranslate"><span class="pre">MyCell</span></code> class, but here we’ve defined
@@ -611,11 +611,11 @@ Let’s begin by examining what we call <strong>tracing</strong>.</p>
   (linear): Linear(original_name=Linear)
 )
 
-(tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]], grad_fn=&lt;TanhBackward0&gt;), tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]], grad_fn=&lt;TanhBackward0&gt;))
+(tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]], grad_fn=&lt;TanhBackward0&gt;), tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]], grad_fn=&lt;TanhBackward0&gt;))
 </pre></div>
 </div>
 <p>We’ve rewinded a bit and taken the second version of our <code class="docutils literal notranslate"><span class="pre">MyCell</span></code>
@@ -679,17 +679,17 @@ the Python module:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">traced_cell</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">x</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">h</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]], grad_fn=&lt;TanhBackward0&gt;), tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]], grad_fn=&lt;TanhBackward0&gt;))
-(tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]],
-       grad_fn=&lt;DifferentiableGraphBackward&gt;), tensor([[ 0.9021,  0.4466, -0.1618,  0.1858],
-        [ 0.3858,  0.7162,  0.3562,  0.3094],
-        [ 0.9190,  0.8065,  0.3390,  0.5064]],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]], grad_fn=&lt;TanhBackward0&gt;), tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]], grad_fn=&lt;TanhBackward0&gt;))
+(tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]],
+       grad_fn=&lt;DifferentiableGraphBackward&gt;), tensor([[-0.0116,  0.8397,  0.6025,  0.8739],
+        [ 0.0062,  0.7419,  0.4518,  0.8139],
+        [-0.2821,  0.6895,  0.3864,  0.6094]],
        grad_fn=&lt;DifferentiableGraphBackward&gt;))
 </pre></div>
 </div>
@@ -784,11 +784,11 @@ TorchScript. Let’s now try running the program:</p>
 <span class="n">traced_cell</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">x</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">h</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[0.1796, 0.1082, 0.1564, 0.1409],
-        [0.0703, 0.5120, 0.4166, 0.5107],
-        [0.4753, 0.4586, 0.4752, 0.4550]], grad_fn=&lt;TanhBackward0&gt;), tensor([[0.1796, 0.1082, 0.1564, 0.1409],
-        [0.0703, 0.5120, 0.4166, 0.5107],
-        [0.4753, 0.4586, 0.4752, 0.4550]], grad_fn=&lt;TanhBackward0&gt;))
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(tensor([[ 0.6765,  0.4860,  0.5061, -0.0373],
+        [ 0.8565,  0.5953,  0.7874,  0.0805],
+        [ 0.2719,  0.8263,  0.7816,  0.0931]], grad_fn=&lt;TanhBackward0&gt;), tensor([[ 0.6765,  0.4860,  0.5061, -0.0373],
+        [ 0.8565,  0.5953,  0.7874,  0.0805],
+        [ 0.2719,  0.8263,  0.7816,  0.0931]], grad_fn=&lt;TanhBackward0&gt;))
 </pre></div>
 </div>
 <div class="section" id="mixing-scripting-and-tracing">
@@ -898,7 +898,7 @@ python-free execution.</p>
 out the NeurIPS demo for converting machine translation models using
 TorchScript:
 <a class="reference external" href="https://colab.research.google.com/drive/1HiICg6jRkBnr5hvK2-VnMi88Vi9pUzEJ">https://colab.research.google.com/drive/1HiICg6jRkBnr5hvK2-VnMi88Vi9pUzEJ</a></p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.751 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.737 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-intro-to-torchscript-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/07d05907b3ff859aeed5f76f1acc5df4/Intro_to_TorchScript_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">Intro_to_TorchScript_tutorial.py</span></code></a></p>
