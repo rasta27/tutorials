@@ -103,52 +103,52 @@ We load the `FashionMNIST Dataset <https://pytorch.org/vision/stable/datasets.ht
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/26421880 [00:00<?, ?it/s]
-      0%|          | 32768/26421880 [00:00<01:27, 303211.84it/s]
-      0%|          | 65536/26421880 [00:00<01:28, 298410.22it/s]
-      0%|          | 131072/26421880 [00:00<01:00, 431928.47it/s]
-      1%|          | 229376/26421880 [00:00<00:42, 610598.10it/s]
-      2%|1         | 491520/26421880 [00:00<00:20, 1239953.36it/s]
-      4%|3         | 950272/26421880 [00:00<00:11, 2224451.76it/s]
-      7%|7         | 1933312/26421880 [00:00<00:05, 4382411.55it/s]
-     15%|#4        | 3833856/26421880 [00:00<00:02, 8440373.35it/s]
-     26%|##6       | 6979584/26421880 [00:00<00:01, 14623210.87it/s]
-     38%|###8      | 10092544/26421880 [00:01<00:00, 18773183.16it/s]
-     50%|####9     | 13139968/26421880 [00:01<00:00, 21408189.99it/s]
-     62%|######1   | 16252928/26421880 [00:01<00:00, 23403016.01it/s]
-     73%|#######3  | 19333120/26421880 [00:01<00:00, 24714204.15it/s]
-     85%|########4 | 22380544/26421880 [00:01<00:00, 25313921.29it/s]
-     96%|#########6| 25493504/26421880 [00:01<00:00, 26079636.90it/s]
-    100%|##########| 26421880/26421880 [00:01<00:00, 15803439.32it/s]
+      0%|          | 32768/26421880 [00:00<01:26, 303804.33it/s]
+      0%|          | 65536/26421880 [00:00<01:28, 299287.40it/s]
+      0%|          | 131072/26421880 [00:00<01:00, 433896.23it/s]
+      1%|          | 229376/26421880 [00:00<00:42, 614325.79it/s]
+      2%|1         | 458752/26421880 [00:00<00:22, 1142566.72it/s]
+      3%|3         | 917504/26421880 [00:00<00:11, 2167338.54it/s]
+      7%|6         | 1802240/26421880 [00:00<00:06, 4080159.93it/s]
+     14%|#3        | 3604480/26421880 [00:00<00:02, 7980371.81it/s]
+     25%|##5       | 6717440/26421880 [00:00<00:01, 14291514.56it/s]
+     37%|###7      | 9830400/26421880 [00:01<00:00, 18568186.84it/s]
+     49%|####8     | 12910592/26421880 [00:01<00:00, 21416079.06it/s]
+     61%|######    | 16023552/26421880 [00:01<00:00, 23479048.78it/s]
+     72%|#######2  | 19136512/26421880 [00:01<00:00, 24835272.14it/s]
+     84%|########4 | 22249472/26421880 [00:01<00:00, 25908158.55it/s]
+     95%|#########4| 25001984/26421880 [00:01<00:00, 25595683.69it/s]
+    100%|##########| 26421880/26421880 [00:01<00:00, 15887570.54it/s]
     Extracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/29515 [00:00<?, ?it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 270605.88it/s]
-    100%|##########| 29515/29515 [00:00<00:00, 269315.44it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 271887.84it/s]
+    100%|##########| 29515/29515 [00:00<00:00, 270460.44it/s]
     Extracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/4422102 [00:00<?, ?it/s]
-      1%|          | 32768/4422102 [00:00<00:14, 293721.30it/s]
-      1%|1         | 65536/4422102 [00:00<00:14, 292489.16it/s]
-      3%|2         | 131072/4422102 [00:00<00:10, 425658.77it/s]
-      5%|5         | 229376/4422102 [00:00<00:06, 603773.60it/s]
-     10%|#         | 458752/4422102 [00:00<00:03, 1123124.60it/s]
-     21%|##        | 917504/4422102 [00:00<00:01, 2130750.13it/s]
-     41%|####1     | 1835008/4422102 [00:00<00:00, 4106308.36it/s]
-     82%|########2 | 3637248/4422102 [00:00<00:00, 7910828.46it/s]
-    100%|##########| 4422102/4422102 [00:01<00:00, 4367177.84it/s]
+      1%|          | 32768/4422102 [00:00<00:14, 304094.72it/s]
+      1%|1         | 65536/4422102 [00:00<00:14, 302998.40it/s]
+      3%|2         | 131072/4422102 [00:00<00:09, 440778.91it/s]
+      5%|5         | 229376/4422102 [00:00<00:06, 625281.33it/s]
+     11%|#1        | 491520/4422102 [00:00<00:03, 1271497.78it/s]
+     21%|##1       | 950272/4422102 [00:00<00:01, 2278892.51it/s]
+     44%|####3     | 1933312/4422102 [00:00<00:00, 4496954.60it/s]
+     87%|########6 | 3833856/4422102 [00:00<00:00, 8648152.33it/s]
+    100%|##########| 4422102/4422102 [00:00<00:00, 5089303.29it/s]
     Extracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw
 
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
     Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/5148 [00:00<?, ?it/s]
-    100%|##########| 5148/5148 [00:00<00:00, 5532225.72it/s]
+    100%|##########| 5148/5148 [00:00<00:00, 24044851.88it/s]
     Extracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw
 
 
@@ -195,7 +195,7 @@ We use ``matplotlib`` to visualize some samples in our training data.
 
 
 .. image-sg:: /beginner/basics/images/sphx_glr_data_tutorial_001.png
-   :alt: Shirt, Bag, Sandal, T-Shirt, Coat, T-Shirt, Shirt, Shirt, Bag
+   :alt: Trouser, T-Shirt, Sandal, T-Shirt, Ankle Boot, T-Shirt, Dress, Trouser, Coat
    :srcset: /beginner/basics/images/sphx_glr_data_tutorial_001.png
    :class: sphx-glr-single-img
 
@@ -430,7 +430,7 @@ the data loading order, take a look at `Samplers <https://pytorch.org/docs/stabl
 
     Feature batch shape: torch.Size([64, 1, 28, 28])
     Labels batch shape: torch.Size([64])
-    Label: 6
+    Label: 7
 
 
 
@@ -449,7 +449,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.714 seconds)
+   **Total running time of the script:** ( 0 minutes  6.584 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_data_tutorial.py:

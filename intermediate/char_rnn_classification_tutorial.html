@@ -682,16 +682,16 @@ language):</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'category ='</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="s1">'/ line ='</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Greek / line = Pispinis
-category = English / line = Widdowson
-category = Italian / line = Amato
-category = Arabic / line = Hanania
-category = Portuguese / line = Medeiros
-category = Russian / line = Drozdkov
-category = Russian / line = Tugarov
-category = Arabic / line = Kalb
-category = Korean / line = Choi
-category = Chinese / line = Pian
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = German / line = Schreck
+category = English / line = Myatt
+category = Spanish / line = Oriol
+category = Greek / line = Calpis
+category = Czech / line = Egr
+category = Korean / line = Ri
+category = Japanese / line = Ikoma
+category = Korean / line = Moon
+category = Russian / line = Jemchujnikov
+category = Dutch / line = Kolijn
 </pre></div>
 </div>
 </div>
@@ -781,26 +781,26 @@ average of the loss.</p>
         <span class="n">current_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 3.2983 Charbonneau / Russian ✗ (French)
-10000 10% (0m 12s) 2.1858 Abadi / Japanese ✗ (Arabic)
-15000 15% (0m 18s) 2.0439 Dubhshlaine / Italian ✗ (Irish)
-20000 20% (0m 24s) 2.9536 Souza / Arabic ✗ (Portuguese)
-25000 25% (0m 30s) 0.8789 Kuga / Japanese ✓
-30000 30% (0m 36s) 0.7445 Gulyashko / Japanese ✗ (Russian)
-35000 35% (0m 43s) 3.1438 Bolivar / Irish ✗ (Spanish)
-40000 40% (0m 49s) 4.5738 Hangurian / Scottish ✗ (Russian)
-45000 45% (0m 55s) 0.0268 Kajitani / Japanese ✓
-50000 50% (1m 1s) 1.1170 Sommer / German ✓
-55000 55% (1m 7s) 0.2451 Sowka / Polish ✓
-60000 60% (1m 13s) 0.0799 Chou / Korean ✓
-65000 65% (1m 19s) 0.0323 Takayama / Japanese ✓
-70000 70% (1m 25s) 1.6410 Abadi / Japanese ✗ (Arabic)
-75000 75% (1m 31s) 3.1143 Bauman / Arabic ✗ (Russian)
-80000 80% (1m 37s) 0.1614 Traversi / Italian ✓
-85000 85% (1m 43s) 2.6028 Bissette / Greek ✗ (French)
-90000 90% (1m 49s) 0.6784 Choi / Korean ✓
-95000 95% (1m 56s) 3.2261 Horner / German ✗ (English)
-100000 100% (2m 2s) 0.3276 Matjeka / Czech ✓
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 5s) 3.7665 Broz / Korean ✗ (Polish)
+10000 10% (0m 11s) 0.2201 Antoniadis / Greek ✓
+15000 15% (0m 17s) 1.8332 Durand / German ✗ (French)
+20000 20% (0m 23s) 0.7050 Ferreira / Portuguese ✓
+25000 25% (0m 29s) 0.8403 Cao / Chinese ✓
+30000 30% (0m 34s) 1.0028 Jager / German ✓
+35000 35% (0m 40s) 1.7590 Chung / Chinese ✗ (Korean)
+40000 40% (0m 46s) 0.1661 Salucci / Italian ✓
+45000 45% (0m 52s) 0.6036 Gartner / German ✓
+50000 50% (0m 58s) 1.1578 Tutton / English ✓
+55000 55% (1m 4s) 3.9268 Kablits / Greek ✗ (Russian)
+60000 60% (1m 9s) 1.5348 Macshuibhne / Japanese ✗ (Irish)
+65000 65% (1m 15s) 2.2690 Hase / Japanese ✗ (German)
+70000 70% (1m 21s) 1.3641 Taverna / Spanish ✗ (Italian)
+75000 75% (1m 27s) 0.2605 Simpson / Scottish ✓
+80000 80% (1m 32s) 0.4144 Trieu / Vietnamese ✓
+85000 85% (1m 38s) 0.3865 Youj / Korean ✓
+90000 90% (1m 44s) 1.6130 Simoes / Arabic ✗ (Portuguese)
+95000 95% (1m 50s) 1.5739 Osladil / Russian ✗ (Czech)
+100000 100% (1m 56s) 0.4152 Mendez / Spanish ✓
 </pre></div>
 </div>
 </div>
@@ -815,7 +815,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f67e3db6980&gt;]
+<img alt="char rnn classification tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_classification_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_classification_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7f18af0fd4e0&gt;]
 </pre></div>
 </div>
 </div>
@@ -906,19 +906,19 @@ English (perhaps because of overlap with other languages).</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.32) Russian
-(-1.64) Czech
-(-3.54) English
+(-0.74) Russian
+(-0.77) Czech
+(-3.53) English
 
 &gt; Jackson
-(-0.35) Scottish
-(-1.91) English
-(-3.09) German
+(-0.13) Scottish
+(-3.33) English
+(-3.80) Dutch
 
 &gt; Satoshi
-(-0.88) Italian
-(-1.47) Japanese
-(-1.89) Arabic
+(-0.46) Arabic
+(-1.44) Japanese
+(-3.05) Polish
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -962,7 +962,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  9.527 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  2.853 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/37c8905519d3fd3f437b783a48d06eac/char_rnn_classification_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></p>

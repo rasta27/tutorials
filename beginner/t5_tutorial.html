@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 17.1MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.2MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,117 +479,48 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 7.03M/945M [00:00&lt;00:13, 73.7MB/s]
-  2%|1         | 15.7M/945M [00:00&lt;00:11, 83.5MB/s]
-  3%|2         | 24.0M/945M [00:00&lt;00:11, 85.2MB/s]
-  3%|3         | 33.0M/945M [00:00&lt;00:10, 88.8MB/s]
-  4%|4         | 41.4M/945M [00:00&lt;00:11, 83.8MB/s]
-  5%|5         | 49.5M/945M [00:00&lt;00:11, 81.4MB/s]
-  6%|6         | 57.3M/945M [00:00&lt;00:11, 79.7MB/s]
-  7%|6         | 64.9M/945M [00:00&lt;00:12, 75.1MB/s]
-  8%|7         | 72.1M/945M [00:00&lt;00:13, 69.0MB/s]
-  9%|8         | 80.9M/945M [00:01&lt;00:12, 75.3MB/s]
-  9%|9         | 89.3M/945M [00:01&lt;00:11, 79.0MB/s]
- 10%|#         | 98.0M/945M [00:01&lt;00:10, 82.4MB/s]
- 11%|#1        | 106M/945M [00:01&lt;00:10, 82.5MB/s]
- 12%|#2        | 115M/945M [00:01&lt;00:10, 85.1MB/s]
- 13%|#3        | 123M/945M [00:01&lt;00:10, 83.5MB/s]
- 14%|#3        | 132M/945M [00:01&lt;00:09, 85.9MB/s]
- 15%|#4        | 140M/945M [00:01&lt;00:10, 83.4MB/s]
- 16%|#5        | 148M/945M [00:01&lt;00:09, 84.2MB/s]
- 17%|#6        | 156M/945M [00:02&lt;00:10, 82.3MB/s]
- 17%|#7        | 165M/945M [00:02&lt;00:09, 85.1MB/s]
- 18%|#8        | 173M/945M [00:02&lt;00:09, 85.8MB/s]
- 19%|#9        | 182M/945M [00:02&lt;00:09, 86.2MB/s]
- 20%|##        | 191M/945M [00:02&lt;00:08, 88.7MB/s]
- 21%|##1       | 200M/945M [00:02&lt;00:08, 90.7MB/s]
- 22%|##2       | 209M/945M [00:02&lt;00:08, 88.3MB/s]
- 23%|##2       | 217M/945M [00:02&lt;00:08, 89.0MB/s]
- 24%|##3       | 226M/945M [00:02&lt;00:08, 90.5MB/s]
- 25%|##4       | 235M/945M [00:02&lt;00:08, 89.7MB/s]
- 26%|##5       | 244M/945M [00:03&lt;00:08, 91.5MB/s]
- 27%|##6       | 253M/945M [00:03&lt;00:07, 91.2MB/s]
- 28%|##7       | 261M/945M [00:03&lt;00:08, 89.3MB/s]
- 29%|##8       | 270M/945M [00:03&lt;00:07, 89.3MB/s]
- 29%|##9       | 279M/945M [00:03&lt;00:07, 88.3MB/s]
- 30%|###       | 287M/945M [00:03&lt;00:08, 81.2MB/s]
- 31%|###1      | 295M/945M [00:03&lt;00:08, 80.0MB/s]
- 32%|###2      | 304M/945M [00:03&lt;00:08, 83.5MB/s]
- 33%|###3      | 312M/945M [00:03&lt;00:07, 85.1MB/s]
- 34%|###3      | 320M/945M [00:03&lt;00:07, 84.7MB/s]
- 35%|###4      | 329M/945M [00:04&lt;00:07, 87.1MB/s]
- 36%|###5      | 338M/945M [00:04&lt;00:07, 88.3MB/s]
- 37%|###6      | 346M/945M [00:04&lt;00:07, 88.2MB/s]
- 38%|###7      | 355M/945M [00:04&lt;00:06, 89.5MB/s]
- 39%|###8      | 364M/945M [00:04&lt;00:06, 90.2MB/s]
- 39%|###9      | 373M/945M [00:04&lt;00:07, 82.7MB/s]
- 40%|####      | 381M/945M [00:04&lt;00:07, 82.1MB/s]
- 41%|####1     | 389M/945M [00:04&lt;00:07, 80.5MB/s]
- 42%|####2     | 397M/945M [00:04&lt;00:06, 82.6MB/s]
- 43%|####2     | 405M/945M [00:05&lt;00:06, 83.8MB/s]
- 44%|####3     | 414M/945M [00:05&lt;00:06, 87.3MB/s]
- 45%|####4     | 423M/945M [00:05&lt;00:06, 80.9MB/s]
- 46%|####5     | 431M/945M [00:05&lt;00:06, 82.6MB/s]
- 47%|####6     | 439M/945M [00:05&lt;00:06, 84.3MB/s]
- 47%|####7     | 448M/945M [00:05&lt;00:05, 87.2MB/s]
- 48%|####8     | 457M/945M [00:05&lt;00:05, 88.7MB/s]
- 49%|####9     | 466M/945M [00:05&lt;00:05, 90.9MB/s]
- 50%|#####     | 475M/945M [00:05&lt;00:05, 90.9MB/s]
- 51%|#####1    | 484M/945M [00:05&lt;00:05, 89.3MB/s]
- 52%|#####2    | 492M/945M [00:06&lt;00:05, 87.8MB/s]
- 53%|#####3    | 501M/945M [00:06&lt;00:05, 89.0MB/s]
- 54%|#####3    | 510M/945M [00:06&lt;00:05, 89.0MB/s]
- 55%|#####4    | 518M/945M [00:06&lt;00:05, 86.8MB/s]
- 56%|#####5    | 527M/945M [00:06&lt;00:05, 87.6MB/s]
- 57%|#####6    | 536M/945M [00:06&lt;00:04, 88.7MB/s]
- 58%|#####7    | 544M/945M [00:06&lt;00:04, 89.1MB/s]
- 59%|#####8    | 553M/945M [00:06&lt;00:04, 89.3MB/s]
- 59%|#####9    | 562M/945M [00:06&lt;00:04, 90.8MB/s]
- 60%|######    | 571M/945M [00:06&lt;00:04, 92.5MB/s]
- 61%|######1   | 580M/945M [00:07&lt;00:04, 90.9MB/s]
- 62%|######2   | 589M/945M [00:07&lt;00:04, 88.4MB/s]
- 63%|######3   | 598M/945M [00:07&lt;00:04, 90.3MB/s]
- 64%|######4   | 606M/945M [00:07&lt;00:03, 89.6MB/s]
- 65%|######5   | 615M/945M [00:07&lt;00:03, 89.3MB/s]
- 66%|######5   | 623M/945M [00:07&lt;00:03, 89.2MB/s]
- 67%|######6   | 632M/945M [00:07&lt;00:03, 86.6MB/s]
- 68%|######7   | 640M/945M [00:07&lt;00:03, 86.7MB/s]
- 69%|######8   | 648M/945M [00:07&lt;00:03, 86.1MB/s]
- 70%|######9   | 657M/945M [00:08&lt;00:03, 83.5MB/s]
- 70%|#######   | 665M/945M [00:08&lt;00:03, 80.0MB/s]
- 71%|#######1  | 673M/945M [00:08&lt;00:03, 81.8MB/s]
- 72%|#######2  | 682M/945M [00:08&lt;00:03, 85.2MB/s]
- 73%|#######3  | 690M/945M [00:08&lt;00:03, 86.4MB/s]
- 74%|#######3  | 699M/945M [00:08&lt;00:03, 84.8MB/s]
- 75%|#######4  | 707M/945M [00:08&lt;00:02, 85.2MB/s]
- 76%|#######5  | 715M/945M [00:08&lt;00:02, 84.9MB/s]
- 77%|#######6  | 723M/945M [00:08&lt;00:02, 84.5MB/s]
- 77%|#######7  | 731M/945M [00:08&lt;00:02, 80.4MB/s]
- 78%|#######8  | 740M/945M [00:09&lt;00:02, 82.9MB/s]
- 79%|#######9  | 748M/945M [00:09&lt;00:02, 79.8MB/s]
- 80%|#######9  | 756M/945M [00:09&lt;00:02, 80.3MB/s]
- 81%|########  | 763M/945M [00:09&lt;00:02, 80.4MB/s]
- 82%|########1 | 772M/945M [00:09&lt;00:02, 83.7MB/s]
- 83%|########2 | 781M/945M [00:09&lt;00:01, 86.6MB/s]
- 84%|########3 | 790M/945M [00:09&lt;00:01, 87.9MB/s]
- 84%|########4 | 798M/945M [00:09&lt;00:01, 80.9MB/s]
- 85%|########5 | 806M/945M [00:09&lt;00:01, 79.5MB/s]
- 86%|########6 | 814M/945M [00:10&lt;00:01, 74.5MB/s]
- 87%|########6 | 821M/945M [00:10&lt;00:01, 68.2MB/s]
- 88%|########7 | 828M/945M [00:10&lt;00:01, 70.3MB/s]
- 89%|########8 | 836M/945M [00:10&lt;00:01, 74.5MB/s]
- 89%|########9 | 844M/945M [00:10&lt;00:02, 46.3MB/s]
- 91%|#########1| 864M/945M [00:10&lt;00:01, 79.0MB/s]
- 93%|#########2| 874M/945M [00:10&lt;00:00, 80.4MB/s]
- 94%|#########3| 883M/945M [00:11&lt;00:00, 78.2MB/s]
- 94%|#########4| 892M/945M [00:11&lt;00:00, 80.1MB/s]
- 95%|#########5| 901M/945M [00:11&lt;00:00, 81.6MB/s]
- 96%|#########6| 910M/945M [00:11&lt;00:00, 84.8MB/s]
- 97%|#########7| 918M/945M [00:11&lt;00:00, 86.2MB/s]
- 98%|#########8| 927M/945M [00:11&lt;00:00, 84.5MB/s]
- 99%|#########8| 935M/945M [00:11&lt;00:00, 83.5MB/s]
-100%|#########9| 943M/945M [00:11&lt;00:00, 83.8MB/s]
-100%|##########| 945M/945M [00:11&lt;00:00, 83.8MB/s]
+  1%|          | 8.36M/945M [00:00&lt;00:11, 87.6MB/s]
+  3%|2         | 26.3M/945M [00:00&lt;00:06, 147MB/s]
+  5%|4         | 44.2M/945M [00:00&lt;00:05, 166MB/s]
+  7%|6         | 66.0M/945M [00:00&lt;00:04, 190MB/s]
+  9%|9         | 89.0M/945M [00:00&lt;00:04, 209MB/s]
+ 12%|#1        | 112M/945M [00:00&lt;00:03, 219MB/s]
+ 14%|#4        | 135M/945M [00:00&lt;00:03, 226MB/s]
+ 17%|#6        | 158M/945M [00:00&lt;00:03, 230MB/s]
+ 19%|#9        | 181M/945M [00:00&lt;00:03, 236MB/s]
+ 22%|##1       | 206M/945M [00:01&lt;00:03, 243MB/s]
+ 24%|##4       | 230M/945M [00:01&lt;00:03, 247MB/s]
+ 27%|##6       | 255M/945M [00:01&lt;00:02, 249MB/s]
+ 29%|##9       | 278M/945M [00:01&lt;00:02, 246MB/s]
+ 32%|###1      | 302M/945M [00:01&lt;00:02, 246MB/s]
+ 34%|###4      | 325M/945M [00:01&lt;00:02, 246MB/s]
+ 37%|###6      | 349M/945M [00:01&lt;00:02, 244MB/s]
+ 39%|###9      | 372M/945M [00:01&lt;00:02, 242MB/s]
+ 42%|####1     | 395M/945M [00:01&lt;00:02, 241MB/s]
+ 44%|####4     | 418M/945M [00:01&lt;00:02, 239MB/s]
+ 47%|####6     | 441M/945M [00:02&lt;00:02, 236MB/s]
+ 49%|####9     | 464M/945M [00:02&lt;00:02, 237MB/s]
+ 51%|#####1    | 486M/945M [00:02&lt;00:02, 232MB/s]
+ 54%|#####3    | 509M/945M [00:02&lt;00:01, 229MB/s]
+ 56%|#####6    | 531M/945M [00:02&lt;00:01, 230MB/s]
+ 59%|#####8    | 553M/945M [00:02&lt;00:01, 228MB/s]
+ 61%|######    | 575M/945M [00:02&lt;00:01, 231MB/s]
+ 63%|######3   | 598M/945M [00:02&lt;00:01, 232MB/s]
+ 66%|######5   | 620M/945M [00:02&lt;00:01, 228MB/s]
+ 68%|######8   | 642M/945M [00:02&lt;00:01, 230MB/s]
+ 70%|#######   | 665M/945M [00:03&lt;00:01, 233MB/s]
+ 73%|#######2  | 688M/945M [00:03&lt;00:01, 233MB/s]
+ 75%|#######5  | 710M/945M [00:03&lt;00:01, 234MB/s]
+ 78%|#######7  | 732M/945M [00:03&lt;00:00, 229MB/s]
+ 80%|#######9  | 755M/945M [00:03&lt;00:00, 230MB/s]
+ 82%|########2 | 777M/945M [00:03&lt;00:00, 231MB/s]
+ 85%|########4 | 800M/945M [00:03&lt;00:00, 235MB/s]
+ 87%|########7 | 824M/945M [00:03&lt;00:00, 240MB/s]
+ 90%|########9 | 848M/945M [00:03&lt;00:00, 243MB/s]
+ 92%|#########2| 873M/945M [00:03&lt;00:00, 247MB/s]
+ 95%|#########4| 896M/945M [00:04&lt;00:00, 242MB/s]
+ 98%|#########7| 921M/945M [00:04&lt;00:00, 249MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 233MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -801,37 +732,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: more than 2,000 labiaplasty operations performed on the NHS in 2010 . the inner ‘lips’ of the vagina have risen five-fold in the past decade . trend is reflected in australia where procedures have more than doubled .
+prediction: manchester city have not won a premier league game since 1995 . they trailed at half-time in almost 20 years after losing to crystal palace . last time they won having been in a losing position at half-time was on 3-2 defeat to blackburn in 1995 . city's last win having been in a losing position was in a 3-2 defeat to aston villa .
 
-target: NHS labial reduction procedures risen five-fold in the last 10 years . More than 2,000 of the cosmetic operations were performed in 2010 . Trend is reflected in Australia with ops more than doubling in same time . Experts call for more information to help women understand what's normal .
+target: Man City's last Premier League win having trailed at half-time was in 1995 . Man City came from behind to beat Blackburn Rovers 3-2 at Ewood Park . Uwe Rosler, Keith Curle and Paul Walsh scored in the comeback win . Manchester City lost to Crystal Palace on Monday night . CLICK HERE for all the latest Man City news . City have lost their last three Premier League away games, after losing two of the preceding 26 on the road. The last time Man City lost three straight league away games was between February and March 2011. City have scored more than once in a game once in their last six away from home in the league; they scored two or more in 11 of their 13 preceding away games. They have kept three clean sheets in their last 16 PL matches. They have lost six Premier League games in 2014/15, the same number as in 2012/13 and 2013/14. Swansea have won two more Premier League points than Manchester City (16-14) since selling Wilfried Bony on January 14.
 
 
 Example 2:
 
-prediction: despite a strong start to the season, the SS have struggled this season . they have scored just 45 goals, compared to 84 at the same stage last season . they are missing a Harry Kane (19 goals), a Diego Costa (also 19), a Sergio Aguero (17 goals), and even a Charlie Austin (16 goals)
+prediction: the former prime minister and his wife therese rein have said goodbye to their family home in Brisbane's east of more than 20 years . the two-storey property still managed to sell for over three times what the couple paid when they bought the house just over two decades ago . the house was snatched up by applied economics professor Uwe Dulleck, who already owns a home in the area with his wife Monica . the house has a history of encouraging bargains, as the Rudd's
 
-target: Raheem Sterling, Jordan Henderson and Steven Gerrard are Liverpool's top scorers in the Premier League this season with six goals each . Seventeen of 20 Premier League clubs have top scorers with more goals . Liverpool are paying for failing to properly replace goals of Luis Suarez .
+target: The Rudd family put their family home on the market in November and it sold for $1.14 million . Kevin Rudd and Therese Rein were originally hoping for $1.25 million but lowered the asking price to $1.19 million . The property sold to applied economics Professor Uwe Dulleck and his wife Monica who already live in the area . They bought the Norman Park property in Brisbane's east in 1994 for just $384,000 . It's a five-bedroom colonial classic - a hidden sanctuary surrounded by greenery with a resort-style pool . The Rudds will use their luxurious, modern Noosa home as their permanent base after the sale .
 
 
 Example 3:
 
-prediction: 17-year-old farmer died after taking deadly animal medicine . her father was keeping the drug illegally . she took it and injected it after saying she felt like a 'failure', inquest told . paramedics fought to save her and took her to hospital . but she died from the effects of the drug, an inquest heard .
+prediction: the ruse was executed by the Ecuadorean airline Tame . the group of 40 tourists were given fake stamps in their passports . the stunt sparked a diplomatic incident with the government apologising .
 
-target: Charlotte Cobbald, 17, was visiting family farm in Suffolk while being treated in a mental health unit . She said she felt like a 'failure' and injected herself with animal drugs . Told her father 'leave me to die' and paramedics were unable to revive her .
+target: The stunt was pulled by local tourism groups and an Ecuador airline . Fake signs, passport control, posters and adverts were created in the ruse . It sparked outrage from Costa Rican officials prompting a formal apology . The video was taken down, but was reuploaded by La Nación .
 
 
 Example 4:
 
-prediction: prince will arrive in australia next Monday ahead of his final tour of duty . he will serve alongside elite soldiers in Darwin, Perth and Sydney . he will also spend time with Indigenous soldiers in the northern territory . he will also join diggers on urban training exercises and bush patrols .
+prediction: pensioner's money appeared to be going missing from her bank account . her concerns were put down to her having Alzheimer's disease . but her son had been slowly siphoning the money away . he spent it on gambling, a holiday and cinema tickets . a £13,000 fee to move his mother into a care home had to be paid .
 
-target: Prince Harry to arrive in Australia next Monday ahead of four-week stay . Will be Australian soldiers in Darwin, Perth and Sydney during trip . Prince will observe elite SAS soldiers, and Indigenous NORFORCE troops . The royal said to be excited for 'challenging and hectic' schedule . The trip is the last of Prince Harry's military career before he retires .
+target: David Rylance, 47, stole thousands of pounds from his own dying mother . Dying pensioner Margaret Rylance was suffering from Alzheimer's disease . She noticed money was missing but concerns were put down to condition . Her son was jailed for two years and three months for stealing £52,000 .
 
 
 Example 5:
 
-prediction: Brian Nicol, 32, drowned in a pool at a luxury villa in the Costa del sol . he was staying with friends in the villa in nueva andalucia with friends . he failed to resurface and friends dragged him out of the water . police and paramedics arrived shortly after the incident on sunday . but he had died, police said early evidence suggests he was drowning .
+prediction: search history exported to Google Drive in ZIP archive . can be viewed on calendars and calendars .
 
-target: Brian Nicol, 32 from Glasgow, dived into a pool but failed to resurface . Frantic friends dragged him out of the water but he could not be revived . Group were partying around pool after night out in Marbella, says source . Early investigations show death was a 'tragic accident' according to police .
+target: Search archive can be downloaded by visiting history.google.com . Feature exports all your searches to Google Drive in a ZIP archive . Google is also allowing the option of deleting search archive entirely .
 </pre></div>
 </div>
 </div>
@@ -1124,7 +1055,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  24.918 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  40.625 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
