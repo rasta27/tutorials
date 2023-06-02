@@ -590,7 +590,7 @@ But, a batch in our `data_pipe` is of the form `[(X_1,y_1), (X_2,y_2), (X_3,y_3)
 
  .. code-block:: none
 
-    [([1, 10913, 17, 4, 2], [1, 7825, 1497, 24, 2]), ([1, 5220, 21, 4, 2], [1, 7224, 32, 24, 2]), ([1, 5220, 21, 4, 2], [1, 15656, 32, 24, 2]), ([1, 5, 434, 4, 2], [1, 7, 664, 4, 2])]
+    [([1, 5, 434, 4, 2], [1, 7, 44, 8018, 4, 2]), ([1, 5, 434, 4, 2], [1, 7, 44, 10399, 4, 2]), ([1, 5, 4841, 4, 2], [1, 7, 44, 3, 4, 2]), ([1, 5, 993, 4, 2], [1, 7, 23, 1512, 4, 2])]
 
 
 
@@ -625,7 +625,7 @@ For this we will write a small function:
 
  .. code-block:: none
 
-    (([1, 8171, 194, 2], [1, 8171, 194, 2], [1, 9384, 4, 2], [1, 1822, 194, 2]), ([1, 790, 24, 2], [1, 12904, 24, 2], [1, 1720, 24, 2], [1, 3023, 56, 24, 2]))
+    (([1, 4211, 194, 2], [1, 4211, 194, 2], [1, 6724, 194, 2], [1, 1662, 194, 2]), ([1, 15287, 24, 2], [1, 14536, 24, 2], [1, 790, 24, 2], [1, 235, 24, 2]))
 
 
 
@@ -702,14 +702,14 @@ instead of indices:
 
  .. code-block:: none
 
-    Source:  <sos> <unk> ! <eos> <pad>
-    Traget:  <sos> Zum Wohl ! <eos>
-    Source:  <sos> Freeze ! <eos> <pad>
-    Traget:  <sos> Keine Bewegung ! <eos>
-    Source:  <sos> Got it ! <eos>
-    Traget:  <sos> Verstanden ! <eos> <pad>
-    Source:  <sos> Got it ! <eos>
-    Traget:  <sos> Aha ! <eos> <pad>
+    Source:  <sos> <unk> . <eos> <pad>
+    Traget:  <sos> Fang an . <eos>
+    Source:  <sos> Do it . <eos>
+    Traget:  <sos> Mache es ! <eos>
+    Source:  <sos> Do it . <eos>
+    Traget:  <sos> Tue es . <eos>
+    Source:  <sos> Go on . <eos>
+    Traget:  <sos> Mach weiter . <eos>
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  28.393 seconds)
+   **Total running time of the script:** ( 4 minutes  36.017 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:

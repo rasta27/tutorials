@@ -371,7 +371,7 @@ and call backward at the end.
 
         rnn.zero_grad()
 
-        loss = 0
+        loss = torch.Tensor([0]) # you can also just simply use ``loss = 0``
 
         for i in range(input_line_tensor.size(0)):
             output, hidden = rnn(category_tensor, input_line_tensor[i], hidden)
@@ -465,26 +465,26 @@ in ``all_losses`` for plotting later.
 
  .. code-block:: none
 
-    0m 13s (5000 5%) 3.3711
-    0m 26s (10000 10%) 2.6764
-    0m 40s (15000 15%) 2.4488
-    0m 54s (20000 20%) 2.5731
-    1m 7s (25000 25%) 2.1999
-    1m 21s (30000 30%) 1.8580
-    1m 34s (35000 35%) 2.3437
-    1m 48s (40000 40%) 3.1469
-    2m 1s (45000 45%) 2.5275
-    2m 14s (50000 50%) 1.7760
-    2m 28s (55000 55%) 3.5130
-    2m 42s (60000 60%) 2.3802
-    2m 55s (65000 65%) 2.5827
-    3m 8s (70000 70%) 2.1058
-    3m 22s (75000 75%) 2.4276
-    3m 35s (80000 80%) 2.7972
-    3m 48s (85000 85%) 2.9327
-    4m 1s (90000 90%) 3.0778
-    4m 15s (95000 95%) 2.3844
-    4m 28s (100000 100%) 2.8497
+    0m 15s (5000 5%) 2.9220
+    0m 30s (10000 10%) 2.0105
+    0m 46s (15000 15%) 2.3866
+    1m 1s (20000 20%) 3.0594
+    1m 16s (25000 25%) 2.3354
+    1m 32s (30000 30%) 2.9207
+    1m 47s (35000 35%) 1.8048
+    2m 2s (40000 40%) 2.2158
+    2m 18s (45000 45%) 2.5006
+    2m 33s (50000 50%) 2.0462
+    2m 48s (55000 55%) 2.0782
+    3m 4s (60000 60%) 2.4788
+    3m 19s (65000 65%) 2.3209
+    3m 34s (70000 70%) 2.2467
+    3m 49s (75000 75%) 2.5904
+    4m 5s (80000 80%) 1.0930
+    4m 20s (85000 85%) 3.1574
+    4m 35s (90000 90%) 2.2596
+    4m 50s (95000 95%) 1.9888
+    5m 5s (100000 100%) 1.9650
 
 
 
@@ -523,7 +523,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f51d7827130>]
+    [<matplotlib.lines.Line2D object at 0x7f5fdc2f3b50>]
 
 
 
@@ -604,18 +604,18 @@ feed that in as the next letter, and repeat until the EOS token.
 
  .. code-block:: none
 
-    Roskin
-    Uakinov
-    Shinovakov
-    Gerter
-    Eellen
+    Rovaki
+    Uarinov
+    Sakinov
+    Gerer
+    Eren
     Roure
-    Saner
-    Pare
+    Sandera
+    Parera
     Allan
-    Cau
-    Hou
-    Iun
+    Can
+    Han
+    Iang
 
 
 
@@ -642,7 +642,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  28.656 seconds)
+   **Total running time of the script:** ( 5 minutes  6.244 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_generation_tutorial.py:

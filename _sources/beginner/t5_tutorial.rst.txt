@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 16.6MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 18.0MB/s]
 
 
 
@@ -135,42 +135,42 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|1         | 11.7M/945M [00:00<00:08, 122MB/s]
-      4%|4         | 38.0M/945M [00:00<00:04, 212MB/s]
-      7%|6         | 65.2M/945M [00:00<00:03, 246MB/s]
-     10%|9         | 92.3M/945M [00:00<00:03, 261MB/s]
-     13%|#2        | 119M/945M [00:00<00:03, 269MB/s] 
-     16%|#5        | 146M/945M [00:00<00:03, 274MB/s]
-     18%|#8        | 174M/945M [00:00<00:02, 279MB/s]
-     21%|##1       | 201M/945M [00:00<00:02, 281MB/s]
-     24%|##4       | 229M/945M [00:00<00:02, 283MB/s]
-     27%|##7       | 256M/945M [00:01<00:02, 281MB/s]
-     30%|##9       | 283M/945M [00:01<00:02, 283MB/s]
-     33%|###2      | 311M/945M [00:01<00:02, 286MB/s]
-     36%|###5      | 338M/945M [00:01<00:02, 286MB/s]
-     39%|###8      | 365M/945M [00:01<00:02, 286MB/s]
-     42%|####1     | 393M/945M [00:01<00:02, 286MB/s]
-     45%|####4     | 421M/945M [00:01<00:01, 288MB/s]
-     47%|####7     | 448M/945M [00:01<00:01, 287MB/s]
-     50%|#####     | 475M/945M [00:01<00:01, 286MB/s]
-     53%|#####3    | 503M/945M [00:01<00:01, 285MB/s]
-     56%|#####6    | 530M/945M [00:02<00:01, 285MB/s]
-     59%|#####8    | 557M/945M [00:02<00:01, 285MB/s]
-     62%|######1   | 584M/945M [00:02<00:01, 285MB/s]
-     65%|######4   | 612M/945M [00:02<00:01, 286MB/s]
-     68%|######7   | 639M/945M [00:02<00:01, 286MB/s]
-     71%|#######   | 667M/945M [00:02<00:01, 287MB/s]
-     73%|#######3  | 694M/945M [00:02<00:00, 287MB/s]
-     76%|#######6  | 721M/945M [00:02<00:00, 286MB/s]
-     79%|#######9  | 749M/945M [00:02<00:00, 287MB/s]
-     82%|########2 | 777M/945M [00:02<00:00, 288MB/s]
-     85%|########5 | 804M/945M [00:03<00:00, 287MB/s]
-     88%|########8 | 832M/945M [00:03<00:00, 287MB/s]
-     91%|######### | 859M/945M [00:03<00:00, 288MB/s]
-     94%|#########3| 887M/945M [00:03<00:00, 287MB/s]
-     97%|#########6| 914M/945M [00:03<00:00, 285MB/s]
-    100%|#########9| 941M/945M [00:03<00:00, 285MB/s]
-    100%|##########| 945M/945M [00:03<00:00, 281MB/s]
+      1%|1         | 12.3M/945M [00:00<00:07, 129MB/s]
+      4%|4         | 39.2M/945M [00:00<00:04, 219MB/s]
+      7%|7         | 66.8M/945M [00:00<00:03, 251MB/s]
+     10%|#         | 94.5M/945M [00:00<00:03, 266MB/s]
+     13%|#2        | 122M/945M [00:00<00:03, 273MB/s] 
+     16%|#5        | 150M/945M [00:00<00:02, 280MB/s]
+     19%|#8        | 177M/945M [00:00<00:02, 281MB/s]
+     22%|##1       | 204M/945M [00:00<00:02, 284MB/s]
+     25%|##4       | 232M/945M [00:00<00:02, 286MB/s]
+     27%|##7       | 259M/945M [00:01<00:02, 282MB/s]
+     30%|###       | 287M/945M [00:01<00:02, 285MB/s]
+     33%|###3      | 315M/945M [00:01<00:02, 286MB/s]
+     36%|###6      | 342M/945M [00:01<00:02, 286MB/s]
+     39%|###9      | 370M/945M [00:01<00:02, 287MB/s]
+     42%|####2     | 397M/945M [00:01<00:01, 287MB/s]
+     45%|####4     | 425M/945M [00:01<00:01, 288MB/s]
+     48%|####7     | 452M/945M [00:01<00:01, 287MB/s]
+     51%|#####     | 479M/945M [00:01<00:01, 285MB/s]
+     54%|#####3    | 507M/945M [00:01<00:01, 282MB/s]
+     56%|#####6    | 534M/945M [00:02<00:01, 282MB/s]
+     59%|#####9    | 561M/945M [00:02<00:01, 284MB/s]
+     62%|######2   | 588M/945M [00:02<00:01, 284MB/s]
+     65%|######5   | 615M/945M [00:02<00:01, 285MB/s]
+     68%|######8   | 643M/945M [00:02<00:01, 285MB/s]
+     71%|#######   | 670M/945M [00:02<00:01, 287MB/s]
+     74%|#######3  | 698M/945M [00:02<00:00, 287MB/s]
+     77%|#######6  | 725M/945M [00:02<00:00, 286MB/s]
+     80%|#######9  | 752M/945M [00:02<00:00, 285MB/s]
+     83%|########2 | 780M/945M [00:02<00:00, 287MB/s]
+     86%|########5 | 808M/945M [00:03<00:00, 283MB/s]
+     88%|########8 | 835M/945M [00:03<00:00, 281MB/s]
+     91%|#########1| 862M/945M [00:03<00:00, 279MB/s]
+     94%|#########4| 888M/945M [00:03<00:00, 279MB/s]
+     97%|#########6| 915M/945M [00:03<00:00, 277MB/s]
+    100%|#########9| 941M/945M [00:03<00:00, 277MB/s]
+    100%|##########| 945M/945M [00:03<00:00, 280MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -466,37 +466,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: Amanda Beringer asked her brother Brad Fraser to make a toast at her wedding . the toast was a tribute to their father, who died of motor neuron disease . it was also a tribute to their father, who lost his battle with the disease .
+    prediction: fossils belonging to species known as Pterichthyoides milleri - or 'Pessie' - were found in a 19th century collection . they were rediscovered when the official Loch Ness fan club president, Gary Campbell, was invited to the museum and spotted them . he saw the resemblance and called for scientists to investigate the ancient creature .
 
-    target: Amanda Beringer asked her brother Brad to make a toast at her wedding . The song poked fun at marriage and had the wedding guests in stitches . But the song was also a tribute to their late father Peter . Peter passed away of Motor Neuron Disease 10 years ago . 'He'd have wanted everyone laughing and enjoying the day,' says Amanda .
+    target: Fossils of a creature bearing a striking similarity to depictions of Nessie have been found in a 19th century collection . It is thought the fossil was found in Cromarty and would have once lived in a freshwater lake between 542 million years ago to 251 million years ago . Researchers have revealed that Pterichthyoides milleri - or 'Pessie' - lived on the bottom of the lakes that would later become Loch Ness .
 
 
     Example 2:
 
-    prediction: LED screens found in most electronic devices can harm the retina . this is the light-sensitive layer at the back of the eye, she says . it can damage the retina, leading to macular degeneration, she says . 'blue light' emitted from gadgets can cause a variety of health complaints . research has already shown that it can cause sleeping and eating problems . but now, a doctor has discovered it can also permanently damage the retina .
+    prediction: arsenal drew 0-0 with liverpool at the emirates stadium on sunday . a goalless draw was the first time the blues have won the league since 1997 . but manager jose mourinho has hit back at the club, branding their 11-year wait for the title as 'boring' .
 
-    target: Key culprit is the LED screens found in most electronic devices . These can can harm the light-sensitive retina, irreversibly damaging sight . However the problem can be remedied by using special screen filters . Dr Celia Sanchez-Ramos has developed one to make light less damaging .
+    target: Chelsea edged closer to the Premier League title after a 0-0 draw with Arsenal on Sunday . The Blues were criticised in some quarters for an over-defensive display . Jose Mourinho has shrugged off those claims and said that the real boredom was in Arsenal's 11-year-wait to win a league title of their own . He hailed the individual performance of his captain John Terry as the defender's 'best ever' in his career .
 
 
     Example 3:
 
-    prediction: by 2100 around one per cent more of the world’s population will be Muslim than Christian, with the largest proportion of followers in India . a different religious majority is also projected to decline from 159 to 151 . less than 50 per cent of the population will be Christian in the uk, australia, Benin, Bosnia-Herzegovina, France, the Netherlands, New Zealand and the Republic of Macedonia .
+    prediction: the pilot scheme will recruit 10 people with autism or Asperger syndrome . they will be based at Microsoft's Redmond offices in washington . if successful, the scheme could extend to more vacancies worldwide . the plans were announced by Mary Ellen Smith, corporate vice president of worldwide operations .
 
-    target: Muslims will increase at more than double the rate of world's population . Largest proportion of Muslims likely to be in India, data showed . Research was completed by the Pew Research Center in America .
+    target: The pilot scheme will initially recruit 10 people with autism . They will be based in the tech giant's Redmond offices in Washington . Microsoft is running the scheme with help from specialists Specialisterne . The plans were announced by Mary Ellen Smith, corporate vice president of worldwide operations, who herself has a 19-year-old autistic son .
 
 
     Example 4:
 
-    prediction: boy, 13, allegedly shot and killed female teacher and injured her daughter . he is said to have 'listed 25 names of teachers and pupils he intended to kill' he 'walked into the school armed with a machete and crossbow' he is undergoing psychiatric examination and will not face criminal charges .
+    prediction: a Washington, DC-based company called United Space Structures wants to create a new space station . their giant cylinder could apparently replace the ISS . it would rotate four times per minute to create artificial gravity . it would be 1,300ft (400 metres) long, cost £200 billion ($300 billion) and take 30 years to build . the final design would be 330ft (100 metres) in diameter and 1,310ft (400 metres) long .
 
-    target: Boy, 13, arrested after deadly attack at secondary school in Barcelona . The teenager allegedly shot and killed a teacher using a crossbow . Teen had written a 'kill list' of 25 teachers and students, classmates say . Two students and two teachers were injured in the attack this morning . Attack took place on 16th anniversary of Columbine school massacre .
+    target: Washington, DC company United Space Structures wants to create a new space station . It rotates four times a minute to create artificial gravity - with the 'stem' and 'dome spinning in opposite directions . It would be 1,300ft (400 metres) long, cost £200 billion ($300 billion) and take 30 years to build . ‘We believe artificial gravity is required to support long term living in space,’ Bill Kemp from USS told MailOnline .
 
 
     Example 5:
 
-    prediction: Thierry Henry hits out at javier Hernandez for celebrating his late winner . the on-loan striker celebrated 'like he had just won the world cup' . the real madrid striker scored a late winner against rivals atletico .
+    prediction: the unofficial 2012 paperback book was revealed by a plaintiff in a lawsuit filed by four sexual-assault victims . she brought forward the songbook and she had filed an administrative complaint over the book in 2012 . the 130-page songbook contains 70 songs with titles including Pubic Hair, The Kotex Song and Bestiality .
 
-    target: Former Arsenal attacker Thierry Henry criticised Javier Hernandez . Hernandez scored late to earn Real Madrid Champions League victory . But, Henry feels the Mexican owes all the credit to Cristiano Ronaldo . Ronaldo provided the assist for the on-loan striker to tap home late on . CLICK HERE for our lowdown on the UEFA Champions League final four .
+    target: The 130-page songbook contains 70 songs with titles including Pubic Hair and The Kotex Song as well as Bestiality . One of them, The S&M Man, is set to tune of The Candy Man and graphically describes sexually mutilating women . Revealed in lawsuit filing by four sexual-assault victims who want to stop the practice of sexual assault allegations within the military being handled entirely within the command structure .
 
 
 
@@ -850,7 +850,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  16.546 seconds)
+   **Total running time of the script:** ( 4 minutes  38.080 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
