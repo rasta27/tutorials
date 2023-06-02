@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.2MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 16.6MB/s]
 
 
 
@@ -135,45 +135,42 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|1         | 10.6M/945M [00:00<00:08, 111MB/s]
-      4%|3         | 34.8M/945M [00:00<00:04, 195MB/s]
-      6%|6         | 59.5M/945M [00:00<00:04, 224MB/s]
-      9%|8         | 84.3M/945M [00:00<00:03, 238MB/s]
-     12%|#1        | 109M/945M [00:00<00:03, 246MB/s] 
-     14%|#4        | 134M/945M [00:00<00:03, 250MB/s]
-     17%|#6        | 158M/945M [00:00<00:03, 253MB/s]
-     19%|#9        | 182M/945M [00:00<00:03, 253MB/s]
-     22%|##1       | 207M/945M [00:00<00:03, 255MB/s]
-     25%|##4       | 232M/945M [00:01<00:02, 258MB/s]
-     27%|##7       | 257M/945M [00:01<00:02, 259MB/s]
-     30%|##9       | 282M/945M [00:01<00:02, 259MB/s]
-     32%|###2      | 307M/945M [00:01<00:02, 259MB/s]
-     35%|###5      | 332M/945M [00:01<00:02, 259MB/s]
-     38%|###7      | 357M/945M [00:01<00:02, 260MB/s]
-     40%|####      | 382M/945M [00:01<00:02, 262MB/s]
-     43%|####3     | 407M/945M [00:01<00:02, 263MB/s]
-     46%|####5     | 432M/945M [00:01<00:02, 260MB/s]
-     48%|####8     | 457M/945M [00:01<00:01, 259MB/s]
-     51%|#####1    | 482M/945M [00:02<00:01, 259MB/s]
-     54%|#####3    | 507M/945M [00:02<00:01, 260MB/s]
-     56%|#####6    | 532M/945M [00:02<00:01, 258MB/s]
-     59%|#####8    | 556M/945M [00:02<00:01, 258MB/s]
-     61%|######1   | 581M/945M [00:02<00:01, 256MB/s]
-     64%|######4   | 605M/945M [00:02<00:01, 255MB/s]
-     67%|######6   | 630M/945M [00:02<00:01, 254MB/s]
-     69%|######9   | 654M/945M [00:02<00:01, 255MB/s]
-     72%|#######1  | 679M/945M [00:02<00:01, 256MB/s]
-     74%|#######4  | 703M/945M [00:02<00:00, 255MB/s]
-     77%|#######7  | 728M/945M [00:03<00:00, 257MB/s]
-     80%|#######9  | 752M/945M [00:03<00:00, 257MB/s]
-     82%|########2 | 777M/945M [00:03<00:00, 258MB/s]
-     85%|########4 | 802M/945M [00:03<00:00, 256MB/s]
-     87%|########7 | 826M/945M [00:03<00:00, 254MB/s]
-     90%|######### | 850M/945M [00:03<00:00, 254MB/s]
-     93%|#########2| 875M/945M [00:03<00:00, 255MB/s]
-     95%|#########5| 899M/945M [00:03<00:00, 256MB/s]
-     98%|#########7| 924M/945M [00:03<00:00, 254MB/s]
-    100%|##########| 945M/945M [00:03<00:00, 253MB/s]
+      1%|1         | 11.7M/945M [00:00<00:08, 122MB/s]
+      4%|4         | 38.0M/945M [00:00<00:04, 212MB/s]
+      7%|6         | 65.2M/945M [00:00<00:03, 246MB/s]
+     10%|9         | 92.3M/945M [00:00<00:03, 261MB/s]
+     13%|#2        | 119M/945M [00:00<00:03, 269MB/s] 
+     16%|#5        | 146M/945M [00:00<00:03, 274MB/s]
+     18%|#8        | 174M/945M [00:00<00:02, 279MB/s]
+     21%|##1       | 201M/945M [00:00<00:02, 281MB/s]
+     24%|##4       | 229M/945M [00:00<00:02, 283MB/s]
+     27%|##7       | 256M/945M [00:01<00:02, 281MB/s]
+     30%|##9       | 283M/945M [00:01<00:02, 283MB/s]
+     33%|###2      | 311M/945M [00:01<00:02, 286MB/s]
+     36%|###5      | 338M/945M [00:01<00:02, 286MB/s]
+     39%|###8      | 365M/945M [00:01<00:02, 286MB/s]
+     42%|####1     | 393M/945M [00:01<00:02, 286MB/s]
+     45%|####4     | 421M/945M [00:01<00:01, 288MB/s]
+     47%|####7     | 448M/945M [00:01<00:01, 287MB/s]
+     50%|#####     | 475M/945M [00:01<00:01, 286MB/s]
+     53%|#####3    | 503M/945M [00:01<00:01, 285MB/s]
+     56%|#####6    | 530M/945M [00:02<00:01, 285MB/s]
+     59%|#####8    | 557M/945M [00:02<00:01, 285MB/s]
+     62%|######1   | 584M/945M [00:02<00:01, 285MB/s]
+     65%|######4   | 612M/945M [00:02<00:01, 286MB/s]
+     68%|######7   | 639M/945M [00:02<00:01, 286MB/s]
+     71%|#######   | 667M/945M [00:02<00:01, 287MB/s]
+     73%|#######3  | 694M/945M [00:02<00:00, 287MB/s]
+     76%|#######6  | 721M/945M [00:02<00:00, 286MB/s]
+     79%|#######9  | 749M/945M [00:02<00:00, 287MB/s]
+     82%|########2 | 777M/945M [00:02<00:00, 288MB/s]
+     85%|########5 | 804M/945M [00:03<00:00, 287MB/s]
+     88%|########8 | 832M/945M [00:03<00:00, 287MB/s]
+     91%|######### | 859M/945M [00:03<00:00, 288MB/s]
+     94%|#########3| 887M/945M [00:03<00:00, 287MB/s]
+     97%|#########6| 914M/945M [00:03<00:00, 285MB/s]
+    100%|#########9| 941M/945M [00:03<00:00, 285MB/s]
+    100%|##########| 945M/945M [00:03<00:00, 281MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +466,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: the 21-year-old won his first major title at augusta on sunday . he was greeted by dignitaries and his father, mother and brother . he embraced the crowd and formally acknowledged the patrons .
+    prediction: Amanda Beringer asked her brother Brad Fraser to make a toast at her wedding . the toast was a tribute to their father, who died of motor neuron disease . it was also a tribute to their father, who lost his battle with the disease .
 
-    target: Jordan Spieth won his maiden major at the age of 21 at Augusta . The 79th Masters attracted massive television ratings in the USA . Spieth went back onto the 18th green to formally acknowledge the crowd . Jack Nicklaus and Phil Mickelson are among those to pay tribute to Spieth .
+    target: Amanda Beringer asked her brother Brad to make a toast at her wedding . The song poked fun at marriage and had the wedding guests in stitches . But the song was also a tribute to their late father Peter . Peter passed away of Motor Neuron Disease 10 years ago . 'He'd have wanted everyone laughing and enjoying the day,' says Amanda .
 
 
     Example 2:
 
-    prediction: aide to senator resigned after he was arrested for allegedly soliciting a prostitute . 61-year-old was arrested on friday in a misdemeanor charge for solicitation of prostitution . he has been the state director for the last year and her number-two staffer behind the chief of staff .
+    prediction: LED screens found in most electronic devices can harm the retina . this is the light-sensitive layer at the back of the eye, she says . it can damage the retina, leading to macular degeneration, she says . 'blue light' emitted from gadgets can cause a variety of health complaints . research has already shown that it can cause sleeping and eating problems . but now, a doctor has discovered it can also permanently damage the retina .
 
-    target: David Wihby, 61, has been New Hampshire Senator Kelly Ayotte's state director for the last year . He was arrested on Friday on a misdemeanor charge for solicitation of prostitution and stepped down from his government role on Saturday . He was one of ten men arrested in the last week by Nashua, New Hampshire, police in prostitution sting . Ayotte said in a statement that she was 'shocked and deeply saddened' by Wihby's arrest .
+    target: Key culprit is the LED screens found in most electronic devices . These can can harm the light-sensitive retina, irreversibly damaging sight . However the problem can be remedied by using special screen filters . Dr Celia Sanchez-Ramos has developed one to make light less damaging .
 
 
     Example 3:
 
-    prediction: the football association will be contacting both clubs after the incident . the incident happened during the celebrations at loftus road . the club are unlikely to face disciplinary action over the incident .
+    prediction: by 2100 around one per cent more of the world’s population will be Muslim than Christian, with the largest proportion of followers in India . a different religious majority is also projected to decline from 159 to 151 . less than 50 per cent of the population will be Christian in the uk, australia, Benin, Bosnia-Herzegovina, France, the Netherlands, New Zealand and the Republic of Macedonia .
 
-    target: QPR unlikely to face disciplinary action over the incident . Queens Park Rangers to review CCTV and promise to ban anyone involved . Cesc Fabregas scored a late winner for Chelsea at Loftus Road .
+    target: Muslims will increase at more than double the rate of world's population . Largest proportion of Muslims likely to be in India, data showed . Research was completed by the Pew Research Center in America .
 
 
     Example 4:
 
-    prediction: a Reading university researcher has said that bees prefer cities to fields . the expansion of farmland has actually been damaging to bee population . heaths and meadows near Milton Keynes now boast more species of bee . but sites in more rural areas are home to more bee species than towns .
+    prediction: boy, 13, allegedly shot and killed female teacher and injured her daughter . he is said to have 'listed 25 names of teachers and pupils he intended to kill' he 'walked into the school armed with a machete and crossbow' he is undergoing psychiatric examination and will not face criminal charges .
 
-    target: Reading University researcher says bees prefer cities to fields . Expansion of farmland has actually been damaging to bee population . Wildlife sites in four English counties saw bee species decrease . Reason is likely due to wide variety of flowering plants in urban areas .
+    target: Boy, 13, arrested after deadly attack at secondary school in Barcelona . The teenager allegedly shot and killed a teacher using a crossbow . Teen had written a 'kill list' of 25 teachers and students, classmates say . Two students and two teachers were injured in the attack this morning . Attack took place on 16th anniversary of Columbine school massacre .
 
 
     Example 5:
 
-    prediction: beaten by birmingham in the last four of the championship . a late Clayton Donaldson goal gave the visitors the lead . the win was their 16th of the season and their first since a £16million move .
+    prediction: Thierry Henry hits out at javier Hernandez for celebrating his late winner . the on-loan striker celebrated 'like he had just won the world cup' . the real madrid striker scored a late winner against rivals atletico .
 
-    target: Reading are 18th in the Championship while Birmingham City sit in 15th . Clayton Donaldson's 83rd minute header secured the three points . The FA Cup semi-finalists dominated possession but were made to pay .
+    target: Former Arsenal attacker Thierry Henry criticised Javier Hernandez . Hernandez scored late to earn Real Madrid Champions League victory . But, Henry feels the Mexican owes all the credit to Cristiano Ronaldo . Ronaldo provided the assist for the on-loan striker to tap home late on . CLICK HERE for our lowdown on the UEFA Champions League final four .
 
 
 
@@ -853,7 +850,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  38.969 seconds)
+   **Total running time of the script:** ( 4 minutes  16.546 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

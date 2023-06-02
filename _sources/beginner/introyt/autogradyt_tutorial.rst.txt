@@ -214,7 +214,7 @@ inputs:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f95fc86f700>]
+    [<matplotlib.lines.Line2D object at 0x7f28b75be530>]
 
 
 
@@ -363,17 +363,17 @@ to the function with no history of its own.
  .. code-block:: none
 
     d:
-    <AddBackward0 object at 0x7f95fc86dc00>
-    ((<MulBackward0 object at 0x7f95fc874af0>, 0), (None, 0))
-    ((<SinBackward0 object at 0x7f95fc86dc00>, 0), (None, 0))
-    ((<AccumulateGrad object at 0x7f95fc874af0>, 0),)
+    <AddBackward0 object at 0x7f28b5f2bc40>
+    ((<MulBackward0 object at 0x7f28b5f2be20>, 0), (None, 0))
+    ((<SinBackward0 object at 0x7f28b5f2be20>, 0), (None, 0))
+    ((<AccumulateGrad object at 0x7f28b5f2bc40>, 0),)
     ()
 
     c:
-    <MulBackward0 object at 0x7f95fc86dc00>
+    <MulBackward0 object at 0x7f28b5f2be20>
 
     b:
-    <SinBackward0 object at 0x7f95fc86dc00>
+    <SinBackward0 object at 0x7f28b5f2be20>
 
     a:
     None
@@ -417,7 +417,7 @@ call the ``backward()`` method on the output, and check the input’s
             -1.4142e+00, -1.0000e+00, -5.1764e-01,  2.3850e-08,  5.1764e-01,
              1.0000e+00,  1.4142e+00,  1.7321e+00,  1.9319e+00,  2.0000e+00])
 
-    [<matplotlib.lines.Line2D object at 0x7f95e73b05b0>]
+    [<matplotlib.lines.Line2D object at 0x7f28b76748e0>]
 
 
 
@@ -518,8 +518,8 @@ weights, and verify that no gradients have been computed yet:
 
  .. code-block:: none
 
-    tensor([-0.0050, -0.0485,  0.0967, -0.0333, -0.0108, -0.0193, -0.0571,  0.0447,
-             0.0952, -0.0479], grad_fn=<SliceBackward0>)
+    tensor([-0.0812, -0.0386,  0.0804,  0.0389, -0.0112,  0.0996,  0.0565,  0.0006,
+             0.0199, -0.0075], grad_fn=<SliceBackward0>)
     None
 
 
@@ -554,7 +554,7 @@ basic stochastic gradient descent optimizer.
 
  .. code-block:: none
 
-    tensor(142.2273, grad_fn=<SumBackward0>)
+    tensor(176.0728, grad_fn=<SumBackward0>)
 
 
 
@@ -582,10 +582,10 @@ Now, let’s call ``loss.backward()`` and see what happens:
 
  .. code-block:: none
 
-    tensor([-0.0050, -0.0485,  0.0967, -0.0333, -0.0108, -0.0193, -0.0571,  0.0447,
-             0.0952, -0.0479], grad_fn=<SliceBackward0>)
-    tensor([-1.4853, -0.6449, -3.8714, -0.1367, -2.3379, -3.9520, -2.4649, -2.3076,
-             0.1014, -6.3914])
+    tensor([-0.0812, -0.0386,  0.0804,  0.0389, -0.0112,  0.0996,  0.0565,  0.0006,
+             0.0199, -0.0075], grad_fn=<SliceBackward0>)
+    tensor([-0.9474,  0.2626, -5.2043, -3.2221, -1.6369,  0.4478, -5.2908,  0.8393,
+             1.6604, -2.6517])
 
 
 
@@ -616,10 +616,10 @@ based on the computed gradients.
 
  .. code-block:: none
 
-    tensor([-0.0035, -0.0478,  0.1006, -0.0331, -0.0084, -0.0153, -0.0546,  0.0470,
-             0.0951, -0.0416], grad_fn=<SliceBackward0>)
-    tensor([-1.4853, -0.6449, -3.8714, -0.1367, -2.3379, -3.9520, -2.4649, -2.3076,
-             0.1014, -6.3914])
+    tensor([-0.0803, -0.0389,  0.0856,  0.0421, -0.0096,  0.0991,  0.0618, -0.0002,
+             0.0182, -0.0048], grad_fn=<SliceBackward0>)
+    tensor([-0.9474,  0.2626, -5.2043, -3.2221, -1.6369,  0.4478, -5.2908,  0.8393,
+             1.6604, -2.6517])
 
 
 
@@ -661,10 +661,10 @@ learning weights will accumulate:
 
  .. code-block:: none
 
-    tensor([-1.4853, -0.6449, -3.8714, -0.1367, -2.3379, -3.9520, -2.4649, -2.3076,
-             0.1014, -6.3914])
-    tensor([ -5.3799,   6.9267, -15.3557,   2.7942,  -8.1722, -17.2481,  -5.2379,
-             -6.4293,  -0.4767,  -3.2281])
+    tensor([-0.9474,  0.2626, -5.2043, -3.2221, -1.6369,  0.4478, -5.2908,  0.8393,
+             1.6604, -2.6517])
+    tensor([  5.0391,  -4.3192, -36.6828, -17.3809,   2.1866,   0.4006, -23.2293,
+              0.8593,   6.5132, -16.3078])
     tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 
 
@@ -849,8 +849,8 @@ from the computation history:
 
  .. code-block:: none
 
-    tensor([0.9040, 0.3239, 0.6950, 0.4197, 0.8351], requires_grad=True)
-    tensor([0.9040, 0.3239, 0.6950, 0.4197, 0.8351])
+    tensor([0.1902, 0.9730, 0.7456, 0.3044, 0.1408], requires_grad=True)
+    tensor([0.1902, 0.9730, 0.7456, 0.3044, 0.1408])
 
 
 
@@ -928,15 +928,15 @@ example usage:
     ---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
                            Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
     ---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-                      aten::div        51.24%       2.794ms        51.24%       2.794ms       2.794us       6.536ms        51.32%       6.536ms       6.536us          1000  
-                      aten::mul        45.39%       2.475ms        45.39%       2.475ms       2.475us       6.200ms        48.68%       6.200ms       6.200us          1000  
-        cudaGetDeviceProperties         2.93%     160.000us         2.93%     160.000us     160.000us       0.000us         0.00%       0.000us       0.000us             1  
-          cudaDeviceSynchronize         0.37%      20.000us         0.37%      20.000us      20.000us       0.000us         0.00%       0.000us       0.000us             1  
-          cudaStreamIsCapturing         0.07%       4.000us         0.07%       4.000us       1.333us       0.000us         0.00%       0.000us       0.000us             3  
+                      aten::div        51.81%       3.462ms        51.81%       3.462ms       3.462us       7.049ms        51.26%       7.049ms       7.049us          1000  
+                      aten::mul        45.24%       3.023ms        45.24%       3.023ms       3.023us       6.702ms        48.74%       6.702ms       6.702us          1000  
+        cudaGetDeviceProperties         2.29%     153.000us         2.29%     153.000us     153.000us       0.000us         0.00%       0.000us       0.000us             1  
+          cudaDeviceSynchronize         0.49%      33.000us         0.49%      33.000us      33.000us       0.000us         0.00%       0.000us       0.000us             1  
+          cudaStreamIsCapturing         0.16%      11.000us         0.16%      11.000us       3.667us       0.000us         0.00%       0.000us       0.000us             3  
              cudaGetDeviceCount         0.00%       0.000us         0.00%       0.000us       0.000us       0.000us         0.00%       0.000us       0.000us             1  
     ---------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-    Self CPU time total: 5.453ms
-    Self CUDA time total: 12.736ms
+    Self CPU time total: 6.682ms
+    Self CUDA time total: 13.751ms
 
 
 
@@ -1038,7 +1038,7 @@ precedes it. Let’s try a specific example with a small vector:
 
  .. code-block:: none
 
-    tensor([1500.9054,  131.3224,  515.2198], grad_fn=<MulBackward0>)
+    tensor([  398.4862,  1025.8411, -1152.8191], grad_fn=<MulBackward0>)
 
 
 
@@ -1116,9 +1116,9 @@ single-element inputs:
 
  .. code-block:: none
 
-    (tensor([0.7478]), tensor([0.2621]))
+    (tensor([0.8761]), tensor([0.9734]))
 
-    (tensor([[4.2248]]), tensor([[3.]]))
+    (tensor([[4.8032]]), tensor([[3.]]))
 
 
 
@@ -1149,11 +1149,11 @@ You can, of course, do this with higher-order tensors:
 
  .. code-block:: none
 
-    (tensor([0.6431, 0.8679, 0.1639]), tensor([0.1893, 0.5826, 0.4910]))
+    (tensor([0.9010, 0.2948, 0.5432]), tensor([0.2024, 0.0517, 0.7442]))
 
-    (tensor([[3.8049, 0.0000, 0.0000],
-            [0.0000, 4.7640, 0.0000],
-            [0.0000, 0.0000, 2.3562]]), tensor([[3., 0., 0.],
+    (tensor([[4.9241, 0.0000, 0.0000],
+            [0.0000, 2.6858, 0.0000],
+            [0.0000, 0.0000, 3.4430]]), tensor([[3., 0., 0.],
             [0., 3., 0.],
             [0., 0., 3.]]))
 
@@ -1194,7 +1194,7 @@ product, if you provide the vector:
  .. code-block:: none
 
 
-    (tensor([-650.3290,  343.8174,  986.5533]), tensor([1.0240e+02, 1.0240e+03, 1.0240e-01]))
+    (tensor([  945.0167,  -419.5425, -1065.7964]), tensor([1.0240e+02, 1.0240e+03, 1.0240e-01]))
 
 
 
@@ -1212,7 +1212,7 @@ API <https://pytorch.org/docs/stable/autograd.html#functional-higher-level-api>`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.718 seconds)
+   **Total running time of the script:** ( 0 minutes  3.511 seconds)
 
 
 .. _sphx_glr_download_beginner_introyt_autogradyt_tutorial.py:
