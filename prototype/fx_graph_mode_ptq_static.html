@@ -717,9 +717,9 @@ These steps are identitcal to <a class="reference external" href="https://pytorc
 <span class="n">float_model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">saved_model_dir</span> <span class="o">+</span> <span class="n">float_model_file</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
 <span class="n">float_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 
-<span class="c1"># deepcopy the model since we need to keep the original model around</span>
-<span class="kn">import</span> <span class="nn">copy</span>
-<span class="n">model_to_quantize</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">float_model</span><span class="p">)</span>
+<span class="c1"># create another instance of the model since</span>
+<span class="c1"># we need to keep the original model around</span>
+<span class="n">model_to_quantize</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">saved_model_dir</span> <span class="o">+</span> <span class="n">float_model_file</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

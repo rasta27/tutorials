@@ -489,23 +489,48 @@ the num_worker of torch.utils.data.DataLoader() to 0.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
 
   0%|          | 0/170498071 [00:00&lt;?, ?it/s]
-  0%|          | 458752/170498071 [00:00&lt;00:41, 4145221.18it/s]
-  4%|4         | 7340032/170498071 [00:00&lt;00:04, 40582724.34it/s]
- 11%|#1        | 19038208/170498071 [00:00&lt;00:02, 74619306.88it/s]
- 18%|#8        | 30801920/170498071 [00:00&lt;00:01, 91254984.25it/s]
- 25%|##4       | 42532864/170498071 [00:00&lt;00:01, 100553353.67it/s]
- 31%|###1      | 53608448/170498071 [00:00&lt;00:01, 103984623.28it/s]
- 38%|###8      | 65110016/170498071 [00:00&lt;00:00, 107535030.51it/s]
- 45%|####5     | 76742656/170498071 [00:00&lt;00:00, 110249207.45it/s]
- 52%|#####1    | 88375296/170498071 [00:00&lt;00:00, 112143418.84it/s]
- 59%|#####8    | 100073472/170498071 [00:01&lt;00:00, 113611637.86it/s]
- 66%|######5   | 111804416/170498071 [00:01&lt;00:00, 114726666.15it/s]
- 72%|#######2  | 123404288/170498071 [00:01&lt;00:00, 115106649.40it/s]
- 79%|#######9  | 135069696/170498071 [00:01&lt;00:00, 115495803.66it/s]
- 86%|########6 | 146833408/170498071 [00:01&lt;00:00, 116030921.92it/s]
- 93%|#########2| 158531584/170498071 [00:01&lt;00:00, 116306397.90it/s]
-100%|#########9| 170196992/170498071 [00:01&lt;00:00, 115603193.29it/s]
-100%|##########| 170498071/170498071 [00:01&lt;00:00, 105342766.70it/s]
+  0%|          | 360448/170498071 [00:00&lt;00:47, 3555118.80it/s]
+  1%|1         | 2162688/170498071 [00:00&lt;00:14, 11887513.22it/s]
+  2%|2         | 4030464/170498071 [00:00&lt;00:11, 14875876.57it/s]
+  4%|3         | 6356992/170498071 [00:00&lt;00:09, 18096134.92it/s]
+  5%|4         | 8257536/170498071 [00:00&lt;00:08, 18274853.11it/s]
+  6%|6         | 10584064/170498071 [00:00&lt;00:08, 19918551.04it/s]
+  7%|7         | 12582912/170498071 [00:00&lt;00:08, 19693531.38it/s]
+  9%|8         | 14942208/170498071 [00:00&lt;00:07, 20833298.96it/s]
+ 10%|9         | 17039360/170498071 [00:00&lt;00:07, 20210111.70it/s]
+ 11%|#1        | 19431424/170498071 [00:01&lt;00:07, 21160714.58it/s]
+ 13%|#2        | 21561344/170498071 [00:01&lt;00:07, 20581590.71it/s]
+ 14%|#3        | 23855104/170498071 [00:01&lt;00:06, 21151787.68it/s]
+ 15%|#5        | 25985024/170498071 [00:01&lt;00:06, 20740448.46it/s]
+ 17%|#6        | 28246016/170498071 [00:01&lt;00:06, 21235651.62it/s]
+ 18%|#7        | 30375936/170498071 [00:01&lt;00:06, 20916387.51it/s]
+ 19%|#9        | 32505856/170498071 [00:01&lt;00:06, 21004848.24it/s]
+ 20%|##        | 34635776/170498071 [00:01&lt;00:06, 20835659.51it/s]
+ 22%|##1       | 36864000/170498071 [00:01&lt;00:06, 21240805.72it/s]
+ 23%|##2       | 38993920/170498071 [00:01&lt;00:06, 20989354.41it/s]
+ 24%|##4       | 41189376/170498071 [00:02&lt;00:06, 21244392.57it/s]
+ 26%|##5       | 43745280/170498071 [00:02&lt;00:05, 22504644.29it/s]
+ 27%|##7       | 46497792/170498071 [00:02&lt;00:05, 23990779.06it/s]
+ 29%|##8       | 49119232/170498071 [00:02&lt;00:04, 24573861.38it/s]
+ 30%|###       | 51838976/170498071 [00:02&lt;00:04, 25304914.01it/s]
+ 32%|###1      | 54525952/170498071 [00:02&lt;00:04, 25625981.36it/s]
+ 34%|###3      | 57442304/170498071 [00:02&lt;00:04, 26529892.13it/s]
+ 36%|###5      | 60555264/170498071 [00:02&lt;00:03, 27861439.81it/s]
+ 37%|###7      | 63864832/170498071 [00:02&lt;00:03, 29316154.41it/s]
+ 41%|####      | 69140480/170498071 [00:02&lt;00:02, 36218206.02it/s]
+ 44%|####4     | 75431936/170498071 [00:03&lt;00:02, 43993454.88it/s]
+ 48%|####8     | 82542592/170498071 [00:03&lt;00:01, 52039062.75it/s]
+ 53%|#####3    | 90603520/170498071 [00:03&lt;00:01, 60312839.37it/s]
+ 58%|#####7    | 98074624/170498071 [00:03&lt;00:01, 64531940.22it/s]
+ 63%|######2   | 106856448/170498071 [00:03&lt;00:00, 71427827.13it/s]
+ 67%|######7   | 114688000/170498071 [00:03&lt;00:00, 73398609.46it/s]
+ 73%|#######2  | 123666432/170498071 [00:03&lt;00:00, 78235407.65it/s]
+ 77%|#######7  | 131497984/170498071 [00:03&lt;00:00, 77743388.80it/s]
+ 82%|########2 | 140345344/170498071 [00:03&lt;00:00, 80899346.35it/s]
+ 87%|########7 | 148471808/170498071 [00:03&lt;00:00, 79684486.05it/s]
+ 92%|#########2| 157286400/170498071 [00:04&lt;00:00, 82153998.02it/s]
+ 97%|#########7| 165511168/170498071 [00:04&lt;00:00, 80244202.54it/s]
+100%|##########| 170498071/170498071 [00:04&lt;00:00, 40164511.97it/s]
 Extracting ./data/cifar-10-python.tar.gz to ./data
 Files already downloaded and verified
 </pre></div>
@@ -534,7 +559,7 @@ Files already downloaded and verified
 <span class="nb">print</span><span class="p">(</span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">classes</span><span class="p">[</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">labels</span></a><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="si">:</span><span class="s1">5s</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)))</span>
 </pre></div>
 </div>
-<img alt="cifar10 tutorial" class="sphx-glr-single-img" src="../../_images/sphx_glr_cifar10_tutorial_001.png" srcset="../../_images/sphx_glr_cifar10_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>horse deer  deer  ship
+<img alt="cifar10 tutorial" class="sphx-glr-single-img" src="../../_images/sphx_glr_cifar10_tutorial_001.png" srcset="../../_images/sphx_glr_cifar10_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>bird  deer  plane car
 </pre></div>
 </div>
 </div>
@@ -610,18 +635,18 @@ network and optimize.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Finished Training'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1,  2000] loss: 2.212
-[1,  4000] loss: 1.879
-[1,  6000] loss: 1.649
-[1,  8000] loss: 1.549
-[1, 10000] loss: 1.518
-[1, 12000] loss: 1.474
-[2,  2000] loss: 1.395
-[2,  4000] loss: 1.376
-[2,  6000] loss: 1.320
-[2,  8000] loss: 1.337
-[2, 10000] loss: 1.287
-[2, 12000] loss: 1.276
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1,  2000] loss: 2.180
+[1,  4000] loss: 1.830
+[1,  6000] loss: 1.651
+[1,  8000] loss: 1.576
+[1, 10000] loss: 1.510
+[1, 12000] loss: 1.468
+[2,  2000] loss: 1.414
+[2,  4000] loss: 1.357
+[2,  6000] loss: 1.355
+[2,  8000] loss: 1.319
+[2, 10000] loss: 1.295
+[2, 12000] loss: 1.291
 Finished Training
 </pre></div>
 </div>
@@ -675,7 +700,7 @@ So, let’s get the index of the highest energy:</p>
                               <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:  cat   ship  ship  plane
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:  cat   ship  ship  ship
 </pre></div>
 </div>
 <p>The results seem pretty good.</p>
@@ -696,7 +721,7 @@ So, let’s get the index of the highest energy:</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Accuracy of the network on the 10000 test images: </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">total</span><span class="si">}</span><span class="s1"> %'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy of the network on the 10000 test images: 54 %
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy of the network on the 10000 test images: 55 %
 </pre></div>
 </div>
 <p>That looks way better than chance, which is 10% accuracy (randomly picking
@@ -727,16 +752,16 @@ not perform well:</p>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Accuracy for class: </span><span class="si">{</span><span class="n">classname</span><span class="si">:</span><span class="s1">5s</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> %'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy for class: plane is 67.5 %
-Accuracy for class: car   is 79.8 %
-Accuracy for class: bird  is 45.5 %
-Accuracy for class: cat   is 33.7 %
-Accuracy for class: deer  is 33.7 %
-Accuracy for class: dog   is 30.5 %
-Accuracy for class: frog  is 62.7 %
-Accuracy for class: horse is 76.6 %
-Accuracy for class: ship  is 68.9 %
-Accuracy for class: truck is 49.0 %
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy for class: plane is 58.1 %
+Accuracy for class: car   is 69.1 %
+Accuracy for class: bird  is 33.2 %
+Accuracy for class: cat   is 23.4 %
+Accuracy for class: deer  is 48.2 %
+Accuracy for class: dog   is 64.9 %
+Accuracy for class: frog  is 52.2 %
+Accuracy for class: horse is 69.7 %
+Accuracy for class: ship  is 66.8 %
+Accuracy for class: truck is 69.3 %
 </pre></div>
 </div>
 <p>Okay, so what next?</p>
@@ -801,7 +826,7 @@ please check out <a class="reference internal" href="data_parallel_tutorial.html
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">dataiter</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  51.947 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  48.424 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-blitz-cifar10-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c51fcdf96d93a8e4b3f2943cb36bab19/cifar10_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cifar10_tutorial.py</span></code></a></p>

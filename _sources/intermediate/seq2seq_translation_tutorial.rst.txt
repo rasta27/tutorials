@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['vous n etes plus seule .', 'you re not alone anymore .']
+    ['ils sont juste pour vous .', 'they re just for you .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 19s (- 18m 36s) (5000 6%) 2.8059
-    2m 34s (- 16m 47s) (10000 13%) 2.2712
-    3m 50s (- 15m 22s) (15000 20%) 1.9965
-    5m 5s (- 14m 0s) (20000 26%) 1.7099
-    6m 21s (- 12m 43s) (25000 33%) 1.5324
-    7m 37s (- 11m 26s) (30000 40%) 1.3798
-    8m 53s (- 10m 9s) (35000 46%) 1.2271
-    10m 10s (- 8m 54s) (40000 53%) 1.0916
-    11m 25s (- 7m 37s) (45000 60%) 1.0025
-    12m 42s (- 6m 21s) (50000 66%) 0.9330
-    13m 58s (- 5m 5s) (55000 73%) 0.8198
-    15m 15s (- 3m 48s) (60000 80%) 0.7384
-    16m 31s (- 2m 32s) (65000 86%) 0.6995
-    17m 48s (- 1m 16s) (70000 93%) 0.6276
-    19m 5s (- 0m 0s) (75000 100%) 0.5921
+    1m 21s (- 19m 0s) (5000 6%) 2.8473
+    2m 38s (- 17m 10s) (10000 13%) 2.3031
+    3m 55s (- 15m 41s) (15000 20%) 1.9873
+    5m 12s (- 14m 19s) (20000 26%) 1.7313
+    6m 30s (- 13m 0s) (25000 33%) 1.5515
+    7m 47s (- 11m 40s) (30000 40%) 1.3672
+    9m 3s (- 10m 20s) (35000 46%) 1.2185
+    10m 19s (- 9m 2s) (40000 53%) 1.1105
+    11m 36s (- 7m 44s) (45000 60%) 0.9903
+    12m 51s (- 6m 25s) (50000 66%) 0.8716
+    14m 8s (- 5m 8s) (55000 73%) 0.8256
+    15m 24s (- 3m 51s) (60000 80%) 0.7456
+    16m 40s (- 2m 33s) (65000 86%) 0.6786
+    17m 57s (- 1m 16s) (70000 93%) 0.6169
+    19m 13s (- 0m 0s) (75000 100%) 0.5777
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > j ai peur de voler .
-    = i m afraid of flying .
-    < i m afraid of spiders . <EOS>
+    > elle est privee de sortie .
+    = she is forbidden to go out .
+    < she is forbidden to go out . <EOS>
 
-    > je ne suis pas de garde demain .
-    = i am not on call tomorrow .
-    < i am off out of tomorrow . <EOS>
+    > je ne me panique pas .
+    = i m not panicking .
+    < i m not panicking . <EOS>
 
-    > tu te leurres .
-    = you are deceiving yourself .
-    < you are deceiving yourself . <EOS>
+    > il est ton ami .
+    = he s your friend .
+    < he s your friend . <EOS>
 
-    > il est la pour moi .
-    = he s here for me .
-    < he is here for me . <EOS>
+    > je bois une biere en ce moment meme .
+    = i m drinking a beer right now .
+    < i m drinking a beer right now . <EOS>
 
-    > tu es splendide .
-    = you are gorgeous .
-    < you are gorgeous . <EOS>
+    > il a peur de faire des erreurs .
+    = he is afraid of making mistakes .
+    < he s afraid of making mistakes . <EOS>
 
-    > je fais mes devoirs .
-    = i am doing my homework .
-    < i m doing my homework . <EOS>
+    > vous n en avez pas termine .
+    = you re not finished .
+    < you re not finished . <EOS>
 
-    > il a peur de son pere .
-    = he is afraid of his father .
-    < he is afraid of his father <EOS>
+    > je suis impatient .
+    = i m impatient .
+    < i m impatient . <EOS>
 
-    > il a trois ans de plus que moi .
-    = he s three years older than me .
-    < he s three years older than me . <EOS>
+    > c est un homme de grand talent .
+    = he is a man of great ability .
+    < he is a man of man of . <EOS>
 
-    > il est satisfait du resultat .
-    = he is satisfied with the result .
-    < he is satisfied with the result . <EOS>
+    > ils t attendent .
+    = they re waiting for you .
+    < they re waiting for you . <EOS>
 
-    > vous etes sournoises .
-    = you re sneaky .
-    < you re sneaky . <EOS>
+    > elle tricote un pull .
+    = she is knitting a sweater .
+    < she is writing a sweater . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f3b06a8aa40>
+    <matplotlib.image.AxesImage object at 0x7f8fd4522b00>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than me am . <EOS>
+    output = she s five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she is too old . <EOS>
+    output = she s too too . <EOS>
     input = je ne crains pas de mourir .
-    output = i m afraid of not scared . <EOS>
+    output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young director . <EOS>
+    output = he s a talented young young . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  18.403 seconds)
+   **Total running time of the script:** ( 19 minutes  27.136 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

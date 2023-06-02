@@ -288,8 +288,8 @@ random at this stage, since we start with random weights.
 
  .. code-block:: none
 
-    tensor([-2.9914, -2.3419, -2.7545, -1.6680, -2.0481, -2.5983, -2.7577, -1.7163,
-            -2.5992, -2.5196], grad_fn=<SelectBackward0>) torch.Size([64, 10])
+    tensor([-2.8069, -1.9075, -2.4914, -1.9390, -2.6146, -2.4586, -2.6393, -2.0134,
+            -2.6884, -2.0188], grad_fn=<SelectBackward0>) torch.Size([64, 10])
 
 
 
@@ -342,7 +342,7 @@ after a backprop pass later.
 
  .. code-block:: none
 
-    tensor(2.3254, grad_fn=<NegBackward0>)
+    tensor(2.3966, grad_fn=<NegBackward0>)
 
 
 
@@ -389,7 +389,7 @@ accuracy improves as our loss improves.
 
  .. code-block:: none
 
-    tensor(0.1406)
+    tensor(0.1094)
 
 
 
@@ -479,7 +479,7 @@ have increased, and they have.
 
  .. code-block:: none
 
-    tensor(0.0830, grad_fn=<NegBackward0>) tensor(1.)
+    tensor(0.0813, grad_fn=<NegBackward0>) tensor(1.)
 
 
 
@@ -547,7 +547,7 @@ confirm that our loss and accuracy are the same as before:
 
  .. code-block:: none
 
-    tensor(0.0830, grad_fn=<NllLossBackward0>) tensor(1.)
+    tensor(0.0813, grad_fn=<NllLossBackward0>) tensor(1.)
 
 
 
@@ -632,7 +632,7 @@ method automatically.
 
  .. code-block:: none
 
-    tensor(2.2736, grad_fn=<NllLossBackward0>)
+    tensor(2.4454, grad_fn=<NllLossBackward0>)
 
 
 
@@ -715,7 +715,7 @@ Let's double-check that our loss has gone down:
 
  .. code-block:: none
 
-    tensor(0.0800, grad_fn=<NllLossBackward0>)
+    tensor(0.0835, grad_fn=<NllLossBackward0>)
 
 
 
@@ -773,7 +773,7 @@ We instantiate our model and calculate the loss in the same way as before:
 
  .. code-block:: none
 
-    tensor(2.3779, grad_fn=<NllLossBackward0>)
+    tensor(2.3124, grad_fn=<NllLossBackward0>)
 
 
 
@@ -799,7 +799,7 @@ We are still able to use our same ``fit`` method as before.
 
  .. code-block:: none
 
-    tensor(0.0813, grad_fn=<NllLossBackward0>)
+    tensor(0.0810, grad_fn=<NllLossBackward0>)
 
 
 
@@ -885,8 +885,8 @@ can reuse it in the future.
 
  .. code-block:: none
 
-    tensor(2.3085, grad_fn=<NllLossBackward0>)
-    tensor(0.0819, grad_fn=<NllLossBackward0>)
+    tensor(2.3706, grad_fn=<NllLossBackward0>)
+    tensor(0.0824, grad_fn=<NllLossBackward0>)
 
 
 
@@ -986,7 +986,7 @@ Now, we can do these two steps together:
 
  .. code-block:: none
 
-    tensor(0.0808, grad_fn=<NllLossBackward0>)
+    tensor(0.0822, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1061,7 +1061,7 @@ Now, our loop is much cleaner, as ``(xb, yb)`` are loaded automatically from the
 
  .. code-block:: none
 
-    tensor(0.0815, grad_fn=<NllLossBackward0>)
+    tensor(0.0831, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1149,8 +1149,8 @@ and ``nn.Dropout`` to ensure appropriate behavior for these different phases.)
 
  .. code-block:: none
 
-    0 tensor(0.3254)
-    1 tensor(0.2844)
+    0 tensor(0.3176)
+    1 tensor(0.2856)
 
 
 
@@ -1271,8 +1271,8 @@ model can be run in 3 lines of code:
 
  .. code-block:: none
 
-    0 0.3243388211131096
-    1 0.305076156103611
+    0 0.3474805922985077
+    1 0.2796366903364658
 
 
 
@@ -1349,8 +1349,8 @@ and generally leads to faster training.
 
  .. code-block:: none
 
-    0 0.37180733239650726
-    1 0.26105324294567106
+    0 0.34755015444755555
+    1 0.2851326383590698
 
 
 
@@ -1428,8 +1428,8 @@ The model created with ``Sequential`` is simple:
 
  .. code-block:: none
 
-    0 0.36091970903873444
-    1 0.2540302430391312
+    0 0.36202606921195984
+    1 0.24835893063545228
 
 
 
@@ -1530,8 +1530,8 @@ Let's try it out:
 
  .. code-block:: none
 
-    0 0.4136214818954468
-    1 0.2243575732111931
+    0 0.3669898234367371
+    1 0.264649813079834
 
 
 
@@ -1648,8 +1648,8 @@ You should find it runs faster now:
 
  .. code-block:: none
 
-    0 0.2055672808200121
-    1 0.18189026859104634
+    0 0.19406998971700667
+    1 0.1817730222940445
 
 
 
@@ -1692,7 +1692,7 @@ what we've seen:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  40.234 seconds)
+   **Total running time of the script:** ( 0 minutes  39.662 seconds)
 
 
 .. _sphx_glr_download_beginner_nn_tutorial.py:
