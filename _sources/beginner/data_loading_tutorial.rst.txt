@@ -64,7 +64,7 @@ installed:
  .. code-block:: none
 
 
-    <contextlib.ExitStack object at 0x7f199ed63d60>
+    <contextlib.ExitStack object at 0x7f25f84b7a90>
 
 
 
@@ -250,7 +250,7 @@ Let's instantiate this class and iterate through the data samples. We
 will print the sizes of first 4 samples and show their landmarks.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-184
+.. GENERATED FROM PYTHON SOURCE LINES 162-182
 
 .. code-block:: default
 
@@ -260,9 +260,7 @@ will print the sizes of first 4 samples and show their landmarks.
 
     fig = plt.figure()
 
-    for i in range(len(face_dataset)):
-        sample = face_dataset[i]
-
+    for i, sample in enumerate(face_dataset):
         print(i, sample['image'].shape, sample['landmarks'].shape)
 
         ax = plt.subplot(1, 4, i + 1)
@@ -297,7 +295,7 @@ will print the sizes of first 4 samples and show their landmarks.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-212
+.. GENERATED FROM PYTHON SOURCE LINES 183-210
 
 Transforms
 ----------
@@ -327,7 +325,7 @@ Observe below how these transforms had to be applied both on the image and
 landmarks.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 212-295
+.. GENERATED FROM PYTHON SOURCE LINES 210-293
 
 .. code-block:: default
 
@@ -421,7 +419,7 @@ landmarks.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 296-301
+.. GENERATED FROM PYTHON SOURCE LINES 294-299
 
 .. note::
     In the example above, `RandomCrop` uses an external library's random number generator
@@ -429,7 +427,7 @@ landmarks.
     (see `here <https://pytorch.org/docs/stable/notes/faq.html#my-data-loader-workers-return-identical-random-numbers>`_).
     In practice, it is safer to stick to PyTorch's random number generator, e.g. by using `torch.randint` instead.
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-314
+.. GENERATED FROM PYTHON SOURCE LINES 301-312
 
 Compose transforms
 ~~~~~~~~~~~~~~~~~~
@@ -443,7 +441,7 @@ then randomly crop a square of size 224 from it. i.e, we want to compose
 to do this.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 314-334
+.. GENERATED FROM PYTHON SOURCE LINES 312-332
 
 .. code-block:: default
 
@@ -479,7 +477,7 @@ to do this.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 335-350
+.. GENERATED FROM PYTHON SOURCE LINES 333-348
 
 Iterating through the dataset
 -----------------------------
@@ -497,7 +495,7 @@ We can iterate over the created dataset with a ``for i in range``
 loop as before.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 350-368
+.. GENERATED FROM PYTHON SOURCE LINES 348-364
 
 .. code-block:: default
 
@@ -510,9 +508,7 @@ loop as before.
                                                    ToTensor()
                                                ]))
 
-    for i in range(len(transformed_dataset)):
-        sample = transformed_dataset[i]
-
+    for i, sample in enumerate(transformed_dataset):
         print(i, sample['image'].size(), sample['landmarks'].size())
 
         if i == 3:
@@ -535,7 +531,7 @@ loop as before.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 369-382
+.. GENERATED FROM PYTHON SOURCE LINES 365-378
 
 However, we are losing a lot of features by using a simple ``for`` loop to
 iterate over the data. In particular, we are missing out on:
@@ -551,7 +547,7 @@ to be batched using ``collate_fn``. However, default collate should work
 fine for most use cases.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 382-423
+.. GENERATED FROM PYTHON SOURCE LINES 378-419
 
 .. code-block:: default
 
@@ -617,7 +613,7 @@ fine for most use cases.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 424-465
+.. GENERATED FROM PYTHON SOURCE LINES 420-461
 
 Afterword: torchvision
 ----------------------
@@ -664,7 +660,7 @@ For an example with training code, please see
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.254 seconds)
+   **Total running time of the script:** ( 0 minutes  4.489 seconds)
 
 
 .. _sphx_glr_download_beginner_data_loading_tutorial.py:

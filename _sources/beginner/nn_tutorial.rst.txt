@@ -288,8 +288,8 @@ random at this stage, since we start with random weights.
 
  .. code-block:: none
 
-    tensor([-2.8400, -2.0515, -2.8393, -1.7872, -2.4310, -2.0532, -2.5794, -2.5977,
-            -1.8254, -2.8227], grad_fn=<SelectBackward0>) torch.Size([64, 10])
+    tensor([-2.1271, -1.5588, -2.7537, -2.7828, -2.4905, -2.8693, -2.6692, -2.0319,
+            -2.1503, -2.4256], grad_fn=<SelectBackward0>) torch.Size([64, 10])
 
 
 
@@ -342,7 +342,7 @@ after a backprop pass later.
 
  .. code-block:: none
 
-    tensor(2.3220, grad_fn=<NegBackward0>)
+    tensor(2.3237, grad_fn=<NegBackward0>)
 
 
 
@@ -479,7 +479,7 @@ have increased, and they have.
 
  .. code-block:: none
 
-    tensor(0.0808, grad_fn=<NegBackward0>) tensor(1.)
+    tensor(0.0801, grad_fn=<NegBackward0>) tensor(1.)
 
 
 
@@ -547,7 +547,7 @@ confirm that our loss and accuracy are the same as before:
 
  .. code-block:: none
 
-    tensor(0.0808, grad_fn=<NllLossBackward0>) tensor(1.)
+    tensor(0.0801, grad_fn=<NllLossBackward0>) tensor(1.)
 
 
 
@@ -632,7 +632,7 @@ method automatically.
 
  .. code-block:: none
 
-    tensor(2.4635, grad_fn=<NllLossBackward0>)
+    tensor(2.3695, grad_fn=<NllLossBackward0>)
 
 
 
@@ -715,7 +715,7 @@ Let's double-check that our loss has gone down:
 
  .. code-block:: none
 
-    tensor(0.0824, grad_fn=<NllLossBackward0>)
+    tensor(0.0814, grad_fn=<NllLossBackward0>)
 
 
 
@@ -773,7 +773,7 @@ We instantiate our model and calculate the loss in the same way as before:
 
  .. code-block:: none
 
-    tensor(2.2670, grad_fn=<NllLossBackward0>)
+    tensor(2.3567, grad_fn=<NllLossBackward0>)
 
 
 
@@ -799,7 +799,7 @@ We are still able to use our same ``fit`` method as before.
 
  .. code-block:: none
 
-    tensor(0.0811, grad_fn=<NllLossBackward0>)
+    tensor(0.0817, grad_fn=<NllLossBackward0>)
 
 
 
@@ -885,8 +885,8 @@ can reuse it in the future.
 
  .. code-block:: none
 
-    tensor(2.3179, grad_fn=<NllLossBackward0>)
-    tensor(0.0825, grad_fn=<NllLossBackward0>)
+    tensor(2.2836, grad_fn=<NllLossBackward0>)
+    tensor(0.0818, grad_fn=<NllLossBackward0>)
 
 
 
@@ -986,7 +986,7 @@ Now, we can do these two steps together:
 
  .. code-block:: none
 
-    tensor(0.0815, grad_fn=<NllLossBackward0>)
+    tensor(0.0818, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1061,7 +1061,7 @@ Now, our loop is much cleaner, as ``(xb, yb)`` are loaded automatically from the
 
  .. code-block:: none
 
-    tensor(0.0800, grad_fn=<NllLossBackward0>)
+    tensor(0.0818, grad_fn=<NllLossBackward0>)
 
 
 
@@ -1149,8 +1149,8 @@ and ``nn.Dropout`` to ensure appropriate behavior for these different phases.)
 
  .. code-block:: none
 
-    0 tensor(0.3687)
-    1 tensor(0.2761)
+    0 tensor(0.3135)
+    1 tensor(0.3125)
 
 
 
@@ -1271,8 +1271,8 @@ model can be run in 3 lines of code:
 
  .. code-block:: none
 
-    0 0.3825449700474739
-    1 0.31406953793764114
+    0 0.3242667118728161
+    1 0.2956734804451466
 
 
 
@@ -1349,8 +1349,8 @@ and generally leads to faster training.
 
  .. code-block:: none
 
-    0 0.3673984649181366
-    1 0.287386777973175
+    0 0.4243719966888428
+    1 0.29180388209819796
 
 
 
@@ -1428,8 +1428,8 @@ The model created with ``Sequential`` is simple:
 
  .. code-block:: none
 
-    0 0.34595216698646547
-    1 0.2685798015356064
+    0 0.38795044753551483
+    1 0.25049274245500563
 
 
 
@@ -1530,8 +1530,8 @@ Let's try it out:
 
  .. code-block:: none
 
-    0 0.35602659516334534
-    1 0.24971396341323854
+    0 0.3723801836013794
+    1 0.29231368873119357
 
 
 
@@ -1648,8 +1648,8 @@ You should find it runs faster now:
 
  .. code-block:: none
 
-    0 0.20487678228616715
-    1 0.2020727825641632
+    0 0.21612643691301345
+    1 0.1927857134461403
 
 
 
@@ -1692,7 +1692,7 @@ what we've seen:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  41.015 seconds)
+   **Total running time of the script:** ( 0 minutes  42.809 seconds)
 
 
 .. _sphx_glr_download_beginner_nn_tutorial.py:

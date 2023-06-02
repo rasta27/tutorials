@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 17.5MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.2MB/s]
 
 
 
@@ -135,48 +135,45 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 4.80M/945M [00:00<00:19, 50.3MB/s]
-      1%|1         | 13.9M/945M [00:00<00:12, 77.0MB/s]
-      4%|3         | 37.7M/945M [00:00<00:06, 156MB/s] 
-      7%|6         | 61.6M/945M [00:00<00:04, 193MB/s]
-      9%|9         | 86.7M/945M [00:00<00:04, 218MB/s]
-     12%|#1        | 112M/945M [00:00<00:03, 235MB/s] 
-     15%|#4        | 137M/945M [00:00<00:03, 245MB/s]
-     17%|#7        | 161M/945M [00:00<00:03, 246MB/s]
-     20%|#9        | 185M/945M [00:00<00:03, 249MB/s]
-     22%|##2       | 210M/945M [00:01<00:03, 251MB/s]
-     25%|##4       | 235M/945M [00:01<00:02, 254MB/s]
-     28%|##7       | 260M/945M [00:01<00:02, 258MB/s]
-     30%|###       | 285M/945M [00:01<00:02, 260MB/s]
-     33%|###2      | 310M/945M [00:01<00:02, 255MB/s]
-     35%|###5      | 335M/945M [00:01<00:02, 257MB/s]
-     38%|###8      | 360M/945M [00:01<00:02, 259MB/s]
-     41%|####      | 385M/945M [00:01<00:02, 258MB/s]
-     43%|####3     | 409M/945M [00:01<00:02, 256MB/s]
-     46%|####5     | 434M/945M [00:01<00:02, 256MB/s]
-     49%|####8     | 458M/945M [00:02<00:02, 255MB/s]
-     51%|#####1    | 483M/945M [00:02<00:01, 251MB/s]
-     54%|#####3    | 506M/945M [00:02<00:01, 250MB/s]
-     56%|#####6    | 531M/945M [00:02<00:01, 250MB/s]
-     59%|#####8    | 554M/945M [00:02<00:01, 250MB/s]
-     61%|######1   | 578M/945M [00:02<00:01, 247MB/s]
-     64%|######3   | 602M/945M [00:02<00:01, 249MB/s]
-     67%|######6   | 630M/945M [00:02<00:01, 260MB/s]
-     69%|######9   | 655M/945M [00:02<00:01, 259MB/s]
-     72%|#######2  | 681M/945M [00:02<00:01, 265MB/s]
-     75%|#######4  | 707M/945M [00:03<00:00, 267MB/s]
-     78%|#######7  | 734M/945M [00:03<00:00, 271MB/s]
-     80%|########  | 760M/945M [00:03<00:00, 273MB/s]
-     83%|########3 | 787M/945M [00:03<00:00, 276MB/s]
-     86%|########6 | 813M/945M [00:03<00:00, 276MB/s]
-     89%|########8 | 840M/945M [00:03<00:00, 277MB/s]
-     92%|#########1| 867M/945M [00:03<00:00, 222MB/s]
-     94%|#########4| 890M/945M [00:04<00:00, 124MB/s]
-     96%|#########6| 907M/945M [00:04<00:00, 95.9MB/s]
-     98%|#########7| 921M/945M [00:04<00:00, 79.9MB/s]
-     99%|#########8| 932M/945M [00:04<00:00, 75.8MB/s]
-    100%|#########9| 942M/945M [00:05<00:00, 70.2MB/s]
-    100%|##########| 945M/945M [00:05<00:00, 191MB/s] 
+      1%|1         | 10.6M/945M [00:00<00:08, 111MB/s]
+      4%|3         | 34.8M/945M [00:00<00:04, 195MB/s]
+      6%|6         | 59.5M/945M [00:00<00:04, 224MB/s]
+      9%|8         | 84.3M/945M [00:00<00:03, 238MB/s]
+     12%|#1        | 109M/945M [00:00<00:03, 246MB/s] 
+     14%|#4        | 134M/945M [00:00<00:03, 250MB/s]
+     17%|#6        | 158M/945M [00:00<00:03, 253MB/s]
+     19%|#9        | 182M/945M [00:00<00:03, 253MB/s]
+     22%|##1       | 207M/945M [00:00<00:03, 255MB/s]
+     25%|##4       | 232M/945M [00:01<00:02, 258MB/s]
+     27%|##7       | 257M/945M [00:01<00:02, 259MB/s]
+     30%|##9       | 282M/945M [00:01<00:02, 259MB/s]
+     32%|###2      | 307M/945M [00:01<00:02, 259MB/s]
+     35%|###5      | 332M/945M [00:01<00:02, 259MB/s]
+     38%|###7      | 357M/945M [00:01<00:02, 260MB/s]
+     40%|####      | 382M/945M [00:01<00:02, 262MB/s]
+     43%|####3     | 407M/945M [00:01<00:02, 263MB/s]
+     46%|####5     | 432M/945M [00:01<00:02, 260MB/s]
+     48%|####8     | 457M/945M [00:01<00:01, 259MB/s]
+     51%|#####1    | 482M/945M [00:02<00:01, 259MB/s]
+     54%|#####3    | 507M/945M [00:02<00:01, 260MB/s]
+     56%|#####6    | 532M/945M [00:02<00:01, 258MB/s]
+     59%|#####8    | 556M/945M [00:02<00:01, 258MB/s]
+     61%|######1   | 581M/945M [00:02<00:01, 256MB/s]
+     64%|######4   | 605M/945M [00:02<00:01, 255MB/s]
+     67%|######6   | 630M/945M [00:02<00:01, 254MB/s]
+     69%|######9   | 654M/945M [00:02<00:01, 255MB/s]
+     72%|#######1  | 679M/945M [00:02<00:01, 256MB/s]
+     74%|#######4  | 703M/945M [00:02<00:00, 255MB/s]
+     77%|#######7  | 728M/945M [00:03<00:00, 257MB/s]
+     80%|#######9  | 752M/945M [00:03<00:00, 257MB/s]
+     82%|########2 | 777M/945M [00:03<00:00, 258MB/s]
+     85%|########4 | 802M/945M [00:03<00:00, 256MB/s]
+     87%|########7 | 826M/945M [00:03<00:00, 254MB/s]
+     90%|######### | 850M/945M [00:03<00:00, 254MB/s]
+     93%|#########2| 875M/945M [00:03<00:00, 255MB/s]
+     95%|#########5| 899M/945M [00:03<00:00, 256MB/s]
+     98%|#########7| 924M/945M [00:03<00:00, 254MB/s]
+    100%|##########| 945M/945M [00:03<00:00, 253MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -472,37 +469,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: a 23-month-old girl was killed after her father struck her with a pickup truck . the father didn't know that the toddler was in the driveway, police say . the girl was going to turn two this weekend .
+    prediction: the 21-year-old won his first major title at augusta on sunday . he was greeted by dignitaries and his father, mother and brother . he embraced the crowd and formally acknowledged the patrons .
 
-    target: Police were called to the North Las Vegas neighborhood at about 11.30am on Thursday . Father and other family members did not know toddler was in the driveway . The incident was deemed an accident and no charges were filed . The toddler died in the hospital just days before her second birthday .
+    target: Jordan Spieth won his maiden major at the age of 21 at Augusta . The 79th Masters attracted massive television ratings in the USA . Spieth went back onto the 18th green to formally acknowledge the crowd . Jack Nicklaus and Phil Mickelson are among those to pay tribute to Spieth .
 
 
     Example 2:
 
-    prediction: arsenal are considering a move for midfielder Jack Wilshere this summer . the 23-year-old has been linked with a move to the premier league . he has been tipped as a future arsenal star and england international . he has picked up 24 separate injuries during his seven-year professional career .
+    prediction: aide to senator resigned after he was arrested for allegedly soliciting a prostitute . 61-year-old was arrested on friday in a misdemeanor charge for solicitation of prostitution . he has been the state director for the last year and her number-two staffer behind the chief of staff .
 
-    target: Manchester City considering bid for Arsenal midfielder Jack Wilshere . Jordan Henderson is also an option for the Premier League champions . Wilshere, 23, encapsulates Arsene Wenger's style of play in north London . But the England international is not necessarily a first-team regular . Any bids in excess of £30m should be considered by Arsenal .
+    target: David Wihby, 61, has been New Hampshire Senator Kelly Ayotte's state director for the last year . He was arrested on Friday on a misdemeanor charge for solicitation of prostitution and stepped down from his government role on Saturday . He was one of ten men arrested in the last week by Nashua, New Hampshire, police in prostitution sting . Ayotte said in a statement that she was 'shocked and deeply saddened' by Wihby's arrest .
 
 
     Example 3:
 
-    prediction: arsenal lost 3-2 to middlesbrough at the Riverside stadium on monday night . goalkeeper Deyan Iliev was sent off after he failed to clear Harry Chapman . Emmanuel Ledesma converted the resulting penalty past Matt Macey .
+    prediction: the football association will be contacting both clubs after the incident . the incident happened during the celebrations at loftus road . the club are unlikely to face disciplinary action over the incident .
 
-    target: Arsenal Under-21s fell to a 3-2 defeat at Middlesbrough on Monday night . The Gunners had goalkeeper Deyan Iliev sent off early on . He had brought down Harry Chapman in the box and a penalty was given . Emmanuel Ledesma scored from the spot before Alex Iwobi equalised . Boro scored two first-half screamers to lead 3-1 through Lewis Maloney and Yanic Wildschut before Daniel Crowley scored on the hour mark .
+    target: QPR unlikely to face disciplinary action over the incident . Queens Park Rangers to review CCTV and promise to ban anyone involved . Cesc Fabregas scored a late winner for Chelsea at Loftus Road .
 
 
     Example 4:
 
-    prediction: german discounter has won increasing share of market since recession . now lags behind only the ‘big four’ - Tesco, Asda, Sainsbury’s, Morrisons and the Co-operative .
+    prediction: a Reading university researcher has said that bees prefer cities to fields . the expansion of farmland has actually been damaging to bee population . heaths and meadows near Milton Keynes now boast more species of bee . but sites in more rural areas are home to more bee species than towns .
 
-    target: German discount supermarket Aldi now has a 5.3 per cent market share . In comparison, Waitrose has 5.1 per cent, according to consumer research . Both lag behind Tesco, Asda, Sainsbury's, Morrisons and the Co-Operative . The total market share of the ‘big four’ fell to its the lowest for a decade .
+    target: Reading University researcher says bees prefer cities to fields . Expansion of farmland has actually been damaging to bee population . Wildlife sites in four English counties saw bee species decrease . Reason is likely due to wide variety of flowering plants in urban areas .
 
 
     Example 5:
 
-    prediction: arshdeep Kaur, 14, and her mother Shinder, 38, were travelling from their home in Punjab, northern india, to visit relatives . a group of about half a dozen men began harassing them and tried to grab them . but instead of defending them, bus staff joined in the sexual assault . the assault continued until the bus slowed down and the pair could break free .
+    prediction: beaten by birmingham in the last four of the championship . a late Clayton Donaldson goal gave the visitors the lead . the win was their 16th of the season and their first since a £16million move .
 
-    target: Arshdeep and Shinder Kaur were sexually assaulted on a bus in Punjab . A group surrounded them, and bus staff joined when they complained . When Mrs Kaur, 38, alerted the driver, he answered by driving faster . Arshdeep, 14, died and Mrs Kaur seriously injured after being pushed off .
+    target: Reading are 18th in the Championship while Birmingham City sit in 15th . Clayton Donaldson's 83rd minute header secured the three points . The FA Cup semi-finalists dominated possession but were made to pay .
 
 
 
@@ -856,7 +853,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  56.960 seconds)
+   **Total running time of the script:** ( 3 minutes  38.969 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

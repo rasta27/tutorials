@@ -547,7 +547,7 @@ indices are integers, not floats).</p>
 <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;torch._C.Generator object at 0x7f6153180030&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;torch._C.Generator object at 0x7f9606a78030&gt;
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_ix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"hello"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"world"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
@@ -663,9 +663,9 @@ examples and update the parameters with backpropagation.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(['forty', 'When'], 'winters'), (['winters', 'forty'], 'shall'), (['shall', 'winters'], 'besiege')]
-[521.4014179706573, 518.8252000808716, 516.2663118839264, 513.7227370738983, 511.19486236572266, 508.681613445282, 506.17987155914307, 503.6908435821533, 501.2127375602722, 498.7455794811249]
-tensor([-0.0151,  1.0391,  0.6432,  0.8004,  0.4090,  0.3033,  1.3819, -1.0316,
-         0.7132, -1.5637], grad_fn=&lt;SelectBackward0&gt;)
+[521.4449772834778, 518.7360825538635, 516.0470399856567, 513.3761219978333, 510.72359228134155, 508.0877628326416, 505.46593594551086, 502.85799646377563, 500.26384830474854, 497.6832022666931]
+tensor([ 0.9829, -1.8268, -0.6586, -1.5523, -0.0037,  0.1419,  0.9444, -0.2260,
+         0.9321,  0.8777], grad_fn=&lt;SelectBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -742,7 +742,7 @@ reshape.</p></li>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(['are', 'We', 'to', 'study'], 'about'), (['about', 'are', 'study', 'the'], 'to'), (['to', 'about', 'the', 'idea'], 'study'), (['study', 'to', 'idea', 'of'], 'the'), (['the', 'study', 'of', 'a'], 'idea')]
 
-tensor([13,  2,  8, 14])
+tensor([10, 41, 46, 20])
 </pre></div>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.646 seconds)</p>

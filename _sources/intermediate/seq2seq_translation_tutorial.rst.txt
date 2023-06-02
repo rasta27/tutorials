@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je garde la maison .', 'i m housesitting .']
+    ['tu es aveuglee par l amour .', 'you are blinded by love .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 25s (- 20m 3s) (5000 6%) 2.8637
-    2m 45s (- 17m 58s) (10000 13%) 2.2854
-    4m 6s (- 16m 24s) (15000 20%) 1.9557
-    5m 25s (- 14m 54s) (20000 26%) 1.7187
-    6m 44s (- 13m 28s) (25000 33%) 1.4691
-    8m 2s (- 12m 3s) (30000 40%) 1.3684
-    9m 20s (- 10m 40s) (35000 46%) 1.1766
-    10m 39s (- 9m 19s) (40000 53%) 1.0701
-    11m 58s (- 7m 58s) (45000 60%) 0.9519
-    13m 17s (- 6m 38s) (50000 66%) 0.8823
-    14m 34s (- 5m 18s) (55000 73%) 0.7955
-    15m 52s (- 3m 58s) (60000 80%) 0.6957
-    17m 9s (- 2m 38s) (65000 86%) 0.6556
-    18m 27s (- 1m 19s) (70000 93%) 0.6048
-    19m 44s (- 0m 0s) (75000 100%) 0.5230
+    1m 22s (- 19m 16s) (5000 6%) 2.8477
+    2m 39s (- 17m 16s) (10000 13%) 2.2578
+    3m 55s (- 15m 43s) (15000 20%) 1.9649
+    5m 12s (- 14m 18s) (20000 26%) 1.7039
+    6m 28s (- 12m 57s) (25000 33%) 1.5293
+    7m 45s (- 11m 38s) (30000 40%) 1.3652
+    9m 2s (- 10m 19s) (35000 46%) 1.2121
+    10m 19s (- 9m 1s) (40000 53%) 1.0566
+    11m 35s (- 7m 43s) (45000 60%) 0.9542
+    12m 53s (- 6m 26s) (50000 66%) 0.8653
+    14m 10s (- 5m 9s) (55000 73%) 0.7799
+    15m 27s (- 3m 51s) (60000 80%) 0.7249
+    16m 43s (- 2m 34s) (65000 86%) 0.6476
+    18m 0s (- 1m 17s) (70000 93%) 0.6013
+    19m 17s (- 0m 0s) (75000 100%) 0.5559
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > vous etes tres marrants .
-    = you re very funny .
-    < you re very funny . <EOS>
+    > c est un adulte .
+    = he s a grown man .
+    < he s a grown man . <EOS>
 
-    > il n est pas a la maison .
-    = he isn t at home .
-    < he isn t at home . <EOS>
+    > nous sommes sauveteurs .
+    = we re lifeguards .
+    < we re committed . <EOS>
 
-    > nous nous amusons .
-    = we re having fun .
-    < we re enjoying ourselves . <EOS>
+    > vous etes bizarres .
+    = you re weird .
+    < you re talkative . <EOS>
 
-    > je me leve tard le matin .
-    = i m not an early riser .
-    < i m not an early . <EOS>
+    > nous ne sommes pas prisonnieres .
+    = we re not prisoners .
+    < we re not prisoners . <EOS>
 
-    > ca ne me fait pas peur .
-    = i m not scared .
-    < i m not scared . <EOS>
+    > tu as parfaitement raison .
+    = you re totally right .
+    < you re absolutely right . <EOS>
 
-    > vous etes la doyenne .
-    = you re the oldest .
-    < you re the oldest . <EOS>
+    > tu es un bon journaliste .
+    = you re a good journalist .
+    < you re a good journalist . <EOS>
 
-    > je me rejouis que vous soyez mon amie .
-    = i m glad you re my friend .
-    < i m glad you re my friend . <EOS>
+    > elle plante des roses dans le jardin .
+    = she s in the garden planting roses .
+    < she s in the garden planting . <EOS>
 
-    > je ne suis pas du tout convaincu .
-    = i m not convinced at all .
-    < i m not convinced at all . <EOS>
+    > je suis sur que tu vas reussir .
+    = i m sure that you ll succeed .
+    < i m sure that you ll succeed . <EOS>
 
-    > tu n es pas mort .
-    = you re not dead .
-    < you re not dead . <EOS>
+    > il est vieux et laid .
+    = he s old and ugly .
+    < he s old and ugly . <EOS>
 
-    > je ne suis pas malheureux .
-    = i m not unhappy .
-    < i m not unhappy . <EOS>
+    > tu es un puritain .
+    = you re a prude .
+    < you re a prude . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f370f827790>
+    <matplotlib.image.AxesImage object at 0x7f885d49db70>
 
 
 
@@ -1245,7 +1245,7 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than i am . <EOS>
+    output = she s five years younger than me . <EOS>
     /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too short . <EOS>
+    output = she s too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared of die . <EOS>
+    output = i m not scared of dying . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young to . . <EOS>
+    output = he s a talented man . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 19 minutes  58.306 seconds)
+   **Total running time of the script:** ( 19 minutes  31.278 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
