@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 18.0MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 17.1MB/s]
 
 
 
@@ -135,42 +135,117 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|1         | 12.3M/945M [00:00<00:07, 129MB/s]
-      4%|4         | 39.2M/945M [00:00<00:04, 219MB/s]
-      7%|7         | 66.8M/945M [00:00<00:03, 251MB/s]
-     10%|#         | 94.5M/945M [00:00<00:03, 266MB/s]
-     13%|#2        | 122M/945M [00:00<00:03, 273MB/s] 
-     16%|#5        | 150M/945M [00:00<00:02, 280MB/s]
-     19%|#8        | 177M/945M [00:00<00:02, 281MB/s]
-     22%|##1       | 204M/945M [00:00<00:02, 284MB/s]
-     25%|##4       | 232M/945M [00:00<00:02, 286MB/s]
-     27%|##7       | 259M/945M [00:01<00:02, 282MB/s]
-     30%|###       | 287M/945M [00:01<00:02, 285MB/s]
-     33%|###3      | 315M/945M [00:01<00:02, 286MB/s]
-     36%|###6      | 342M/945M [00:01<00:02, 286MB/s]
-     39%|###9      | 370M/945M [00:01<00:02, 287MB/s]
-     42%|####2     | 397M/945M [00:01<00:01, 287MB/s]
-     45%|####4     | 425M/945M [00:01<00:01, 288MB/s]
-     48%|####7     | 452M/945M [00:01<00:01, 287MB/s]
-     51%|#####     | 479M/945M [00:01<00:01, 285MB/s]
-     54%|#####3    | 507M/945M [00:01<00:01, 282MB/s]
-     56%|#####6    | 534M/945M [00:02<00:01, 282MB/s]
-     59%|#####9    | 561M/945M [00:02<00:01, 284MB/s]
-     62%|######2   | 588M/945M [00:02<00:01, 284MB/s]
-     65%|######5   | 615M/945M [00:02<00:01, 285MB/s]
-     68%|######8   | 643M/945M [00:02<00:01, 285MB/s]
-     71%|#######   | 670M/945M [00:02<00:01, 287MB/s]
-     74%|#######3  | 698M/945M [00:02<00:00, 287MB/s]
-     77%|#######6  | 725M/945M [00:02<00:00, 286MB/s]
-     80%|#######9  | 752M/945M [00:02<00:00, 285MB/s]
-     83%|########2 | 780M/945M [00:02<00:00, 287MB/s]
-     86%|########5 | 808M/945M [00:03<00:00, 283MB/s]
-     88%|########8 | 835M/945M [00:03<00:00, 281MB/s]
-     91%|#########1| 862M/945M [00:03<00:00, 279MB/s]
-     94%|#########4| 888M/945M [00:03<00:00, 279MB/s]
-     97%|#########6| 915M/945M [00:03<00:00, 277MB/s]
-    100%|#########9| 941M/945M [00:03<00:00, 277MB/s]
-    100%|##########| 945M/945M [00:03<00:00, 280MB/s]
+      1%|          | 7.03M/945M [00:00<00:13, 73.7MB/s]
+      2%|1         | 15.7M/945M [00:00<00:11, 83.5MB/s]
+      3%|2         | 24.0M/945M [00:00<00:11, 85.2MB/s]
+      3%|3         | 33.0M/945M [00:00<00:10, 88.8MB/s]
+      4%|4         | 41.4M/945M [00:00<00:11, 83.8MB/s]
+      5%|5         | 49.5M/945M [00:00<00:11, 81.4MB/s]
+      6%|6         | 57.3M/945M [00:00<00:11, 79.7MB/s]
+      7%|6         | 64.9M/945M [00:00<00:12, 75.1MB/s]
+      8%|7         | 72.1M/945M [00:00<00:13, 69.0MB/s]
+      9%|8         | 80.9M/945M [00:01<00:12, 75.3MB/s]
+      9%|9         | 89.3M/945M [00:01<00:11, 79.0MB/s]
+     10%|#         | 98.0M/945M [00:01<00:10, 82.4MB/s]
+     11%|#1        | 106M/945M [00:01<00:10, 82.5MB/s] 
+     12%|#2        | 115M/945M [00:01<00:10, 85.1MB/s]
+     13%|#3        | 123M/945M [00:01<00:10, 83.5MB/s]
+     14%|#3        | 132M/945M [00:01<00:09, 85.9MB/s]
+     15%|#4        | 140M/945M [00:01<00:10, 83.4MB/s]
+     16%|#5        | 148M/945M [00:01<00:09, 84.2MB/s]
+     17%|#6        | 156M/945M [00:02<00:10, 82.3MB/s]
+     17%|#7        | 165M/945M [00:02<00:09, 85.1MB/s]
+     18%|#8        | 173M/945M [00:02<00:09, 85.8MB/s]
+     19%|#9        | 182M/945M [00:02<00:09, 86.2MB/s]
+     20%|##        | 191M/945M [00:02<00:08, 88.7MB/s]
+     21%|##1       | 200M/945M [00:02<00:08, 90.7MB/s]
+     22%|##2       | 209M/945M [00:02<00:08, 88.3MB/s]
+     23%|##2       | 217M/945M [00:02<00:08, 89.0MB/s]
+     24%|##3       | 226M/945M [00:02<00:08, 90.5MB/s]
+     25%|##4       | 235M/945M [00:02<00:08, 89.7MB/s]
+     26%|##5       | 244M/945M [00:03<00:08, 91.5MB/s]
+     27%|##6       | 253M/945M [00:03<00:07, 91.2MB/s]
+     28%|##7       | 261M/945M [00:03<00:08, 89.3MB/s]
+     29%|##8       | 270M/945M [00:03<00:07, 89.3MB/s]
+     29%|##9       | 279M/945M [00:03<00:07, 88.3MB/s]
+     30%|###       | 287M/945M [00:03<00:08, 81.2MB/s]
+     31%|###1      | 295M/945M [00:03<00:08, 80.0MB/s]
+     32%|###2      | 304M/945M [00:03<00:08, 83.5MB/s]
+     33%|###3      | 312M/945M [00:03<00:07, 85.1MB/s]
+     34%|###3      | 320M/945M [00:03<00:07, 84.7MB/s]
+     35%|###4      | 329M/945M [00:04<00:07, 87.1MB/s]
+     36%|###5      | 338M/945M [00:04<00:07, 88.3MB/s]
+     37%|###6      | 346M/945M [00:04<00:07, 88.2MB/s]
+     38%|###7      | 355M/945M [00:04<00:06, 89.5MB/s]
+     39%|###8      | 364M/945M [00:04<00:06, 90.2MB/s]
+     39%|###9      | 373M/945M [00:04<00:07, 82.7MB/s]
+     40%|####      | 381M/945M [00:04<00:07, 82.1MB/s]
+     41%|####1     | 389M/945M [00:04<00:07, 80.5MB/s]
+     42%|####2     | 397M/945M [00:04<00:06, 82.6MB/s]
+     43%|####2     | 405M/945M [00:05<00:06, 83.8MB/s]
+     44%|####3     | 414M/945M [00:05<00:06, 87.3MB/s]
+     45%|####4     | 423M/945M [00:05<00:06, 80.9MB/s]
+     46%|####5     | 431M/945M [00:05<00:06, 82.6MB/s]
+     47%|####6     | 439M/945M [00:05<00:06, 84.3MB/s]
+     47%|####7     | 448M/945M [00:05<00:05, 87.2MB/s]
+     48%|####8     | 457M/945M [00:05<00:05, 88.7MB/s]
+     49%|####9     | 466M/945M [00:05<00:05, 90.9MB/s]
+     50%|#####     | 475M/945M [00:05<00:05, 90.9MB/s]
+     51%|#####1    | 484M/945M [00:05<00:05, 89.3MB/s]
+     52%|#####2    | 492M/945M [00:06<00:05, 87.8MB/s]
+     53%|#####3    | 501M/945M [00:06<00:05, 89.0MB/s]
+     54%|#####3    | 510M/945M [00:06<00:05, 89.0MB/s]
+     55%|#####4    | 518M/945M [00:06<00:05, 86.8MB/s]
+     56%|#####5    | 527M/945M [00:06<00:05, 87.6MB/s]
+     57%|#####6    | 536M/945M [00:06<00:04, 88.7MB/s]
+     58%|#####7    | 544M/945M [00:06<00:04, 89.1MB/s]
+     59%|#####8    | 553M/945M [00:06<00:04, 89.3MB/s]
+     59%|#####9    | 562M/945M [00:06<00:04, 90.8MB/s]
+     60%|######    | 571M/945M [00:06<00:04, 92.5MB/s]
+     61%|######1   | 580M/945M [00:07<00:04, 90.9MB/s]
+     62%|######2   | 589M/945M [00:07<00:04, 88.4MB/s]
+     63%|######3   | 598M/945M [00:07<00:04, 90.3MB/s]
+     64%|######4   | 606M/945M [00:07<00:03, 89.6MB/s]
+     65%|######5   | 615M/945M [00:07<00:03, 89.3MB/s]
+     66%|######5   | 623M/945M [00:07<00:03, 89.2MB/s]
+     67%|######6   | 632M/945M [00:07<00:03, 86.6MB/s]
+     68%|######7   | 640M/945M [00:07<00:03, 86.7MB/s]
+     69%|######8   | 648M/945M [00:07<00:03, 86.1MB/s]
+     70%|######9   | 657M/945M [00:08<00:03, 83.5MB/s]
+     70%|#######   | 665M/945M [00:08<00:03, 80.0MB/s]
+     71%|#######1  | 673M/945M [00:08<00:03, 81.8MB/s]
+     72%|#######2  | 682M/945M [00:08<00:03, 85.2MB/s]
+     73%|#######3  | 690M/945M [00:08<00:03, 86.4MB/s]
+     74%|#######3  | 699M/945M [00:08<00:03, 84.8MB/s]
+     75%|#######4  | 707M/945M [00:08<00:02, 85.2MB/s]
+     76%|#######5  | 715M/945M [00:08<00:02, 84.9MB/s]
+     77%|#######6  | 723M/945M [00:08<00:02, 84.5MB/s]
+     77%|#######7  | 731M/945M [00:08<00:02, 80.4MB/s]
+     78%|#######8  | 740M/945M [00:09<00:02, 82.9MB/s]
+     79%|#######9  | 748M/945M [00:09<00:02, 79.8MB/s]
+     80%|#######9  | 756M/945M [00:09<00:02, 80.3MB/s]
+     81%|########  | 763M/945M [00:09<00:02, 80.4MB/s]
+     82%|########1 | 772M/945M [00:09<00:02, 83.7MB/s]
+     83%|########2 | 781M/945M [00:09<00:01, 86.6MB/s]
+     84%|########3 | 790M/945M [00:09<00:01, 87.9MB/s]
+     84%|########4 | 798M/945M [00:09<00:01, 80.9MB/s]
+     85%|########5 | 806M/945M [00:09<00:01, 79.5MB/s]
+     86%|########6 | 814M/945M [00:10<00:01, 74.5MB/s]
+     87%|########6 | 821M/945M [00:10<00:01, 68.2MB/s]
+     88%|########7 | 828M/945M [00:10<00:01, 70.3MB/s]
+     89%|########8 | 836M/945M [00:10<00:01, 74.5MB/s]
+     89%|########9 | 844M/945M [00:10<00:02, 46.3MB/s]
+     91%|#########1| 864M/945M [00:10<00:01, 79.0MB/s]
+     93%|#########2| 874M/945M [00:10<00:00, 80.4MB/s]
+     94%|#########3| 883M/945M [00:11<00:00, 78.2MB/s]
+     94%|#########4| 892M/945M [00:11<00:00, 80.1MB/s]
+     95%|#########5| 901M/945M [00:11<00:00, 81.6MB/s]
+     96%|#########6| 910M/945M [00:11<00:00, 84.8MB/s]
+     97%|#########7| 918M/945M [00:11<00:00, 86.2MB/s]
+     98%|#########8| 927M/945M [00:11<00:00, 84.5MB/s]
+     99%|#########8| 935M/945M [00:11<00:00, 83.5MB/s]
+    100%|#########9| 943M/945M [00:11<00:00, 83.8MB/s]
+    100%|##########| 945M/945M [00:11<00:00, 83.8MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -466,37 +541,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: fossils belonging to species known as Pterichthyoides milleri - or 'Pessie' - were found in a 19th century collection . they were rediscovered when the official Loch Ness fan club president, Gary Campbell, was invited to the museum and spotted them . he saw the resemblance and called for scientists to investigate the ancient creature .
+    prediction: more than 2,000 labiaplasty operations performed on the NHS in 2010 . the inner ‘lips’ of the vagina have risen five-fold in the past decade . trend is reflected in australia where procedures have more than doubled .
 
-    target: Fossils of a creature bearing a striking similarity to depictions of Nessie have been found in a 19th century collection . It is thought the fossil was found in Cromarty and would have once lived in a freshwater lake between 542 million years ago to 251 million years ago . Researchers have revealed that Pterichthyoides milleri - or 'Pessie' - lived on the bottom of the lakes that would later become Loch Ness .
+    target: NHS labial reduction procedures risen five-fold in the last 10 years . More than 2,000 of the cosmetic operations were performed in 2010 . Trend is reflected in Australia with ops more than doubling in same time . Experts call for more information to help women understand what's normal .
 
 
     Example 2:
 
-    prediction: arsenal drew 0-0 with liverpool at the emirates stadium on sunday . a goalless draw was the first time the blues have won the league since 1997 . but manager jose mourinho has hit back at the club, branding their 11-year wait for the title as 'boring' .
+    prediction: despite a strong start to the season, the SS have struggled this season . they have scored just 45 goals, compared to 84 at the same stage last season . they are missing a Harry Kane (19 goals), a Diego Costa (also 19), a Sergio Aguero (17 goals), and even a Charlie Austin (16 goals)
 
-    target: Chelsea edged closer to the Premier League title after a 0-0 draw with Arsenal on Sunday . The Blues were criticised in some quarters for an over-defensive display . Jose Mourinho has shrugged off those claims and said that the real boredom was in Arsenal's 11-year-wait to win a league title of their own . He hailed the individual performance of his captain John Terry as the defender's 'best ever' in his career .
+    target: Raheem Sterling, Jordan Henderson and Steven Gerrard are Liverpool's top scorers in the Premier League this season with six goals each . Seventeen of 20 Premier League clubs have top scorers with more goals . Liverpool are paying for failing to properly replace goals of Luis Suarez .
 
 
     Example 3:
 
-    prediction: the pilot scheme will recruit 10 people with autism or Asperger syndrome . they will be based at Microsoft's Redmond offices in washington . if successful, the scheme could extend to more vacancies worldwide . the plans were announced by Mary Ellen Smith, corporate vice president of worldwide operations .
+    prediction: 17-year-old farmer died after taking deadly animal medicine . her father was keeping the drug illegally . she took it and injected it after saying she felt like a 'failure', inquest told . paramedics fought to save her and took her to hospital . but she died from the effects of the drug, an inquest heard .
 
-    target: The pilot scheme will initially recruit 10 people with autism . They will be based in the tech giant's Redmond offices in Washington . Microsoft is running the scheme with help from specialists Specialisterne . The plans were announced by Mary Ellen Smith, corporate vice president of worldwide operations, who herself has a 19-year-old autistic son .
+    target: Charlotte Cobbald, 17, was visiting family farm in Suffolk while being treated in a mental health unit . She said she felt like a 'failure' and injected herself with animal drugs . Told her father 'leave me to die' and paramedics were unable to revive her .
 
 
     Example 4:
 
-    prediction: a Washington, DC-based company called United Space Structures wants to create a new space station . their giant cylinder could apparently replace the ISS . it would rotate four times per minute to create artificial gravity . it would be 1,300ft (400 metres) long, cost £200 billion ($300 billion) and take 30 years to build . the final design would be 330ft (100 metres) in diameter and 1,310ft (400 metres) long .
+    prediction: prince will arrive in australia next Monday ahead of his final tour of duty . he will serve alongside elite soldiers in Darwin, Perth and Sydney . he will also spend time with Indigenous soldiers in the northern territory . he will also join diggers on urban training exercises and bush patrols .
 
-    target: Washington, DC company United Space Structures wants to create a new space station . It rotates four times a minute to create artificial gravity - with the 'stem' and 'dome spinning in opposite directions . It would be 1,300ft (400 metres) long, cost £200 billion ($300 billion) and take 30 years to build . ‘We believe artificial gravity is required to support long term living in space,’ Bill Kemp from USS told MailOnline .
+    target: Prince Harry to arrive in Australia next Monday ahead of four-week stay . Will be Australian soldiers in Darwin, Perth and Sydney during trip . Prince will observe elite SAS soldiers, and Indigenous NORFORCE troops . The royal said to be excited for 'challenging and hectic' schedule . The trip is the last of Prince Harry's military career before he retires .
 
 
     Example 5:
 
-    prediction: the unofficial 2012 paperback book was revealed by a plaintiff in a lawsuit filed by four sexual-assault victims . she brought forward the songbook and she had filed an administrative complaint over the book in 2012 . the 130-page songbook contains 70 songs with titles including Pubic Hair, The Kotex Song and Bestiality .
+    prediction: Brian Nicol, 32, drowned in a pool at a luxury villa in the Costa del sol . he was staying with friends in the villa in nueva andalucia with friends . he failed to resurface and friends dragged him out of the water . police and paramedics arrived shortly after the incident on sunday . but he had died, police said early evidence suggests he was drowning .
 
-    target: The 130-page songbook contains 70 songs with titles including Pubic Hair and The Kotex Song as well as Bestiality . One of them, The S&M Man, is set to tune of The Candy Man and graphically describes sexually mutilating women . Revealed in lawsuit filing by four sexual-assault victims who want to stop the practice of sexual assault allegations within the military being handled entirely within the command structure .
+    target: Brian Nicol, 32 from Glasgow, dived into a pool but failed to resurface . Frantic friends dragged him out of the water but he could not be revived . Group were partying around pool after night out in Marbella, says source . Early investigations show death was a 'tragic accident' according to police .
 
 
 
@@ -850,7 +925,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  38.080 seconds)
+   **Total running time of the script:** ( 4 minutes  24.918 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
