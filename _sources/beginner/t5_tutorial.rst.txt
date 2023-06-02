@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 16.2MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 15.5MB/s]
 
 
 
@@ -135,48 +135,49 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|          | 8.36M/945M [00:00<00:11, 87.6MB/s]
-      3%|2         | 26.3M/945M [00:00<00:06, 147MB/s] 
-      5%|4         | 44.2M/945M [00:00<00:05, 166MB/s]
-      7%|6         | 66.0M/945M [00:00<00:04, 190MB/s]
-      9%|9         | 89.0M/945M [00:00<00:04, 209MB/s]
-     12%|#1        | 112M/945M [00:00<00:03, 219MB/s] 
-     14%|#4        | 135M/945M [00:00<00:03, 226MB/s]
-     17%|#6        | 158M/945M [00:00<00:03, 230MB/s]
-     19%|#9        | 181M/945M [00:00<00:03, 236MB/s]
-     22%|##1       | 206M/945M [00:01<00:03, 243MB/s]
-     24%|##4       | 230M/945M [00:01<00:03, 247MB/s]
-     27%|##6       | 255M/945M [00:01<00:02, 249MB/s]
-     29%|##9       | 278M/945M [00:01<00:02, 246MB/s]
-     32%|###1      | 302M/945M [00:01<00:02, 246MB/s]
-     34%|###4      | 325M/945M [00:01<00:02, 246MB/s]
-     37%|###6      | 349M/945M [00:01<00:02, 244MB/s]
-     39%|###9      | 372M/945M [00:01<00:02, 242MB/s]
-     42%|####1     | 395M/945M [00:01<00:02, 241MB/s]
-     44%|####4     | 418M/945M [00:01<00:02, 239MB/s]
-     47%|####6     | 441M/945M [00:02<00:02, 236MB/s]
-     49%|####9     | 464M/945M [00:02<00:02, 237MB/s]
-     51%|#####1    | 486M/945M [00:02<00:02, 232MB/s]
-     54%|#####3    | 509M/945M [00:02<00:01, 229MB/s]
-     56%|#####6    | 531M/945M [00:02<00:01, 230MB/s]
-     59%|#####8    | 553M/945M [00:02<00:01, 228MB/s]
-     61%|######    | 575M/945M [00:02<00:01, 231MB/s]
-     63%|######3   | 598M/945M [00:02<00:01, 232MB/s]
-     66%|######5   | 620M/945M [00:02<00:01, 228MB/s]
-     68%|######8   | 642M/945M [00:02<00:01, 230MB/s]
-     70%|#######   | 665M/945M [00:03<00:01, 233MB/s]
-     73%|#######2  | 688M/945M [00:03<00:01, 233MB/s]
-     75%|#######5  | 710M/945M [00:03<00:01, 234MB/s]
-     78%|#######7  | 732M/945M [00:03<00:00, 229MB/s]
-     80%|#######9  | 755M/945M [00:03<00:00, 230MB/s]
-     82%|########2 | 777M/945M [00:03<00:00, 231MB/s]
-     85%|########4 | 800M/945M [00:03<00:00, 235MB/s]
-     87%|########7 | 824M/945M [00:03<00:00, 240MB/s]
-     90%|########9 | 848M/945M [00:03<00:00, 243MB/s]
-     92%|#########2| 873M/945M [00:03<00:00, 247MB/s]
-     95%|#########4| 896M/945M [00:04<00:00, 242MB/s]
-     98%|#########7| 921M/945M [00:04<00:00, 249MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 233MB/s]
+      1%|          | 7.74M/945M [00:00<00:12, 81.0MB/s]
+      3%|2         | 27.6M/945M [00:00<00:06, 156MB/s] 
+      5%|5         | 47.9M/945M [00:00<00:05, 182MB/s]
+      7%|7         | 67.6M/945M [00:00<00:04, 191MB/s]
+      9%|9         | 86.0M/945M [00:00<00:04, 192MB/s]
+     11%|#1        | 104M/945M [00:00<00:04, 193MB/s] 
+     13%|#3        | 124M/945M [00:00<00:04, 197MB/s]
+     15%|#5        | 144M/945M [00:00<00:04, 200MB/s]
+     17%|#7        | 164M/945M [00:00<00:04, 203MB/s]
+     20%|#9        | 184M/945M [00:01<00:03, 207MB/s]
+     22%|##1       | 206M/945M [00:01<00:03, 214MB/s]
+     24%|##4       | 230M/945M [00:01<00:03, 226MB/s]
+     27%|##6       | 254M/945M [00:01<00:03, 233MB/s]
+     30%|##9       | 279M/945M [00:01<00:02, 241MB/s]
+     32%|###2      | 304M/945M [00:01<00:02, 247MB/s]
+     35%|###4      | 329M/945M [00:01<00:02, 251MB/s]
+     37%|###7      | 353M/945M [00:01<00:02, 251MB/s]
+     40%|###9      | 377M/945M [00:01<00:02, 251MB/s]
+     42%|####2     | 401M/945M [00:01<00:02, 251MB/s]
+     45%|####4     | 425M/945M [00:02<00:02, 251MB/s]
+     47%|####7     | 449M/945M [00:02<00:02, 248MB/s]
+     50%|####9     | 472M/945M [00:02<00:02, 244MB/s]
+     52%|#####2    | 496M/945M [00:02<00:01, 244MB/s]
+     55%|#####4    | 519M/945M [00:02<00:01, 243MB/s]
+     57%|#####7    | 542M/945M [00:02<00:01, 240MB/s]
+     60%|#####9    | 565M/945M [00:02<00:01, 238MB/s]
+     62%|######2   | 588M/945M [00:02<00:01, 237MB/s]
+     65%|######4   | 610M/945M [00:02<00:01, 235MB/s]
+     67%|######7   | 633M/945M [00:02<00:01, 235MB/s]
+     69%|######9   | 655M/945M [00:03<00:01, 234MB/s]
+     72%|#######1  | 678M/945M [00:03<00:01, 234MB/s]
+     74%|#######4  | 701M/945M [00:03<00:01, 235MB/s]
+     77%|#######6  | 723M/945M [00:03<00:00, 235MB/s]
+     79%|#######9  | 747M/945M [00:03<00:00, 240MB/s]
+     82%|########1 | 770M/945M [00:03<00:00, 240MB/s]
+     84%|########3 | 793M/945M [00:03<00:00, 238MB/s]
+     86%|########6 | 816M/945M [00:03<00:00, 232MB/s]
+     89%|########8 | 838M/945M [00:03<00:00, 230MB/s]
+     91%|#########1| 861M/945M [00:03<00:00, 233MB/s]
+     94%|#########3| 884M/945M [00:04<00:00, 235MB/s]
+     96%|#########5| 906M/945M [00:04<00:00, 234MB/s]
+     98%|#########8| 929M/945M [00:04<00:00, 233MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 229MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -472,37 +473,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: manchester city have not won a premier league game since 1995 . they trailed at half-time in almost 20 years after losing to crystal palace . last time they won having been in a losing position at half-time was on 3-2 defeat to blackburn in 1995 . city's last win having been in a losing position was in a 3-2 defeat to aston villa .
+    prediction: the victims of a horrific medical experiment run by the united states in Guatemala are now suing Johns Hopkins . the study deliberately infected individuals with syphilis in order to test drugs and study the disease . some of the individuals who are still alive were almost all children when they were unknowingly infected . the lawsuit, which has 750 plaintiffs, claims that officials from Hopkins approved and helped to plan the study .
 
-    target: Man City's last Premier League win having trailed at half-time was in 1995 . Man City came from behind to beat Blackburn Rovers 3-2 at Ewood Park . Uwe Rosler, Keith Curle and Paul Walsh scored in the comeback win . Manchester City lost to Crystal Palace on Monday night . CLICK HERE for all the latest Man City news . City have lost their last three Premier League away games, after losing two of the preceding 26 on the road. The last time Man City lost three straight league away games was between February and March 2011. City have scored more than once in a game once in their last six away from home in the league; they scored two or more in 11 of their 13 preceding away games. They have kept three clean sheets in their last 16 PL matches. They have lost six Premier League games in 2014/15, the same number as in 2012/13 and 2013/14. Swansea have won two more Premier League points than Manchester City (16-14) since selling Wilfried Bony on January 14.
+    target: Victims and their families of a US study that infected individuals with syphilis in Guatemala without their knowledge are suing Johns Hopkins . In a $1billion lawsuit, 750 plaintiffs claim the college approved and helped to plan the study, which ran from 1945 to 1956 . The victims were mostly orphans, children, prisoners, soldiers, prostitutes and mental patients . Marta Orellana was just 9 years old when one day at the orphanage she was ordered to go to the infirmary and infected with the disease . Federico Mesa was a solider who was forcibly injected with syphilis as a soldier and passed it along to his family . Marta Ruiz's husband was infected, and she gave birth to one child who did not have a brain and another who is severely handicapped . Another woman, Victoria, claims she was born blind because he father was infected . Blindness, deformities, and death are just some of the problems babies born with congenital syphilis face . A lawyer for Johns Hopkins has called the suit 'baseless'
 
 
     Example 2:
 
-    prediction: the former prime minister and his wife therese rein have said goodbye to their family home in Brisbane's east of more than 20 years . the two-storey property still managed to sell for over three times what the couple paid when they bought the house just over two decades ago . the house was snatched up by applied economics professor Uwe Dulleck, who already owns a home in the area with his wife Monica . the house has a history of encouraging bargains, as the Rudd's
+    prediction: number of allergy sufferers is soaring and almost half of those with severe allergies live in daily fear of suffering a potentially fatal reaction . two-thirds don't know how to use an adrenaline pen which can save lives of those suffering anaphylaxis . around 21million people have some kind of allergy, ranging from hayfever to reactions to food, medication and wasp stings .
 
-    target: The Rudd family put their family home on the market in November and it sold for $1.14 million . Kevin Rudd and Therese Rein were originally hoping for $1.25 million but lowered the asking price to $1.19 million . The property sold to applied economics Professor Uwe Dulleck and his wife Monica who already live in the area . They bought the Norman Park property in Brisbane's east in 1994 for just $384,000 . It's a five-bedroom colonial classic - a hidden sanctuary surrounded by greenery with a resort-style pool . The Rudds will use their luxurious, modern Noosa home as their permanent base after the sale .
+    target: Hospital admissions for allergies rose by 8 per cent between 2013 and 2014 . Around 21million Britons have some kind of allergy, such as hayfever . But more than two thirds would not know what to do if they saw someone having an allergic reaction .
 
 
     Example 3:
 
-    prediction: the ruse was executed by the Ecuadorean airline Tame . the group of 40 tourists were given fake stamps in their passports . the stunt sparked a diplomatic incident with the government apologising .
+    prediction: a blaze broke out at the General Electric Appliance Park in Louisville, Kentucky . the park is large, such that 34 football fields could fit in one of its warehouses .
 
-    target: The stunt was pulled by local tourism groups and an Ecuador airline . Fake signs, passport control, posters and adverts were created in the ruse . It sparked outrage from Costa Rican officials prompting a formal apology . The video was taken down, but was reuploaded by La Nación .
+    target: Fire breaks out at the General Electric Appliance Park in Louisville, Kentucky . City official: No is believed to be injured or trapped .
 
 
     Example 4:
 
-    prediction: pensioner's money appeared to be going missing from her bank account . her concerns were put down to her having Alzheimer's disease . but her son had been slowly siphoning the money away . he spent it on gambling, a holiday and cinema tickets . a £13,000 fee to move his mother into a care home had to be paid .
+    prediction: handwritten book was written in 1942 at government code and cypher school . it contains notes and calculations made by the mathematician at Bletchley park . the 56-page document was sold at auction for $1,025,000 (£698,000) it is believed to be the only extensive Turing manuscript in existence .
 
-    target: David Rylance, 47, stole thousands of pounds from his own dying mother . Dying pensioner Margaret Rylance was suffering from Alzheimer's disease . She noticed money was missing but concerns were put down to condition . Her son was jailed for two years and three months for stealing £52,000 .
+    target: Notebook written by Alan Turing during World War II sold for £700,000 . It was written at the Bletchley Park code-breaking headquarters in 1942 . Only extensive Turing manuscript thought to exist, auctioneer said .
 
 
     Example 5:
 
-    prediction: search history exported to Google Drive in ZIP archive . can be viewed on calendars and calendars .
+    prediction: Luke Shambrook went missing from the campground at lake eildon . he was found three kilometres away from where he went missing on friday . his parents have vowed to continue holidaying at the campground .
 
-    target: Search archive can be downloaded by visiting history.google.com . Feature exports all your searches to Google Drive in a ZIP archive . Google is also allowing the option of deleting search archive entirely .
+    target: Luke Shambrook, 11, was found after he went missing on Good Friday . He went missing in Lake Eildon National Park - north-east of Melbourne . His family had taken him to the park since he was just one year old . 'Every year he's been up and down the hills,' his dad Tim said . The autistic boy was found on Tuesday by a police helicopter . Doctors are amazed at how well he is doing considering his four-day ordeal . The boy was suffering from dehydration, hypothermia and exhaustion .
 
 
 
@@ -856,7 +857,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  40.625 seconds)
+   **Total running time of the script:** ( 4 minutes  6.215 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:
