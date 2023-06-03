@@ -710,7 +710,7 @@ But, a batch in our <cite>data_pipe</cite> is of the form <cite>[(X_1,y_1), (X_2
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data_pipe</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[([1, 5516, 4, 2], [1, 5867, 56, 4, 2]), ([1, 5, 105, 4, 2], [1, 17528, 4, 2]), ([1, 5, 469, 4, 2], [1, 7, 1124, 4, 2]), ([1, 5, 105, 4, 2], [1, 7, 523, 4, 2])]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[([1, 5, 844, 194, 2], [1, 7, 23, 922, 24, 2]), ([1, 5, 844, 4, 2], [1, 7, 23, 922, 4, 2]), ([1, 2099, 106, 194, 2], [1, 4695, 5, 1328, 24, 2]), ([1, 5, 1261, 4, 2], [1, 7, 23, 32, 1474, 4, 2])]
 </pre></div>
 </div>
 <p>So, we will now convert them into the form: <cite>((X_1,X_2,X_3,X_4), (y_1,y_2,y_3,y_4))</cite>.
@@ -775,20 +775,20 @@ instead of indices:</p>
 <span class="n">showSomeTransformedSentences</span><span class="p">(</span><span class="n">data_pipe</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Source:  &lt;sos&gt; &lt;unk&gt; ! &lt;eos&gt; &lt;pad&gt;
-Traget:  &lt;sos&gt; Fantastisch ! &lt;eos&gt; &lt;pad&gt;
-Source:  &lt;sos&gt; Really ? &lt;eos&gt; &lt;pad&gt;
-Traget:  &lt;sos&gt; Im Ernst ? &lt;eos&gt;
-Source:  &lt;sos&gt; Try it . &lt;eos&gt;
-Traget:  &lt;sos&gt; Versuch ’s ! &lt;eos&gt;
-Source:  &lt;sos&gt; Why me ? &lt;eos&gt;
-Traget:  &lt;sos&gt; Warum ich ? &lt;eos&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Source:  &lt;sos&gt; Relax . &lt;eos&gt; &lt;pad&gt;
+Traget:  &lt;sos&gt; Entspann dich . &lt;eos&gt;
+Source:  &lt;sos&gt; I see . &lt;eos&gt;
+Traget:  &lt;sos&gt; Aha . &lt;eos&gt; &lt;pad&gt;
+Source:  &lt;sos&gt; I ran . &lt;eos&gt;
+Traget:  &lt;sos&gt; Ich rannte . &lt;eos&gt;
+Source:  &lt;sos&gt; I see . &lt;eos&gt;
+Traget:  &lt;sos&gt; Ich verstehe . &lt;eos&gt;
 </pre></div>
 </div>
 <p>In the above output we can observe that the shorter sentences are padded with <cite>&lt;pad&gt;</cite>. Now, we
 can use <cite>data_pipe</cite> while writing our training function.</p>
 <p>Some parts of this tutorial was inspired from <a class="reference external" href="https://medium.com/@bitdribble/migrate-torchtext-to-the-new-0-9-0-api-1ff1472b5d71">this article</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  25.817 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  33.667 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-torchtext-custom-dataset-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/e80c8c5b8a71514d0905366c448448c0/torchtext_custom_dataset_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">torchtext_custom_dataset_tutorial.py</span></code></a></p>

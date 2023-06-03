@@ -590,7 +590,7 @@ But, a batch in our `data_pipe` is of the form `[(X_1,y_1), (X_2,y_2), (X_3,y_3)
 
  .. code-block:: none
 
-    [([1, 5516, 4, 2], [1, 5867, 56, 4, 2]), ([1, 5, 105, 4, 2], [1, 17528, 4, 2]), ([1, 5, 469, 4, 2], [1, 7, 1124, 4, 2]), ([1, 5, 105, 4, 2], [1, 7, 523, 4, 2])]
+    [([1, 5, 844, 194, 2], [1, 7, 23, 922, 24, 2]), ([1, 5, 844, 4, 2], [1, 7, 23, 922, 4, 2]), ([1, 2099, 106, 194, 2], [1, 4695, 5, 1328, 24, 2]), ([1, 5, 1261, 4, 2], [1, 7, 23, 32, 1474, 4, 2])]
 
 
 
@@ -702,14 +702,14 @@ instead of indices:
 
  .. code-block:: none
 
-    Source:  <sos> <unk> ! <eos> <pad>
-    Traget:  <sos> Fantastisch ! <eos> <pad>
-    Source:  <sos> Really ? <eos> <pad>
-    Traget:  <sos> Im Ernst ? <eos>
-    Source:  <sos> Try it . <eos>
-    Traget:  <sos> Versuch ’s ! <eos>
-    Source:  <sos> Why me ? <eos>
-    Traget:  <sos> Warum ich ? <eos>
+    Source:  <sos> Relax . <eos> <pad>
+    Traget:  <sos> Entspann dich . <eos>
+    Source:  <sos> I see . <eos>
+    Traget:  <sos> Aha . <eos> <pad>
+    Source:  <sos> I ran . <eos>
+    Traget:  <sos> Ich rannte . <eos>
+    Source:  <sos> I see . <eos>
+    Traget:  <sos> Ich verstehe . <eos>
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  25.817 seconds)
+   **Total running time of the script:** ( 4 minutes  33.667 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:

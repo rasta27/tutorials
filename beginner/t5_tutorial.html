@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 16.8MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 15.2MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,44 +479,45 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|1         | 11.1M/945M [00:00&lt;00:08, 116MB/s]
-  4%|3         | 34.0M/945M [00:00&lt;00:05, 189MB/s]
-  6%|6         | 60.1M/945M [00:00&lt;00:04, 228MB/s]
-  9%|9         | 87.2M/945M [00:00&lt;00:03, 250MB/s]
- 12%|#2        | 114M/945M [00:00&lt;00:03, 262MB/s]
- 15%|#4        | 141M/945M [00:00&lt;00:03, 267MB/s]
- 18%|#7        | 167M/945M [00:00&lt;00:03, 270MB/s]
- 21%|##        | 194M/945M [00:00&lt;00:02, 273MB/s]
- 23%|##3       | 220M/945M [00:00&lt;00:02, 270MB/s]
- 26%|##6       | 246M/945M [00:01&lt;00:02, 271MB/s]
- 29%|##8       | 273M/945M [00:01&lt;00:02, 276MB/s]
- 32%|###1      | 300M/945M [00:01&lt;00:02, 276MB/s]
- 34%|###4      | 326M/945M [00:01&lt;00:02, 275MB/s]
- 37%|###7      | 353M/945M [00:01&lt;00:02, 278MB/s]
- 40%|####      | 379M/945M [00:01&lt;00:02, 266MB/s]
- 43%|####2     | 405M/945M [00:01&lt;00:02, 259MB/s]
- 45%|####5     | 429M/945M [00:01&lt;00:02, 255MB/s]
- 48%|####8     | 454M/945M [00:01&lt;00:02, 241MB/s]
- 51%|#####     | 477M/945M [00:01&lt;00:02, 242MB/s]
- 53%|#####3    | 501M/945M [00:02&lt;00:01, 243MB/s]
- 56%|#####5    | 525M/945M [00:02&lt;00:01, 246MB/s]
- 58%|#####8    | 548M/945M [00:02&lt;00:01, 245MB/s]
- 61%|######    | 572M/945M [00:02&lt;00:01, 245MB/s]
- 63%|######3   | 596M/945M [00:02&lt;00:01, 249MB/s]
- 66%|######5   | 620M/945M [00:02&lt;00:01, 240MB/s]
- 68%|######8   | 645M/945M [00:02&lt;00:01, 247MB/s]
- 71%|#######1  | 672M/945M [00:02&lt;00:01, 258MB/s]
- 74%|#######3  | 697M/945M [00:02&lt;00:01, 257MB/s]
- 77%|#######6  | 724M/945M [00:02&lt;00:00, 265MB/s]
- 79%|#######9  | 749M/945M [00:03&lt;00:00, 257MB/s]
- 82%|########2 | 776M/945M [00:03&lt;00:00, 264MB/s]
- 85%|########4 | 803M/945M [00:03&lt;00:00, 269MB/s]
- 88%|########7 | 828M/945M [00:03&lt;00:00, 243MB/s]
- 91%|######### | 855M/945M [00:03&lt;00:00, 254MB/s]
- 93%|#########3| 881M/945M [00:03&lt;00:00, 258MB/s]
- 96%|#########5| 906M/945M [00:03&lt;00:00, 253MB/s]
- 99%|#########8| 930M/945M [00:03&lt;00:00, 252MB/s]
-100%|##########| 945M/945M [00:03&lt;00:00, 255MB/s]
+  1%|          | 8.40M/945M [00:00&lt;00:11, 86.9MB/s]
+  3%|2         | 26.9M/945M [00:00&lt;00:06, 150MB/s]
+  6%|5         | 53.2M/945M [00:00&lt;00:04, 207MB/s]
+  8%|8         | 79.8M/945M [00:00&lt;00:03, 235MB/s]
+ 11%|#1        | 106M/945M [00:00&lt;00:03, 251MB/s]
+ 14%|#4        | 133M/945M [00:00&lt;00:03, 261MB/s]
+ 17%|#6        | 159M/945M [00:00&lt;00:03, 266MB/s]
+ 20%|#9        | 185M/945M [00:00&lt;00:02, 268MB/s]
+ 22%|##2       | 211M/945M [00:00&lt;00:02, 259MB/s]
+ 25%|##5       | 236M/945M [00:01&lt;00:02, 261MB/s]
+ 28%|##7       | 261M/945M [00:01&lt;00:03, 221MB/s]
+ 30%|##9       | 283M/945M [00:01&lt;00:05, 119MB/s]
+ 32%|###1      | 300M/945M [00:01&lt;00:05, 118MB/s]
+ 35%|###4      | 327M/945M [00:01&lt;00:04, 147MB/s]
+ 37%|###7      | 353M/945M [00:01&lt;00:03, 174MB/s]
+ 40%|####      | 380M/945M [00:02&lt;00:02, 198MB/s]
+ 43%|####3     | 407M/945M [00:02&lt;00:02, 218MB/s]
+ 46%|####5     | 433M/945M [00:02&lt;00:02, 234MB/s]
+ 49%|####8     | 460M/945M [00:02&lt;00:02, 246MB/s]
+ 51%|#####1    | 486M/945M [00:02&lt;00:01, 254MB/s]
+ 54%|#####4    | 513M/945M [00:02&lt;00:01, 262MB/s]
+ 57%|#####7    | 540M/945M [00:02&lt;00:01, 268MB/s]
+ 60%|#####9    | 567M/945M [00:02&lt;00:01, 271MB/s]
+ 63%|######2   | 593M/945M [00:03&lt;00:02, 173MB/s]
+ 65%|######5   | 616M/945M [00:03&lt;00:01, 188MB/s]
+ 68%|######7   | 638M/945M [00:03&lt;00:01, 188MB/s]
+ 70%|######9   | 661M/945M [00:03&lt;00:01, 201MB/s]
+ 72%|#######2  | 684M/945M [00:03&lt;00:01, 213MB/s]
+ 75%|#######5  | 709M/945M [00:03&lt;00:01, 225MB/s]
+ 78%|#######7  | 733M/945M [00:03&lt;00:00, 233MB/s]
+ 80%|########  | 757M/945M [00:03&lt;00:00, 239MB/s]
+ 83%|########2 | 782M/945M [00:03&lt;00:00, 244MB/s]
+ 85%|########5 | 806M/945M [00:03&lt;00:00, 248MB/s]
+ 88%|########7 | 831M/945M [00:04&lt;00:00, 248MB/s]
+ 90%|######### | 855M/945M [00:04&lt;00:00, 249MB/s]
+ 93%|#########3| 879M/945M [00:04&lt;00:00, 252MB/s]
+ 96%|#########5| 903M/945M [00:04&lt;00:00, 251MB/s]
+ 98%|#########8| 927M/945M [00:04&lt;00:00, 149MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 206MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -728,37 +729,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: Southampton have already levelled the premier league points tally of 56 . the club are five points behind man city in the table . but manager Ronald Koeman believes they must win all six games .
+prediction: images show downtrodden people waiting in line for hours for food . they were posted on twitter by member of anti-ISIS campaign group . they risk their lives every day by documenting atrocities from inside the city .
 
-target: Southampton are currently five points behind fourth-placed Man City . Ronald Koeman has not given up hope of finishing inside the top four . The south coast outfit face Stoke at the Britannia Stadium on Saturday .
+target: Syrians line up despondently in scenes more familiar inside refugee camps . Posted by anti-ISIS activist with message: Hunger, poverty, homelessness . Syrians persecuted by terror group's warped interpretation of Islamic law .
 
 
 Example 2:
 
-prediction: a new york-based documentary photographer has spent three years traveling the u.s. photographing and interviewing gay veterans and servicemen . the project, Gays in the Military, was created to better understand why homosexuals would enlist in the military . the photos show commonalities between the subjects despite their different journeys, from a 92-year-old WW2 veteran to young soldiers who recently returned from Afghanistan .
+prediction: astronomers say 'rogue' planets could still harbour extra-terrestrials . this is according to an astrophysicist with the Laboratoire d'Astrophysique de Bordeaux in france . a planet needs to keep warm for liquid water to form, and without the sun, this heat would have to come from its interior .
 
-target: Photo essay book, Gays in the Military, released by New York photographer Vincent Cianni . Individual stories tell the history of homosexuals in the military . Many were discharged because of their sexuality and suffer ongoing psychological damage . Rape, assault and bullying remain prevalent . Being gay was considered a criminal offense in the U.S. military until 1993 .
+target: Comments were made by Sean Raymond, an astrophysicist in France . He says internal heat of rogue planets could allow liquid water to form . Writing in Aeon, he also says a thick atmosphere may help life develop . Astronomers have found 50 of these rogue planets in the past 15 years .
 
 
 Example 3:
 
-prediction: transport workers' union's national secretary condemns request . he accuses supermarket giant of trying to reintroduce serfdom .
+prediction: captain of sea Shepherd vessel 'started applauding and cheering' when vessel sank . crew aboard the now submerged ship were pursuing vessel for 110 days . anti-poaching activists say the captain was 'deliberately sank his own vessel' .
 
-target: Aldi has requested the ability to make employees work more than 38 hours in a submission to Workplace Relations Productivity Commission . Supermarket giant was slammed by union secretary Tony Sheldon . He accused Aldi of reintroducing serfdom and 'trying to strip workers of their rights'
+target: Conservationist group saved fishing ship's crew as boat sank on Monday . Group's Bob Barker was chasing the ship collecting 'evidence of poaching' 40 crew were rescused as fishing ship Thunder sank off the coast of Africa . Bob Barker captain said Thunder skipper cheered as his boat went down . Peter Hammarstedt said scuttling would destroy evidence of poaching .
 
 
 Example 4:
 
-prediction: louis van gaal has identified Michael Carrick and Wayne Rooney as his brightest players . van gaal demands a level of 'football intelligence' from his players . united have struggled to make the top four this season .
+prediction: mother-of-two, 45, fled her home in Chatham, Kent, to join ISIS . she is believed to have led a group of women fighters in a hate-filled chanting session in Raqqa, Syria . experts say the slicky-edited video is the first 'real evidence' that she is involved with the al-khanssaa brigade at a 'high level'
 
-target: Very few Manchester United players possess the intelligence demanded . Michael Carrick, Wayne Rooney and Juan Mata can claim to have it . The Dutchman suggested some of his other players lack brains . Luke Shaw wasn't fit enough when he arrived last summer . Phil Jones thunders senselessly into tackles and gets injured . Even Ander Herrera is guilty of playing senseless long balls . Durham: Arsenal only turn it on when the pressure is off . Adrian Durham: Sterling would be earning the same as Balotelli if he signed £100,000-a-week deal at Liverpool... that's the real issue here . CLICK HERE for all the latest Manchester United news .
+target: Guitarist Sally Jones, 45, ran away to Syria from Chatham, Kent, in 2013 . Mother-of-two set up home in Raqqa with toyboy husband Junaid Hussain . Footage shows her leading fighters in Arabic chants while waving AK-47s . Experts say video is first 'real evidence' she is involved with all-women al-Khanssaa Brigade at 'high level'
 
 
 Example 5:
 
-prediction: deah Shaddy Barakat, 23, his wife, 21-year-old Yusor Mohammad Abu-Salha; and her sister, 19-year-old Razan Mohammad Abu-Salha were gunned down on february 10 . a superior court judge in north carolina ruled on Monday that Craig Hicks is 'death penalty qualified' .
+prediction: homaro cantu, 38, was found dead inside a new brewpub in the north side of the city on Tuesday . he was the owner of famed restaurant Moto, which he was opening with his business partner . friends say he had recently become strained by a lawsuit filed by an investor in Moto and iNG, a restaurant he shuttered last year .
 
-target: A superior court judge in North Carolina ruled on Monday that Craig Hicks is 'death penalty qualified' He has been charged with first-degree murder in the killing of three Muslim college students on February 10 . His victims were Deah Shaddy Barakat, 23, his wife, Yusor Mohammad Abu-Salha, 21, and her sister, Razan Mohammad Abu-Salha, 19 . The victims' families are adamant that they were targeted because they were Muslims and have pushed for hate-crime charges .
+target: Homaru Cantu, 38, was found dead inside his upcoming restaurant, Crooked Fork Brewery, on Tuesday . An autopsy has been scheduled for Wednesday, though authorities are investigating Cantu's death as an apparent suicide . Cantu worked for famed Chicago chef Charlie Trotter for four years before opening his own restaurant, Moto . A month ago, a former investor filed a lawsuit against Cantu, accusing the chef of using Moto's bank account for personal expenses . According to friends, Cantu had become strained in recent days because of the lawsuit .
 </pre></div>
 </div>
 </div>
@@ -1051,7 +1052,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  19.314 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  8.897 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
