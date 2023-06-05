@@ -382,7 +382,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je te vire .', 'i m letting you go .']
+    ['je suis juste un monsieur tout le monde .', 'i am just a nobody .']
 
 
 
@@ -1036,21 +1036,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 23s (- 19m 33s) (5000 6%) 2.8872
-    2m 42s (- 17m 36s) (10000 13%) 2.3111
-    4m 1s (- 16m 7s) (15000 20%) 1.9977
-    5m 21s (- 14m 43s) (20000 26%) 1.7552
-    6m 40s (- 13m 20s) (25000 33%) 1.5411
-    7m 59s (- 11m 59s) (30000 40%) 1.3594
-    9m 19s (- 10m 39s) (35000 46%) 1.2285
-    10m 40s (- 9m 20s) (40000 53%) 1.1213
-    11m 59s (- 7m 59s) (45000 60%) 1.0029
-    13m 19s (- 6m 39s) (50000 66%) 0.9278
-    14m 39s (- 5m 19s) (55000 73%) 0.8404
-    15m 58s (- 3m 59s) (60000 80%) 0.7432
-    17m 16s (- 2m 39s) (65000 86%) 0.6600
-    18m 35s (- 1m 19s) (70000 93%) 0.6299
-    19m 55s (- 0m 0s) (75000 100%) 0.5882
+    1m 23s (- 19m 25s) (5000 6%) 2.8495
+    2m 41s (- 17m 28s) (10000 13%) 2.2781
+    3m 58s (- 15m 55s) (15000 20%) 1.9665
+    5m 15s (- 14m 27s) (20000 26%) 1.7032
+    6m 32s (- 13m 4s) (25000 33%) 1.5430
+    7m 48s (- 11m 42s) (30000 40%) 1.3328
+    9m 4s (- 10m 22s) (35000 46%) 1.2263
+    10m 21s (- 9m 3s) (40000 53%) 1.0563
+    11m 36s (- 7m 44s) (45000 60%) 0.9635
+    12m 53s (- 6m 26s) (50000 66%) 0.8827
+    14m 9s (- 5m 8s) (55000 73%) 0.7987
+    15m 25s (- 3m 51s) (60000 80%) 0.7133
+    16m 41s (- 2m 34s) (65000 86%) 0.6683
+    17m 58s (- 1m 17s) (70000 93%) 0.5925
+    19m 14s (- 0m 0s) (75000 100%) 0.5504
 
 
 
@@ -1071,45 +1071,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > on n est jeune qu une fois .
-    = you are only young once .
-    < we are only young you . <EOS>
+    > il est follement epris d elle .
+    = he s crazy about her .
+    < he is crazy about her . <EOS>
 
-    > je suis submerge de travail .
-    = i m swamped with work .
-    < i m swamped with work . <EOS>
+    > vous n etes pas si vieille .
+    = you re not that old .
+    < you re not that old . <EOS>
 
-    > je viens de france .
-    = i am from france .
-    < i m from france . <EOS>
+    > il est membre du conseil paroissial .
+    = he is a member of the parish committee .
+    < he is a member of his word . <EOS>
 
-    > il est dans la cuisine .
-    = he s in the kitchen .
-    < he is in the kitchen . <EOS>
+    > vous etes impressionnee n est ce pas ?
+    = you re impressed aren t you ?
+    < you re impressed aren t you ? <EOS>
 
-    > je vais cuisiner pour vous .
-    = i m going to cook for you .
-    < i m going to for for for . <EOS>
+    > nous faisons beaucoup de choses .
+    = we re getting a lot of things done .
+    < we re able in love . <EOS>
 
-    > il n est pas a la maison .
-    = he s not at home .
-    < he s not at home . <EOS>
+    > je cherche mes lunettes .
+    = i am looking for my glasses .
+    < i am looking for my cellphone . <EOS>
 
-    > nous sommes assez confiants .
-    = we re pretty confident .
-    < we re pretty confident . <EOS>
+    > tu es la seule pour moi desormais .
+    = you re the only one for me now .
+    < you re the only one for me now . <EOS>
 
-    > je lance un signal de detresse .
-    = i m declaring an emergency .
-    < i m a . . . . <EOS>
+    > elle est habituee a se tenir assise .
+    = she is used to sitting .
+    < she is used to sitting . <EOS>
 
-    > il t attend chez nous .
-    = he s waiting for you at home .
-    < he s waiting for you at home . <EOS>
+    > il est sur le point de partir .
+    = he s about to leave .
+    < he is about to leave . <EOS>
 
-    > tu es tranquille .
-    = you re quiet .
-    < you re quiet . <EOS>
+    > vous faites erreur a ce propos .
+    = you are mistaken about that .
+    < you are mistaken about that . <EOS>
 
 
 
@@ -1154,7 +1154,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f6a90389cc0>
+    <matplotlib.image.AxesImage object at 0x7f5000beeda0>
 
 
 
@@ -1255,11 +1255,11 @@ and labels:
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too slow . <EOS>
+    output = she s too . . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not afraid of dying . <EOS>
+    output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s an talented young girl . <EOS>
 
 
 
@@ -1292,7 +1292,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 20 minutes  9.119 seconds)
+   **Total running time of the script:** ( 19 minutes  28.579 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

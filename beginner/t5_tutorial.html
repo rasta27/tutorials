@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 15.2MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 16.4MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,45 +479,48 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  1%|          | 8.40M/945M [00:00&lt;00:11, 86.9MB/s]
-  3%|2         | 26.9M/945M [00:00&lt;00:06, 150MB/s]
-  6%|5         | 53.2M/945M [00:00&lt;00:04, 207MB/s]
-  8%|8         | 79.8M/945M [00:00&lt;00:03, 235MB/s]
- 11%|#1        | 106M/945M [00:00&lt;00:03, 251MB/s]
- 14%|#4        | 133M/945M [00:00&lt;00:03, 261MB/s]
- 17%|#6        | 159M/945M [00:00&lt;00:03, 266MB/s]
- 20%|#9        | 185M/945M [00:00&lt;00:02, 268MB/s]
- 22%|##2       | 211M/945M [00:00&lt;00:02, 259MB/s]
- 25%|##5       | 236M/945M [00:01&lt;00:02, 261MB/s]
- 28%|##7       | 261M/945M [00:01&lt;00:03, 221MB/s]
- 30%|##9       | 283M/945M [00:01&lt;00:05, 119MB/s]
- 32%|###1      | 300M/945M [00:01&lt;00:05, 118MB/s]
- 35%|###4      | 327M/945M [00:01&lt;00:04, 147MB/s]
- 37%|###7      | 353M/945M [00:01&lt;00:03, 174MB/s]
- 40%|####      | 380M/945M [00:02&lt;00:02, 198MB/s]
- 43%|####3     | 407M/945M [00:02&lt;00:02, 218MB/s]
- 46%|####5     | 433M/945M [00:02&lt;00:02, 234MB/s]
- 49%|####8     | 460M/945M [00:02&lt;00:02, 246MB/s]
- 51%|#####1    | 486M/945M [00:02&lt;00:01, 254MB/s]
- 54%|#####4    | 513M/945M [00:02&lt;00:01, 262MB/s]
- 57%|#####7    | 540M/945M [00:02&lt;00:01, 268MB/s]
- 60%|#####9    | 567M/945M [00:02&lt;00:01, 271MB/s]
- 63%|######2   | 593M/945M [00:03&lt;00:02, 173MB/s]
- 65%|######5   | 616M/945M [00:03&lt;00:01, 188MB/s]
- 68%|######7   | 638M/945M [00:03&lt;00:01, 188MB/s]
- 70%|######9   | 661M/945M [00:03&lt;00:01, 201MB/s]
- 72%|#######2  | 684M/945M [00:03&lt;00:01, 213MB/s]
- 75%|#######5  | 709M/945M [00:03&lt;00:01, 225MB/s]
- 78%|#######7  | 733M/945M [00:03&lt;00:00, 233MB/s]
- 80%|########  | 757M/945M [00:03&lt;00:00, 239MB/s]
- 83%|########2 | 782M/945M [00:03&lt;00:00, 244MB/s]
- 85%|########5 | 806M/945M [00:03&lt;00:00, 248MB/s]
- 88%|########7 | 831M/945M [00:04&lt;00:00, 248MB/s]
- 90%|######### | 855M/945M [00:04&lt;00:00, 249MB/s]
- 93%|#########3| 879M/945M [00:04&lt;00:00, 252MB/s]
- 96%|#########5| 903M/945M [00:04&lt;00:00, 251MB/s]
- 98%|#########8| 927M/945M [00:04&lt;00:00, 149MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 206MB/s]
+  1%|1         | 9.59M/945M [00:00&lt;00:09, 101MB/s]
+  3%|3         | 32.2M/945M [00:00&lt;00:05, 181MB/s]
+  6%|5         | 55.1M/945M [00:00&lt;00:04, 208MB/s]
+  8%|8         | 78.8M/945M [00:00&lt;00:04, 224MB/s]
+ 11%|#         | 102M/945M [00:00&lt;00:03, 231MB/s]
+ 13%|#3        | 125M/945M [00:00&lt;00:03, 235MB/s]
+ 16%|#5        | 148M/945M [00:00&lt;00:03, 238MB/s]
+ 18%|#8        | 172M/945M [00:00&lt;00:03, 239MB/s]
+ 21%|##        | 195M/945M [00:00&lt;00:03, 240MB/s]
+ 23%|##3       | 218M/945M [00:01&lt;00:03, 242MB/s]
+ 26%|##5       | 241M/945M [00:01&lt;00:03, 242MB/s]
+ 28%|##7       | 264M/945M [00:01&lt;00:02, 242MB/s]
+ 30%|###       | 287M/945M [00:01&lt;00:02, 242MB/s]
+ 33%|###2      | 310M/945M [00:01&lt;00:02, 242MB/s]
+ 35%|###5      | 334M/945M [00:01&lt;00:02, 243MB/s]
+ 38%|###7      | 358M/945M [00:01&lt;00:02, 245MB/s]
+ 40%|####      | 381M/945M [00:01&lt;00:02, 245MB/s]
+ 43%|####2     | 405M/945M [00:01&lt;00:02, 246MB/s]
+ 45%|####5     | 429M/945M [00:01&lt;00:02, 248MB/s]
+ 48%|####7     | 453M/945M [00:02&lt;00:02, 248MB/s]
+ 50%|#####     | 476M/945M [00:02&lt;00:01, 246MB/s]
+ 53%|#####2    | 500M/945M [00:02&lt;00:01, 245MB/s]
+ 55%|#####5    | 523M/945M [00:02&lt;00:01, 245MB/s]
+ 58%|#####7    | 548M/945M [00:02&lt;00:01, 248MB/s]
+ 61%|######    | 572M/945M [00:02&lt;00:01, 251MB/s]
+ 63%|######3   | 597M/945M [00:02&lt;00:01, 253MB/s]
+ 66%|######5   | 621M/945M [00:02&lt;00:01, 249MB/s]
+ 68%|######8   | 645M/945M [00:02&lt;00:01, 243MB/s]
+ 71%|#######   | 669M/945M [00:02&lt;00:01, 246MB/s]
+ 73%|#######3  | 692M/945M [00:03&lt;00:01, 240MB/s]
+ 76%|#######5  | 715M/945M [00:03&lt;00:00, 241MB/s]
+ 78%|#######8  | 738M/945M [00:03&lt;00:00, 242MB/s]
+ 81%|########  | 762M/945M [00:03&lt;00:00, 237MB/s]
+ 83%|########3 | 784M/945M [00:03&lt;00:00, 237MB/s]
+ 85%|########5 | 807M/945M [00:03&lt;00:00, 235MB/s]
+ 88%|########7 | 829M/945M [00:03&lt;00:00, 233MB/s]
+ 90%|######### | 852M/945M [00:03&lt;00:00, 235MB/s]
+ 93%|#########2| 874M/945M [00:03&lt;00:00, 233MB/s]
+ 95%|#########5| 898M/945M [00:03&lt;00:00, 237MB/s]
+ 97%|#########7| 921M/945M [00:04&lt;00:00, 237MB/s]
+100%|#########9| 944M/945M [00:04&lt;00:00, 238MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 239MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -729,37 +732,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: images show downtrodden people waiting in line for hours for food . they were posted on twitter by member of anti-ISIS campaign group . they risk their lives every day by documenting atrocities from inside the city .
+prediction: the tags were lost in 1939 at a coastal artillery placement on Salisbury beach . metal detector enthusiast Bill Ladd found them after a storm last year . they were returned to the vet's son, William Benn of Rhode Island .
 
-target: Syrians line up despondently in scenes more familiar inside refugee camps . Posted by anti-ISIS activist with message: Hunger, poverty, homelessness . Syrians persecuted by terror group's warped interpretation of Islamic law .
+target: Zachariah Fike head of Vermont-based Purple Hearts Reunited, says the military ID belonged to World War II veteran Cpl. William Benn . Benn lost them in 1939 at a coastal artillery placement on Salisbury Beach . Discovered last year by metal detector enthusiast following a storm .
 
 
 Example 2:
 
-prediction: astronomers say 'rogue' planets could still harbour extra-terrestrials . this is according to an astrophysicist with the Laboratoire d'Astrophysique de Bordeaux in france . a planet needs to keep warm for liquid water to form, and without the sun, this heat would have to come from its interior .
+prediction: police say a 36-year-old sheriff's deputy was directing school buses in a suburban new orleans suburb when he was shot three times . a male suspect, 56-year-old Paul Devillier, was arrested a short time later after a brief 'tussle' with officers . he is accused of opening fire on the officer, who is in stable condition at a local hospital .
 
-target: Comments were made by Sean Raymond, an astrophysicist in France . He says internal heat of rogue planets could allow liquid water to form . Writing in Aeon, he also says a thick atmosphere may help life develop . Astronomers have found 50 of these rogue planets in the past 15 years .
+target: Cpl. Burt Hazeltine, 36, with St Charles Parish, was shot three times in face, elbow and eye . Man in his 50s opened fire on deputy as he was directing school buses in New Orleans suburb of Paradis . Hazeltine, married father of four, is in stable but guarded condition; he is at risk of losing his injured eye . Paul Devillier, 56, was arrested after a tussle with police; officials believe he has mental issues . Sheriff Champagne says Devillier became upset with Hazeltine after deputy refused to stop traffic to let him make a turn . Suspect, a former TSA agent, called sheriff's office and pretended to by NCIS agent before the shooting .
 
 
 Example 3:
 
-prediction: captain of sea Shepherd vessel 'started applauding and cheering' when vessel sank . crew aboard the now submerged ship were pursuing vessel for 110 days . anti-poaching activists say the captain was 'deliberately sank his own vessel' .
+prediction: Gaston Pinsard, 96, was jailed for 18 months for historic abuse of two girls . the frail father-of-four claimed he was himself abused at a notorious home . he was born in 1919 and claimed he was abused at the home . the 96-year-old was sentenced to 18 months behind bars .
 
-target: Conservationist group saved fishing ship's crew as boat sank on Monday . Group's Bob Barker was chasing the ship collecting 'evidence of poaching' 40 crew were rescused as fishing ship Thunder sank off the coast of Africa . Bob Barker captain said Thunder skipper cheered as his boat went down . Peter Hammarstedt said scuttling would destroy evidence of poaching .
+target: Gaston Pinsard, 96, admitted sexually assault two girls over 50 years ago . His victims were just five-years-old when the abuse first started . Jailed for 18 months after he admitted nine charges of indecent assault . Judge describes the case as 'distressing and unpleasant' as he jails OAP .
 
 
 Example 4:
 
-prediction: mother-of-two, 45, fled her home in Chatham, Kent, to join ISIS . she is believed to have led a group of women fighters in a hate-filled chanting session in Raqqa, Syria . experts say the slicky-edited video is the first 'real evidence' that she is involved with the al-khanssaa brigade at a 'high level'
+prediction: gang of armed robbers used pink brollies to confuse staff as they raided 13 shops . they stole £145,000 from supermarkets, convenience stores and electrical shops . swiping £2,000 worth of cigarettes and cars valued at £30,000 in the process .
 
-target: Guitarist Sally Jones, 45, ran away to Syria from Chatham, Kent, in 2013 . Mother-of-two set up home in Raqqa with toyboy husband Junaid Hussain . Footage shows her leading fighters in Arabic chants while waving AK-47s . Experts say video is first 'real evidence' she is involved with all-women al-Khanssaa Brigade at 'high level'
+target: Thieves raided supermarkets and electrical shops during 55-day spree . Four-man gang used pink umbrellas for disguise and fled in getaway cars . They also threatened shop workers with hammers, knives and screwdrivers . Liam Bell, 19, Marcus Morgan, 21, Ashleigh Evans, 26 and 22-year-old Trea Richardson, all from West Midlands, pleaded guilty to conspiracy to rob .
 
 
 Example 5:
 
-prediction: homaro cantu, 38, was found dead inside a new brewpub in the north side of the city on Tuesday . he was the owner of famed restaurant Moto, which he was opening with his business partner . friends say he had recently become strained by a lawsuit filed by an investor in Moto and iNG, a restaurant he shuttered last year .
+prediction: 150 art fans took part in a nude tour of an exhibition at the national gallery of australia . the tour was led by artist Stuart Ringholt, who has guided tours at the museum of contemporary art in Sydney and MONA in Tasmania . the tour is an adventure through the 70-year-old american artist's body of work .
 
-target: Homaru Cantu, 38, was found dead inside his upcoming restaurant, Crooked Fork Brewery, on Tuesday . An autopsy has been scheduled for Wednesday, though authorities are investigating Cantu's death as an apparent suicide . Cantu worked for famed Chicago chef Charlie Trotter for four years before opening his own restaurant, Moto . A month ago, a former investor filed a lawsuit against Cantu, accusing the chef of using Moto's bank account for personal expenses . According to friends, Cantu had become strained in recent days because of the lawsuit .
+target: Naked art fans attended an hour-long nude tour at the National Gallery of Australia in Canberra on Wednesday night . The tour took place outside regular exhibition hours, as it is illegal to be naked in public . Fans viewed the exhibition, 'James Turrell: A Retrospective' led by experienced nude tour guide Stuart Ringholt . 'Everyone's all in it together, so it's not weird or anything,' said one man . The 70-year-old artist has put on a nude exhibition before in Japan, and was keen to replicate the experience for his body of work in Australia .
 </pre></div>
 </div>
 </div>
@@ -1052,7 +1055,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  8.897 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  16.962 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
