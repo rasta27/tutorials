@@ -458,59 +458,6 @@ use the FashionMNIST dataset. Every TorchVision <code class="docutils literal no
 <span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz
-
-  0%|          | 0/26421880 [00:00&lt;?, ?it/s]
-  0%|          | 32768/26421880 [00:00&lt;01:26, 304143.84it/s]
-  0%|          | 65536/26421880 [00:00&lt;01:26, 303043.64it/s]
-  0%|          | 131072/26421880 [00:00&lt;00:59, 440866.04it/s]
-  1%|          | 229376/26421880 [00:00&lt;00:41, 625804.51it/s]
-  2%|1         | 491520/26421880 [00:00&lt;00:20, 1272403.24it/s]
-  4%|3         | 950272/26421880 [00:00&lt;00:11, 2279864.66it/s]
-  7%|7         | 1933312/26421880 [00:00&lt;00:05, 4495316.15it/s]
- 15%|#4        | 3833856/26421880 [00:00&lt;00:02, 8649297.58it/s]
- 26%|##6       | 6946816/26421880 [00:00&lt;00:01, 14901542.82it/s]
- 38%|###8      | 10059776/26421880 [00:01&lt;00:00, 19195127.09it/s]
- 50%|####9     | 13139968/26421880 [00:01&lt;00:00, 22027043.67it/s]
- 62%|######1   | 16252928/26421880 [00:01&lt;00:00, 24052143.16it/s]
- 73%|#######3  | 19333120/26421880 [00:01&lt;00:00, 25373489.05it/s]
- 85%|########4 | 22446080/26421880 [00:01&lt;00:00, 26375649.85it/s]
- 97%|#########6| 25526272/26421880 [00:01&lt;00:00, 26977459.28it/s]
-100%|##########| 26421880/26421880 [00:01&lt;00:00, 16175906.90it/s]
-Extracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw
-
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
-
-  0%|          | 0/29515 [00:00&lt;?, ?it/s]
-100%|##########| 29515/29515 [00:00&lt;00:00, 270191.26it/s]
-100%|##########| 29515/29515 [00:00&lt;00:00, 269049.12it/s]
-Extracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw
-
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
-
-  0%|          | 0/4422102 [00:00&lt;?, ?it/s]
-  1%|          | 32768/4422102 [00:00&lt;00:14, 301475.26it/s]
-  1%|1         | 65536/4422102 [00:00&lt;00:14, 300335.16it/s]
-  3%|2         | 131072/4422102 [00:00&lt;00:09, 437060.03it/s]
-  5%|5         | 229376/4422102 [00:00&lt;00:06, 619799.92it/s]
- 11%|#1        | 491520/4422102 [00:00&lt;00:03, 1261101.66it/s]
- 21%|##1       | 950272/4422102 [00:00&lt;00:01, 2259031.86it/s]
- 44%|####3     | 1933312/4422102 [00:00&lt;00:00, 4451702.29it/s]
- 87%|########6 | 3833856/4422102 [00:00&lt;00:00, 8586784.45it/s]
-100%|##########| 4422102/4422102 [00:00&lt;00:00, 5044319.54it/s]
-Extracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw
-
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
-Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
-
-  0%|          | 0/5148 [00:00&lt;?, ?it/s]
-100%|##########| 5148/5148 [00:00&lt;00:00, 23317793.73it/s]
-Extracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw
-</pre></div>
-</div>
 <p>We pass the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> as an argument to <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>. This wraps an iterable over our dataset, and supports
 automatic batching, sampling, shuffling and multiprocess data loading. Here we define a batch size of 64, i.e. each element
 in the dataloader iterable will return a batch of 64 features and labels.</p>
@@ -647,78 +594,78 @@ accuracy increase and the loss decrease with every epoch.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Epoch 1
 -------------------------------
-loss: 2.306575  [   64/60000]
-loss: 2.295661  [ 6464/60000]
-loss: 2.274082  [12864/60000]
-loss: 2.268484  [19264/60000]
-loss: 2.251933  [25664/60000]
-loss: 2.226991  [32064/60000]
-loss: 2.231244  [38464/60000]
-loss: 2.201225  [44864/60000]
-loss: 2.191254  [51264/60000]
-loss: 2.157251  [57664/60000]
+loss: 2.297755  [   64/60000]
+loss: 2.288031  [ 6464/60000]
+loss: 2.269017  [12864/60000]
+loss: 2.267960  [19264/60000]
+loss: 2.243421  [25664/60000]
+loss: 2.214718  [32064/60000]
+loss: 2.235148  [38464/60000]
+loss: 2.195360  [44864/60000]
+loss: 2.182227  [51264/60000]
+loss: 2.169601  [57664/60000]
 Test Error:
- Accuracy: 47.3%, Avg loss: 2.159446
+ Accuracy: 42.3%, Avg loss: 2.147569
 
 Epoch 2
 -------------------------------
-loss: 2.167296  [   64/60000]
-loss: 2.156660  [ 6464/60000]
-loss: 2.099976  [12864/60000]
-loss: 2.115721  [19264/60000]
-loss: 2.074203  [25664/60000]
-loss: 2.015450  [32064/60000]
-loss: 2.034638  [38464/60000]
-loss: 1.961520  [44864/60000]
-loss: 1.960527  [51264/60000]
-loss: 1.882440  [57664/60000]
+loss: 2.150574  [   64/60000]
+loss: 2.145654  [ 6464/60000]
+loss: 2.086459  [12864/60000]
+loss: 2.109027  [19264/60000]
+loss: 2.057899  [25664/60000]
+loss: 1.991371  [32064/60000]
+loss: 2.040062  [38464/60000]
+loss: 1.952609  [44864/60000]
+loss: 1.949639  [51264/60000]
+loss: 1.900191  [57664/60000]
 Test Error:
- Accuracy: 59.4%, Avg loss: 1.896526
+ Accuracy: 55.4%, Avg loss: 1.877283
 
 Epoch 3
 -------------------------------
-loss: 1.928882  [   64/60000]
-loss: 1.895133  [ 6464/60000]
-loss: 1.787199  [12864/60000]
-loss: 1.821785  [19264/60000]
-loss: 1.730229  [25664/60000]
-loss: 1.681604  [32064/60000]
-loss: 1.688504  [38464/60000]
-loss: 1.602748  [44864/60000]
-loss: 1.626613  [51264/60000]
-loss: 1.504169  [57664/60000]
+loss: 1.901278  [   64/60000]
+loss: 1.878527  [ 6464/60000]
+loss: 1.758243  [12864/60000]
+loss: 1.806766  [19264/60000]
+loss: 1.699754  [25664/60000]
+loss: 1.644653  [32064/60000]
+loss: 1.687407  [38464/60000]
+loss: 1.580718  [44864/60000]
+loss: 1.597507  [51264/60000]
+loss: 1.510013  [57664/60000]
 Test Error:
- Accuracy: 62.9%, Avg loss: 1.541910
+ Accuracy: 60.9%, Avg loss: 1.508982
 
 Epoch 4
 -------------------------------
-loss: 1.610999  [   64/60000]
-loss: 1.568834  [ 6464/60000]
-loss: 1.428642  [12864/60000]
-loss: 1.490672  [19264/60000]
-loss: 1.389912  [25664/60000]
-loss: 1.383239  [32064/60000]
-loss: 1.379634  [38464/60000]
-loss: 1.316710  [44864/60000]
-loss: 1.349575  [51264/60000]
-loss: 1.231489  [57664/60000]
+loss: 1.568363  [   64/60000]
+loss: 1.542283  [ 6464/60000]
+loss: 1.387824  [12864/60000]
+loss: 1.465133  [19264/60000]
+loss: 1.345314  [25664/60000]
+loss: 1.338495  [32064/60000]
+loss: 1.366510  [38464/60000]
+loss: 1.288976  [44864/60000]
+loss: 1.315281  [51264/60000]
+loss: 1.221016  [57664/60000]
 Test Error:
- Accuracy: 64.0%, Avg loss: 1.273815
+ Accuracy: 63.2%, Avg loss: 1.240410
 
 Epoch 5
 -------------------------------
-loss: 1.354080  [   64/60000]
-loss: 1.328769  [ 6464/60000]
-loss: 1.168510  [12864/60000]
-loss: 1.266469  [19264/60000]
-loss: 1.154295  [25664/60000]
-loss: 1.178370  [32064/60000]
-loss: 1.183874  [38464/60000]
-loss: 1.131487  [44864/60000]
-loss: 1.167620  [51264/60000]
-loss: 1.066605  [57664/60000]
+loss: 1.313142  [   64/60000]
+loss: 1.302828  [ 6464/60000]
+loss: 1.134696  [12864/60000]
+loss: 1.240082  [19264/60000]
+loss: 1.118134  [25664/60000]
+loss: 1.140647  [32064/60000]
+loss: 1.170863  [38464/60000]
+loss: 1.109488  [44864/60000]
+loss: 1.140131  [51264/60000]
+loss: 1.053521  [57664/60000]
 Test Error:
- Accuracy: 65.0%, Avg loss: 1.102301
+ Accuracy: 64.6%, Avg loss: 1.075424
 
 Done!
 </pre></div>
@@ -775,7 +722,7 @@ the state dictionary into it.</p>
 </pre></div>
 </div>
 <p>Read more about <a class="reference external" href="saveloadrun_tutorial.html">Saving &amp; Loading your model</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  47.313 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  33.495 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-basics-quickstart-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/51f1e1167acc0fda8f9d8fd8597ee626/quickstart_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">quickstart_tutorial.py</span></code></a></p>

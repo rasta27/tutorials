@@ -408,38 +408,26 @@ network to evaluation mode using ``.eval()``.
 
  .. code-block:: none
 
-    /opt/conda/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning:
-
-    The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-
-    /opt/conda/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning:
-
-    Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG19_Weights.IMAGENET1K_V1`. You can also use `weights=VGG19_Weights.DEFAULT` to get the most up-to-date weights.
-
     Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth
 
       0%|          | 0.00/548M [00:00<?, ?B/s]
-      2%|2         | 11.4M/548M [00:00<00:04, 119MB/s]
-      7%|7         | 38.4M/548M [00:00<00:02, 216MB/s]
-     12%|#1        | 65.1M/548M [00:00<00:02, 245MB/s]
-     17%|#6        | 91.8M/548M [00:00<00:01, 259MB/s]
-     22%|##1       | 119M/548M [00:00<00:01, 268MB/s] 
-     27%|##6       | 146M/548M [00:00<00:01, 275MB/s]
-     32%|###1      | 173M/548M [00:00<00:01, 276MB/s]
-     37%|###6      | 200M/548M [00:00<00:01, 279MB/s]
-     41%|####1     | 227M/548M [00:00<00:01, 281MB/s]
-     46%|####6     | 255M/548M [00:01<00:01, 282MB/s]
-     51%|#####1    | 282M/548M [00:01<00:00, 283MB/s]
-     56%|#####6    | 309M/548M [00:01<00:00, 283MB/s]
-     61%|######1   | 336M/548M [00:01<00:00, 283MB/s]
-     66%|######6   | 363M/548M [00:01<00:00, 284MB/s]
-     71%|#######1  | 390M/548M [00:01<00:00, 284MB/s]
-     76%|#######6  | 418M/548M [00:01<00:00, 285MB/s]
-     81%|########1 | 445M/548M [00:01<00:00, 285MB/s]
-     86%|########6 | 472M/548M [00:01<00:00, 285MB/s]
-     91%|#########1| 499M/548M [00:01<00:00, 285MB/s]
-     96%|#########6| 526M/548M [00:02<00:00, 283MB/s]
-    100%|##########| 548M/548M [00:02<00:00, 275MB/s]
+      6%|5         | 32.6M/548M [00:00<00:01, 341MB/s]
+     12%|#2        | 66.4M/548M [00:00<00:01, 349MB/s]
+     18%|#8        | 99.7M/548M [00:00<00:01, 329MB/s]
+     25%|##4       | 135M/548M [00:00<00:01, 344MB/s] 
+     31%|###1      | 171M/548M [00:00<00:01, 356MB/s]
+     38%|###8      | 209M/548M [00:00<00:00, 369MB/s]
+     44%|####4     | 244M/548M [00:00<00:00, 335MB/s]
+     50%|#####     | 276M/548M [00:01<00:01, 228MB/s]
+     55%|#####5    | 302M/548M [00:01<00:01, 235MB/s]
+     62%|######2   | 340M/548M [00:01<00:00, 273MB/s]
+     67%|######7   | 370M/548M [00:01<00:00, 283MB/s]
+     73%|#######2  | 399M/548M [00:01<00:00, 258MB/s]
+     80%|#######9  | 436M/548M [00:01<00:00, 291MB/s]
+     86%|########5 | 471M/548M [00:01<00:00, 310MB/s]
+     93%|#########2| 507M/548M [00:01<00:00, 330MB/s]
+     99%|#########8| 542M/548M [00:01<00:00, 339MB/s]
+    100%|##########| 548M/548M [00:01<00:00, 306MB/s]
 
 
 
@@ -754,32 +742,24 @@ Finally, we can run the algorithm.
  .. code-block:: none
 
     Building the style transfer model..
-    /var/lib/jenkins/workspace/advanced_source/neural_style_tutorial.py:287: UserWarning:
-
-    To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-
-    /var/lib/jenkins/workspace/advanced_source/neural_style_tutorial.py:288: UserWarning:
-
-    To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-
     Optimizing..
     run [50]:
-    Style Loss : 4.139987 Content Loss: 4.162039
+    Style Loss : 4.354982 Content Loss: 4.282360
 
     run [100]:
-    Style Loss : 1.142043 Content Loss: 3.035015
+    Style Loss : 1.150161 Content Loss: 3.057230
 
     run [150]:
-    Style Loss : 0.714632 Content Loss: 2.650779
+    Style Loss : 0.730049 Content Loss: 2.667469
 
     run [200]:
-    Style Loss : 0.477093 Content Loss: 2.487376
+    Style Loss : 0.487841 Content Loss: 2.499775
 
     run [250]:
-    Style Loss : 0.345757 Content Loss: 2.402583
+    Style Loss : 0.354696 Content Loss: 2.409556
 
     run [300]:
-    Style Loss : 0.263887 Content Loss: 2.349596
+    Style Loss : 0.268552 Content Loss: 2.352363
 
 
 
@@ -788,7 +768,7 @@ Finally, we can run the algorithm.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  33.158 seconds)
+   **Total running time of the script:** ( 0 minutes  12.938 seconds)
 
 
 .. _sphx_glr_download_advanced_neural_style_tutorial.py:

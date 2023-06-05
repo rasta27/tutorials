@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 16.4MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 179MB/s]
 
 
 
@@ -135,47 +135,44 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      1%|1         | 9.59M/945M [00:00<00:09, 101MB/s]
-      3%|3         | 32.2M/945M [00:00<00:05, 181MB/s]
-      6%|5         | 55.1M/945M [00:00<00:04, 208MB/s]
-      8%|8         | 78.8M/945M [00:00<00:04, 224MB/s]
-     11%|#         | 102M/945M [00:00<00:03, 231MB/s] 
-     13%|#3        | 125M/945M [00:00<00:03, 235MB/s]
-     16%|#5        | 148M/945M [00:00<00:03, 238MB/s]
-     18%|#8        | 172M/945M [00:00<00:03, 239MB/s]
-     21%|##        | 195M/945M [00:00<00:03, 240MB/s]
-     23%|##3       | 218M/945M [00:01<00:03, 242MB/s]
-     26%|##5       | 241M/945M [00:01<00:03, 242MB/s]
-     28%|##7       | 264M/945M [00:01<00:02, 242MB/s]
-     30%|###       | 287M/945M [00:01<00:02, 242MB/s]
-     33%|###2      | 310M/945M [00:01<00:02, 242MB/s]
-     35%|###5      | 334M/945M [00:01<00:02, 243MB/s]
-     38%|###7      | 358M/945M [00:01<00:02, 245MB/s]
-     40%|####      | 381M/945M [00:01<00:02, 245MB/s]
-     43%|####2     | 405M/945M [00:01<00:02, 246MB/s]
-     45%|####5     | 429M/945M [00:01<00:02, 248MB/s]
-     48%|####7     | 453M/945M [00:02<00:02, 248MB/s]
-     50%|#####     | 476M/945M [00:02<00:01, 246MB/s]
-     53%|#####2    | 500M/945M [00:02<00:01, 245MB/s]
-     55%|#####5    | 523M/945M [00:02<00:01, 245MB/s]
-     58%|#####7    | 548M/945M [00:02<00:01, 248MB/s]
-     61%|######    | 572M/945M [00:02<00:01, 251MB/s]
-     63%|######3   | 597M/945M [00:02<00:01, 253MB/s]
-     66%|######5   | 621M/945M [00:02<00:01, 249MB/s]
-     68%|######8   | 645M/945M [00:02<00:01, 243MB/s]
-     71%|#######   | 669M/945M [00:02<00:01, 246MB/s]
-     73%|#######3  | 692M/945M [00:03<00:01, 240MB/s]
-     76%|#######5  | 715M/945M [00:03<00:00, 241MB/s]
-     78%|#######8  | 738M/945M [00:03<00:00, 242MB/s]
-     81%|########  | 762M/945M [00:03<00:00, 237MB/s]
-     83%|########3 | 784M/945M [00:03<00:00, 237MB/s]
-     85%|########5 | 807M/945M [00:03<00:00, 235MB/s]
-     88%|########7 | 829M/945M [00:03<00:00, 233MB/s]
-     90%|######### | 852M/945M [00:03<00:00, 235MB/s]
-     93%|#########2| 874M/945M [00:03<00:00, 233MB/s]
-     95%|#########5| 898M/945M [00:03<00:00, 237MB/s]
-     97%|#########7| 921M/945M [00:04<00:00, 237MB/s]
-    100%|#########9| 944M/945M [00:04<00:00, 238MB/s]
+      2%|2         | 20.1M/945M [00:00<00:04, 211MB/s]
+      4%|4         | 40.3M/945M [00:00<00:04, 205MB/s]
+      7%|6         | 61.5M/945M [00:00<00:04, 213MB/s]
+      9%|8         | 82.8M/945M [00:00<00:04, 217MB/s]
+     11%|#1        | 104M/945M [00:00<00:04, 219MB/s] 
+     13%|#3        | 125M/945M [00:00<00:03, 220MB/s]
+     16%|#5        | 147M/945M [00:00<00:03, 223MB/s]
+     18%|#7        | 169M/945M [00:00<00:03, 226MB/s]
+     20%|##        | 191M/945M [00:00<00:03, 227MB/s]
+     23%|##2       | 214M/945M [00:01<00:03, 230MB/s]
+     25%|##5       | 237M/945M [00:01<00:03, 234MB/s]
+     27%|##7       | 259M/945M [00:01<00:03, 233MB/s]
+     30%|##9       | 283M/945M [00:01<00:02, 237MB/s]
+     32%|###2      | 306M/945M [00:01<00:02, 240MB/s]
+     35%|###4      | 329M/945M [00:01<00:03, 201MB/s]
+     37%|###7      | 352M/945M [00:01<00:02, 212MB/s]
+     40%|####      | 380M/945M [00:01<00:02, 234MB/s]
+     43%|####3     | 408M/945M [00:01<00:02, 252MB/s]
+     46%|####6     | 437M/945M [00:01<00:02, 265MB/s]
+     49%|####8     | 462M/945M [00:02<00:02, 225MB/s]
+     51%|#####1    | 485M/945M [00:02<00:02, 215MB/s]
+     54%|#####3    | 507M/945M [00:02<00:02, 214MB/s]
+     56%|#####5    | 528M/945M [00:02<00:02, 215MB/s]
+     58%|#####8    | 551M/945M [00:02<00:01, 221MB/s]
+     61%|######    | 572M/945M [00:02<00:01, 222MB/s]
+     63%|######2   | 594M/945M [00:02<00:01, 215MB/s]
+     65%|######5   | 614M/945M [00:02<00:01, 214MB/s]
+     67%|######7   | 635M/945M [00:02<00:01, 208MB/s]
+     70%|#######   | 662M/945M [00:03<00:01, 230MB/s]
+     73%|#######2  | 688M/945M [00:03<00:01, 241MB/s]
+     76%|#######5  | 715M/945M [00:03<00:00, 254MB/s]
+     79%|#######9  | 747M/945M [00:03<00:00, 276MB/s]
+     83%|########2 | 780M/945M [00:03<00:00, 297MB/s]
+     86%|########5 | 808M/945M [00:03<00:00, 272MB/s]
+     88%|########8 | 835M/945M [00:03<00:00, 275MB/s]
+     91%|#########1| 863M/945M [00:03<00:00, 280MB/s]
+     94%|#########4| 891M/945M [00:03<00:00, 284MB/s]
+     97%|#########7| 918M/945M [00:04<00:00, 270MB/s]
     100%|##########| 945M/945M [00:04<00:00, 239MB/s]
 
     T5Model(
@@ -472,37 +469,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: the tags were lost in 1939 at a coastal artillery placement on Salisbury beach . metal detector enthusiast Bill Ladd found them after a storm last year . they were returned to the vet's son, William Benn of Rhode Island .
+    prediction: sikander Rafiq, 34, and Samara Jabreen, 32, lied to Birmingham City council . couple claimed £66,268 housing benefit, council tax benefit and income support . but when Rafiq bought them a house, jabreen claimed to be a private tenant . she also signed declarations saying neither she nor her children were related to Rafiq .
 
-    target: Zachariah Fike head of Vermont-based Purple Hearts Reunited, says the military ID belonged to World War II veteran Cpl. William Benn . Benn lost them in 1939 at a coastal artillery placement on Salisbury Beach . Discovered last year by metal detector enthusiast following a storm .
+    target: Sikander Rafiq and Samara Jabreen were in an eight year relationship . Couple had three children together, but lied about their relationship status . They pocketed £66,268 housing, council tax and income support benefits .
 
 
     Example 2:
 
-    prediction: police say a 36-year-old sheriff's deputy was directing school buses in a suburban new orleans suburb when he was shot three times . a male suspect, 56-year-old Paul Devillier, was arrested a short time later after a brief 'tussle' with officers . he is accused of opening fire on the officer, who is in stable condition at a local hospital .
+    prediction: leza Davies, 33, thought breast feeding had left her chest saggy . she thought implants would boost her confidence . but she was unhappy with her new look when she knocked her breast on a door frame . she discovered a lump and six months of chemotherapy and surgery . she is now in remission and says implants saved her life .
 
-    target: Cpl. Burt Hazeltine, 36, with St Charles Parish, was shot three times in face, elbow and eye . Man in his 50s opened fire on deputy as he was directing school buses in New Orleans suburb of Paradis . Hazeltine, married father of four, is in stable but guarded condition; he is at risk of losing his injured eye . Paul Devillier, 56, was arrested after a tussle with police; officials believe he has mental issues . Sheriff Champagne says Devillier became upset with Hazeltine after deputy refused to stop traffic to let him make a turn . Suspect, a former TSA agent, called sheriff's office and pretended to by NCIS agent before the shooting .
+    target: Leza Davies had a boob job as her chest sagged after breast feeding . In April 2012, she knocked her right breast on a door and found a lump . Tests showed it was cancer so she had surgery removing her lymph nodes . She became pregnant despite being told cancer treatment  causes infertility .
 
 
     Example 3:
 
-    prediction: Gaston Pinsard, 96, was jailed for 18 months for historic abuse of two girls . the frail father-of-four claimed he was himself abused at a notorious home . he was born in 1919 and claimed he was abused at the home . the 96-year-old was sentenced to 18 months behind bars .
+    prediction: the champions league and Europa league draws have dominated the headlines . in italy, the semi-final between real madrid and Juventus has been likened to a pair of films . in spain, the final between real and Barcelona is contested by 'the Berlin Walls' .
 
-    target: Gaston Pinsard, 96, admitted sexually assault two girls over 50 years ago . His victims were just five-years-old when the abuse first started . Jailed for 18 months after he admitted nine charges of indecent assault . Judge describes the case as 'distressing and unpleasant' as he jails OAP .
+    target: Champions League semi-finals: Juventus vs Real Madrid, Barcelona vs Bayern Munich . Europa League semi-finals: Sevilla vs Fiorentina, Napoli vs Dnipro . Porto and Benfica meet in a top of the table clash in Portugal .
 
 
     Example 4:
 
-    prediction: gang of armed robbers used pink brollies to confuse staff as they raided 13 shops . they stole £145,000 from supermarkets, convenience stores and electrical shops . swiping £2,000 worth of cigarettes and cars valued at £30,000 in the process .
+    prediction: Bournemouth drew 2-2 with Sheffield Wednesday at the etihad on sunday . the visitors are unbeaten in 10 games and have nothing to gain or lose . the game was a stalemate for the visitors who are unbeaten in 10 .
 
-    target: Thieves raided supermarkets and electrical shops during 55-day spree . Four-man gang used pink umbrellas for disguise and fled in getaway cars . They also threatened shop workers with hammers, knives and screwdrivers . Liam Bell, 19, Marcus Morgan, 21, Ashleigh Evans, 26 and 22-year-old Trea Richardson, all from West Midlands, pleaded guilty to conspiracy to rob .
+    target: Bournemouth are now second in the Championship following their draw . Eddie Howe hits out at referee after his side give up lead in stoppage time . Kieran Lee fired Wednesday into the lead with a 36th minute header . Yann Kermorgant equalised with 21 minutes remaining . Matt Ritchie looked to have sealed the win for the Cherries late on . But Chris Maguire had the final say with his last-ditch penalty strike .
 
 
     Example 5:
 
-    prediction: 150 art fans took part in a nude tour of an exhibition at the national gallery of australia . the tour was led by artist Stuart Ringholt, who has guided tours at the museum of contemporary art in Sydney and MONA in Tasmania . the tour is an adventure through the 70-year-old american artist's body of work .
+    prediction: the federal government will give Shoshana Hebshi $40,000 as compensation for being humiliated on the 10th anniversary of 9/11 . armed agents forced her from a plane at Detroit Metropolitan airport, made her undress during a search and held her for hours . Hebshi, who has a Jewish mother and Saudi Arabian father, has said she was ethnically profiled based on her dark complexion .
 
-    target: Naked art fans attended an hour-long nude tour at the National Gallery of Australia in Canberra on Wednesday night . The tour took place outside regular exhibition hours, as it is illegal to be naked in public . Fans viewed the exhibition, 'James Turrell: A Retrospective' led by experienced nude tour guide Stuart Ringholt . 'Everyone's all in it together, so it's not weird or anything,' said one man . The 70-year-old artist has put on a nude exhibition before in Japan, and was keen to replicate the experience for his body of work in Australia .
+    target: The federal government will give Shoshana Hebshi $40,000 as compensation for being ethnically profiled . Hebshi, who has a Jewish mother and Saudi Arabian father, has said she was discriminated against based on her dark complexion . Hebshi was detained along with two Indian men she was seated next to . 'People do not forfeit their constitutional rights when they step onto an airplane,' said ACLU attorney Rachel Goodman .
 
 
 
@@ -856,7 +853,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 4 minutes  16.962 seconds)
+   **Total running time of the script:** ( 2 minutes  11.259 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

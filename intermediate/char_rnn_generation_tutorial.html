@@ -520,7 +520,7 @@ and end up with a dictionary <code class="docutils literal notranslate"><span cl
 <span class="nb">print</span><span class="p">(</span><span class="n">unicodeToAscii</span><span class="p">(</span><span class="s2">"O'Néàl"</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span># categories: 18 ['Czech', 'German', 'Portuguese', 'Russian', 'Irish', 'French', 'Korean', 'Arabic', 'Vietnamese', 'Italian', 'Japanese', 'English', 'Polish', 'Scottish', 'Chinese', 'Dutch', 'Greek', 'Spanish']
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span># categories: 18 ['Arabic', 'Chinese', 'Czech', 'Dutch', 'English', 'French', 'German', 'Greek', 'Irish', 'Italian', 'Japanese', 'Korean', 'Polish', 'Portuguese', 'Russian', 'Scottish', 'Spanish', 'Vietnamese']
 O'Neal
 </pre></div>
 </div>
@@ -715,26 +715,26 @@ in <code class="docutils literal notranslate"><span class="pre">all_losses</span
         <span class="n">total_loss</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0m 14s (5000 5%) 2.8387
-0m 30s (10000 10%) 2.8503
-0m 45s (15000 15%) 2.5561
-1m 0s (20000 20%) 1.2953
-1m 14s (25000 25%) 2.7229
-1m 29s (30000 30%) 2.2579
-1m 44s (35000 35%) 2.2470
-1m 58s (40000 40%) 2.8732
-2m 13s (45000 45%) 2.2133
-2m 27s (50000 50%) 2.0922
-2m 42s (55000 55%) 2.6278
-2m 56s (60000 60%) 2.6452
-3m 10s (65000 65%) 2.6180
-3m 24s (70000 70%) 3.5512
-3m 38s (75000 75%) 2.1754
-3m 53s (80000 80%) 2.6956
-4m 7s (85000 85%) 3.2744
-4m 21s (90000 90%) 2.8673
-4m 35s (95000 95%) 2.3973
-4m 50s (100000 100%) 0.9107
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0m 33s (5000 5%) 2.9992
+1m 6s (10000 10%) 2.9673
+1m 40s (15000 15%) 2.6650
+2m 14s (20000 20%) 2.3495
+2m 48s (25000 25%) 2.3617
+3m 22s (30000 30%) 2.1968
+3m 56s (35000 35%) 2.7598
+4m 30s (40000 40%) 2.5322
+5m 4s (45000 45%) 2.1805
+5m 38s (50000 50%) 3.1120
+6m 12s (55000 55%) 2.1285
+6m 46s (60000 60%) 2.4388
+7m 20s (65000 65%) 2.6044
+7m 55s (70000 70%) 2.5587
+8m 29s (75000 75%) 2.0072
+9m 3s (80000 80%) 2.9024
+9m 37s (85000 85%) 2.2536
+10m 11s (90000 90%) 2.4322
+10m 46s (95000 95%) 2.6242
+11m 20s (100000 100%) 1.7927
 </pre></div>
 </div>
 </div>
@@ -748,7 +748,7 @@ learning:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_losses</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="char rnn generation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_generation_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_generation_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7eff3cba14b0&gt;]
+<img alt="char rnn generation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_char_rnn_generation_tutorial_001.png" srcset="../_images/sphx_glr_char_rnn_generation_tutorial_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D object at 0x7fe0a754c760&gt;]
 </pre></div>
 </div>
 </div>
@@ -815,17 +815,17 @@ training and have the network choose its own starting letter.</p>
 <span class="n">samples</span><span class="p">(</span><span class="s1">'Chinese'</span><span class="p">,</span> <span class="s1">'CHI'</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Rovekovev
-Uullin
-Sakinhev
-Gantert
-Eres
-Roun
-Salla
-Peran
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Rovanov
+Uartono
+Santon
+Garter
+Ererten
+Roster
+Sara
+Parer
 Alare
 Chan
-Han
+Hang
 Iun
 </pre></div>
 </div>
@@ -849,7 +849,7 @@ choosing a start letter</p></li>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 4 minutes  50.610 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 11 minutes  20.566 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-generation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/322506af160d5e2056afd75de1fd34ee/char_rnn_generation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_generation_tutorial.py</span></code></a></p>
