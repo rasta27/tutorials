@@ -60,7 +60,7 @@ of a layer without materializing any data.
  .. code-block:: none
 
     tensor(..., device='meta', size=(2, 5, 9, 9), grad_fn=<ConvolutionBackward0>)
-    Time taken: 0.00013854199642082676
+    Time taken: 0.00013456199667416513
 
 
 
@@ -94,7 +94,7 @@ inputs will not significantly alter the time taken for shape computation.
 
     tensor(..., device='meta', size=(1024, 5, 65535, 65535),
            grad_fn=<ConvolutionBackward0>)
-    Time taken: 9.005199535749853e-05
+    Time taken: 8.827100100461394e-05
 
 
 

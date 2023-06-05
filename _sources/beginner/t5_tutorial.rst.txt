@@ -85,7 +85,7 @@ Overview
 
 
       0%|          | 0.00/792k [00:00<?, ?B/s]
-    100%|##########| 792k/792k [00:00<00:00, 179MB/s]
+    100%|##########| 792k/792k [00:00<00:00, 149MB/s]
 
 
 
@@ -135,45 +135,48 @@ translation. For additional details on available pretrained models, see `the tor
     Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
       0%|          | 0.00/945M [00:00<?, ?B/s]
-      2%|2         | 20.1M/945M [00:00<00:04, 211MB/s]
-      4%|4         | 40.3M/945M [00:00<00:04, 205MB/s]
-      7%|6         | 61.5M/945M [00:00<00:04, 213MB/s]
-      9%|8         | 82.8M/945M [00:00<00:04, 217MB/s]
-     11%|#1        | 104M/945M [00:00<00:04, 219MB/s] 
-     13%|#3        | 125M/945M [00:00<00:03, 220MB/s]
-     16%|#5        | 147M/945M [00:00<00:03, 223MB/s]
-     18%|#7        | 169M/945M [00:00<00:03, 226MB/s]
-     20%|##        | 191M/945M [00:00<00:03, 227MB/s]
-     23%|##2       | 214M/945M [00:01<00:03, 230MB/s]
-     25%|##5       | 237M/945M [00:01<00:03, 234MB/s]
-     27%|##7       | 259M/945M [00:01<00:03, 233MB/s]
-     30%|##9       | 283M/945M [00:01<00:02, 237MB/s]
-     32%|###2      | 306M/945M [00:01<00:02, 240MB/s]
-     35%|###4      | 329M/945M [00:01<00:03, 201MB/s]
-     37%|###7      | 352M/945M [00:01<00:02, 212MB/s]
-     40%|####      | 380M/945M [00:01<00:02, 234MB/s]
-     43%|####3     | 408M/945M [00:01<00:02, 252MB/s]
-     46%|####6     | 437M/945M [00:01<00:02, 265MB/s]
-     49%|####8     | 462M/945M [00:02<00:02, 225MB/s]
-     51%|#####1    | 485M/945M [00:02<00:02, 215MB/s]
-     54%|#####3    | 507M/945M [00:02<00:02, 214MB/s]
-     56%|#####5    | 528M/945M [00:02<00:02, 215MB/s]
-     58%|#####8    | 551M/945M [00:02<00:01, 221MB/s]
-     61%|######    | 572M/945M [00:02<00:01, 222MB/s]
-     63%|######2   | 594M/945M [00:02<00:01, 215MB/s]
-     65%|######5   | 614M/945M [00:02<00:01, 214MB/s]
-     67%|######7   | 635M/945M [00:02<00:01, 208MB/s]
-     70%|#######   | 662M/945M [00:03<00:01, 230MB/s]
-     73%|#######2  | 688M/945M [00:03<00:01, 241MB/s]
-     76%|#######5  | 715M/945M [00:03<00:00, 254MB/s]
-     79%|#######9  | 747M/945M [00:03<00:00, 276MB/s]
-     83%|########2 | 780M/945M [00:03<00:00, 297MB/s]
-     86%|########5 | 808M/945M [00:03<00:00, 272MB/s]
-     88%|########8 | 835M/945M [00:03<00:00, 275MB/s]
-     91%|#########1| 863M/945M [00:03<00:00, 280MB/s]
-     94%|#########4| 891M/945M [00:03<00:00, 284MB/s]
-     97%|#########7| 918M/945M [00:04<00:00, 270MB/s]
-    100%|##########| 945M/945M [00:04<00:00, 239MB/s]
+      2%|1         | 17.9M/945M [00:00<00:05, 188MB/s]
+      4%|4         | 39.7M/945M [00:00<00:04, 211MB/s]
+      7%|6         | 62.9M/945M [00:00<00:04, 226MB/s]
+      9%|9         | 85.7M/945M [00:00<00:03, 231MB/s]
+     12%|#1        | 109M/945M [00:00<00:03, 235MB/s] 
+     14%|#3        | 131M/945M [00:00<00:03, 234MB/s]
+     16%|#6        | 155M/945M [00:00<00:03, 238MB/s]
+     19%|#8        | 177M/945M [00:00<00:03, 232MB/s]
+     21%|##1       | 200M/945M [00:00<00:03, 227MB/s]
+     24%|##3       | 223M/945M [00:01<00:03, 233MB/s]
+     26%|##6       | 246M/945M [00:01<00:03, 235MB/s]
+     28%|##8       | 269M/945M [00:01<00:02, 237MB/s]
+     31%|###1      | 294M/945M [00:01<00:02, 246MB/s]
+     34%|###4      | 322M/945M [00:01<00:02, 258MB/s]
+     37%|###6      | 346M/945M [00:01<00:02, 253MB/s]
+     39%|###9      | 371M/945M [00:01<00:02, 251MB/s]
+     42%|####1     | 395M/945M [00:01<00:02, 248MB/s]
+     44%|####4     | 418M/945M [00:01<00:02, 246MB/s]
+     47%|####6     | 442M/945M [00:01<00:02, 245MB/s]
+     49%|####9     | 465M/945M [00:02<00:02, 245MB/s]
+     52%|#####1    | 488M/945M [00:02<00:02, 238MB/s]
+     54%|#####4    | 511M/945M [00:02<00:01, 237MB/s]
+     57%|#####6    | 534M/945M [00:02<00:01, 236MB/s]
+     59%|#####8    | 556M/945M [00:02<00:01, 236MB/s]
+     61%|######1   | 580M/945M [00:02<00:01, 238MB/s]
+     64%|######3   | 603M/945M [00:02<00:01, 239MB/s]
+     66%|######6   | 625M/945M [00:02<00:01, 233MB/s]
+     69%|######8   | 648M/945M [00:02<00:01, 234MB/s]
+     71%|#######1  | 671M/945M [00:02<00:01, 236MB/s]
+     73%|#######3  | 694M/945M [00:03<00:01, 235MB/s]
+     76%|#######5  | 716M/945M [00:03<00:01, 235MB/s]
+     78%|#######8  | 739M/945M [00:03<00:00, 233MB/s]
+     81%|########  | 761M/945M [00:03<00:00, 228MB/s]
+     83%|########2 | 783M/945M [00:03<00:00, 217MB/s]
+     85%|########5 | 803M/945M [00:03<00:00, 218MB/s]
+     87%|########7 | 826M/945M [00:03<00:00, 222MB/s]
+     90%|########9 | 848M/945M [00:03<00:00, 226MB/s]
+     92%|#########2| 870M/945M [00:03<00:00, 228MB/s]
+     94%|#########4| 892M/945M [00:03<00:00, 227MB/s]
+     97%|#########6| 915M/945M [00:04<00:00, 230MB/s]
+     99%|#########9| 938M/945M [00:04<00:00, 234MB/s]
+    100%|##########| 945M/945M [00:04<00:00, 235MB/s]
 
     T5Model(
       (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -469,37 +472,37 @@ using a beam size of 1.
     `max_length` was not specified. Defaulting to 256 tokens.
     Example 1:
 
-    prediction: sikander Rafiq, 34, and Samara Jabreen, 32, lied to Birmingham City council . couple claimed £66,268 housing benefit, council tax benefit and income support . but when Rafiq bought them a house, jabreen claimed to be a private tenant . she also signed declarations saying neither she nor her children were related to Rafiq .
+    prediction: "Rex Manning Day" is also a day commemorated by films . "Mean Girls Day" is officially October 3 . "the saga of a sailor" is a day commemorated by "the sailor"
 
-    target: Sikander Rafiq and Samara Jabreen were in an eight year relationship . Couple had three children together, but lied about their relationship status . They pocketed £66,268 housing, council tax and income support benefits .
+    target: April 8 was huge for "Lost" and "Empire Records" fans . April 14, April 25, October 21 are other big dates in movies .
 
 
     Example 2:
 
-    prediction: leza Davies, 33, thought breast feeding had left her chest saggy . she thought implants would boost her confidence . but she was unhappy with her new look when she knocked her breast on a door frame . she discovered a lump and six months of chemotherapy and surgery . she is now in remission and says implants saved her life .
+    prediction: world record holder will run the final competitive marathon of her career . the runner says she is likely to cry when she runs the marathon . she has been battling with an injury to her left foot .
 
-    target: Leza Davies had a boob job as her chest sagged after breast feeding . In April 2012, she knocked her right breast on a door and found a lump . Tests showed it was cancer so she had surgery removing her lymph nodes . She became pregnant despite being told cancer treatment  causes infertility .
+    target: Paula Radcliffe will retire from competitive running after London marathon . Radcliffe set the world record at the event in 2003 . And she says that she will be thinking of that moment during final race .
 
 
     Example 3:
 
-    prediction: the champions league and Europa league draws have dominated the headlines . in italy, the semi-final between real madrid and Juventus has been likened to a pair of films . in spain, the final between real and Barcelona is contested by 'the Berlin Walls' .
+    prediction: a man with autism is seen drawing a world map from scratch . the map was created by a student in a new york classroom . the boy is seen kneeling on a chair and drawing the map from scratch .
 
-    target: Champions League semi-finals: Juventus vs Real Madrid, Barcelona vs Bayern Munich . Europa League semi-finals: Sevilla vs Fiorentina, Napoli vs Dnipro . Porto and Benfica meet in a top of the table clash in Portugal .
+    target: Image went viral after it was posted by user Bobitis on Reddit . The unnamed youth, from New York, knelt on a chair to reach whiteboard . The boy is the son of New York professor and drew map from memory .
 
 
     Example 4:
 
-    prediction: Bournemouth drew 2-2 with Sheffield Wednesday at the etihad on sunday . the visitors are unbeaten in 10 games and have nothing to gain or lose . the game was a stalemate for the visitors who are unbeaten in 10 .
+    prediction: the state's legislature on Friday passed a bill raising the minimum legal age to buy tobacco . the bill will now go before Gov. David Ige, whose signature would make it law in 2016 .
 
-    target: Bournemouth are now second in the Championship following their draw . Eddie Howe hits out at referee after his side give up lead in stoppage time . Kieran Lee fired Wednesday into the lead with a 36th minute header . Yann Kermorgant equalised with 21 minutes remaining . Matt Ritchie looked to have sealed the win for the Cherries late on . But Chris Maguire had the final say with his last-ditch penalty strike .
+    target: Hawaii's legislature passes a bill raising the legal age for buying tobacco to 21 . The bill is now before Gov. David Ige, whose signature would make it law . Most states allow tobacco sales to anyone 18 and older .
 
 
     Example 5:
 
-    prediction: the federal government will give Shoshana Hebshi $40,000 as compensation for being humiliated on the 10th anniversary of 9/11 . armed agents forced her from a plane at Detroit Metropolitan airport, made her undress during a search and held her for hours . Hebshi, who has a Jewish mother and Saudi Arabian father, has said she was ethnically profiled based on her dark complexion .
+    prediction: Ana Elizondo, 27, was kidnapped from a parking lot in 2012 . she was leaving a night class at the university of texas, pan american . she was blindfolded and transported through several cars . she escaped the hands of her captors the following day unharmed . she will open up about her experiences on the popular true crime documentary show .
 
-    target: The federal government will give Shoshana Hebshi $40,000 as compensation for being ethnically profiled . Hebshi, who has a Jewish mother and Saudi Arabian father, has said she was discriminated against based on her dark complexion . Hebshi was detained along with two Indian men she was seated next to . 'People do not forfeit their constitutional rights when they step onto an airplane,' said ACLU attorney Rachel Goodman .
+    target: Ana Elizondo was kidnapped in 2012 as she was leaving a night class at the University of Texas, Pan American . Captors transported her through cars and tried to cross Mexican border . She was released unharmed the following day by one of the kidnappers . She believes she stayed safe by being friendly and joking with kidnappers . Her experience will be featured on a crime documentary show Tuesday .
 
 
 
@@ -853,7 +856,7 @@ Translation Output
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  11.259 seconds)
+   **Total running time of the script:** ( 2 minutes  8.534 seconds)
 
 
 .. _sphx_glr_download_beginner_t5_tutorial.py:

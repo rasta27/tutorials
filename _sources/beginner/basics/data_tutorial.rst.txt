@@ -138,7 +138,7 @@ We use ``matplotlib`` to visualize some samples in our training data.
 
 
 .. image-sg:: /beginner/basics/images/sphx_glr_data_tutorial_001.png
-   :alt: T-Shirt, T-Shirt, Coat, Shirt, Coat, Bag, Trouser, Pullover, Sandal
+   :alt: Sandal, Pullover, Ankle Boot, Shirt, Coat, Ankle Boot, Sneaker, T-Shirt, Bag
    :srcset: /beginner/basics/images/sphx_glr_data_tutorial_001.png
    :class: sphx-glr-single-img
 
@@ -392,7 +392,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.382 seconds)
+   **Total running time of the script:** ( 0 minutes  0.381 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_data_tutorial.py:
