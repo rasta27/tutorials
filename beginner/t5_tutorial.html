@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 145MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 146MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,45 +479,42 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  2%|2         | 21.8M/945M [00:00&lt;00:04, 229MB/s]
-  5%|4         | 45.1M/945M [00:00&lt;00:03, 238MB/s]
-  7%|7         | 68.3M/945M [00:00&lt;00:03, 240MB/s]
- 10%|9         | 91.6M/945M [00:00&lt;00:03, 242MB/s]
- 12%|#2        | 118M/945M [00:00&lt;00:03, 255MB/s]
- 15%|#5        | 145M/945M [00:00&lt;00:03, 263MB/s]
- 18%|#8        | 172M/945M [00:00&lt;00:03, 269MB/s]
- 21%|##        | 198M/945M [00:00&lt;00:02, 271MB/s]
- 24%|##3       | 225M/945M [00:00&lt;00:02, 274MB/s]
- 27%|##6       | 251M/945M [00:01&lt;00:02, 276MB/s]
- 29%|##9       | 278M/945M [00:01&lt;00:02, 277MB/s]
- 32%|###2      | 304M/945M [00:01&lt;00:02, 277MB/s]
- 35%|###5      | 332M/945M [00:01&lt;00:02, 280MB/s]
- 38%|###7      | 359M/945M [00:01&lt;00:02, 281MB/s]
- 41%|####      | 385M/945M [00:01&lt;00:02, 281MB/s]
- 44%|####3     | 412M/945M [00:01&lt;00:01, 281MB/s]
- 47%|####6     | 439M/945M [00:01&lt;00:01, 281MB/s]
- 49%|####9     | 466M/945M [00:01&lt;00:01, 281MB/s]
- 52%|#####2    | 493M/945M [00:01&lt;00:01, 266MB/s]
- 55%|#####4    | 518M/945M [00:02&lt;00:01, 258MB/s]
- 58%|#####7    | 543M/945M [00:02&lt;00:01, 254MB/s]
- 60%|######    | 568M/945M [00:02&lt;00:01, 251MB/s]
- 63%|######2   | 592M/945M [00:02&lt;00:01, 249MB/s]
- 65%|######5   | 615M/945M [00:02&lt;00:01, 248MB/s]
- 68%|######7   | 639M/945M [00:02&lt;00:01, 243MB/s]
- 70%|#######   | 662M/945M [00:02&lt;00:01, 243MB/s]
- 73%|#######2  | 686M/945M [00:02&lt;00:01, 243MB/s]
- 75%|#######5  | 709M/945M [00:02&lt;00:01, 243MB/s]
- 78%|#######7  | 732M/945M [00:02&lt;00:00, 243MB/s]
- 80%|#######9  | 756M/945M [00:03&lt;00:00, 244MB/s]
- 82%|########2 | 779M/945M [00:03&lt;00:00, 244MB/s]
- 85%|########4 | 802M/945M [00:03&lt;00:00, 244MB/s]
- 87%|########7 | 826M/945M [00:03&lt;00:00, 244MB/s]
- 90%|########9 | 849M/945M [00:03&lt;00:00, 244MB/s]
- 92%|#########2| 872M/945M [00:03&lt;00:00, 243MB/s]
- 95%|#########4| 896M/945M [00:03&lt;00:00, 244MB/s]
- 97%|#########7| 919M/945M [00:03&lt;00:00, 243MB/s]
-100%|#########9| 942M/945M [00:03&lt;00:00, 243MB/s]
-100%|##########| 945M/945M [00:03&lt;00:00, 256MB/s]
+  2%|2         | 21.6M/945M [00:00&lt;00:04, 227MB/s]
+  5%|4         | 45.7M/945M [00:00&lt;00:03, 241MB/s]
+  7%|7         | 68.7M/945M [00:00&lt;00:03, 236MB/s]
+ 10%|9         | 92.4M/945M [00:00&lt;00:03, 241MB/s]
+ 12%|#2        | 117M/945M [00:00&lt;00:03, 246MB/s]
+ 15%|#4        | 141M/945M [00:00&lt;00:03, 249MB/s]
+ 17%|#7        | 165M/945M [00:00&lt;00:03, 250MB/s]
+ 20%|##        | 189M/945M [00:00&lt;00:03, 251MB/s]
+ 23%|##2       | 213M/945M [00:00&lt;00:03, 250MB/s]
+ 25%|##5       | 237M/945M [00:01&lt;00:02, 251MB/s]
+ 28%|##7       | 261M/945M [00:01&lt;00:02, 251MB/s]
+ 30%|###       | 285M/945M [00:01&lt;00:02, 251MB/s]
+ 33%|###2      | 309M/945M [00:01&lt;00:02, 251MB/s]
+ 35%|###5      | 333M/945M [00:01&lt;00:02, 250MB/s]
+ 38%|###7      | 357M/945M [00:01&lt;00:02, 248MB/s]
+ 40%|####      | 381M/945M [00:01&lt;00:02, 248MB/s]
+ 43%|####2     | 404M/945M [00:01&lt;00:02, 246MB/s]
+ 45%|####5     | 428M/945M [00:01&lt;00:02, 247MB/s]
+ 48%|####7     | 452M/945M [00:01&lt;00:02, 247MB/s]
+ 50%|#####     | 475M/945M [00:02&lt;00:01, 248MB/s]
+ 53%|#####2    | 499M/945M [00:02&lt;00:01, 249MB/s]
+ 56%|#####6    | 533M/945M [00:02&lt;00:01, 279MB/s]
+ 60%|#####9    | 566M/945M [00:02&lt;00:01, 300MB/s]
+ 63%|######3   | 600M/945M [00:02&lt;00:01, 316MB/s]
+ 67%|######6   | 632M/945M [00:02&lt;00:01, 323MB/s]
+ 70%|#######   | 663M/945M [00:02&lt;00:01, 280MB/s]
+ 73%|#######3  | 691M/945M [00:02&lt;00:00, 269MB/s]
+ 76%|#######5  | 717M/945M [00:02&lt;00:00, 250MB/s]
+ 79%|#######8  | 742M/945M [00:03&lt;00:00, 241MB/s]
+ 82%|########1 | 771M/945M [00:03&lt;00:00, 259MB/s]
+ 85%|########5 | 804M/945M [00:03&lt;00:00, 283MB/s]
+ 89%|########8 | 838M/945M [00:03&lt;00:00, 303MB/s]
+ 92%|#########2| 871M/945M [00:03&lt;00:00, 316MB/s]
+ 96%|#########5| 905M/945M [00:03&lt;00:00, 326MB/s]
+ 99%|#########9| 938M/945M [00:03&lt;00:00, 334MB/s]
+100%|##########| 945M/945M [00:03&lt;00:00, 271MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -729,37 +726,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: the nut has been dubbed ‘the Devil’s nut’, pinpointed as the chief culprit in an eco-disaster that is developing in California . domestic water consumption is dwarfed by that of agriculture .
+prediction: Etienne Gould Nunan was born at monash hospital in melbourne in september . he was born with a hole in his heart and a brain bleed . his parents, carman and Jonathan, were worried about their son . but he was finally allowed to touch his mother for the first time .
 
-target: Global demand soaring as people develop passion for almond-based foods . The nuts have become California’s second biggest agricultural commodity . The problem is that almonds guzzle water on a monumental scale . It's been calculated that it takes 1.1 gallons of water to grow single almond .
+target: Etienne Gould Nunan was  not breathing when he was born at just 26 weeks . He had a hole in his heart, a brain bleed and went on to suffer pneumonia, a collapsed lung and endure 58 blood transfusions to fight infections . Parents were delighted to finally take him home after 5 months in hospital . They would like to use his story to encourage people to give blood .
 
 
 Example 2:
 
-prediction: Newcastle were beaten 1-0 by rivals sunderland at the Stadium of Light . head coach carver admits club need to look at character of dressing-room . carver says the club's hierarchy have already spoken about addressing shortcomings during the close-season .
+prediction: the elaborate fraud involved cars and vans being driven into the side of buses . the elaborate scam allowed passengers on the bus to falsely claim from insurers . the crashes took place between October 2010 and January 2012 and earned ringleader John Smith £159k . he stage-managed the crashes around the Chester area over the three-year period .
 
-target: Newcastle lost 1-0 to rivals Sunderland at the Stadium of Light on Sunday . John Carver admits the Magpies struggle when they have to compete . Newcastle play Liverpool on Monday and are nine points above drop zone .
+target: 'Crash for cash' fraud involved cars being deliberately driven into buses . Passengers - most of whom were friends and relatives - would then claim . John Smith, 45, from Connah's Quay, orchestrated crashes in Chester area . He processed 218 bogus personal injury claims to no win no fee lawyers . Convicted yesterday of fraud and conspiracy to commit fraud after trial .
 
 
 Example 3:
 
-prediction: builders in china are constructing a mountain road thousands of feet above the ground in Pingjiang County, Hunan province . without ropes or safety harnesses, and with only hard hats to protect them if they fall, they haul planks of wood and wheelbarrows full of concrete . officials hope that the road will draw thousands more tourists to the area, as they flock to walk along the scenic route .
+prediction: five men found crammed in a refrigerated lorry on the A40 near churcham, Gloucestershire . believed they had climbed into truck in Belgium before crossing the channel . police sniffer dogs were used to find them after officers opened the back doors .
 
-target: Workers carry heavy planks and wheelbarrows full of concrete across wooden walkway thousands of feet in the air . Men, who are just one step from death, have no ropes or safety harnesses and only hard hats to cushion their fall . Officials in Pingjiang County, Hunan province, hope the path will attract thousands of tourists when it is complete .
+target: Truck stopped by police this morning after travelling 200m across the UK . Police sniffer dog team found five men hiding in tiny space inside . It is thought they had climbed on board in Belgium before entering Britain . Comes days after illegal camp in Calais, France was closed down .
 
 
 Example 4:
 
-prediction: the 31-year-old sister of the duchess of cambridge looked glamorous . accessorised her look with a black tote, £159 black pumps by jemima vine .
+prediction: female stars including Nancy Dell'Olio, Josie Gibson, Jamelia and Susanna Reid have all stepped up to the plate for #SelfieEsteem . men take four selfies, while women take an average of six . the campaign is aimed at promoting self-esteem and empowering women .
 
-target: Pippa, 31, strolled through the sunny streets of London . Looked chic in tweedy skirt, black blouse and cropped black blazer . Will become an aunt for the second time when Kate gives birth this month .
+target: Good Morning Britain launched #SelfieEsteem today . Study reveals women take an average of six selfies before they're happy . Nancy Dell'Olio, Piers Morgan and Lydia Rose Bright also took part .
 
 
 Example 5:
 
-prediction: jack grealish made his first premier league start for villa on tuesday . the irishman is renowned for wearing his socks just above the roll of his shinpads . he says it's a superstition that he's done all his life and he'll keep it that way .
+prediction: keeper appeared to congratulate sunderland striker on his goal at half-time . he was speaking on sky sports after the wear-tyne derby . sportsmail's Jamie Carragher criticised the keeper for his actions .
 
-target: Aston Villa's Jack Grealish earned first Premier League start this week . The Ireland Under 21 international renowned for keeping his socks low . Grealish actually wears children's shinpads underneath . And Villa's young midfielder says he will continue to do so .
+target: JAMIE CARRAGHER: Tim Krul was wrong to congratulate Jermain Defoe . That argument from Sportsmail's columnist has divided opinion this week . Carragher still cannot work out why the Newcastle keeper did what he did .
 </pre></div>
 </div>
 </div>
@@ -1052,7 +1049,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  13.254 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  0.981 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
