@@ -590,7 +590,7 @@ But, a batch in our `data_pipe` is of the form `[(X_1,y_1), (X_2,y_2), (X_3,y_3)
 
  .. code-block:: none
 
-    [([1, 1096, 4, 2], [1, 1442, 4, 2]), ([1, 2991, 4, 2], [1, 6163, 1603, 24, 2]), ([1, 3, 194, 2], [1, 735, 2376, 24, 2]), ([1, 1662, 194, 2], [1, 1238, 3, 24, 2])]
+    [([1, 5, 844, 194, 2], [1, 7, 23, 922, 24, 2]), ([1, 5, 844, 4, 2], [1, 7, 23, 922, 4, 2]), ([1, 2099, 106, 194, 2], [1, 4695, 5, 1328, 24, 2]), ([1, 5, 1261, 4, 2], [1, 7, 23, 32, 1474, 4, 2])]
 
 
 
@@ -625,7 +625,7 @@ For this we will write a small function:
 
  .. code-block:: none
 
-    (([1, 6732, 23, 10, 2], [1, 6732, 23, 10, 2], [1, 1041, 21, 4, 2], [1, 1041, 21, 4, 2]), ([1, 3, 8, 2], [1, 20370, 8, 2], [1, 1593, 32, 24, 2], [1, 3909, 32, 24, 2]))
+    (([1, 5, 844, 194, 2], [1, 5, 844, 4, 2], [1, 2099, 106, 194, 2], [1, 5, 1261, 4, 2]), ([1, 7, 23, 922, 24, 2], [1, 7, 23, 922, 4, 2], [1, 4695, 5, 1328, 24, 2], [1, 7, 23, 32, 1474, 4, 2]))
 
 
 
@@ -702,14 +702,14 @@ instead of indices:
 
  .. code-block:: none
 
-    Source:  <sos> Listen . <eos> <pad>
-    Traget:  <sos> Hört zu . <eos>
-    Source:  <sos> No way ! <eos>
-    Traget:  <sos> Unmöglich ! <eos> <pad>
-    Source:  <sos> No way ! <eos>
-    Traget:  <sos> <unk> ! <eos> <pad>
-    Source:  <sos> I paid . <eos>
-    Traget:  <sos> Ich zahlte . <eos>
+    Source:  <sos> <unk> ! <eos> <pad>
+    Traget:  <sos> Zum Wohl ! <eos>
+    Source:  <sos> Freeze ! <eos> <pad>
+    Traget:  <sos> Keine Bewegung ! <eos>
+    Source:  <sos> Got it ! <eos>
+    Traget:  <sos> Verstanden ! <eos> <pad>
+    Source:  <sos> Got it ! <eos>
+    Traget:  <sos> Aha ! <eos> <pad>
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  9.770 seconds)
+   **Total running time of the script:** ( 3 minutes  9.239 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:

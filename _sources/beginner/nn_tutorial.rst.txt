@@ -1648,8 +1648,8 @@ You should find it runs faster now:
 
  .. code-block:: none
 
-    0 0.17501327155530452
-    1 0.16414921720325948
+    0 0.1749620435446501
+    1 0.15984878467917443
 
 
 
@@ -1692,7 +1692,7 @@ what we've seen:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  32.135 seconds)
+   **Total running time of the script:** ( 0 minutes  32.499 seconds)
 
 
 .. _sphx_glr_download_beginner_nn_tutorial.py:
