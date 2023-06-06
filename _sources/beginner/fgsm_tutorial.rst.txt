@@ -106,12 +106,11 @@ Hopefully now the motivation for this tutorial is clear, so lets jump
 into the implementation.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-110
+.. GENERATED FROM PYTHON SOURCE LINES 92-109
 
 .. code-block:: default
 
 
-    from __future__ import print_function
     import torch
     import torch.nn as nn
     import torch.nn.functional as F
@@ -135,7 +134,7 @@ into the implementation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-140
+.. GENERATED FROM PYTHON SOURCE LINES 110-139
 
 Implementation
 --------------
@@ -167,7 +166,7 @@ follows:
    not take much time.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-146
+.. GENERATED FROM PYTHON SOURCE LINES 139-145
 
 .. code-block:: default
 
@@ -184,7 +183,7 @@ follows:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-158
+.. GENERATED FROM PYTHON SOURCE LINES 146-157
 
 Model Under Attack
 ~~~~~~~~~~~~~~~~~~
@@ -198,7 +197,7 @@ define the model and dataloader, then initialize the model and load the
 pretrained weights.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-199
+.. GENERATED FROM PYTHON SOURCE LINES 157-198
 
 .. code-block:: default
 
@@ -255,28 +254,28 @@ pretrained weights.
     Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/9912422 [00:00<?, ?it/s]
-    100%|##########| 9912422/9912422 [00:00<00:00, 326547579.26it/s]
+    100%|##########| 9912422/9912422 [00:00<00:00, 297400596.90it/s]
     Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/28881 [00:00<?, ?it/s]
-    100%|##########| 28881/28881 [00:00<00:00, 41499038.65it/s]
+    100%|##########| 28881/28881 [00:00<00:00, 60567846.91it/s]
     Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/1648877 [00:00<?, ?it/s]
-    100%|##########| 1648877/1648877 [00:00<00:00, 90682375.88it/s]
+    100%|##########| 1648877/1648877 [00:00<00:00, 146346390.94it/s]
     Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/4542 [00:00<?, ?it/s]
-    100%|##########| 4542/4542 [00:00<00:00, 40022119.26it/s]
+    100%|##########| 4542/4542 [00:00<00:00, 36991318.00it/s]
     Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     CUDA Available:  True
@@ -291,7 +290,7 @@ pretrained weights.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-216
+.. GENERATED FROM PYTHON SOURCE LINES 199-215
 
 FGSM Attack
 ~~~~~~~~~~~
@@ -310,7 +309,7 @@ Finally, in order to maintain the original range of the data, the
 perturbed image is clipped to range :math:`[0,1]`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 216-229
+.. GENERATED FROM PYTHON SOURCE LINES 215-228
 
 .. code-block:: default
 
@@ -334,7 +333,7 @@ perturbed image is clipped to range :math:`[0,1]`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-246
+.. GENERATED FROM PYTHON SOURCE LINES 229-245
 
 Testing Function
 ~~~~~~~~~~~~~~~~
@@ -353,7 +352,7 @@ accuracy of the model, the function also saves and returns some
 successful adversarial examples to be visualized later.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 246-310
+.. GENERATED FROM PYTHON SOURCE LINES 245-309
 
 .. code-block:: default
 
@@ -428,7 +427,7 @@ successful adversarial examples to be visualized later.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-322
+.. GENERATED FROM PYTHON SOURCE LINES 310-321
 
 Run Attack
 ~~~~~~~~~~
@@ -442,7 +441,7 @@ note the :math:`\epsilon=0` case represents the original test accuracy,
 with no attack.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 322-333
+.. GENERATED FROM PYTHON SOURCE LINES 321-332
 
 .. code-block:: default
 
@@ -476,7 +475,7 @@ with no attack.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 334-351
+.. GENERATED FROM PYTHON SOURCE LINES 333-350
 
 Results
 -------
@@ -496,7 +495,7 @@ hits random accuracy for a 10-class classifier between
 :math:`\epsilon=0.25` and :math:`\epsilon=0.3`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 351-362
+.. GENERATED FROM PYTHON SOURCE LINES 350-361
 
 .. code-block:: default
 
@@ -523,7 +522,7 @@ hits random accuracy for a 10-class classifier between
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 363-379
+.. GENERATED FROM PYTHON SOURCE LINES 362-378
 
 Sample Adversarial Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -542,7 +541,7 @@ quite evident at :math:`\epsilon=0.3`. However, in all cases humans are
 still capable of identifying the correct class despite the added noise.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 379-398
+.. GENERATED FROM PYTHON SOURCE LINES 378-397
 
 .. code-block:: default
 
@@ -569,7 +568,7 @@ still capable of identifying the correct class despite the added noise.
 
 
 .. image-sg:: /beginner/images/sphx_glr_fgsm_tutorial_002.png
-   :alt: 2 -> 2, 7 -> 7, 9 -> 9, 2 -> 2, 2 -> 2, 9 -> 8, 6 -> 1, 8 -> 0, 7 -> 9, 9 -> 8, 1 -> 8, 0 -> 5, 2 -> 8, 5 -> 6, 5 -> 3, 4 -> 9, 7 -> 9, 8 -> 1, 1 -> 8, 6 -> 8, 9 -> 2, 5 -> 2, 7 -> 9, 0 -> 3, 7 -> 2, 6 -> 5, 6 -> 5, 8 -> 1, 6 -> 8, 7 -> 2, 8 -> 2, 9 -> 3, 9 -> 8, 0 -> 8, 1 -> 2
+   :alt: 7 -> 7, 7 -> 7, 8 -> 8, 0 -> 0, 0 -> 0, 5 -> 8, 7 -> 2, 4 -> 9, 7 -> 2, 9 -> 8, 4 -> 1, 7 -> 2, 9 -> 5, 2 -> 8, 7 -> 9, 0 -> 8, 1 -> 8, 7 -> 9, 9 -> 4, 4 -> 8, 6 -> 5, 9 -> 8, 2 -> 8, 7 -> 2, 9 -> 8, 6 -> 5, 4 -> 8, 9 -> 8, 0 -> 1, 3 -> 1, 6 -> 8, 2 -> 5, 0 -> 1, 4 -> 8, 5 -> 8
    :srcset: /beginner/images/sphx_glr_fgsm_tutorial_002.png
    :class: sphx-glr-single-img
 
@@ -577,7 +576,7 @@ still capable of identifying the correct class despite the added noise.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 399-423
+.. GENERATED FROM PYTHON SOURCE LINES 398-422
 
 Where to go next?
 -----------------
@@ -607,7 +606,7 @@ attacks.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  33.790 seconds)
+   **Total running time of the script:** ( 3 minutes  38.187 seconds)
 
 
 .. _sphx_glr_download_beginner_fgsm_tutorial.py:

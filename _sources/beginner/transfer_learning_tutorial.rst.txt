@@ -47,14 +47,12 @@ These two major transfer learning scenarios look as follows:
    layer. This last fully connected layer is replaced with a new one
    with random weights and only this layer is trained.
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-54
+.. GENERATED FROM PYTHON SOURCE LINES 33-52
 
 .. code-block:: default
 
     # License: BSD
     # Author: Sasank Chilamkurthy
-
-    from __future__ import print_function, division
 
     import torch
     import torch.nn as nn
@@ -81,11 +79,11 @@ These two major transfer learning scenarios look as follows:
  .. code-block:: none
 
 
-    <contextlib.ExitStack object at 0x7fc6d1a2dbd0>
+    <contextlib.ExitStack object at 0x7f7f18409960>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-74
+.. GENERATED FROM PYTHON SOURCE LINES 53-72
 
 Load Data
 ---------
@@ -107,7 +105,7 @@ This dataset is a very small subset of imagenet.
    `here <https://download.pytorch.org/tutorial/hymenoptera_data.zip>`_
    and extract it to the current directory.
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-104
+.. GENERATED FROM PYTHON SOURCE LINES 72-102
 
 .. code-block:: default
 
@@ -148,14 +146,14 @@ This dataset is a very small subset of imagenet.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-109
+.. GENERATED FROM PYTHON SOURCE LINES 103-107
 
 Visualize a few images
 ^^^^^^^^^^^^^^^^^^^^^^
 Let's visualize a few training images so as to understand the data
 augmentations.
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-132
+.. GENERATED FROM PYTHON SOURCE LINES 107-130
 
 .. code-block:: default
 
@@ -186,7 +184,7 @@ augmentations.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_001.png
-   :alt: ['bees', 'bees', 'ants', 'ants']
+   :alt: ['bees', 'ants', 'ants', 'bees']
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_001.png
    :class: sphx-glr-single-img
 
@@ -194,7 +192,7 @@ augmentations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-144
+.. GENERATED FROM PYTHON SOURCE LINES 131-142
 
 Training the model
 ------------------
@@ -208,7 +206,7 @@ illustrate:
 In the following, parameter ``scheduler`` is an LR scheduler object from
 ``torch.optim.lr_scheduler``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-217
+.. GENERATED FROM PYTHON SOURCE LINES 142-215
 
 .. code-block:: default
 
@@ -292,7 +290,7 @@ In the following, parameter ``scheduler`` is an LR scheduler object from
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-223
+.. GENERATED FROM PYTHON SOURCE LINES 216-221
 
 Visualizing the model predictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,7 +298,7 @@ Visualizing the model predictions
 Generic function to display predictions for a few images
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 223-250
+.. GENERATED FROM PYTHON SOURCE LINES 221-248
 
 .. code-block:: default
 
@@ -338,7 +336,7 @@ Generic function to display predictions for a few images
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-256
+.. GENERATED FROM PYTHON SOURCE LINES 249-254
 
 Finetuning the ConvNet
 ----------------------
@@ -346,7 +344,7 @@ Finetuning the ConvNet
 Load a pretrained model and reset final fully connected layer.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-273
+.. GENERATED FROM PYTHON SOURCE LINES 254-271
 
 .. code-block:: default
 
@@ -378,14 +376,14 @@ Load a pretrained model and reset final fully connected layer.
     Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
       0%|          | 0.00/44.7M [00:00<?, ?B/s]
-     47%|####6     | 20.8M/44.7M [00:00<00:00, 218MB/s]
-     96%|#########6| 42.9M/44.7M [00:00<00:00, 226MB/s]
-    100%|##########| 44.7M/44.7M [00:00<00:00, 224MB/s]
+     38%|###7      | 16.9M/44.7M [00:00<00:00, 177MB/s]
+     85%|########4 | 37.9M/44.7M [00:00<00:00, 203MB/s]
+    100%|##########| 44.7M/44.7M [00:00<00:00, 202MB/s]
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 274-280
+.. GENERATED FROM PYTHON SOURCE LINES 272-278
 
 Train and evaluate
 ^^^^^^^^^^^^^^^^^^
@@ -394,7 +392,7 @@ It should take around 15-25 min on CPU. On GPU though, it takes less than a
 minute.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-284
+.. GENERATED FROM PYTHON SOURCE LINES 278-282
 
 .. code-block:: default
 
@@ -412,136 +410,136 @@ minute.
 
     Epoch 0/24
     ----------
-    train Loss: 0.6444 Acc: 0.6230
-    val Loss: 0.3528 Acc: 0.8758
+    train Loss: 0.6520 Acc: 0.6475
+    val Loss: 0.2239 Acc: 0.8954
 
     Epoch 1/24
     ----------
-    train Loss: 0.3084 Acc: 0.8484
-    val Loss: 0.3864 Acc: 0.8758
+    train Loss: 0.4533 Acc: 0.7869
+    val Loss: 0.1895 Acc: 0.9346
 
     Epoch 2/24
     ----------
-    train Loss: 0.5409 Acc: 0.8074
-    val Loss: 0.2274 Acc: 0.9085
+    train Loss: 0.5546 Acc: 0.7951
+    val Loss: 0.2882 Acc: 0.8954
 
     Epoch 3/24
     ----------
-    train Loss: 0.4906 Acc: 0.8361
-    val Loss: 0.2913 Acc: 0.8954
+    train Loss: 0.3715 Acc: 0.8566
+    val Loss: 0.4612 Acc: 0.8301
 
     Epoch 4/24
     ----------
-    train Loss: 0.4969 Acc: 0.7828
-    val Loss: 0.2741 Acc: 0.8824
+    train Loss: 0.5476 Acc: 0.8156
+    val Loss: 0.3031 Acc: 0.8889
 
     Epoch 5/24
     ----------
-    train Loss: 0.3442 Acc: 0.8607
-    val Loss: 0.4661 Acc: 0.8235
+    train Loss: 0.4938 Acc: 0.8115
+    val Loss: 0.2783 Acc: 0.9020
 
     Epoch 6/24
     ----------
-    train Loss: 0.4381 Acc: 0.8320
-    val Loss: 0.3234 Acc: 0.8954
+    train Loss: 0.4887 Acc: 0.7992
+    val Loss: 0.2496 Acc: 0.9150
 
     Epoch 7/24
     ----------
-    train Loss: 0.2426 Acc: 0.9057
-    val Loss: 0.2791 Acc: 0.9281
+    train Loss: 0.3246 Acc: 0.8525
+    val Loss: 0.2584 Acc: 0.9216
 
     Epoch 8/24
     ----------
-    train Loss: 0.3453 Acc: 0.8811
-    val Loss: 0.2408 Acc: 0.9346
+    train Loss: 0.3356 Acc: 0.8566
+    val Loss: 0.2244 Acc: 0.9150
 
     Epoch 9/24
     ----------
-    train Loss: 0.2936 Acc: 0.8893
-    val Loss: 0.2678 Acc: 0.9346
+    train Loss: 0.2821 Acc: 0.8770
+    val Loss: 0.2245 Acc: 0.9281
 
     Epoch 10/24
     ----------
-    train Loss: 0.2847 Acc: 0.8934
-    val Loss: 0.2333 Acc: 0.9346
+    train Loss: 0.3152 Acc: 0.8566
+    val Loss: 0.2531 Acc: 0.9085
 
     Epoch 11/24
     ----------
-    train Loss: 0.2260 Acc: 0.8852
-    val Loss: 0.2296 Acc: 0.9412
+    train Loss: 0.3661 Acc: 0.8320
+    val Loss: 0.2090 Acc: 0.9150
 
     Epoch 12/24
     ----------
-    train Loss: 0.3100 Acc: 0.9057
-    val Loss: 0.2259 Acc: 0.9346
+    train Loss: 0.2355 Acc: 0.9344
+    val Loss: 0.2320 Acc: 0.9150
 
     Epoch 13/24
     ----------
-    train Loss: 0.2726 Acc: 0.8934
-    val Loss: 0.2190 Acc: 0.9281
+    train Loss: 0.2786 Acc: 0.8689
+    val Loss: 0.2132 Acc: 0.9216
 
     Epoch 14/24
     ----------
-    train Loss: 0.2177 Acc: 0.9098
-    val Loss: 0.2158 Acc: 0.9412
+    train Loss: 0.2626 Acc: 0.8934
+    val Loss: 0.2166 Acc: 0.9281
 
     Epoch 15/24
     ----------
-    train Loss: 0.3219 Acc: 0.8566
-    val Loss: 0.2160 Acc: 0.9412
+    train Loss: 0.2693 Acc: 0.8934
+    val Loss: 0.2205 Acc: 0.9216
 
     Epoch 16/24
     ----------
-    train Loss: 0.3234 Acc: 0.8811
-    val Loss: 0.2225 Acc: 0.9281
+    train Loss: 0.2446 Acc: 0.9057
+    val Loss: 0.2224 Acc: 0.9281
 
     Epoch 17/24
     ----------
-    train Loss: 0.2694 Acc: 0.8934
-    val Loss: 0.2344 Acc: 0.9085
+    train Loss: 0.2590 Acc: 0.8975
+    val Loss: 0.2205 Acc: 0.9216
 
     Epoch 18/24
     ----------
-    train Loss: 0.2351 Acc: 0.8852
-    val Loss: 0.2216 Acc: 0.9412
+    train Loss: 0.2725 Acc: 0.8811
+    val Loss: 0.2157 Acc: 0.9150
 
     Epoch 19/24
     ----------
-    train Loss: 0.2206 Acc: 0.9057
-    val Loss: 0.2850 Acc: 0.9085
+    train Loss: 0.2732 Acc: 0.8893
+    val Loss: 0.2243 Acc: 0.9216
 
     Epoch 20/24
     ----------
-    train Loss: 0.2529 Acc: 0.8893
-    val Loss: 0.2263 Acc: 0.9216
+    train Loss: 0.2558 Acc: 0.8893
+    val Loss: 0.2088 Acc: 0.9281
 
     Epoch 21/24
     ----------
-    train Loss: 0.3203 Acc: 0.8811
-    val Loss: 0.2179 Acc: 0.9412
+    train Loss: 0.2445 Acc: 0.8975
+    val Loss: 0.2290 Acc: 0.9150
 
     Epoch 22/24
     ----------
-    train Loss: 0.2542 Acc: 0.8893
-    val Loss: 0.2262 Acc: 0.9412
+    train Loss: 0.2351 Acc: 0.9057
+    val Loss: 0.2076 Acc: 0.9150
 
     Epoch 23/24
     ----------
-    train Loss: 0.2973 Acc: 0.8770
-    val Loss: 0.2513 Acc: 0.9085
+    train Loss: 0.2464 Acc: 0.8975
+    val Loss: 0.2247 Acc: 0.9216
 
     Epoch 24/24
     ----------
-    train Loss: 0.1838 Acc: 0.9221
-    val Loss: 0.2183 Acc: 0.9477
+    train Loss: 0.2726 Acc: 0.8730
+    val Loss: 0.2091 Acc: 0.9281
 
-    Training complete in 1m 16s
-    Best val Acc: 0.947712
-
-
+    Training complete in 1m 18s
+    Best val Acc: 0.934641
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-290
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 284-288
 
 .. code-block:: default
 
@@ -553,7 +551,7 @@ minute.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_002.png
-   :alt: predicted: bees, predicted: bees, predicted: bees, predicted: ants, predicted: bees, predicted: ants
+   :alt: predicted: ants, predicted: ants, predicted: ants, predicted: ants, predicted: bees, predicted: ants
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_002.png
    :class: sphx-glr-single-img
 
@@ -561,7 +559,7 @@ minute.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 291-301
+.. GENERATED FROM PYTHON SOURCE LINES 289-299
 
 ConvNet as fixed feature extractor
 ----------------------------------
@@ -574,7 +572,7 @@ You can read more about this in the documentation
 `here <https://pytorch.org/docs/notes/autograd.html#excluding-subgraphs-from-backward>`__.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 301-322
+.. GENERATED FROM PYTHON SOURCE LINES 299-320
 
 .. code-block:: default
 
@@ -606,7 +604,7 @@ You can read more about this in the documentation
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 323-330
+.. GENERATED FROM PYTHON SOURCE LINES 321-328
 
 Train and evaluate
 ^^^^^^^^^^^^^^^^^^
@@ -616,7 +614,7 @@ This is expected as gradients don't need to be computed for most of the
 network. However, forward does need to be computed.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-334
+.. GENERATED FROM PYTHON SOURCE LINES 328-332
 
 .. code-block:: default
 
@@ -634,136 +632,136 @@ network. However, forward does need to be computed.
 
     Epoch 0/24
     ----------
-    train Loss: 0.6056 Acc: 0.6721
-    val Loss: 0.3584 Acc: 0.8431
+    train Loss: 0.5725 Acc: 0.6803
+    val Loss: 0.2177 Acc: 0.9477
 
     Epoch 1/24
     ----------
-    train Loss: 0.4580 Acc: 0.7910
-    val Loss: 0.4048 Acc: 0.8235
+    train Loss: 0.4970 Acc: 0.7664
+    val Loss: 0.2064 Acc: 0.9412
 
     Epoch 2/24
     ----------
-    train Loss: 0.3982 Acc: 0.8156
-    val Loss: 0.2210 Acc: 0.9346
+    train Loss: 0.4930 Acc: 0.7992
+    val Loss: 0.4049 Acc: 0.8562
 
     Epoch 3/24
     ----------
-    train Loss: 0.4419 Acc: 0.7910
-    val Loss: 0.2007 Acc: 0.9412
+    train Loss: 0.5901 Acc: 0.7213
+    val Loss: 0.2479 Acc: 0.9346
 
     Epoch 4/24
     ----------
-    train Loss: 0.4603 Acc: 0.8074
-    val Loss: 0.1972 Acc: 0.9477
+    train Loss: 0.4387 Acc: 0.8033
+    val Loss: 0.2281 Acc: 0.9216
 
     Epoch 5/24
     ----------
-    train Loss: 0.4077 Acc: 0.8156
-    val Loss: 0.2047 Acc: 0.9281
+    train Loss: 0.2994 Acc: 0.8525
+    val Loss: 0.1966 Acc: 0.9346
 
     Epoch 6/24
     ----------
-    train Loss: 0.5081 Acc: 0.8115
-    val Loss: 0.1947 Acc: 0.9346
+    train Loss: 0.4359 Acc: 0.8238
+    val Loss: 0.4460 Acc: 0.8562
 
     Epoch 7/24
     ----------
-    train Loss: 0.3606 Acc: 0.8320
-    val Loss: 0.1980 Acc: 0.9346
+    train Loss: 0.4490 Acc: 0.8115
+    val Loss: 0.1767 Acc: 0.9477
 
     Epoch 8/24
     ----------
-    train Loss: 0.4053 Acc: 0.8402
-    val Loss: 0.2205 Acc: 0.9346
+    train Loss: 0.3443 Acc: 0.8852
+    val Loss: 0.1847 Acc: 0.9412
 
     Epoch 9/24
     ----------
-    train Loss: 0.3660 Acc: 0.8320
-    val Loss: 0.1955 Acc: 0.9346
+    train Loss: 0.3729 Acc: 0.8361
+    val Loss: 0.1828 Acc: 0.9412
 
     Epoch 10/24
     ----------
-    train Loss: 0.3666 Acc: 0.8648
-    val Loss: 0.1957 Acc: 0.9477
+    train Loss: 0.3599 Acc: 0.8279
+    val Loss: 0.1907 Acc: 0.9281
 
     Epoch 11/24
     ----------
-    train Loss: 0.2874 Acc: 0.8730
-    val Loss: 0.2121 Acc: 0.9281
+    train Loss: 0.3436 Acc: 0.8484
+    val Loss: 0.1717 Acc: 0.9412
 
     Epoch 12/24
     ----------
-    train Loss: 0.3481 Acc: 0.8484
-    val Loss: 0.2010 Acc: 0.9412
+    train Loss: 0.2972 Acc: 0.8811
+    val Loss: 0.2359 Acc: 0.9216
 
     Epoch 13/24
     ----------
-    train Loss: 0.3464 Acc: 0.8443
-    val Loss: 0.2011 Acc: 0.9412
+    train Loss: 0.3866 Acc: 0.8402
+    val Loss: 0.2002 Acc: 0.9477
 
     Epoch 14/24
     ----------
-    train Loss: 0.3316 Acc: 0.8607
-    val Loss: 0.2017 Acc: 0.9281
+    train Loss: 0.3108 Acc: 0.8689
+    val Loss: 0.1722 Acc: 0.9412
 
     Epoch 15/24
     ----------
-    train Loss: 0.3563 Acc: 0.8525
-    val Loss: 0.2371 Acc: 0.9216
+    train Loss: 0.3352 Acc: 0.8402
+    val Loss: 0.2363 Acc: 0.9281
 
     Epoch 16/24
     ----------
-    train Loss: 0.4077 Acc: 0.8238
-    val Loss: 0.2207 Acc: 0.9281
+    train Loss: 0.3095 Acc: 0.8525
+    val Loss: 0.2342 Acc: 0.9281
 
     Epoch 17/24
     ----------
-    train Loss: 0.3041 Acc: 0.8525
-    val Loss: 0.2024 Acc: 0.9477
+    train Loss: 0.3165 Acc: 0.8525
+    val Loss: 0.1776 Acc: 0.9477
 
     Epoch 18/24
     ----------
-    train Loss: 0.4388 Acc: 0.8074
-    val Loss: 0.1970 Acc: 0.9346
+    train Loss: 0.2319 Acc: 0.9016
+    val Loss: 0.2154 Acc: 0.9412
 
     Epoch 19/24
     ----------
-    train Loss: 0.3049 Acc: 0.8566
-    val Loss: 0.2361 Acc: 0.9281
+    train Loss: 0.3423 Acc: 0.8484
+    val Loss: 0.1694 Acc: 0.9477
 
     Epoch 20/24
     ----------
-    train Loss: 0.3514 Acc: 0.8402
-    val Loss: 0.1938 Acc: 0.9477
+    train Loss: 0.3731 Acc: 0.8115
+    val Loss: 0.1808 Acc: 0.9477
 
     Epoch 21/24
     ----------
-    train Loss: 0.3911 Acc: 0.8074
-    val Loss: 0.1914 Acc: 0.9412
+    train Loss: 0.3892 Acc: 0.8361
+    val Loss: 0.2012 Acc: 0.9412
 
     Epoch 22/24
     ----------
-    train Loss: 0.3953 Acc: 0.8607
-    val Loss: 0.1947 Acc: 0.9281
+    train Loss: 0.3230 Acc: 0.8361
+    val Loss: 0.1643 Acc: 0.9412
 
     Epoch 23/24
     ----------
-    train Loss: 0.4275 Acc: 0.7951
-    val Loss: 0.1830 Acc: 0.9412
+    train Loss: 0.3661 Acc: 0.8279
+    val Loss: 0.2082 Acc: 0.9346
 
     Epoch 24/24
     ----------
-    train Loss: 0.3619 Acc: 0.8361
-    val Loss: 0.2092 Acc: 0.9281
+    train Loss: 0.3902 Acc: 0.8238
+    val Loss: 0.1839 Acc: 0.9412
 
-    Training complete in 0m 45s
+    Training complete in 0m 46s
     Best val Acc: 0.947712
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 336-342
+.. GENERATED FROM PYTHON SOURCE LINES 334-340
 
 .. code-block:: default
 
@@ -777,7 +775,7 @@ network. However, forward does need to be computed.
 
 
 .. image-sg:: /beginner/images/sphx_glr_transfer_learning_tutorial_003.png
-   :alt: predicted: bees, predicted: ants, predicted: ants, predicted: ants, predicted: ants, predicted: bees
+   :alt: predicted: ants, predicted: ants, predicted: ants, predicted: ants, predicted: bees, predicted: ants
    :srcset: /beginner/images/sphx_glr_transfer_learning_tutorial_003.png
    :class: sphx-glr-single-img
 
@@ -785,7 +783,7 @@ network. However, forward does need to be computed.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-350
+.. GENERATED FROM PYTHON SOURCE LINES 341-348
 
 Further Learning
 -----------------
@@ -798,7 +796,7 @@ checkout our `Quantized Transfer Learning for Computer Vision Tutorial <https://
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  7.677 seconds)
+   **Total running time of the script:** ( 2 minutes  10.135 seconds)
 
 
 .. _sphx_glr_download_beginner_transfer_learning_tutorial.py:

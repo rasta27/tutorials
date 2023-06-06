@@ -1484,10 +1484,7 @@ CPU or GPU. To inspect the intermediary output of our training procedure, for
 which we added code to periodically save image samples to the
 <code class="docutils literal notranslate"><span class="pre">"dcgan-sample-xxx.pt"</span></code> file, we can write a tiny Python script to load the
 tensors and display them with matplotlib:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
-
-<span class="kn">import</span> <span class="nn">argparse</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">torch</span>

@@ -66,12 +66,10 @@ Below is a  list of the packages needed to implement the neural transfer.
 -  ``torchvision.models`` (train or load pretrained models)
 -  ``copy`` (to deep copy the models; system package)
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-66
+.. GENERATED FROM PYTHON SOURCE LINES 49-64
 
 .. code-block:: default
 
-
-    from __future__ import print_function
 
     import torch
     import torch.nn as nn
@@ -94,7 +92,7 @@ Below is a  list of the packages needed to implement the neural transfer.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-73
+.. GENERATED FROM PYTHON SOURCE LINES 65-71
 
 Next, we need to choose which device to run the network on and import the
 content and style images. Running the neural transfer algorithm on large
@@ -103,7 +101,7 @@ use ``torch.cuda.is_available()`` to detect if there is a GPU available.
 Next, we set the ``torch.device`` for use throughout the tutorial. Also the ``.to(device)``
 method is used to move tensors or modules to a desired device. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-76
+.. GENERATED FROM PYTHON SOURCE LINES 71-74
 
 .. code-block:: default
 
@@ -117,7 +115,7 @@ method is used to move tensors or modules to a desired device.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-97
+.. GENERATED FROM PYTHON SOURCE LINES 75-95
 
 Loading the Images
 ------------------
@@ -140,7 +138,7 @@ to 255 tensor images.
     Download these two images and add them to a directory
     with name ``images`` in your current working directory.
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-120
+.. GENERATED FROM PYTHON SOURCE LINES 95-118
 
 .. code-block:: default
 
@@ -174,14 +172,14 @@ to 255 tensor images.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-125
+.. GENERATED FROM PYTHON SOURCE LINES 119-123
 
 Now, let's create a function that displays an image by reconverting a 
 copy of it to PIL format and displaying the copy using 
 ``plt.imshow``. We will try displaying the content and style images 
 to ensure they were imported correctly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-146
+.. GENERATED FROM PYTHON SOURCE LINES 123-144
 
 .. code-block:: default
 
@@ -230,7 +228,7 @@ to ensure they were imported correctly.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-171
+.. GENERATED FROM PYTHON SOURCE LINES 145-169
 
 Loss Functions
 --------------
@@ -257,7 +255,7 @@ loss and then returns the layer’s input. The computed loss is saved as a
 parameter of the module.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-186
+.. GENERATED FROM PYTHON SOURCE LINES 169-184
 
 .. code-block:: default
 
@@ -283,7 +281,7 @@ parameter of the module.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-193
+.. GENERATED FROM PYTHON SOURCE LINES 185-191
 
 .. Note::
    **Important detail**: although this module is named ``ContentLoss``, it
@@ -292,7 +290,7 @@ parameter of the module.
    to recompute/implement the gradient manually in the ``backward``
    method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-217
+.. GENERATED FROM PYTHON SOURCE LINES 193-215
 
 Style Loss
 ~~~~~~~~~~
@@ -317,7 +315,7 @@ gradient descent. Style features tend to be in the deeper layers of the
 network so this normalization step is crucial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-232
+.. GENERATED FROM PYTHON SOURCE LINES 215-230
 
 .. code-block:: default
 
@@ -343,14 +341,14 @@ network so this normalization step is crucial.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-237
+.. GENERATED FROM PYTHON SOURCE LINES 231-235
 
 Now the style loss module looks almost exactly like the content loss
 module. The style distance is also computed using the mean square
 error between :math:`G_{XL}` and :math:`G_{SL}`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 237-250
+.. GENERATED FROM PYTHON SOURCE LINES 235-248
 
 .. code-block:: default
 
@@ -374,7 +372,7 @@ error between :math:`G_{XL}` and :math:`G_{SL}`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-265
+.. GENERATED FROM PYTHON SOURCE LINES 249-263
 
 Importing the Model
 -------------------
@@ -391,7 +389,7 @@ different behavior during training than evaluation, so we must set the
 network to evaluation mode using ``.eval()``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 265-270
+.. GENERATED FROM PYTHON SOURCE LINES 263-268
 
 .. code-block:: default
 
@@ -411,41 +409,37 @@ network to evaluation mode using ``.eval()``.
     Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth
 
       0%|          | 0.00/548M [00:00<?, ?B/s]
-      3%|2         | 14.8M/548M [00:00<00:03, 154MB/s]
-      6%|5         | 31.9M/548M [00:00<00:03, 169MB/s]
-      9%|8         | 48.0M/548M [00:00<00:03, 152MB/s]
-     13%|#2        | 69.1M/548M [00:00<00:02, 177MB/s]
-     16%|#5        | 86.5M/548M [00:00<00:02, 179MB/s]
-     19%|#9        | 107M/548M [00:00<00:02, 189MB/s] 
-     24%|##4       | 132M/548M [00:00<00:02, 216MB/s]
-     30%|##9       | 163M/548M [00:00<00:01, 249MB/s]
-     34%|###4      | 187M/548M [00:00<00:01, 236MB/s]
-     38%|###8      | 210M/548M [00:01<00:01, 203MB/s]
-     44%|####3     | 240M/548M [00:01<00:01, 231MB/s]
-     48%|####8     | 265M/548M [00:01<00:01, 241MB/s]
-     53%|#####2    | 289M/548M [00:01<00:01, 240MB/s]
-     58%|#####7    | 317M/548M [00:01<00:00, 256MB/s]
-     62%|######2   | 342M/548M [00:01<00:00, 252MB/s]
-     69%|######8   | 377M/548M [00:01<00:00, 285MB/s]
-     74%|#######4  | 408M/548M [00:01<00:00, 295MB/s]
-     80%|#######9  | 438M/548M [00:01<00:00, 301MB/s]
-     85%|########5 | 467M/548M [00:02<00:00, 280MB/s]
-     90%|######### | 494M/548M [00:02<00:00, 242MB/s]
-     95%|#########4| 518M/548M [00:02<00:00, 231MB/s]
-     99%|#########8| 541M/548M [00:02<00:00, 227MB/s]
-    100%|##########| 548M/548M [00:02<00:00, 234MB/s]
+      5%|5         | 28.4M/548M [00:00<00:01, 298MB/s]
+     10%|#         | 56.9M/548M [00:00<00:01, 270MB/s]
+     16%|#5        | 86.6M/548M [00:00<00:01, 288MB/s]
+     22%|##2       | 122M/548M [00:00<00:01, 319MB/s] 
+     28%|##7       | 152M/548M [00:00<00:01, 305MB/s]
+     33%|###3      | 182M/548M [00:00<00:01, 266MB/s]
+     39%|###8      | 213M/548M [00:00<00:01, 285MB/s]
+     46%|####5     | 250M/548M [00:00<00:00, 314MB/s]
+     51%|#####1    | 281M/548M [00:00<00:00, 318MB/s]
+     57%|#####6    | 312M/548M [00:01<00:00, 284MB/s]
+     62%|######2   | 340M/548M [00:01<00:00, 242MB/s]
+     67%|######6   | 365M/548M [00:01<00:01, 179MB/s]
+     70%|#######   | 385M/548M [00:01<00:00, 182MB/s]
+     76%|#######5  | 415M/548M [00:01<00:00, 212MB/s]
+     81%|########1 | 446M/548M [00:01<00:00, 238MB/s]
+     86%|########6 | 473M/548M [00:01<00:00, 251MB/s]
+     91%|######### | 499M/548M [00:02<00:00, 254MB/s]
+     97%|#########7| 532M/548M [00:02<00:00, 281MB/s]
+    100%|##########| 548M/548M [00:02<00:00, 260MB/s]
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-275
+.. GENERATED FROM PYTHON SOURCE LINES 269-273
 
 Additionally, VGG networks are trained on images with each channel
 normalized by mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225].
 We will use them to normalize the image before sending it into the network.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-295
+.. GENERATED FROM PYTHON SOURCE LINES 273-293
 
 .. code-block:: default
 
@@ -476,7 +470,7 @@ We will use them to normalize the image before sending it into the network.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 296-303
+.. GENERATED FROM PYTHON SOURCE LINES 294-301
 
 A ``Sequential`` module contains an ordered list of child modules. For
 instance, ``vgg19.features`` contains a sequence (``Conv2d``, ``ReLU``, ``MaxPool2d``,
@@ -486,7 +480,7 @@ layer they are detecting. To do this we must create a new ``Sequential``
 module that has content loss and style loss modules correctly inserted.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-368
+.. GENERATED FROM PYTHON SOURCE LINES 301-366
 
 .. code-block:: default
 
@@ -562,13 +556,13 @@ module that has content loss and style loss modules correctly inserted.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 369-372
+.. GENERATED FROM PYTHON SOURCE LINES 367-370
 
 Next, we select the input image. You can use a copy of the content image
 or white noise.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 372-385
+.. GENERATED FROM PYTHON SOURCE LINES 370-383
 
 .. code-block:: default
 
@@ -597,7 +591,7 @@ or white noise.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 386-395
+.. GENERATED FROM PYTHON SOURCE LINES 384-393
 
 Gradient Descent
 ----------------
@@ -609,7 +603,7 @@ losses. We will create a PyTorch L-BFGS optimizer ``optim.LBFGS`` and pass
 our image to it as the tensor to optimize.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 395-402
+.. GENERATED FROM PYTHON SOURCE LINES 393-400
 
 .. code-block:: default
 
@@ -627,7 +621,7 @@ our image to it as the tensor to optimize.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 403-414
+.. GENERATED FROM PYTHON SOURCE LINES 401-412
 
 Finally, we must define a function that performs the neural transfer. For
 each iteration of the networks, it is fed an updated input and computes
@@ -641,7 +635,7 @@ the image. We can address this by correcting the input values to be
 between 0 to 1 each time the network is run.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 414-476
+.. GENERATED FROM PYTHON SOURCE LINES 412-474
 
 .. code-block:: default
 
@@ -714,12 +708,12 @@ between 0 to 1 each time the network is run.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 477-479
+.. GENERATED FROM PYTHON SOURCE LINES 475-477
 
 Finally, we can run the algorithm.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 479-490
+.. GENERATED FROM PYTHON SOURCE LINES 477-488
 
 .. code-block:: default
 
@@ -750,22 +744,22 @@ Finally, we can run the algorithm.
     Building the style transfer model..
     Optimizing..
     run [50]:
-    Style Loss : 4.509695 Content Loss: 4.156438
+    Style Loss : 4.244680 Content Loss: 4.249447
 
     run [100]:
-    Style Loss : 1.181374 Content Loss: 3.063774
+    Style Loss : 1.152103 Content Loss: 3.042636
 
     run [150]:
-    Style Loss : 0.758693 Content Loss: 2.675482
+    Style Loss : 0.721864 Content Loss: 2.657358
 
     run [200]:
-    Style Loss : 0.505088 Content Loss: 2.511979
+    Style Loss : 0.486920 Content Loss: 2.493941
 
     run [250]:
-    Style Loss : 0.363995 Content Loss: 2.412641
+    Style Loss : 0.353937 Content Loss: 2.405596
 
     run [300]:
-    Style Loss : 0.275078 Content Loss: 2.352539
+    Style Loss : 0.268347 Content Loss: 2.351799
 
 
 
@@ -774,7 +768,7 @@ Finally, we can run the algorithm.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.835 seconds)
+   **Total running time of the script:** ( 0 minutes  13.540 seconds)
 
 
 .. _sphx_glr_download_advanced_neural_style_tutorial.py:

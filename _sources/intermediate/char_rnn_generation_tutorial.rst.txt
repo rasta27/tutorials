@@ -92,11 +92,10 @@ are a bunch of plain text files ``data/names/[Language].txt`` with a
 name per line. We split lines into an array, convert Unicode to ASCII,
 and end up with a dictionary ``{language: [names ...]}``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-123
+.. GENERATED FROM PYTHON SOURCE LINES 78-122
 
 .. code-block:: default
 
-    from __future__ import unicode_literals, print_function, division
     from io import open
     import glob
     import os
@@ -155,7 +154,7 @@ and end up with a dictionary ``{language: [names ...]}``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-148
+.. GENERATED FROM PYTHON SOURCE LINES 123-147
 
 Creating the Network
 ====================
@@ -182,7 +181,7 @@ chaos and increase sampling variety.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-177
+.. GENERATED FROM PYTHON SOURCE LINES 147-176
 
 .. code-block:: default
 
@@ -222,7 +221,7 @@ chaos and increase sampling variety.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-185
+.. GENERATED FROM PYTHON SOURCE LINES 177-184
 
 Training
 =========
@@ -232,7 +231,7 @@ Preparing for Training
 First of all, helper functions to get random pairs of (category, line):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-199
+.. GENERATED FROM PYTHON SOURCE LINES 184-198
 
 .. code-block:: default
 
@@ -257,7 +256,7 @@ First of all, helper functions to get random pairs of (category, line):
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-221
+.. GENERATED FROM PYTHON SOURCE LINES 199-220
 
 For each timestep (that is, for each letter in a training word) the
 inputs of the network will be
@@ -281,7 +280,7 @@ timestep - this is a design choice, it could have been included as part
 of initial hidden state or some other strategy.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-244
+.. GENERATED FROM PYTHON SOURCE LINES 220-243
 
 .. code-block:: default
 
@@ -315,14 +314,14 @@ of initial hidden state or some other strategy.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 245-249
+.. GENERATED FROM PYTHON SOURCE LINES 244-248
 
 For convenience during training we'll make a ``randomTrainingExample``
 function that fetches a random (category, line) pair and turns them into
 the required (category, input, target) tensors.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-259
+.. GENERATED FROM PYTHON SOURCE LINES 248-258
 
 .. code-block:: default
 
@@ -343,7 +342,7 @@ the required (category, input, target) tensors.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 260-270
+.. GENERATED FROM PYTHON SOURCE LINES 259-269
 
 Training the Network
 --------------------
@@ -356,7 +355,7 @@ The magic of autograd allows you to simply sum these losses at each step
 and call backward at the end.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-296
+.. GENERATED FROM PYTHON SOURCE LINES 269-295
 
 .. code-block:: default
 
@@ -393,13 +392,13 @@ and call backward at the end.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-300
+.. GENERATED FROM PYTHON SOURCE LINES 296-299
 
 To keep track of how long training takes I am adding a
 ``timeSince(timestamp)`` function which returns a human readable string:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-312
+.. GENERATED FROM PYTHON SOURCE LINES 299-311
 
 .. code-block:: default
 
@@ -422,7 +421,7 @@ To keep track of how long training takes I am adding a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 313-318
+.. GENERATED FROM PYTHON SOURCE LINES 312-317
 
 Training is business as usual - call train a bunch of times and wait a
 few minutes, printing the current time and loss every ``print_every``
@@ -430,7 +429,7 @@ examples, and keeping store of an average loss per ``plot_every`` examples
 in ``all_losses`` for plotting later.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 318-341
+.. GENERATED FROM PYTHON SOURCE LINES 317-340
 
 .. code-block:: default
 
@@ -465,31 +464,31 @@ in ``all_losses`` for plotting later.
 
  .. code-block:: none
 
-    0m 33s (5000 5%) 3.1206
-    1m 7s (10000 10%) 2.7503
-    1m 41s (15000 15%) 2.1978
-    2m 15s (20000 20%) 2.6824
-    2m 49s (25000 25%) 2.4598
-    3m 23s (30000 30%) 2.6018
-    3m 58s (35000 35%) 3.3543
-    4m 32s (40000 40%) 2.3064
-    5m 7s (45000 45%) 2.1113
-    5m 41s (50000 50%) 2.2920
-    6m 15s (55000 55%) 2.0853
-    6m 50s (60000 60%) 2.2503
-    7m 25s (65000 65%) 2.2250
-    8m 0s (70000 70%) 2.3575
-    8m 34s (75000 75%) 2.1745
-    9m 9s (80000 80%) 3.7191
-    9m 43s (85000 85%) 2.0638
-    10m 18s (90000 90%) 2.5993
-    10m 53s (95000 95%) 1.9232
-    11m 27s (100000 100%) 2.2399
+    0m 33s (5000 5%) 2.6727
+    1m 7s (10000 10%) 2.9020
+    1m 43s (15000 15%) 2.6424
+    2m 17s (20000 20%) 2.4972
+    2m 51s (25000 25%) 3.2264
+    3m 26s (30000 30%) 2.2475
+    4m 0s (35000 35%) 3.0145
+    4m 35s (40000 40%) 2.2494
+    5m 9s (45000 45%) 1.7685
+    5m 44s (50000 50%) 2.6934
+    6m 18s (55000 55%) 3.1820
+    6m 53s (60000 60%) 2.0029
+    7m 27s (65000 65%) 2.1233
+    8m 2s (70000 70%) 2.3111
+    8m 36s (75000 75%) 2.3247
+    9m 11s (80000 80%) 1.5111
+    9m 46s (85000 85%) 2.6796
+    10m 20s (90000 90%) 3.2933
+    10m 55s (95000 95%) 2.5182
+    11m 30s (100000 100%) 3.1912
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 342-348
+.. GENERATED FROM PYTHON SOURCE LINES 341-347
 
 Plotting the Losses
 -------------------
@@ -498,7 +497,7 @@ Plotting the historical loss from all\_losses shows the network
 learning:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-355
+.. GENERATED FROM PYTHON SOURCE LINES 347-354
 
 .. code-block:: default
 
@@ -523,11 +522,11 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f7236375db0>]
+    [<matplotlib.lines.Line2D object at 0x7ff5cd4f00d0>]
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 356-379
+.. GENERATED FROM PYTHON SOURCE LINES 355-378
 
 Sampling the Network
 ====================
@@ -553,7 +552,7 @@ feed that in as the next letter, and repeat until the EOS token.
    training and have the network choose its own starting letter.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 379-418
+.. GENERATED FROM PYTHON SOURCE LINES 378-417
 
 .. code-block:: default
 
@@ -604,23 +603,23 @@ feed that in as the next letter, and repeat until the EOS token.
 
  .. code-block:: none
 
-    Rovako
-    Uantonovok
-    Shinovevov
-    Garter
-    Eren
-    Roure
-    Santo
-    Poreno
-    Allano
-    Chi
+    Rovakin
+    Uaranov
+    Sharinov
+    Gerter
+    Erer
+    Rone
+    Salaraz
+    Para
+    Allan
+    Chan
     Han
     Iun
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 419-435
+.. GENERATED FROM PYTHON SOURCE LINES 418-434
 
 Exercises
 =========
@@ -642,7 +641,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 11 minutes  27.744 seconds)
+   **Total running time of the script:** ( 11 minutes  30.235 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_generation_tutorial.py:

@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 149MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 162MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -480,47 +480,51 @@ translation. For additional details on available pretrained models, see <a class
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
   2%|1         | 17.9M/945M [00:00&lt;00:05, 188MB/s]
-  4%|4         | 39.7M/945M [00:00&lt;00:04, 211MB/s]
-  7%|6         | 62.9M/945M [00:00&lt;00:04, 226MB/s]
-  9%|9         | 85.7M/945M [00:00&lt;00:03, 231MB/s]
- 12%|#1        | 109M/945M [00:00&lt;00:03, 235MB/s]
- 14%|#3        | 131M/945M [00:00&lt;00:03, 234MB/s]
- 16%|#6        | 155M/945M [00:00&lt;00:03, 238MB/s]
- 19%|#8        | 177M/945M [00:00&lt;00:03, 232MB/s]
- 21%|##1       | 200M/945M [00:00&lt;00:03, 227MB/s]
- 24%|##3       | 223M/945M [00:01&lt;00:03, 233MB/s]
- 26%|##6       | 246M/945M [00:01&lt;00:03, 235MB/s]
- 28%|##8       | 269M/945M [00:01&lt;00:02, 237MB/s]
- 31%|###1      | 294M/945M [00:01&lt;00:02, 246MB/s]
- 34%|###4      | 322M/945M [00:01&lt;00:02, 258MB/s]
- 37%|###6      | 346M/945M [00:01&lt;00:02, 253MB/s]
- 39%|###9      | 371M/945M [00:01&lt;00:02, 251MB/s]
- 42%|####1     | 395M/945M [00:01&lt;00:02, 248MB/s]
- 44%|####4     | 418M/945M [00:01&lt;00:02, 246MB/s]
- 47%|####6     | 442M/945M [00:01&lt;00:02, 245MB/s]
- 49%|####9     | 465M/945M [00:02&lt;00:02, 245MB/s]
- 52%|#####1    | 488M/945M [00:02&lt;00:02, 238MB/s]
- 54%|#####4    | 511M/945M [00:02&lt;00:01, 237MB/s]
- 57%|#####6    | 534M/945M [00:02&lt;00:01, 236MB/s]
- 59%|#####8    | 556M/945M [00:02&lt;00:01, 236MB/s]
- 61%|######1   | 580M/945M [00:02&lt;00:01, 238MB/s]
- 64%|######3   | 603M/945M [00:02&lt;00:01, 239MB/s]
- 66%|######6   | 625M/945M [00:02&lt;00:01, 233MB/s]
- 69%|######8   | 648M/945M [00:02&lt;00:01, 234MB/s]
- 71%|#######1  | 671M/945M [00:02&lt;00:01, 236MB/s]
- 73%|#######3  | 694M/945M [00:03&lt;00:01, 235MB/s]
- 76%|#######5  | 716M/945M [00:03&lt;00:01, 235MB/s]
- 78%|#######8  | 739M/945M [00:03&lt;00:00, 233MB/s]
- 81%|########  | 761M/945M [00:03&lt;00:00, 228MB/s]
- 83%|########2 | 783M/945M [00:03&lt;00:00, 217MB/s]
- 85%|########5 | 803M/945M [00:03&lt;00:00, 218MB/s]
- 87%|########7 | 826M/945M [00:03&lt;00:00, 222MB/s]
- 90%|########9 | 848M/945M [00:03&lt;00:00, 226MB/s]
- 92%|#########2| 870M/945M [00:03&lt;00:00, 228MB/s]
- 94%|#########4| 892M/945M [00:03&lt;00:00, 227MB/s]
- 97%|#########6| 915M/945M [00:04&lt;00:00, 230MB/s]
- 99%|#########9| 938M/945M [00:04&lt;00:00, 234MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 235MB/s]
+  4%|3         | 37.7M/945M [00:00&lt;00:04, 199MB/s]
+  6%|6         | 56.9M/945M [00:00&lt;00:04, 200MB/s]
+  8%|8         | 78.4M/945M [00:00&lt;00:04, 210MB/s]
+ 11%|#         | 100M/945M [00:00&lt;00:04, 216MB/s]
+ 13%|#2        | 121M/945M [00:00&lt;00:04, 212MB/s]
+ 15%|#4        | 141M/945M [00:00&lt;00:04, 204MB/s]
+ 17%|#7        | 164M/945M [00:00&lt;00:03, 218MB/s]
+ 20%|#9        | 185M/945M [00:00&lt;00:03, 214MB/s]
+ 22%|##1       | 206M/945M [00:01&lt;00:03, 216MB/s]
+ 24%|##4       | 228M/945M [00:01&lt;00:03, 219MB/s]
+ 26%|##6       | 249M/945M [00:01&lt;00:03, 205MB/s]
+ 28%|##8       | 269M/945M [00:01&lt;00:03, 193MB/s]
+ 30%|###       | 287M/945M [00:01&lt;00:03, 190MB/s]
+ 33%|###2      | 308M/945M [00:01&lt;00:03, 196MB/s]
+ 35%|###4      | 327M/945M [00:01&lt;00:03, 193MB/s]
+ 37%|###6      | 345M/945M [00:01&lt;00:03, 189MB/s]
+ 39%|###8      | 367M/945M [00:01&lt;00:03, 200MB/s]
+ 41%|####      | 386M/945M [00:01&lt;00:02, 200MB/s]
+ 43%|####3     | 407M/945M [00:02&lt;00:02, 207MB/s]
+ 45%|####5     | 429M/945M [00:02&lt;00:02, 213MB/s]
+ 48%|####7     | 451M/945M [00:02&lt;00:02, 219MB/s]
+ 50%|#####     | 473M/945M [00:02&lt;00:02, 224MB/s]
+ 53%|#####2    | 496M/945M [00:02&lt;00:02, 229MB/s]
+ 55%|#####4    | 519M/945M [00:02&lt;00:01, 232MB/s]
+ 57%|#####7    | 542M/945M [00:02&lt;00:01, 234MB/s]
+ 60%|#####9    | 564M/945M [00:02&lt;00:01, 226MB/s]
+ 62%|######2   | 586M/945M [00:02&lt;00:01, 228MB/s]
+ 65%|######4   | 610M/945M [00:03&lt;00:01, 233MB/s]
+ 67%|######7   | 634M/945M [00:03&lt;00:01, 239MB/s]
+ 70%|######9   | 657M/945M [00:03&lt;00:01, 198MB/s]
+ 72%|#######1  | 677M/945M [00:03&lt;00:01, 196MB/s]
+ 74%|#######3  | 696M/945M [00:03&lt;00:01, 195MB/s]
+ 76%|#######5  | 716M/945M [00:03&lt;00:01, 199MB/s]
+ 78%|#######7  | 735M/945M [00:03&lt;00:01, 198MB/s]
+ 80%|########  | 757M/945M [00:03&lt;00:00, 205MB/s]
+ 82%|########2 | 777M/945M [00:03&lt;00:00, 195MB/s]
+ 84%|########4 | 796M/945M [00:04&lt;00:00, 197MB/s]
+ 86%|########6 | 815M/945M [00:04&lt;00:00, 195MB/s]
+ 88%|########8 | 835M/945M [00:04&lt;00:00, 200MB/s]
+ 91%|######### | 855M/945M [00:04&lt;00:00, 203MB/s]
+ 93%|#########2| 874M/945M [00:04&lt;00:00, 195MB/s]
+ 95%|#########4| 893M/945M [00:04&lt;00:00, 189MB/s]
+ 97%|#########6| 913M/945M [00:04&lt;00:00, 193MB/s]
+ 99%|#########8| 934M/945M [00:04&lt;00:00, 204MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 207MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -732,37 +736,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: "Rex Manning Day" is also a day commemorated by films . "Mean Girls Day" is officially October 3 . "the saga of a sailor" is a day commemorated by "the sailor"
+prediction: a ribbing has been going on for the couple from new Berlin, il . they have known each other since kindergarten but their friends are still teasing them .
 
-target: April 8 was huge for "Lost" and "Empire Records" fans . April 14, April 25, October 21 are other big dates in movies .
+target: Joel Burger and Ashley King have known each other since kindergarten . They started dating five years ago, friends having stopped ribbing them . Insist they are embracing the playful nickname 'Burger-King' Plan to serve drinks at wedding in personalized Burger King cups .
 
 
 Example 2:
 
-prediction: world record holder will run the final competitive marathon of her career . the runner says she is likely to cry when she runs the marathon . she has been battling with an injury to her left foot .
+prediction: the Gilmore Gasoline Filling Station was a backdrop for the shenanigans of steve martin and eddie murphy . it was abandoned in the 1990s and was left to vandals and graffiti artists . coffee giant Starbucks bought the garage in los angeles last year . they have now finished its transformation into a drive through coffee shop .
 
-target: Paula Radcliffe will retire from competitive running after London marathon . Radcliffe set the world record at the event in 2003 . And she says that she will be thinking of that moment during final race .
+target: Art Deco gas station once featured in films like LA Story and 48 Hours before falling into disrepair . Opened in 1935 in LA by the American giants Gilmore Oil it was eventually closed in the 1990s . Property has now been bought by Starbucks and transformed into a coffee shop .
 
 
 Example 3:
 
-prediction: a man with autism is seen drawing a world map from scratch . the map was created by a student in a new york classroom . the boy is seen kneeling on a chair and drawing the map from scratch .
+prediction: the national institute on drug abuse in the us has admitted, in its revised publication on marijuana, that the drug offers benefits to some cancer patients . extracts from whole-plant marijuana can slow the growth of cancer cells from one of the most serious types of brain tumours .
 
-target: Image went viral after it was posted by user Bobitis on Reddit . The unnamed youth, from New York, knelt on a chair to reach whiteboard . The boy is the son of New York professor and drew map from memory .
+target: National Institute on Drug Abuse admits cannabis has medicinal benefits . US guidance states drug can help kill some cancer cells and shrink others . Cannabinoids - chemicals in marijuana - currently used in medication to treat MS patients in both the US and UK . Autoimmune diseases, including HIV and AIDS, multiple sclerosis and Alzheimer's disease . Inflammation . Pain . Seizures . Substance use disorders . Mental disorders .
 
 
 Example 4:
 
-prediction: the state's legislature on Friday passed a bill raising the minimum legal age to buy tobacco . the bill will now go before Gov. David Ige, whose signature would make it law in 2016 .
+prediction: a man, 21, allegedly forced a tearful 15-year-old girl into his car on Saturday and screamed, 'you will never see your parents again!' in attempt to force her to be his teen bride . Kong Meng Xiong, 21, of St. Paul, Minnesota has been charged with kidnapping, third-degree criminal sexual conduct and false imprisonment . the girl's family reported the kidnapping on Sunday and that they opposed to their daughter marrying X
 
-target: Hawaii's legislature passes a bill raising the legal age for buying tobacco to 21 . The bill is now before Gov. David Ige, whose signature would make it law . Most states allow tobacco sales to anyone 18 and older .
+target: Kong Meng Xiong, 21, of St. Paul, Minnesota has been charged with kidnapping, third-degree criminal sexual conduct and false imprisonment . Xiong allegedly tried to kidnap his 15-year-old girlfriend and force her to be his bride in a traditional Hmong marriage . In Hmong culture, bride-napping is a frowned-upon tradition in which a male suitor kidnaps his bride if her family does not approve of the marriage . Xiong pleaded guilty to sexual assault against a 13-year-old girl in 2009 when he was 15 .
 
 
 Example 5:
 
-prediction: Ana Elizondo, 27, was kidnapped from a parking lot in 2012 . she was leaving a night class at the university of texas, pan american . she was blindfolded and transported through several cars . she escaped the hands of her captors the following day unharmed . she will open up about her experiences on the popular true crime documentary show .
+prediction: the photography competition was designed to illustrate the Northern Territory's unique outback lifestyle . the competition was held in conjunction with an annual cattlemen's conference . the winning image was Marie Muldoon's heartwarming photo of her daughter cuddling up to a horse, titled True Love .
 
-target: Ana Elizondo was kidnapped in 2012 as she was leaving a night class at the University of Texas, Pan American . Captors transported her through cars and tried to cross Mexican border . She was released unharmed the following day by one of the kidnappers . She believes she stayed safe by being friendly and joking with kidnappers . Her experience will be featured on a crime documentary show Tuesday .
+target: An annual photography competition produced some amazing works that give some insight into life on the land . Judges look for images that illustrate the Northern Territory's unique outback lifestyle and their distinct people . Marie Muldoon won the competition with a heartwarming shot of her daughter cuddling up to a horse . The categories include ‘Industry at work or play’, ‘NT landcapes’ and ‘Best portrait of person or animal’ The competition is run in conjunction with the Northern Territory Cattlemen's Association's annual conference .
 </pre></div>
 </div>
 </div>
@@ -1055,7 +1059,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  8.534 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  27.591 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

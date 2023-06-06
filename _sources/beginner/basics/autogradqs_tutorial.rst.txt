@@ -113,8 +113,8 @@ documentation <https://pytorch.org/docs/stable/autograd.html#function>`__.
 
  .. code-block:: none
 
-    Gradient function for z = <AddBackward0 object at 0x7effe41af9a0>
-    Gradient function for loss = <BinaryCrossEntropyWithLogitsBackward0 object at 0x7f00526f85b0>
+    Gradient function for z = <AddBackward0 object at 0x7f06c623f6d0>
+    Gradient function for loss = <BinaryCrossEntropyWithLogitsBackward0 object at 0x7f06c6236d70>
 
 
 
@@ -151,12 +151,12 @@ namely, we need :math:`\frac{\partial loss}{\partial w}` and
 
  .. code-block:: none
 
-    tensor([[0.2938, 0.0237, 0.0129],
-            [0.2938, 0.0237, 0.0129],
-            [0.2938, 0.0237, 0.0129],
-            [0.2938, 0.0237, 0.0129],
-            [0.2938, 0.0237, 0.0129]])
-    tensor([0.2938, 0.0237, 0.0129])
+    tensor([[0.1854, 0.0031, 0.0002],
+            [0.1854, 0.0031, 0.0002],
+            [0.1854, 0.0031, 0.0002],
+            [0.1854, 0.0031, 0.0002],
+            [0.1854, 0.0031, 0.0002]])
+    tensor([0.1854, 0.0031, 0.0002])
 
 
 

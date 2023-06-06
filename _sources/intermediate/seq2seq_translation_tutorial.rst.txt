@@ -96,11 +96,10 @@ models, respectively.
 
 **Requirements**
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-95
+.. GENERATED FROM PYTHON SOURCE LINES 81-94
 
 .. code-block:: default
 
-    from __future__ import unicode_literals, print_function, division
     from io import open
     import unicodedata
     import string
@@ -121,7 +120,7 @@ models, respectively.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-121
+.. GENERATED FROM PYTHON SOURCE LINES 95-120
 
 Loading data files
 ==================
@@ -149,7 +148,7 @@ separated list of translation pairs:
    `here <https://download.pytorch.org/tutorial/data.zip>`_
    and extract it to the current directory.
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-135
+.. GENERATED FROM PYTHON SOURCE LINES 122-134
 
 Similar to the character encoding used in the character-level RNN
 tutorials, we will be representing each word in a language as a one-hot
@@ -164,7 +163,7 @@ thousand words per language.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-144
+.. GENERATED FROM PYTHON SOURCE LINES 137-143
 
 We'll need a unique index per word to use as the inputs and targets of
 the networks later. To keep track of all this we will use a helper class
@@ -173,7 +172,7 @@ called ``Lang`` which has word → index (``word2index``) and index → word
 ``word2count`` which will be used to replace rare words later.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-171
+.. GENERATED FROM PYTHON SOURCE LINES 143-170
 
 .. code-block:: default
 
@@ -211,14 +210,14 @@ called ``Lang`` which has word → index (``word2index``) and index → word
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-176
+.. GENERATED FROM PYTHON SOURCE LINES 171-175
 
 The files are all in Unicode, to simplify we will turn Unicode
 characters to ASCII, make everything lowercase, and trim most
 punctuation.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-195
+.. GENERATED FROM PYTHON SOURCE LINES 175-194
 
 .. code-block:: default
 
@@ -248,7 +247,7 @@ punctuation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 196-201
+.. GENERATED FROM PYTHON SOURCE LINES 195-200
 
 To read the data file we will split the file into lines, and then split
 lines into pairs. The files are all English → Other Language, so if we
@@ -256,7 +255,7 @@ want to translate from Other Language → English I added the ``reverse``
 flag to reverse the pairs.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 201-224
+.. GENERATED FROM PYTHON SOURCE LINES 200-223
 
 .. code-block:: default
 
@@ -290,7 +289,7 @@ flag to reverse the pairs.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-232
+.. GENERATED FROM PYTHON SOURCE LINES 224-231
 
 Since there are a *lot* of example sentences and we want to train
 something quickly, we'll trim the data set to only relatively short and
@@ -300,7 +299,7 @@ the form "I am" or "He is" etc. (accounting for apostrophes replaced
 earlier).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 232-255
+.. GENERATED FROM PYTHON SOURCE LINES 231-254
 
 .. code-block:: default
 
@@ -334,7 +333,7 @@ earlier).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-262
+.. GENERATED FROM PYTHON SOURCE LINES 255-261
 
 The full process for preparing the data is:
 
@@ -343,7 +342,7 @@ The full process for preparing the data is:
 -  Make word lists from sentences in pairs
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-282
+.. GENERATED FROM PYTHON SOURCE LINES 261-281
 
 .. code-block:: default
 
@@ -382,12 +381,12 @@ The full process for preparing the data is:
     Counted words:
     fra 4345
     eng 2803
-    ['je pars en vacances la semaine prochaine .', 'i m going on vacation next week .']
+    ['vous etes tres ouverte .', 'you re very open .']
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 283-316
+.. GENERATED FROM PYTHON SOURCE LINES 282-315
 
 The Seq2Seq Model
 =================
@@ -423,7 +422,7 @@ ideal case, encodes the "meaning" of the input sequence into a single
 vector — a single point in some N dimensional space of sentences.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 319-331
+.. GENERATED FROM PYTHON SOURCE LINES 318-330
 
 The Encoder
 -----------
@@ -438,7 +437,7 @@ next input word.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-349
+.. GENERATED FROM PYTHON SOURCE LINES 330-348
 
 .. code-block:: default
 
@@ -467,7 +466,7 @@ next input word.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 350-356
+.. GENERATED FROM PYTHON SOURCE LINES 349-355
 
 The Decoder
 -----------
@@ -476,7 +475,7 @@ The decoder is another RNN that takes the encoder output vector(s) and
 outputs a sequence of words to create the translation.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 359-376
+.. GENERATED FROM PYTHON SOURCE LINES 358-375
 
 Simple Decoder
 ^^^^^^^^^^^^^^
@@ -496,7 +495,7 @@ last hidden state).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 376-397
+.. GENERATED FROM PYTHON SOURCE LINES 375-396
 
 .. code-block:: default
 
@@ -528,14 +527,14 @@ last hidden state).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 398-402
+.. GENERATED FROM PYTHON SOURCE LINES 397-401
 
 I encourage you to train and observe the results of this model, but to
 save space we'll be going straight for the gold and introducing the
 Attention Mechanism.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 405-434
+.. GENERATED FROM PYTHON SOURCE LINES 404-433
 
 Attention Decoder
 ^^^^^^^^^^^^^^^^^
@@ -567,7 +566,7 @@ while shorter sentences will only use the first few.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 434-472
+.. GENERATED FROM PYTHON SOURCE LINES 433-471
 
 .. code-block:: default
 
@@ -616,7 +615,7 @@ while shorter sentences will only use the first few.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 473-489
+.. GENERATED FROM PYTHON SOURCE LINES 472-488
 
 .. note:: There are other forms of attention that work around the length
   limitation by using a relative position approach. Read about "local
@@ -635,7 +634,7 @@ the target sentence). While creating these vectors we will append the
 EOS token to both sequences.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 489-506
+.. GENERATED FROM PYTHON SOURCE LINES 488-505
 
 .. code-block:: default
 
@@ -663,7 +662,7 @@ EOS token to both sequences.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 507-532
+.. GENERATED FROM PYTHON SOURCE LINES 506-531
 
 Training the Model
 ------------------
@@ -691,7 +690,7 @@ choose to use teacher forcing or not with a simple if statement. Turn
 ``teacher_forcing_ratio`` up to use more of it.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 532-588
+.. GENERATED FROM PYTHON SOURCE LINES 531-587
 
 .. code-block:: default
 
@@ -758,13 +757,13 @@ choose to use teacher forcing or not with a simple if statement. Turn
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 589-592
+.. GENERATED FROM PYTHON SOURCE LINES 588-591
 
 This is a helper function to print time elapsed and estimated time
 remaining given the current time and progress %.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 592-611
+.. GENERATED FROM PYTHON SOURCE LINES 591-610
 
 .. code-block:: default
 
@@ -794,7 +793,7 @@ remaining given the current time and progress %.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 612-622
+.. GENERATED FROM PYTHON SOURCE LINES 611-621
 
 The whole training process looks like this:
 
@@ -807,7 +806,7 @@ Then we call ``train`` many times and occasionally print the progress (%
 of examples, time so far, estimated time) and average loss.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 622-659
+.. GENERATED FROM PYTHON SOURCE LINES 621-658
 
 .. code-block:: default
 
@@ -855,7 +854,7 @@ of examples, time so far, estimated time) and average loss.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 660-666
+.. GENERATED FROM PYTHON SOURCE LINES 659-665
 
 Plotting results
 ----------------
@@ -864,7 +863,7 @@ Plotting is done with matplotlib, using the array of loss values
 ``plot_losses`` saved while training.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 666-682
+.. GENERATED FROM PYTHON SOURCE LINES 665-681
 
 .. code-block:: default
 
@@ -891,7 +890,7 @@ Plotting is done with matplotlib, using the array of loss values
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 683-692
+.. GENERATED FROM PYTHON SOURCE LINES 682-691
 
 Evaluation
 ==========
@@ -903,7 +902,7 @@ predicts the EOS token we stop there. We also store the decoder's
 attention outputs for display later.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 692-729
+.. GENERATED FROM PYTHON SOURCE LINES 691-728
 
 .. code-block:: default
 
@@ -951,13 +950,13 @@ attention outputs for display later.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 730-733
+.. GENERATED FROM PYTHON SOURCE LINES 729-732
 
 We can evaluate random sentences from the training set and print out the
 input, target, and output to make some subjective quality judgements:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 733-745
+.. GENERATED FROM PYTHON SOURCE LINES 732-744
 
 .. code-block:: default
 
@@ -980,7 +979,7 @@ input, target, and output to make some subjective quality judgements:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 746-763
+.. GENERATED FROM PYTHON SOURCE LINES 745-762
 
 Training and Evaluating
 =======================
@@ -1000,7 +999,7 @@ reasonable results.
    encoder and decoder are initialized and run ``trainIters`` again.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 763-770
+.. GENERATED FROM PYTHON SOURCE LINES 762-769
 
 .. code-block:: default
 
@@ -1036,26 +1035,26 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 50s (- 25m 49s) (5000 6%) 2.8253
-    3m 35s (- 23m 18s) (10000 13%) 2.2671
-    5m 18s (- 21m 13s) (15000 20%) 1.9564
-    6m 59s (- 19m 14s) (20000 26%) 1.6909
-    8m 40s (- 17m 20s) (25000 33%) 1.5334
-    10m 22s (- 15m 33s) (30000 40%) 1.3778
-    12m 5s (- 13m 49s) (35000 46%) 1.2221
-    13m 48s (- 12m 5s) (40000 53%) 1.1009
-    15m 30s (- 10m 20s) (45000 60%) 0.9991
-    17m 11s (- 8m 35s) (50000 66%) 0.8929
-    18m 57s (- 6m 53s) (55000 73%) 0.8299
-    20m 41s (- 5m 10s) (60000 80%) 0.7513
-    22m 25s (- 3m 26s) (65000 86%) 0.7217
-    24m 8s (- 1m 43s) (70000 93%) 0.6557
-    25m 52s (- 0m 0s) (75000 100%) 0.6092
+    1m 45s (- 24m 35s) (5000 6%) 2.8290
+    3m 25s (- 22m 13s) (10000 13%) 2.2755
+    5m 4s (- 20m 17s) (15000 20%) 1.9488
+    6m 43s (- 18m 30s) (20000 26%) 1.7380
+    8m 26s (- 16m 52s) (25000 33%) 1.5560
+    10m 10s (- 15m 15s) (30000 40%) 1.3560
+    11m 51s (- 13m 33s) (35000 46%) 1.2224
+    13m 31s (- 11m 50s) (40000 53%) 1.1030
+    15m 11s (- 10m 7s) (45000 60%) 1.0091
+    16m 52s (- 8m 26s) (50000 66%) 0.9201
+    18m 36s (- 6m 45s) (55000 73%) 0.8630
+    20m 21s (- 5m 5s) (60000 80%) 0.7527
+    22m 2s (- 3m 23s) (65000 86%) 0.6850
+    23m 42s (- 1m 41s) (70000 93%) 0.6497
+    25m 25s (- 0m 0s) (75000 100%) 0.6006
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 772-776
+.. GENERATED FROM PYTHON SOURCE LINES 771-775
 
 .. code-block:: default
 
@@ -1071,51 +1070,51 @@ reasonable results.
 
  .. code-block:: none
 
-    > je suis trop vieux pour vous .
-    = i m too old for you .
-    < i m too old for you . <EOS>
+    > vous n etes pas mourant .
+    = you re not dying .
+    < you re not bruised . <EOS>
 
-    > nous sommes juste fatigues .
-    = we re just tired .
-    < we re just tired . <EOS>
+    > nous n en sommes pas encore sures .
+    = we re not sure yet .
+    < we re still not sure . <EOS>
 
-    > vous etes tres courageuses .
-    = you re very brave .
-    < you are very brave . <EOS>
+    > ils sont encore des enfants .
+    = they are still children .
+    < they are still children . <EOS>
 
-    > il souffre d une maladie grave .
-    = he is suffering from a serious illness .
-    < he s suffering from a serious . <EOS>
+    > je ne veux pas m en meler .
+    = i m staying out of it .
+    < i m not taking in vacation . <EOS>
 
-    > t es a sec .
-    = you re out of booze .
-    < you re out of booze . <EOS>
+    > je suis en droit a ma propre opinion .
+    = i m entitled to my own opinion .
+    < i m on holiday by my own . <EOS>
 
-    > vous n etes plus mon ami .
-    = you re not my friend anymore .
-    < you are not my friend anymore . <EOS>
+    > tu te comportes comme un petit enfant .
+    = you re acting like a small child .
+    < you re acting like a child . <EOS>
 
-    > il est trop sensible .
-    = he is too sensitive .
-    < he s too loud . <EOS>
+    > c est une femme forte .
+    = she s a tough woman .
+    < she s a real woman . <EOS>
 
-    > je ne suis pas jolie .
-    = i m not pretty .
-    < i m not pretty . <EOS>
+    > elle planifie un voyage .
+    = she is contemplating a trip .
+    < she is wearing a trip . <EOS>
 
-    > vous n etes pas encore morte .
-    = you re not dead yet .
-    < you re not dead yet . <EOS>
+    > ils ne sont pas chers .
+    = they re not expensive .
+    < they re not involved . <EOS>
 
-    > je suis fatigue des devoirs .
-    = i am tired of homework .
-    < i am tired of homework . <EOS>
-
-
+    > je ne l invente pas .
+    = i m not making that up .
+    < i m not making up up . <EOS>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 777-789
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 776-788
 
 Visualizing Attention
 ---------------------
@@ -1130,7 +1129,7 @@ displayed as a matrix, with the columns being input steps and rows being
 output steps:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 789-795
+.. GENERATED FROM PYTHON SOURCE LINES 788-794
 
 .. code-block:: default
 
@@ -1154,17 +1153,17 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7fc6f0de5fc0>
+    <matplotlib.image.AxesImage object at 0x7f7f3f777910>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 796-799
+.. GENERATED FROM PYTHON SOURCE LINES 795-798
 
 For a better viewing experience we will do the extra work of adding axes
 and labels:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 799-836
+.. GENERATED FROM PYTHON SOURCE LINES 798-835
 
 .. code-block:: default
 
@@ -1245,26 +1244,26 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than i am <EOS>
-    /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:808: UserWarning:
+    output = she is five years younger than i am . <EOS>
+    /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:807: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
 
-    /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:810: UserWarning:
+    /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:809: UserWarning:
 
     FixedFormatter should only be used together with FixedLocator
 
     input = elle est trop petit .
-    output = she s too short . <EOS>
+    output = she s too dressed . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared to die . <EOS>
+    output = i m afraid that i . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he is a born young man . <EOS>
+    output = he is a talented young . . <EOS>
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 837-859
+.. GENERATED FROM PYTHON SOURCE LINES 836-858
 
 Exercises
 =========
@@ -1292,7 +1291,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 25 minutes  59.041 seconds)
+   **Total running time of the script:** ( 25 minutes  31.138 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
