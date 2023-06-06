@@ -409,25 +409,21 @@ network to evaluation mode using ``.eval()``.
     Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/vgg19-dcbb9e9d.pth
 
       0%|          | 0.00/548M [00:00<?, ?B/s]
-      5%|5         | 28.4M/548M [00:00<00:01, 298MB/s]
-     10%|#         | 56.9M/548M [00:00<00:01, 270MB/s]
-     16%|#5        | 86.6M/548M [00:00<00:01, 288MB/s]
-     22%|##2       | 122M/548M [00:00<00:01, 319MB/s] 
-     28%|##7       | 152M/548M [00:00<00:01, 305MB/s]
-     33%|###3      | 182M/548M [00:00<00:01, 266MB/s]
-     39%|###8      | 213M/548M [00:00<00:01, 285MB/s]
-     46%|####5     | 250M/548M [00:00<00:00, 314MB/s]
-     51%|#####1    | 281M/548M [00:00<00:00, 318MB/s]
-     57%|#####6    | 312M/548M [00:01<00:00, 284MB/s]
-     62%|######2   | 340M/548M [00:01<00:00, 242MB/s]
-     67%|######6   | 365M/548M [00:01<00:01, 179MB/s]
-     70%|#######   | 385M/548M [00:01<00:00, 182MB/s]
-     76%|#######5  | 415M/548M [00:01<00:00, 212MB/s]
-     81%|########1 | 446M/548M [00:01<00:00, 238MB/s]
-     86%|########6 | 473M/548M [00:01<00:00, 251MB/s]
-     91%|######### | 499M/548M [00:02<00:00, 254MB/s]
-     97%|#########7| 532M/548M [00:02<00:00, 281MB/s]
-    100%|##########| 548M/548M [00:02<00:00, 260MB/s]
+      6%|5         | 31.7M/548M [00:00<00:01, 333MB/s]
+     13%|#2        | 69.1M/548M [00:00<00:01, 367MB/s]
+     19%|#9        | 106M/548M [00:00<00:01, 378MB/s] 
+     26%|##6       | 143M/548M [00:00<00:01, 381MB/s]
+     33%|###2      | 181M/548M [00:00<00:00, 386MB/s]
+     40%|###9      | 218M/548M [00:00<00:00, 385MB/s]
+     47%|####6     | 255M/548M [00:00<00:00, 387MB/s]
+     53%|#####3    | 293M/548M [00:00<00:00, 390MB/s]
+     60%|######    | 331M/548M [00:00<00:00, 393MB/s]
+     67%|######7   | 368M/548M [00:01<00:00, 391MB/s]
+     74%|#######3  | 405M/548M [00:01<00:00, 388MB/s]
+     81%|########  | 443M/548M [00:01<00:00, 388MB/s]
+     88%|########7 | 480M/548M [00:01<00:00, 388MB/s]
+     94%|#########4| 517M/548M [00:01<00:00, 391MB/s]
+    100%|##########| 548M/548M [00:01<00:00, 387MB/s]
 
 
 
@@ -744,22 +740,22 @@ Finally, we can run the algorithm.
     Building the style transfer model..
     Optimizing..
     run [50]:
-    Style Loss : 4.244680 Content Loss: 4.249447
+    Style Loss : 4.268176 Content Loss: 4.209260
 
     run [100]:
-    Style Loss : 1.152103 Content Loss: 3.042636
+    Style Loss : 1.161959 Content Loss: 3.052181
 
     run [150]:
-    Style Loss : 0.721864 Content Loss: 2.657358
+    Style Loss : 0.773437 Content Loss: 2.663500
 
     run [200]:
-    Style Loss : 0.486920 Content Loss: 2.493941
+    Style Loss : 0.494465 Content Loss: 2.496854
 
     run [250]:
-    Style Loss : 0.353937 Content Loss: 2.405596
+    Style Loss : 0.353479 Content Loss: 2.408171
 
     run [300]:
-    Style Loss : 0.268347 Content Loss: 2.351799
+    Style Loss : 0.270465 Content Loss: 2.352172
 
 
 
@@ -768,7 +764,7 @@ Finally, we can run the algorithm.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.540 seconds)
+   **Total running time of the script:** ( 0 minutes  12.530 seconds)
 
 
 .. _sphx_glr_download_advanced_neural_style_tutorial.py:

@@ -490,13 +490,6 @@ into the implementation.</p>
 <span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">transforms</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># NOTE: This is a hack to get around "User-agent" limitations when downloading MNIST datasets</span>
-<span class="c1">#       see, https://github.com/pytorch/vision/issues/3497 for more information</span>
-<span class="kn">from</span> <span class="nn">six.moves</span> <span class="kn">import</span> <span class="n">urllib</span>
-<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">()</span>
-<span class="n">opener</span><span class="o">.</span><span class="n">addheaders</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'User-agent'</span><span class="p">,</span> <span class="s1">'Mozilla/5.0'</span><span class="p">)]</span>
-<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -527,6 +520,11 @@ not take much time.</p></li>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">epsilons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.05</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mf">.15</span><span class="p">,</span> <span class="mf">.2</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.3</span><span class="p">]</span>
 <span class="n">pretrained_model</span> <span class="o">=</span> <span class="s2">"data/lenet_mnist_model.pth"</span>
 <span class="n">use_cuda</span><span class="o">=</span><span class="kc">True</span>
+<span class="c1"># Set random seed for reproducibility</span>
+<a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span></a><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;torch._C.Generator object at 0x7fdeefaac030&gt;
 </pre></div>
 </div>
 </div>
@@ -567,13 +565,13 @@ pretrained weights.</p>
 
 <span class="c1"># Define what device we are using</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"CUDA Available: "</span><span class="p">,</span><a class="sphx-glr-backref-module-torch-cuda sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.cuda.is_available.html#torch.cuda.is_available" title="torch.cuda.is_available"><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span></a><span class="p">())</span>
-<a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device"><span class="n">device</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device"><span class="n">torch</span><span class="o">.</span><span class="n">device</span></a><span class="p">(</span><span class="s2">"cuda"</span> <span class="k">if</span> <span class="p">(</span><span class="n">use_cuda</span> <span class="ow">and</span> <a class="sphx-glr-backref-module-torch-cuda sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.cuda.is_available.html#torch.cuda.is_available" title="torch.cuda.is_available"><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span></a><span class="p">())</span> <span class="k">else</span> <span class="s2">"cpu"</span><span class="p">)</span>
+<a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device"><span class="n">device</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device"><span class="n">torch</span><span class="o">.</span><span class="n">device</span></a><span class="p">(</span><span class="s2">"cuda"</span> <span class="k">if</span> <span class="n">use_cuda</span> <span class="ow">and</span> <a class="sphx-glr-backref-module-torch-cuda sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.cuda.is_available.html#torch.cuda.is_available" title="torch.cuda.is_available"><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span></a><span class="p">()</span> <span class="k">else</span> <span class="s2">"cpu"</span><span class="p">)</span>
 
 <span class="c1"># Initialize the network</span>
 <span class="n">model</span> <span class="o">=</span> <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><span class="n">Net</span></a><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device"><span class="n">device</span></a><span class="p">)</span>
 
 <span class="c1"># Load the pretrained model</span>
-<a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.load_state_dict" title="torch.nn.Module.load_state_dict"><span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.load.html#torch.load" title="torch.load"><span class="n">torch</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span><span class="n">pretrained_model</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="s1">'cpu'</span><span class="p">))</span>
+<a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.load_state_dict" title="torch.nn.Module.load_state_dict"><span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span></a><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function" href="https://pytorch.org/docs/stable/generated/torch.load.html#torch.load" title="torch.load"><span class="n">torch</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span><span class="n">pretrained_model</span><span class="p">,</span> <span class="n">weights_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="s1">'cpu'</span><span class="p">))</span>
 
 <span class="c1"># Set the model in evaluation mode. In this case this is for the Dropout layers</span>
 <a class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-method" href="https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.eval" title="torch.nn.Module.eval"><span class="n">model</span><span class="o">.</span><span class="n">eval</span></a><span class="p">()</span>
@@ -583,31 +581,35 @@ pretrained weights.</p>
 Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
   0%|          | 0/9912422 [00:00&lt;?, ?it/s]
-100%|##########| 9912422/9912422 [00:00&lt;00:00, 297400596.90it/s]
+100%|##########| 9912422/9912422 [00:00&lt;00:00, 256301621.59it/s]
 Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
   0%|          | 0/28881 [00:00&lt;?, ?it/s]
-100%|##########| 28881/28881 [00:00&lt;00:00, 60567846.91it/s]
+100%|##########| 28881/28881 [00:00&lt;00:00, 191670401.62it/s]
 Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
   0%|          | 0/1648877 [00:00&lt;?, ?it/s]
-100%|##########| 1648877/1648877 [00:00&lt;00:00, 146346390.94it/s]
+100%|##########| 1648877/1648877 [00:00&lt;00:00, 175775610.54it/s]
 Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
   0%|          | 0/4542 [00:00&lt;?, ?it/s]
-100%|##########| 4542/4542 [00:00&lt;00:00, 36991318.00it/s]
+100%|##########| 4542/4542 [00:00&lt;00:00, 40106376.35it/s]
 Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
 CUDA Available:  True
+/opt/conda/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning:
+
+TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+
 
 Net(
   (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
@@ -707,7 +709,7 @@ successful adversarial examples to be visualized later.</p>
         <span class="k">if</span> <span class="n">final_pred</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">==</span> <span class="n">target</span><span class="o">.</span><span class="n">item</span><span class="p">():</span>
             <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="c1"># Special case for saving 0 epsilon examples</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">epsilon</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">adv_examples</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">epsilon</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">adv_examples</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
                 <span class="n">adv_ex</span> <span class="o">=</span> <span class="n">perturbed_data</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
                 <span class="n">adv_examples</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">init_pred</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">final_pred</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">adv_ex</span><span class="p">)</span> <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -718,7 +720,7 @@ successful adversarial examples to be visualized later.</p>
 
     <span class="c1"># Calculate final accuracy for this epsilon</span>
     <span class="n">final_acc</span> <span class="o">=</span> <span class="n">correct</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-utils-data sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader" title="torch.utils.data.DataLoader"><span class="n">test_loader</span></a><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Epsilon: </span><span class="si">{}</span><span class="se">\t</span><span class="s2">Test Accuracy = </span><span class="si">{}</span><span class="s2"> / </span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epsilon</span><span class="p">,</span> <span class="n">correct</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-utils-data sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader" title="torch.utils.data.DataLoader"><span class="n">test_loader</span></a><span class="p">),</span> <span class="n">final_acc</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Epsilon: </span><span class="si">{</span><span class="n">epsilon</span><span class="si">}</span><span class="se">\t</span><span class="s2">Test Accuracy = </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><a class="sphx-glr-backref-module-torch-utils-data sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader" title="torch.utils.data.DataLoader"><span class="n">test_loader</span></a><span class="p">)</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">final_acc</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
     <span class="c1"># Return the accuracy and an adversarial example</span>
     <span class="k">return</span> <span class="n">final_acc</span><span class="p">,</span> <span class="n">adv_examples</span>
@@ -804,15 +806,15 @@ still capable of identifying the correct class despite the added noise.</p>
         <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([],</span> <span class="p">[])</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([],</span> <span class="p">[])</span>
         <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Eps: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epsilons</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Eps: </span><span class="si">{</span><span class="n">epsilons</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
         <span class="n">orig</span><span class="p">,</span><span class="n">adv</span><span class="p">,</span><span class="n">ex</span> <span class="o">=</span> <span class="n">examples</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2"> -&gt; </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">orig</span><span class="p">,</span> <span class="n">adv</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">orig</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">adv</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="7 -&gt; 7, 7 -&gt; 7, 8 -&gt; 8, 0 -&gt; 0, 0 -&gt; 0, 5 -&gt; 8, 7 -&gt; 2, 4 -&gt; 9, 7 -&gt; 2, 9 -&gt; 8, 4 -&gt; 1, 7 -&gt; 2, 9 -&gt; 5, 2 -&gt; 8, 7 -&gt; 9, 0 -&gt; 8, 1 -&gt; 8, 7 -&gt; 9, 9 -&gt; 4, 4 -&gt; 8, 6 -&gt; 5, 9 -&gt; 8, 2 -&gt; 8, 7 -&gt; 2, 9 -&gt; 8, 6 -&gt; 5, 4 -&gt; 8, 9 -&gt; 8, 0 -&gt; 1, 3 -&gt; 1, 6 -&gt; 8, 2 -&gt; 5, 0 -&gt; 1, 4 -&gt; 8, 5 -&gt; 8" class="sphx-glr-single-img" src="../_images/sphx_glr_fgsm_tutorial_002.png" srcset="../_images/sphx_glr_fgsm_tutorial_002.png"/></div>
+<img alt="3 -&gt; 3, 2 -&gt; 2, 3 -&gt; 3, 0 -&gt; 0, 3 -&gt; 3, 0 -&gt; 6, 5 -&gt; 8, 9 -&gt; 8, 1 -&gt; 8, 3 -&gt; 8, 7 -&gt; 9, 6 -&gt; 0, 3 -&gt; 8, 7 -&gt; 9, 7 -&gt; 9, 1 -&gt; 2, 9 -&gt; 8, 1 -&gt; 6, 8 -&gt; 2, 7 -&gt; 8, 9 -&gt; 2, 4 -&gt; 9, 9 -&gt; 8, 3 -&gt; 8, 4 -&gt; 8, 5 -&gt; 2, 9 -&gt; 8, 1 -&gt; 8, 9 -&gt; 8, 2 -&gt; 8, 8 -&gt; 2, 5 -&gt; 8, 3 -&gt; 8, 6 -&gt; 8, 7 -&gt; 8" class="sphx-glr-single-img" src="../_images/sphx_glr_fgsm_tutorial_002.png" srcset="../_images/sphx_glr_fgsm_tutorial_002.png"/></div>
 </div>
 <div class="section" id="where-to-go-next">
 <h2>Where to go next?<a class="headerlink" href="#where-to-go-next" title="Permalink to this heading">¶</a></h2>
@@ -835,7 +837,7 @@ adversarial machine learning is to get your hands dirty. Try to
 implement a different attack from the NIPS 2017 competition, and see how
 it differs from FGSM. Then, try to defend the model from your own
 attacks.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  38.187 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 3 minutes  36.062 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-fgsm-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/377bf4a7b1761e5f081e057385870d8e/fgsm_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">fgsm_tutorial.py</span></code></a></p>

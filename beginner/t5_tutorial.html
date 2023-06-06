@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 162MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 150MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,52 +479,51 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  2%|1         | 17.9M/945M [00:00&lt;00:05, 188MB/s]
-  4%|3         | 37.7M/945M [00:00&lt;00:04, 199MB/s]
-  6%|6         | 56.9M/945M [00:00&lt;00:04, 200MB/s]
-  8%|8         | 78.4M/945M [00:00&lt;00:04, 210MB/s]
- 11%|#         | 100M/945M [00:00&lt;00:04, 216MB/s]
- 13%|#2        | 121M/945M [00:00&lt;00:04, 212MB/s]
- 15%|#4        | 141M/945M [00:00&lt;00:04, 204MB/s]
- 17%|#7        | 164M/945M [00:00&lt;00:03, 218MB/s]
- 20%|#9        | 185M/945M [00:00&lt;00:03, 214MB/s]
- 22%|##1       | 206M/945M [00:01&lt;00:03, 216MB/s]
- 24%|##4       | 228M/945M [00:01&lt;00:03, 219MB/s]
- 26%|##6       | 249M/945M [00:01&lt;00:03, 205MB/s]
- 28%|##8       | 269M/945M [00:01&lt;00:03, 193MB/s]
- 30%|###       | 287M/945M [00:01&lt;00:03, 190MB/s]
- 33%|###2      | 308M/945M [00:01&lt;00:03, 196MB/s]
- 35%|###4      | 327M/945M [00:01&lt;00:03, 193MB/s]
- 37%|###6      | 345M/945M [00:01&lt;00:03, 189MB/s]
- 39%|###8      | 367M/945M [00:01&lt;00:03, 200MB/s]
- 41%|####      | 386M/945M [00:01&lt;00:02, 200MB/s]
- 43%|####3     | 407M/945M [00:02&lt;00:02, 207MB/s]
- 45%|####5     | 429M/945M [00:02&lt;00:02, 213MB/s]
- 48%|####7     | 451M/945M [00:02&lt;00:02, 219MB/s]
- 50%|#####     | 473M/945M [00:02&lt;00:02, 224MB/s]
- 53%|#####2    | 496M/945M [00:02&lt;00:02, 229MB/s]
- 55%|#####4    | 519M/945M [00:02&lt;00:01, 232MB/s]
- 57%|#####7    | 542M/945M [00:02&lt;00:01, 234MB/s]
- 60%|#####9    | 564M/945M [00:02&lt;00:01, 226MB/s]
- 62%|######2   | 586M/945M [00:02&lt;00:01, 228MB/s]
- 65%|######4   | 610M/945M [00:03&lt;00:01, 233MB/s]
- 67%|######7   | 634M/945M [00:03&lt;00:01, 239MB/s]
- 70%|######9   | 657M/945M [00:03&lt;00:01, 198MB/s]
- 72%|#######1  | 677M/945M [00:03&lt;00:01, 196MB/s]
- 74%|#######3  | 696M/945M [00:03&lt;00:01, 195MB/s]
- 76%|#######5  | 716M/945M [00:03&lt;00:01, 199MB/s]
- 78%|#######7  | 735M/945M [00:03&lt;00:01, 198MB/s]
- 80%|########  | 757M/945M [00:03&lt;00:00, 205MB/s]
- 82%|########2 | 777M/945M [00:03&lt;00:00, 195MB/s]
- 84%|########4 | 796M/945M [00:04&lt;00:00, 197MB/s]
- 86%|########6 | 815M/945M [00:04&lt;00:00, 195MB/s]
- 88%|########8 | 835M/945M [00:04&lt;00:00, 200MB/s]
- 91%|######### | 855M/945M [00:04&lt;00:00, 203MB/s]
- 93%|#########2| 874M/945M [00:04&lt;00:00, 195MB/s]
- 95%|#########4| 893M/945M [00:04&lt;00:00, 189MB/s]
- 97%|#########6| 913M/945M [00:04&lt;00:00, 193MB/s]
- 99%|#########8| 934M/945M [00:04&lt;00:00, 204MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 207MB/s]
+  2%|2         | 20.4M/945M [00:00&lt;00:04, 214MB/s]
+  4%|4         | 42.0M/945M [00:00&lt;00:04, 221MB/s]
+  7%|6         | 63.7M/945M [00:00&lt;00:04, 224MB/s]
+  9%|9         | 85.2M/945M [00:00&lt;00:04, 225MB/s]
+ 11%|#1        | 107M/945M [00:00&lt;00:03, 224MB/s]
+ 14%|#3        | 128M/945M [00:00&lt;00:03, 222MB/s]
+ 16%|#5        | 149M/945M [00:00&lt;00:03, 223MB/s]
+ 18%|#8        | 171M/945M [00:00&lt;00:03, 222MB/s]
+ 20%|##        | 192M/945M [00:00&lt;00:03, 221MB/s]
+ 23%|##2       | 213M/945M [00:01&lt;00:03, 222MB/s]
+ 25%|##4       | 234M/945M [00:01&lt;00:03, 221MB/s]
+ 27%|##7       | 255M/945M [00:01&lt;00:03, 221MB/s]
+ 29%|##9       | 277M/945M [00:01&lt;00:03, 222MB/s]
+ 32%|###1      | 298M/945M [00:01&lt;00:03, 222MB/s]
+ 34%|###3      | 319M/945M [00:01&lt;00:02, 222MB/s]
+ 36%|###6      | 340M/945M [00:01&lt;00:02, 221MB/s]
+ 38%|###8      | 361M/945M [00:01&lt;00:02, 220MB/s]
+ 40%|####      | 382M/945M [00:01&lt;00:02, 220MB/s]
+ 43%|####2     | 404M/945M [00:01&lt;00:02, 222MB/s]
+ 45%|####4     | 425M/945M [00:02&lt;00:02, 222MB/s]
+ 47%|####7     | 446M/945M [00:02&lt;00:02, 222MB/s]
+ 49%|####9     | 467M/945M [00:02&lt;00:02, 221MB/s]
+ 52%|#####1    | 488M/945M [00:02&lt;00:02, 221MB/s]
+ 54%|#####3    | 510M/945M [00:02&lt;00:02, 222MB/s]
+ 56%|#####6    | 531M/945M [00:02&lt;00:01, 221MB/s]
+ 58%|#####8    | 552M/945M [00:02&lt;00:01, 222MB/s]
+ 61%|######    | 573M/945M [00:02&lt;00:01, 223MB/s]
+ 63%|######2   | 595M/945M [00:02&lt;00:01, 221MB/s]
+ 65%|######5   | 616M/945M [00:02&lt;00:01, 222MB/s]
+ 68%|######7   | 638M/945M [00:03&lt;00:01, 224MB/s]
+ 70%|######9   | 659M/945M [00:03&lt;00:01, 224MB/s]
+ 72%|#######2  | 681M/945M [00:03&lt;00:01, 223MB/s]
+ 74%|#######4  | 702M/945M [00:03&lt;00:01, 223MB/s]
+ 77%|#######6  | 723M/945M [00:03&lt;00:01, 223MB/s]
+ 79%|#######8  | 745M/945M [00:03&lt;00:00, 223MB/s]
+ 81%|########1 | 766M/945M [00:03&lt;00:00, 224MB/s]
+ 83%|########3 | 788M/945M [00:03&lt;00:00, 224MB/s]
+ 86%|########5 | 809M/945M [00:03&lt;00:00, 224MB/s]
+ 88%|########7 | 831M/945M [00:03&lt;00:00, 224MB/s]
+ 90%|######### | 852M/945M [00:04&lt;00:00, 225MB/s]
+ 93%|#########2| 874M/945M [00:04&lt;00:00, 226MB/s]
+ 95%|#########4| 896M/945M [00:04&lt;00:00, 224MB/s]
+ 97%|#########7| 917M/945M [00:04&lt;00:00, 218MB/s]
+ 99%|#########9| 938M/945M [00:04&lt;00:00, 215MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 222MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -736,37 +735,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: a ribbing has been going on for the couple from new Berlin, il . they have known each other since kindergarten but their friends are still teasing them .
+prediction: Xavi has managed just five starts in 21 games for the club . the 35-year-old has been linked with a move to al Sadd this summer . he assisted Jeremy Mathieu's winner against Celta Vigo on sunday .
 
-target: Joel Burger and Ashley King have known each other since kindergarten . They started dating five years ago, friends having stopped ribbing them . Insist they are embracing the playful nickname 'Burger-King' Plan to serve drinks at wedding in personalized Burger King cups .
+target: Barcelona star Xavi has managed just five starts since the turn of the year . The midfielder recently travelled to Qatar to discuss possible switch . Luis Enrique believes Xavi has vital role to play towards end of season .
 
 
 Example 2:
 
-prediction: the Gilmore Gasoline Filling Station was a backdrop for the shenanigans of steve martin and eddie murphy . it was abandoned in the 1990s and was left to vandals and graffiti artists . coffee giant Starbucks bought the garage in los angeles last year . they have now finished its transformation into a drive through coffee shop .
+prediction: the crackdown comes as California and its nearly 40 million residents move toward a fourth summer of drought with no relief in sight . state reservoirs have a year's worth of water, and with record low snowfall over the winter there won't be much to replenish them . wells in some parts of the state are going dry as groundwater levels fall .
 
-target: Art Deco gas station once featured in films like LA Story and 48 Hours before falling into disrepair . Opened in 1935 in LA by the American giants Gilmore Oil it was eventually closed in the 1990s . Property has now been bought by Starbucks and transformed into a coffee shop .
+target: Calfornia Gov. Jerry Brown ordered a 25 percent overall cutback in water use by cities and towns in the state on Wednesday . This series of photos taken on Saturday show the ongoing drought is already taking its toll on once technicolor landscape of lush yards, emerald golf courses and aquamarine swimming pools . The crackdown comes as California and its nearly 40 million residents move toward a fourth summer of drought with no relief in sight . State reservoirs have a year's worth of water and with record low snowfall over the winter there won't be much to replenish them .
 
 
 Example 3:
 
-prediction: the national institute on drug abuse in the us has admitted, in its revised publication on marijuana, that the drug offers benefits to some cancer patients . extracts from whole-plant marijuana can slow the growth of cancer cells from one of the most serious types of brain tumours .
+prediction: a top al Qaeda leader was killed in an airstrike in Yemen, the terror group says . he was held by the u.s. government at its detention facility in Guantanamo .
 
-target: National Institute on Drug Abuse admits cannabis has medicinal benefits . US guidance states drug can help kill some cancer cells and shrink others . Cannabinoids - chemicals in marijuana - currently used in medication to treat MS patients in both the US and UK . Autoimmune diseases, including HIV and AIDS, multiple sclerosis and Alzheimer's disease . Inflammation . Pain . Seizures . Substance use disorders . Mental disorders .
+target: AQAP says a "crusader airstrike" killed Ibrahim al-Rubaish . Al-Rubaish was once detained by the United States in Guantanamo .
 
 
 Example 4:
 
-prediction: a man, 21, allegedly forced a tearful 15-year-old girl into his car on Saturday and screamed, 'you will never see your parents again!' in attempt to force her to be his teen bride . Kong Meng Xiong, 21, of St. Paul, Minnesota has been charged with kidnapping, third-degree criminal sexual conduct and false imprisonment . the girl's family reported the kidnapping on Sunday and that they opposed to their daughter marrying X
+prediction: video footage shows the friendly feline named Kit letting the newborn Chihuahuas nuzzle her fluffy belly . the pups were apparently discovered in a discarded shoe box on Tuesday afternoon and taken to the humane society for immediate treatment . a note on the cardboard container indicated they were born last Friday and their mother had died .
 
-target: Kong Meng Xiong, 21, of St. Paul, Minnesota has been charged with kidnapping, third-degree criminal sexual conduct and false imprisonment . Xiong allegedly tried to kidnap his 15-year-old girlfriend and force her to be his bride in a traditional Hmong marriage . In Hmong culture, bride-napping is a frowned-upon tradition in which a male suitor kidnaps his bride if her family does not approve of the marriage . Xiong pleaded guilty to sexual assault against a 13-year-old girl in 2009 when he was 15 .
+target: The pups were apparently discovered in a discarded shoe box on Tuesday afternoon and taken to the Humane Society for immediate treatment . In a bid to save their lives, vets decided to put the young dogs with a surrogate cat . The pairing proved to be an instant success . As Kit the tabby had recently nursed her own kittens, she was able to feed the puppies with her own milk .
 
 
 Example 5:
 
-prediction: the photography competition was designed to illustrate the Northern Territory's unique outback lifestyle . the competition was held in conjunction with an annual cattlemen's conference . the winning image was Marie Muldoon's heartwarming photo of her daughter cuddling up to a horse, titled True Love .
+prediction: 'i decided it can't be any worse than what I was doing,' said the father-of-three . he posted a sign on his truck that reads, 'Looking for a date? Would you date a single father?' the advertisement then shows his phone number and below reads, '*Ages 21 and up*' .
 
-target: An annual photography competition produced some amazing works that give some insight into life on the land . Judges look for images that illustrate the Northern Territory's unique outback lifestyle and their distinct people . Marie Muldoon won the competition with a heartwarming shot of her daughter cuddling up to a horse . The categories include ‘Industry at work or play’, ‘NT landcapes’ and ‘Best portrait of person or animal’ The competition is run in conjunction with the Northern Territory Cattlemen's Association's annual conference .
+target: Robin Thomas, of Jonesboro, Arkansas, says that he failed to find love with online dating sites . The sign reads, 'Looking for a date? Would you date a single father?' The retired cook is looking for a 'down-to-earth' woman who's 'at least 28' Thomas says his kids, aged six to 11, think the advertisement is 'cute'
 </pre></div>
 </div>
 </div>
@@ -1059,7 +1058,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  27.591 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  9.595 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

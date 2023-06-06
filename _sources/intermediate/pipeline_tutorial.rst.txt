@@ -523,26 +523,26 @@ we've seen so far. Adjust the learning rate after each epoch.
 
     To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
 
-    | epoch   1 |    10/   50 batches | lr 5.00 | ms/batch 2949.75 | loss 42.82 | ppl 3942188982599687680.00
-    | epoch   1 |    20/   50 batches | lr 5.00 | ms/batch 2647.40 | loss 42.78 | ppl 3788346300952144896.00
-    | epoch   1 |    30/   50 batches | lr 5.00 | ms/batch 2649.35 | loss 45.57 | ppl 61796293512696758272.00
-    | epoch   1 |    40/   50 batches | lr 5.00 | ms/batch 2655.25 | loss 47.12 | ppl 290025595838962466816.00
+    | epoch   1 |    10/   50 batches | lr 5.00 | ms/batch 2948.74 | loss 43.03 | ppl 4848595165262964736.00
+    | epoch   1 |    20/   50 batches | lr 5.00 | ms/batch 2646.15 | loss 43.53 | ppl 8009046779407341568.00
+    | epoch   1 |    30/   50 batches | lr 5.00 | ms/batch 2646.90 | loss 43.37 | ppl 6825816053194781696.00
+    | epoch   1 |    40/   50 batches | lr 5.00 | ms/batch 2647.21 | loss 38.24 | ppl 40300359928186272.00
     -----------------------------------------------------------------------------------------
-    | end of epoch   1 | time: 151.23s | valid loss  0.87 | valid ppl     2.39
+    | end of epoch   1 | time: 151.06s | valid loss  1.39 | valid ppl     4.02
     -----------------------------------------------------------------------------------------
-    | epoch   2 |    10/   50 batches | lr 4.51 | ms/batch 2921.98 | loss 44.54 | ppl 22148364074486902784.00
-    | epoch   2 |    20/   50 batches | lr 4.51 | ms/batch 2655.77 | loss 32.33 | ppl 109648515073434.72
-    | epoch   2 |    30/   50 batches | lr 4.51 | ms/batch 2655.35 | loss 26.20 | ppl 238436214760.17
-    | epoch   2 |    40/   50 batches | lr 4.51 | ms/batch 2656.38 | loss 24.18 | ppl 31630600572.33
+    | epoch   2 |    10/   50 batches | lr 4.51 | ms/batch 2912.95 | loss 45.44 | ppl 54334622131903520768.00
+    | epoch   2 |    20/   50 batches | lr 4.51 | ms/batch 2648.26 | loss 30.96 | ppl 27993408525827.18
+    | epoch   2 |    30/   50 batches | lr 4.51 | ms/batch 2651.71 | loss 31.59 | ppl 52198388099376.04
+    | epoch   2 |    40/   50 batches | lr 4.51 | ms/batch 2649.83 | loss 25.20 | ppl 88344327409.44
     -----------------------------------------------------------------------------------------
-    | end of epoch   2 | time: 151.15s | valid loss  0.24 | valid ppl     1.27
+    | end of epoch   2 | time: 150.83s | valid loss  0.56 | valid ppl     1.75
     -----------------------------------------------------------------------------------------
-    | epoch   3 |    10/   50 batches | lr 4.29 | ms/batch 2922.30 | loss 13.27 | ppl 578936.39
-    | epoch   3 |    20/   50 batches | lr 4.29 | ms/batch 2656.89 | loss 10.53 | ppl 37368.74
-    | epoch   3 |    30/   50 batches | lr 4.29 | ms/batch 2657.99 | loss 10.84 | ppl 51002.50
-    | epoch   3 |    40/   50 batches | lr 4.29 | ms/batch 2656.41 | loss 10.44 | ppl 34312.26
+    | epoch   3 |    10/   50 batches | lr 4.29 | ms/batch 2912.19 | loss 13.55 | ppl 764766.33
+    | epoch   3 |    20/   50 batches | lr 4.29 | ms/batch 2647.95 | loss 10.25 | ppl 28390.27
+    | epoch   3 |    30/   50 batches | lr 4.29 | ms/batch 2650.99 | loss 10.27 | ppl 28988.42
+    | epoch   3 |    40/   50 batches | lr 4.29 | ms/batch 2650.23 | loss  9.55 | ppl 14017.22
     -----------------------------------------------------------------------------------------
-    | end of epoch   3 | time: 151.17s | valid loss  0.22 | valid ppl     1.25
+    | end of epoch   3 | time: 150.81s | valid loss  0.22 | valid ppl     1.25
     -----------------------------------------------------------------------------------------
 
 
@@ -586,7 +586,7 @@ Apply the best model to check the result with the test dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 8 minutes  13.749 seconds)
+   **Total running time of the script:** ( 8 minutes  12.914 seconds)
 
 
 .. _sphx_glr_download_intermediate_pipeline_tutorial.py:

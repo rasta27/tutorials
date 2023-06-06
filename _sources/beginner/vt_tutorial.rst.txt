@@ -132,21 +132,18 @@ then run the script below:
     Downloading: "https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/deit_base_patch16_224-b5f2ef4d.pth
 
       0%|          | 0.00/330M [00:00<?, ?B/s]
-      7%|6         | 21.8M/330M [00:00<00:01, 228MB/s]
-     13%|#3        | 43.5M/330M [00:00<00:01, 224MB/s]
-     20%|##        | 67.1M/330M [00:00<00:01, 235MB/s]
-     27%|##7       | 89.5M/330M [00:00<00:01, 223MB/s]
-     34%|###3      | 111M/330M [00:00<00:01, 219MB/s] 
-     40%|####      | 132M/330M [00:00<00:00, 220MB/s]
-     46%|####6     | 154M/330M [00:00<00:00, 222MB/s]
-     54%|#####3    | 177M/330M [00:00<00:00, 228MB/s]
-     61%|######1   | 203M/330M [00:00<00:00, 241MB/s]
-     68%|######8   | 226M/330M [00:01<00:00, 239MB/s]
-     76%|#######5  | 250M/330M [00:01<00:00, 245MB/s]
-     83%|########2 | 273M/330M [00:01<00:00, 240MB/s]
-     90%|######### | 298M/330M [00:01<00:00, 246MB/s]
-     97%|#########7| 322M/330M [00:01<00:00, 230MB/s]
-    100%|##########| 330M/330M [00:01<00:00, 233MB/s]
+      7%|7         | 24.2M/330M [00:00<00:01, 254MB/s]
+     15%|#4        | 48.5M/330M [00:00<00:01, 236MB/s]
+     22%|##2       | 74.2M/330M [00:00<00:01, 251MB/s]
+     31%|###       | 101M/330M [00:00<00:00, 264MB/s] 
+     40%|###9      | 131M/330M [00:00<00:00, 281MB/s]
+     49%|####9     | 163M/330M [00:00<00:00, 297MB/s]
+     58%|#####7    | 191M/330M [00:00<00:00, 293MB/s]
+     66%|######6   | 219M/330M [00:00<00:00, 289MB/s]
+     76%|#######5  | 250M/330M [00:00<00:00, 301MB/s]
+     85%|########4 | 280M/330M [00:01<00:00, 303MB/s]
+     93%|#########3| 309M/330M [00:01<00:00, 303MB/s]
+    100%|##########| 330M/330M [00:01<00:00, 281MB/s]
     269
 
 
@@ -414,11 +411,11 @@ the optimized-quantized-and-scripted model - run the code below:
 
  .. code-block:: none
 
-    original model: 121.58ms
-    scripted model: 115.80ms
-    scripted & quantized model: 129.21ms
-    scripted & quantized & optimized model: 142.59ms
-    lite model: 139.61ms
+    original model: 119.73ms
+    scripted model: 122.09ms
+    scripted & quantized model: 96.16ms
+    scripted & quantized & optimized model: 126.21ms
+    lite model: 141.99ms
 
 
 
@@ -485,10 +482,10 @@ model.
 
                                         Model  ... Reduction
     0                          original model  ...        0%
-    1                          scripted model  ...     4.75%
-    2              scripted & quantized model  ...    -6.27%
-    3  scripted & quantized & optimized model  ...   -17.28%
-    4                              lite model  ...   -14.83%
+    1                          scripted model  ...    -1.97%
+    2              scripted & quantized model  ...    19.69%
+    3  scripted & quantized & optimized model  ...    -5.41%
+    4                              lite model  ...   -18.59%
 
     [5 rows x 3 columns]
 
@@ -508,7 +505,7 @@ Learn More
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.909 seconds)
+   **Total running time of the script:** ( 0 minutes  15.485 seconds)
 
 
 .. _sphx_glr_download_beginner_vt_tutorial.py:

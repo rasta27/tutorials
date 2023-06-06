@@ -446,16 +446,16 @@ language):
 
  .. code-block:: none
 
-    category = Greek / line = Kouches
-    category = Italian / line = Sinagra
-    category = Spanish / line = Merlo
-    category = Korean / line = Bang
-    category = Dutch / line = Rossum
-    category = Spanish / line = Casales
-    category = Korean / line = Chin
-    category = Italian / line = Caivano
-    category = Dutch / line = Mas
-    category = Scottish / line = Hay
+    category = Polish / line = Szweda
+    category = Korean / line = Sin
+    category = French / line = Mullins
+    category = Scottish / line = Milne
+    category = Czech / line = Simecek
+    category = English / line = Kaye
+    category = Irish / line = Faolan
+    category = Dutch / line = Mooren
+    category = Spanish / line = Fonseca
+    category = Russian / line = Balawensky
 
 
 
@@ -595,26 +595,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 7s) 3.4958 Drinkwater / Greek ✗ (English)
-    10000 10% (0m 15s) 3.1328 Rios / Greek ✗ (Portuguese)
-    15000 15% (0m 23s) 3.2748 Mencher / German ✗ (Polish)
-    20000 20% (0m 31s) 0.3325 Kowalski / Polish ✓
-    25000 25% (0m 39s) 0.5289 Salvai / Italian ✓
-    30000 30% (0m 46s) 1.0910 Makioka / Czech ✗ (Japanese)
-    35000 35% (0m 54s) 1.4653 Szwedko / Czech ✗ (Polish)
-    40000 40% (1m 2s) 0.5235 Meissner / German ✓
-    45000 45% (1m 10s) 1.6398 Chau / Korean ✗ (Vietnamese)
-    50000 50% (1m 18s) 1.6949 Hayden / Dutch ✗ (Irish)
-    55000 55% (1m 25s) 1.7691 Small / Scottish ✗ (English)
-    60000 60% (1m 33s) 0.1784 Segreti / Italian ✓
-    65000 65% (1m 41s) 0.8960 Belo / Portuguese ✓
-    70000 70% (1m 49s) 2.3405 Desjardins / Dutch ✗ (French)
-    75000 75% (1m 57s) 0.8151 Araujo / Portuguese ✓
-    80000 80% (2m 4s) 1.0844 Como / Italian ✓
-    85000 85% (2m 12s) 0.0908 Di antonio / Italian ✓
-    90000 90% (2m 20s) 1.5080 Asturias / Portuguese ✗ (Spanish)
-    95000 95% (2m 28s) 2.0889 Dukes / Dutch ✗ (English)
-    100000 100% (2m 36s) 1.1909 Abboud / French ✗ (Arabic)
+    5000 5% (0m 7s) 3.3039 Walentowicz / Russian ✗ (Polish)
+    10000 10% (0m 15s) 2.0526 Lepikhin / Scottish ✗ (Russian)
+    15000 15% (0m 23s) 3.1308 Eustis / Greek ✗ (French)
+    20000 20% (0m 31s) 1.0797 Pham / Chinese ✗ (Vietnamese)
+    25000 25% (0m 39s) 0.9854 Dargevich / Russian ✓
+    30000 30% (0m 47s) 0.7921 Sauvageot / French ✓
+    35000 35% (0m 55s) 2.8082 Pear / French ✗ (Czech)
+    40000 40% (1m 3s) 1.6524 Nevin / Russian ✗ (Irish)
+    45000 45% (1m 11s) 1.0477 Castro / Portuguese ✓
+    50000 50% (1m 19s) 1.8119 Maria / Spanish ✗ (Portuguese)
+    55000 55% (1m 27s) 0.3282 Gan / Chinese ✓
+    60000 60% (1m 34s) 0.4801 Dan / Chinese ✓
+    65000 65% (1m 42s) 1.6532 Mata / Japanese ✗ (Portuguese)
+    70000 70% (1m 50s) 2.0355 Lowe / English ✗ (German)
+    75000 75% (1m 58s) 5.9570 Lis / Arabic ✗ (Polish)
+    80000 80% (2m 6s) 1.1676 Seo / Chinese ✗ (Korean)
+    85000 85% (2m 14s) 4.1990 Haik / Czech ✗ (Arabic)
+    90000 90% (2m 22s) 0.2185 Yoo / Korean ✓
+    95000 95% (2m 30s) 2.2189 Soucy / Scottish ✗ (French)
+    100000 100% (2m 38s) 1.6892 Saigo / Portuguese ✗ (Japanese)
 
 
 
@@ -654,7 +654,7 @@ learning:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f078269ad70>]
+    [<matplotlib.lines.Line2D object at 0x7fddc7ce64a0>]
 
 
 
@@ -792,19 +792,19 @@ Running on User Input
 
 
     > Dovesky
-    (-0.32) Russian
-    (-1.85) Czech
-    (-2.38) English
+    (-0.52) Czech
+    (-1.17) Russian
+    (-2.71) English
 
     > Jackson
-    (-0.42) Scottish
-    (-1.72) English
-    (-2.97) Korean
+    (-1.64) English
+    (-1.68) Czech
+    (-1.89) Arabic
 
     > Satoshi
-    (-1.14) Polish
-    (-1.46) Japanese
-    (-2.10) Italian
+    (-0.52) Japanese
+    (-2.18) Greek
+    (-2.30) Italian
 
 
 
@@ -858,7 +858,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  44.309 seconds)
+   **Total running time of the script:** ( 2 minutes  46.362 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:

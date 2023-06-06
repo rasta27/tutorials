@@ -106,7 +106,7 @@ Hopefully now the motivation for this tutorial is clear, so lets jump
 into the implementation.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-109
+.. GENERATED FROM PYTHON SOURCE LINES 92-102
 
 .. code-block:: default
 
@@ -119,12 +119,6 @@ into the implementation.
     import numpy as np
     import matplotlib.pyplot as plt
 
-    # NOTE: This is a hack to get around "User-agent" limitations when downloading MNIST datasets
-    #       see, https://github.com/pytorch/vision/issues/3497 for more information
-    from six.moves import urllib
-    opener = urllib.request.build_opener()
-    opener.addheaders = [('User-agent', 'Mozilla/5.0')]
-    urllib.request.install_opener(opener)
 
 
 
@@ -133,8 +127,7 @@ into the implementation.
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 110-139
+.. GENERATED FROM PYTHON SOURCE LINES 103-132
 
 Implementation
 --------------
@@ -166,7 +159,7 @@ follows:
    not take much time.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-145
+.. GENERATED FROM PYTHON SOURCE LINES 132-140
 
 .. code-block:: default
 
@@ -174,16 +167,24 @@ follows:
     epsilons = [0, .05, .1, .15, .2, .25, .3]
     pretrained_model = "data/lenet_mnist_model.pth"
     use_cuda=True
+    # Set random seed for reproducibility
+    torch.manual_seed(42)
 
 
 
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    <torch._C.Generator object at 0x7fdeefaac030>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-157
+.. GENERATED FROM PYTHON SOURCE LINES 141-152
 
 Model Under Attack
 ~~~~~~~~~~~~~~~~~~
@@ -197,7 +198,7 @@ define the model and dataloader, then initialize the model and load the
 pretrained weights.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-198
+.. GENERATED FROM PYTHON SOURCE LINES 152-193
 
 .. code-block:: default
 
@@ -225,18 +226,18 @@ pretrained weights.
     test_loader = torch.utils.data.DataLoader(
         datasets.MNIST('../data', train=False, download=True, transform=transforms.Compose([
                 transforms.ToTensor(),
-                ])), 
+                ])),
             batch_size=1, shuffle=True)
 
     # Define what device we are using
     print("CUDA Available: ",torch.cuda.is_available())
-    device = torch.device("cuda" if (use_cuda and torch.cuda.is_available()) else "cpu")
+    device = torch.device("cuda" if use_cuda and torch.cuda.is_available() else "cpu")
 
     # Initialize the network
     model = Net().to(device)
 
     # Load the pretrained model
-    model.load_state_dict(torch.load(pretrained_model, map_location='cpu'))
+    model.load_state_dict(torch.load(pretrained_model, weights_only=True, map_location='cpu'))
 
     # Set the model in evaluation mode. In this case this is for the Dropout layers
     model.eval()
@@ -254,31 +255,35 @@ pretrained weights.
     Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
 
       0%|          | 0/9912422 [00:00<?, ?it/s]
-    100%|##########| 9912422/9912422 [00:00<00:00, 297400596.90it/s]
+    100%|##########| 9912422/9912422 [00:00<00:00, 256301621.59it/s]
     Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ../data/MNIST/raw/train-labels-idx1-ubyte.gz
 
       0%|          | 0/28881 [00:00<?, ?it/s]
-    100%|##########| 28881/28881 [00:00<00:00, 60567846.91it/s]
+    100%|##########| 28881/28881 [00:00<00:00, 191670401.62it/s]
     Extracting ../data/MNIST/raw/train-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw/t10k-images-idx3-ubyte.gz
 
       0%|          | 0/1648877 [00:00<?, ?it/s]
-    100%|##########| 1648877/1648877 [00:00<00:00, 146346390.94it/s]
+    100%|##########| 1648877/1648877 [00:00<00:00, 175775610.54it/s]
     Extracting ../data/MNIST/raw/t10k-images-idx3-ubyte.gz to ../data/MNIST/raw
 
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
     Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz
 
       0%|          | 0/4542 [00:00<?, ?it/s]
-    100%|##########| 4542/4542 [00:00<00:00, 36991318.00it/s]
+    100%|##########| 4542/4542 [00:00<00:00, 40106376.35it/s]
     Extracting ../data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ../data/MNIST/raw
 
     CUDA Available:  True
+    /opt/conda/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning:
+
+    TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+
 
     Net(
       (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
@@ -290,7 +295,7 @@ pretrained weights.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-215
+.. GENERATED FROM PYTHON SOURCE LINES 194-210
 
 FGSM Attack
 ~~~~~~~~~~~
@@ -309,7 +314,7 @@ Finally, in order to maintain the original range of the data, the
 perturbed image is clipped to range :math:`[0,1]`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-228
+.. GENERATED FROM PYTHON SOURCE LINES 210-223
 
 .. code-block:: default
 
@@ -333,7 +338,7 @@ perturbed image is clipped to range :math:`[0,1]`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-245
+.. GENERATED FROM PYTHON SOURCE LINES 224-240
 
 Testing Function
 ~~~~~~~~~~~~~~~~
@@ -352,7 +357,7 @@ accuracy of the model, the function also saves and returns some
 successful adversarial examples to be visualized later.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 245-309
+.. GENERATED FROM PYTHON SOURCE LINES 240-304
 
 .. code-block:: default
 
@@ -403,7 +408,7 @@ successful adversarial examples to be visualized later.
             if final_pred.item() == target.item():
                 correct += 1
                 # Special case for saving 0 epsilon examples
-                if (epsilon == 0) and (len(adv_examples) < 5):
+                if epsilon == 0 and len(adv_examples) < 5:
                     adv_ex = perturbed_data.squeeze().detach().cpu().numpy()
                     adv_examples.append( (init_pred.item(), final_pred.item(), adv_ex) )
             else:
@@ -414,7 +419,7 @@ successful adversarial examples to be visualized later.
 
         # Calculate final accuracy for this epsilon
         final_acc = correct/float(len(test_loader))
-        print("Epsilon: {}\tTest Accuracy = {} / {} = {}".format(epsilon, correct, len(test_loader), final_acc))
+        print(f"Epsilon: {epsilon}\tTest Accuracy = {correct} / {len(test_loader)} = {final_acc}")
 
         # Return the accuracy and an adversarial example
         return final_acc, adv_examples
@@ -427,7 +432,7 @@ successful adversarial examples to be visualized later.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 310-321
+.. GENERATED FROM PYTHON SOURCE LINES 305-316
 
 Run Attack
 ~~~~~~~~~~
@@ -441,7 +446,7 @@ note the :math:`\epsilon=0` case represents the original test accuracy,
 with no attack.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 321-332
+.. GENERATED FROM PYTHON SOURCE LINES 316-327
 
 .. code-block:: default
 
@@ -475,7 +480,7 @@ with no attack.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-350
+.. GENERATED FROM PYTHON SOURCE LINES 328-345
 
 Results
 -------
@@ -495,7 +500,7 @@ hits random accuracy for a 10-class classifier between
 :math:`\epsilon=0.25` and :math:`\epsilon=0.3`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 350-361
+.. GENERATED FROM PYTHON SOURCE LINES 345-356
 
 .. code-block:: default
 
@@ -522,7 +527,7 @@ hits random accuracy for a 10-class classifier between
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-378
+.. GENERATED FROM PYTHON SOURCE LINES 357-373
 
 Sample Adversarial Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -541,7 +546,7 @@ quite evident at :math:`\epsilon=0.3`. However, in all cases humans are
 still capable of identifying the correct class despite the added noise.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 378-397
+.. GENERATED FROM PYTHON SOURCE LINES 373-392
 
 .. code-block:: default
 
@@ -556,9 +561,9 @@ still capable of identifying the correct class despite the added noise.
             plt.xticks([], [])
             plt.yticks([], [])
             if j == 0:
-                plt.ylabel("Eps: {}".format(epsilons[i]), fontsize=14)
+                plt.ylabel(f"Eps: {epsilons[i]}", fontsize=14)
             orig,adv,ex = examples[i][j]
-            plt.title("{} -> {}".format(orig, adv))
+            plt.title(f"{orig} -> {adv}")
             plt.imshow(ex, cmap="gray")
     plt.tight_layout()
     plt.show()
@@ -568,7 +573,7 @@ still capable of identifying the correct class despite the added noise.
 
 
 .. image-sg:: /beginner/images/sphx_glr_fgsm_tutorial_002.png
-   :alt: 7 -> 7, 7 -> 7, 8 -> 8, 0 -> 0, 0 -> 0, 5 -> 8, 7 -> 2, 4 -> 9, 7 -> 2, 9 -> 8, 4 -> 1, 7 -> 2, 9 -> 5, 2 -> 8, 7 -> 9, 0 -> 8, 1 -> 8, 7 -> 9, 9 -> 4, 4 -> 8, 6 -> 5, 9 -> 8, 2 -> 8, 7 -> 2, 9 -> 8, 6 -> 5, 4 -> 8, 9 -> 8, 0 -> 1, 3 -> 1, 6 -> 8, 2 -> 5, 0 -> 1, 4 -> 8, 5 -> 8
+   :alt: 3 -> 3, 2 -> 2, 3 -> 3, 0 -> 0, 3 -> 3, 0 -> 6, 5 -> 8, 9 -> 8, 1 -> 8, 3 -> 8, 7 -> 9, 6 -> 0, 3 -> 8, 7 -> 9, 7 -> 9, 1 -> 2, 9 -> 8, 1 -> 6, 8 -> 2, 7 -> 8, 9 -> 2, 4 -> 9, 9 -> 8, 3 -> 8, 4 -> 8, 5 -> 2, 9 -> 8, 1 -> 8, 9 -> 8, 2 -> 8, 8 -> 2, 5 -> 8, 3 -> 8, 6 -> 8, 7 -> 8
    :srcset: /beginner/images/sphx_glr_fgsm_tutorial_002.png
    :class: sphx-glr-single-img
 
@@ -576,7 +581,7 @@ still capable of identifying the correct class despite the added noise.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 398-422
+.. GENERATED FROM PYTHON SOURCE LINES 393-417
 
 Where to go next?
 -----------------
@@ -606,7 +611,7 @@ attacks.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  38.187 seconds)
+   **Total running time of the script:** ( 3 minutes  36.062 seconds)
 
 
 .. _sphx_glr_download_beginner_fgsm_tutorial.py:
