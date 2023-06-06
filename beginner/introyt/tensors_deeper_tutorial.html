@@ -439,9 +439,9 @@ Python’s math module to facilitate some of the examples.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class 'torch.Tensor'&gt;
-tensor([[0., 0., 0., 0.],
-        [0., 0., 0., 0.],
-        [0., 0., 0., 0.]])
+tensor([[-1.5663e+00,  4.5667e-41,  5.3549e-13,  1.4013e-45],
+        [ 2.7615e-37,  0.0000e+00,  0.0000e+00,  0.0000e+00],
+        [-4.1993e+37,  0.0000e+00,  9.1609e+37,  4.5667e-41]])
 </pre></div>
 </div>
 <p>Let’s unpack what we just did:</p>
@@ -562,17 +562,17 @@ have the <code class="docutils literal notranslate"><span class="pre">torch.*_li
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 2, 3])
-tensor([[[-2.1927e-20,  0.0000e+00, -2.1814e-20],
-         [ 0.0000e+00,  1.1210e-43,  0.0000e+00]],
+tensor([[[-4.5346e+37,  0.0000e+00,  1.4013e-45],
+         [ 0.0000e+00,  1.4013e-45,  0.0000e+00]],
 
-        [[ 8.9683e-44,  0.0000e+00, -2.5681e-20],
-         [ 0.0000e+00,  1.1351e-43,  0.0000e+00]]])
+        [[ 1.4013e-45,  0.0000e+00,  1.4013e-45],
+         [ 0.0000e+00,  1.4013e-45,  0.0000e+00]]])
 torch.Size([2, 2, 3])
-tensor([[[-2.1833e-20,  0.0000e+00, -2.3722e-20],
-         [ 0.0000e+00,  8.9683e-44,  0.0000e+00]],
+tensor([[[-4.5470e+37,  0.0000e+00, -1.5663e+00],
+         [ 4.5667e-41,  8.9683e-44,  0.0000e+00]],
 
-        [[ 1.1210e-43,  0.0000e+00, -2.2399e-20],
-         [ 0.0000e+00,  0.0000e+00,  1.8750e+00]]])
+        [[ 1.1210e-43,  0.0000e+00, -4.1955e+37],
+         [ 0.0000e+00,  0.0000e+00,  0.0000e+00]]])
 torch.Size([2, 2, 3])
 tensor([[[0., 0., 0.],
          [0., 0., 0.]],

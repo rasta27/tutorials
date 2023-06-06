@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 150MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 141MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,51 +479,47 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  2%|2         | 20.4M/945M [00:00&lt;00:04, 214MB/s]
-  4%|4         | 42.0M/945M [00:00&lt;00:04, 221MB/s]
-  7%|6         | 63.7M/945M [00:00&lt;00:04, 224MB/s]
-  9%|9         | 85.2M/945M [00:00&lt;00:04, 225MB/s]
- 11%|#1        | 107M/945M [00:00&lt;00:03, 224MB/s]
- 14%|#3        | 128M/945M [00:00&lt;00:03, 222MB/s]
- 16%|#5        | 149M/945M [00:00&lt;00:03, 223MB/s]
- 18%|#8        | 171M/945M [00:00&lt;00:03, 222MB/s]
- 20%|##        | 192M/945M [00:00&lt;00:03, 221MB/s]
- 23%|##2       | 213M/945M [00:01&lt;00:03, 222MB/s]
- 25%|##4       | 234M/945M [00:01&lt;00:03, 221MB/s]
- 27%|##7       | 255M/945M [00:01&lt;00:03, 221MB/s]
- 29%|##9       | 277M/945M [00:01&lt;00:03, 222MB/s]
- 32%|###1      | 298M/945M [00:01&lt;00:03, 222MB/s]
- 34%|###3      | 319M/945M [00:01&lt;00:02, 222MB/s]
- 36%|###6      | 340M/945M [00:01&lt;00:02, 221MB/s]
- 38%|###8      | 361M/945M [00:01&lt;00:02, 220MB/s]
- 40%|####      | 382M/945M [00:01&lt;00:02, 220MB/s]
- 43%|####2     | 404M/945M [00:01&lt;00:02, 222MB/s]
- 45%|####4     | 425M/945M [00:02&lt;00:02, 222MB/s]
- 47%|####7     | 446M/945M [00:02&lt;00:02, 222MB/s]
- 49%|####9     | 467M/945M [00:02&lt;00:02, 221MB/s]
- 52%|#####1    | 488M/945M [00:02&lt;00:02, 221MB/s]
- 54%|#####3    | 510M/945M [00:02&lt;00:02, 222MB/s]
- 56%|#####6    | 531M/945M [00:02&lt;00:01, 221MB/s]
- 58%|#####8    | 552M/945M [00:02&lt;00:01, 222MB/s]
- 61%|######    | 573M/945M [00:02&lt;00:01, 223MB/s]
- 63%|######2   | 595M/945M [00:02&lt;00:01, 221MB/s]
- 65%|######5   | 616M/945M [00:02&lt;00:01, 222MB/s]
- 68%|######7   | 638M/945M [00:03&lt;00:01, 224MB/s]
- 70%|######9   | 659M/945M [00:03&lt;00:01, 224MB/s]
- 72%|#######2  | 681M/945M [00:03&lt;00:01, 223MB/s]
- 74%|#######4  | 702M/945M [00:03&lt;00:01, 223MB/s]
- 77%|#######6  | 723M/945M [00:03&lt;00:01, 223MB/s]
- 79%|#######8  | 745M/945M [00:03&lt;00:00, 223MB/s]
- 81%|########1 | 766M/945M [00:03&lt;00:00, 224MB/s]
- 83%|########3 | 788M/945M [00:03&lt;00:00, 224MB/s]
- 86%|########5 | 809M/945M [00:03&lt;00:00, 224MB/s]
- 88%|########7 | 831M/945M [00:03&lt;00:00, 224MB/s]
- 90%|######### | 852M/945M [00:04&lt;00:00, 225MB/s]
- 93%|#########2| 874M/945M [00:04&lt;00:00, 226MB/s]
- 95%|#########4| 896M/945M [00:04&lt;00:00, 224MB/s]
- 97%|#########7| 917M/945M [00:04&lt;00:00, 218MB/s]
- 99%|#########9| 938M/945M [00:04&lt;00:00, 215MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 222MB/s]
+  2%|2         | 20.7M/945M [00:00&lt;00:04, 217MB/s]
+  5%|4         | 42.7M/945M [00:00&lt;00:04, 225MB/s]
+  7%|6         | 64.2M/945M [00:00&lt;00:04, 214MB/s]
+  9%|9         | 86.6M/945M [00:00&lt;00:04, 222MB/s]
+ 12%|#1        | 110M/945M [00:00&lt;00:03, 229MB/s]
+ 14%|#4        | 132M/945M [00:00&lt;00:03, 232MB/s]
+ 16%|#6        | 155M/945M [00:00&lt;00:03, 233MB/s]
+ 19%|#8        | 178M/945M [00:00&lt;00:03, 235MB/s]
+ 21%|##1       | 200M/945M [00:00&lt;00:03, 236MB/s]
+ 24%|##3       | 223M/945M [00:01&lt;00:03, 236MB/s]
+ 26%|##5       | 246M/945M [00:01&lt;00:03, 237MB/s]
+ 28%|##8       | 268M/945M [00:01&lt;00:02, 237MB/s]
+ 31%|###       | 291M/945M [00:01&lt;00:02, 239MB/s]
+ 33%|###3      | 314M/945M [00:01&lt;00:02, 239MB/s]
+ 36%|###5      | 338M/945M [00:01&lt;00:02, 243MB/s]
+ 39%|###8      | 367M/945M [00:01&lt;00:02, 260MB/s]
+ 42%|####1     | 396M/945M [00:01&lt;00:02, 275MB/s]
+ 45%|####4     | 423M/945M [00:01&lt;00:02, 272MB/s]
+ 48%|####7     | 449M/945M [00:01&lt;00:01, 260MB/s]
+ 50%|#####     | 474M/945M [00:02&lt;00:01, 254MB/s]
+ 53%|#####2    | 498M/945M [00:02&lt;00:01, 250MB/s]
+ 55%|#####5    | 522M/945M [00:02&lt;00:01, 247MB/s]
+ 58%|#####7    | 545M/945M [00:02&lt;00:01, 246MB/s]
+ 60%|######    | 569M/945M [00:02&lt;00:01, 244MB/s]
+ 63%|######2   | 592M/945M [00:02&lt;00:01, 243MB/s]
+ 65%|######5   | 615M/945M [00:02&lt;00:01, 242MB/s]
+ 68%|######7   | 638M/945M [00:02&lt;00:01, 237MB/s]
+ 70%|#######   | 661M/945M [00:02&lt;00:01, 238MB/s]
+ 72%|#######2  | 684M/945M [00:02&lt;00:01, 239MB/s]
+ 75%|#######4  | 707M/945M [00:03&lt;00:01, 239MB/s]
+ 77%|#######7  | 730M/945M [00:03&lt;00:00, 234MB/s]
+ 80%|#######9  | 752M/945M [00:03&lt;00:00, 231MB/s]
+ 82%|########2 | 775M/945M [00:03&lt;00:00, 232MB/s]
+ 84%|########4 | 797M/945M [00:03&lt;00:00, 230MB/s]
+ 87%|########6 | 819M/945M [00:03&lt;00:00, 230MB/s]
+ 89%|########8 | 841M/945M [00:03&lt;00:00, 218MB/s]
+ 91%|#########1| 861M/945M [00:03&lt;00:00, 217MB/s]
+ 94%|#########3| 884M/945M [00:03&lt;00:00, 223MB/s]
+ 96%|#########6| 907M/945M [00:04&lt;00:00, 227MB/s]
+ 98%|#########8| 928M/945M [00:04&lt;00:00, 224MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 238MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -735,37 +731,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: Xavi has managed just five starts in 21 games for the club . the 35-year-old has been linked with a move to al Sadd this summer . he assisted Jeremy Mathieu's winner against Celta Vigo on sunday .
+prediction: Suma was first diagnosed with arthritis in 2013 after keepers noticed stiffness in her movements . she was initially given daily pain medication to help relieve the pain . but on Thursday, doctors had to anaesthetise her to check how her condition has progressed . x-rays were taken in areas where the orangutan has arthritis, her hips and ankles .
 
-target: Barcelona star Xavi has managed just five starts since the turn of the year . The midfielder recently travelled to Qatar to discuss possible switch . Luis Enrique believes Xavi has vital role to play towards end of season .
+target: Suma underwent a thorough health examination on Thursday to monitor the progress of her arthritis . Melbourne Zoo's aging orangutan was first diagnosed with the condition in 2013 . The 36-year-old orangutan, who turns a year older in June, has arthritis in her hips and ankles . Zoo vets took the opportunity to give Suma a full check-up including her ears, teeth and eyes .
 
 
 Example 2:
 
-prediction: the crackdown comes as California and its nearly 40 million residents move toward a fourth summer of drought with no relief in sight . state reservoirs have a year's worth of water, and with record low snowfall over the winter there won't be much to replenish them . wells in some parts of the state are going dry as groundwater levels fall .
+prediction: former arsenal defender Martin Keown's son Niall scored the winner for the visitors . he was joined by other long-term absentees including Serge Gnabry and abou Diaby . abou Diaby continued his own return from injury and was substituted .
 
-target: Calfornia Gov. Jerry Brown ordered a 25 percent overall cutback in water use by cities and towns in the state on Wednesday . This series of photos taken on Saturday show the ongoing drought is already taking its toll on once technicolor landscape of lush yards, emerald golf courses and aquamarine swimming pools . The crackdown comes as California and its nearly 40 million residents move toward a fourth summer of drought with no relief in sight . State reservoirs have a year's worth of water and with record low snowfall over the winter there won't be much to replenish them .
+target: Jack Wilshere captained Arsenal Under 21s against Reading Under 21s . Gunners first team players Abou Diaby and Serge Gnabry also featured . Niall Keown scored with a header for the Royals after only eight minutes .
 
 
 Example 3:
 
-prediction: a top al Qaeda leader was killed in an airstrike in Yemen, the terror group says . he was held by the u.s. government at its detention facility in Guantanamo .
+prediction: rachel sanders: some blame president obama for racial tension in u.s. as if march on d.c. scrubbed effects of inequality . she says it's easier to say violence began when rioters threw bricks at police . sanders: if we want to change this, we need to look at how we can help .
 
-target: AQAP says a "crusader airstrike" killed Ibrahim al-Rubaish . Al-Rubaish was once detained by the United States in Guantanamo .
+target: LZ Granderson: People keep looking for new reasons to validate apathy and explain away racism . But what happened in Baltimore didn't come up overnight; artist Jacob Lawrence depicted the same story in 1940s .
 
 
 Example 4:
 
-prediction: video footage shows the friendly feline named Kit letting the newborn Chihuahuas nuzzle her fluffy belly . the pups were apparently discovered in a discarded shoe box on Tuesday afternoon and taken to the humane society for immediate treatment . a note on the cardboard container indicated they were born last Friday and their mother had died .
+prediction: eight of Mary Jane Veloso's fellow death row inmates were put to death by firing squad . her family was returning from what they thought was their final visit to the prison .
 
-target: The pups were apparently discovered in a discarded shoe box on Tuesday afternoon and taken to the Humane Society for immediate treatment . In a bid to save their lives, vets decided to put the young dogs with a surrogate cat . The pairing proved to be an instant success . As Kit the tabby had recently nursed her own kittens, she was able to feed the puppies with her own milk .
+target: Indonesia executed eight drug smugglers Wednesday morning . Mary Jane Veloso was meant to be the ninth but was given reprieve . Supporters, family "overjoyed" -- Indonesia stresses it's just a delay .
 
 
 Example 5:
 
-prediction: 'i decided it can't be any worse than what I was doing,' said the father-of-three . he posted a sign on his truck that reads, 'Looking for a date? Would you date a single father?' the advertisement then shows his phone number and below reads, '*Ages 21 and up*' .
+prediction: both skipper al Kellock and hooker Dougie Hall are to retire come the end of may . the pair have played nearly 300 matches between them for the club . the match will be billed as a tribute to the pair and will be presented by the club's parents and best man .
 
-target: Robin Thomas, of Jonesboro, Arkansas, says that he failed to find love with online dating sites . The sign reads, 'Looking for a date? Would you date a single father?' The retired cook is looking for a 'down-to-earth' woman who's 'at least 28' Thomas says his kids, aged six to 11, think the advertisement is 'cute'
+target: The Glasgow duo have played nearly 300 games between them . Al Kellock and Dougie Hall will both retire at the end of the season . Glasgow face Cardiff Blues at Scotstoun on Friday night .
 </pre></div>
 </div>
 </div>
@@ -1058,7 +1054,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  9.595 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  20.779 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>
