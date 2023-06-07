@@ -12,7 +12,7 @@
 <link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
-<link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/katex-math.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sg_gallery.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sg_gallery-binder.css" rel="stylesheet" type="text/css"/>
@@ -491,46 +491,45 @@ and download both training and validation data splits.</p>
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz
 
   0%|          | 0/26421880 [00:00&lt;?, ?it/s]
-  0%|          | 65536/26421880 [00:00&lt;01:12, 362331.27it/s]
-  1%|          | 229376/26421880 [00:00&lt;00:38, 680820.64it/s]
-  3%|3         | 819200/26421880 [00:00&lt;00:11, 2305113.04it/s]
-  7%|7         | 1900544/26421880 [00:00&lt;00:06, 4076047.56it/s]
- 18%|#7        | 4685824/26421880 [00:00&lt;00:02, 10318577.06it/s]
- 25%|##5       | 6684672/26421880 [00:00&lt;00:01, 10948254.99it/s]
- 36%|###5      | 9502720/26421880 [00:01&lt;00:01, 15055447.17it/s]
- 44%|####3     | 11534336/26421880 [00:01&lt;00:01, 13976621.75it/s]
- 54%|#####4    | 14352384/26421880 [00:01&lt;00:00, 17209396.25it/s]
- 62%|######2   | 16482304/26421880 [00:01&lt;00:00, 15551177.99it/s]
- 73%|#######2  | 19234816/26421880 [00:01&lt;00:00, 18226799.95it/s]
- 81%|########1 | 21528576/26421880 [00:01&lt;00:00, 16559065.85it/s]
- 92%|#########1| 24281088/26421880 [00:01&lt;00:00, 18971539.28it/s]
-100%|##########| 26421880/26421880 [00:01&lt;00:00, 13771628.59it/s]
+  0%|          | 65536/26421880 [00:00&lt;01:12, 363070.20it/s]
+  1%|          | 229376/26421880 [00:00&lt;00:38, 682409.32it/s]
+  3%|2         | 720896/26421880 [00:00&lt;00:13, 1974666.63it/s]
+  7%|7         | 1933312/26421880 [00:00&lt;00:05, 4258391.22it/s]
+ 16%|#6        | 4358144/26421880 [00:00&lt;00:02, 9418862.93it/s]
+ 26%|##5       | 6815744/26421880 [00:00&lt;00:01, 11531457.34it/s]
+ 35%|###5      | 9371648/26421880 [00:01&lt;00:01, 14763231.45it/s]
+ 46%|####5     | 12025856/26421880 [00:01&lt;00:00, 15241479.88it/s]
+ 55%|#####5    | 14548992/26421880 [00:01&lt;00:00, 17386301.56it/s]
+ 66%|######5   | 17432576/26421880 [00:01&lt;00:00, 17393639.53it/s]
+ 76%|#######5  | 19955712/26421880 [00:01&lt;00:00, 18984239.09it/s]
+ 87%|########7 | 23101440/26421880 [00:01&lt;00:00, 18969798.07it/s]
+ 97%|#########7| 25690112/26421880 [00:01&lt;00:00, 20340020.01it/s]
+100%|##########| 26421880/26421880 [00:01&lt;00:00, 14439484.44it/s]
 Extracting ./data/FashionMNIST/raw/train-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
 
   0%|          | 0/29515 [00:00&lt;?, ?it/s]
-100%|##########| 29515/29515 [00:00&lt;00:00, 329528.29it/s]
+100%|##########| 29515/29515 [00:00&lt;00:00, 326156.24it/s]
 Extracting ./data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
 
   0%|          | 0/4422102 [00:00&lt;?, ?it/s]
-  1%|1         | 65536/4422102 [00:00&lt;00:11, 363862.72it/s]
-  5%|5         | 229376/4422102 [00:00&lt;00:06, 684652.03it/s]
- 18%|#7        | 786432/4422102 [00:00&lt;00:01, 2215654.84it/s]
- 32%|###1      | 1409024/4422102 [00:00&lt;00:01, 2862358.66it/s]
- 96%|#########5| 4227072/4422102 [00:00&lt;00:00, 9571446.74it/s]
-100%|##########| 4422102/4422102 [00:00&lt;00:00, 6018156.74it/s]
+  1%|1         | 65536/4422102 [00:00&lt;00:12, 362002.50it/s]
+  5%|5         | 229376/4422102 [00:00&lt;00:06, 681982.29it/s]
+ 17%|#7        | 753664/4422102 [00:00&lt;00:01, 2098054.01it/s]
+ 38%|###7      | 1671168/4422102 [00:00&lt;00:00, 3549030.94it/s]
+100%|##########| 4422102/4422102 [00:00&lt;00:00, 6081183.51it/s]
 Extracting ./data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to ./data/FashionMNIST/raw
 
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
 Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
 
   0%|          | 0/5148 [00:00&lt;?, ?it/s]
-100%|##########| 5148/5148 [00:00&lt;00:00, 57733360.94it/s]
+100%|##########| 5148/5148 [00:00&lt;00:00, 60823315.47it/s]
 Extracting ./data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/FashionMNIST/raw
 
 Training set has 60000 instances
@@ -561,7 +560,7 @@ Validation set has 10000 instances
 <span class="nb">print</span><span class="p">(</span><span class="s1">'  '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">classes</span><span class="p">[</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">labels</span></a><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
 </pre></div>
 </div>
-<img alt="trainingyt" class="sphx-glr-single-img" src="../../_images/sphx_glr_trainingyt_001.png" srcset="../../_images/sphx_glr_trainingyt_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Shirt  T-shirt/top  Sandal  T-shirt/top
+<img alt="trainingyt" class="sphx-glr-single-img" src="../../_images/sphx_glr_trainingyt_001.png" srcset="../../_images/sphx_glr_trainingyt_001.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Sandal  Sneaker  Coat  Sneaker
 </pre></div>
 </div>
 </div>
@@ -617,16 +616,16 @@ them through the loss function, and examine the result.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Total loss for this batch: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">loss</span></a><span class="o">.</span><span class="n">item</span><span class="p">()))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[0.2640, 0.9014, 0.9672, 0.3999, 0.3469, 0.4932, 0.1960, 0.8189, 0.0626,
-         0.1841],
-        [0.6418, 0.9335, 0.2429, 0.7706, 0.8019, 0.1763, 0.6500, 0.3418, 0.8669,
-         0.4248],
-        [0.2403, 0.5871, 0.1366, 0.6396, 0.4671, 0.7881, 0.5918, 0.2173, 0.8949,
-         0.4234],
-        [0.9860, 0.6625, 0.7010, 0.5306, 0.0973, 0.5103, 0.1445, 0.9012, 0.9375,
-         0.1067]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[0.7026, 0.1489, 0.0065, 0.6841, 0.4166, 0.3980, 0.9849, 0.6701, 0.4601,
+         0.8599],
+        [0.7461, 0.3920, 0.9978, 0.0354, 0.9843, 0.0312, 0.5989, 0.2888, 0.8170,
+         0.4150],
+        [0.8408, 0.5368, 0.0059, 0.8931, 0.3942, 0.7349, 0.5500, 0.0074, 0.0554,
+         0.1537],
+        [0.7282, 0.8755, 0.3649, 0.4566, 0.8796, 0.2390, 0.9865, 0.7549, 0.9105,
+         0.5427]])
 tensor([1, 5, 3, 7])
-Total loss for this batch: 2.2141895294189453
+Total loss for this batch: 2.428950071334839
 </pre></div>
 </div>
 </div>
@@ -765,90 +764,90 @@ tab.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EPOCH 1:
-  batch 1000 loss: 1.7256649827212096
-  batch 2000 loss: 0.8458822246715426
-  batch 3000 loss: 0.7127397689316421
-  batch 4000 loss: 0.6318316134288907
-  batch 5000 loss: 0.5784679713114165
-  batch 6000 loss: 0.5374795174887403
-  batch 7000 loss: 0.5200392168334219
-  batch 8000 loss: 0.5047401405160781
-  batch 9000 loss: 0.5064695353988791
-  batch 10000 loss: 0.48812932112521956
-  batch 11000 loss: 0.4670760860220762
-  batch 12000 loss: 0.4217298239945667
-  batch 13000 loss: 0.4509716626614099
-  batch 14000 loss: 0.43733285345946205
-  batch 15000 loss: 0.4090831542432425
-LOSS train 0.4090831542432425 valid 0.4215935468673706
+  batch 1000 loss: 1.6334228541590274
+  batch 2000 loss: 0.8324381597135216
+  batch 3000 loss: 0.7350949151031673
+  batch 4000 loss: 0.6221513676682953
+  batch 5000 loss: 0.6008665340302978
+  batch 6000 loss: 0.5533551393696107
+  batch 7000 loss: 0.5268192595622968
+  batch 8000 loss: 0.4953766325986944
+  batch 9000 loss: 0.4763272075761342
+  batch 10000 loss: 0.48026260716759134
+  batch 11000 loss: 0.4555706014999887
+  batch 12000 loss: 0.43150419856602096
+  batch 13000 loss: 0.41889463035896185
+  batch 14000 loss: 0.4101380754457787
+  batch 15000 loss: 0.4188491042831447
+LOSS train 0.4188491042831447 valid 0.42083388566970825
 EPOCH 2:
-  batch 1000 loss: 0.4013969278817531
-  batch 2000 loss: 0.3893068320379243
-  batch 3000 loss: 0.3705797741532733
-  batch 4000 loss: 0.39312795012025165
-  batch 5000 loss: 0.37443368441605707
-  batch 6000 loss: 0.37735710782934623
-  batch 7000 loss: 0.3604026945095975
-  batch 8000 loss: 0.37618481981547663
-  batch 9000 loss: 0.35682753163785674
-  batch 10000 loss: 0.3636707183285616
-  batch 11000 loss: 0.3534153675791022
-  batch 12000 loss: 0.34008345806438595
-  batch 13000 loss: 0.34080496985036735
-  batch 14000 loss: 0.3636150135070784
-  batch 15000 loss: 0.37041270479589
-LOSS train 0.37041270479589 valid 0.3471147418022156
+  batch 1000 loss: 0.39033183104451746
+  batch 2000 loss: 0.35730057470843896
+  batch 3000 loss: 0.3797398313785088
+  batch 4000 loss: 0.3595128281345387
+  batch 5000 loss: 0.3674602470536483
+  batch 6000 loss: 0.3695404906652402
+  batch 7000 loss: 0.38634192156628705
+  batch 8000 loss: 0.37888678515458013
+  batch 9000 loss: 0.32936658181797246
+  batch 10000 loss: 0.3460305611458316
+  batch 11000 loss: 0.355949883276422
+  batch 12000 loss: 0.34613123371596155
+  batch 13000 loss: 0.3435088261961791
+  batch 14000 loss: 0.35190882972519466
+  batch 15000 loss: 0.34078337761512373
+LOSS train 0.34078337761512373 valid 0.3449384272098541
 EPOCH 3:
-  batch 1000 loss: 0.3179139620252245
-  batch 2000 loss: 0.3342166980972397
-  batch 3000 loss: 0.32923058042030606
-  batch 4000 loss: 0.3367951913867
-  batch 5000 loss: 0.3292608173290937
-  batch 6000 loss: 0.30513857270470907
-  batch 7000 loss: 0.3156457872481842
-  batch 8000 loss: 0.3309824334255245
-  batch 9000 loss: 0.32130621186213104
-  batch 10000 loss: 0.31841126113958307
-  batch 11000 loss: 0.30097593074067847
-  batch 12000 loss: 0.3115807647583861
-  batch 13000 loss: 0.3099713934243191
-  batch 14000 loss: 0.29543631205384735
-  batch 15000 loss: 0.30339803153293904
-LOSS train 0.30339803153293904 valid 0.33944061398506165
+  batch 1000 loss: 0.3336456001721235
+  batch 2000 loss: 0.2948776570415939
+  batch 3000 loss: 0.30873254264354183
+  batch 4000 loss: 0.3269525112561532
+  batch 5000 loss: 0.3081500146031831
+  batch 6000 loss: 0.33906219027831686
+  batch 7000 loss: 0.3114977335120493
+  batch 8000 loss: 0.3028961390093173
+  batch 9000 loss: 0.31883212575598735
+  batch 10000 loss: 0.3121348040100274
+  batch 11000 loss: 0.3204089922408457
+  batch 12000 loss: 0.3172754702415841
+  batch 13000 loss: 0.3022056705406212
+  batch 14000 loss: 0.29925711060611504
+  batch 15000 loss: 0.3158802612772852
+LOSS train 0.3158802612772852 valid 0.32655972242355347
 EPOCH 4:
-  batch 1000 loss: 0.30651166361452487
-  batch 2000 loss: 0.2793293575645512
-  batch 3000 loss: 0.28853318450351073
-  batch 4000 loss: 0.30558241958166765
-  batch 5000 loss: 0.2786226378918154
-  batch 6000 loss: 0.30251268525604974
-  batch 7000 loss: 0.2911278994781933
-  batch 8000 loss: 0.28233269028825814
-  batch 9000 loss: 0.2800182370387265
-  batch 10000 loss: 0.29056114845462433
-  batch 11000 loss: 0.3051741462978389
-  batch 12000 loss: 0.2986470913808735
-  batch 13000 loss: 0.2895387316422457
-  batch 14000 loss: 0.2941053894784709
-  batch 15000 loss: 0.28458896309731063
-LOSS train 0.28458896309731063 valid 0.3029366135597229
+  batch 1000 loss: 0.2793223039015138
+  batch 2000 loss: 0.2759745200898469
+  batch 3000 loss: 0.2885438525550344
+  batch 4000 loss: 0.29715126178535867
+  batch 5000 loss: 0.3092308461628054
+  batch 6000 loss: 0.29819886386692085
+  batch 7000 loss: 0.28212033420058286
+  batch 8000 loss: 0.2652145917697999
+  batch 9000 loss: 0.30505836525483027
+  batch 10000 loss: 0.28172129570529797
+  batch 11000 loss: 0.2760911153540328
+  batch 12000 loss: 0.29349113235381813
+  batch 13000 loss: 0.28226990548134745
+  batch 14000 loss: 0.2974613601177407
+  batch 15000 loss: 0.3016561955644138
+LOSS train 0.3016561955644138 valid 0.3930961787700653
 EPOCH 5:
-  batch 1000 loss: 0.2508894559800137
-  batch 2000 loss: 0.28066786627407236
-  batch 3000 loss: 0.27965917300857474
-  batch 4000 loss: 0.2591262470405563
-  batch 5000 loss: 0.28421568706644756
-  batch 6000 loss: 0.26204984676537335
-  batch 7000 loss: 0.28077062249318624
-  batch 8000 loss: 0.2861284123854857
-  batch 9000 loss: 0.27017028277253846
-  batch 10000 loss: 0.2966828832961146
-  batch 11000 loss: 0.2744036089853762
-  batch 12000 loss: 0.26036455519370066
-  batch 13000 loss: 0.2800092080528484
-  batch 14000 loss: 0.2967243524993828
-  batch 15000 loss: 0.26991624458491426
-LOSS train 0.26991624458491426 valid 0.30841949582099915
+  batch 1000 loss: 0.2611404411364929
+  batch 2000 loss: 0.25894880425418887
+  batch 3000 loss: 0.2585991551137176
+  batch 4000 loss: 0.2808971864393097
+  batch 5000 loss: 0.26857244527151486
+  batch 6000 loss: 0.2778763904040534
+  batch 7000 loss: 0.2556428771363862
+  batch 8000 loss: 0.2892738865161955
+  batch 9000 loss: 0.2898595165217885
+  batch 10000 loss: 0.24955335284502145
+  batch 11000 loss: 0.27326060194405
+  batch 12000 loss: 0.2833696024138153
+  batch 13000 loss: 0.2705353221144751
+  batch 14000 loss: 0.24937306600230658
+  batch 15000 loss: 0.27901125454565046
+LOSS train 0.27901125454565046 valid 0.3100835084915161
 </pre></div>
 </div>
 <p>To load a saved version of the model:</p>
@@ -891,7 +890,7 @@ a broad variety of training tasks, including classification in
 different domains, generative adversarial networks, reinforcement
 learning, and more</p></li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  40.782 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  40.296 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-introyt-trainingyt-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/9f7a57e14d8a2ebf975344f34d6ef247/trainingyt.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">trainingyt.py</span></code></a></p>

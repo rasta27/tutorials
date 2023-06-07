@@ -590,7 +590,7 @@ But, a batch in our `data_pipe` is of the form `[(X_1,y_1), (X_2,y_2), (X_3,y_3)
 
  .. code-block:: none
 
-    [([1, 615, 4, 2], [1, 747, 4, 2]), ([1, 2991, 4, 2], [1, 2137, 24, 2]), ([1, 5517, 194, 2], [1, 5046, 24, 2]), ([1, 5517, 4, 2], [1, 5046, 24, 2])]
+    [([1, 10913, 17, 4, 2], [1, 7825, 1497, 24, 2]), ([1, 5220, 21, 4, 2], [1, 7224, 32, 24, 2]), ([1, 5220, 21, 4, 2], [1, 15656, 32, 24, 2]), ([1, 5, 434, 4, 2], [1, 7, 664, 4, 2])]
 
 
 
@@ -625,7 +625,7 @@ For this we will write a small function:
 
  .. code-block:: none
 
-    (([1, 2011, 68, 4, 2], [1, 615, 96, 4, 2], [1, 1041, 21, 4, 2], [1, 6732, 23, 194, 2]), ([1, 2357, 28, 24, 2], [1, 747, 105, 24, 2], [1, 379, 12, 32, 24, 2], [1, 7, 1030, 383, 24, 2]))
+    (([1, 6732, 23, 10, 2], [1, 28, 469, 4, 2], [1, 28, 469, 4, 2], [1, 10913, 17, 4, 2]), ([1, 10872, 8, 2], [1, 30, 1124, 4, 2], [1, 30, 1067, 4, 2], [1, 505, 29, 24, 2]))
 
 
 
@@ -725,7 +725,7 @@ Some parts of this tutorial was inspired from `this article
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 3 minutes  9.079 seconds)
+   **Total running time of the script:** ( 3 minutes  12.289 seconds)
 
 
 .. _sphx_glr_download_beginner_torchtext_custom_dataset_tutorial.py:

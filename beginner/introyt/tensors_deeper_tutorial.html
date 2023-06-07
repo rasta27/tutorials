@@ -12,7 +12,7 @@
 <link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/css/theme.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
-<link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/katex-math.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sg_gallery.css" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sg_gallery-binder.css" rel="stylesheet" type="text/css"/>
@@ -439,9 +439,9 @@ Python’s math module to facilitate some of the examples.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class 'torch.Tensor'&gt;
-tensor([[0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00],
-        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00],
-        [1.4013e-45, 0.0000e+00, 0.0000e+00, 0.0000e+00]])
+tensor([[-1.3788e+20,  4.5706e-41, -4.7353e-21,  0.0000e+00],
+        [ 0.0000e+00,  4.5912e-41, -3.4141e+20,  4.5706e-41],
+        [ 8.1904e+23,  5.8697e-05,  1.0321e-38,  4.5706e-41]])
 </pre></div>
 </div>
 <p>Let’s unpack what we just did:</p>
@@ -562,17 +562,17 @@ have the <code class="docutils literal notranslate"><span class="pre">torch.*_li
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 2, 3])
-tensor([[[ 1.5470e-13,  1.4013e-45, -0.0000e+00],
-         [ 1.6895e+00, -2.0000e+00,  1.6543e+00]],
+tensor([[[-3.6271e-21,  0.0000e+00, -4.8146e-21],
+         [ 0.0000e+00,  8.9683e-44,  0.0000e+00]],
 
-        [[ 0.0000e+00,  1.3972e+00,  2.0000e+00],
-         [ 1.7108e+00,  0.0000e+00,  1.3881e+00]]])
+        [[ 1.1210e-43,  0.0000e+00, -4.8745e-21],
+         [ 0.0000e+00, -4.7719e+34,  3.5687e+00]]])
 torch.Size([2, 2, 3])
-tensor([[[1.1137e-33, 1.4013e-45, 1.5470e-13],
-         [1.4013e-45, 8.9683e-44, 0.0000e+00]],
+tensor([[[-4.8146e-21,  0.0000e+00,  2.2856e-04],
+         [ 1.4013e-45,  1.4013e-45,  0.0000e+00]],
 
-        [[1.1210e-43, 0.0000e+00, 9.3972e-34],
-         [1.4013e-45, 0.0000e+00, 1.8750e+00]]])
+        [[ 3.2877e-06,  1.4013e-45,  5.5553e+24],
+         [ 4.5706e-41,  3.2877e-06,  1.4013e-45]]])
 torch.Size([2, 2, 3])
 tensor([[[0., 0., 0.],
          [0., 0., 0.]],
@@ -1526,7 +1526,7 @@ are reflected in the other:</p>
  [ 0.2853077  17.          0.5695162 ]]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.096 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.082 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-introyt-tensors-deeper-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/be017e7b39198fdf668c138fd8d57abe/tensors_deeper_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tensors_deeper_tutorial.py</span></code></a></p>
