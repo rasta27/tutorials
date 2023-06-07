@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 146MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 153MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,42 +479,50 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  2%|2         | 21.6M/945M [00:00&lt;00:04, 227MB/s]
-  5%|4         | 45.7M/945M [00:00&lt;00:03, 241MB/s]
-  7%|7         | 68.7M/945M [00:00&lt;00:03, 236MB/s]
- 10%|9         | 92.4M/945M [00:00&lt;00:03, 241MB/s]
- 12%|#2        | 117M/945M [00:00&lt;00:03, 246MB/s]
- 15%|#4        | 141M/945M [00:00&lt;00:03, 249MB/s]
- 17%|#7        | 165M/945M [00:00&lt;00:03, 250MB/s]
- 20%|##        | 189M/945M [00:00&lt;00:03, 251MB/s]
- 23%|##2       | 213M/945M [00:00&lt;00:03, 250MB/s]
- 25%|##5       | 237M/945M [00:01&lt;00:02, 251MB/s]
- 28%|##7       | 261M/945M [00:01&lt;00:02, 251MB/s]
- 30%|###       | 285M/945M [00:01&lt;00:02, 251MB/s]
- 33%|###2      | 309M/945M [00:01&lt;00:02, 251MB/s]
- 35%|###5      | 333M/945M [00:01&lt;00:02, 250MB/s]
- 38%|###7      | 357M/945M [00:01&lt;00:02, 248MB/s]
- 40%|####      | 381M/945M [00:01&lt;00:02, 248MB/s]
- 43%|####2     | 404M/945M [00:01&lt;00:02, 246MB/s]
- 45%|####5     | 428M/945M [00:01&lt;00:02, 247MB/s]
- 48%|####7     | 452M/945M [00:01&lt;00:02, 247MB/s]
- 50%|#####     | 475M/945M [00:02&lt;00:01, 248MB/s]
- 53%|#####2    | 499M/945M [00:02&lt;00:01, 249MB/s]
- 56%|#####6    | 533M/945M [00:02&lt;00:01, 279MB/s]
- 60%|#####9    | 566M/945M [00:02&lt;00:01, 300MB/s]
- 63%|######3   | 600M/945M [00:02&lt;00:01, 316MB/s]
- 67%|######6   | 632M/945M [00:02&lt;00:01, 323MB/s]
- 70%|#######   | 663M/945M [00:02&lt;00:01, 280MB/s]
- 73%|#######3  | 691M/945M [00:02&lt;00:00, 269MB/s]
- 76%|#######5  | 717M/945M [00:02&lt;00:00, 250MB/s]
- 79%|#######8  | 742M/945M [00:03&lt;00:00, 241MB/s]
- 82%|########1 | 771M/945M [00:03&lt;00:00, 259MB/s]
- 85%|########5 | 804M/945M [00:03&lt;00:00, 283MB/s]
- 89%|########8 | 838M/945M [00:03&lt;00:00, 303MB/s]
- 92%|#########2| 871M/945M [00:03&lt;00:00, 316MB/s]
- 96%|#########5| 905M/945M [00:03&lt;00:00, 326MB/s]
- 99%|#########9| 938M/945M [00:03&lt;00:00, 334MB/s]
-100%|##########| 945M/945M [00:03&lt;00:00, 271MB/s]
+  2%|2         | 19.9M/945M [00:00&lt;00:04, 209MB/s]
+  4%|4         | 41.1M/945M [00:00&lt;00:04, 217MB/s]
+  7%|6         | 61.8M/945M [00:00&lt;00:04, 212MB/s]
+  9%|8         | 83.2M/945M [00:00&lt;00:04, 217MB/s]
+ 11%|#1        | 104M/945M [00:00&lt;00:04, 219MB/s]
+ 13%|#3        | 125M/945M [00:00&lt;00:04, 209MB/s]
+ 15%|#5        | 145M/945M [00:00&lt;00:04, 207MB/s]
+ 18%|#7        | 167M/945M [00:00&lt;00:03, 213MB/s]
+ 20%|#9        | 187M/945M [00:00&lt;00:03, 213MB/s]
+ 22%|##1       | 207M/945M [00:01&lt;00:03, 211MB/s]
+ 24%|##4       | 229M/945M [00:01&lt;00:03, 217MB/s]
+ 27%|##6       | 252M/945M [00:01&lt;00:03, 223MB/s]
+ 29%|##9       | 276M/945M [00:01&lt;00:03, 230MB/s]
+ 32%|###1      | 299M/945M [00:01&lt;00:02, 235MB/s]
+ 34%|###4      | 321M/945M [00:01&lt;00:02, 234MB/s]
+ 36%|###6      | 344M/945M [00:01&lt;00:02, 227MB/s]
+ 39%|###8      | 365M/945M [00:01&lt;00:02, 222MB/s]
+ 41%|####      | 387M/945M [00:01&lt;00:02, 218MB/s]
+ 44%|####3     | 411M/945M [00:01&lt;00:02, 230MB/s]
+ 46%|####6     | 439M/945M [00:02&lt;00:02, 246MB/s]
+ 49%|####9     | 466M/945M [00:02&lt;00:01, 257MB/s]
+ 52%|#####1    | 490M/945M [00:02&lt;00:01, 258MB/s]
+ 55%|#####4    | 515M/945M [00:02&lt;00:01, 239MB/s]
+ 57%|#####6    | 538M/945M [00:02&lt;00:01, 236MB/s]
+ 59%|#####9    | 561M/945M [00:02&lt;00:01, 219MB/s]
+ 62%|######1   | 582M/945M [00:02&lt;00:01, 215MB/s]
+ 64%|######3   | 603M/945M [00:02&lt;00:01, 211MB/s]
+ 66%|######6   | 625M/945M [00:02&lt;00:01, 219MB/s]
+ 68%|######8   | 646M/945M [00:03&lt;00:01, 212MB/s]
+ 71%|#######   | 668M/945M [00:03&lt;00:01, 217MB/s]
+ 73%|#######2  | 689M/945M [00:03&lt;00:01, 211MB/s]
+ 75%|#######5  | 710M/945M [00:03&lt;00:01, 213MB/s]
+ 77%|#######7  | 730M/945M [00:03&lt;00:01, 212MB/s]
+ 79%|#######9  | 750M/945M [00:03&lt;00:00, 207MB/s]
+ 82%|########1 | 771M/945M [00:03&lt;00:00, 209MB/s]
+ 84%|########3 | 791M/945M [00:03&lt;00:00, 211MB/s]
+ 86%|########5 | 812M/945M [00:03&lt;00:00, 208MB/s]
+ 88%|########8 | 832M/945M [00:03&lt;00:00, 210MB/s]
+ 90%|######### | 852M/945M [00:04&lt;00:00, 200MB/s]
+ 92%|#########2| 873M/945M [00:04&lt;00:00, 204MB/s]
+ 95%|#########4| 894M/945M [00:04&lt;00:00, 210MB/s]
+ 97%|#########6| 914M/945M [00:04&lt;00:00, 210MB/s]
+ 99%|#########8| 934M/945M [00:04&lt;00:00, 206MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 218MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -726,37 +734,37 @@ using a beam size of 1.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>`max_length` was not specified. Defaulting to 256 tokens.
 Example 1:
 
-prediction: Etienne Gould Nunan was born at monash hospital in melbourne in september . he was born with a hole in his heart and a brain bleed . his parents, carman and Jonathan, were worried about their son . but he was finally allowed to touch his mother for the first time .
+prediction: photographer John Daniels, 61, from Dunsfold in Surrey, has decades of experience working with animals . he used clean white studio backgrounds and comedy props to capture the heart-warming shots .
 
-target: Etienne Gould Nunan was  not breathing when he was born at just 26 weeks . He had a hole in his heart, a brain bleed and went on to suffer pneumonia, a collapsed lung and endure 58 blood transfusions to fight infections . Parents were delighted to finally take him home after 5 months in hospital . They would like to use his story to encourage people to give blood .
+target: John Daniels, 61, from Surrey, has decades of experience working with animals . Photographer's charming snaps  celebrate National Pet Day, which takes place tomorrow . Include comedy props, tiny furniture and unusual animal pairings .
 
 
 Example 2:
 
-prediction: the elaborate fraud involved cars and vans being driven into the side of buses . the elaborate scam allowed passengers on the bus to falsely claim from insurers . the crashes took place between October 2010 and January 2012 and earned ringleader John Smith £159k . he stage-managed the crashes around the Chester area over the three-year period .
+prediction: Mamadou Sakho limped off during the 2-1 win against blackburn on tuesday . the defender was replaced by Kolo Toure in the 28th minute . the former paris saint-germain defender will miss the game against Newcastle .
 
-target: 'Crash for cash' fraud involved cars being deliberately driven into buses . Passengers - most of whom were friends and relatives - would then claim . John Smith, 45, from Connah's Quay, orchestrated crashes in Chester area . He processed 218 bogus personal injury claims to no win no fee lawyers . Convicted yesterday of fraud and conspiracy to commit fraud after trial .
+target: Mamadou Sakho limped off in Liverpool win over Blackburn Rovers . Sakho was replaced by Kolo Toure in the 28th minute of the 1-0 victory . Liverpool face Newcastle United in the Premier League on Monday night . CLICK HERE for all the latest Liverpool news .
 
 
 Example 3:
 
-prediction: five men found crammed in a refrigerated lorry on the A40 near churcham, Gloucestershire . believed they had climbed into truck in Belgium before crossing the channel . police sniffer dogs were used to find them after officers opened the back doors .
+prediction: a man accused of stealing her husband's truck set up a sting on facebook . the mother-of-one arranged to meet the suspect with her husband at a gas station parking lot near I-45 in Houston, texas . the suspect claimed he bought the truck parts on the street from a stranger outside the city .
 
-target: Truck stopped by police this morning after travelling 200m across the UK . Police sniffer dog team found five men hiding in tiny space inside . It is thought they had climbed on board in Belgium before entering Britain . Comes days after illegal camp in Calais, France was closed down .
+target: Cristina Coria's husband's truck was stolen from home in Houston, Texas . It was found the following day but its custom-painted bed had been taken . She went on Facebook and saw an ad for a 2003 Chevy Stepside bed . Set up a meeting with the seller and then stalled until police showed up . Suspect, 18, is now facing charges for theft and unlawfully carrying a gun .
 
 
 Example 4:
 
-prediction: female stars including Nancy Dell'Olio, Josie Gibson, Jamelia and Susanna Reid have all stepped up to the plate for #SelfieEsteem . men take four selfies, while women take an average of six . the campaign is aimed at promoting self-esteem and empowering women .
+prediction: when she was a size 18, she was heckled with taunts of 'oi, fatty!' as she ran . even her doctor told her she was too big to contemplate running 26.2 miles . but she did it and completed a marathon in 2012 - and has done numerous other races since . now through her website, The Fat Girl's Guide to Running, she's encouraging other women to take up the sport regardless of size and ability .
 
-target: Good Morning Britain launched #SelfieEsteem today . Study reveals women take an average of six selfies before they're happy . Nancy Dell'Olio, Piers Morgan and Lydia Rose Bright also took part .
+target: Julie Creffield was told she was 'too fat to run' when she was a size 18 . But she still completed a marathon . Now encouraging other women to run whatever their size . Launched This Morning's Run For Your Life campaign with Nell McAndrew . Poll carried out by show found two thirds of women think they can't run .
 
 
 Example 5:
 
-prediction: keeper appeared to congratulate sunderland striker on his goal at half-time . he was speaking on sky sports after the wear-tyne derby . sportsmail's Jamie Carragher criticised the keeper for his actions .
+prediction: being socially isolated can lead to health problems including dementia . campaigners say local councils should draw up maps of areas where people are most likely to suffer from loneliness .
 
-target: JAMIE CARRAGHER: Tim Krul was wrong to congratulate Jermain Defoe . That argument from Sportsmail's columnist has divided opinion this week . Carragher still cannot work out why the Newcastle keeper did what he did .
+target: Local councils are urged to draw up maps of the residents who are at risk . Essex and Gloucestershire have already made 'loneliness maps' Experts warn that being lonely can lead to serious health problems .
 </pre></div>
 </div>
 </div>
@@ -1049,7 +1057,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  0.981 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  20.693 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

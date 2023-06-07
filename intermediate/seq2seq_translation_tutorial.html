@@ -660,7 +660,7 @@ Counting words...
 Counted words:
 fra 4345
 eng 2803
-['je ne suis pas completement naif .', 'i m not completely naive .']
+['tu es triste .', 'you re sad .']
 </pre></div>
 </div>
 </div>
@@ -1102,65 +1102,65 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 47s (- 25m 7s) (5000 6%) 2.8264
-3m 33s (- 23m 9s) (10000 13%) 2.3000
-5m 13s (- 20m 55s) (15000 20%) 2.0162
-6m 54s (- 18m 58s) (20000 26%) 1.7669
-8m 34s (- 17m 8s) (25000 33%) 1.5742
-10m 15s (- 15m 23s) (30000 40%) 1.4336
-11m 55s (- 13m 37s) (35000 46%) 1.2583
-13m 36s (- 11m 54s) (40000 53%) 1.1280
-15m 17s (- 10m 11s) (45000 60%) 1.0108
-16m 58s (- 8m 29s) (50000 66%) 0.9516
-18m 39s (- 6m 47s) (55000 73%) 0.8495
-20m 20s (- 5m 5s) (60000 80%) 0.7738
-22m 6s (- 3m 24s) (65000 86%) 0.6929
-23m 48s (- 1m 42s) (70000 93%) 0.6510
-25m 29s (- 0m 0s) (75000 100%) 0.5930
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 49s (- 25m 27s) (5000 6%) 2.8383
+3m 32s (- 23m 0s) (10000 13%) 2.2805
+5m 14s (- 20m 58s) (15000 20%) 1.9815
+6m 58s (- 19m 11s) (20000 26%) 1.7762
+8m 42s (- 17m 25s) (25000 33%) 1.5907
+10m 28s (- 15m 42s) (30000 40%) 1.3915
+12m 14s (- 13m 59s) (35000 46%) 1.2209
+14m 2s (- 12m 16s) (40000 53%) 1.1352
+15m 50s (- 10m 33s) (45000 60%) 1.0243
+17m 37s (- 8m 48s) (50000 66%) 0.9115
+19m 25s (- 7m 3s) (55000 73%) 0.8518
+21m 12s (- 5m 18s) (60000 80%) 0.7489
+22m 57s (- 3m 31s) (65000 86%) 0.7084
+24m 42s (- 1m 45s) (70000 93%) 0.6705
+26m 24s (- 0m 0s) (75000 100%) 0.5934
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je suis tres impressionnee .
-= i m very impressed .
-&lt; i m very impressed . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je ne suis pas tres organisee .
+= i m not very organized .
+&lt; i m not very good . &lt;EOS&gt;
 
-&gt; il t attend a la maison .
-= he s waiting for you at home .
-&lt; he s waiting for you home . &lt;EOS&gt;
+&gt; nous sommes pour ainsi dire prets .
+= we re about ready .
+&lt; we re good at this . &lt;EOS&gt;
 
-&gt; elle n est pas a blamer .
-= she is not to blame .
-&lt; she is not to blame . &lt;EOS&gt;
+&gt; vous n etes pas gentil .
+= you are not kind .
+&lt; you re not kind . &lt;EOS&gt;
 
-&gt; je realise un documentaire .
-= i m making a documentary .
-&lt; i m eating a sweater . &lt;EOS&gt;
+&gt; je suis interessee .
+= i m interested .
+&lt; i m interested . &lt;EOS&gt;
 
-&gt; je me rejouis que vous soyez mon amie .
-= i m glad you re my friend .
-&lt; i m glad you re my friend . &lt;EOS&gt;
+&gt; je suis desolee de vous avoir derange .
+= i m sorry to have disturbed you .
+&lt; i m sorry to have disturbed you . &lt;EOS&gt;
 
-&gt; je vais passer a la television .
-= i m going to be on tv .
-&lt; i m going to fly in tv . &lt;EOS&gt;
+&gt; vous etes vraiment tres bons .
+= you are really very good .
+&lt; you re really very good . &lt;EOS&gt;
 
-&gt; nous sommes tous a la pension .
-= we re all retired .
-&lt; we re all retired . &lt;EOS&gt;
+&gt; nous ne sommes pas apparentees .
+= we aren t related .
+&lt; we re not related . &lt;EOS&gt;
 
-&gt; il n est qu un reveur .
-= he is nothing more than a dreamer .
-&lt; he is nothing more than a dreamer she . &lt;EOS&gt;
+&gt; tu n es pas une sainte .
+= you re no saint .
+&lt; you re no saint . &lt;EOS&gt;
 
-&gt; je n en peux plus des hamburgers .
-= i m sick and tired of hamburgers .
-&lt; i m sick of tired of them . &lt;EOS&gt;
+&gt; il est beau et intelligent .
+= he is handsome and clever .
+&lt; he is handsome and trusting . &lt;EOS&gt;
 
-&gt; le bleu vous sied superbement .
-= you are very attractive in blue .
-&lt; you are very good to blue . &lt;EOS&gt;
+&gt; je ne suis pas sure d etre prete .
+= i m not sure i m ready .
+&lt; i m not sure i m ready . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1177,7 +1177,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7fe133cc6830&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f717d040f10&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1225,7 +1225,7 @@ and labels:</p>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_007.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_007.png"/></li>
 </ul>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she s five years younger than i am . &lt;EOS&gt;
 /var/lib/jenkins/workspace/intermediate_source/seq2seq_translation_tutorial.py:807: UserWarning:
 
 FixedFormatter should only be used together with FixedLocator
@@ -1237,9 +1237,9 @@ FixedFormatter should only be used together with FixedLocator
 input = elle est trop petit .
 output = she is too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared of dying . &lt;EOS&gt;
+output = i m not scared of die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he is a young young talented . &lt;EOS&gt;
+output = he is a talented young person . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1269,7 +1269,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 25 minutes  35.769 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 26 minutes  30.452 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

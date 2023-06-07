@@ -138,7 +138,7 @@ We use ``matplotlib`` to visualize some samples in our training data.
 
 
 .. image-sg:: /beginner/basics/images/sphx_glr_data_tutorial_001.png
-   :alt: Sandal, Dress, Bag, Coat, T-Shirt, Sandal, Bag, Shirt, Trouser
+   :alt: Sneaker, Shirt, Shirt, Pullover, T-Shirt, Sneaker, Ankle Boot, Coat, Pullover
    :srcset: /beginner/basics/images/sphx_glr_data_tutorial_001.png
    :class: sphx-glr-single-img
 
@@ -373,7 +373,7 @@ the data loading order, take a look at `Samplers <https://pytorch.org/docs/stabl
 
     Feature batch shape: torch.Size([64, 1, 28, 28])
     Labels batch shape: torch.Size([64])
-    Label: 1
+    Label: 6
 
 
 
@@ -392,7 +392,7 @@ Further Reading
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.383 seconds)
+   **Total running time of the script:** ( 0 minutes  0.384 seconds)
 
 
 .. _sphx_glr_download_beginner_basics_data_tutorial.py:

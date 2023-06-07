@@ -49,7 +49,7 @@ let's look what we can do with tensors.
  .. code-block:: none
 
 
-    <torch._C.Generator object at 0x7f111dffc030>
+    <torch._C.Generator object at 0x7f1f14a30030>
 
 
 
@@ -386,7 +386,7 @@ created. Let's see it in action.
  .. code-block:: none
 
     tensor([5., 7., 9.], grad_fn=<AddBackward0>)
-    <AddBackward0 object at 0x7f10ae7672b0>
+    <AddBackward0 object at 0x7f1ea53a3550>
 
 
 
@@ -421,7 +421,7 @@ But how does that help us compute a gradient?
  .. code-block:: none
 
     tensor(21., grad_fn=<SumBackward0>)
-    <SumBackward0 object at 0x7f10ae765cc0>
+    <SumBackward0 object at 0x7f1ea53a0670>
 
 
 
@@ -536,7 +536,7 @@ successful programmer in deep learning.
 
     False False
     None
-    <AddBackward0 object at 0x7f10ae767f70>
+    <AddBackward0 object at 0x7f1ea53a18a0>
     True
     None
 
