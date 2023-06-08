@@ -445,7 +445,7 @@ any existing CNN with very little modification.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>   <span class="c1"># interactive mode</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7f2a10747ac0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7fa73fe1beb0&gt;
 </pre></div>
 </div>
 <div class="section" id="loading-the-data">
@@ -479,28 +479,28 @@ network.</p>
 Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ./MNIST/raw/train-images-idx3-ubyte.gz
 
   0%|          | 0/9912422 [00:00&lt;?, ?it/s]
-100%|##########| 9912422/9912422 [00:00&lt;00:00, 345456678.39it/s]
+100%|##########| 9912422/9912422 [00:00&lt;00:00, 340513782.03it/s]
 Extracting ./MNIST/raw/train-images-idx3-ubyte.gz to ./MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to ./MNIST/raw/train-labels-idx1-ubyte.gz
 
   0%|          | 0/28881 [00:00&lt;?, ?it/s]
-100%|##########| 28881/28881 [00:00&lt;00:00, 31020664.23it/s]
+100%|##########| 28881/28881 [00:00&lt;00:00, 156102698.23it/s]
 Extracting ./MNIST/raw/train-labels-idx1-ubyte.gz to ./MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to ./MNIST/raw/t10k-images-idx3-ubyte.gz
 
   0%|          | 0/1648877 [00:00&lt;?, ?it/s]
-100%|##########| 1648877/1648877 [00:00&lt;00:00, 219670660.25it/s]
+100%|##########| 1648877/1648877 [00:00&lt;00:00, 282500363.41it/s]
 Extracting ./MNIST/raw/t10k-images-idx3-ubyte.gz to ./MNIST/raw
 
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
 Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to ./MNIST/raw/t10k-labels-idx1-ubyte.gz
 
   0%|          | 0/4542 [00:00&lt;?, ?it/s]
-100%|##########| 4542/4542 [00:00&lt;00:00, 42334508.37it/s]
+100%|##########| 4542/4542 [00:00&lt;00:00, 36777082.56it/s]
 Extracting ./MNIST/raw/t10k-labels-idx1-ubyte.gz to ./MNIST/raw
 </pre></div>
 </div>
@@ -697,111 +697,111 @@ Default grid_sample and affine_grid behavior has changed to align_corners=False 
 Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
 
 Train Epoch: 1 [0/60000 (0%)]   Loss: 2.315648
-Train Epoch: 1 [32000/60000 (53%)]      Loss: 1.043945
+Train Epoch: 1 [32000/60000 (53%)]      Loss: 1.052313
 /opt/conda/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning:
 
 size_average and reduce args will be deprecated, please use reduction='sum' instead.
 
 
-Test set: Average loss: 0.3485, Accuracy: 8996/10000 (90%)
+Test set: Average loss: 0.2576, Accuracy: 9246/10000 (92%)
 
-Train Epoch: 2 [0/60000 (0%)]   Loss: 0.687529
-Train Epoch: 2 [32000/60000 (53%)]      Loss: 0.318307
+Train Epoch: 2 [0/60000 (0%)]   Loss: 0.519443
+Train Epoch: 2 [32000/60000 (53%)]      Loss: 0.358458
 
-Test set: Average loss: 0.1647, Accuracy: 9523/10000 (95%)
+Test set: Average loss: 0.1727, Accuracy: 9482/10000 (95%)
 
-Train Epoch: 3 [0/60000 (0%)]   Loss: 0.443051
-Train Epoch: 3 [32000/60000 (53%)]      Loss: 0.240894
+Train Epoch: 3 [0/60000 (0%)]   Loss: 0.470321
+Train Epoch: 3 [32000/60000 (53%)]      Loss: 0.236754
 
-Test set: Average loss: 0.1285, Accuracy: 9594/10000 (96%)
+Test set: Average loss: 0.1037, Accuracy: 9683/10000 (97%)
 
-Train Epoch: 4 [0/60000 (0%)]   Loss: 0.374851
-Train Epoch: 4 [32000/60000 (53%)]      Loss: 0.139409
+Train Epoch: 4 [0/60000 (0%)]   Loss: 0.327329
+Train Epoch: 4 [32000/60000 (53%)]      Loss: 0.140420
 
-Test set: Average loss: 0.1108, Accuracy: 9674/10000 (97%)
+Test set: Average loss: 0.1366, Accuracy: 9584/10000 (96%)
 
-Train Epoch: 5 [0/60000 (0%)]   Loss: 0.213753
-Train Epoch: 5 [32000/60000 (53%)]      Loss: 0.252789
+Train Epoch: 5 [0/60000 (0%)]   Loss: 0.338199
+Train Epoch: 5 [32000/60000 (53%)]      Loss: 0.181396
 
-Test set: Average loss: 0.0822, Accuracy: 9755/10000 (98%)
+Test set: Average loss: 0.0899, Accuracy: 9716/10000 (97%)
 
-Train Epoch: 6 [0/60000 (0%)]   Loss: 0.123680
-Train Epoch: 6 [32000/60000 (53%)]      Loss: 0.088285
+Train Epoch: 6 [0/60000 (0%)]   Loss: 0.097023
+Train Epoch: 6 [32000/60000 (53%)]      Loss: 0.114346
 
-Test set: Average loss: 0.0770, Accuracy: 9773/10000 (98%)
+Test set: Average loss: 0.0781, Accuracy: 9764/10000 (98%)
 
-Train Epoch: 7 [0/60000 (0%)]   Loss: 0.078596
-Train Epoch: 7 [32000/60000 (53%)]      Loss: 0.168406
+Train Epoch: 7 [0/60000 (0%)]   Loss: 0.107670
+Train Epoch: 7 [32000/60000 (53%)]      Loss: 0.192832
 
-Test set: Average loss: 0.0645, Accuracy: 9796/10000 (98%)
+Test set: Average loss: 0.0768, Accuracy: 9772/10000 (98%)
 
-Train Epoch: 8 [0/60000 (0%)]   Loss: 0.229957
-Train Epoch: 8 [32000/60000 (53%)]      Loss: 0.072649
+Train Epoch: 8 [0/60000 (0%)]   Loss: 0.233843
+Train Epoch: 8 [32000/60000 (53%)]      Loss: 0.089230
 
-Test set: Average loss: 0.0673, Accuracy: 9800/10000 (98%)
+Test set: Average loss: 0.0682, Accuracy: 9793/10000 (98%)
 
-Train Epoch: 9 [0/60000 (0%)]   Loss: 0.095127
-Train Epoch: 9 [32000/60000 (53%)]      Loss: 0.067644
+Train Epoch: 9 [0/60000 (0%)]   Loss: 0.062153
+Train Epoch: 9 [32000/60000 (53%)]      Loss: 0.124732
 
-Test set: Average loss: 0.0714, Accuracy: 9785/10000 (98%)
+Test set: Average loss: 0.0610, Accuracy: 9817/10000 (98%)
 
-Train Epoch: 10 [0/60000 (0%)]  Loss: 0.108314
-Train Epoch: 10 [32000/60000 (53%)]     Loss: 0.212063
+Train Epoch: 10 [0/60000 (0%)]  Loss: 0.061958
+Train Epoch: 10 [32000/60000 (53%)]     Loss: 0.185615
 
-Test set: Average loss: 0.0763, Accuracy: 9756/10000 (98%)
+Test set: Average loss: 0.0739, Accuracy: 9786/10000 (98%)
 
-Train Epoch: 11 [0/60000 (0%)]  Loss: 0.178179
-Train Epoch: 11 [32000/60000 (53%)]     Loss: 0.098721
+Train Epoch: 11 [0/60000 (0%)]  Loss: 0.136585
+Train Epoch: 11 [32000/60000 (53%)]     Loss: 0.150509
 
-Test set: Average loss: 0.0563, Accuracy: 9824/10000 (98%)
+Test set: Average loss: 0.0582, Accuracy: 9836/10000 (98%)
 
-Train Epoch: 12 [0/60000 (0%)]  Loss: 0.168663
-Train Epoch: 12 [32000/60000 (53%)]     Loss: 0.184754
+Train Epoch: 12 [0/60000 (0%)]  Loss: 0.103059
+Train Epoch: 12 [32000/60000 (53%)]     Loss: 0.103319
 
-Test set: Average loss: 0.0540, Accuracy: 9842/10000 (98%)
+Test set: Average loss: 0.0615, Accuracy: 9818/10000 (98%)
 
-Train Epoch: 13 [0/60000 (0%)]  Loss: 0.137477
-Train Epoch: 13 [32000/60000 (53%)]     Loss: 0.094390
+Train Epoch: 13 [0/60000 (0%)]  Loss: 0.087784
+Train Epoch: 13 [32000/60000 (53%)]     Loss: 0.083768
 
-Test set: Average loss: 0.0532, Accuracy: 9840/10000 (98%)
+Test set: Average loss: 0.0500, Accuracy: 9855/10000 (99%)
 
-Train Epoch: 14 [0/60000 (0%)]  Loss: 0.044671
-Train Epoch: 14 [32000/60000 (53%)]     Loss: 0.185295
+Train Epoch: 14 [0/60000 (0%)]  Loss: 0.048588
+Train Epoch: 14 [32000/60000 (53%)]     Loss: 0.133355
 
-Test set: Average loss: 0.0479, Accuracy: 9857/10000 (99%)
+Test set: Average loss: 0.0543, Accuracy: 9842/10000 (98%)
 
-Train Epoch: 15 [0/60000 (0%)]  Loss: 0.072110
-Train Epoch: 15 [32000/60000 (53%)]     Loss: 0.118726
+Train Epoch: 15 [0/60000 (0%)]  Loss: 0.066583
+Train Epoch: 15 [32000/60000 (53%)]     Loss: 0.088839
 
-Test set: Average loss: 0.0607, Accuracy: 9823/10000 (98%)
+Test set: Average loss: 0.0515, Accuracy: 9850/10000 (98%)
 
-Train Epoch: 16 [0/60000 (0%)]  Loss: 0.069333
-Train Epoch: 16 [32000/60000 (53%)]     Loss: 0.117488
+Train Epoch: 16 [0/60000 (0%)]  Loss: 0.078937
+Train Epoch: 16 [32000/60000 (53%)]     Loss: 0.260425
 
-Test set: Average loss: 0.0503, Accuracy: 9865/10000 (99%)
+Test set: Average loss: 0.0504, Accuracy: 9860/10000 (99%)
 
-Train Epoch: 17 [0/60000 (0%)]  Loss: 0.342099
-Train Epoch: 17 [32000/60000 (53%)]     Loss: 0.188458
+Train Epoch: 17 [0/60000 (0%)]  Loss: 0.287077
+Train Epoch: 17 [32000/60000 (53%)]     Loss: 0.114912
 
-Test set: Average loss: 0.0465, Accuracy: 9864/10000 (99%)
+Test set: Average loss: 0.0707, Accuracy: 9778/10000 (98%)
 
-Train Epoch: 18 [0/60000 (0%)]  Loss: 0.057125
-Train Epoch: 18 [32000/60000 (53%)]     Loss: 0.089977
+Train Epoch: 18 [0/60000 (0%)]  Loss: 0.070048
+Train Epoch: 18 [32000/60000 (53%)]     Loss: 0.058902
 
-Test set: Average loss: 0.0454, Accuracy: 9870/10000 (99%)
+Test set: Average loss: 0.0460, Accuracy: 9871/10000 (99%)
 
-Train Epoch: 19 [0/60000 (0%)]  Loss: 0.070679
-Train Epoch: 19 [32000/60000 (53%)]     Loss: 0.137060
+Train Epoch: 19 [0/60000 (0%)]  Loss: 0.070029
+Train Epoch: 19 [32000/60000 (53%)]     Loss: 0.125864
 
-Test set: Average loss: 0.0452, Accuracy: 9864/10000 (99%)
+Test set: Average loss: 0.0472, Accuracy: 9860/10000 (99%)
 
-Train Epoch: 20 [0/60000 (0%)]  Loss: 0.111597
-Train Epoch: 20 [32000/60000 (53%)]     Loss: 0.179344
+Train Epoch: 20 [0/60000 (0%)]  Loss: 0.057031
+Train Epoch: 20 [32000/60000 (53%)]     Loss: 0.068502
 
-Test set: Average loss: 0.0444, Accuracy: 9876/10000 (99%)
+Test set: Average loss: 0.0444, Accuracy: 9861/10000 (99%)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  6.865 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  5.031 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-spatial-transformer-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/a4f07fecba75b5e84fe9e56cac0c7b71/spatial_transformer_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">spatial_transformer_tutorial.py</span></code></a></p>

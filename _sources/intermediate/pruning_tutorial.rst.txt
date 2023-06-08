@@ -409,7 +409,7 @@ present.
 
  .. code-block:: none
 
-    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7f2a1073f010>)])
+    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7fa692fc07f0>)])
 
 
 
@@ -577,7 +577,7 @@ module attributes, and the module will now have two ``forward_pre_hooks``.
 
  .. code-block:: none
 
-    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7f2a1073f010>), (1, <torch.nn.utils.prune.L1Unstructured object at 0x7f2a1073ef50>)])
+    OrderedDict([(0, <torch.nn.utils.prune.RandomUnstructured object at 0x7fa692fc07f0>), (1, <torch.nn.utils.prune.L1Unstructured object at 0x7fa692fc2d70>)])
 
 
 
@@ -675,7 +675,7 @@ pruning applied to the ``weight`` parameter.
 
  .. code-block:: none
 
-    [<torch.nn.utils.prune.RandomUnstructured object at 0x7f2a1073f010>, <torch.nn.utils.prune.LnStructured object at 0x7f2a1073c6d0>]
+    [<torch.nn.utils.prune.RandomUnstructured object at 0x7fa692fc07f0>, <torch.nn.utils.prune.LnStructured object at 0x7fa6930791b0>]
 
 
 

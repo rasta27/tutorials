@@ -454,7 +454,7 @@ batched and non-batched text input (for example, one can either pass a single se
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0.00/792k [00:00&lt;?, ?B/s]
-100%|##########| 792k/792k [00:00&lt;00:00, 161MB/s]
+100%|##########| 792k/792k [00:00&lt;00:00, 139MB/s]
 </pre></div>
 </div>
 <p>Alternatively, we can also use the transform shipped with the pretrained models that does all of the above out-of-the-box</p>
@@ -479,44 +479,46 @@ translation. For additional details on available pretrained models, see <a class
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/text/t5.base.generation.v2.pt" to /var/lib/jenkins/.cache/torch/hub/checkpoints/t5.base.generation.v2.pt
 
   0%|          | 0.00/945M [00:00&lt;?, ?B/s]
-  2%|2         | 19.5M/945M [00:00&lt;00:04, 205MB/s]
-  4%|4         | 41.6M/945M [00:00&lt;00:04, 220MB/s]
-  7%|6         | 63.9M/945M [00:00&lt;00:04, 227MB/s]
-  9%|9         | 85.6M/945M [00:00&lt;00:04, 222MB/s]
- 11%|#1        | 108M/945M [00:00&lt;00:03, 227MB/s]
- 14%|#3        | 131M/945M [00:00&lt;00:03, 230MB/s]
- 16%|#6        | 153M/945M [00:00&lt;00:03, 232MB/s]
- 19%|#9        | 183M/945M [00:00&lt;00:03, 259MB/s]
- 23%|##2       | 215M/945M [00:00&lt;00:02, 283MB/s]
- 26%|##5       | 242M/945M [00:01&lt;00:02, 271MB/s]
- 28%|##8       | 268M/945M [00:01&lt;00:02, 260MB/s]
- 31%|###1      | 293M/945M [00:01&lt;00:02, 251MB/s]
- 34%|###3      | 317M/945M [00:01&lt;00:02, 241MB/s]
- 36%|###6      | 340M/945M [00:01&lt;00:02, 227MB/s]
- 38%|###8      | 362M/945M [00:01&lt;00:02, 223MB/s]
- 42%|####1     | 393M/945M [00:01&lt;00:02, 251MB/s]
- 45%|####4     | 425M/945M [00:01&lt;00:01, 274MB/s]
- 48%|####8     | 457M/945M [00:01&lt;00:01, 291MB/s]
- 52%|#####1    | 489M/945M [00:01&lt;00:01, 304MB/s]
- 55%|#####5    | 521M/945M [00:02&lt;00:01, 313MB/s]
- 58%|#####8    | 552M/945M [00:02&lt;00:01, 317MB/s]
- 62%|######1   | 584M/945M [00:02&lt;00:01, 323MB/s]
- 65%|######5   | 616M/945M [00:02&lt;00:01, 326MB/s]
- 69%|######8   | 648M/945M [00:02&lt;00:00, 329MB/s]
- 72%|#######1  | 679M/945M [00:02&lt;00:01, 270MB/s]
- 75%|#######4  | 707M/945M [00:02&lt;00:01, 242MB/s]
- 77%|#######7  | 731M/945M [00:02&lt;00:01, 220MB/s]
- 80%|#######9  | 753M/945M [00:03&lt;00:00, 210MB/s]
- 82%|########1 | 774M/945M [00:03&lt;00:00, 205MB/s]
- 84%|########4 | 794M/945M [00:03&lt;00:00, 206MB/s]
- 86%|########6 | 815M/945M [00:03&lt;00:00, 209MB/s]
- 88%|########8 | 835M/945M [00:03&lt;00:00, 205MB/s]
- 91%|######### | 855M/945M [00:03&lt;00:00, 201MB/s]
- 93%|#########2| 874M/945M [00:03&lt;00:00, 200MB/s]
- 95%|#########4| 894M/945M [00:03&lt;00:00, 201MB/s]
- 97%|#########6| 914M/945M [00:03&lt;00:00, 204MB/s]
- 99%|#########8| 934M/945M [00:04&lt;00:00, 195MB/s]
-100%|##########| 945M/945M [00:04&lt;00:00, 242MB/s]
+  2%|2         | 22.4M/945M [00:00&lt;00:04, 235MB/s]
+  5%|4         | 46.0M/945M [00:00&lt;00:03, 242MB/s]
+  7%|7         | 69.4M/945M [00:00&lt;00:03, 243MB/s]
+ 10%|9         | 93.2M/945M [00:00&lt;00:03, 246MB/s]
+ 12%|#2        | 117M/945M [00:00&lt;00:03, 247MB/s]
+ 15%|#4        | 141M/945M [00:00&lt;00:03, 247MB/s]
+ 17%|#7        | 165M/945M [00:00&lt;00:03, 249MB/s]
+ 20%|#9        | 188M/945M [00:00&lt;00:03, 247MB/s]
+ 22%|##2       | 212M/945M [00:00&lt;00:03, 247MB/s]
+ 25%|##4       | 235M/945M [00:01&lt;00:03, 246MB/s]
+ 27%|##7       | 259M/945M [00:01&lt;00:02, 245MB/s]
+ 30%|##9       | 282M/945M [00:01&lt;00:02, 243MB/s]
+ 32%|###2      | 306M/945M [00:01&lt;00:02, 244MB/s]
+ 35%|###4      | 329M/945M [00:01&lt;00:02, 243MB/s]
+ 37%|###7      | 352M/945M [00:01&lt;00:02, 244MB/s]
+ 40%|###9      | 375M/945M [00:01&lt;00:02, 244MB/s]
+ 42%|####2     | 399M/945M [00:01&lt;00:02, 246MB/s]
+ 45%|####4     | 423M/945M [00:01&lt;00:02, 248MB/s]
+ 47%|####7     | 447M/945M [00:01&lt;00:02, 248MB/s]
+ 50%|####9     | 471M/945M [00:02&lt;00:02, 247MB/s]
+ 52%|#####2    | 495M/945M [00:02&lt;00:01, 248MB/s]
+ 55%|#####4    | 518M/945M [00:02&lt;00:01, 245MB/s]
+ 57%|#####7    | 542M/945M [00:02&lt;00:01, 245MB/s]
+ 60%|#####9    | 565M/945M [00:02&lt;00:01, 246MB/s]
+ 62%|######2   | 589M/945M [00:02&lt;00:01, 244MB/s]
+ 65%|######4   | 612M/945M [00:02&lt;00:01, 209MB/s]
+ 67%|######7   | 636M/945M [00:02&lt;00:01, 220MB/s]
+ 70%|######9   | 660M/945M [00:02&lt;00:01, 228MB/s]
+ 72%|#######2  | 683M/945M [00:02&lt;00:01, 233MB/s]
+ 75%|#######4  | 707M/945M [00:03&lt;00:01, 237MB/s]
+ 77%|#######7  | 730M/945M [00:03&lt;00:00, 240MB/s]
+ 80%|#######9  | 754M/945M [00:03&lt;00:00, 242MB/s]
+ 82%|########2 | 778M/945M [00:03&lt;00:00, 245MB/s]
+ 85%|########4 | 802M/945M [00:03&lt;00:00, 246MB/s]
+ 87%|########7 | 826M/945M [00:03&lt;00:00, 247MB/s]
+ 90%|########9 | 849M/945M [00:03&lt;00:00, 245MB/s]
+ 92%|#########2| 873M/945M [00:03&lt;00:00, 247MB/s]
+ 95%|#########4| 897M/945M [00:03&lt;00:00, 246MB/s]
+ 97%|#########7| 920M/945M [00:03&lt;00:00, 244MB/s]
+100%|##########| 945M/945M [00:04&lt;00:00, 243MB/s]
 
 T5Model(
   (token_embeddings): Embedding(32128, 768, padding_idx=0)
@@ -1051,7 +1053,7 @@ target: Leute Reparieren das Dach eines Hauses.
 <span class="n">target</span><span class="p">:</span> <span class="n">Leute</span> <span class="n">Reparieren</span> <span class="n">das</span> <span class="n">Dach</span> <span class="n">eines</span> <span class="n">Hauses</span><span class="o">.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  8.492 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  7.536 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-t5-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/c5b478057ab5d58108ca9f657de235ef/t5_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">t5_tutorial.py</span></code></a></p>

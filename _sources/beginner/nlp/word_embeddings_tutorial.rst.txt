@@ -195,7 +195,7 @@ indices are integers, not floats).
  .. code-block:: none
 
 
-    <torch._C.Generator object at 0x7f29e93a4030>
+    <torch._C.Generator object at 0x7fa7211a0030>
 
 
 
@@ -343,9 +343,9 @@ examples and update the parameters with backpropagation.
  .. code-block:: none
 
     [(['forty', 'When'], 'winters'), (['winters', 'forty'], 'shall'), (['shall', 'winters'], 'besiege')]
-    [517.3286442756653, 514.7032854557037, 512.0966799259186, 509.5076253414154, 506.93475317955017, 504.379314661026, 501.83789587020874, 499.31041383743286, 496.79518151283264, 494.29088020324707]
-    tensor([-1.1040, -0.6999,  0.2330,  1.9133,  1.8373,  1.3251, -0.0710,  0.3458,
-            -0.6513,  1.5584], grad_fn=<SelectBackward0>)
+    [518.0109174251556, 515.4826488494873, 512.9728651046753, 510.4797601699829, 508.00099873542786, 505.536500453949, 503.0853877067566, 500.6464307308197, 498.2198123931885, 495.8051915168762]
+    tensor([-0.0077,  2.6154, -0.0641,  0.2604, -0.3614, -1.2620,  1.9137, -1.8600,
+             0.4732,  0.9991], grad_fn=<SelectBackward0>)
 
 
 
@@ -439,7 +439,7 @@ tips:
 
     [(['are', 'We', 'to', 'study'], 'about'), (['about', 'are', 'study', 'the'], 'to'), (['to', 'about', 'the', 'idea'], 'study'), (['study', 'to', 'idea', 'of'], 'the'), (['the', 'study', 'of', 'a'], 'idea')]
 
-    tensor([25, 47, 27, 30])
+    tensor([40, 33, 11,  7])
 
 
 

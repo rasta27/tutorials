@@ -214,7 +214,7 @@ inputs:
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x7f3f930e3400>]
+    [<matplotlib.lines.Line2D object at 0x7fe3553108b0>]
 
 
 
@@ -363,17 +363,17 @@ to the function with no history of its own.
  .. code-block:: none
 
     d:
-    <AddBackward0 object at 0x7f3f930fa0e0>
-    ((<MulBackward0 object at 0x7f3f1414f940>, 0), (None, 0))
-    ((<SinBackward0 object at 0x7f3f930fa0e0>, 0), (None, 0))
-    ((<AccumulateGrad object at 0x7f3f1414f940>, 0),)
+    <AddBackward0 object at 0x7fe3552cf010>
+    ((<MulBackward0 object at 0x7fe2d03bef20>, 0), (None, 0))
+    ((<SinBackward0 object at 0x7fe3552cf010>, 0), (None, 0))
+    ((<AccumulateGrad object at 0x7fe2d03bef20>, 0),)
     ()
 
     c:
-    <MulBackward0 object at 0x7f3f930fa0e0>
+    <MulBackward0 object at 0x7fe3552cf010>
 
     b:
-    <SinBackward0 object at 0x7f3f930fa0e0>
+    <SinBackward0 object at 0x7fe3552cf010>
 
     a:
     None
@@ -417,7 +417,7 @@ call the ``backward()`` method on the output, and check the input’s
             -1.4142e+00, -1.0000e+00, -5.1764e-01,  2.3850e-08,  5.1764e-01,
              1.0000e+00,  1.4142e+00,  1.7321e+00,  1.9319e+00,  2.0000e+00])
 
-    [<matplotlib.lines.Line2D object at 0x7f3f003abd60>]
+    [<matplotlib.lines.Line2D object at 0x7fe2d0277100>]
 
 
 
@@ -928,12 +928,12 @@ example usage:
     -------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
                          Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
     -------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-                    aten::div        50.86%       5.553ms        50.86%       5.553ms       5.553us      16.033ms        50.39%      16.033ms      16.033us          1000  
-                    aten::mul        48.92%       5.341ms        48.92%       5.341ms       5.341us      15.786ms        49.61%      15.786ms      15.786us          1000  
-        cudaDeviceSynchronize         0.22%      24.000us         0.22%      24.000us      24.000us       0.000us         0.00%       0.000us       0.000us             1  
+                    aten::div        50.16%       5.900ms        50.16%       5.900ms       5.900us      16.203ms        49.38%      16.203ms      16.203us          1000  
+                    aten::mul        49.64%       5.839ms        49.64%       5.839ms       5.839us      16.610ms        50.62%      16.610ms      16.610us          1000  
+        cudaDeviceSynchronize         0.20%      24.000us         0.20%      24.000us      24.000us       0.000us         0.00%       0.000us       0.000us             1  
     -------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-    Self CPU time total: 10.918ms
-    Self CUDA time total: 31.819ms
+    Self CPU time total: 11.763ms
+    Self CUDA time total: 32.813ms
 
 
 
@@ -1209,7 +1209,7 @@ API <https://pytorch.org/docs/stable/autograd.html#functional-higher-level-api>`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.822 seconds)
+   **Total running time of the script:** ( 0 minutes  0.878 seconds)
 
 
 .. _sphx_glr_download_beginner_introyt_autogradyt_tutorial.py:
