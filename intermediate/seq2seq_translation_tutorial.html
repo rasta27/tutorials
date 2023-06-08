@@ -447,7 +447,7 @@ and a decoder network unfolds that vector into a new sequence.</p>
 <div class="figure align-default">
 <img alt="" src="../_images/seq2seq.png"/>
 </div>
-<p>To improve upon this model we’ll use an <a class="reference external" href="https://arxiv.org/abs/1409.0473">attention
+<p>To improve upon this model we’ll use an <a class="reference external" href="https://arxiv.org/abs/1508.04025">attention
 mechanism</a>, which lets the decoder
 learn to focus over a specific range of the input sequence.</p>
 <p><strong>Recommended Reading:</strong></p>
@@ -466,8 +466,8 @@ how they work:</p>
 Statistical Machine Translation</a></p></li>
 <li><p><a class="reference external" href="https://arxiv.org/abs/1409.3215">Sequence to Sequence Learning with Neural
 Networks</a></p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/1409.0473">Neural Machine Translation by Jointly Learning to Align and
-Translate</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1508.04025">Effective Approaches to Attention-based Neural Machine
+Translation</a></p></li>
 <li><p><a class="reference external" href="https://arxiv.org/abs/1506.05869">A Neural Conversational Model</a></p></li>
 </ul>
 <p>You will also find the previous tutorials on
@@ -1102,21 +1102,21 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_001.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_001.png"/></li>
 <li><img alt="seq2seq translation tutorial" class="sphx-glr-multi-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_002.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_002.png"/></li>
 </ul>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 46s (- 24m 56s) (5000 6%) 2.8543
-3m 28s (- 22m 34s) (10000 13%) 2.3013
-5m 9s (- 20m 38s) (15000 20%) 1.9552
-6m 49s (- 18m 46s) (20000 26%) 1.7216
-8m 29s (- 16m 59s) (25000 33%) 1.5253
-10m 10s (- 15m 16s) (30000 40%) 1.3681
-11m 51s (- 13m 33s) (35000 46%) 1.2202
-13m 34s (- 11m 52s) (40000 53%) 1.1128
-15m 17s (- 10m 11s) (45000 60%) 1.0037
-17m 0s (- 8m 30s) (50000 66%) 0.9167
-18m 43s (- 6m 48s) (55000 73%) 0.8325
-20m 27s (- 5m 6s) (60000 80%) 0.7587
-22m 10s (- 3m 24s) (65000 86%) 0.6828
-23m 51s (- 1m 42s) (70000 93%) 0.6376
-25m 32s (- 0m 0s) (75000 100%) 0.5664
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 47s (- 25m 9s) (5000 6%) 2.8543
+3m 29s (- 22m 44s) (10000 13%) 2.3013
+5m 12s (- 20m 51s) (15000 20%) 1.9552
+6m 56s (- 19m 6s) (20000 26%) 1.7216
+8m 38s (- 17m 17s) (25000 33%) 1.5253
+10m 21s (- 15m 32s) (30000 40%) 1.3681
+12m 3s (- 13m 47s) (35000 46%) 1.2202
+13m 46s (- 12m 3s) (40000 53%) 1.1128
+15m 29s (- 10m 19s) (45000 60%) 1.0037
+17m 12s (- 8m 36s) (50000 66%) 0.9167
+18m 55s (- 6m 52s) (55000 73%) 0.8325
+20m 38s (- 5m 9s) (60000 80%) 0.7587
+22m 21s (- 3m 26s) (65000 86%) 0.6828
+24m 5s (- 1m 43s) (70000 93%) 0.6376
+25m 48s (- 0m 0s) (75000 100%) 0.5664
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
@@ -1177,7 +1177,7 @@ output steps:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><a class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="torch.Tensor"><span class="n">attentions</span></a><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 </pre></div>
 </div>
-<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f02ea9e1600&gt;
+<img alt="seq2seq translation tutorial" class="sphx-glr-single-img" src="../_images/sphx_glr_seq2seq_translation_tutorial_003.png" srcset="../_images/sphx_glr_seq2seq_translation_tutorial_003.png"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f2942ade080&gt;
 </pre></div>
 </div>
 <p>For a better viewing experience we will do the extra work of adding axes
@@ -1269,7 +1269,7 @@ this:</p>
 </ul>
 </li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 25 minutes  38.280 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 25 minutes  54.508 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/3baf9960a4be104931872ff3ffda07b7/seq2seq_translation_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></p>

@@ -63,7 +63,7 @@ and a decoder network unfolds that vector into a new sequence.
    :alt:
 
 To improve upon this model we'll use an `attention
-mechanism <https://arxiv.org/abs/1409.0473>`__, which lets the decoder
+mechanism <https://arxiv.org/abs/1508.04025>`__, which lets the decoder
 learn to focus over a specific range of the input sequence.
 
 **Recommended Reading:**
@@ -84,8 +84,8 @@ how they work:
    Statistical Machine Translation <https://arxiv.org/abs/1406.1078>`__
 -  `Sequence to Sequence Learning with Neural
    Networks <https://arxiv.org/abs/1409.3215>`__
--  `Neural Machine Translation by Jointly Learning to Align and
-   Translate <https://arxiv.org/abs/1409.0473>`__
+-  `Effective Approaches to Attention-based Neural Machine
+   Translation <https://arxiv.org/abs/1508.04025>`__
 -  `A Neural Conversational Model <https://arxiv.org/abs/1506.05869>`__
 
 You will also find the previous tutorials on
@@ -1035,21 +1035,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 46s (- 24m 56s) (5000 6%) 2.8543
-    3m 28s (- 22m 34s) (10000 13%) 2.3013
-    5m 9s (- 20m 38s) (15000 20%) 1.9552
-    6m 49s (- 18m 46s) (20000 26%) 1.7216
-    8m 29s (- 16m 59s) (25000 33%) 1.5253
-    10m 10s (- 15m 16s) (30000 40%) 1.3681
-    11m 51s (- 13m 33s) (35000 46%) 1.2202
-    13m 34s (- 11m 52s) (40000 53%) 1.1128
-    15m 17s (- 10m 11s) (45000 60%) 1.0037
-    17m 0s (- 8m 30s) (50000 66%) 0.9167
-    18m 43s (- 6m 48s) (55000 73%) 0.8325
-    20m 27s (- 5m 6s) (60000 80%) 0.7587
-    22m 10s (- 3m 24s) (65000 86%) 0.6828
-    23m 51s (- 1m 42s) (70000 93%) 0.6376
-    25m 32s (- 0m 0s) (75000 100%) 0.5664
+    1m 47s (- 25m 9s) (5000 6%) 2.8543
+    3m 29s (- 22m 44s) (10000 13%) 2.3013
+    5m 12s (- 20m 51s) (15000 20%) 1.9552
+    6m 56s (- 19m 6s) (20000 26%) 1.7216
+    8m 38s (- 17m 17s) (25000 33%) 1.5253
+    10m 21s (- 15m 32s) (30000 40%) 1.3681
+    12m 3s (- 13m 47s) (35000 46%) 1.2202
+    13m 46s (- 12m 3s) (40000 53%) 1.1128
+    15m 29s (- 10m 19s) (45000 60%) 1.0037
+    17m 12s (- 8m 36s) (50000 66%) 0.9167
+    18m 55s (- 6m 52s) (55000 73%) 0.8325
+    20m 38s (- 5m 9s) (60000 80%) 0.7587
+    22m 21s (- 3m 26s) (65000 86%) 0.6828
+    24m 5s (- 1m 43s) (70000 93%) 0.6376
+    25m 48s (- 0m 0s) (75000 100%) 0.5664
 
 
 
@@ -1153,7 +1153,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f02ea9e1600>
+    <matplotlib.image.AxesImage object at 0x7f2942ade080>
 
 
 
@@ -1291,7 +1291,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 25 minutes  38.280 seconds)
+   **Total running time of the script:** ( 25 minutes  54.508 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
