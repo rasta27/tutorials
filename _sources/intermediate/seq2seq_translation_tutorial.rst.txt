@@ -1035,21 +1035,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 48s (- 25m 12s) (5000 6%) 2.8543
-    3m 31s (- 22m 56s) (10000 13%) 2.3013
-    5m 16s (- 21m 5s) (15000 20%) 1.9552
-    6m 58s (- 19m 11s) (20000 26%) 1.7216
-    8m 41s (- 17m 23s) (25000 33%) 1.5253
-    10m 27s (- 15m 40s) (30000 40%) 1.3681
-    12m 11s (- 13m 56s) (35000 46%) 1.2202
-    13m 55s (- 12m 11s) (40000 53%) 1.1128
-    15m 40s (- 10m 27s) (45000 60%) 1.0037
-    17m 26s (- 8m 43s) (50000 66%) 0.9167
-    19m 11s (- 6m 58s) (55000 73%) 0.8325
-    20m 57s (- 5m 14s) (60000 80%) 0.7587
-    22m 41s (- 3m 29s) (65000 86%) 0.6828
-    24m 27s (- 1m 44s) (70000 93%) 0.6376
-    26m 13s (- 0m 0s) (75000 100%) 0.5664
+    1m 47s (- 25m 9s) (5000 6%) 2.8543
+    3m 29s (- 22m 44s) (10000 13%) 2.3013
+    5m 12s (- 20m 50s) (15000 20%) 1.9552
+    6m 52s (- 18m 54s) (20000 26%) 1.7216
+    8m 32s (- 17m 4s) (25000 33%) 1.5253
+    10m 13s (- 15m 19s) (30000 40%) 1.3681
+    11m 54s (- 13m 36s) (35000 46%) 1.2202
+    13m 35s (- 11m 53s) (40000 53%) 1.1128
+    15m 16s (- 10m 10s) (45000 60%) 1.0037
+    16m 56s (- 8m 28s) (50000 66%) 0.9167
+    18m 37s (- 6m 46s) (55000 73%) 0.8325
+    20m 18s (- 5m 4s) (60000 80%) 0.7587
+    21m 59s (- 3m 23s) (65000 86%) 0.6828
+    23m 40s (- 1m 41s) (70000 93%) 0.6376
+    25m 21s (- 0m 0s) (75000 100%) 0.5664
 
 
 
@@ -1153,7 +1153,7 @@ output steps:
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f92531911e0>
+    <matplotlib.image.AxesImage object at 0x7f7d53bd5240>
 
 
 
@@ -1291,7 +1291,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 26 minutes  19.360 seconds)
+   **Total running time of the script:** ( 25 minutes  27.678 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

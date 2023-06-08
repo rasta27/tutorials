@@ -743,9 +743,27 @@ We can use the same function as post training static quantization but with a dyn
     <span class="o">.</span><span class="n">set_object_type</span><span class="p">(</span><a href="https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html#torch.nn.LSTM" title="torch.nn.LSTM" class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span></a><span class="p">,</span> <span class="n">default_dynamic_qconfig</span><span class="p">)</span>
     <span class="o">.</span><span class="n">set_object_type</span><span class="p">(</span><a href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear" class="sphx-glr-backref-module-torch-nn sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span></a><span class="p">,</span> <span class="n">default_dynamic_qconfig</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="c1"># Deepcopying the original model because quantization api changes the model inplace and we want</span>
+<span class="c1"># Load model to create the original model because quantization api changes the model inplace and we want</span>
 <span class="c1"># to keep the original model for future comparison</span>
-<span class="n">model_to_quantize</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+
+<span class="n">model_to_quantize</span> <span class="o">=</span> <span class="n">LSTMModel</span><span class="p">(</span>
+    <span class="n">ntoken</span> <span class="o">=</span> <span class="n">ntokens</span><span class="p">,</span>
+    <span class="n">ninp</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span>
+    <span class="n">nhid</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+    <span class="n">nlayers</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">model_to_quantize</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span>
+    <a href="https://pytorch.org/docs/stable/generated/torch.load.html#torch.load" title="torch.load" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-function"><span class="n">torch</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span>
+        <span class="n">model_data_filepath</span> <span class="o">+</span> <span class="s1">&#39;word_language_model_quantize.pth&#39;</span><span class="p">,</span>
+        <span class="n">map_location</span><span class="o">=</span><a href="https://pytorch.org/docs/stable/tensor_attributes.html#torch.device" title="torch.device" class="sphx-glr-backref-module-torch sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">torch</span><span class="o">.</span><span class="n">device</span></a><span class="p">(</span><span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="n">model_to_quantize</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+
+
 <span class="n">prepared_model</span> <span class="o">=</span> <span class="n">prepare_fx</span><span class="p">(</span><span class="n">model_to_quantize</span><span class="p">,</span> <span class="n">qconfig_mapping</span><span class="p">,</span> <span class="n">example_inputs</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prepared model:&quot;</span><span class="p">,</span> <span class="n">prepared_model</span><span class="p">)</span>
 <span class="n">quantized_model</span> <span class="o">=</span> <span class="n">convert_fx</span><span class="p">(</span><span class="n">prepared_model</span><span class="p">)</span>

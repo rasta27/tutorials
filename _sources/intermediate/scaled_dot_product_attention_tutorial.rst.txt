@@ -176,10 +176,10 @@ measuring performance.
 
  .. code-block:: none
 
-    The default implementation runs in 4884.410 microseconds
-    The math implementation runs in 19267.189 microseconds
-    The flash attention implementation runs in 4885.310 microseconds
-    The memory efficient implementation runs in 4832.550 microseconds
+    The default implementation runs in 4877.056 microseconds
+    The math implementation runs in 19251.325 microseconds
+    The flash attention implementation runs in 4876.948 microseconds
+    The memory efficient implementation runs in 4834.386 microseconds
 
 
 
@@ -401,8 +401,8 @@ To demonstrate this, let's compile the ``CausalSelfAttention`` module using
 
  .. code-block:: none
 
-    The non compiled module runs in  497.287 microseconds
-    The compiled module runs in  497.446 microseconds
+    The non compiled module runs in  496.809 microseconds
+    The compiled module runs in  496.952 microseconds
 
 
 
@@ -459,36 +459,36 @@ inspect the performance characteristics of your code.
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
                                                        Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-                             Non-Compilied Causal Attention        15.32%       2.048ms        69.71%       9.317ms       9.317ms       0.000us         0.00%      12.476ms      12.476ms             1  
-                                               aten::matmul         2.03%     271.000us        21.46%       2.868ms      57.360us       0.000us         0.00%       7.795ms     155.900us            50  
-                                                   aten::mm        14.02%       1.874ms        17.52%       2.342ms      46.840us       7.795ms        62.48%       7.795ms     155.900us            50  
-                                               aten::linear         1.59%     212.000us        24.74%       3.307ms      66.140us       0.000us         0.00%       7.349ms     146.980us            50  
-             ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.569ms        44.64%       5.569ms     222.760us            25  
-                         aten::scaled_dot_product_attention         1.29%     173.000us        21.79%       2.912ms     116.480us       0.000us         0.00%       4.681ms     187.240us            25  
-                  aten::_scaled_dot_product_flash_attention         4.52%     604.000us        20.49%       2.739ms     109.560us       0.000us         0.00%       4.681ms     187.240us            25  
-                             aten::_flash_attention_forward         2.39%     320.000us         6.04%     807.000us      32.280us       4.581ms        36.72%       4.581ms     183.240us            25  
-    void fmha_fwd_loop_kernel<FMHA_kernel_traits<256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       4.581ms        36.72%       4.581ms     183.240us            25  
-    ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_3...         0.00%       0.000us         0.00%       0.000us       0.000us       2.226ms        17.84%       2.226ms      89.040us            25  
+                             Non-Compilied Causal Attention        16.17%       2.167ms        69.04%       9.252ms       9.252ms       0.000us         0.00%      12.454ms      12.454ms             1  
+                                               aten::matmul         2.00%     268.000us        21.29%       2.853ms      57.060us       0.000us         0.00%       7.781ms     155.620us            50  
+                                                   aten::mm        13.95%       1.870ms        17.59%       2.357ms      47.140us       7.781ms        62.48%       7.781ms     155.620us            50  
+                                               aten::linear         1.28%     171.000us        24.60%       3.297ms      65.940us       0.000us         0.00%       7.558ms     151.160us            50  
+             ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.567ms        44.70%       5.567ms     222.680us            25  
+                         aten::scaled_dot_product_attention         1.22%     163.000us        21.29%       2.853ms     114.120us       0.000us         0.00%       4.673ms     186.920us            25  
+                  aten::_scaled_dot_product_flash_attention         3.95%     529.000us        20.07%       2.690ms     107.600us       0.000us         0.00%       4.673ms     186.920us            25  
+                             aten::_flash_attention_forward         2.27%     304.000us         5.95%     797.000us      31.880us       4.573ms        36.72%       4.573ms     182.920us            25  
+    void fmha_fwd_loop_kernel<FMHA_kernel_traits<256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       4.573ms        36.72%       4.573ms     182.920us            25  
+    ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_3...         0.00%       0.000us         0.00%       0.000us       0.000us       2.214ms        17.78%       2.214ms      88.560us            25  
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-    Self CPU time total: 13.366ms
-    Self CUDA time total: 12.476ms
+    Self CPU time total: 13.401ms
+    Self CUDA time total: 12.454ms
 
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
                                                        Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-                                  Compiled Causal Attention        16.20%       2.162ms        84.75%      11.308ms      11.308ms       0.000us         0.00%      12.489ms      12.489ms             1  
-                                           CompiledFunction        27.54%       3.675ms        67.97%       9.068ms     362.720us       0.000us         0.00%      12.489ms     499.560us            25  
-                                                   aten::mm         9.12%       1.217ms        13.32%       1.777ms      35.540us       7.803ms        62.48%       7.803ms     156.060us            50  
-             ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.578ms        44.66%       5.578ms     223.120us            25  
-                  aten::_scaled_dot_product_flash_attention         2.89%     386.000us        20.11%       2.683ms     107.320us       0.000us         0.00%       4.686ms     187.440us            25  
-                             aten::_flash_attention_forward         2.70%     360.000us         6.26%     835.000us      33.400us       4.586ms        36.72%       4.586ms     183.440us            25  
-    void fmha_fwd_loop_kernel<FMHA_kernel_traits<256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       4.586ms        36.72%       4.586ms     183.440us            25  
-    ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_3...         0.00%       0.000us         0.00%       0.000us       0.000us       2.225ms        17.82%       2.225ms      89.000us            25  
-                                               aten::arange         3.31%     442.000us        13.60%       1.814ms      18.140us     100.000us         0.80%     194.000us       1.940us           100  
+                                  Compiled Causal Attention        16.39%       2.192ms        85.20%      11.398ms      11.398ms       0.000us         0.00%      12.465ms      12.465ms             1  
+                                           CompiledFunction        28.01%       3.747ms        68.22%       9.127ms     365.080us       0.000us         0.00%      12.465ms     498.600us            25  
+                                                   aten::mm         9.05%       1.211ms        13.19%       1.764ms      35.280us       7.791ms        62.50%       7.791ms     155.820us            50  
+             ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.571ms        44.69%       5.571ms     222.840us            25  
+                  aten::_scaled_dot_product_flash_attention         2.96%     396.000us        19.83%       2.653ms     106.120us       0.000us         0.00%       4.674ms     186.960us            25  
+                             aten::_flash_attention_forward         2.44%     327.000us         5.97%     798.000us      31.920us       4.574ms        36.69%       4.574ms     182.960us            25  
+    void fmha_fwd_loop_kernel<FMHA_kernel_traits<256, 64...         0.00%       0.000us         0.00%       0.000us       0.000us       4.574ms        36.69%       4.574ms     182.960us            25  
+    ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_3...         0.00%       0.000us         0.00%       0.000us       0.000us       2.220ms        17.81%       2.220ms      88.800us            25  
+                                               aten::arange         3.78%     506.000us        13.93%       1.863ms      18.630us     100.000us         0.80%     188.000us       1.880us           100  
     void (anonymous namespace)::elementwise_kernel_with_...         0.00%       0.000us         0.00%       0.000us       0.000us     100.000us         0.80%     100.000us       2.000us            50  
     -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
-    Self CPU time total: 13.342ms
-    Self CUDA time total: 12.489ms
+    Self CPU time total: 13.378ms
+    Self CUDA time total: 12.465ms
 
 
 
@@ -530,7 +530,7 @@ module.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.317 seconds)
+   **Total running time of the script:** ( 0 minutes  6.321 seconds)
 
 
 .. _sphx_glr_download_intermediate_scaled_dot_product_attention_tutorial.py:

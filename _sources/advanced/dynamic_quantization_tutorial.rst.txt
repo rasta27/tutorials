@@ -516,9 +516,9 @@ models run single threaded.
  .. code-block:: none
 
     loss: 5.167
-    elapsed time (seconds): 221.2
+    elapsed time (seconds): 209.9
     loss: 5.168
-    elapsed time (seconds): 149.0
+    elapsed time (seconds): 145.3
 
 
 
@@ -540,7 +540,7 @@ Thanks for reading! As always, we welcome any feedback, so please create an issu
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 6 minutes  16.117 seconds)
+   **Total running time of the script:** ( 6 minutes  0.980 seconds)
 
 
 .. _sphx_glr_download_advanced_dynamic_quantization_tutorial.py:

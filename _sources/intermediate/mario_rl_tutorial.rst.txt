@@ -990,12 +990,12 @@ his world, we suggest running the loop for at least 40,000 episodes!
 
     The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
 
-    Episode 0 - Step 104 - Epsilon 0.9999740003347434 - Mean Reward 627.0 - Mean Length 104.0 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 1.312 - Time 2023-06-07T19:01:13
+    Episode 0 - Step 108 - Epsilon 0.9999730003611179 - Mean Reward 601.0 - Mean Length 108.0 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 1.38 - Time 2023-06-08T00:31:31
     /opt/conda/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning:
 
     The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
 
-    Episode 20 - Step 6385 - Epsilon 0.9984050231299882 - Mean Reward 824.143 - Mean Length 304.048 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 81.599 - Time 2023-06-07T19:02:35
+    Episode 20 - Step 3400 - Epsilon 0.9991503610413893 - Mean Reward 575.524 - Mean Length 161.905 - Mean Loss 0.0 - Mean Q Value 0.0 - Time Delta 42.522 - Time 2023-06-08T00:32:14
     /opt/conda/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning:
 
     The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
@@ -1016,7 +1016,7 @@ to train an AI to play any of the games at the `OpenAI gym <https://gym.openai.c
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  56.799 seconds)
+   **Total running time of the script:** ( 1 minutes  50.066 seconds)
 
 
 .. _sphx_glr_download_intermediate_mario_rl_tutorial.py:
