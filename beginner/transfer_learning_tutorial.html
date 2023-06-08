@@ -456,7 +456,7 @@ with random weights and only this layer is trained.</p></li>
 <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>   <span class="c1"># interactive mode</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7f7cd5b221a0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack object at 0x7f026c919840&gt;
 </pre></div>
 </div>
 <div class="section" id="load-data">
@@ -670,9 +670,9 @@ illustrate:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /var/lib/jenkins/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
 
   0%|          | 0.00/44.7M [00:00&lt;?, ?B/s]
- 50%|####9     | 22.3M/44.7M [00:00&lt;00:00, 233MB/s]
-100%|##########| 44.7M/44.7M [00:00&lt;00:00, 233MB/s]
-100%|##########| 44.7M/44.7M [00:00&lt;00:00, 232MB/s]
+ 47%|####7     | 21.1M/44.7M [00:00&lt;00:00, 221MB/s]
+ 98%|#########8| 43.9M/44.7M [00:00&lt;00:00, 232MB/s]
+100%|##########| 44.7M/44.7M [00:00&lt;00:00, 229MB/s]
 </pre></div>
 </div>
 <div class="section" id="train-and-evaluate">
@@ -685,130 +685,130 @@ minute.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Epoch 0/24
 ----------
-train Loss: 0.4785 Acc: 0.7582
-val Loss: 0.2834 Acc: 0.8758
+train Loss: 0.4770 Acc: 0.7623
+val Loss: 0.2916 Acc: 0.8693
 
 Epoch 1/24
 ----------
-train Loss: 0.5270 Acc: 0.7951
-val Loss: 0.5465 Acc: 0.7778
+train Loss: 0.5335 Acc: 0.8156
+val Loss: 0.6136 Acc: 0.7582
 
 Epoch 2/24
 ----------
-train Loss: 0.4565 Acc: 0.8156
-val Loss: 0.2692 Acc: 0.9085
+train Loss: 0.4327 Acc: 0.8115
+val Loss: 0.2719 Acc: 0.8954
 
 Epoch 3/24
 ----------
-train Loss: 0.6309 Acc: 0.7623
-val Loss: 0.3164 Acc: 0.8954
+train Loss: 0.6156 Acc: 0.7746
+val Loss: 0.2853 Acc: 0.9020
 
 Epoch 4/24
 ----------
-train Loss: 0.4028 Acc: 0.8484
-val Loss: 0.2984 Acc: 0.8824
+train Loss: 0.4179 Acc: 0.8238
+val Loss: 0.3472 Acc: 0.8497
 
 Epoch 5/24
 ----------
-train Loss: 0.4840 Acc: 0.7787
-val Loss: 0.2220 Acc: 0.9085
+train Loss: 0.5513 Acc: 0.8033
+val Loss: 0.2334 Acc: 0.9150
 
 Epoch 6/24
 ----------
-train Loss: 0.3854 Acc: 0.8279
-val Loss: 0.2693 Acc: 0.9020
+train Loss: 0.4019 Acc: 0.8238
+val Loss: 0.1888 Acc: 0.9281
 
 Epoch 7/24
 ----------
-train Loss: 0.3621 Acc: 0.8279
-val Loss: 0.1945 Acc: 0.9281
+train Loss: 0.3677 Acc: 0.8443
+val Loss: 0.1752 Acc: 0.9281
 
 Epoch 8/24
 ----------
-train Loss: 0.2112 Acc: 0.9139
-val Loss: 0.1952 Acc: 0.9346
+train Loss: 0.2182 Acc: 0.9385
+val Loss: 0.1605 Acc: 0.9346
 
 Epoch 9/24
 ----------
-train Loss: 0.2634 Acc: 0.8852
-val Loss: 0.2018 Acc: 0.9346
+train Loss: 0.2701 Acc: 0.8893
+val Loss: 0.2045 Acc: 0.9216
 
 Epoch 10/24
 ----------
-train Loss: 0.3537 Acc: 0.8525
-val Loss: 0.1787 Acc: 0.9477
+train Loss: 0.3527 Acc: 0.8525
+val Loss: 0.1585 Acc: 0.9346
 
 Epoch 11/24
 ----------
-train Loss: 0.3030 Acc: 0.8566
-val Loss: 0.2343 Acc: 0.9216
+train Loss: 0.3145 Acc: 0.8607
+val Loss: 0.2094 Acc: 0.9216
 
 Epoch 12/24
 ----------
-train Loss: 0.2262 Acc: 0.9057
-val Loss: 0.2026 Acc: 0.9216
+train Loss: 0.2363 Acc: 0.9016
+val Loss: 0.1819 Acc: 0.9216
 
 Epoch 13/24
 ----------
-train Loss: 0.2845 Acc: 0.8811
-val Loss: 0.1916 Acc: 0.9346
+train Loss: 0.3060 Acc: 0.8648
+val Loss: 0.1435 Acc: 0.9477
 
 Epoch 14/24
 ----------
-train Loss: 0.2555 Acc: 0.8975
-val Loss: 0.2455 Acc: 0.9216
+train Loss: 0.2728 Acc: 0.8893
+val Loss: 0.2258 Acc: 0.9085
 
 Epoch 15/24
 ----------
-train Loss: 0.3161 Acc: 0.8730
-val Loss: 0.2581 Acc: 0.9020
+train Loss: 0.3216 Acc: 0.8648
+val Loss: 0.2379 Acc: 0.9216
 
 Epoch 16/24
 ----------
-train Loss: 0.1989 Acc: 0.9262
-val Loss: 0.2011 Acc: 0.9281
+train Loss: 0.2053 Acc: 0.9262
+val Loss: 0.1938 Acc: 0.9281
 
 Epoch 17/24
 ----------
-train Loss: 0.2379 Acc: 0.8975
-val Loss: 0.1742 Acc: 0.9412
+train Loss: 0.2495 Acc: 0.8730
+val Loss: 0.1527 Acc: 0.9412
 
 Epoch 18/24
 ----------
-train Loss: 0.2697 Acc: 0.8852
-val Loss: 0.2068 Acc: 0.9216
+train Loss: 0.2886 Acc: 0.8770
+val Loss: 0.1978 Acc: 0.9150
 
 Epoch 19/24
 ----------
-train Loss: 0.2024 Acc: 0.9221
-val Loss: 0.1861 Acc: 0.9346
+train Loss: 0.1971 Acc: 0.9344
+val Loss: 0.1637 Acc: 0.9346
 
 Epoch 20/24
 ----------
-train Loss: 0.2564 Acc: 0.8852
-val Loss: 0.1953 Acc: 0.9346
+train Loss: 0.2546 Acc: 0.9057
+val Loss: 0.1689 Acc: 0.9346
 
 Epoch 21/24
 ----------
-train Loss: 0.2416 Acc: 0.9016
-val Loss: 0.2425 Acc: 0.9216
+train Loss: 0.2586 Acc: 0.8893
+val Loss: 0.2105 Acc: 0.9216
 
 Epoch 22/24
 ----------
-train Loss: 0.2978 Acc: 0.8689
-val Loss: 0.1900 Acc: 0.9346
+train Loss: 0.3374 Acc: 0.8525
+val Loss: 0.1688 Acc: 0.9281
 
 Epoch 23/24
 ----------
-train Loss: 0.2694 Acc: 0.8730
-val Loss: 0.2080 Acc: 0.9281
+train Loss: 0.2565 Acc: 0.8770
+val Loss: 0.1601 Acc: 0.9346
 
 Epoch 24/24
 ----------
-train Loss: 0.2962 Acc: 0.8852
-val Loss: 0.1949 Acc: 0.9281
+train Loss: 0.2829 Acc: 0.8852
+val Loss: 0.1556 Acc: 0.9346
 
-Training complete in 1m 17s
+Training complete in 1m 20s
 Best val Acc: 0.947712
 </pre></div>
 </div>
@@ -978,7 +978,7 @@ Epoch 24/24
 train Loss: 0.3840 Acc: 0.8320
 val Loss: 0.1768 Acc: 0.9412
 
-Training complete in 0m 44s
+Training complete in 0m 47s
 Best val Acc: 0.954248
 </pre></div>
 </div>
@@ -994,7 +994,7 @@ Best val Acc: 0.954248
 <h2>Further Learning<a class="headerlink" href="#further-learning" title="Permalink to this heading">¶</a></h2>
 <p>If you would like to learn more about the applications of transfer learning,
 checkout our <a class="reference external" href="https://pytorch.org/tutorials/intermediate/quantized_transfer_learning_tutorial.html">Quantized Transfer Learning for Computer Vision Tutorial</a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  7.580 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  12.932 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-transfer-learning-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/d923ca53b1bfbeb3c222ae46d65d485e/transfer_learning_tutorial.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">transfer_learning_tutorial.py</span></code></a></p>
